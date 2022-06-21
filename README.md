@@ -5,6 +5,8 @@ Interactive visualizations for protein complexes learned from hu.MAP 1.0 and hu.
 
 ### Super.Complex
 
+The results presented below are from [1]:
+
 [All Learned Complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP1/Complex2proteins.html
 )
 
@@ -53,6 +55,8 @@ We also make available a list of protein complexes that contain proteins interac
 
 ## Interactive visualizations of results on hu.MAP 2.0:
 
+The results presented below are from [2]:
+
 ### Super.Complex
 
 [All Learned Complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/Complex2proteins.html)
@@ -99,5 +103,11 @@ We also make available a list of protein complexes that contain proteins interac
 
 We also make available a list of protein complexes that contain proteins interacting with SARS-CoV-2 proteins here:
 [SARS-CoV-2 interacting hu.MAP 2.0 proteins and their corresponding protein complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/originalCORUM_Protein2complex_covid.html)
+
+## References
+
+[1] [Super.Complex: A supervised machine learning pipeline for molecular complex detection in protein-interaction networks](https://doi.org/10.1371/journal.pone.0262056))
+
+[2] [Molecular complex detection in protein interaction networks through reinforcement learning](https://doi.org/10.1101/2022.06.20.496772) (Supplement - Table S3, Row 5)
 
 
