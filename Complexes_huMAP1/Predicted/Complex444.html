@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> GABRB3 MCOLN3 DAGLA MCOLN2 MCOLN1</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex445.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DAGLA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y4D2" }},
+{data: { id: 'MCOLN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TDD5" }},
+{data: { id: 'MCOLN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IZK6" }},
+{data: { id: 'GABRB3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P28472" }},
+{data: { id: 'MCOLN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9GZU1" }}], 
+ edges: [{ data: { source: 'MCOLN3', target: 'MCOLN1', directed: 'false', weight: 0.971258} },
+{ data: { source: 'MCOLN3', target: 'MCOLN2', directed: 'false', weight: 0.9197690000000001} },
+{ data: { source: 'MCOLN3', target: 'DAGLA', directed: 'false', weight: 0.8606590000000001} },
+{ data: { source: 'MCOLN3', target: 'GABRB3', directed: 'false', weight: 0.8593139999999999} },
+{ data: { source: 'DAGLA', target: 'MCOLN1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'DAGLA', target: 'GABRB3', directed: 'false', weight: 0.171414} },
+{ data: { source: 'DAGLA', target: 'MCOLN2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'MCOLN1', target: 'GABRB3', directed: 'false', weight: 0.171414} },
+{ data: { source: 'MCOLN1', target: 'MCOLN2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'GABRB3', target: 'MCOLN2', directed: 'false', weight: 0.171414} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    GABRB3 MCOLN3 DAGLA MCOLN2 MCOLN1<br> Complex Score (from Super.Complex) = 0.73463<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

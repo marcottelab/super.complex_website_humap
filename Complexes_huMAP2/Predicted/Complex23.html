@@ -1,0 +1,162 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 CAPZalpha-CAPZbeta complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex24.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CAPZB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P47756" }},
+{data: { id: 'CAPZA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P47755" }},
+{data: { id: 'HEL-S-77', score: 2, type: '', href: "https://www.uniprot.org/uniprot/V9HW58" }},
+{data: { id: 'DKFZp761J032', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q9NSJ5" }},
+{data: { id: 'ACTR1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P42025" }},
+{data: { id: 'ACTR10', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9NZ32" }},
+{data: { id: 'DCTN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75935" }},
+{data: { id: 'ACTR1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61163" }},
+{data: { id: 'DCTN5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BTE1" }},
+{data: { id: 'DCTN6', score: 4, type: '', href: "https://www.uniprot.org/uniprot/O00399" }},
+{data: { id: 'DKFZp686I0746', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q6MZZ3" }}], 
+ edges: [{ data: { source: 'DKFZp686I0746', target: 'ACTR1B', directed: 'false', weight: 1.0} },
+{ data: { source: 'DKFZp686I0746', target: 'DCTN6', directed: 'false', weight: 1.0} },
+{ data: { source: 'DKFZp686I0746', target: 'DCTN3', directed: 'false', weight: 1.0} },
+{ data: { source: 'DKFZp686I0746', target: 'ACTR1A', directed: 'false', weight: 1.0} },
+{ data: { source: 'DKFZp686I0746', target: 'HEL-S-77', directed: 'false', weight: 1.0} },
+{ data: { source: 'DKFZp686I0746', target: 'DKFZp761J032', directed: 'false', weight: 1.0} },
+{ data: { source: 'DKFZp686I0746', target: 'ACTR10', directed: 'false', weight: 1.0} },
+{ data: { source: 'DKFZp686I0746', target: 'DCTN5', directed: 'false', weight: 0.999993} },
+{ data: { source: 'DKFZp686I0746', target: 'CAPZA2', directed: 'false', weight: 0.999763} },
+{ data: { source: 'DKFZp686I0746', target: 'CAPZB', directed: 'false', weight: 0.8936790000000001} },
+{ data: { source: 'ACTR10', target: 'ACTR1B', directed: 'false', weight: 1.0} },
+{ data: { source: 'ACTR10', target: 'HEL-S-77', directed: 'false', weight: 1.0} },
+{ data: { source: 'ACTR10', target: 'DKFZp761J032', directed: 'false', weight: 1.0} },
+{ data: { source: 'ACTR10', target: 'ACTR1A', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'ACTR10', target: 'DCTN6', directed: 'false', weight: 0.9997520000000001} },
+{ data: { source: 'ACTR10', target: 'DCTN5', directed: 'false', weight: 0.99792} },
+{ data: { source: 'ACTR10', target: 'DCTN3', directed: 'false', weight: 0.9938030000000001} },
+{ data: { source: 'ACTR10', target: 'CAPZA2', directed: 'false', weight: 0.905956} },
+{ data: { source: 'DCTN5', target: 'ACTR1B', directed: 'false', weight: 1.0} },
+{ data: { source: 'DCTN5', target: 'ACTR1A', directed: 'false', weight: 1.0} },
+{ data: { source: 'DCTN5', target: 'HEL-S-77', directed: 'false', weight: 1.0} },
+{ data: { source: 'DCTN5', target: 'DCTN6', directed: 'false', weight: 1.0} },
+{ data: { source: 'DCTN5', target: 'DKFZp761J032', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'DCTN5', target: 'CAPZA2', directed: 'false', weight: 0.997282} },
+{ data: { source: 'DCTN5', target: 'DCTN3', directed: 'false', weight: 0.995469} },
+{ data: { source: 'DCTN5', target: 'CAPZB', directed: 'false', weight: 0.220651} },
+{ data: { source: 'DCTN6', target: 'ACTR1B', directed: 'false', weight: 1.0} },
+{ data: { source: 'DCTN6', target: 'HEL-S-77', directed: 'false', weight: 1.0} },
+{ data: { source: 'DCTN6', target: 'DCTN3', directed: 'false', weight: 1.0} },
+{ data: { source: 'DCTN6', target: 'DKFZp761J032', directed: 'false', weight: 1.0} },
+{ data: { source: 'DCTN6', target: 'CAPZA2', directed: 'false', weight: 0.999326} },
+{ data: { source: 'DCTN6', target: 'ACTR1A', directed: 'false', weight: 0.9916520000000001} },
+{ data: { source: 'DCTN6', target: 'CAPZB', directed: 'false', weight: 0.0379091} },
+{ data: { source: 'HEL-S-77', target: 'ACTR1B', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-77', target: 'ACTR1A', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-77', target: 'DCTN3', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-77', target: 'DKFZp761J032', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-77', target: 'CAPZA2', directed: 'false', weight: 0.999986} },
+{ data: { source: 'HEL-S-77', target: 'CAPZB', directed: 'false', weight: 0.9924700000000001} },
+{ data: { source: 'DKFZp761J032', target: 'ACTR1B', directed: 'false', weight: 1.0} },
+{ data: { source: 'DKFZp761J032', target: 'ACTR1A', directed: 'false', weight: 1.0} },
+{ data: { source: 'DKFZp761J032', target: 'CAPZA2', directed: 'false', weight: 0.999983} },
+{ data: { source: 'DKFZp761J032', target: 'DCTN3', directed: 'false', weight: 0.999058} },
+{ data: { source: 'DKFZp761J032', target: 'CAPZB', directed: 'false', weight: 0.30375100000000005} },
+{ data: { source: 'ACTR1A', target: 'ACTR1B', directed: 'false', weight: 1.0} },
+{ data: { source: 'ACTR1A', target: 'CAPZA2', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'ACTR1A', target: 'DCTN3', directed: 'false', weight: 0.972692} },
+{ data: { source: 'CAPZB', target: 'CAPZA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'CAPZB', target: 'ACTR1B', directed: 'false', weight: 0.999816} },
+{ data: { source: 'CAPZB', target: 'DCTN3', directed: 'false', weight: 0.14355} },
+{ data: { source: 'CAPZA2', target: 'ACTR1B', directed: 'false', weight: 0.997402} },
+{ data: { source: 'CAPZA2', target: 'DCTN3', directed: 'false', weight: 0.9839690000000001} },
+{ data: { source: 'DCTN3', target: 'ACTR1B', directed: 'false', weight: 0.999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 CAPZalpha-CAPZbeta complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.96
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,127 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 LSm2-8 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex634.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'LSM7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UK45" }},
+{data: { id: 'LSM4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y4Z0" }},
+{data: { id: 'SARS-CoV2 nsp12', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp12.html" }},
+{data: { id: 'SLU7', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/O95391" }},
+{data: { id: 'LSM5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y4Y9" }},
+{data: { id: 'LSM8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95777" }},
+{data: { id: 'SPTB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P11277" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp12', target: 'SLU7', directed: 'false', weight: 0.989493635, type: 'sars'} },
+{ data: { source: 'LSM8', target: 'SLU7', directed: 'false', weight: 0.815326} },
+{ data: { source: 'LSM8', target: 'LSM5', directed: 'false', weight: 0.8149609999999999} },
+{ data: { source: 'LSM8', target: 'SPTB', directed: 'false', weight: 0.559754} },
+{ data: { source: 'LSM8', target: 'LSM4', directed: 'false', weight: 0.12505} },
+{ data: { source: 'LSM8', target: 'LSM7', directed: 'false', weight: 0.044931} },
+{ data: { source: 'LSM5', target: 'LSM4', directed: 'false', weight: 0.947391} },
+{ data: { source: 'LSM5', target: 'SLU7', directed: 'false', weight: 0.341941} },
+{ data: { source: 'LSM5', target: 'SPTB', directed: 'false', weight: 0.09732719999999999} },
+{ data: { source: 'SPTB', target: 'LSM4', directed: 'false', weight: 0.652135} },
+{ data: { source: 'SLU7', target: 'LSM7', directed: 'false', weight: 0.8827309999999999} },
+{ data: { source: 'SLU7', target: 'LSM4', directed: 'false', weight: 0.869807} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 LSm2-8 complex<br> Complex Score (from Super.Complex) = 0.64875<br> Unweighted Density = 0.73
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>SLU7
+    </section>
+    </body>
+    </html>
+    

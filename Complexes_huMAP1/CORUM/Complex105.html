@@ -1,0 +1,99 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> PID complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex106.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RBBP4', score: 5, href: "https://www.uniprot.org/uniprot/Q09028" }},
+{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'MTA2', score: 5, href: "https://www.uniprot.org/uniprot/O94776" }},
+{data: { id: 'MBD3', score: 5, href: "https://www.uniprot.org/uniprot/O95983" }},
+{data: { id: 'CHD4', score: 5, href: "https://www.uniprot.org/uniprot/Q14839" }}], 
+ edges: [{ data: { source: 'RBBP4', target: 'CHD4', directed: 'false', weight: 0.998317} },
+{ data: { source: 'RBBP4', target: 'MTA2', directed: 'false', weight: 0.996554} },
+{ data: { source: 'RBBP4', target: 'MBD3', directed: 'false', weight: 0.9773209999999999} },
+{ data: { source: 'HDAC1', target: 'MTA2', directed: 'false', weight: 0.999965} },
+{ data: { source: 'MTA2', target: 'CHD4', directed: 'false', weight: 0.9993139999999999} },
+{ data: { source: 'MTA2', target: 'MBD3', directed: 'false', weight: 0.999075} },
+{ data: { source: 'MBD3', target: 'CHD4', directed: 'false', weight: 0.990871} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    PID complex	<br> Unweighted Density = 0.70
+    </section>
+    </body>
+    </html>
+    

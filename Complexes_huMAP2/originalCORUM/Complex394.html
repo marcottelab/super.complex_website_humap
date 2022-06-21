@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> P2X7 receptor signalling complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex395.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ACTN4', score: 5, href: "https://www.uniprot.org/uniprot/O43707" }},
+{data: { id: 'SVIL', score: 5, href: "https://www.uniprot.org/uniprot/O95425" }},
+{data: { id: '3689', score: 0 }},
+{data: { id: 'HSP90AB1', score: 5, href: "https://www.uniprot.org/uniprot/P08238" }},
+{data: { id: 'HSPA1B', score: 5, href: "https://www.uniprot.org/uniprot/P0DMV9" }},
+{data: { id: 'HEL-S-72p', score: 3, href: "https://www.uniprot.org/uniprot/V9HW22" }},
+{data: { id: '5787', score: 0 }},
+{data: { id: 'PI4KA', score: 5, href: "https://www.uniprot.org/uniprot/P42356" }},
+{data: { id: 'PS1TP5BP1', score: 2, href: "https://www.uniprot.org/uniprot/Q1KLZ0" }},
+{data: { id: 'MPP3', score: 4, href: "https://www.uniprot.org/uniprot/Q13368" }},
+{data: { id: '3909', score: 0 }},
+{data: { id: '5027', score: 0 }}], 
+ edges: [{ data: { source: 'PS1TP5BP1', target: 'HEL-S-72p', directed: 'false', weight: 0.987563} },
+{ data: { source: 'PS1TP5BP1', target: 'ACTN4', directed: 'false', weight: 0.140048} },
+{ data: { source: 'PS1TP5BP1', target: 'SVIL', directed: 'false', weight: 0.038940699999999995} },
+{ data: { source: 'HSP90AB1', target: 'HEL-S-72p', directed: 'false', weight: 0.915316} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    P2X7 receptor signalling complex	<br> Unweighted Density = 0.06
+    </section>
+    </body>
+    </html>
+    

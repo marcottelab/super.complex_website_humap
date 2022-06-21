@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> BP-SMAD complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex256.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GRIK1-AS2', score: 0, href: "https://www.ncbi.nlm.nih.gov/gene/100379661" }},
+{data: { id: 'SMAD9', score: 5, href: "https://www.uniprot.org/uniprot/O15198" }},
+{data: { id: '10804', score: 0 }},
+{data: { id: 'PSMC3', score: 5, href: "https://www.uniprot.org/uniprot/P17980" }},
+{data: { id: 'ERCC3', score: 5, href: "https://www.uniprot.org/uniprot/P19447" }},
+{data: { id: 'MXI1', score: 5, href: "https://www.uniprot.org/uniprot/P50539" }},
+{data: { id: '7071', score: 0 }},
+{data: { id: '7045', score: 0 }}], 
+ edges: [{ data: { source: 'GRIK1-AS2', target: 'GRIK1-AS2', directed: 'false', weight: 0} },
+{ data: { source: 'SMAD9', target: 'SMAD9', directed: 'false', weight: 0} },
+{ data: { source: '10804', target: '10804', directed: 'false', weight: 0} },
+{ data: { source: 'PSMC3', target: 'PSMC3', directed: 'false', weight: 0} },
+{ data: { source: 'ERCC3', target: 'ERCC3', directed: 'false', weight: 0} },
+{ data: { source: 'MXI1', target: 'MXI1', directed: 'false', weight: 0} },
+{ data: { source: '7071', target: '7071', directed: 'false', weight: 0} },
+{ data: { source: '7045', target: '7045', directed: 'false', weight: 0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    BP-SMAD complex	<br> Unweighted Density = 0.00
+    </section>
+    </body>
+    </html>
+    

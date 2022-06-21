@@ -1,0 +1,128 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> DPYSL5 GGACT BLMH DPYSL2 DPYSL3 CNTN1 HMGCS1 CSDA ENSG00000139637</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex250.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'BLMH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13867" }},
+{data: { id: 'CNTN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12860" }},
+{data: { id: 'HMGCS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q01581" }},
+{data: { id: 'GGACT', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BVM4" }},
+{data: { id: 'DPYSL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16555" }},
+{data: { id: 'CSDA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P16989" }},
+{data: { id: 'DPYSL5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BPU6" }},
+{data: { id: 'DPYSL3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14195" }},
+{data: { id: 'MYG1', score: 5.0, type: '', href: "https://www.uniprot.org/uniprot/Q9HB07" }}], 
+ edges: [{ data: { source: 'CNTN1', target: 'DPYSL3', directed: 'false', weight: 0.048757199999999994} },
+{ data: { source: 'CNTN1', target: 'DPYSL2', directed: 'false', weight: 0.0441892} },
+{ data: { source: 'DPYSL5', target: 'DPYSL2', directed: 'false', weight: 0.9355129999999999} },
+{ data: { source: 'DPYSL5', target: 'DPYSL3', directed: 'false', weight: 0.24893800000000002} },
+{ data: { source: 'DPYSL5', target: 'BLMH', directed: 'false', weight: 0.0934676} },
+{ data: { source: 'DPYSL2', target: 'DPYSL3', directed: 'false', weight: 0.9625229999999999} },
+{ data: { source: 'DPYSL2', target: 'MYG1', directed: 'false', weight: 0.494925} },
+{ data: { source: 'DPYSL2', target: 'BLMH', directed: 'false', weight: 0.40818000000000004} },
+{ data: { source: 'DPYSL2', target: 'HMGCS1', directed: 'false', weight: 0.05858630000000001} },
+{ data: { source: 'DPYSL2', target: 'GGACT', directed: 'false', weight: 0.052449800000000005} },
+{ data: { source: 'DPYSL2', target: 'CSDA', directed: 'false', weight: 0.0443077} },
+{ data: { source: 'GGACT', target: 'DPYSL3', directed: 'false', weight: 0.044495599999999996} },
+{ data: { source: 'DPYSL3', target: 'MYG1', directed: 'false', weight: 0.6939489999999999} },
+{ data: { source: 'DPYSL3', target: 'BLMH', directed: 'false', weight: 0.22368000000000002} },
+{ data: { source: 'DPYSL3', target: 'HMGCS1', directed: 'false', weight: 0.06557769999999999} },
+{ data: { source: 'DPYSL3', target: 'CSDA', directed: 'false', weight: 0.0442755} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    DPYSL5 GGACT BLMH DPYSL2 DPYSL3 CNTN1 HMGCS1 CSDA ENSG00000139637<br> Complex Score (from Super.Complex) = 0.96600<br> Unweighted Density = 0.44
+    </section>
+    </body>
+    </html>
+    

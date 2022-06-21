@@ -1,0 +1,143 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 KEOPS complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex805.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'LAGE3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14657" }},
+{data: { id: 'TP53RK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96S44" }},
+{data: { id: 'HYKK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/A2RU49" }},
+{data: { id: 'MFAP3', score: 4, type: '', href: "https://www.uniprot.org/uniprot/P55082" }},
+{data: { id: 'GLRX3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O76003" }},
+{data: { id: 'CCDC28B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BUN5" }},
+{data: { id: 'TPRKB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3C4" }},
+{data: { id: 'GON7', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9BXV9" }},
+{data: { id: 'TLN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y490" }},
+{data: { id: 'OSGEP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NPF4" }}], 
+ edges: [{ data: { source: 'TPRKB', target: 'OSGEP', directed: 'false', weight: 0.999265} },
+{ data: { source: 'TPRKB', target: 'TP53RK', directed: 'false', weight: 0.9451139999999999} },
+{ data: { source: 'TPRKB', target: 'LAGE3', directed: 'false', weight: 0.8092739999999999} },
+{ data: { source: 'TPRKB', target: 'TLN1', directed: 'false', weight: 0.61811} },
+{ data: { source: 'TPRKB', target: 'GON7', directed: 'false', weight: 0.48676800000000003} },
+{ data: { source: 'TPRKB', target: 'MFAP3', directed: 'false', weight: 0.165074} },
+{ data: { source: 'TPRKB', target: 'HYKK', directed: 'false', weight: 0.128057} },
+{ data: { source: 'TPRKB', target: 'CCDC28B', directed: 'false', weight: 0.112499} },
+{ data: { source: 'TPRKB', target: 'GLRX3', directed: 'false', weight: 0.0151101} },
+{ data: { source: 'MFAP3', target: 'OSGEP', directed: 'false', weight: 0.609743} },
+{ data: { source: 'MFAP3', target: 'GON7', directed: 'false', weight: 0.165074} },
+{ data: { source: 'MFAP3', target: 'LAGE3', directed: 'false', weight: 0.165074} },
+{ data: { source: 'MFAP3', target: 'TP53RK', directed: 'false', weight: 0.165074} },
+{ data: { source: 'GLRX3', target: 'TP53RK', directed: 'false', weight: 0.9433379999999999} },
+{ data: { source: 'GLRX3', target: 'OSGEP', directed: 'false', weight: 0.6410399999999999} },
+{ data: { source: 'TP53RK', target: 'OSGEP', directed: 'false', weight: 0.9993700000000001} },
+{ data: { source: 'TP53RK', target: 'GON7', directed: 'false', weight: 0.8960110000000001} },
+{ data: { source: 'TP53RK', target: 'LAGE3', directed: 'false', weight: 0.7510859999999999} },
+{ data: { source: 'TP53RK', target: 'HYKK', directed: 'false', weight: 0.101714} },
+{ data: { source: 'TP53RK', target: 'CCDC28B', directed: 'false', weight: 0.08909589999999999} },
+{ data: { source: 'GON7', target: 'OSGEP', directed: 'false', weight: 0.999532} },
+{ data: { source: 'GON7', target: 'LAGE3', directed: 'false', weight: 0.48676800000000003} },
+{ data: { source: 'GON7', target: 'HYKK', directed: 'false', weight: 0.151455} },
+{ data: { source: 'GON7', target: 'CCDC28B', directed: 'false', weight: 0.133456} },
+{ data: { source: 'OSGEP', target: 'LAGE3', directed: 'false', weight: 0.999994} },
+{ data: { source: 'OSGEP', target: 'HYKK', directed: 'false', weight: 0.438271} },
+{ data: { source: 'OSGEP', target: 'CCDC28B', directed: 'false', weight: 0.399052} },
+{ data: { source: 'LAGE3', target: 'HYKK', directed: 'false', weight: 0.128057} },
+{ data: { source: 'LAGE3', target: 'CCDC28B', directed: 'false', weight: 0.112499} },
+{ data: { source: 'CCDC28B', target: 'HYKK', directed: 'false', weight: 0.151455} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 KEOPS complex<br> Complex Score (from Super.Complex) = 0.57113<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,117 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CF IIAm complex (Cleavage factor IIAm complex)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex626.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NUDT21', score: 5, href: "https://www.uniprot.org/uniprot/O43809" }},
+{data: { id: 'DHX16', score: 5, href: "https://www.uniprot.org/uniprot/O60231" }},
+{data: { id: 'PCF11', score: 5, href: "https://www.uniprot.org/uniprot/O94913" }},
+{data: { id: 'ERCC3', score: 5, href: "https://www.uniprot.org/uniprot/P19447" }},
+{data: { id: 'SFPQ', score: 5, href: "https://www.uniprot.org/uniprot/P23246" }},
+{data: { id: 'U2AF2', score: 5, href: "https://www.uniprot.org/uniprot/P26368" }},
+{data: { id: 'PTBP1', score: 5, href: "https://www.uniprot.org/uniprot/P26599" }},
+{data: { id: 'MRE11A', score: 5, href: "https://www.uniprot.org/uniprot/P49959" }},
+{data: { id: 'U2AF1', score: 5, href: "https://www.uniprot.org/uniprot/Q01081" }},
+{data: { id: 'DKFZp686A1195', score: 1, href: "https://www.uniprot.org/uniprot/Q6MZU1" }},
+{data: { id: 'CAPRIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q14444" }},
+{data: { id: 'CPSF6', score: 5, href: "https://www.uniprot.org/uniprot/Q16630" }},
+{data: { id: 'CPSF7', score: 5, href: "https://www.uniprot.org/uniprot/Q8N684" }},
+{data: { id: 'GTF2H4', score: 5, href: "https://www.uniprot.org/uniprot/Q92759" }},
+{data: { id: 'CLP1', score: 5, href: "https://www.uniprot.org/uniprot/O94992" }},
+{data: { id: 'CPSF3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKF6" }}], 
+ edges: [{ data: { source: 'SFPQ', target: 'CAPRIN1', directed: 'false', weight: 0.218996} },
+{ data: { source: 'SFPQ', target: 'CPSF6', directed: 'false', weight: 0.187885} },
+{ data: { source: 'SFPQ', target: 'U2AF2', directed: 'false', weight: 0.030132799999999998} },
+{ data: { source: 'CLP1', target: 'PCF11', directed: 'false', weight: 0.994143} },
+{ data: { source: 'ERCC3', target: 'GTF2H4', directed: 'false', weight: 0.9996120000000001} },
+{ data: { source: 'U2AF1', target: 'U2AF2', directed: 'false', weight: 0.201066} },
+{ data: { source: 'NUDT21', target: 'CPSF6', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'NUDT21', target: 'CPSF7', directed: 'false', weight: 0.552741} },
+{ data: { source: 'NUDT21', target: 'DHX16', directed: 'false', weight: 0.0612495} },
+{ data: { source: 'NUDT21', target: 'MRE11A', directed: 'false', weight: 0.0288404} },
+{ data: { source: 'MRE11A', target: 'CPSF6', directed: 'false', weight: 0.32261100000000004} },
+{ data: { source: 'MRE11A', target: 'DKFZp686A1195', directed: 'false', weight: 0.045793099999999996} },
+{ data: { source: 'CPSF7', target: 'CPSF6', directed: 'false', weight: 0.9931399999999999} },
+{ data: { source: 'CPSF6', target: 'PCF11', directed: 'false', weight: 0.045512199999999996} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CF IIAm complex (Cleavage factor IIAm complex)	<br> Unweighted Density = 0.12
+    </section>
+    </body>
+    </html>
+    

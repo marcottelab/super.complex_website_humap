@@ -1,0 +1,138 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> ZSCAN20 ZNF24 ZKSCAN3 RAZ1 ZNF452 ZNF397 ZNF174 ZNF213 ZKSCAN4</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex68.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ZKSCAN4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q969J2" }},
+{data: { id: 'ZNF213', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14771" }},
+{data: { id: 'ZSCAN20', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P17040" }},
+{data: { id: 'ZNF24', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P17028" }},
+{data: { id: 'RAZ1', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q9NZG6" }},
+{data: { id: 'ZKSCAN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BRR0" }},
+{data: { id: 'ZNF174', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15697" }},
+{data: { id: 'ZNF452', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q6R2W3" }},
+{data: { id: 'ZNF397', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NF99" }}], 
+ edges: [{ data: { source: 'ZNF397', target: 'ZNF174', directed: 'false', weight: 0.924391} },
+{ data: { source: 'ZNF397', target: 'RAZ1', directed: 'false', weight: 0.5} },
+{ data: { source: 'ZNF397', target: 'ZKSCAN4', directed: 'false', weight: 0.11555499999999999} },
+{ data: { source: 'ZNF397', target: 'ZNF213', directed: 'false', weight: 0.11415299999999999} },
+{ data: { source: 'ZNF397', target: 'ZNF24', directed: 'false', weight: 0.112976} },
+{ data: { source: 'ZNF397', target: 'ZNF452', directed: 'false', weight: 0.11218499999999999} },
+{ data: { source: 'ZNF397', target: 'ZKSCAN3', directed: 'false', weight: 0.0634949} },
+{ data: { source: 'ZSCAN20', target: 'ZKSCAN3', directed: 'false', weight: 0.952652} },
+{ data: { source: 'ZSCAN20', target: 'ZNF174', directed: 'false', weight: 0.90135} },
+{ data: { source: 'ZSCAN20', target: 'ZNF452', directed: 'false', weight: 0.290812} },
+{ data: { source: 'ZSCAN20', target: 'ZNF24', directed: 'false', weight: 0.228517} },
+{ data: { source: 'ZSCAN20', target: 'RAZ1', directed: 'false', weight: 0.224525} },
+{ data: { source: 'ZSCAN20', target: 'ZKSCAN4', directed: 'false', weight: 0.149572} },
+{ data: { source: 'ZSCAN20', target: 'ZNF213', directed: 'false', weight: 0.08500010000000001} },
+{ data: { source: 'ZNF213', target: 'ZKSCAN4', directed: 'false', weight: 0.0494531} },
+{ data: { source: 'ZNF213', target: 'ZNF174', directed: 'false', weight: 0.0218707} },
+{ data: { source: 'ZNF24', target: 'RAZ1', directed: 'false', weight: 0.814342} },
+{ data: { source: 'ZNF24', target: 'ZNF452', directed: 'false', weight: 0.059193600000000006} },
+{ data: { source: 'ZNF24', target: 'ZNF174', directed: 'false', weight: 0.0481575} },
+{ data: { source: 'ZNF24', target: 'ZKSCAN3', directed: 'false', weight: 0.0420631} },
+{ data: { source: 'ZNF24', target: 'ZKSCAN4', directed: 'false', weight: 0.0306193} },
+{ data: { source: 'ZKSCAN3', target: 'ZKSCAN4', directed: 'false', weight: 0.480225} },
+{ data: { source: 'ZKSCAN3', target: 'RAZ1', directed: 'false', weight: 0.029016700000000003} },
+{ data: { source: 'ZKSCAN3', target: 'ZNF452', directed: 'false', weight: 0.0273865} },
+{ data: { source: 'ZKSCAN3', target: 'ZNF174', directed: 'false', weight: 0.026751900000000002} },
+{ data: { source: 'ZKSCAN4', target: 'ZNF174', directed: 'false', weight: 0.0953823} },
+{ data: { source: 'ZKSCAN4', target: 'RAZ1', directed: 'false', weight: 0.0827263} },
+{ data: { source: 'ZKSCAN4', target: 'ZNF452', directed: 'false', weight: 0.0680369} },
+{ data: { source: 'RAZ1', target: 'ZNF174', directed: 'false', weight: 0.031704} },
+{ data: { source: 'RAZ1', target: 'ZNF452', directed: 'false', weight: 0.028107} },
+{ data: { source: 'ZNF452', target: 'ZNF174', directed: 'false', weight: 0.024758000000000002} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    ZSCAN20 ZNF24 ZKSCAN3 RAZ1 ZNF452 ZNF397 ZNF174 ZNF213 ZKSCAN4<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.86
+    </section>
+    </body>
+    </html>
+    

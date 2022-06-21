@@ -1,0 +1,148 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 CENP-A NAC-CAD complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex57.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CENPT', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96BT3" }},
+{data: { id: 'CENPU', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q71F23" }},
+{data: { id: 'CENPH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H3R5" }},
+{data: { id: 'ITGB3BP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13352" }},
+{data: { id: 'CENPK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BS16" }},
+{data: { id: 'FSHPRH1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92674" }},
+{data: { id: 'DKFZp779J2459', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q7Z672" }},
+{data: { id: 'CENPQ', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7L2Z9" }},
+{data: { id: 'CENPO', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BU64" }},
+{data: { id: 'CENPN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96H22" }}], 
+ edges: [{ data: { source: 'CENPU', target: 'ITGB3BP', directed: 'false', weight: 0.99974} },
+{ data: { source: 'CENPU', target: 'DKFZp779J2459', directed: 'false', weight: 0.9989879999999999} },
+{ data: { source: 'CENPU', target: 'CENPO', directed: 'false', weight: 0.9985879999999999} },
+{ data: { source: 'CENPU', target: 'CENPQ', directed: 'false', weight: 0.863876} },
+{ data: { source: 'CENPU', target: 'CENPT', directed: 'false', weight: 0.6213069999999999} },
+{ data: { source: 'CENPU', target: 'FSHPRH1', directed: 'false', weight: 0.126566} },
+{ data: { source: 'CENPU', target: 'CENPN', directed: 'false', weight: 0.0849369} },
+{ data: { source: 'CENPU', target: 'CENPK', directed: 'false', weight: 0.0668891} },
+{ data: { source: 'CENPU', target: 'CENPH', directed: 'false', weight: 0.034348800000000006} },
+{ data: { source: 'CENPQ', target: 'DKFZp779J2459', directed: 'false', weight: 0.999928} },
+{ data: { source: 'CENPQ', target: 'ITGB3BP', directed: 'false', weight: 0.999857} },
+{ data: { source: 'CENPQ', target: 'CENPO', directed: 'false', weight: 0.997229} },
+{ data: { source: 'CENPQ', target: 'FSHPRH1', directed: 'false', weight: 0.0996219} },
+{ data: { source: 'CENPQ', target: 'CENPK', directed: 'false', weight: 0.0867919} },
+{ data: { source: 'CENPQ', target: 'CENPT', directed: 'false', weight: 0.08660419999999999} },
+{ data: { source: 'CENPQ', target: 'CENPN', directed: 'false', weight: 0.0662031} },
+{ data: { source: 'DKFZp779J2459', target: 'CENPO', directed: 'false', weight: 0.9999889999999999} },
+{ data: { source: 'DKFZp779J2459', target: 'ITGB3BP', directed: 'false', weight: 0.9950760000000001} },
+{ data: { source: 'DKFZp779J2459', target: 'CENPH', directed: 'false', weight: 0.08270069999999999} },
+{ data: { source: 'FSHPRH1', target: 'CENPO', directed: 'false', weight: 0.177291} },
+{ data: { source: 'FSHPRH1', target: 'CENPK', directed: 'false', weight: 0.10466700000000001} },
+{ data: { source: 'FSHPRH1', target: 'CENPH', directed: 'false', weight: 0.0715354} },
+{ data: { source: 'FSHPRH1', target: 'ITGB3BP', directed: 'false', weight: 0.0555072} },
+{ data: { source: 'CENPN', target: 'CENPO', directed: 'false', weight: 0.1118} },
+{ data: { source: 'CENPN', target: 'ITGB3BP', directed: 'false', weight: 0.11065799999999999} },
+{ data: { source: 'CENPN', target: 'CENPH', directed: 'false', weight: 0.047577999999999995} },
+{ data: { source: 'CENPK', target: 'CENPH', directed: 'false', weight: 0.224043} },
+{ data: { source: 'CENPK', target: 'CENPO', directed: 'false', weight: 0.194128} },
+{ data: { source: 'CENPK', target: 'ITGB3BP', directed: 'false', weight: 0.15835} },
+{ data: { source: 'CENPH', target: 'CENPT', directed: 'false', weight: 0.06560360000000001} },
+{ data: { source: 'CENPH', target: 'ITGB3BP', directed: 'false', weight: 0.054254} },
+{ data: { source: 'CENPH', target: 'CENPO', directed: 'false', weight: 0.0218185} },
+{ data: { source: 'CENPO', target: 'ITGB3BP', directed: 'false', weight: 0.999926} },
+{ data: { source: 'CENPO', target: 'CENPT', directed: 'false', weight: 0.186523} },
+{ data: { source: 'ITGB3BP', target: 'CENPT', directed: 'false', weight: 0.23687600000000003} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 CENP-A NAC-CAD complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.78
+    </section>
+    </body>
+    </html>
+    

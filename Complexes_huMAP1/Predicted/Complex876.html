@@ -1,0 +1,123 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 ITGAM-ITGB2-CD11 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex877.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SLC4A7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y6M7" }},
+{data: { id: 'SLC12A7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y666" }},
+{data: { id: 'SLC12A4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UP95" }},
+{data: { id: 'ATG9A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z3C6" }},
+{data: { id: 'CD63', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P08962" }},
+{data: { id: 'SLC12A2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P55011" }},
+{data: { id: 'SLC12A6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UHW9" }}], 
+ edges: [{ data: { source: 'CD63', target: 'SLC12A6', directed: 'false', weight: 0.45249700000000004} },
+{ data: { source: 'CD63', target: 'ATG9A', directed: 'false', weight: 0.45249700000000004} },
+{ data: { source: 'SLC12A2', target: 'SLC12A4', directed: 'false', weight: 0.6836840000000001} },
+{ data: { source: 'SLC12A2', target: 'SLC12A7', directed: 'false', weight: 0.510842} },
+{ data: { source: 'SLC12A2', target: 'SLC12A6', directed: 'false', weight: 0.40725100000000003} },
+{ data: { source: 'SLC12A2', target: 'SLC4A7', directed: 'false', weight: 0.279082} },
+{ data: { source: 'SLC12A4', target: 'SLC12A6', directed: 'false', weight: 0.7282689999999999} },
+{ data: { source: 'SLC12A4', target: 'SLC12A7', directed: 'false', weight: 0.643612} },
+{ data: { source: 'SLC12A4', target: 'SLC4A7', directed: 'false', weight: 0.417108} },
+{ data: { source: 'ATG9A', target: 'SLC12A6', directed: 'false', weight: 0.556438} },
+{ data: { source: 'SLC12A6', target: 'SLC4A7', directed: 'false', weight: 0.579203} },
+{ data: { source: 'SLC12A6', target: 'SLC12A7', directed: 'false', weight: 0.5} },
+{ data: { source: 'SLC12A7', target: 'SLC4A7', directed: 'false', weight: 0.28783800000000004} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 ITGAM-ITGB2-CD11 complex<br> Complex Score (from Super.Complex) = 0.54826<br> Unweighted Density = 0.62
+    </section>
+    </body>
+    </html>
+    

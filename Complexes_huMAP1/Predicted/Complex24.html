@@ -1,0 +1,173 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 Gamma-tubulin complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex25.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TUBGCP5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96RT8" }},
+{data: { id: 'MZT2B', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q6NZ67" }},
+{data: { id: 'MZT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q08AG7" }},
+{data: { id: 'SARS-CoV2 M', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 M.html" }},
+{data: { id: 'TUBGCP3', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q96CW5" }},
+{data: { id: 'TUBG1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P23258" }},
+{data: { id: 'SARS-CoV2 M', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 M.html" }},
+{data: { id: 'TUBGCP2', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9BSJ2" }},
+{data: { id: 'NEDD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NHV4" }},
+{data: { id: 'TUBGCP4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UGJ1" }},
+{data: { id: 'TUBGCP6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96RT7" }},
+{data: { id: 'MZT2A', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q6P582" }},
+{data: { id: 'NME7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y5B8" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 M', target: 'TUBGCP3', directed: 'false', weight: 0.753607002, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 M', target: 'TUBGCP2', directed: 'false', weight: 0.83958055, type: 'sars'} },
+{ data: { source: 'TUBG1', target: 'MZT2B', directed: 'false', weight: 0.999978} },
+{ data: { source: 'TUBG1', target: 'TUBGCP6', directed: 'false', weight: 0.998927} },
+{ data: { source: 'TUBG1', target: 'TUBGCP2', directed: 'false', weight: 0.992049} },
+{ data: { source: 'TUBG1', target: 'TUBGCP4', directed: 'false', weight: 0.9904950000000001} },
+{ data: { source: 'TUBG1', target: 'TUBGCP3', directed: 'false', weight: 0.983885} },
+{ data: { source: 'TUBG1', target: 'TUBGCP5', directed: 'false', weight: 0.980826} },
+{ data: { source: 'TUBG1', target: 'NME7', directed: 'false', weight: 0.973865} },
+{ data: { source: 'TUBG1', target: 'MZT2A', directed: 'false', weight: 0.951084} },
+{ data: { source: 'TUBG1', target: 'MZT1', directed: 'false', weight: 0.8691639999999999} },
+{ data: { source: 'TUBG1', target: 'NEDD1', directed: 'false', weight: 0.769874} },
+{ data: { source: 'MZT1', target: 'TUBGCP2', directed: 'false', weight: 0.991405} },
+{ data: { source: 'MZT1', target: 'TUBGCP5', directed: 'false', weight: 0.984497} },
+{ data: { source: 'MZT1', target: 'TUBGCP3', directed: 'false', weight: 0.9809370000000001} },
+{ data: { source: 'MZT1', target: 'TUBGCP4', directed: 'false', weight: 0.9766469999999999} },
+{ data: { source: 'MZT1', target: 'MZT2B', directed: 'false', weight: 0.974707} },
+{ data: { source: 'MZT1', target: 'MZT2A', directed: 'false', weight: 0.9657209999999999} },
+{ data: { source: 'MZT1', target: 'NEDD1', directed: 'false', weight: 0.9598450000000001} },
+{ data: { source: 'MZT1', target: 'TUBGCP6', directed: 'false', weight: 0.950917} },
+{ data: { source: 'MZT1', target: 'NME7', directed: 'false', weight: 0.8427040000000001} },
+{ data: { source: 'NME7', target: 'MZT2B', directed: 'false', weight: 0.9997010000000001} },
+{ data: { source: 'NME7', target: 'MZT2A', directed: 'false', weight: 0.9979959999999999} },
+{ data: { source: 'NME7', target: 'TUBGCP2', directed: 'false', weight: 0.9949680000000001} },
+{ data: { source: 'NME7', target: 'TUBGCP6', directed: 'false', weight: 0.9878049999999999} },
+{ data: { source: 'NME7', target: 'TUBGCP4', directed: 'false', weight: 0.9874430000000001} },
+{ data: { source: 'NME7', target: 'TUBGCP5', directed: 'false', weight: 0.9077459999999999} },
+{ data: { source: 'NME7', target: 'TUBGCP3', directed: 'false', weight: 0.8502540000000001} },
+{ data: { source: 'NME7', target: 'NEDD1', directed: 'false', weight: 0.5} },
+{ data: { source: 'TUBGCP3', target: 'TUBGCP2', directed: 'false', weight: 0.999983} },
+{ data: { source: 'TUBGCP3', target: 'MZT2B', directed: 'false', weight: 0.999891} },
+{ data: { source: 'TUBGCP3', target: 'MZT2A', directed: 'false', weight: 0.9988020000000001} },
+{ data: { source: 'TUBGCP3', target: 'TUBGCP6', directed: 'false', weight: 0.992668} },
+{ data: { source: 'TUBGCP3', target: 'TUBGCP4', directed: 'false', weight: 0.9881200000000001} },
+{ data: { source: 'TUBGCP3', target: 'TUBGCP5', directed: 'false', weight: 0.9879870000000001} },
+{ data: { source: 'TUBGCP3', target: 'NEDD1', directed: 'false', weight: 0.935493} },
+{ data: { source: 'TUBGCP2', target: 'MZT2B', directed: 'false', weight: 1.0} },
+{ data: { source: 'TUBGCP2', target: 'TUBGCP6', directed: 'false', weight: 0.999883} },
+{ data: { source: 'TUBGCP2', target: 'MZT2A', directed: 'false', weight: 0.9974940000000001} },
+{ data: { source: 'TUBGCP2', target: 'TUBGCP5', directed: 'false', weight: 0.995257} },
+{ data: { source: 'TUBGCP2', target: 'TUBGCP4', directed: 'false', weight: 0.989469} },
+{ data: { source: 'TUBGCP2', target: 'NEDD1', directed: 'false', weight: 0.9347139999999999} },
+{ data: { source: 'MZT2B', target: 'TUBGCP6', directed: 'false', weight: 0.999999} },
+{ data: { source: 'MZT2B', target: 'TUBGCP5', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'MZT2B', target: 'TUBGCP4', directed: 'false', weight: 0.999991} },
+{ data: { source: 'MZT2B', target: 'MZT2A', directed: 'false', weight: 0.9977540000000001} },
+{ data: { source: 'MZT2B', target: 'NEDD1', directed: 'false', weight: 0.519755} },
+{ data: { source: 'TUBGCP5', target: 'TUBGCP4', directed: 'false', weight: 0.996899} },
+{ data: { source: 'TUBGCP5', target: 'TUBGCP6', directed: 'false', weight: 0.993455} },
+{ data: { source: 'TUBGCP5', target: 'MZT2A', directed: 'false', weight: 0.9864360000000001} },
+{ data: { source: 'TUBGCP5', target: 'NEDD1', directed: 'false', weight: 0.848864} },
+{ data: { source: 'TUBGCP6', target: 'TUBGCP4', directed: 'false', weight: 0.9978040000000001} },
+{ data: { source: 'TUBGCP6', target: 'MZT2A', directed: 'false', weight: 0.9941049999999999} },
+{ data: { source: 'TUBGCP6', target: 'NEDD1', directed: 'false', weight: 0.860037} },
+{ data: { source: 'TUBGCP4', target: 'MZT2A', directed: 'false', weight: 0.9840909999999999} },
+{ data: { source: 'TUBGCP4', target: 'NEDD1', directed: 'false', weight: 0.8911190000000001} },
+{ data: { source: 'NEDD1', target: 'MZT2A', directed: 'false', weight: 0.837116} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 Gamma-tubulin complex<br> Complex Score (from Super.Complex) = 0.95257<br> Unweighted Density = 1.00
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>TUBGCP3 TUBGCP2
+    </section>
+    </body>
+    </html>
+    

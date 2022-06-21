@@ -1,0 +1,186 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 CENP-H-I complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex39.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CENPI', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92674" }},
+{data: { id: 'CENPW', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5EE01" }},
+{data: { id: 'CENPH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H3R5" }},
+{data: { id: 'CENPX', score: 5, type: '', href: "https://www.uniprot.org/uniprot/A8MT69" }},
+{data: { id: 'CENPK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BS16" }},
+{data: { id: 'CENPT', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96BT3" }},
+{data: { id: 'ITGB3BP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13352" }},
+{data: { id: 'CENPN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96H22" }},
+{data: { id: 'CENPO', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BU64" }},
+{data: { id: 'CENPU', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q71F23" }},
+{data: { id: 'CENPP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6IPU0" }},
+{data: { id: 'CENPL', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q8N0S6" }},
+{data: { id: 'CENPM', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NSP4" }},
+{data: { id: 'CENPQ', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7L2Z9" }}], 
+ edges: [{ data: { source: 'CENPU', target: 'CENPP', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'CENPU', target: 'ITGB3BP', directed: 'false', weight: 0.999986} },
+{ data: { source: 'CENPU', target: 'CENPO', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'CENPU', target: 'CENPQ', directed: 'false', weight: 0.998935} },
+{ data: { source: 'CENPU', target: 'CENPT', directed: 'false', weight: 0.985289} },
+{ data: { source: 'CENPU', target: 'CENPK', directed: 'false', weight: 0.96699} },
+{ data: { source: 'CENPU', target: 'CENPN', directed: 'false', weight: 0.935119} },
+{ data: { source: 'CENPU', target: 'CENPI', directed: 'false', weight: 0.931882} },
+{ data: { source: 'CENPU', target: 'CENPM', directed: 'false', weight: 0.7154189999999999} },
+{ data: { source: 'CENPU', target: 'CENPH', directed: 'false', weight: 0.6689970000000001} },
+{ data: { source: 'CENPU', target: 'CENPX', directed: 'false', weight: 0.11228900000000001} },
+{ data: { source: 'CENPL', target: 'CENPH', directed: 'false', weight: 0.7563949999999999} },
+{ data: { source: 'CENPL', target: 'CENPW', directed: 'false', weight: 0.165074} },
+{ data: { source: 'CENPW', target: 'CENPH', directed: 'false', weight: 0.5156930000000001} },
+{ data: { source: 'CENPM', target: 'CENPH', directed: 'false', weight: 0.980635} },
+{ data: { source: 'CENPM', target: 'CENPO', directed: 'false', weight: 0.9146620000000001} },
+{ data: { source: 'CENPM', target: 'CENPI', directed: 'false', weight: 0.8595879999999999} },
+{ data: { source: 'CENPM', target: 'CENPQ', directed: 'false', weight: 0.787393} },
+{ data: { source: 'CENPM', target: 'CENPK', directed: 'false', weight: 0.594072} },
+{ data: { source: 'CENPM', target: 'CENPT', directed: 'false', weight: 0.44872399999999996} },
+{ data: { source: 'CENPM', target: 'CENPN', directed: 'false', weight: 0.44872399999999996} },
+{ data: { source: 'CENPM', target: 'ITGB3BP', directed: 'false', weight: 0.44872399999999996} },
+{ data: { source: 'CENPM', target: 'CENPP', directed: 'false', weight: 0.44872399999999996} },
+{ data: { source: 'CENPM', target: 'CENPX', directed: 'false', weight: 0.387818} },
+{ data: { source: 'CENPI', target: 'CENPO', directed: 'false', weight: 0.991241} },
+{ data: { source: 'CENPI', target: 'CENPK', directed: 'false', weight: 0.9737530000000001} },
+{ data: { source: 'CENPI', target: 'ITGB3BP', directed: 'false', weight: 0.969385} },
+{ data: { source: 'CENPI', target: 'CENPQ', directed: 'false', weight: 0.960341} },
+{ data: { source: 'CENPI', target: 'CENPH', directed: 'false', weight: 0.9484889999999999} },
+{ data: { source: 'CENPI', target: 'CENPN', directed: 'false', weight: 0.859713} },
+{ data: { source: 'CENPI', target: 'CENPT', directed: 'false', weight: 0.65632} },
+{ data: { source: 'CENPI', target: 'CENPP', directed: 'false', weight: 0.65632} },
+{ data: { source: 'CENPI', target: 'CENPX', directed: 'false', weight: 0.33265500000000003} },
+{ data: { source: 'CENPK', target: 'CENPH', directed: 'false', weight: 0.99569} },
+{ data: { source: 'CENPK', target: 'ITGB3BP', directed: 'false', weight: 0.99477} },
+{ data: { source: 'CENPK', target: 'CENPO', directed: 'false', weight: 0.9944540000000001} },
+{ data: { source: 'CENPK', target: 'CENPQ', directed: 'false', weight: 0.9659459999999999} },
+{ data: { source: 'CENPK', target: 'CENPT', directed: 'false', weight: 0.594072} },
+{ data: { source: 'CENPK', target: 'CENPN', directed: 'false', weight: 0.594072} },
+{ data: { source: 'CENPK', target: 'CENPP', directed: 'false', weight: 0.594072} },
+{ data: { source: 'CENPK', target: 'CENPX', directed: 'false', weight: 0.292026} },
+{ data: { source: 'CENPN', target: 'ITGB3BP', directed: 'false', weight: 0.989166} },
+{ data: { source: 'CENPN', target: 'CENPO', directed: 'false', weight: 0.9864860000000001} },
+{ data: { source: 'CENPN', target: 'CENPQ', directed: 'false', weight: 0.944702} },
+{ data: { source: 'CENPN', target: 'CENPH', directed: 'false', weight: 0.8937430000000001} },
+{ data: { source: 'CENPN', target: 'CENPT', directed: 'false', weight: 0.741451} },
+{ data: { source: 'CENPN', target: 'CENPP', directed: 'false', weight: 0.741451} },
+{ data: { source: 'CENPN', target: 'CENPX', directed: 'false', weight: 0.387818} },
+{ data: { source: 'CENPQ', target: 'CENPP', directed: 'false', weight: 0.999978} },
+{ data: { source: 'CENPQ', target: 'ITGB3BP', directed: 'false', weight: 0.999884} },
+{ data: { source: 'CENPQ', target: 'CENPO', directed: 'false', weight: 0.999826} },
+{ data: { source: 'CENPQ', target: 'CENPT', directed: 'false', weight: 0.9641200000000001} },
+{ data: { source: 'CENPQ', target: 'CENPH', directed: 'false', weight: 0.488141} },
+{ data: { source: 'CENPQ', target: 'CENPX', directed: 'false', weight: 0.07901110000000001} },
+{ data: { source: 'CENPP', target: 'CENPO', directed: 'false', weight: 0.999999} },
+{ data: { source: 'CENPP', target: 'ITGB3BP', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'CENPP', target: 'CENPH', directed: 'false', weight: 0.957119} },
+{ data: { source: 'CENPP', target: 'CENPT', directed: 'false', weight: 0.741451} },
+{ data: { source: 'CENPP', target: 'CENPX', directed: 'false', weight: 0.387818} },
+{ data: { source: 'CENPT', target: 'ITGB3BP', directed: 'false', weight: 0.9974930000000001} },
+{ data: { source: 'CENPT', target: 'CENPO', directed: 'false', weight: 0.9947959999999999} },
+{ data: { source: 'CENPT', target: 'CENPH', directed: 'false', weight: 0.9378540000000001} },
+{ data: { source: 'CENPT', target: 'CENPX', directed: 'false', weight: 0.387818} },
+{ data: { source: 'CENPO', target: 'ITGB3BP', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'CENPO', target: 'CENPH', directed: 'false', weight: 0.6949649999999999} },
+{ data: { source: 'CENPO', target: 'CENPX', directed: 'false', weight: 0.08872680000000001} },
+{ data: { source: 'ITGB3BP', target: 'CENPH', directed: 'false', weight: 0.912916} },
+{ data: { source: 'ITGB3BP', target: 'CENPX', directed: 'false', weight: 0.387818} },
+{ data: { source: 'CENPH', target: 'CENPX', directed: 'false', weight: 0.5} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 CENP-H-I complex<br> Complex Score (from Super.Complex) = 0.87138<br> Unweighted Density = 0.76
+    </section>
+    </body>
+    </html>
+    

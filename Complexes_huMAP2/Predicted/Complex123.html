@@ -1,0 +1,135 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 CORVET complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex124.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TGFBRAP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WUH2" }},
+{data: { id: 'VPS33A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96AX1" }},
+{data: { id: 'TECPR2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15040" }},
+{data: { id: 'VPS8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N3P4" }},
+{data: { id: 'VPS16', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H269" }},
+{data: { id: 'VPS41', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49754" }},
+{data: { id: 'SARS-CoV2 orf3a', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 orf3a.html" }},
+{data: { id: 'VPS11', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9H270" }},
+{data: { id: 'VPS18', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P253" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 orf3a', target: 'VPS11', directed: 'false', weight: 0.967855711, type: 'sars'} },
+{ data: { source: 'VPS16', target: 'VPS41', directed: 'false', weight: 0.999711} },
+{ data: { source: 'VPS16', target: 'VPS33A', directed: 'false', weight: 0.551771} },
+{ data: { source: 'VPS16', target: 'VPS18', directed: 'false', weight: 0.367817} },
+{ data: { source: 'VPS16', target: 'VPS11', directed: 'false', weight: 0.0505084} },
+{ data: { source: 'TECPR2', target: 'VPS41', directed: 'false', weight: 0.345352} },
+{ data: { source: 'VPS41', target: 'VPS18', directed: 'false', weight: 0.9999540000000001} },
+{ data: { source: 'VPS41', target: 'VPS33A', directed: 'false', weight: 0.999685} },
+{ data: { source: 'VPS41', target: 'VPS11', directed: 'false', weight: 0.985909} },
+{ data: { source: 'VPS41', target: 'TGFBRAP1', directed: 'false', weight: 0.974276} },
+{ data: { source: 'VPS33A', target: 'VPS18', directed: 'false', weight: 0.257231} },
+{ data: { source: 'VPS33A', target: 'VPS11', directed: 'false', weight: 0.050488599999999995} },
+{ data: { source: 'VPS33A', target: 'VPS8', directed: 'false', weight: 0.0315124} },
+{ data: { source: 'VPS11', target: 'TGFBRAP1', directed: 'false', weight: 0.999975} },
+{ data: { source: 'VPS11', target: 'VPS18', directed: 'false', weight: 0.950644} },
+{ data: { source: 'VPS11', target: 'VPS8', directed: 'false', weight: 0.0518495} },
+{ data: { source: 'TGFBRAP1', target: 'VPS18', directed: 'false', weight: 0.14128} },
+{ data: { source: 'VPS18', target: 'VPS8', directed: 'false', weight: 0.0685747} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 CORVET complex<br> Complex Score (from Super.Complex) = 0.99700<br> Unweighted Density = 0.61
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>VPS11
+    </section>
+    </body>
+    </html>
+    

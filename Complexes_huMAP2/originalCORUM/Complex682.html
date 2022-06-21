@@ -1,0 +1,92 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TRF2-Rap1 complex II</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex683.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TERF2', score: 5, href: "https://www.uniprot.org/uniprot/Q15554" }},
+{data: { id: 'TINF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BSI4" }},
+{data: { id: 'POT1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NUX5" }},
+{data: { id: 'TERF2IP', score: 5, href: "https://www.uniprot.org/uniprot/Q9NYB0" }}], 
+ edges: [{ data: { source: 'TERF2IP', target: 'TERF2', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'TERF2IP', target: 'POT1', directed: 'false', weight: 0.651291} },
+{ data: { source: 'TERF2IP', target: 'TINF2', directed: 'false', weight: 0.11316099999999998} },
+{ data: { source: 'POT1', target: 'TINF2', directed: 'false', weight: 0.999331} },
+{ data: { source: 'POT1', target: 'TERF2', directed: 'false', weight: 0.8390799999999999} },
+{ data: { source: 'TERF2', target: 'TINF2', directed: 'false', weight: 0.08758880000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    TRF2-Rap1 complex II	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

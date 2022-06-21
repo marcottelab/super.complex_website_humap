@@ -1,0 +1,124 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> LCP1 IL1F5 IGHG2 S100A4 SULT2B1 3500 3514 FCGBP hCG_1998531 HEL-S-78p</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex580.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'IGKC', score: 5.0, type: '', href: "https://www.uniprot.org/uniprot/P01834" }},
+{data: { id: 'FCGBP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y6R7" }},
+{data: { id: 'HEL-S-78p', score: 3, type: '', href: "https://www.uniprot.org/uniprot/V9HVY1" }},
+{data: { id: 'IL1F5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UBH0" }},
+{data: { id: 'S100A4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P26447" }},
+{data: { id: 'IGHG1', score: 5.0, type: '', href: "https://www.uniprot.org/uniprot/P01857" }},
+{data: { id: 'SULT2B1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00204" }},
+{data: { id: 'IGHG2', score: 5, type: '', href: "https://www.ncbi.nlm.nih.gov/gene/3501" }},
+{data: { id: 'LCP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P13796" }},
+{data: { id: 'hCG_1998531', score: 1, type: '', href: "https://www.uniprot.org/uniprot/A0A024QZ90" }}], 
+ edges: [{ data: { source: 'FCGBP', target: 'hCG_1998531', directed: 'false', weight: 0.0463569} },
+{ data: { source: 'HEL-S-78p', target: 'hCG_1998531', directed: 'false', weight: 0.16821} },
+{ data: { source: 'IL1F5', target: 'hCG_1998531', directed: 'false', weight: 0.288017} },
+{ data: { source: 'S100A4', target: 'hCG_1998531', directed: 'false', weight: 0.0800131} },
+{ data: { source: 'hCG_1998531', target: 'IGHG2', directed: 'false', weight: 0.10475899999999999} },
+{ data: { source: 'hCG_1998531', target: 'IGHG1', directed: 'false', weight: 0.0867455} },
+{ data: { source: 'hCG_1998531', target: 'IGKC', directed: 'false', weight: 0.0776214} },
+{ data: { source: 'hCG_1998531', target: 'SULT2B1', directed: 'false', weight: 0.0684644} },
+{ data: { source: 'hCG_1998531', target: 'LCP1', directed: 'false', weight: 0.0445295} },
+{ data: { source: 'IGKC', target: 'IGHG1', directed: 'false', weight: 0.047981800000000005} },
+{ data: { source: 'IGHG2', target: 'IGHG1', directed: 'false', weight: 0.05161519999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    LCP1 IL1F5 IGHG2 S100A4 SULT2B1 3500 3514 FCGBP hCG_1998531 HEL-S-78p<br> Complex Score (from Super.Complex) = 0.44000<br> Unweighted Density = 0.24
+    </section>
+    </body>
+    </html>
+    

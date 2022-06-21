@@ -1,0 +1,183 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 Isocitrate dehydrogenase [NADP], mitochondrial</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex125.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CNN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15417" }},
+{data: { id: 'NUFIP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z417" }},
+{data: { id: 'HNRPA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09651" }},
+{data: { id: 'FAHD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P587" }},
+{data: { id: 'SNRPA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09012" }},
+{data: { id: 'HNRNPK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61978" }},
+{data: { id: 'IDH2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48735" }},
+{data: { id: 'KHDRBS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q07666" }},
+{data: { id: 'SARS-CoV2 N', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 N.html" }},
+{data: { id: 'PABPC1', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/P11940" }},
+{data: { id: 'ADK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P55263" }},
+{data: { id: 'SARS-CoV2 N', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 N.html" }},
+{data: { id: 'G3BP2', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9UN86" }},
+{data: { id: 'ALYREF', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86V81" }},
+{data: { id: 'DKFZp686L1159', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q5U0Q1" }},
+{data: { id: 'CAPRIN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14444" }},
+{data: { id: 'USP10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NFA0" }},
+{data: { id: 'ATXN2L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WWM7" }},
+{data: { id: 'SARS-CoV2 nsp5', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp5.html" }},
+{data: { id: 'HDAC2', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q92769" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 N', target: 'PABPC1', directed: 'false', weight: 0.736635929, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 N', target: 'G3BP2', directed: 'false', weight: 0.958133672, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 nsp5', target: 'HDAC2', directed: 'false', weight: 0.993708403, type: 'sars'} },
+{ data: { source: 'ADK', target: 'G3BP2', directed: 'false', weight: 0.0664093} },
+{ data: { source: 'ADK', target: 'DKFZp686L1159', directed: 'false', weight: 0.0511673} },
+{ data: { source: 'DKFZp686L1159', target: 'USP10', directed: 'false', weight: 0.9981} },
+{ data: { source: 'DKFZp686L1159', target: 'G3BP2', directed: 'false', weight: 0.875798} },
+{ data: { source: 'DKFZp686L1159', target: 'CAPRIN1', directed: 'false', weight: 0.635522} },
+{ data: { source: 'DKFZp686L1159', target: 'HNRNPK', directed: 'false', weight: 0.366564} },
+{ data: { source: 'DKFZp686L1159', target: 'SNRPA', directed: 'false', weight: 0.140032} },
+{ data: { source: 'DKFZp686L1159', target: 'HDAC2', directed: 'false', weight: 0.125176} },
+{ data: { source: 'DKFZp686L1159', target: 'HNRPA1', directed: 'false', weight: 0.09575639999999999} },
+{ data: { source: 'DKFZp686L1159', target: 'IDH2', directed: 'false', weight: 0.06945119999999999} },
+{ data: { source: 'DKFZp686L1159', target: 'KHDRBS1', directed: 'false', weight: 0.0283182} },
+{ data: { source: 'DKFZp686L1159', target: 'NUFIP2', directed: 'false', weight: 0.0239572} },
+{ data: { source: 'HNRPA1', target: 'HNRNPK', directed: 'false', weight: 0.9984059999999999} },
+{ data: { source: 'HNRPA1', target: 'KHDRBS1', directed: 'false', weight: 0.6964670000000001} },
+{ data: { source: 'HNRPA1', target: 'IDH2', directed: 'false', weight: 0.40205599999999997} },
+{ data: { source: 'HNRPA1', target: 'ALYREF', directed: 'false', weight: 0.346801} },
+{ data: { source: 'HNRPA1', target: 'PABPC1', directed: 'false', weight: 0.091659} },
+{ data: { source: 'HNRPA1', target: 'G3BP2', directed: 'false', weight: 0.0537365} },
+{ data: { source: 'HNRPA1', target: 'CNN3', directed: 'false', weight: 0.021299400000000003} },
+{ data: { source: 'IDH2', target: 'G3BP2', directed: 'false', weight: 0.0558401} },
+{ data: { source: 'FAHD1', target: 'HNRNPK', directed: 'false', weight: 0.15091300000000002} },
+{ data: { source: 'FAHD1', target: 'ATXN2L', directed: 'false', weight: 0.0959797} },
+{ data: { source: 'FAHD1', target: 'PABPC1', directed: 'false', weight: 0.0399539} },
+{ data: { source: 'FAHD1', target: 'SNRPA', directed: 'false', weight: 0.0214095} },
+{ data: { source: 'FAHD1', target: 'G3BP2', directed: 'false', weight: 0.020871} },
+{ data: { source: 'ATXN2L', target: 'NUFIP2', directed: 'false', weight: 0.951788} },
+{ data: { source: 'ATXN2L', target: 'CNN3', directed: 'false', weight: 0.46151499999999995} },
+{ data: { source: 'ATXN2L', target: 'G3BP2', directed: 'false', weight: 0.44426499999999997} },
+{ data: { source: 'ATXN2L', target: 'PABPC1', directed: 'false', weight: 0.128798} },
+{ data: { source: 'ATXN2L', target: 'HNRNPK', directed: 'false', weight: 0.06355140000000001} },
+{ data: { source: 'KHDRBS1', target: 'HNRNPK', directed: 'false', weight: 0.246286} },
+{ data: { source: 'KHDRBS1', target: 'PABPC1', directed: 'false', weight: 0.141104} },
+{ data: { source: 'KHDRBS1', target: 'G3BP2', directed: 'false', weight: 0.0440443} },
+{ data: { source: 'KHDRBS1', target: 'HDAC2', directed: 'false', weight: 0.039704199999999995} },
+{ data: { source: 'KHDRBS1', target: 'CAPRIN1', directed: 'false', weight: 0.034944699999999995} },
+{ data: { source: 'PABPC1', target: 'HNRNPK', directed: 'false', weight: 0.906085} },
+{ data: { source: 'PABPC1', target: 'G3BP2', directed: 'false', weight: 0.100348} },
+{ data: { source: 'ALYREF', target: 'G3BP2', directed: 'false', weight: 0.419731} },
+{ data: { source: 'ALYREF', target: 'SNRPA', directed: 'false', weight: 0.322176} },
+{ data: { source: 'ALYREF', target: 'HNRNPK', directed: 'false', weight: 0.051319000000000004} },
+{ data: { source: 'ALYREF', target: 'CAPRIN1', directed: 'false', weight: 0.0253971} },
+{ data: { source: 'ALYREF', target: 'CNN3', directed: 'false', weight: 0.0231168} },
+{ data: { source: 'CAPRIN1', target: 'G3BP2', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'CAPRIN1', target: 'HDAC2', directed: 'false', weight: 0.0289622} },
+{ data: { source: 'G3BP2', target: 'USP10', directed: 'false', weight: 0.999941} },
+{ data: { source: 'G3BP2', target: 'NUFIP2', directed: 'false', weight: 0.989502} },
+{ data: { source: 'G3BP2', target: 'HDAC2', directed: 'false', weight: 0.139147} },
+{ data: { source: 'G3BP2', target: 'CNN3', directed: 'false', weight: 0.0955098} },
+{ data: { source: 'G3BP2', target: 'HNRNPK', directed: 'false', weight: 0.07488049999999999} },
+{ data: { source: 'G3BP2', target: 'SNRPA', directed: 'false', weight: 0.0474185} },
+{ data: { source: 'HNRNPK', target: 'CNN3', directed: 'false', weight: 0.34063699999999997} },
+{ data: { source: 'CNN3', target: 'SNRPA', directed: 'false', weight: 0.05176} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 Isocitrate dehydrogenase [NADP], mitochondrial<br> Complex Score (from Super.Complex) = 0.99700<br> Unweighted Density = 0.38
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        3 interacting protein(s): <br>PABPC1 G3BP2 HDAC2
+    </section>
+    </body>
+    </html>
+    

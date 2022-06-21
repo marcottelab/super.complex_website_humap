@@ -1,0 +1,154 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 BHC complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex722.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp5', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp5.html" }},
+{data: { id: 'HDAC2', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q92769" }},
+{data: { id: 'MTA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94776" }},
+{data: { id: 'GSE1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14687" }},
+{data: { id: 'HMG20B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P0W2" }},
+{data: { id: 'RCOR1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UKL0" }},
+{data: { id: 'RCOR3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P2K3" }},
+{data: { id: 'HDAC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'KDM1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60341" }},
+{data: { id: 'PHF21A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96BD5" }},
+{data: { id: 'RCOR2', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q8IZ40" }},
+{data: { id: 'HMG20A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NP66" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp5', target: 'HDAC2', directed: 'false', weight: 0.993708403, type: 'sars'} },
+{ data: { source: 'MTA2', target: 'HDAC1', directed: 'false', weight: 0.999965} },
+{ data: { source: 'MTA2', target: 'HDAC2', directed: 'false', weight: 0.999833} },
+{ data: { source: 'RCOR1', target: 'KDM1A', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RCOR1', target: 'RCOR3', directed: 'false', weight: 0.994741} },
+{ data: { source: 'RCOR1', target: 'HMG20B', directed: 'false', weight: 0.96454} },
+{ data: { source: 'RCOR1', target: 'HDAC1', directed: 'false', weight: 0.9042190000000001} },
+{ data: { source: 'RCOR1', target: 'HMG20A', directed: 'false', weight: 0.8753120000000001} },
+{ data: { source: 'RCOR1', target: 'GSE1', directed: 'false', weight: 0.8126800000000001} },
+{ data: { source: 'RCOR1', target: 'RCOR2', directed: 'false', weight: 0.21064699999999997} },
+{ data: { source: 'RCOR1', target: 'PHF21A', directed: 'false', weight: 0.206618} },
+{ data: { source: 'RCOR3', target: 'KDM1A', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RCOR3', target: 'HMG20B', directed: 'false', weight: 0.9528469999999999} },
+{ data: { source: 'RCOR3', target: 'GSE1', directed: 'false', weight: 0.7229} },
+{ data: { source: 'RCOR3', target: 'HMG20A', directed: 'false', weight: 0.718121} },
+{ data: { source: 'RCOR3', target: 'HDAC1', directed: 'false', weight: 0.521836} },
+{ data: { source: 'RCOR3', target: 'PHF21A', directed: 'false', weight: 0.190632} },
+{ data: { source: 'RCOR3', target: 'RCOR2', directed: 'false', weight: 0.178521} },
+{ data: { source: 'KDM1A', target: 'HMG20B', directed: 'false', weight: 0.919858} },
+{ data: { source: 'KDM1A', target: 'HDAC1', directed: 'false', weight: 0.8338209999999999} },
+{ data: { source: 'KDM1A', target: 'HMG20A', directed: 'false', weight: 0.8104439999999999} },
+{ data: { source: 'KDM1A', target: 'GSE1', directed: 'false', weight: 0.706178} },
+{ data: { source: 'KDM1A', target: 'RCOR2', directed: 'false', weight: 0.192166} },
+{ data: { source: 'KDM1A', target: 'PHF21A', directed: 'false', weight: 0.157086} },
+{ data: { source: 'HDAC2', target: 'HDAC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HMG20A', target: 'GSE1', directed: 'false', weight: 0.9537549999999999} },
+{ data: { source: 'GSE1', target: 'HMG20B', directed: 'false', weight: 0.991149} },
+{ data: { source: 'GSE1', target: 'HDAC1', directed: 'false', weight: 0.49390100000000003} },
+{ data: { source: 'GSE1', target: 'PHF21A', directed: 'false', weight: 0.21914699999999998} },
+{ data: { source: 'GSE1', target: 'RCOR2', directed: 'false', weight: 0.112499} },
+{ data: { source: 'PHF21A', target: 'HMG20B', directed: 'false', weight: 0.828659} },
+{ data: { source: 'PHF21A', target: 'RCOR2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'HDAC1', target: 'HMG20B', directed: 'false', weight: 0.425537} },
+{ data: { source: 'RCOR2', target: 'HMG20B', directed: 'false', weight: 0.6514770000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 BHC complex<br> Complex Score (from Super.Complex) = 0.59592<br> Unweighted Density = 0.60
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HDAC2
+    </section>
+    </body>
+    </html>
+    

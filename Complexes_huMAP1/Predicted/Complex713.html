@@ -1,0 +1,134 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> ISYNA1 PGP GPD1L PGD ALDOC ALDOA GARS GALE GORASP2</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex714.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GPD1L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N335" }},
+{data: { id: 'PGP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/A6NDG6" }},
+{data: { id: 'PGD', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P52209" }},
+{data: { id: 'ISYNA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NPH2" }},
+{data: { id: 'GALE', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14376" }},
+{data: { id: 'GARS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P41250" }},
+{data: { id: 'GORASP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H8Y8" }},
+{data: { id: 'ALDOA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P04075" }},
+{data: { id: 'ALDOC', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09972" }}], 
+ edges: [{ data: { source: 'GALE', target: 'ALDOC', directed: 'false', weight: 0.83836} },
+{ data: { source: 'GALE', target: 'PGD', directed: 'false', weight: 0.819348} },
+{ data: { source: 'GALE', target: 'GARS', directed: 'false', weight: 0.755182} },
+{ data: { source: 'GALE', target: 'ALDOA', directed: 'false', weight: 0.508292} },
+{ data: { source: 'GALE', target: 'GPD1L', directed: 'false', weight: 0.052387800000000005} },
+{ data: { source: 'GALE', target: 'PGP', directed: 'false', weight: 0.0349329} },
+{ data: { source: 'ISYNA1', target: 'PGD', directed: 'false', weight: 0.842706} },
+{ data: { source: 'ISYNA1', target: 'ALDOC', directed: 'false', weight: 0.682411} },
+{ data: { source: 'ISYNA1', target: 'ALDOA', directed: 'false', weight: 0.605905} },
+{ data: { source: 'GPD1L', target: 'ALDOC', directed: 'false', weight: 0.9169149999999999} },
+{ data: { source: 'GPD1L', target: 'ALDOA', directed: 'false', weight: 0.8995280000000001} },
+{ data: { source: 'GPD1L', target: 'PGD', directed: 'false', weight: 0.0632839} },
+{ data: { source: 'GPD1L', target: 'PGP', directed: 'false', weight: 0.014352700000000001} },
+{ data: { source: 'PGD', target: 'ALDOA', directed: 'false', weight: 0.86755} },
+{ data: { source: 'PGD', target: 'ALDOC', directed: 'false', weight: 0.765273} },
+{ data: { source: 'PGD', target: 'PGP', directed: 'false', weight: 0.037307599999999996} },
+{ data: { source: 'ALDOC', target: 'GORASP2', directed: 'false', weight: 0.847726} },
+{ data: { source: 'ALDOC', target: 'PGP', directed: 'false', weight: 0.74417} },
+{ data: { source: 'ALDOC', target: 'ALDOA', directed: 'false', weight: 0.6952649999999999} },
+{ data: { source: 'ALDOA', target: 'GORASP2', directed: 'false', weight: 0.7543850000000001} },
+{ data: { source: 'ALDOA', target: 'PGP', directed: 'false', weight: 0.705696} },
+{ data: { source: 'GORASP2', target: 'PGP', directed: 'false', weight: 0.0585136} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    ISYNA1 PGP GPD1L PGD ALDOC ALDOA GARS GALE GORASP2<br> Complex Score (from Super.Complex) = 0.59952<br> Unweighted Density = 0.61
+    </section>
+    </body>
+    </html>
+    

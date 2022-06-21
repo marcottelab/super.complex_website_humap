@@ -1,0 +1,158 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 Arp2/3 protein complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex32.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ACTR3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61158" }},
+{data: { id: 'HNRNPLL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WVV9" }},
+{data: { id: 'ACTR3B', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9P1U1" }},
+{data: { id: 'ARPC5L', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9BPX5" }},
+{data: { id: 'ARPC3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15145" }},
+{data: { id: 'HEL-68', score: 2, type: '', href: "https://www.uniprot.org/uniprot/V9HVZ6" }},
+{data: { id: 'ARPC4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P59998" }},
+{data: { id: 'ACTR2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61160" }},
+{data: { id: 'ARPC5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15511" }},
+{data: { id: 'ARPC1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15143" }},
+{data: { id: 'ARPC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15144" }}], 
+ edges: [{ data: { source: 'ARPC2', target: 'ARPC1B', directed: 'false', weight: 1.0} },
+{ data: { source: 'ARPC2', target: 'ACTR3', directed: 'false', weight: 1.0} },
+{ data: { source: 'ARPC2', target: 'ACTR2', directed: 'false', weight: 1.0} },
+{ data: { source: 'ARPC2', target: 'ARPC5', directed: 'false', weight: 0.999999} },
+{ data: { source: 'ARPC2', target: 'ARPC3', directed: 'false', weight: 0.999999} },
+{ data: { source: 'ARPC2', target: 'ARPC4', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'ARPC2', target: 'HEL-68', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'ARPC2', target: 'ARPC5L', directed: 'false', weight: 0.9996280000000001} },
+{ data: { source: 'ARPC2', target: 'HNRNPLL', directed: 'false', weight: 0.744078} },
+{ data: { source: 'ARPC2', target: 'ACTR3B', directed: 'false', weight: 0.17846800000000002} },
+{ data: { source: 'ARPC4', target: 'ACTR3', directed: 'false', weight: 1.0} },
+{ data: { source: 'ARPC4', target: 'ACTR2', directed: 'false', weight: 1.0} },
+{ data: { source: 'ARPC4', target: 'ARPC1B', directed: 'false', weight: 0.999994} },
+{ data: { source: 'ARPC4', target: 'ARPC5', directed: 'false', weight: 0.999965} },
+{ data: { source: 'ARPC4', target: 'HEL-68', directed: 'false', weight: 0.9999549999999999} },
+{ data: { source: 'ARPC4', target: 'ARPC3', directed: 'false', weight: 0.999948} },
+{ data: { source: 'ARPC4', target: 'ARPC5L', directed: 'false', weight: 0.962184} },
+{ data: { source: 'ARPC4', target: 'ACTR3B', directed: 'false', weight: 0.298186} },
+{ data: { source: 'ARPC4', target: 'HNRNPLL', directed: 'false', weight: 0.2755} },
+{ data: { source: 'ACTR3', target: 'ARPC3', directed: 'false', weight: 1.0} },
+{ data: { source: 'ACTR3', target: 'ARPC5', directed: 'false', weight: 0.999965} },
+{ data: { source: 'ACTR3', target: 'ARPC1B', directed: 'false', weight: 0.9999600000000001} },
+{ data: { source: 'ACTR3', target: 'ACTR2', directed: 'false', weight: 0.999941} },
+{ data: { source: 'ACTR3', target: 'ARPC5L', directed: 'false', weight: 0.999899} },
+{ data: { source: 'ACTR3', target: 'HEL-68', directed: 'false', weight: 0.9992110000000001} },
+{ data: { source: 'ACTR3', target: 'HNRNPLL', directed: 'false', weight: 0.506652} },
+{ data: { source: 'ACTR3', target: 'ACTR3B', directed: 'false', weight: 0.021574700000000002} },
+{ data: { source: 'ARPC1B', target: 'ACTR2', directed: 'false', weight: 1.0} },
+{ data: { source: 'ARPC1B', target: 'ARPC5', directed: 'false', weight: 0.999948} },
+{ data: { source: 'ARPC1B', target: 'ARPC5L', directed: 'false', weight: 0.999554} },
+{ data: { source: 'ARPC1B', target: 'ARPC3', directed: 'false', weight: 0.9985629999999999} },
+{ data: { source: 'ARPC1B', target: 'ACTR3B', directed: 'false', weight: 0.16082} },
+{ data: { source: 'HNRNPLL', target: 'ACTR2', directed: 'false', weight: 0.686443} },
+{ data: { source: 'HNRNPLL', target: 'ARPC3', directed: 'false', weight: 0.0825442} },
+{ data: { source: 'HNRNPLL', target: 'HEL-68', directed: 'false', weight: 0.061024300000000004} },
+{ data: { source: 'HEL-68', target: 'ACTR2', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'HEL-68', target: 'ARPC3', directed: 'false', weight: 0.999031} },
+{ data: { source: 'HEL-68', target: 'ARPC5', directed: 'false', weight: 0.995152} },
+{ data: { source: 'HEL-68', target: 'ARPC5L', directed: 'false', weight: 0.9948790000000001} },
+{ data: { source: 'HEL-68', target: 'ACTR3B', directed: 'false', weight: 0.816076} },
+{ data: { source: 'ARPC3', target: 'ACTR2', directed: 'false', weight: 1.0} },
+{ data: { source: 'ARPC3', target: 'ARPC5L', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'ARPC3', target: 'ARPC5', directed: 'false', weight: 0.999956} },
+{ data: { source: 'ARPC3', target: 'ACTR3B', directed: 'false', weight: 0.659027} },
+{ data: { source: 'ARPC5L', target: 'ACTR2', directed: 'false', weight: 0.998611} },
+{ data: { source: 'ARPC5L', target: 'ACTR3B', directed: 'false', weight: 0.21855} },
+{ data: { source: 'ARPC5', target: 'ACTR2', directed: 'false', weight: 0.968902} },
+{ data: { source: 'ARPC5', target: 'ACTR3B', directed: 'false', weight: 0.095304} },
+{ data: { source: 'ACTR3B', target: 'ACTR2', directed: 'false', weight: 0.128658} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 Arp2/3 protein complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.89
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,141 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.05 Spliceosome match 7</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex846.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CGGBP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UFW8" }},
+{data: { id: 'YRDC', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86U90" }},
+{data: { id: 'IK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13123" }},
+{data: { id: 'UBR7', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q8N806" }},
+{data: { id: 'SPINDOC', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9BUA3" }},
+{data: { id: 'SPIN4', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q56A73" }},
+{data: { id: 'SPIN2B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BPZ2" }},
+{data: { id: 'SPIN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H2V7" }},
+{data: { id: 'TOPORS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NS56" }},
+{data: { id: 'ARHGAP39', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9C0H5" }}], 
+ edges: [{ data: { source: 'IK', target: 'CGGBP1', directed: 'false', weight: 0.8409209999999999} },
+{ data: { source: 'CGGBP1', target: 'SPIN2B', directed: 'false', weight: 0.925947} },
+{ data: { source: 'CGGBP1', target: 'SPIN1', directed: 'false', weight: 0.719133} },
+{ data: { source: 'CGGBP1', target: 'YRDC', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'CGGBP1', target: 'SPIN4', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'CGGBP1', target: 'ARHGAP39', directed: 'false', weight: 0.123797} },
+{ data: { source: 'CGGBP1', target: 'UBR7', directed: 'false', weight: 0.0952688} },
+{ data: { source: 'SPIN1', target: 'SPINDOC', directed: 'false', weight: 0.954945} },
+{ data: { source: 'SPIN1', target: 'SPIN4', directed: 'false', weight: 0.894767} },
+{ data: { source: 'SPIN1', target: 'SPIN2B', directed: 'false', weight: 0.8879229999999999} },
+{ data: { source: 'SPIN1', target: 'YRDC', directed: 'false', weight: 0.879662} },
+{ data: { source: 'SPIN1', target: 'TOPORS', directed: 'false', weight: 0.87565} },
+{ data: { source: 'SPIN1', target: 'ARHGAP39', directed: 'false', weight: 0.117318} },
+{ data: { source: 'UBR7', target: 'SPIN2B', directed: 'false', weight: 0.6726260000000001} },
+{ data: { source: 'UBR7', target: 'ARHGAP39', directed: 'false', weight: 0.102922} },
+{ data: { source: 'YRDC', target: 'SPIN2B', directed: 'false', weight: 0.649828} },
+{ data: { source: 'YRDC', target: 'SPIN4', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'YRDC', target: 'TOPORS', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'YRDC', target: 'SPINDOC', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'YRDC', target: 'ARHGAP39', directed: 'false', weight: 0.133456} },
+{ data: { source: 'SPIN2B', target: 'ARHGAP39', directed: 'false', weight: 0.9487450000000001} },
+{ data: { source: 'SPIN2B', target: 'SPIN4', directed: 'false', weight: 0.9211530000000001} },
+{ data: { source: 'SPIN2B', target: 'SPINDOC', directed: 'false', weight: 0.7089979999999999} },
+{ data: { source: 'SPIN2B', target: 'TOPORS', directed: 'false', weight: 0.293027} },
+{ data: { source: 'TOPORS', target: 'SPIN4', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'TOPORS', target: 'SPINDOC', directed: 'false', weight: 0.24226599999999998} },
+{ data: { source: 'ARHGAP39', target: 'SPIN4', directed: 'false', weight: 0.133456} },
+{ data: { source: 'SPIN4', target: 'SPINDOC', directed: 'false', weight: 0.28781100000000004} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.05 Spliceosome match 7<br> Complex Score (from Super.Complex) = 0.55917<br> Unweighted Density = 0.62
+    </section>
+    </body>
+    </html>
+    

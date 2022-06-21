@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> LAS1L-PELP1-TEX10-WDR18-NOL9-SENP3  complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex163.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NOL9', score: 5, href: "https://www.uniprot.org/uniprot/Q5SY16" }},
+{data: { id: 'LAS1L', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4W2" }},
+{data: { id: 'PELP1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IZL8" }},
+{data: { id: 'SENP3', score: 5, href: "https://www.uniprot.org/uniprot/Q9H4L4" }},
+{data: { id: 'TEX10', score: 4, href: "https://www.uniprot.org/uniprot/Q9NXF1" }},
+{data: { id: 'WDR18', score: 5, href: "https://www.uniprot.org/uniprot/Q9BV38" }}], 
+ edges: [{ data: { source: 'NOL9', target: 'WDR18', directed: 'false', weight: 0.989361} },
+{ data: { source: 'NOL9', target: 'TEX10', directed: 'false', weight: 0.9467409999999999} },
+{ data: { source: 'NOL9', target: 'LAS1L', directed: 'false', weight: 0.945572} },
+{ data: { source: 'NOL9', target: 'PELP1', directed: 'false', weight: 0.8864719999999999} },
+{ data: { source: 'NOL9', target: 'SENP3', directed: 'false', weight: 0.247908} },
+{ data: { source: 'LAS1L', target: 'TEX10', directed: 'false', weight: 0.983856} },
+{ data: { source: 'LAS1L', target: 'PELP1', directed: 'false', weight: 0.9758979999999999} },
+{ data: { source: 'LAS1L', target: 'WDR18', directed: 'false', weight: 0.6717350000000001} },
+{ data: { source: 'LAS1L', target: 'SENP3', directed: 'false', weight: 0.115879} },
+{ data: { source: 'PELP1', target: 'TEX10', directed: 'false', weight: 0.999958} },
+{ data: { source: 'PELP1', target: 'WDR18', directed: 'false', weight: 0.9999389999999999} },
+{ data: { source: 'PELP1', target: 'SENP3', directed: 'false', weight: 0.997985} },
+{ data: { source: 'SENP3', target: 'WDR18', directed: 'false', weight: 0.9935440000000001} },
+{ data: { source: 'SENP3', target: 'TEX10', directed: 'false', weight: 0.9814780000000001} },
+{ data: { source: 'TEX10', target: 'WDR18', directed: 'false', weight: 0.9998739999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    LAS1L-PELP1-TEX10-WDR18-NOL9-SENP3  complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

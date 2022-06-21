@@ -1,0 +1,160 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 PBAF complex (Polybromo- and BAF containing complex)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex175.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SMARCC1', score: 5, href: "https://www.uniprot.org/uniprot/Q92922" }},
+{data: { id: 'SMARCC2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAQ2" }},
+{data: { id: 'SMARCA2', score: 5, href: "https://www.uniprot.org/uniprot/P51531" }},
+{data: { id: 'SMARCA4', score: 5, href: "https://www.uniprot.org/uniprot/P51532" }},
+{data: { id: 'ARID2', score: 5, href: "https://www.uniprot.org/uniprot/Q68CP9" }},
+{data: { id: 'SMARCE1', score: 5, href: "https://www.uniprot.org/uniprot/Q969G3" }},
+{data: { id: 'SMARCB1', score: 5, href: "https://www.uniprot.org/uniprot/Q12824" }},
+{data: { id: 'SMARCD2', score: 5, href: "https://www.uniprot.org/uniprot/Q92925" }},
+{data: { id: 'PBRM1', score: 5, href: "https://www.uniprot.org/uniprot/Q86U86" }},
+{data: { id: 'ARID1A', score: 5, href: "https://www.uniprot.org/uniprot/O14497" }},
+{data: { id: 'ACTL6A', score: 5, href: "https://www.uniprot.org/uniprot/O96019" }},
+{data: { id: 'SMARCD1', score: 5, href: "https://www.uniprot.org/uniprot/Q96GM5" }}], 
+ edges: [{ data: { source: 'SMARCC1', target: 'SMARCB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCC1', target: 'SMARCD1', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'SMARCC1', target: 'SMARCA4', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'SMARCC1', target: 'SMARCE1', directed: 'false', weight: 0.999992} },
+{ data: { source: 'SMARCC1', target: 'SMARCA2', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'SMARCC1', target: 'SMARCD2', directed: 'false', weight: 0.999976} },
+{ data: { source: 'SMARCC1', target: 'ACTL6A', directed: 'false', weight: 0.999959} },
+{ data: { source: 'SMARCC1', target: 'SMARCC2', directed: 'false', weight: 0.999553} },
+{ data: { source: 'SMARCC1', target: 'ARID1A', directed: 'false', weight: 0.999194} },
+{ data: { source: 'SMARCC1', target: 'ARID2', directed: 'false', weight: 0.9796540000000001} },
+{ data: { source: 'SMARCC1', target: 'PBRM1', directed: 'false', weight: 0.9477469999999999} },
+{ data: { source: 'SMARCC2', target: 'SMARCE1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SMARCC2', target: 'SMARCB1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SMARCC2', target: 'SMARCD1', directed: 'false', weight: 0.999992} },
+{ data: { source: 'SMARCC2', target: 'SMARCD2', directed: 'false', weight: 0.999976} },
+{ data: { source: 'SMARCC2', target: 'SMARCA4', directed: 'false', weight: 0.9999120000000001} },
+{ data: { source: 'SMARCC2', target: 'ARID1A', directed: 'false', weight: 0.999833} },
+{ data: { source: 'SMARCC2', target: 'SMARCA2', directed: 'false', weight: 0.999741} },
+{ data: { source: 'SMARCC2', target: 'ACTL6A', directed: 'false', weight: 0.9977520000000001} },
+{ data: { source: 'SMARCC2', target: 'PBRM1', directed: 'false', weight: 0.891334} },
+{ data: { source: 'SMARCC2', target: 'ARID2', directed: 'false', weight: 0.8592420000000001} },
+{ data: { source: 'SMARCA2', target: 'SMARCE1', directed: 'false', weight: 0.999691} },
+{ data: { source: 'SMARCA2', target: 'SMARCB1', directed: 'false', weight: 0.998525} },
+{ data: { source: 'SMARCA2', target: 'ARID1A', directed: 'false', weight: 0.9962} },
+{ data: { source: 'SMARCA2', target: 'SMARCD1', directed: 'false', weight: 0.996129} },
+{ data: { source: 'SMARCA2', target: 'ACTL6A', directed: 'false', weight: 0.993091} },
+{ data: { source: 'SMARCA2', target: 'SMARCD2', directed: 'false', weight: 0.9817879999999999} },
+{ data: { source: 'SMARCA2', target: 'PBRM1', directed: 'false', weight: 0.9563229999999999} },
+{ data: { source: 'SMARCA2', target: 'SMARCA4', directed: 'false', weight: 0.768} },
+{ data: { source: 'SMARCA2', target: 'ARID2', directed: 'false', weight: 0.601999} },
+{ data: { source: 'SMARCA4', target: 'SMARCE1', directed: 'false', weight: 0.999857} },
+{ data: { source: 'SMARCA4', target: 'SMARCD2', directed: 'false', weight: 0.999769} },
+{ data: { source: 'SMARCA4', target: 'SMARCB1', directed: 'false', weight: 0.999704} },
+{ data: { source: 'SMARCA4', target: 'SMARCD1', directed: 'false', weight: 0.9996459999999999} },
+{ data: { source: 'SMARCA4', target: 'ACTL6A', directed: 'false', weight: 0.99954} },
+{ data: { source: 'SMARCA4', target: 'ARID1A', directed: 'false', weight: 0.998769} },
+{ data: { source: 'SMARCA4', target: 'PBRM1', directed: 'false', weight: 0.9715860000000001} },
+{ data: { source: 'SMARCA4', target: 'ARID2', directed: 'false', weight: 0.850333} },
+{ data: { source: 'ARID2', target: 'SMARCD1', directed: 'false', weight: 0.996618} },
+{ data: { source: 'ARID2', target: 'PBRM1', directed: 'false', weight: 0.9867600000000001} },
+{ data: { source: 'ARID2', target: 'SMARCE1', directed: 'false', weight: 0.9852} },
+{ data: { source: 'ARID2', target: 'SMARCD2', directed: 'false', weight: 0.958192} },
+{ data: { source: 'ARID2', target: 'ARID1A', directed: 'false', weight: 0.9527030000000001} },
+{ data: { source: 'ARID2', target: 'SMARCB1', directed: 'false', weight: 0.844359} },
+{ data: { source: 'ARID2', target: 'ACTL6A', directed: 'false', weight: 0.658871} },
+{ data: { source: 'SMARCB1', target: 'SMARCD2', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'SMARCB1', target: 'SMARCE1', directed: 'false', weight: 0.999978} },
+{ data: { source: 'SMARCB1', target: 'SMARCD1', directed: 'false', weight: 0.999965} },
+{ data: { source: 'SMARCB1', target: 'ARID1A', directed: 'false', weight: 0.9992709999999999} },
+{ data: { source: 'SMARCB1', target: 'ACTL6A', directed: 'false', weight: 0.995555} },
+{ data: { source: 'SMARCB1', target: 'PBRM1', directed: 'false', weight: 0.426534} },
+{ data: { source: 'SMARCD2', target: 'SMARCE1', directed: 'false', weight: 0.999957} },
+{ data: { source: 'SMARCD2', target: 'SMARCD1', directed: 'false', weight: 0.999693} },
+{ data: { source: 'SMARCD2', target: 'ARID1A', directed: 'false', weight: 0.9977879999999999} },
+{ data: { source: 'SMARCD2', target: 'ACTL6A', directed: 'false', weight: 0.975899} },
+{ data: { source: 'SMARCD2', target: 'PBRM1', directed: 'false', weight: 0.8498110000000001} },
+{ data: { source: 'PBRM1', target: 'SMARCE1', directed: 'false', weight: 0.9824069999999999} },
+{ data: { source: 'PBRM1', target: 'ARID1A', directed: 'false', weight: 0.948852} },
+{ data: { source: 'PBRM1', target: 'ACTL6A', directed: 'false', weight: 0.8494659999999999} },
+{ data: { source: 'PBRM1', target: 'SMARCD1', directed: 'false', weight: 0.685132} },
+{ data: { source: 'ARID1A', target: 'SMARCE1', directed: 'false', weight: 0.999951} },
+{ data: { source: 'ARID1A', target: 'SMARCD1', directed: 'false', weight: 0.998976} },
+{ data: { source: 'ARID1A', target: 'ACTL6A', directed: 'false', weight: 0.998017} },
+{ data: { source: 'ACTL6A', target: 'SMARCD1', directed: 'false', weight: 0.998872} },
+{ data: { source: 'ACTL6A', target: 'SMARCE1', directed: 'false', weight: 0.998042} },
+{ data: { source: 'SMARCE1', target: 'SMARCD1', directed: 'false', weight: 0.999883} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 PBAF complex (Polybromo- and BAF containing complex)	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

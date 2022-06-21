@@ -1,0 +1,92 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Brg1-based SWI/SNF complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex157.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SMARCB1', score: 5, href: "https://www.uniprot.org/uniprot/Q12824" }},
+{data: { id: 'SMARCC2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAQ2" }},
+{data: { id: 'SMARCC1', score: 5, href: "https://www.uniprot.org/uniprot/Q92922" }},
+{data: { id: 'ACTL6A', score: 5, href: "https://www.uniprot.org/uniprot/O96019" }}], 
+ edges: [{ data: { source: 'SMARCB1', target: 'SMARCC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCB1', target: 'SMARCC2', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SMARCB1', target: 'ACTL6A', directed: 'false', weight: 0.995555} },
+{ data: { source: 'SMARCC2', target: 'SMARCC1', directed: 'false', weight: 0.999553} },
+{ data: { source: 'SMARCC2', target: 'ACTL6A', directed: 'false', weight: 0.9977520000000001} },
+{ data: { source: 'SMARCC1', target: 'ACTL6A', directed: 'false', weight: 0.999959} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Brg1-based SWI/SNF complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

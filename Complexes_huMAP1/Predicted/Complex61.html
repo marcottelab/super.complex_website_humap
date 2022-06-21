@@ -1,0 +1,132 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 Phosphorylase kinase complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex62.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PHKG2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P15735" }},
+{data: { id: 'NARF', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WVD3" }},
+{data: { id: 'PHKB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q93100" }},
+{data: { id: 'MPPED1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/O15442" }},
+{data: { id: 'PHKA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46019" }},
+{data: { id: 'PHKA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46020" }},
+{data: { id: 'NR2F6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P10588" }},
+{data: { id: 'MPPED2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15777" }}], 
+ edges: [{ data: { source: 'MPPED1', target: 'PHKA2', directed: 'false', weight: 0.972708} },
+{ data: { source: 'MPPED1', target: 'PHKB', directed: 'false', weight: 0.968041} },
+{ data: { source: 'MPPED1', target: 'NARF', directed: 'false', weight: 0.9417969999999999} },
+{ data: { source: 'MPPED1', target: 'PHKG2', directed: 'false', weight: 0.8884040000000001} },
+{ data: { source: 'MPPED1', target: 'PHKA1', directed: 'false', weight: 0.87376} },
+{ data: { source: 'MPPED1', target: 'MPPED2', directed: 'false', weight: 0.851035} },
+{ data: { source: 'MPPED1', target: 'NR2F6', directed: 'false', weight: 0.788029} },
+{ data: { source: 'PHKA2', target: 'PHKG2', directed: 'false', weight: 0.997301} },
+{ data: { source: 'PHKA2', target: 'PHKB', directed: 'false', weight: 0.655107} },
+{ data: { source: 'PHKA2', target: 'PHKA1', directed: 'false', weight: 0.178799} },
+{ data: { source: 'PHKA2', target: 'NARF', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PHKA2', target: 'MPPED2', directed: 'false', weight: 0.133456} },
+{ data: { source: 'PHKA2', target: 'NR2F6', directed: 'false', weight: 0.133456} },
+{ data: { source: 'NR2F6', target: 'MPPED2', directed: 'false', weight: 0.915881} },
+{ data: { source: 'NR2F6', target: 'PHKB', directed: 'false', weight: 0.133456} },
+{ data: { source: 'NR2F6', target: 'PHKA1', directed: 'false', weight: 0.123797} },
+{ data: { source: 'NR2F6', target: 'PHKG2', directed: 'false', weight: 0.117318} },
+{ data: { source: 'PHKB', target: 'PHKG2', directed: 'false', weight: 0.9982260000000001} },
+{ data: { source: 'PHKB', target: 'PHKA1', directed: 'false', weight: 0.226204} },
+{ data: { source: 'PHKB', target: 'NARF', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PHKB', target: 'MPPED2', directed: 'false', weight: 0.133456} },
+{ data: { source: 'NARF', target: 'PHKA1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'NARF', target: 'PHKG2', directed: 'false', weight: 0.133451} },
+{ data: { source: 'PHKA1', target: 'PHKG2', directed: 'false', weight: 0.991873} },
+{ data: { source: 'PHKA1', target: 'MPPED2', directed: 'false', weight: 0.123797} },
+{ data: { source: 'MPPED2', target: 'PHKG2', directed: 'false', weight: 0.117318} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 Phosphorylase kinase complex<br> Complex Score (from Super.Complex) = 0.82536<br> Unweighted Density = 0.93
+    </section>
+    </body>
+    </html>
+    

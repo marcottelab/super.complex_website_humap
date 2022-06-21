@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Telomere-associated protein complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex134.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'POT1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NUX5" }},
+{data: { id: 'TERF2', score: 5, href: "https://www.uniprot.org/uniprot/Q15554" }},
+{data: { id: 'TINF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BSI4" }},
+{data: { id: 'ACD', score: 5, href: "https://www.uniprot.org/uniprot/Q96AP0" }},
+{data: { id: 'TERF2IP', score: 5, href: "https://www.uniprot.org/uniprot/Q9NYB0" }},
+{data: { id: 'TERF1', score: 5, href: "https://www.uniprot.org/uniprot/P54274" }}], 
+ edges: [{ data: { source: 'POT1', target: 'TERF1', directed: 'false', weight: 0.9996079999999999} },
+{ data: { source: 'POT1', target: 'ACD', directed: 'false', weight: 0.9992989999999999} },
+{ data: { source: 'POT1', target: 'TINF2', directed: 'false', weight: 0.9982479999999999} },
+{ data: { source: 'POT1', target: 'TERF2', directed: 'false', weight: 0.9924} },
+{ data: { source: 'POT1', target: 'TERF2IP', directed: 'false', weight: 0.982035} },
+{ data: { source: 'TERF2', target: 'TERF2IP', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'TERF2', target: 'TERF1', directed: 'false', weight: 0.9155780000000001} },
+{ data: { source: 'TERF2', target: 'TINF2', directed: 'false', weight: 0.43003100000000005} },
+{ data: { source: 'TERF2', target: 'ACD', directed: 'false', weight: 0.288379} },
+{ data: { source: 'TINF2', target: 'TERF1', directed: 'false', weight: 0.9995129999999999} },
+{ data: { source: 'TINF2', target: 'TERF2IP', directed: 'false', weight: 0.649342} },
+{ data: { source: 'TINF2', target: 'ACD', directed: 'false', weight: 0.42261000000000004} },
+{ data: { source: 'ACD', target: 'TERF1', directed: 'false', weight: 0.998634} },
+{ data: { source: 'ACD', target: 'TERF2IP', directed: 'false', weight: 0.824592} },
+{ data: { source: 'TERF2IP', target: 'TERF1', directed: 'false', weight: 0.633397} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Telomere-associated protein complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

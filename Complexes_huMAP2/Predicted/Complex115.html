@@ -1,0 +1,128 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 Telomere-associated protein complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex116.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TERF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15554" }},
+{data: { id: 'TINF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BSI4" }},
+{data: { id: 'POT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NUX5" }},
+{data: { id: 'ACD', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96AP0" }},
+{data: { id: 'TERF2IP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NYB0" }},
+{data: { id: 'TERF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P54274" }},
+{data: { id: 'PINX1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96BK5" }},
+{data: { id: 'TADA2B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86TJ2" }}], 
+ edges: [{ data: { source: 'ACD', target: 'POT1', directed: 'false', weight: 0.9995569999999999} },
+{ data: { source: 'ACD', target: 'TERF1', directed: 'false', weight: 0.9720139999999999} },
+{ data: { source: 'ACD', target: 'TINF2', directed: 'false', weight: 0.709208} },
+{ data: { source: 'ACD', target: 'TERF2IP', directed: 'false', weight: 0.153623} },
+{ data: { source: 'TERF1', target: 'TINF2', directed: 'false', weight: 1.0} },
+{ data: { source: 'TERF1', target: 'POT1', directed: 'false', weight: 0.999149} },
+{ data: { source: 'TERF1', target: 'PINX1', directed: 'false', weight: 0.46354700000000004} },
+{ data: { source: 'TERF1', target: 'TERF2', directed: 'false', weight: 0.0826802} },
+{ data: { source: 'TERF1', target: 'TERF2IP', directed: 'false', weight: 0.047401599999999995} },
+{ data: { source: 'TERF2', target: 'TERF2IP', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'TERF2', target: 'TADA2B', directed: 'false', weight: 0.929792} },
+{ data: { source: 'TERF2', target: 'POT1', directed: 'false', weight: 0.8390799999999999} },
+{ data: { source: 'TERF2', target: 'TINF2', directed: 'false', weight: 0.08758880000000001} },
+{ data: { source: 'TINF2', target: 'POT1', directed: 'false', weight: 0.999331} },
+{ data: { source: 'TINF2', target: 'TERF2IP', directed: 'false', weight: 0.11316099999999998} },
+{ data: { source: 'TADA2B', target: 'TERF2IP', directed: 'false', weight: 0.767181} },
+{ data: { source: 'TERF2IP', target: 'POT1', directed: 'false', weight: 0.651291} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 Telomere-associated protein complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.61
+    </section>
+    </body>
+    </html>
+    

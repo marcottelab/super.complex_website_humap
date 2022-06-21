@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Condensin II</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex41.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SMC4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NTJ3" }},
+{data: { id: 'SMC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95347" }},
+{data: { id: 'NCAPH2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6IBW4" }},
+{data: { id: 'NCAPG2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86XI2" }},
+{data: { id: 'NCAPD3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P42695" }}], 
+ edges: [{ data: { source: 'NCAPH2', target: 'NCAPG2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'NCAPH2', target: 'NCAPD3', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'NCAPH2', target: 'SMC4', directed: 'false', weight: 0.989711} },
+{ data: { source: 'NCAPH2', target: 'SMC2', directed: 'false', weight: 0.923242} },
+{ data: { source: 'NCAPD3', target: 'NCAPG2', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'NCAPD3', target: 'SMC2', directed: 'false', weight: 0.9872799999999999} },
+{ data: { source: 'NCAPD3', target: 'SMC4', directed: 'false', weight: 0.985783} },
+{ data: { source: 'SMC2', target: 'NCAPG2', directed: 'false', weight: 0.9979100000000001} },
+{ data: { source: 'SMC2', target: 'SMC4', directed: 'false', weight: 0.971482} },
+{ data: { source: 'NCAPG2', target: 'SMC4', directed: 'false', weight: 0.980476} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Condensin II<br> Complex Score (from Super.Complex) = 0.86771<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

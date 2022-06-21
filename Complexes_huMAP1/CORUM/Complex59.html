@@ -1,0 +1,110 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Arp2/3 protein complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex60.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ARPC3', score: 5, href: "https://www.uniprot.org/uniprot/O15145" }},
+{data: { id: 'ARPC4', score: 5, href: "https://www.uniprot.org/uniprot/P59998" }},
+{data: { id: 'ARPC2', score: 5, href: "https://www.uniprot.org/uniprot/O15144" }},
+{data: { id: 'ACTR3', score: 5, href: "https://www.uniprot.org/uniprot/P61158" }},
+{data: { id: 'ARPC1B', score: 5, href: "https://www.uniprot.org/uniprot/O15143" }},
+{data: { id: 'ARPC5', score: 5, href: "https://www.uniprot.org/uniprot/O15511" }},
+{data: { id: 'ACTR2', score: 5, href: "https://www.uniprot.org/uniprot/P61160" }}], 
+ edges: [{ data: { source: 'ARPC3', target: 'ARPC5', directed: 'false', weight: 0.999994} },
+{ data: { source: 'ARPC3', target: 'ARPC4', directed: 'false', weight: 0.9996290000000001} },
+{ data: { source: 'ARPC3', target: 'ARPC2', directed: 'false', weight: 0.9992639999999999} },
+{ data: { source: 'ARPC3', target: 'ARPC1B', directed: 'false', weight: 0.997626} },
+{ data: { source: 'ARPC3', target: 'ACTR2', directed: 'false', weight: 0.9260950000000001} },
+{ data: { source: 'ARPC4', target: 'ARPC1B', directed: 'false', weight: 0.999959} },
+{ data: { source: 'ARPC4', target: 'ARPC5', directed: 'false', weight: 0.999922} },
+{ data: { source: 'ARPC4', target: 'ACTR2', directed: 'false', weight: 0.9994940000000001} },
+{ data: { source: 'ARPC4', target: 'ARPC2', directed: 'false', weight: 0.985965} },
+{ data: { source: 'ARPC2', target: 'ARPC5', directed: 'false', weight: 0.9998879999999999} },
+{ data: { source: 'ARPC2', target: 'ARPC1B', directed: 'false', weight: 0.999833} },
+{ data: { source: 'ARPC2', target: 'ACTR2', directed: 'false', weight: 0.9919290000000001} },
+{ data: { source: 'ARPC2', target: 'ACTR3', directed: 'false', weight: 0.9874209999999999} },
+{ data: { source: 'ARPC1B', target: 'ARPC5', directed: 'false', weight: 0.99974} },
+{ data: { source: 'ARPC1B', target: 'ACTR2', directed: 'false', weight: 0.998352} },
+{ data: { source: 'ARPC5', target: 'ACTR2', directed: 'false', weight: 0.999948} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Arp2/3 protein complex	<br> Unweighted Density = 0.76
+    </section>
+    </body>
+    </html>
+    

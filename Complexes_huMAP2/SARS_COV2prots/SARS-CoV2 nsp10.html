@@ -1,0 +1,126 @@
+
+    <!doctype html>
+    
+    <html>
+    
+    <head>
+    <title>SARS-CoV2 nsp10</title>
+
+    		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    
+    		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+    <script src="https://unpkg.com/cose-base/cose-base.js"></script>
+    <script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+        </head>
+        
+        <style>
+            #cy {
+                width: 90%;
+                height: 90%;
+                position: absolute;
+                middle: 0px;
+                left: 0px;
+            }
+        </style>
+        
+        <body>
+        <section>
+        
+
+         </section>
+            <div id="cy"></div>
+            <script>
+              var cy = cytoscape({
+          container: document.getElementById('cy'),
+          
+elements:{nodes: [{data: { id: "SARS-CoV2 nsp10", score: 2, type:  "sars" , href: "https://covid-19.uniprot.org/uniprotkb/P0DTC1" }},
+{data: { id: "AP2A2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O94973" }},
+{data: { id: "GFER", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P55789" }},
+{data: { id: "ERGIC1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q969X5" }},
+{data: { id: "AP2M1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q96CW1" }},
+{data: { id: "GRPEL1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9HAV7" }},
+{data: { id: "0.1 SNF2H-BAZ1A complex", score: 0, type: "complex", href: "../Predicted/Complex63.html" }},
+{data: { id: "0.2 HSPA9-GRPEL1 complex", score: 0, type: "complex", href: "../Predicted/Complex247.html" }},
+{data: { id: "0.3 Apoptosis- and splicing-associated protein complex (ASAP-L), SAP18, RNPS1, Acinus-L", score: 0, type: "complex", href: "../Predicted/Complex142.html" }}], 
+ edges: [{ data: { source: "AP2A2", target: "0.1 SNF2H-BAZ1A complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "AP2M1", target: "0.1 SNF2H-BAZ1A complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "AP2M1", target: "0.3 Apoptosis- and splicing-associated protein complex (ASAP-L), SAP18, RNPS1, Acinus-L", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "GRPEL1", target: "0.2 HSPA9-GRPEL1 complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SARS-CoV2 nsp10", target: "AP2A2", directed: "false", type: "sars2prot",weight: 0.99112813} },
+{ data: { source: "SARS-CoV2 nsp10", target: "GFER", directed: "false", type: "sars2prot",weight: 0.965372815} },
+{ data: { source: "SARS-CoV2 nsp10", target: "ERGIC1", directed: "false", type: "sars2prot",weight: 0.912239515} },
+{ data: { source: "SARS-CoV2 nsp10", target: "AP2M1", directed: "false", type: "sars2prot",weight: 0.982905884} },
+{ data: { source: "SARS-CoV2 nsp10", target: "GRPEL1", directed: "false", type: "sars2prot",weight: 0.986587081} }]},
+
+    style: [
+        {
+            selector: 'node',
+            style: {
+                    				'font-size': 20,
+            'font-weight': 'bold',
+                          'text-wrap': 'wrap',
+        'text-max-width': '300',
+                shape: function( ele ){ 
+                                    if ( ele.data('type') == 'complex' ){return 'circle'}
+                                    if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                    
+      return 'star';
+      },
+                'background-color': function( ele ){ 
+                                    if ( ele.data('type') == 'complex' ){return 'blue'}
+                                    if ( ele.data('type') == 'sars' ){return 'red'}             
+                                    if ( ele.data('score_annot') == 1 ){return 'rgb(201, 160, 54)'} 
+    								if ( ele.data('score_annot') == 2 ){return 'rgb(211, 186, 63)'}  
+                                     if ( ele.data('score_annot') == 3 ){return 'rgb(160, 171, 105)'}   
+                                     if ( ele.data('score_annot') == 4 ){return 'rgb(78, 148, 70)'}   
+                                     if ( ele.data('score_annot') == 5 ){return 'rgb(52, 136, 74)'}   
+                                     return 'rgb(180, 131, 40)';
+      },
+                label: 'data(id)'
+            }
+        },
+    							{
+    							selector: 'edge',
+    							style: {
+    								'width': 'mapData(weight, 0, 1, 0, 5)',
+    								'line-color': function( ele ){ 
+                                    if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                      if ( ele.data('type') == 'complex2complex' ){return 'blue'}
+      return 'red';
+      },
+    								'opacity': 0.5
+    							}
+    						}
+    	]
+        
+    });
+    
+    cy.layout({
+        'name': 'cose',
+    	'animate':false,
+    	'nodeDimensionsIncludeLabels':true,
+    	'padding': 1,
+    	'componentSpacing': 1,
+    	 'idealEdgeLength': function( edge ){ return 1; },
+    	 // Divisor to compute edge forces
+      'edgeElasticity': function( edge ){ return 20; }
+    }).run();
+        
+    cy.on('tap', 'node', function(){
+      try { // your browser may block popups
+        window.open( this.data('href') );
+      } catch(e){ // fall back on url change
+        window.location.href = this.data('href');
+      }
+    });      
+        </script>
+    
+        	<section>
+        	<br>
+        	<br>
+        	<br> 
+        
+        </section>
+        </body>
+        </html>
+        

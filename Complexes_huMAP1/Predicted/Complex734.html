@@ -1,0 +1,158 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 Polycomb repressive complex 1 (PRC1, hPRC-H)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex735.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PHC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P78364" }},
+{data: { id: 'CBX8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HC52" }},
+{data: { id: 'FBRS', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q9HAH7" }},
+{data: { id: 'RYBP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N488" }},
+{data: { id: 'YAF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IY57" }},
+{data: { id: 'PHC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IXK0" }},
+{data: { id: 'RNF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99496" }},
+{data: { id: 'PHC3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NDX5" }},
+{data: { id: 'CBX4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00257" }},
+{data: { id: 'SCML2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UQR0" }},
+{data: { id: 'RING1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q06587" }},
+{data: { id: 'BMI1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P35226" }}], 
+ edges: [{ data: { source: 'PHC1', target: 'CBX8', directed: 'false', weight: 0.737402} },
+{ data: { source: 'PHC1', target: 'RING1', directed: 'false', weight: 0.70076} },
+{ data: { source: 'PHC1', target: 'RNF2', directed: 'false', weight: 0.48694499999999996} },
+{ data: { source: 'PHC1', target: 'PHC3', directed: 'false', weight: 0.47707700000000003} },
+{ data: { source: 'PHC1', target: 'BMI1', directed: 'false', weight: 0.47707700000000003} },
+{ data: { source: 'PHC1', target: 'PHC2', directed: 'false', weight: 0.35867} },
+{ data: { source: 'PHC1', target: 'CBX4', directed: 'false', weight: 0.303755} },
+{ data: { source: 'RYBP', target: 'RING1', directed: 'false', weight: 0.996924} },
+{ data: { source: 'RYBP', target: 'FBRS', directed: 'false', weight: 0.99208} },
+{ data: { source: 'RYBP', target: 'RNF2', directed: 'false', weight: 0.980628} },
+{ data: { source: 'RYBP', target: 'YAF2', directed: 'false', weight: 0.872525} },
+{ data: { source: 'PHC3', target: 'CBX8', directed: 'false', weight: 0.958583} },
+{ data: { source: 'PHC3', target: 'RING1', directed: 'false', weight: 0.9349860000000001} },
+{ data: { source: 'PHC3', target: 'RNF2', directed: 'false', weight: 0.912277} },
+{ data: { source: 'PHC3', target: 'CBX4', directed: 'false', weight: 0.820631} },
+{ data: { source: 'PHC3', target: 'BMI1', directed: 'false', weight: 0.7752479999999999} },
+{ data: { source: 'PHC3', target: 'PHC2', directed: 'false', weight: 0.667403} },
+{ data: { source: 'PHC3', target: 'SCML2', directed: 'false', weight: 0.387818} },
+{ data: { source: 'FBRS', target: 'RING1', directed: 'false', weight: 0.9081610000000001} },
+{ data: { source: 'FBRS', target: 'RNF2', directed: 'false', weight: 0.732101} },
+{ data: { source: 'FBRS', target: 'YAF2', directed: 'false', weight: 0.438259} },
+{ data: { source: 'FBRS', target: 'BMI1', directed: 'false', weight: 0.407933} },
+{ data: { source: 'CBX8', target: 'RING1', directed: 'false', weight: 0.87723} },
+{ data: { source: 'CBX8', target: 'CBX4', directed: 'false', weight: 0.8546370000000001} },
+{ data: { source: 'CBX8', target: 'PHC2', directed: 'false', weight: 0.727576} },
+{ data: { source: 'CBX8', target: 'RNF2', directed: 'false', weight: 0.669862} },
+{ data: { source: 'CBX8', target: 'BMI1', directed: 'false', weight: 0.66619} },
+{ data: { source: 'CBX4', target: 'RING1', directed: 'false', weight: 0.773273} },
+{ data: { source: 'CBX4', target: 'PHC2', directed: 'false', weight: 0.712462} },
+{ data: { source: 'CBX4', target: 'RNF2', directed: 'false', weight: 0.6184850000000001} },
+{ data: { source: 'CBX4', target: 'BMI1', directed: 'false', weight: 0.6044609999999999} },
+{ data: { source: 'CBX4', target: 'SCML2', directed: 'false', weight: 0.16522799999999999} },
+{ data: { source: 'BMI1', target: 'RNF2', directed: 'false', weight: 0.8609690000000001} },
+{ data: { source: 'BMI1', target: 'RING1', directed: 'false', weight: 0.763912} },
+{ data: { source: 'BMI1', target: 'PHC2', directed: 'false', weight: 0.667403} },
+{ data: { source: 'BMI1', target: 'SCML2', directed: 'false', weight: 0.387818} },
+{ data: { source: 'BMI1', target: 'YAF2', directed: 'false', weight: 0.12529} },
+{ data: { source: 'RNF2', target: 'RING1', directed: 'false', weight: 0.9988950000000001} },
+{ data: { source: 'RNF2', target: 'PHC2', directed: 'false', weight: 0.792925} },
+{ data: { source: 'RNF2', target: 'YAF2', directed: 'false', weight: 0.663211} },
+{ data: { source: 'SCML2', target: 'PHC2', directed: 'false', weight: 0.283621} },
+{ data: { source: 'YAF2', target: 'RING1', directed: 'false', weight: 0.8144020000000001} },
+{ data: { source: 'PHC2', target: 'RING1', directed: 'false', weight: 0.5957060000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 Polycomb repressive complex 1 (PRC1, hPRC-H)<br> Complex Score (from Super.Complex) = 0.58972<br> Unweighted Density = 0.65
+    </section>
+    </body>
+    </html>
+    

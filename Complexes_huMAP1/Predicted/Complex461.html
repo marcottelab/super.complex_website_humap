@@ -1,0 +1,115 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 FIF-FGR2 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex462.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DHRS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13268" }},
+{data: { id: 'FGF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09038" }},
+{data: { id: 'TMEFF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IYR6" }},
+{data: { id: 'SARS-CoV2 orf9c', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 orf9c.html" }},
+{data: { id: 'BCS1L', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9Y276" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 orf9c', target: 'BCS1L', directed: 'false', weight: 0.992309958, type: 'sars'} },
+{ data: { source: 'FGF2', target: 'TMEFF1', directed: 'false', weight: 0.976686} },
+{ data: { source: 'FGF2', target: 'BCS1L', directed: 'false', weight: 0.151455} },
+{ data: { source: 'FGF2', target: 'DHRS2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'BCS1L', target: 'TMEFF1', directed: 'false', weight: 0.736571} },
+{ data: { source: 'BCS1L', target: 'DHRS2', directed: 'false', weight: 0.133456} },
+{ data: { source: 'DHRS2', target: 'TMEFF1', directed: 'false', weight: 0.8764430000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 FIF-FGR2 complex<br> Complex Score (from Super.Complex) = 0.71451<br> Unweighted Density = 1.00
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>BCS1L
+    </section>
+    </body>
+    </html>
+    

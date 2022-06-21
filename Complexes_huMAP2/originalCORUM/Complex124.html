@@ -1,0 +1,180 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> ARC complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex125.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CRSP9', score: 5, href: "https://www.uniprot.org/uniprot/O43513" }},
+{data: { id: 'MED14', score: 5, href: "https://www.uniprot.org/uniprot/O60244" }},
+{data: { id: 'MED24', score: 5, href: "https://www.uniprot.org/uniprot/O75448" }},
+{data: { id: 'MED6', score: 5, href: "https://www.uniprot.org/uniprot/O75586" }},
+{data: { id: 'MED26', score: 5, href: "https://www.uniprot.org/uniprot/O95402" }},
+{data: { id: 'MED1', score: 5, href: "https://www.uniprot.org/uniprot/Q15648" }},
+{data: { id: 'MED25', score: 5, href: "https://www.uniprot.org/uniprot/Q71SY5" }},
+{data: { id: 'MED12', score: 5, href: "https://www.uniprot.org/uniprot/Q93074" }},
+{data: { id: 'MED8', score: 5, href: "https://www.uniprot.org/uniprot/Q96G25" }},
+{data: { id: 'MED15', score: 5, href: "https://www.uniprot.org/uniprot/Q96RN5" }},
+{data: { id: 'MED4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPJ6" }},
+{data: { id: 'MED17', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVC6" }},
+{data: { id: 'THRAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHV7" }},
+{data: { id: 'ACAD8', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKU7" }},
+{data: { id: 'MED23', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULK4" }}], 
+ edges: [{ data: { source: 'MED26', target: 'MED1', directed: 'false', weight: 0.254737} },
+{ data: { source: 'MED26', target: 'CRSP9', directed: 'false', weight: 0.06138060000000001} },
+{ data: { source: 'MED23', target: 'MED14', directed: 'false', weight: 0.999984} },
+{ data: { source: 'MED23', target: 'MED25', directed: 'false', weight: 0.9999379999999999} },
+{ data: { source: 'MED23', target: 'MED24', directed: 'false', weight: 0.9999299999999999} },
+{ data: { source: 'MED23', target: 'MED1', directed: 'false', weight: 0.562671} },
+{ data: { source: 'MED23', target: 'CRSP9', directed: 'false', weight: 0.407744} },
+{ data: { source: 'MED23', target: 'MED12', directed: 'false', weight: 0.0973643} },
+{ data: { source: 'MED23', target: 'THRAP1', directed: 'false', weight: 0.0506374} },
+{ data: { source: 'MED23', target: 'MED4', directed: 'false', weight: 0.0406201} },
+{ data: { source: 'MED23', target: 'MED6', directed: 'false', weight: 0.036138300000000005} },
+{ data: { source: 'MED23', target: 'MED8', directed: 'false', weight: 0.035859300000000004} },
+{ data: { source: 'MED23', target: 'MED15', directed: 'false', weight: 0.034436800000000004} },
+{ data: { source: 'MED23', target: 'MED17', directed: 'false', weight: 0.0314266} },
+{ data: { source: 'MED4', target: 'MED24', directed: 'false', weight: 0.999976} },
+{ data: { source: 'MED4', target: 'MED8', directed: 'false', weight: 0.999907} },
+{ data: { source: 'MED4', target: 'MED17', directed: 'false', weight: 0.9998959999999999} },
+{ data: { source: 'MED4', target: 'MED6', directed: 'false', weight: 0.999799} },
+{ data: { source: 'MED4', target: 'MED1', directed: 'false', weight: 0.9996950000000001} },
+{ data: { source: 'MED4', target: 'MED14', directed: 'false', weight: 0.999115} },
+{ data: { source: 'MED4', target: 'MED15', directed: 'false', weight: 0.9875459999999999} },
+{ data: { source: 'MED4', target: 'MED12', directed: 'false', weight: 0.9486959999999999} },
+{ data: { source: 'MED4', target: 'CRSP9', directed: 'false', weight: 0.9056280000000001} },
+{ data: { source: 'MED4', target: 'THRAP1', directed: 'false', weight: 0.0494565} },
+{ data: { source: 'MED8', target: 'MED17', directed: 'false', weight: 0.999999} },
+{ data: { source: 'MED8', target: 'MED1', directed: 'false', weight: 0.999965} },
+{ data: { source: 'MED8', target: 'MED14', directed: 'false', weight: 0.999965} },
+{ data: { source: 'MED8', target: 'THRAP1', directed: 'false', weight: 0.9999100000000001} },
+{ data: { source: 'MED8', target: 'MED6', directed: 'false', weight: 0.9999040000000001} },
+{ data: { source: 'MED8', target: 'MED24', directed: 'false', weight: 0.999872} },
+{ data: { source: 'MED8', target: 'MED12', directed: 'false', weight: 0.99885} },
+{ data: { source: 'MED8', target: 'MED15', directed: 'false', weight: 0.9724139999999999} },
+{ data: { source: 'MED8', target: 'CRSP9', directed: 'false', weight: 0.733102} },
+{ data: { source: 'MED8', target: 'MED25', directed: 'false', weight: 0.0229491} },
+{ data: { source: 'MED25', target: 'MED24', directed: 'false', weight: 0.999293} },
+{ data: { source: 'MED25', target: 'MED1', directed: 'false', weight: 0.08284730000000001} },
+{ data: { source: 'MED25', target: 'MED12', directed: 'false', weight: 0.0501555} },
+{ data: { source: 'MED25', target: 'THRAP1', directed: 'false', weight: 0.027737400000000002} },
+{ data: { source: 'MED25', target: 'CRSP9', directed: 'false', weight: 0.027106599999999998} },
+{ data: { source: 'MED25', target: 'MED15', directed: 'false', weight: 0.023786099999999998} },
+{ data: { source: 'MED25', target: 'MED6', directed: 'false', weight: 0.0235497} },
+{ data: { source: 'MED25', target: 'MED14', directed: 'false', weight: 0.020784900000000002} },
+{ data: { source: 'MED17', target: 'MED6', directed: 'false', weight: 0.999999} },
+{ data: { source: 'MED17', target: 'MED1', directed: 'false', weight: 0.99997} },
+{ data: { source: 'MED17', target: 'THRAP1', directed: 'false', weight: 0.999965} },
+{ data: { source: 'MED17', target: 'MED14', directed: 'false', weight: 0.9998959999999999} },
+{ data: { source: 'MED17', target: 'MED24', directed: 'false', weight: 0.9998379999999999} },
+{ data: { source: 'MED17', target: 'MED15', directed: 'false', weight: 0.9977360000000001} },
+{ data: { source: 'MED17', target: 'MED12', directed: 'false', weight: 0.987559} },
+{ data: { source: 'MED17', target: 'CRSP9', directed: 'false', weight: 0.560958} },
+{ data: { source: 'MED14', target: 'THRAP1', directed: 'false', weight: 0.999964} },
+{ data: { source: 'MED14', target: 'MED6', directed: 'false', weight: 0.99992} },
+{ data: { source: 'MED14', target: 'MED24', directed: 'false', weight: 0.9997940000000001} },
+{ data: { source: 'MED14', target: 'MED15', directed: 'false', weight: 0.997022} },
+{ data: { source: 'MED14', target: 'MED1', directed: 'false', weight: 0.99569} },
+{ data: { source: 'MED14', target: 'MED12', directed: 'false', weight: 0.9955940000000001} },
+{ data: { source: 'MED14', target: 'CRSP9', directed: 'false', weight: 0.858419} },
+{ data: { source: 'MED24', target: 'MED6', directed: 'false', weight: 0.9998459999999999} },
+{ data: { source: 'MED24', target: 'MED1', directed: 'false', weight: 0.9997450000000001} },
+{ data: { source: 'MED24', target: 'THRAP1', directed: 'false', weight: 0.9996799999999999} },
+{ data: { source: 'MED24', target: 'MED15', directed: 'false', weight: 0.913301} },
+{ data: { source: 'MED24', target: 'CRSP9', directed: 'false', weight: 0.5627409999999999} },
+{ data: { source: 'MED24', target: 'MED12', directed: 'false', weight: 0.207148} },
+{ data: { source: 'THRAP1', target: 'MED6', directed: 'false', weight: 0.999933} },
+{ data: { source: 'THRAP1', target: 'MED1', directed: 'false', weight: 0.999909} },
+{ data: { source: 'THRAP1', target: 'MED12', directed: 'false', weight: 0.99984} },
+{ data: { source: 'THRAP1', target: 'CRSP9', directed: 'false', weight: 0.882165} },
+{ data: { source: 'THRAP1', target: 'MED15', directed: 'false', weight: 0.0565491} },
+{ data: { source: 'MED6', target: 'MED1', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'MED6', target: 'MED12', directed: 'false', weight: 0.98854} },
+{ data: { source: 'MED6', target: 'MED15', directed: 'false', weight: 0.987574} },
+{ data: { source: 'MED6', target: 'CRSP9', directed: 'false', weight: 0.938544} },
+{ data: { source: 'MED1', target: 'MED12', directed: 'false', weight: 0.9993569999999999} },
+{ data: { source: 'MED1', target: 'MED15', directed: 'false', weight: 0.996297} },
+{ data: { source: 'MED1', target: 'CRSP9', directed: 'false', weight: 0.9854790000000001} },
+{ data: { source: 'MED15', target: 'CRSP9', directed: 'false', weight: 0.533882} },
+{ data: { source: 'MED15', target: 'MED12', directed: 'false', weight: 0.375082} },
+{ data: { source: 'MED12', target: 'CRSP9', directed: 'false', weight: 0.975008} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    ARC complex	<br> Unweighted Density = 0.74
+    </section>
+    </body>
+    </html>
+    

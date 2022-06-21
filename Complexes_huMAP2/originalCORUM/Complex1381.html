@@ -1,0 +1,127 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> DGCR8 multiprotein complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1382.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DKFZp686A13234', score: 1, href: "https://www.uniprot.org/uniprot/Q6MZS5" }},
+{data: { id: 'HEL-S-89n', score: 5, href: "https://www.uniprot.org/uniprot/V9HWB4" }},
+{data: { id: 'DDX5', score: 5, href: "https://www.uniprot.org/uniprot/P17844" }},
+{data: { id: 'NCL', score: 5, href: "https://www.uniprot.org/uniprot/P19338" }},
+{data: { id: 'HNRNPH1', score: 5, href: "https://www.uniprot.org/uniprot/P31943" }},
+{data: { id: 'FUS', score: 5, href: "https://www.uniprot.org/uniprot/P35637" }},
+{data: { id: 'HNRNPU', score: 5, href: "https://www.uniprot.org/uniprot/Q00839" }},
+{data: { id: 'DHX9', score: 5, href: "https://www.uniprot.org/uniprot/Q08211" }},
+{data: { id: 'ILF3', score: 5, href: "https://www.uniprot.org/uniprot/Q12906" }},
+{data: { id: 'DGCR8', score: 5, href: "https://www.uniprot.org/uniprot/Q8WYQ5" }},
+{data: { id: 'DDX17', score: 5, href: "https://www.uniprot.org/uniprot/Q92841" }}], 
+ edges: [{ data: { source: 'DHX9', target: 'DKFZp686A13234', directed: 'false', weight: 0.999735} },
+{ data: { source: 'DHX9', target: 'HNRNPU', directed: 'false', weight: 0.987553} },
+{ data: { source: 'DHX9', target: 'HEL-S-89n', directed: 'false', weight: 0.9875450000000001} },
+{ data: { source: 'DHX9', target: 'ILF3', directed: 'false', weight: 0.9875450000000001} },
+{ data: { source: 'DHX9', target: 'DDX5', directed: 'false', weight: 0.925384} },
+{ data: { source: 'DHX9', target: 'FUS', directed: 'false', weight: 0.726152} },
+{ data: { source: 'DHX9', target: 'HNRNPH1', directed: 'false', weight: 0.411887} },
+{ data: { source: 'DHX9', target: 'NCL', directed: 'false', weight: 0.275044} },
+{ data: { source: 'DDX17', target: 'DKFZp686A13234', directed: 'false', weight: 0.9323299999999999} },
+{ data: { source: 'DDX17', target: 'HNRNPU', directed: 'false', weight: 0.436493} },
+{ data: { source: 'DDX17', target: 'DDX5', directed: 'false', weight: 0.08087480000000001} },
+{ data: { source: 'DDX17', target: 'HNRNPH1', directed: 'false', weight: 0.0235034} },
+{ data: { source: 'HNRNPU', target: 'NCL', directed: 'false', weight: 0.987656} },
+{ data: { source: 'HNRNPU', target: 'DKFZp686A13234', directed: 'false', weight: 0.987643} },
+{ data: { source: 'HNRNPU', target: 'HEL-S-89n', directed: 'false', weight: 0.987576} },
+{ data: { source: 'HNRNPU', target: 'DDX5', directed: 'false', weight: 0.561793} },
+{ data: { source: 'HNRNPU', target: 'HNRNPH1', directed: 'false', weight: 0.12080999999999999} },
+{ data: { source: 'HNRNPU', target: 'ILF3', directed: 'false', weight: 0.0752915} },
+{ data: { source: 'HEL-S-89n', target: 'DDX5', directed: 'false', weight: 0.9875889999999999} },
+{ data: { source: 'HEL-S-89n', target: 'FUS', directed: 'false', weight: 0.987526} },
+{ data: { source: 'HEL-S-89n', target: 'HNRNPH1', directed: 'false', weight: 0.985828} },
+{ data: { source: 'HEL-S-89n', target: 'NCL', directed: 'false', weight: 0.95283} },
+{ data: { source: 'HEL-S-89n', target: 'ILF3', directed: 'false', weight: 0.942895} },
+{ data: { source: 'HEL-S-89n', target: 'DKFZp686A13234', directed: 'false', weight: 0.071641} },
+{ data: { source: 'FUS', target: 'DKFZp686A13234', directed: 'false', weight: 0.9875879999999999} },
+{ data: { source: 'HNRNPH1', target: 'DKFZp686A13234', directed: 'false', weight: 0.987618} },
+{ data: { source: 'HNRNPH1', target: 'NCL', directed: 'false', weight: 0.07383580000000001} },
+{ data: { source: 'DKFZp686A13234', target: 'DDX5', directed: 'false', weight: 0.9875219999999999} },
+{ data: { source: 'DKFZp686A13234', target: 'ILF3', directed: 'false', weight: 0.08787310000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    DGCR8 multiprotein complex	<br> Unweighted Density = 0.53
+    </section>
+    </body>
+    </html>
+    

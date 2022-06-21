@@ -1,0 +1,186 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 CDC5L core complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex10.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SNW1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13573" }},
+{data: { id: 'PPIL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3C6" }},
+{data: { id: 'AQR', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60306" }},
+{data: { id: 'CCDC12', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q8WUD4" }},
+{data: { id: 'BCAS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75934" }},
+{data: { id: 'ISY1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9ULR0" }},
+{data: { id: 'XAB2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HCS7" }},
+{data: { id: 'CDC40', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60508" }},
+{data: { id: 'PRPF19', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UMS4" }},
+{data: { id: 'PLRG1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43660" }},
+{data: { id: 'CWC15', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P013" }},
+{data: { id: 'CDC5L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99459" }},
+{data: { id: 'DKFZp762M013', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q69YP1" }},
+{data: { id: 'PRPF8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P2Q9" }}], 
+ edges: [{ data: { source: 'PRPF19', target: 'BCAS2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PRPF19', target: 'SNW1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PRPF19', target: 'PLRG1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PRPF19', target: 'CDC5L', directed: 'false', weight: 1.0} },
+{ data: { source: 'PRPF19', target: 'XAB2', directed: 'false', weight: 0.9998309999999999} },
+{ data: { source: 'PRPF19', target: 'DKFZp762M013', directed: 'false', weight: 0.999777} },
+{ data: { source: 'PRPF19', target: 'AQR', directed: 'false', weight: 0.9972030000000001} },
+{ data: { source: 'PRPF19', target: 'ISY1', directed: 'false', weight: 0.99561} },
+{ data: { source: 'PRPF19', target: 'PRPF8', directed: 'false', weight: 0.971036} },
+{ data: { source: 'PRPF19', target: 'CCDC12', directed: 'false', weight: 0.9188780000000001} },
+{ data: { source: 'PRPF19', target: 'CDC40', directed: 'false', weight: 0.213154} },
+{ data: { source: 'PPIL1', target: 'SNW1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PPIL1', target: 'CDC5L', directed: 'false', weight: 0.0424769} },
+{ data: { source: 'PPIL1', target: 'PLRG1', directed: 'false', weight: 0.020712599999999998} },
+{ data: { source: 'AQR', target: 'DKFZp762M013', directed: 'false', weight: 1.0} },
+{ data: { source: 'AQR', target: 'XAB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'AQR', target: 'ISY1', directed: 'false', weight: 1.0} },
+{ data: { source: 'AQR', target: 'CDC5L', directed: 'false', weight: 0.9957010000000001} },
+{ data: { source: 'AQR', target: 'PLRG1', directed: 'false', weight: 0.99239} },
+{ data: { source: 'AQR', target: 'CCDC12', directed: 'false', weight: 0.986718} },
+{ data: { source: 'AQR', target: 'SNW1', directed: 'false', weight: 0.8692340000000001} },
+{ data: { source: 'AQR', target: 'CDC40', directed: 'false', weight: 0.771625} },
+{ data: { source: 'AQR', target: 'BCAS2', directed: 'false', weight: 0.172013} },
+{ data: { source: 'AQR', target: 'PRPF8', directed: 'false', weight: 0.0354338} },
+{ data: { source: 'PRPF8', target: 'SNW1', directed: 'false', weight: 0.9876870000000001} },
+{ data: { source: 'PRPF8', target: 'DKFZp762M013', directed: 'false', weight: 0.987576} },
+{ data: { source: 'PRPF8', target: 'CDC5L', directed: 'false', weight: 0.987504} },
+{ data: { source: 'PRPF8', target: 'CCDC12', directed: 'false', weight: 0.9553209999999999} },
+{ data: { source: 'PRPF8', target: 'CDC40', directed: 'false', weight: 0.896324} },
+{ data: { source: 'PRPF8', target: 'ISY1', directed: 'false', weight: 0.685597} },
+{ data: { source: 'PRPF8', target: 'PLRG1', directed: 'false', weight: 0.6837439999999999} },
+{ data: { source: 'PRPF8', target: 'BCAS2', directed: 'false', weight: 0.022642} },
+{ data: { source: 'BCAS2', target: 'PLRG1', directed: 'false', weight: 1.0} },
+{ data: { source: 'BCAS2', target: 'CDC5L', directed: 'false', weight: 1.0} },
+{ data: { source: 'BCAS2', target: 'XAB2', directed: 'false', weight: 0.9997030000000001} },
+{ data: { source: 'BCAS2', target: 'ISY1', directed: 'false', weight: 0.9841549999999999} },
+{ data: { source: 'BCAS2', target: 'DKFZp762M013', directed: 'false', weight: 0.963827} },
+{ data: { source: 'BCAS2', target: 'SNW1', directed: 'false', weight: 0.859864} },
+{ data: { source: 'BCAS2', target: 'CCDC12', directed: 'false', weight: 0.761373} },
+{ data: { source: 'BCAS2', target: 'CDC40', directed: 'false', weight: 0.0235476} },
+{ data: { source: 'CDC40', target: 'DKFZp762M013', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'CDC40', target: 'SNW1', directed: 'false', weight: 0.9999540000000001} },
+{ data: { source: 'CDC40', target: 'CCDC12', directed: 'false', weight: 0.998934} },
+{ data: { source: 'CDC40', target: 'ISY1', directed: 'false', weight: 0.722599} },
+{ data: { source: 'CDC40', target: 'XAB2', directed: 'false', weight: 0.718605} },
+{ data: { source: 'CDC40', target: 'CDC5L', directed: 'false', weight: 0.0565472} },
+{ data: { source: 'PLRG1', target: 'CDC5L', directed: 'false', weight: 1.0} },
+{ data: { source: 'PLRG1', target: 'SNW1', directed: 'false', weight: 0.9973129999999999} },
+{ data: { source: 'PLRG1', target: 'XAB2', directed: 'false', weight: 0.9876440000000001} },
+{ data: { source: 'PLRG1', target: 'DKFZp762M013', directed: 'false', weight: 0.927349} },
+{ data: { source: 'PLRG1', target: 'ISY1', directed: 'false', weight: 0.806829} },
+{ data: { source: 'PLRG1', target: 'CCDC12', directed: 'false', weight: 0.5} },
+{ data: { source: 'ISY1', target: 'DKFZp762M013', directed: 'false', weight: 1.0} },
+{ data: { source: 'ISY1', target: 'XAB2', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'ISY1', target: 'CDC5L', directed: 'false', weight: 0.96909} },
+{ data: { source: 'ISY1', target: 'SNW1', directed: 'false', weight: 0.9672379999999999} },
+{ data: { source: 'ISY1', target: 'CCDC12', directed: 'false', weight: 0.9433469999999999} },
+{ data: { source: 'XAB2', target: 'DKFZp762M013', directed: 'false', weight: 1.0} },
+{ data: { source: 'XAB2', target: 'SNW1', directed: 'false', weight: 0.9963629999999999} },
+{ data: { source: 'XAB2', target: 'CCDC12', directed: 'false', weight: 0.9670219999999999} },
+{ data: { source: 'XAB2', target: 'CDC5L', directed: 'false', weight: 0.948528} },
+{ data: { source: 'DKFZp762M013', target: 'SNW1', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'DKFZp762M013', target: 'CDC5L', directed: 'false', weight: 0.9999629999999999} },
+{ data: { source: 'DKFZp762M013', target: 'CCDC12', directed: 'false', weight: 0.998921} },
+{ data: { source: 'DKFZp762M013', target: 'CWC15', directed: 'false', weight: 0.887028} },
+{ data: { source: 'SNW1', target: 'CDC5L', directed: 'false', weight: 1.0} },
+{ data: { source: 'SNW1', target: 'CCDC12', directed: 'false', weight: 0.9999680000000001} },
+{ data: { source: 'SNW1', target: 'CWC15', directed: 'false', weight: 0.945915} },
+{ data: { source: 'CDC5L', target: 'CCDC12', directed: 'false', weight: 0.9999870000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 CDC5L core complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.76
+    </section>
+    </body>
+    </html>
+    

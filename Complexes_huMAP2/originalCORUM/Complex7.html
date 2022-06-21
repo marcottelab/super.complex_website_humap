@@ -1,0 +1,92 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> BLOC-2 (biogenesis of lysosome-related organelles complex 2)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex8.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HPS6', score: 5, href: "https://www.uniprot.org/uniprot/Q86YV9" }},
+{data: { id: 'HPS3', score: 5, href: "https://www.uniprot.org/uniprot/Q969F9" }},
+{data: { id: 'HPS5', score: 5, href: "https://www.uniprot.org/uniprot/Q9UPZ3" }}], 
+ edges: [{ data: { source: 'HPS6', target: 'HPS3', directed: 'false', weight: 0.614746} },
+{ data: { source: 'HPS6', target: 'HPS5', directed: 'false', weight: 0.0936962} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    BLOC-2 (biogenesis of lysosome-related organelles complex 2)	<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

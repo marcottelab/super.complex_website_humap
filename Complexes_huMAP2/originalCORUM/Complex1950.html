@@ -1,0 +1,92 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> LUBAC complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1951.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RNF31', score: 5, href: "https://www.uniprot.org/uniprot/Q96EP0" }},
+{data: { id: 'RBCK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BYM8" }},
+{data: { id: 'SHARPIN', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0F6" }}], 
+ edges: [{ data: { source: 'RBCK1', target: 'RNF31', directed: 'false', weight: 0.9193469999999999} },
+{ data: { source: 'RNF31', target: 'SHARPIN', directed: 'false', weight: 0.241193} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    LUBAC complex	<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

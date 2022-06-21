@@ -1,0 +1,118 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> RC complex during G2/M-phase of cell cycle</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex541.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CDC2', score: 5, href: "https://www.uniprot.org/uniprot/P06493" }},
+{data: { id: 'PARP1', score: 5, href: "https://www.uniprot.org/uniprot/P09874" }},
+{data: { id: 'POLA1', score: 5, href: "https://www.uniprot.org/uniprot/P09884" }},
+{data: { id: 'TOP1', score: 5, href: "https://www.uniprot.org/uniprot/P11387" }},
+{data: { id: 'CCNB1', score: 5, href: "https://www.uniprot.org/uniprot/P14635" }},
+{data: { id: 'RPA2', score: 5, href: "https://www.uniprot.org/uniprot/P15927" }},
+{data: { id: 'CCNA2', score: 5, href: "https://www.uniprot.org/uniprot/P20248" }},
+{data: { id: 'RPA1', score: 5, href: "https://www.uniprot.org/uniprot/P27694" }},
+{data: { id: 'POLD1', score: 5, href: "https://www.uniprot.org/uniprot/P28340" }},
+{data: { id: 'RPA3', score: 5, href: "https://www.uniprot.org/uniprot/P35244" }},
+{data: { id: 'RFC2', score: 5, href: "https://www.uniprot.org/uniprot/P35250" }},
+{data: { id: 'RFC1', score: 5, href: "https://www.uniprot.org/uniprot/P35251" }},
+{data: { id: 'POLE', score: 5, href: "https://www.uniprot.org/uniprot/Q07864" }}], 
+ edges: [{ data: { source: 'POLD1', target: 'RPA3', directed: 'false', weight: 0.26348499999999997} },
+{ data: { source: 'RFC2', target: 'RFC1', directed: 'false', weight: 0.0978435} },
+{ data: { source: 'PARP1', target: 'RPA2', directed: 'false', weight: 0.16475399999999998} },
+{ data: { source: 'PARP1', target: 'RPA1', directed: 'false', weight: 0.103851} },
+{ data: { source: 'PARP1', target: 'RPA3', directed: 'false', weight: 0.0995364} },
+{ data: { source: 'PARP1', target: 'CCNB1', directed: 'false', weight: 0.032751499999999996} },
+{ data: { source: 'CCNA2', target: 'CDC2', directed: 'false', weight: 0.9568} },
+{ data: { source: 'CCNA2', target: 'POLA1', directed: 'false', weight: 0.033302} },
+{ data: { source: 'RPA1', target: 'RPA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPA1', target: 'RPA3', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'RPA3', target: 'RPA2', directed: 'false', weight: 0.999975} },
+{ data: { source: 'CCNB1', target: 'CDC2', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'POLA1', target: 'POLE', directed: 'false', weight: 0.579335} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    RC complex during G2/M-phase of cell cycle	<br> Unweighted Density = 0.17
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>POLA1
+    </section>
+    </body>
+    </html>
+    

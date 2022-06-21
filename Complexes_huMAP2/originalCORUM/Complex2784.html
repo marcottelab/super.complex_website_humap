@@ -1,0 +1,88 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> MTR4-RBM7-ZCCHC8 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2785.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MTREX', score: 5, href: "https://www.uniprot.org/uniprot/P42285" }},
+{data: { id: 'ZCCHC8', score: 5, href: "https://www.uniprot.org/uniprot/Q6NZY4" }},
+{data: { id: 'RBM7', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y580" }}], 
+ edges: [{ data: { source: 'RBM7', target: 'ZCCHC8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RBM7', target: 'MTREX', directed: 'false', weight: 0.998016} },
+{ data: { source: 'ZCCHC8', target: 'MTREX', directed: 'false', weight: 0.09952849999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    MTR4-RBM7-ZCCHC8 complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

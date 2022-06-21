@@ -1,0 +1,118 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 PNUTS-PP1 complex match 2</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex901.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SUMF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NBJ7" }},
+{data: { id: 'DNAJC17', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9NVM6" }},
+{data: { id: 'TOX4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94842" }},
+{data: { id: 'ALKBH5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P6C2" }},
+{data: { id: 'CKAP5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14008" }},
+{data: { id: 'PPP1R10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96QC0" }}], 
+ edges: [{ data: { source: 'TOX4', target: 'CKAP5', directed: 'false', weight: 0.816292} },
+{ data: { source: 'TOX4', target: 'PPP1R10', directed: 'false', weight: 0.777606} },
+{ data: { source: 'TOX4', target: 'SUMF2', directed: 'false', weight: 0.36817} },
+{ data: { source: 'TOX4', target: 'ALKBH5', directed: 'false', weight: 0.364846} },
+{ data: { source: 'TOX4', target: 'DNAJC17', directed: 'false', weight: 0.315625} },
+{ data: { source: 'ALKBH5', target: 'DNAJC17', directed: 'false', weight: 0.27374499999999996} },
+{ data: { source: 'ALKBH5', target: 'SUMF2', directed: 'false', weight: 0.121457} },
+{ data: { source: 'DNAJC17', target: 'SUMF2', directed: 'false', weight: 0.8061020000000001} },
+{ data: { source: 'PPP1R10', target: 'CKAP5', directed: 'false', weight: 0.803384} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 PNUTS-PP1 complex match 2<br> Complex Score (from Super.Complex) = 0.54018<br> Unweighted Density = 0.60
+    </section>
+    </body>
+    </html>
+    

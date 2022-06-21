@@ -1,0 +1,156 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.3 RPA complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex55.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'APLF', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IW19" }},
+{data: { id: 'SUPT16H', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y5B9" }},
+{data: { id: 'RPA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P15927" }},
+{data: { id: 'RPA3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P35244" }},
+{data: { id: 'PARP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UGN5" }},
+{data: { id: 'RPA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P27694" }},
+{data: { id: 'H2BC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96A08" }},
+{data: { id: 'SSRP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q08945" }},
+{data: { id: 'XPC', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q01831" }},
+{data: { id: 'PARP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09874" }},
+{data: { id: 'XRCC6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P12956" }}], 
+ edges: [{ data: { source: 'SUPT16H', target: 'SSRP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SUPT16H', target: 'XRCC6', directed: 'false', weight: 0.23460599999999998} },
+{ data: { source: 'SUPT16H', target: 'XPC', directed: 'false', weight: 0.14590799999999998} },
+{ data: { source: 'SUPT16H', target: 'H2BC1', directed: 'false', weight: 0.07811699999999999} },
+{ data: { source: 'SUPT16H', target: 'RPA2', directed: 'false', weight: 0.06791900000000001} },
+{ data: { source: 'SUPT16H', target: 'PARP1', directed: 'false', weight: 0.034907} },
+{ data: { source: 'SUPT16H', target: 'APLF', directed: 'false', weight: 0.0310166} },
+{ data: { source: 'SUPT16H', target: 'RPA1', directed: 'false', weight: 0.0233083} },
+{ data: { source: 'PARP2', target: 'APLF', directed: 'false', weight: 0.542674} },
+{ data: { source: 'PARP2', target: 'XPC', directed: 'false', weight: 0.382956} },
+{ data: { source: 'PARP2', target: 'RPA2', directed: 'false', weight: 0.166905} },
+{ data: { source: 'PARP2', target: 'H2BC1', directed: 'false', weight: 0.119985} },
+{ data: { source: 'PARP2', target: 'XRCC6', directed: 'false', weight: 0.0876901} },
+{ data: { source: 'PARP2', target: 'RPA1', directed: 'false', weight: 0.0213795} },
+{ data: { source: 'PARP2', target: 'PARP1', directed: 'false', weight: 0.020406999999999998} },
+{ data: { source: 'RPA1', target: 'RPA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPA1', target: 'RPA3', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'RPA1', target: 'PARP1', directed: 'false', weight: 0.103851} },
+{ data: { source: 'RPA1', target: 'XRCC6', directed: 'false', weight: 0.05508590000000001} },
+{ data: { source: 'RPA1', target: 'SSRP1', directed: 'false', weight: 0.0541774} },
+{ data: { source: 'RPA1', target: 'XPC', directed: 'false', weight: 0.0475063} },
+{ data: { source: 'XPC', target: 'APLF', directed: 'false', weight: 0.345448} },
+{ data: { source: 'XPC', target: 'RPA2', directed: 'false', weight: 0.17105} },
+{ data: { source: 'XPC', target: 'PARP1', directed: 'false', weight: 0.111713} },
+{ data: { source: 'XPC', target: 'SSRP1', directed: 'false', weight: 0.0685121} },
+{ data: { source: 'XPC', target: 'H2BC1', directed: 'false', weight: 0.0426408} },
+{ data: { source: 'XPC', target: 'XRCC6', directed: 'false', weight: 0.0377548} },
+{ data: { source: 'XPC', target: 'RPA3', directed: 'false', weight: 0.024319099999999996} },
+{ data: { source: 'XRCC6', target: 'RPA2', directed: 'false', weight: 0.9875290000000001} },
+{ data: { source: 'XRCC6', target: 'APLF', directed: 'false', weight: 0.8719879999999999} },
+{ data: { source: 'XRCC6', target: 'PARP1', directed: 'false', weight: 0.266392} },
+{ data: { source: 'XRCC6', target: 'SSRP1', directed: 'false', weight: 0.09491849999999999} },
+{ data: { source: 'XRCC6', target: 'RPA3', directed: 'false', weight: 0.036726} },
+{ data: { source: 'RPA2', target: 'RPA3', directed: 'false', weight: 0.999975} },
+{ data: { source: 'RPA2', target: 'PARP1', directed: 'false', weight: 0.16475399999999998} },
+{ data: { source: 'RPA2', target: 'SSRP1', directed: 'false', weight: 0.0300944} },
+{ data: { source: 'RPA2', target: 'APLF', directed: 'false', weight: 0.027354400000000004} },
+{ data: { source: 'SSRP1', target: 'H2BC1', directed: 'false', weight: 0.06773799999999999} },
+{ data: { source: 'SSRP1', target: 'PARP1', directed: 'false', weight: 0.06649139999999999} },
+{ data: { source: 'SSRP1', target: 'RPA3', directed: 'false', weight: 0.025053799999999998} },
+{ data: { source: 'PARP1', target: 'RPA3', directed: 'false', weight: 0.0995364} },
+{ data: { source: 'PARP1', target: 'APLF', directed: 'false', weight: 0.07049710000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.3 RPA complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.76
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,121 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> SMN complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex627.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GEMIN2', score: 5, href: "https://www.uniprot.org/uniprot/O14893" }},
+{data: { id: 'SNRPB', score: 5, href: "https://www.uniprot.org/uniprot/P14678" }},
+{data: { id: 'SNRPE', score: 5, href: "https://www.uniprot.org/uniprot/P62304" }},
+{data: { id: 'SNRPF', score: 5, href: "https://www.uniprot.org/uniprot/P62306" }},
+{data: { id: 'SNRPG', score: 5, href: "https://www.uniprot.org/uniprot/P62308" }},
+{data: { id: 'SNRPD1', score: 5, href: "https://www.uniprot.org/uniprot/P62314" }},
+{data: { id: 'SNRPD2', score: 5, href: "https://www.uniprot.org/uniprot/P62316" }},
+{data: { id: 'SNRPD3', score: 5, href: "https://www.uniprot.org/uniprot/P62318" }},
+{data: { id: 'DDX20', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHI6" }}], 
+ edges: [{ data: { source: 'DDX20', target: 'GEMIN2', directed: 'false', weight: 0.535733} },
+{ data: { source: 'SNRPD2', target: 'SNRPD1', directed: 'false', weight: 0.999999} },
+{ data: { source: 'SNRPD2', target: 'SNRPD3', directed: 'false', weight: 0.999165} },
+{ data: { source: 'SNRPD2', target: 'SNRPE', directed: 'false', weight: 0.9981639999999999} },
+{ data: { source: 'SNRPD2', target: 'SNRPF', directed: 'false', weight: 0.396742} },
+{ data: { source: 'SNRPD2', target: 'SNRPG', directed: 'false', weight: 0.23465100000000003} },
+{ data: { source: 'SNRPD2', target: 'SNRPB', directed: 'false', weight: 0.0755833} },
+{ data: { source: 'SNRPG', target: 'SNRPD1', directed: 'false', weight: 0.764563} },
+{ data: { source: 'SNRPG', target: 'SNRPB', directed: 'false', weight: 0.7381810000000001} },
+{ data: { source: 'SNRPG', target: 'SNRPE', directed: 'false', weight: 0.583522} },
+{ data: { source: 'SNRPG', target: 'SNRPD3', directed: 'false', weight: 0.443511} },
+{ data: { source: 'SNRPG', target: 'SNRPF', directed: 'false', weight: 0.26966999999999997} },
+{ data: { source: 'SNRPG', target: 'GEMIN2', directed: 'false', weight: 0.0242307} },
+{ data: { source: 'SNRPF', target: 'SNRPD1', directed: 'false', weight: 0.333597} },
+{ data: { source: 'SNRPF', target: 'SNRPB', directed: 'false', weight: 0.270957} },
+{ data: { source: 'SNRPF', target: 'SNRPE', directed: 'false', weight: 0.235394} },
+{ data: { source: 'SNRPF', target: 'SNRPD3', directed: 'false', weight: 0.232977} },
+{ data: { source: 'SNRPD3', target: 'SNRPE', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'SNRPD3', target: 'SNRPD1', directed: 'false', weight: 0.999339} },
+{ data: { source: 'SNRPD3', target: 'SNRPB', directed: 'false', weight: 0.040878} },
+{ data: { source: 'SNRPB', target: 'SNRPE', directed: 'false', weight: 0.209648} },
+{ data: { source: 'SNRPB', target: 'SNRPD1', directed: 'false', weight: 0.0467705} },
+{ data: { source: 'GEMIN2', target: 'SNRPD1', directed: 'false', weight: 0.0241195} },
+{ data: { source: 'GEMIN2', target: 'SNRPE', directed: 'false', weight: 0.020462900000000003} },
+{ data: { source: 'SNRPE', target: 'SNRPD1', directed: 'false', weight: 0.998884} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    SMN complex	<br> Unweighted Density = 0.69
+    </section>
+    </body>
+    </html>
+    

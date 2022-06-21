@@ -1,0 +1,101 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.9 SMN complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex19.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GEMIN2', score: 5, href: "https://www.uniprot.org/uniprot/O14893" }},
+{data: { id: 'GEMIN4', score: 5, href: "https://www.uniprot.org/uniprot/P57678" }},
+{data: { id: 'GEMIN5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEQ6" }},
+{data: { id: 'DDX20', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHI6" }},
+{data: { id: 'GEMIN7', score: 5, href: "https://www.uniprot.org/uniprot/Q9H840" }},
+{data: { id: 'GEMIN6', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXD5" }}], 
+ edges: [{ data: { source: 'GEMIN2', target: 'GEMIN5', directed: 'false', weight: 0.742722} },
+{ data: { source: 'GEMIN2', target: 'DDX20', directed: 'false', weight: 0.466801} },
+{ data: { source: 'GEMIN2', target: 'GEMIN4', directed: 'false', weight: 0.461742} },
+{ data: { source: 'GEMIN2', target: 'GEMIN7', directed: 'false', weight: 0.3829} },
+{ data: { source: 'GEMIN2', target: 'GEMIN6', directed: 'false', weight: 0.0975913} },
+{ data: { source: 'GEMIN4', target: 'DDX20', directed: 'false', weight: 0.998397} },
+{ data: { source: 'GEMIN4', target: 'GEMIN6', directed: 'false', weight: 0.582547} },
+{ data: { source: 'GEMIN4', target: 'GEMIN5', directed: 'false', weight: 0.464868} },
+{ data: { source: 'GEMIN4', target: 'GEMIN7', directed: 'false', weight: 0.275792} },
+{ data: { source: 'GEMIN5', target: 'DDX20', directed: 'false', weight: 0.945808} },
+{ data: { source: 'DDX20', target: 'GEMIN7', directed: 'false', weight: 0.718906} },
+{ data: { source: 'DDX20', target: 'GEMIN6', directed: 'false', weight: 0.45073} },
+{ data: { source: 'GEMIN7', target: 'GEMIN6', directed: 'false', weight: 0.18085} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.9 SMN complex	<br> Unweighted Density = 0.87
+    </section>
+    </body>
+    </html>
+    

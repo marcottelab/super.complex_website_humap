@@ -1,0 +1,214 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 18S U11/U12 snRNP</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex247.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DHX15', score: 5, href: "https://www.uniprot.org/uniprot/O43143" }},
+{data: { id: 'SF3B1', score: 5, href: "https://www.uniprot.org/uniprot/O75533" }},
+{data: { id: 'SNRPB', score: 5, href: "https://www.uniprot.org/uniprot/P14678" }},
+{data: { id: 'SNRPE', score: 5, href: "https://www.uniprot.org/uniprot/P62304" }},
+{data: { id: 'SNRPF', score: 5, href: "https://www.uniprot.org/uniprot/P62306" }},
+{data: { id: 'SNRPG', score: 5, href: "https://www.uniprot.org/uniprot/P62308" }},
+{data: { id: 'SNRPD1', score: 5, href: "https://www.uniprot.org/uniprot/P62314" }},
+{data: { id: 'SNRPD2', score: 5, href: "https://www.uniprot.org/uniprot/P62316" }},
+{data: { id: 'SNRPD3', score: 5, href: "https://www.uniprot.org/uniprot/P62318" }},
+{data: { id: 'YBX1', score: 5, href: "https://www.uniprot.org/uniprot/P67809" }},
+{data: { id: 'SF3B2', score: 5, href: "https://www.uniprot.org/uniprot/Q13435" }},
+{data: { id: 'SF3B3', score: 5, href: "https://www.uniprot.org/uniprot/Q15393" }},
+{data: { id: 'SF3B4', score: 5, href: "https://www.uniprot.org/uniprot/Q15427" }},
+{data: { id: 'ZRSR2', score: 5, href: "https://www.uniprot.org/uniprot/Q15696" }},
+{data: { id: 'U1SNRNPBP', score: 5, href: "https://www.uniprot.org/uniprot/Q16560" }},
+{data: { id: 'SNRNP48', score: 5, href: "https://www.uniprot.org/uniprot/Q6IEG0" }},
+{data: { id: 'PRPF8', score: 5, href: "https://www.uniprot.org/uniprot/Q6P2Q9" }},
+{data: { id: 'PDCD7', score: 3, href: "https://www.uniprot.org/uniprot/Q8N8D1" }},
+{data: { id: 'ZCRB1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TBF4" }},
+{data: { id: 'RNPC3', score: 5, href: "https://www.uniprot.org/uniprot/Q96LT9" }},
+{data: { id: 'SNRNP25', score: 5, href: "https://www.uniprot.org/uniprot/Q9BV90" }},
+{data: { id: 'SF3B5', score: 5, href: "https://www.uniprot.org/uniprot/Q9BWJ5" }},
+{data: { id: 'ZMAT5', score: 5, href: "https://www.uniprot.org/uniprot/Q9UDW3" }},
+{data: { id: 'SF3B6', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3B4" }}], 
+ edges: [{ data: { source: 'SNRPD2', target: 'SNRPD1', directed: 'false', weight: 0.999999} },
+{ data: { source: 'SNRPD2', target: 'SNRPD3', directed: 'false', weight: 0.999165} },
+{ data: { source: 'SNRPD2', target: 'SNRPE', directed: 'false', weight: 0.9981639999999999} },
+{ data: { source: 'SNRPD2', target: 'SNRPF', directed: 'false', weight: 0.396742} },
+{ data: { source: 'SNRPD2', target: 'PRPF8', directed: 'false', weight: 0.330029} },
+{ data: { source: 'SNRPD2', target: 'SNRPG', directed: 'false', weight: 0.23465100000000003} },
+{ data: { source: 'SNRPD2', target: 'DHX15', directed: 'false', weight: 0.08862089999999999} },
+{ data: { source: 'SNRPD2', target: 'SNRPB', directed: 'false', weight: 0.0755833} },
+{ data: { source: 'ZRSR2', target: 'ZMAT5', directed: 'false', weight: 0.9945729999999999} },
+{ data: { source: 'ZRSR2', target: 'U1SNRNPBP', directed: 'false', weight: 0.989217} },
+{ data: { source: 'ZRSR2', target: 'RNPC3', directed: 'false', weight: 0.824213} },
+{ data: { source: 'ZRSR2', target: 'SNRNP48', directed: 'false', weight: 0.570588} },
+{ data: { source: 'ZRSR2', target: 'PDCD7', directed: 'false', weight: 0.5} },
+{ data: { source: 'ZRSR2', target: 'SF3B2', directed: 'false', weight: 0.036180699999999996} },
+{ data: { source: 'ZRSR2', target: 'SF3B1', directed: 'false', weight: 0.034376300000000005} },
+{ data: { source: 'ZRSR2', target: 'ZCRB1', directed: 'false', weight: 0.027321699999999997} },
+{ data: { source: 'ZRSR2', target: 'SF3B5', directed: 'false', weight: 0.022461599999999998} },
+{ data: { source: 'ZRSR2', target: 'SNRPG', directed: 'false', weight: 0.0208482} },
+{ data: { source: 'SNRNP48', target: 'SNRPG', directed: 'false', weight: 0.306642} },
+{ data: { source: 'SNRNP48', target: 'ZCRB1', directed: 'false', weight: 0.0437886} },
+{ data: { source: 'SNRNP48', target: 'ZMAT5', directed: 'false', weight: 0.0403032} },
+{ data: { source: 'SNRNP48', target: 'SNRPF', directed: 'false', weight: 0.0303454} },
+{ data: { source: 'SNRNP48', target: 'PDCD7', directed: 'false', weight: 0.029920599999999995} },
+{ data: { source: 'SNRNP48', target: 'RNPC3', directed: 'false', weight: 0.0249426} },
+{ data: { source: 'SNRNP48', target: 'SNRPE', directed: 'false', weight: 0.0248067} },
+{ data: { source: 'SNRNP48', target: 'U1SNRNPBP', directed: 'false', weight: 0.023905799999999998} },
+{ data: { source: 'PRPF8', target: 'SNRPD1', directed: 'false', weight: 0.99087} },
+{ data: { source: 'PRPF8', target: 'SNRPD3', directed: 'false', weight: 0.630969} },
+{ data: { source: 'PRPF8', target: 'DHX15', directed: 'false', weight: 0.22164099999999998} },
+{ data: { source: 'PRPF8', target: 'SF3B2', directed: 'false', weight: 0.165902} },
+{ data: { source: 'PRPF8', target: 'SNRPE', directed: 'false', weight: 0.07016610000000001} },
+{ data: { source: 'PRPF8', target: 'SF3B1', directed: 'false', weight: 0.047605699999999994} },
+{ data: { source: 'PRPF8', target: 'SNRPG', directed: 'false', weight: 0.0252038} },
+{ data: { source: 'ZCRB1', target: 'PDCD7', directed: 'false', weight: 0.113273} },
+{ data: { source: 'ZCRB1', target: 'SF3B2', directed: 'false', weight: 0.08998489999999999} },
+{ data: { source: 'ZCRB1', target: 'SF3B1', directed: 'false', weight: 0.059594900000000006} },
+{ data: { source: 'ZCRB1', target: 'RNPC3', directed: 'false', weight: 0.0540818} },
+{ data: { source: 'ZCRB1', target: 'YBX1', directed: 'false', weight: 0.0458509} },
+{ data: { source: 'ZCRB1', target: 'U1SNRNPBP', directed: 'false', weight: 0.023421400000000002} },
+{ data: { source: 'RNPC3', target: 'SNRPG', directed: 'false', weight: 0.0867613} },
+{ data: { source: 'RNPC3', target: 'U1SNRNPBP', directed: 'false', weight: 0.0633131} },
+{ data: { source: 'RNPC3', target: 'ZMAT5', directed: 'false', weight: 0.0535784} },
+{ data: { source: 'RNPC3', target: 'SNRPE', directed: 'false', weight: 0.030489599999999995} },
+{ data: { source: 'RNPC3', target: 'PDCD7', directed: 'false', weight: 0.025652699999999997} },
+{ data: { source: 'RNPC3', target: 'SNRPF', directed: 'false', weight: 0.0227861} },
+{ data: { source: 'U1SNRNPBP', target: 'SNRPG', directed: 'false', weight: 0.124646} },
+{ data: { source: 'U1SNRNPBP', target: 'SNRPF', directed: 'false', weight: 0.08292519999999999} },
+{ data: { source: 'U1SNRNPBP', target: 'PDCD7', directed: 'false', weight: 0.05704019999999999} },
+{ data: { source: 'U1SNRNPBP', target: 'ZMAT5', directed: 'false', weight: 0.051470100000000005} },
+{ data: { source: 'U1SNRNPBP', target: 'SNRPE', directed: 'false', weight: 0.044549} },
+{ data: { source: 'SF3B4', target: 'SF3B1', directed: 'false', weight: 0.9999809999999999} },
+{ data: { source: 'SF3B4', target: 'SF3B2', directed: 'false', weight: 0.999816} },
+{ data: { source: 'SF3B4', target: 'SF3B5', directed: 'false', weight: 0.9876209999999999} },
+{ data: { source: 'SF3B4', target: 'SF3B6', directed: 'false', weight: 0.987605} },
+{ data: { source: 'SF3B4', target: 'SF3B3', directed: 'false', weight: 0.987568} },
+{ data: { source: 'SF3B4', target: 'SNRPE', directed: 'false', weight: 0.021212599999999998} },
+{ data: { source: 'SNRPF', target: 'SNRPD1', directed: 'false', weight: 0.333597} },
+{ data: { source: 'SNRPF', target: 'SNRPB', directed: 'false', weight: 0.270957} },
+{ data: { source: 'SNRPF', target: 'SNRPG', directed: 'false', weight: 0.26966999999999997} },
+{ data: { source: 'SNRPF', target: 'SNRPE', directed: 'false', weight: 0.235394} },
+{ data: { source: 'SNRPF', target: 'SNRPD3', directed: 'false', weight: 0.232977} },
+{ data: { source: 'SNRPF', target: 'PDCD7', directed: 'false', weight: 0.0443922} },
+{ data: { source: 'SF3B2', target: 'SF3B3', directed: 'false', weight: 1.0} },
+{ data: { source: 'SF3B2', target: 'SF3B1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SF3B2', target: 'SF3B5', directed: 'false', weight: 0.9978229999999999} },
+{ data: { source: 'SF3B2', target: 'SF3B6', directed: 'false', weight: 0.9965459999999999} },
+{ data: { source: 'SF3B2', target: 'DHX15', directed: 'false', weight: 0.376179} },
+{ data: { source: 'SF3B2', target: 'SNRPD1', directed: 'false', weight: 0.239008} },
+{ data: { source: 'SF3B2', target: 'SNRPD3', directed: 'false', weight: 0.09785160000000001} },
+{ data: { source: 'SF3B2', target: 'SNRPE', directed: 'false', weight: 0.0814032} },
+{ data: { source: 'SF3B2', target: 'SNRPG', directed: 'false', weight: 0.0271835} },
+{ data: { source: 'ZMAT5', target: 'PDCD7', directed: 'false', weight: 0.08202739999999999} },
+{ data: { source: 'ZMAT5', target: 'SNRPG', directed: 'false', weight: 0.020289500000000002} },
+{ data: { source: 'PDCD7', target: 'SNRPG', directed: 'false', weight: 0.0367881} },
+{ data: { source: 'PDCD7', target: 'SNRPE', directed: 'false', weight: 0.0348351} },
+{ data: { source: 'SNRPE', target: 'SNRPD3', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'SNRPE', target: 'SNRPD1', directed: 'false', weight: 0.998884} },
+{ data: { source: 'SNRPE', target: 'SNRPG', directed: 'false', weight: 0.583522} },
+{ data: { source: 'SNRPE', target: 'SNRPB', directed: 'false', weight: 0.209648} },
+{ data: { source: 'SNRPE', target: 'SF3B1', directed: 'false', weight: 0.0335547} },
+{ data: { source: 'SNRPE', target: 'SF3B6', directed: 'false', weight: 0.029672700000000003} },
+{ data: { source: 'SNRPD1', target: 'SNRPD3', directed: 'false', weight: 0.999339} },
+{ data: { source: 'SNRPD1', target: 'SNRPG', directed: 'false', weight: 0.764563} },
+{ data: { source: 'SNRPD1', target: 'SF3B1', directed: 'false', weight: 0.451146} },
+{ data: { source: 'SNRPD1', target: 'SF3B3', directed: 'false', weight: 0.06775389999999999} },
+{ data: { source: 'SNRPD1', target: 'DHX15', directed: 'false', weight: 0.0595942} },
+{ data: { source: 'SNRPD1', target: 'SNRPB', directed: 'false', weight: 0.0467705} },
+{ data: { source: 'SNRPD1', target: 'SF3B5', directed: 'false', weight: 0.036813900000000004} },
+{ data: { source: 'SNRPG', target: 'SNRPB', directed: 'false', weight: 0.7381810000000001} },
+{ data: { source: 'SNRPG', target: 'SNRPD3', directed: 'false', weight: 0.443511} },
+{ data: { source: 'SNRPG', target: 'SNRNP25', directed: 'false', weight: 0.183075} },
+{ data: { source: 'SNRPG', target: 'SF3B1', directed: 'false', weight: 0.0205521} },
+{ data: { source: 'SF3B5', target: 'SF3B3', directed: 'false', weight: 1.0} },
+{ data: { source: 'SF3B5', target: 'SF3B1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SF3B5', target: 'SF3B6', directed: 'false', weight: 0.9998450000000001} },
+{ data: { source: 'SF3B3', target: 'SF3B1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SF3B3', target: 'SF3B6', directed: 'false', weight: 0.9959110000000001} },
+{ data: { source: 'SF3B3', target: 'DHX15', directed: 'false', weight: 0.055983000000000005} },
+{ data: { source: 'DHX15', target: 'SF3B1', directed: 'false', weight: 0.598055} },
+{ data: { source: 'SNRPB', target: 'SNRPD3', directed: 'false', weight: 0.040878} },
+{ data: { source: 'SF3B1', target: 'SF3B6', directed: 'false', weight: 0.9989600000000001} },
+{ data: { source: 'SF3B1', target: 'SNRPD3', directed: 'false', weight: 0.443646} },
+{ data: { source: 'SF3B1', target: 'YBX1', directed: 'false', weight: 0.09257810000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    18S U11/U12 snRNP	<br> Unweighted Density = 0.37
+    </section>
+    </body>
+    </html>
+    

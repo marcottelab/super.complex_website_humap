@@ -1,0 +1,120 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> ZG16B CST4 AMY1C CST2 CST1 MUC7</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1009.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'AMY1C', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P0DTE8" }},
+{data: { id: 'CST1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P01037" }},
+{data: { id: 'CST2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09228" }},
+{data: { id: 'ZG16B', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q96DA0" }},
+{data: { id: 'CST4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P01036" }},
+{data: { id: 'MUC7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TAX7" }}], 
+ edges: [{ data: { source: 'ZG16B', target: 'CST4', directed: 'false', weight: 0.341945} },
+{ data: { source: 'ZG16B', target: 'AMY1C', directed: 'false', weight: 0.332955} },
+{ data: { source: 'ZG16B', target: 'MUC7', directed: 'false', weight: 0.321988} },
+{ data: { source: 'CST1', target: 'CST2', directed: 'false', weight: 0.5299699999999999} },
+{ data: { source: 'CST1', target: 'CST4', directed: 'false', weight: 0.47122600000000003} },
+{ data: { source: 'CST1', target: 'MUC7', directed: 'false', weight: 0.133243} },
+{ data: { source: 'MUC7', target: 'CST4', directed: 'false', weight: 0.5} },
+{ data: { source: 'MUC7', target: 'CST2', directed: 'false', weight: 0.45249700000000004} },
+{ data: { source: 'MUC7', target: 'AMY1C', directed: 'false', weight: 0.31246999999999997} },
+{ data: { source: 'AMY1C', target: 'CST4', directed: 'false', weight: 0.22013899999999997} },
+{ data: { source: 'CST4', target: 'CST2', directed: 'false', weight: 0.545516} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    ZG16B CST4 AMY1C CST2 CST1 MUC7<br> Complex Score (from Super.Complex) = 0.52080<br> Unweighted Density = 0.73
+    </section>
+    </body>
+    </html>
+    

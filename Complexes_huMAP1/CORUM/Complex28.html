@@ -1,0 +1,147 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> RNA polymerase II core complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex29.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'POLR2I', score: 5, href: "https://www.uniprot.org/uniprot/P36954" }},
+{data: { id: 'POLR2E', score: 5, href: "https://www.uniprot.org/uniprot/P19388" }},
+{data: { id: 'POLR2B', score: 5, href: "https://www.uniprot.org/uniprot/P30876" }},
+{data: { id: 'POLR2K', score: 5, href: "https://www.uniprot.org/uniprot/P53803" }},
+{data: { id: 'POLR2G', score: 5, href: "https://www.uniprot.org/uniprot/P62487" }},
+{data: { id: 'POLR2H', score: 5, href: "https://www.uniprot.org/uniprot/P52434" }},
+{data: { id: 'POLR2F', score: 5, href: "https://www.uniprot.org/uniprot/P61218" }},
+{data: { id: 'POLR2A', score: 5, href: "https://www.uniprot.org/uniprot/P24928" }},
+{data: { id: 'POLR2D', score: 5, href: "https://www.uniprot.org/uniprot/O15514" }},
+{data: { id: 'POLR2J', score: 5, href: "https://www.uniprot.org/uniprot/P52435" }},
+{data: { id: 'POLR2C', score: 5, href: "https://www.uniprot.org/uniprot/P19387" }},
+{data: { id: 'POLR2L', score: 5, href: "https://www.uniprot.org/uniprot/P62875" }}], 
+ edges: [{ data: { source: 'POLR2I', target: 'POLR2G', directed: 'false', weight: 0.999927} },
+{ data: { source: 'POLR2I', target: 'POLR2D', directed: 'false', weight: 0.999726} },
+{ data: { source: 'POLR2I', target: 'POLR2A', directed: 'false', weight: 0.984598} },
+{ data: { source: 'POLR2I', target: 'POLR2C', directed: 'false', weight: 0.9473209999999999} },
+{ data: { source: 'POLR2I', target: 'POLR2F', directed: 'false', weight: 0.946319} },
+{ data: { source: 'POLR2I', target: 'POLR2K', directed: 'false', weight: 0.833986} },
+{ data: { source: 'POLR2I', target: 'POLR2E', directed: 'false', weight: 0.7820229999999999} },
+{ data: { source: 'POLR2I', target: 'POLR2B', directed: 'false', weight: 0.395751} },
+{ data: { source: 'POLR2I', target: 'POLR2J', directed: 'false', weight: 0.270861} },
+{ data: { source: 'POLR2E', target: 'POLR2H', directed: 'false', weight: 0.999869} },
+{ data: { source: 'POLR2E', target: 'POLR2F', directed: 'false', weight: 0.996} },
+{ data: { source: 'POLR2E', target: 'POLR2G', directed: 'false', weight: 0.9817020000000001} },
+{ data: { source: 'POLR2E', target: 'POLR2K', directed: 'false', weight: 0.978836} },
+{ data: { source: 'POLR2E', target: 'POLR2L', directed: 'false', weight: 0.975972} },
+{ data: { source: 'POLR2E', target: 'POLR2B', directed: 'false', weight: 0.955729} },
+{ data: { source: 'POLR2E', target: 'POLR2A', directed: 'false', weight: 0.939551} },
+{ data: { source: 'POLR2E', target: 'POLR2C', directed: 'false', weight: 0.8241930000000001} },
+{ data: { source: 'POLR2L', target: 'POLR2H', directed: 'false', weight: 0.992499} },
+{ data: { source: 'POLR2L', target: 'POLR2K', directed: 'false', weight: 0.310733} },
+{ data: { source: 'POLR2L', target: 'POLR2F', directed: 'false', weight: 0.30509000000000003} },
+{ data: { source: 'POLR2B', target: 'POLR2D', directed: 'false', weight: 0.9996299999999999} },
+{ data: { source: 'POLR2B', target: 'POLR2G', directed: 'false', weight: 0.998574} },
+{ data: { source: 'POLR2B', target: 'POLR2J', directed: 'false', weight: 0.9503790000000001} },
+{ data: { source: 'POLR2B', target: 'POLR2C', directed: 'false', weight: 0.8905350000000001} },
+{ data: { source: 'POLR2B', target: 'POLR2A', directed: 'false', weight: 0.106905} },
+{ data: { source: 'POLR2K', target: 'POLR2C', directed: 'false', weight: 0.974096} },
+{ data: { source: 'POLR2K', target: 'POLR2F', directed: 'false', weight: 0.95678} },
+{ data: { source: 'POLR2K', target: 'POLR2A', directed: 'false', weight: 0.89089} },
+{ data: { source: 'POLR2K', target: 'POLR2H', directed: 'false', weight: 0.801426} },
+{ data: { source: 'POLR2K', target: 'POLR2J', directed: 'false', weight: 0.17435} },
+{ data: { source: 'POLR2K', target: 'POLR2G', directed: 'false', weight: 0.165698} },
+{ data: { source: 'POLR2K', target: 'POLR2D', directed: 'false', weight: 0.165698} },
+{ data: { source: 'POLR2G', target: 'POLR2D', directed: 'false', weight: 0.999967} },
+{ data: { source: 'POLR2G', target: 'POLR2C', directed: 'false', weight: 0.999875} },
+{ data: { source: 'POLR2G', target: 'POLR2A', directed: 'false', weight: 0.999229} },
+{ data: { source: 'POLR2G', target: 'POLR2F', directed: 'false', weight: 0.8797159999999999} },
+{ data: { source: 'POLR2G', target: 'POLR2J', directed: 'false', weight: 0.682712} },
+{ data: { source: 'POLR2H', target: 'POLR2F', directed: 'false', weight: 0.998609} },
+{ data: { source: 'POLR2A', target: 'POLR2D', directed: 'false', weight: 0.999986} },
+{ data: { source: 'POLR2A', target: 'POLR2F', directed: 'false', weight: 0.978605} },
+{ data: { source: 'POLR2A', target: 'POLR2J', directed: 'false', weight: 0.813397} },
+{ data: { source: 'POLR2A', target: 'POLR2C', directed: 'false', weight: 0.10702} },
+{ data: { source: 'POLR2D', target: 'POLR2C', directed: 'false', weight: 0.999892} },
+{ data: { source: 'POLR2D', target: 'POLR2J', directed: 'false', weight: 0.5299699999999999} },
+{ data: { source: 'POLR2D', target: 'POLR2F', directed: 'false', weight: 0.35340900000000003} },
+{ data: { source: 'POLR2J', target: 'POLR2C', directed: 'false', weight: 0.994186} },
+{ data: { source: 'POLR2J', target: 'POLR2F', directed: 'false', weight: 0.264241} },
+{ data: { source: 'POLR2F', target: 'POLR2C', directed: 'false', weight: 0.971453} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    RNA polymerase II core complex	<br> Unweighted Density = 0.73
+    </section>
+    </body>
+    </html>
+    

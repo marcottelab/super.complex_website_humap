@@ -1,0 +1,111 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> RNA polymerase II complex, chromatin structure modifying</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1373.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ERCC3', score: 5, href: "https://www.uniprot.org/uniprot/P19447" }},
+{data: { id: 'CCNC', score: 5, href: "https://www.uniprot.org/uniprot/P24863" }},
+{data: { id: 'POLR2A', score: 5, href: "https://www.uniprot.org/uniprot/P24928" }},
+{data: { id: 'GTF2F1', score: 5, href: "https://www.uniprot.org/uniprot/P35269" }},
+{data: { id: 'CDK8', score: 5, href: "https://www.uniprot.org/uniprot/P49336" }},
+{data: { id: 'SMARCA2', score: 5, href: "https://www.uniprot.org/uniprot/P51531" }},
+{data: { id: 'SMARCA4', score: 5, href: "https://www.uniprot.org/uniprot/P51532" }},
+{data: { id: 'GTF2B', score: 5, href: "https://www.uniprot.org/uniprot/Q00403" }},
+{data: { id: 'SMARCB1', score: 5, href: "https://www.uniprot.org/uniprot/Q12824" }},
+{data: { id: 'SURB7', score: 5, href: "https://www.uniprot.org/uniprot/Q13503" }},
+{data: { id: 'GTF2H3', score: 5, href: "https://www.uniprot.org/uniprot/Q13889" }},
+{data: { id: 'CREBBP', score: 5, href: "https://www.uniprot.org/uniprot/Q92793" }},
+{data: { id: 'KAT2B', score: 5, href: "https://www.uniprot.org/uniprot/Q92831" }}], 
+ edges: [{ data: { source: 'POLR2A', target: 'SMARCB1', directed: 'false', weight: 0.725951} },
+{ data: { source: 'POLR2A', target: 'SMARCA4', directed: 'false', weight: 0.36802399999999996} },
+{ data: { source: 'POLR2A', target: 'GTF2F1', directed: 'false', weight: 0.152605} },
+{ data: { source: 'ERCC3', target: 'GTF2H3', directed: 'false', weight: 0.9446} },
+{ data: { source: 'SMARCA2', target: 'SMARCB1', directed: 'false', weight: 0.997635} },
+{ data: { source: 'SMARCA2', target: 'SMARCA4', directed: 'false', weight: 0.0347071} },
+{ data: { source: 'GTF2B', target: 'GTF2F1', directed: 'false', weight: 0.153142} },
+{ data: { source: 'SMARCA4', target: 'SMARCB1', directed: 'false', weight: 0.999976} },
+{ data: { source: 'SURB7', target: 'CDK8', directed: 'false', weight: 0.9591770000000001} },
+{ data: { source: 'SURB7', target: 'CCNC', directed: 'false', weight: 0.192065} },
+{ data: { source: 'CCNC', target: 'CDK8', directed: 'false', weight: 0.999915} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    RNA polymerase II complex, chromatin structure modifying	<br> Unweighted Density = 0.14
+    </section>
+    </body>
+    </html>
+    

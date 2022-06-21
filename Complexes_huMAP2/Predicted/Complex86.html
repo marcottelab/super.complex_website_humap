@@ -1,0 +1,123 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.7 AP1 adaptor complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex87.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'AP1B1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q10567" }},
+{data: { id: 'AP1M1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BXS5" }},
+{data: { id: 'AP1S2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P56377" }},
+{data: { id: 'AP1S1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61966" }},
+{data: { id: 'AP1G1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43747" }},
+{data: { id: 'AP2B1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P63010" }},
+{data: { id: 'AP1M2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y6Q5" }}], 
+ edges: [{ data: { source: 'AP1G1', target: 'AP1M1', directed: 'false', weight: 0.999828} },
+{ data: { source: 'AP1G1', target: 'AP1S2', directed: 'false', weight: 0.9988229999999999} },
+{ data: { source: 'AP1G1', target: 'AP1B1', directed: 'false', weight: 0.9980889999999999} },
+{ data: { source: 'AP1G1', target: 'AP1M2', directed: 'false', weight: 0.987609} },
+{ data: { source: 'AP1G1', target: 'AP1S1', directed: 'false', weight: 0.98754} },
+{ data: { source: 'AP1G1', target: 'AP2B1', directed: 'false', weight: 0.298854} },
+{ data: { source: 'AP2B1', target: 'AP1S2', directed: 'false', weight: 0.798904} },
+{ data: { source: 'AP2B1', target: 'AP1M2', directed: 'false', weight: 0.595342} },
+{ data: { source: 'AP2B1', target: 'AP1B1', directed: 'false', weight: 0.0526523} },
+{ data: { source: 'AP2B1', target: 'AP1M1', directed: 'false', weight: 0.031625799999999996} },
+{ data: { source: 'AP1S2', target: 'AP1B1', directed: 'false', weight: 0.998758} },
+{ data: { source: 'AP1S2', target: 'AP1M1', directed: 'false', weight: 0.9985379999999999} },
+{ data: { source: 'AP1S2', target: 'AP1M2', directed: 'false', weight: 0.993884} },
+{ data: { source: 'AP1M2', target: 'AP1B1', directed: 'false', weight: 0.9876030000000001} },
+{ data: { source: 'AP1M2', target: 'AP1S1', directed: 'false', weight: 0.940235} },
+{ data: { source: 'AP1S1', target: 'AP1M1', directed: 'false', weight: 0.9874219999999999} },
+{ data: { source: 'AP1S1', target: 'AP1B1', directed: 'false', weight: 0.976883} },
+{ data: { source: 'AP1M1', target: 'AP1B1', directed: 'false', weight: 0.987592} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.7 AP1 adaptor complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.86
+    </section>
+    </body>
+    </html>
+    

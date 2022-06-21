@@ -1,0 +1,146 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 SNF2H-BAZ1A complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex64.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'COPE', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14579" }},
+{data: { id: 'COPB2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P35606" }},
+{data: { id: 'MAPRE2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15555" }},
+{data: { id: 'SACM1L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NTJ5" }},
+{data: { id: 'COPG1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y678" }},
+{data: { id: 'PRPF40A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75400" }},
+{data: { id: 'COPA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P53621" }},
+{data: { id: 'ARCN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48444" }},
+{data: { id: 'SMARCA5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60264" }},
+{data: { id: 'COPB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P53618" }}], 
+ edges: [{ data: { source: 'COPE', target: 'COPA', directed: 'false', weight: 0.998978} },
+{ data: { source: 'COPE', target: 'COPG1', directed: 'false', weight: 0.9916959999999999} },
+{ data: { source: 'COPE', target: 'COPB1', directed: 'false', weight: 0.8769620000000001} },
+{ data: { source: 'COPE', target: 'ARCN1', directed: 'false', weight: 0.775395} },
+{ data: { source: 'COPE', target: 'COPB2', directed: 'false', weight: 0.595789} },
+{ data: { source: 'COPE', target: 'SACM1L', directed: 'false', weight: 0.0580878} },
+{ data: { source: 'SMARCA5', target: 'COPG1', directed: 'false', weight: 0.239481} },
+{ data: { source: 'SMARCA5', target: 'COPA', directed: 'false', weight: 0.140012} },
+{ data: { source: 'SMARCA5', target: 'COPB2', directed: 'false', weight: 0.0463327} },
+{ data: { source: 'COPB2', target: 'COPA', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'COPB2', target: 'COPG1', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'COPB2', target: 'COPB1', directed: 'false', weight: 0.953405} },
+{ data: { source: 'COPB2', target: 'ARCN1', directed: 'false', weight: 0.875185} },
+{ data: { source: 'COPB2', target: 'SACM1L', directed: 'false', weight: 0.06839810000000002} },
+{ data: { source: 'COPB2', target: 'PRPF40A', directed: 'false', weight: 0.022318900000000003} },
+{ data: { source: 'COPB1', target: 'COPA', directed: 'false', weight: 0.999999} },
+{ data: { source: 'COPB1', target: 'COPG1', directed: 'false', weight: 0.999984} },
+{ data: { source: 'COPB1', target: 'ARCN1', directed: 'false', weight: 0.99977} },
+{ data: { source: 'COPB1', target: 'SACM1L', directed: 'false', weight: 0.0239335} },
+{ data: { source: 'COPB1', target: 'MAPRE2', directed: 'false', weight: 0.022803599999999997} },
+{ data: { source: 'PRPF40A', target: 'COPG1', directed: 'false', weight: 0.176294} },
+{ data: { source: 'PRPF40A', target: 'COPA', directed: 'false', weight: 0.060930200000000004} },
+{ data: { source: 'PRPF40A', target: 'ARCN1', directed: 'false', weight: 0.05383969999999999} },
+{ data: { source: 'PRPF40A', target: 'MAPRE2', directed: 'false', weight: 0.031764299999999995} },
+{ data: { source: 'MAPRE2', target: 'COPA', directed: 'false', weight: 0.407014} },
+{ data: { source: 'MAPRE2', target: 'COPG1', directed: 'false', weight: 0.129732} },
+{ data: { source: 'MAPRE2', target: 'ARCN1', directed: 'false', weight: 0.0428205} },
+{ data: { source: 'SACM1L', target: 'COPG1', directed: 'false', weight: 0.114936} },
+{ data: { source: 'SACM1L', target: 'ARCN1', directed: 'false', weight: 0.08359630000000001} },
+{ data: { source: 'SACM1L', target: 'COPA', directed: 'false', weight: 0.0448483} },
+{ data: { source: 'COPG1', target: 'COPA', directed: 'false', weight: 1.0} },
+{ data: { source: 'COPG1', target: 'ARCN1', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'COPA', target: 'ARCN1', directed: 'false', weight: 0.999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 SNF2H-BAZ1A complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.73
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,118 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> DLGAP5 JUNB OXSM RCC1 RGPD3 ADCK5</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex860.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RCC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P18754" }},
+{data: { id: 'ADCK5', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q3MIX3" }},
+{data: { id: 'DLGAP5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15398" }},
+{data: { id: 'OXSM', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NWU1" }},
+{data: { id: 'RGPD3', score: 3, type: '', href: "https://www.uniprot.org/uniprot/A6NKT7" }},
+{data: { id: 'JUNB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P17275" }}], 
+ edges: [{ data: { source: 'DLGAP5', target: 'RCC1', directed: 'false', weight: 0.9930969999999999} },
+{ data: { source: 'DLGAP5', target: 'RGPD3', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RGPD3', target: 'JUNB', directed: 'false', weight: 0.940319} },
+{ data: { source: 'RGPD3', target: 'RCC1', directed: 'false', weight: 0.8493729999999999} },
+{ data: { source: 'RGPD3', target: 'OXSM', directed: 'false', weight: 0.165074} },
+{ data: { source: 'RGPD3', target: 'ADCK5', directed: 'false', weight: 0.165074} },
+{ data: { source: 'ADCK5', target: 'JUNB', directed: 'false', weight: 0.9151739999999999} },
+{ data: { source: 'ADCK5', target: 'OXSM', directed: 'false', weight: 0.165074} },
+{ data: { source: 'OXSM', target: 'JUNB', directed: 'false', weight: 0.903634} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    DLGAP5 JUNB OXSM RCC1 RGPD3 ADCK5<br> Complex Score (from Super.Complex) = 0.55606<br> Unweighted Density = 0.60
+    </section>
+    </body>
+    </html>
+    

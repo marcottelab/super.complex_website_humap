@@ -1,0 +1,275 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 Large Drosha complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex20.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CDC73', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P1J9" }},
+{data: { id: 'CPSF6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16630" }},
+{data: { id: 'SNRNP200', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75643" }},
+{data: { id: 'PRPF8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P2Q9" }},
+{data: { id: 'RBM25', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49756" }},
+{data: { id: 'SRSF5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13243" }},
+{data: { id: 'TPR', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P12270" }},
+{data: { id: 'SNU13', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P55769" }},
+{data: { id: 'DDX17', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92841" }},
+{data: { id: 'DDX5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P17844" }},
+{data: { id: 'KPNB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14974" }},
+{data: { id: 'DHX15', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43143" }},
+{data: { id: 'SRRM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IYB3" }},
+{data: { id: 'DHX9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q08211" }},
+{data: { id: 'SNRPD2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62316" }},
+{data: { id: 'PUF60', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UHX1" }},
+{data: { id: 'SRRT', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BXP5" }},
+{data: { id: 'EFTUD2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15029" }},
+{data: { id: 'HNRNPM', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P52272" }}], 
+ edges: [{ data: { source: 'KPNB1', target: 'TPR', directed: 'false', weight: 0.96159} },
+{ data: { source: 'KPNB1', target: 'DDX17', directed: 'false', weight: 0.959694} },
+{ data: { source: 'KPNB1', target: 'SNRPD2', directed: 'false', weight: 0.946667} },
+{ data: { source: 'KPNB1', target: 'HNRNPM', directed: 'false', weight: 0.9186799999999999} },
+{ data: { source: 'KPNB1', target: 'PRPF8', directed: 'false', weight: 0.9178620000000001} },
+{ data: { source: 'KPNB1', target: 'PUF60', directed: 'false', weight: 0.9052379999999999} },
+{ data: { source: 'KPNB1', target: 'EFTUD2', directed: 'false', weight: 0.8991530000000001} },
+{ data: { source: 'KPNB1', target: 'SRRM1', directed: 'false', weight: 0.888915} },
+{ data: { source: 'KPNB1', target: 'DDX5', directed: 'false', weight: 0.843025} },
+{ data: { source: 'KPNB1', target: 'CDC73', directed: 'false', weight: 0.768415} },
+{ data: { source: 'KPNB1', target: 'CPSF6', directed: 'false', weight: 0.582661} },
+{ data: { source: 'KPNB1', target: 'DHX9', directed: 'false', weight: 0.536912} },
+{ data: { source: 'KPNB1', target: 'SRSF5', directed: 'false', weight: 0.47371199999999997} },
+{ data: { source: 'KPNB1', target: 'DHX15', directed: 'false', weight: 0.450517} },
+{ data: { source: 'KPNB1', target: 'SNRNP200', directed: 'false', weight: 0.401656} },
+{ data: { source: 'KPNB1', target: 'RBM25', directed: 'false', weight: 0.230393} },
+{ data: { source: 'KPNB1', target: 'SNU13', directed: 'false', weight: 0.148341} },
+{ data: { source: 'KPNB1', target: 'SRRT', directed: 'false', weight: 0.0969184} },
+{ data: { source: 'DDX5', target: 'HNRNPM', directed: 'false', weight: 0.996705} },
+{ data: { source: 'DDX5', target: 'CPSF6', directed: 'false', weight: 0.992757} },
+{ data: { source: 'DDX5', target: 'DHX15', directed: 'false', weight: 0.9862120000000001} },
+{ data: { source: 'DDX5', target: 'TPR', directed: 'false', weight: 0.9854790000000001} },
+{ data: { source: 'DDX5', target: 'DHX9', directed: 'false', weight: 0.984402} },
+{ data: { source: 'DDX5', target: 'SNRPD2', directed: 'false', weight: 0.975931} },
+{ data: { source: 'DDX5', target: 'SNU13', directed: 'false', weight: 0.9759120000000001} },
+{ data: { source: 'DDX5', target: 'SRRT', directed: 'false', weight: 0.975902} },
+{ data: { source: 'DDX5', target: 'PUF60', directed: 'false', weight: 0.934688} },
+{ data: { source: 'DDX5', target: 'SRSF5', directed: 'false', weight: 0.932834} },
+{ data: { source: 'DDX5', target: 'CDC73', directed: 'false', weight: 0.895784} },
+{ data: { source: 'DDX5', target: 'SRRM1', directed: 'false', weight: 0.880411} },
+{ data: { source: 'DDX5', target: 'RBM25', directed: 'false', weight: 0.696386} },
+{ data: { source: 'DDX5', target: 'DDX17', directed: 'false', weight: 0.564609} },
+{ data: { source: 'SNRPD2', target: 'PRPF8', directed: 'false', weight: 0.999977} },
+{ data: { source: 'SNRPD2', target: 'SNRNP200', directed: 'false', weight: 0.9999620000000001} },
+{ data: { source: 'SNRPD2', target: 'EFTUD2', directed: 'false', weight: 0.9997219999999999} },
+{ data: { source: 'SNRPD2', target: 'DHX15', directed: 'false', weight: 0.9981709999999999} },
+{ data: { source: 'SNRPD2', target: 'SRRT', directed: 'false', weight: 0.986266} },
+{ data: { source: 'SNRPD2', target: 'SRRM1', directed: 'false', weight: 0.975928} },
+{ data: { source: 'SNRPD2', target: 'DDX17', directed: 'false', weight: 0.975925} },
+{ data: { source: 'SNRPD2', target: 'SNU13', directed: 'false', weight: 0.975908} },
+{ data: { source: 'SNRPD2', target: 'HNRNPM', directed: 'false', weight: 0.975872} },
+{ data: { source: 'SNRPD2', target: 'TPR', directed: 'false', weight: 0.96147} },
+{ data: { source: 'SNRPD2', target: 'CPSF6', directed: 'false', weight: 0.959023} },
+{ data: { source: 'SNRPD2', target: 'PUF60', directed: 'false', weight: 0.950851} },
+{ data: { source: 'SNRPD2', target: 'SRSF5', directed: 'false', weight: 0.918172} },
+{ data: { source: 'SNRPD2', target: 'DHX9', directed: 'false', weight: 0.9171790000000001} },
+{ data: { source: 'SNRPD2', target: 'RBM25', directed: 'false', weight: 0.910963} },
+{ data: { source: 'SNRPD2', target: 'CDC73', directed: 'false', weight: 0.882448} },
+{ data: { source: 'RBM25', target: 'PUF60', directed: 'false', weight: 0.983993} },
+{ data: { source: 'RBM25', target: 'SRRT', directed: 'false', weight: 0.97303} },
+{ data: { source: 'RBM25', target: 'SRRM1', directed: 'false', weight: 0.9583940000000001} },
+{ data: { source: 'RBM25', target: 'EFTUD2', directed: 'false', weight: 0.933125} },
+{ data: { source: 'RBM25', target: 'SNRNP200', directed: 'false', weight: 0.894302} },
+{ data: { source: 'RBM25', target: 'PRPF8', directed: 'false', weight: 0.875184} },
+{ data: { source: 'RBM25', target: 'CPSF6', directed: 'false', weight: 0.8267209999999999} },
+{ data: { source: 'RBM25', target: 'SNU13', directed: 'false', weight: 0.7948390000000001} },
+{ data: { source: 'RBM25', target: 'TPR', directed: 'false', weight: 0.692515} },
+{ data: { source: 'RBM25', target: 'CDC73', directed: 'false', weight: 0.456926} },
+{ data: { source: 'RBM25', target: 'DHX15', directed: 'false', weight: 0.426349} },
+{ data: { source: 'RBM25', target: 'DDX17', directed: 'false', weight: 0.343391} },
+{ data: { source: 'RBM25', target: 'DHX9', directed: 'false', weight: 0.285508} },
+{ data: { source: 'RBM25', target: 'HNRNPM', directed: 'false', weight: 0.21292199999999997} },
+{ data: { source: 'RBM25', target: 'SRSF5', directed: 'false', weight: 0.180652} },
+{ data: { source: 'TPR', target: 'CDC73', directed: 'false', weight: 0.986266} },
+{ data: { source: 'TPR', target: 'CPSF6', directed: 'false', weight: 0.976406} },
+{ data: { source: 'TPR', target: 'DDX17', directed: 'false', weight: 0.9668889999999999} },
+{ data: { source: 'TPR', target: 'PRPF8', directed: 'false', weight: 0.957211} },
+{ data: { source: 'TPR', target: 'EFTUD2', directed: 'false', weight: 0.951525} },
+{ data: { source: 'TPR', target: 'SRRT', directed: 'false', weight: 0.9504790000000001} },
+{ data: { source: 'TPR', target: 'PUF60', directed: 'false', weight: 0.9277799999999999} },
+{ data: { source: 'TPR', target: 'SRSF5', directed: 'false', weight: 0.922055} },
+{ data: { source: 'TPR', target: 'DHX15', directed: 'false', weight: 0.915119} },
+{ data: { source: 'TPR', target: 'HNRNPM', directed: 'false', weight: 0.903982} },
+{ data: { source: 'TPR', target: 'SNRNP200', directed: 'false', weight: 0.8773569999999999} },
+{ data: { source: 'TPR', target: 'DHX9', directed: 'false', weight: 0.6707310000000001} },
+{ data: { source: 'TPR', target: 'SNU13', directed: 'false', weight: 0.663829} },
+{ data: { source: 'TPR', target: 'SRRM1', directed: 'false', weight: 0.45202} },
+{ data: { source: 'CDC73', target: 'PRPF8', directed: 'false', weight: 0.972881} },
+{ data: { source: 'CDC73', target: 'EFTUD2', directed: 'false', weight: 0.9688760000000001} },
+{ data: { source: 'CDC73', target: 'PUF60', directed: 'false', weight: 0.940543} },
+{ data: { source: 'CDC73', target: 'SNRNP200', directed: 'false', weight: 0.895543} },
+{ data: { source: 'CDC73', target: 'SNU13', directed: 'false', weight: 0.727905} },
+{ data: { source: 'CDC73', target: 'DHX15', directed: 'false', weight: 0.718595} },
+{ data: { source: 'CDC73', target: 'DDX17', directed: 'false', weight: 0.7079270000000001} },
+{ data: { source: 'CDC73', target: 'SRRT', directed: 'false', weight: 0.571391} },
+{ data: { source: 'CDC73', target: 'SRRM1', directed: 'false', weight: 0.5504939999999999} },
+{ data: { source: 'CDC73', target: 'CPSF6', directed: 'false', weight: 0.545704} },
+{ data: { source: 'CDC73', target: 'SRSF5', directed: 'false', weight: 0.375237} },
+{ data: { source: 'CDC73', target: 'HNRNPM', directed: 'false', weight: 0.141708} },
+{ data: { source: 'SNU13', target: 'DHX15', directed: 'false', weight: 0.9759399999999999} },
+{ data: { source: 'SNU13', target: 'DDX17', directed: 'false', weight: 0.907256} },
+{ data: { source: 'SNU13', target: 'SRRT', directed: 'false', weight: 0.906741} },
+{ data: { source: 'SNU13', target: 'PRPF8', directed: 'false', weight: 0.850324} },
+{ data: { source: 'SNU13', target: 'CPSF6', directed: 'false', weight: 0.846036} },
+{ data: { source: 'SNU13', target: 'PUF60', directed: 'false', weight: 0.7619199999999999} },
+{ data: { source: 'SNU13', target: 'EFTUD2', directed: 'false', weight: 0.690396} },
+{ data: { source: 'SNU13', target: 'SNRNP200', directed: 'false', weight: 0.681725} },
+{ data: { source: 'SNU13', target: 'HNRNPM', directed: 'false', weight: 0.44079700000000005} },
+{ data: { source: 'SNU13', target: 'SRSF5', directed: 'false', weight: 0.28842199999999996} },
+{ data: { source: 'SNU13', target: 'DHX9', directed: 'false', weight: 0.19886099999999998} },
+{ data: { source: 'SNU13', target: 'SRRM1', directed: 'false', weight: 0.165961} },
+{ data: { source: 'DDX17', target: 'HNRNPM', directed: 'false', weight: 0.9816299999999999} },
+{ data: { source: 'DDX17', target: 'DHX15', directed: 'false', weight: 0.975924} },
+{ data: { source: 'DDX17', target: 'PRPF8', directed: 'false', weight: 0.9422149999999999} },
+{ data: { source: 'DDX17', target: 'PUF60', directed: 'false', weight: 0.9301790000000001} },
+{ data: { source: 'DDX17', target: 'CPSF6', directed: 'false', weight: 0.9109379999999999} },
+{ data: { source: 'DDX17', target: 'SRRT', directed: 'false', weight: 0.90953} },
+{ data: { source: 'DDX17', target: 'EFTUD2', directed: 'false', weight: 0.9045780000000001} },
+{ data: { source: 'DDX17', target: 'SRSF5', directed: 'false', weight: 0.719871} },
+{ data: { source: 'DDX17', target: 'SNRNP200', directed: 'false', weight: 0.662408} },
+{ data: { source: 'DDX17', target: 'DHX9', directed: 'false', weight: 0.0854997} },
+{ data: { source: 'DDX17', target: 'SRRM1', directed: 'false', weight: 0.08012430000000001} },
+{ data: { source: 'SRSF5', target: 'SRRM1', directed: 'false', weight: 0.999152} },
+{ data: { source: 'SRSF5', target: 'DHX15', directed: 'false', weight: 0.9927950000000001} },
+{ data: { source: 'SRSF5', target: 'PUF60', directed: 'false', weight: 0.975883} },
+{ data: { source: 'SRSF5', target: 'SRRT', directed: 'false', weight: 0.821161} },
+{ data: { source: 'SRSF5', target: 'HNRNPM', directed: 'false', weight: 0.8043359999999999} },
+{ data: { source: 'SRSF5', target: 'CPSF6', directed: 'false', weight: 0.362148} },
+{ data: { source: 'SRSF5', target: 'DHX9', directed: 'false', weight: 0.34079699999999996} },
+{ data: { source: 'CPSF6', target: 'DHX15', directed: 'false', weight: 0.995165} },
+{ data: { source: 'CPSF6', target: 'SRRT', directed: 'false', weight: 0.9758889999999999} },
+{ data: { source: 'CPSF6', target: 'DHX9', directed: 'false', weight: 0.975883} },
+{ data: { source: 'CPSF6', target: 'PUF60', directed: 'false', weight: 0.964094} },
+{ data: { source: 'CPSF6', target: 'EFTUD2', directed: 'false', weight: 0.9505399999999999} },
+{ data: { source: 'CPSF6', target: 'PRPF8', directed: 'false', weight: 0.9322290000000001} },
+{ data: { source: 'CPSF6', target: 'SNRNP200', directed: 'false', weight: 0.89995} },
+{ data: { source: 'CPSF6', target: 'HNRNPM', directed: 'false', weight: 0.22998600000000002} },
+{ data: { source: 'CPSF6', target: 'SRRM1', directed: 'false', weight: 0.0659841} },
+{ data: { source: 'SRRM1', target: 'DHX15', directed: 'false', weight: 0.990883} },
+{ data: { source: 'SRRM1', target: 'EFTUD2', directed: 'false', weight: 0.975924} },
+{ data: { source: 'SRRM1', target: 'SNRNP200', directed: 'false', weight: 0.9476610000000001} },
+{ data: { source: 'SRRM1', target: 'PRPF8', directed: 'false', weight: 0.9118649999999999} },
+{ data: { source: 'SRRM1', target: 'DHX9', directed: 'false', weight: 0.903884} },
+{ data: { source: 'SRRM1', target: 'HNRNPM', directed: 'false', weight: 0.888294} },
+{ data: { source: 'SRRM1', target: 'PUF60', directed: 'false', weight: 0.8409209999999999} },
+{ data: { source: 'SRRM1', target: 'SRRT', directed: 'false', weight: 0.812809} },
+{ data: { source: 'PUF60', target: 'DHX15', directed: 'false', weight: 0.986669} },
+{ data: { source: 'PUF60', target: 'EFTUD2', directed: 'false', weight: 0.975883} },
+{ data: { source: 'PUF60', target: 'PRPF8', directed: 'false', weight: 0.9587549999999999} },
+{ data: { source: 'PUF60', target: 'SRRT', directed: 'false', weight: 0.948569} },
+{ data: { source: 'PUF60', target: 'HNRNPM', directed: 'false', weight: 0.9267340000000001} },
+{ data: { source: 'PUF60', target: 'SNRNP200', directed: 'false', weight: 0.85054} },
+{ data: { source: 'PUF60', target: 'DHX9', directed: 'false', weight: 0.585134} },
+{ data: { source: 'DHX15', target: 'SNRNP200', directed: 'false', weight: 0.997684} },
+{ data: { source: 'DHX15', target: 'PRPF8', directed: 'false', weight: 0.996798} },
+{ data: { source: 'DHX15', target: 'EFTUD2', directed: 'false', weight: 0.9759030000000001} },
+{ data: { source: 'DHX15', target: 'SRRT', directed: 'false', weight: 0.9759} },
+{ data: { source: 'DHX15', target: 'HNRNPM', directed: 'false', weight: 0.9573969999999999} },
+{ data: { source: 'DHX15', target: 'DHX9', directed: 'false', weight: 0.9302809999999999} },
+{ data: { source: 'HNRNPM', target: 'DHX9', directed: 'false', weight: 0.927108} },
+{ data: { source: 'HNRNPM', target: 'SRRT', directed: 'false', weight: 0.6243989999999999} },
+{ data: { source: 'SNRNP200', target: 'PRPF8', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'SNRNP200', target: 'EFTUD2', directed: 'false', weight: 0.9988950000000001} },
+{ data: { source: 'SNRNP200', target: 'SRRT', directed: 'false', weight: 0.975892} },
+{ data: { source: 'SRRT', target: 'EFTUD2', directed: 'false', weight: 0.9883} },
+{ data: { source: 'SRRT', target: 'PRPF8', directed: 'false', weight: 0.9759120000000001} },
+{ data: { source: 'SRRT', target: 'DHX9', directed: 'false', weight: 0.694882} },
+{ data: { source: 'PRPF8', target: 'EFTUD2', directed: 'false', weight: 0.983503} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 Large Drosha complex<br> Complex Score (from Super.Complex) = 0.97331<br> Unweighted Density = 0.92
+    </section>
+    </body>
+    </html>
+    

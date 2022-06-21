@@ -1,0 +1,117 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Exocyst complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex37.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EXOC2', score: 5, href: "https://www.uniprot.org/uniprot/Q96KP1" }},
+{data: { id: 'DKFZp762K123', score: 1, href: "https://www.uniprot.org/uniprot/Q69YP2" }},
+{data: { id: 'EXOC5', score: 5, href: "https://www.uniprot.org/uniprot/O00471" }},
+{data: { id: 'DKFZp686P1551', score: 2, href: "https://www.uniprot.org/uniprot/Q63HP7" }},
+{data: { id: 'EXOC1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NV70" }},
+{data: { id: 'EXOC8', score: 5, href: "https://www.uniprot.org/uniprot/Q8IYI6" }},
+{data: { id: 'EXOC4', score: 5, href: "https://www.uniprot.org/uniprot/Q96A65" }},
+{data: { id: 'SEC15L3', score: 2, href: "https://www.uniprot.org/uniprot/A5YP36" }}], 
+ edges: [{ data: { source: 'EXOC2', target: 'EXOC1', directed: 'false', weight: 0.999965} },
+{ data: { source: 'EXOC2', target: 'EXOC4', directed: 'false', weight: 0.999724} },
+{ data: { source: 'EXOC2', target: 'DKFZp762K123', directed: 'false', weight: 0.9899680000000001} },
+{ data: { source: 'EXOC2', target: 'DKFZp686P1551', directed: 'false', weight: 0.232186} },
+{ data: { source: 'EXOC2', target: 'SEC15L3', directed: 'false', weight: 0.127522} },
+{ data: { source: 'EXOC2', target: 'EXOC8', directed: 'false', weight: 0.0209336} },
+{ data: { source: 'DKFZp762K123', target: 'EXOC4', directed: 'false', weight: 0.99831} },
+{ data: { source: 'DKFZp762K123', target: 'EXOC1', directed: 'false', weight: 0.988359} },
+{ data: { source: 'DKFZp762K123', target: 'DKFZp686P1551', directed: 'false', weight: 0.7628010000000001} },
+{ data: { source: 'DKFZp762K123', target: 'EXOC8', directed: 'false', weight: 0.150225} },
+{ data: { source: 'DKFZp762K123', target: 'SEC15L3', directed: 'false', weight: 0.0773059} },
+{ data: { source: 'DKFZp762K123', target: 'EXOC5', directed: 'false', weight: 0.0202433} },
+{ data: { source: 'EXOC5', target: 'SEC15L3', directed: 'false', weight: 0.999633} },
+{ data: { source: 'EXOC5', target: 'DKFZp686P1551', directed: 'false', weight: 0.979017} },
+{ data: { source: 'EXOC5', target: 'EXOC8', directed: 'false', weight: 0.707899} },
+{ data: { source: 'EXOC5', target: 'EXOC4', directed: 'false', weight: 0.38548899999999997} },
+{ data: { source: 'EXOC5', target: 'EXOC1', directed: 'false', weight: 0.046956599999999994} },
+{ data: { source: 'DKFZp686P1551', target: 'SEC15L3', directed: 'false', weight: 0.999991} },
+{ data: { source: 'DKFZp686P1551', target: 'EXOC8', directed: 'false', weight: 0.999732} },
+{ data: { source: 'DKFZp686P1551', target: 'EXOC4', directed: 'false', weight: 0.959145} },
+{ data: { source: 'DKFZp686P1551', target: 'EXOC1', directed: 'false', weight: 0.465768} },
+{ data: { source: 'EXOC1', target: 'EXOC4', directed: 'false', weight: 0.999337} },
+{ data: { source: 'EXOC1', target: 'SEC15L3', directed: 'false', weight: 0.305496} },
+{ data: { source: 'EXOC1', target: 'EXOC8', directed: 'false', weight: 0.12615} },
+{ data: { source: 'EXOC8', target: 'SEC15L3', directed: 'false', weight: 0.9998440000000001} },
+{ data: { source: 'EXOC8', target: 'EXOC4', directed: 'false', weight: 0.256214} },
+{ data: { source: 'EXOC4', target: 'SEC15L3', directed: 'false', weight: 0.9392510000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Exocyst complex	<br> Unweighted Density = 0.96
+    </section>
+    </body>
+    </html>
+    

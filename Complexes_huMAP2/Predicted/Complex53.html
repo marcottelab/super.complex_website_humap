@@ -1,0 +1,201 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.7 Intraflagellar transport complex B</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex54.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'IFT57', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NWB7" }},
+{data: { id: 'IFT74', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96LB3" }},
+{data: { id: 'IFT20', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IY31" }},
+{data: { id: 'IFT81', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WYA0" }},
+{data: { id: 'IFT27', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BW83" }},
+{data: { id: 'CLUAP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96AJ1" }},
+{data: { id: 'TRAF3IP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TDR0" }},
+{data: { id: 'IFT52', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y366" }},
+{data: { id: 'IFT172', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UG01" }},
+{data: { id: 'IFT80', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P2H3" }},
+{data: { id: 'TTC26', score: 5, type: '', href: "https://www.uniprot.org/uniprot/A0AVF1" }},
+{data: { id: 'RABL5', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9H7X7" }},
+{data: { id: 'TTC30A', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q86WT1" }},
+{data: { id: 'HSPB11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y547" }},
+{data: { id: 'C11orf60', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NQC8" }},
+{data: { id: 'TTC30B', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q8N4P2" }},
+{data: { id: 'IFT88', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13099" }}], 
+ edges: [{ data: { source: 'IFT52', target: 'TTC30A', directed: 'false', weight: 0.984007} },
+{ data: { source: 'IFT52', target: 'TTC30B', directed: 'false', weight: 0.8155939999999999} },
+{ data: { source: 'IFT52', target: 'IFT74', directed: 'false', weight: 0.706171} },
+{ data: { source: 'IFT52', target: 'IFT57', directed: 'false', weight: 0.40155100000000005} },
+{ data: { source: 'IFT52', target: 'C11orf60', directed: 'false', weight: 0.11296099999999999} },
+{ data: { source: 'IFT52', target: 'HSPB11', directed: 'false', weight: 0.0516851} },
+{ data: { source: 'IFT52', target: 'IFT81', directed: 'false', weight: 0.04991690000000001} },
+{ data: { source: 'IFT52', target: 'IFT27', directed: 'false', weight: 0.0367173} },
+{ data: { source: 'IFT52', target: 'IFT88', directed: 'false', weight: 0.0263183} },
+{ data: { source: 'TTC30A', target: 'IFT74', directed: 'false', weight: 0.9896959999999999} },
+{ data: { source: 'TTC30A', target: 'IFT81', directed: 'false', weight: 0.988136} },
+{ data: { source: 'TTC30A', target: 'C11orf60', directed: 'false', weight: 0.986762} },
+{ data: { source: 'TTC30A', target: 'IFT88', directed: 'false', weight: 0.9708030000000001} },
+{ data: { source: 'TTC30A', target: 'TRAF3IP1', directed: 'false', weight: 0.89615} },
+{ data: { source: 'TTC30A', target: 'CLUAP1', directed: 'false', weight: 0.8746139999999999} },
+{ data: { source: 'TTC30A', target: 'IFT80', directed: 'false', weight: 0.8658959999999999} },
+{ data: { source: 'TTC30A', target: 'RABL5', directed: 'false', weight: 0.8380209999999999} },
+{ data: { source: 'TTC30A', target: 'TTC26', directed: 'false', weight: 0.6883050000000001} },
+{ data: { source: 'TTC30A', target: 'IFT27', directed: 'false', weight: 0.613337} },
+{ data: { source: 'TTC30A', target: 'IFT172', directed: 'false', weight: 0.541068} },
+{ data: { source: 'TTC30A', target: 'IFT57', directed: 'false', weight: 0.47401099999999996} },
+{ data: { source: 'TTC30A', target: 'HSPB11', directed: 'false', weight: 0.158625} },
+{ data: { source: 'TTC30A', target: 'IFT20', directed: 'false', weight: 0.07316389999999999} },
+{ data: { source: 'TTC30B', target: 'IFT81', directed: 'false', weight: 0.754922} },
+{ data: { source: 'TTC30B', target: 'C11orf60', directed: 'false', weight: 0.543164} },
+{ data: { source: 'TTC30B', target: 'TTC26', directed: 'false', weight: 0.29223699999999997} },
+{ data: { source: 'TTC30B', target: 'CLUAP1', directed: 'false', weight: 0.259325} },
+{ data: { source: 'TTC30B', target: 'IFT57', directed: 'false', weight: 0.244534} },
+{ data: { source: 'TTC30B', target: 'IFT74', directed: 'false', weight: 0.164857} },
+{ data: { source: 'TTC30B', target: 'TRAF3IP1', directed: 'false', weight: 0.16400499999999998} },
+{ data: { source: 'TTC30B', target: 'RABL5', directed: 'false', weight: 0.1578} },
+{ data: { source: 'TTC30B', target: 'IFT172', directed: 'false', weight: 0.08660889999999999} },
+{ data: { source: 'TTC30B', target: 'IFT27', directed: 'false', weight: 0.0765059} },
+{ data: { source: 'TTC30B', target: 'IFT20', directed: 'false', weight: 0.0521191} },
+{ data: { source: 'TTC30B', target: 'HSPB11', directed: 'false', weight: 0.0291474} },
+{ data: { source: 'IFT172', target: 'IFT57', directed: 'false', weight: 0.998351} },
+{ data: { source: 'IFT172', target: 'IFT80', directed: 'false', weight: 0.12648800000000002} },
+{ data: { source: 'IFT172', target: 'IFT20', directed: 'false', weight: 0.06438819999999999} },
+{ data: { source: 'IFT172', target: 'IFT88', directed: 'false', weight: 0.0620956} },
+{ data: { source: 'IFT172', target: 'TRAF3IP1', directed: 'false', weight: 0.0292575} },
+{ data: { source: 'IFT172', target: 'CLUAP1', directed: 'false', weight: 0.025731200000000003} },
+{ data: { source: 'RABL5', target: 'IFT57', directed: 'false', weight: 0.57355} },
+{ data: { source: 'RABL5', target: 'IFT81', directed: 'false', weight: 0.078303} },
+{ data: { source: 'RABL5', target: 'IFT27', directed: 'false', weight: 0.052650300000000004} },
+{ data: { source: 'RABL5', target: 'C11orf60', directed: 'false', weight: 0.0521299} },
+{ data: { source: 'RABL5', target: 'IFT88', directed: 'false', weight: 0.0348978} },
+{ data: { source: 'IFT27', target: 'IFT81', directed: 'false', weight: 0.177984} },
+{ data: { source: 'IFT27', target: 'HSPB11', directed: 'false', weight: 0.0987204} },
+{ data: { source: 'IFT27', target: 'C11orf60', directed: 'false', weight: 0.0668924} },
+{ data: { source: 'IFT27', target: 'IFT74', directed: 'false', weight: 0.0656027} },
+{ data: { source: 'IFT27', target: 'TTC26', directed: 'false', weight: 0.0429546} },
+{ data: { source: 'IFT27', target: 'IFT88', directed: 'false', weight: 0.030342} },
+{ data: { source: 'IFT88', target: 'IFT57', directed: 'false', weight: 0.853858} },
+{ data: { source: 'IFT88', target: 'C11orf60', directed: 'false', weight: 0.060523900000000005} },
+{ data: { source: 'IFT88', target: 'IFT20', directed: 'false', weight: 0.0357461} },
+{ data: { source: 'IFT88', target: 'TRAF3IP1', directed: 'false', weight: 0.0269231} },
+{ data: { source: 'IFT88', target: 'IFT81', directed: 'false', weight: 0.024023} },
+{ data: { source: 'TRAF3IP1', target: 'IFT57', directed: 'false', weight: 0.9914850000000001} },
+{ data: { source: 'TRAF3IP1', target: 'IFT20', directed: 'false', weight: 0.101287} },
+{ data: { source: 'TRAF3IP1', target: 'IFT80', directed: 'false', weight: 0.0377014} },
+{ data: { source: 'TRAF3IP1', target: 'IFT74', directed: 'false', weight: 0.0204345} },
+{ data: { source: 'HSPB11', target: 'IFT81', directed: 'false', weight: 0.199222} },
+{ data: { source: 'HSPB11', target: 'IFT74', directed: 'false', weight: 0.0743858} },
+{ data: { source: 'HSPB11', target: 'TTC26', directed: 'false', weight: 0.0260337} },
+{ data: { source: 'HSPB11', target: 'C11orf60', directed: 'false', weight: 0.0258379} },
+{ data: { source: 'IFT81', target: 'IFT74', directed: 'false', weight: 0.999944} },
+{ data: { source: 'IFT81', target: 'IFT57', directed: 'false', weight: 0.289856} },
+{ data: { source: 'IFT81', target: 'C11orf60', directed: 'false', weight: 0.173266} },
+{ data: { source: 'IFT81', target: 'TTC26', directed: 'false', weight: 0.0741714} },
+{ data: { source: 'IFT57', target: 'IFT80', directed: 'false', weight: 0.999948} },
+{ data: { source: 'IFT57', target: 'CLUAP1', directed: 'false', weight: 0.9992260000000001} },
+{ data: { source: 'IFT57', target: 'IFT20', directed: 'false', weight: 0.9988299999999999} },
+{ data: { source: 'IFT57', target: 'C11orf60', directed: 'false', weight: 0.368229} },
+{ data: { source: 'IFT57', target: 'IFT74', directed: 'false', weight: 0.181064} },
+{ data: { source: 'IFT57', target: 'TTC26', directed: 'false', weight: 0.0318088} },
+{ data: { source: 'CLUAP1', target: 'IFT20', directed: 'false', weight: 0.0629632} },
+{ data: { source: 'CLUAP1', target: 'IFT80', directed: 'false', weight: 0.030912000000000002} },
+{ data: { source: 'C11orf60', target: 'IFT74', directed: 'false', weight: 0.701743} },
+{ data: { source: 'C11orf60', target: 'TTC26', directed: 'false', weight: 0.0472871} },
+{ data: { source: 'IFT80', target: 'IFT20', directed: 'false', weight: 0.0807502} },
+{ data: { source: 'TTC26', target: 'IFT74', directed: 'false', weight: 0.0330046} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.7 Intraflagellar transport complex B<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.60
+    </section>
+    </body>
+    </html>
+    

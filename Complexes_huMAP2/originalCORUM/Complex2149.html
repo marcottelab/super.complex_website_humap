@@ -1,0 +1,155 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TRAPP complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2150.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TRAPPC3', score: 5, href: "https://www.uniprot.org/uniprot/O43617" }},
+{data: { id: 'TRAPPC6A', score: 5, href: "https://www.uniprot.org/uniprot/O75865" }},
+{data: { id: 'ZNF547', score: 2, href: "https://www.uniprot.org/uniprot/Q6IBE5" }},
+{data: { id: 'TRAPPC10', score: 5, href: "https://www.uniprot.org/uniprot/P48553" }},
+{data: { id: '100128327', score: 0 }},
+{data: { id: 'TRAPPC11', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z392" }},
+{data: { id: 'TRAPPC6B', score: 5, href: "https://www.uniprot.org/uniprot/Q86SZ2" }},
+{data: { id: 'TRAPPC5', score: 5, href: "https://www.uniprot.org/uniprot/Q8IUR0" }},
+{data: { id: 'TRAPPC12', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVT3" }},
+{data: { id: 'TRAPPC9', score: 5, href: "https://www.uniprot.org/uniprot/Q96Q05" }},
+{data: { id: 'TRAPPC2L', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL33" }},
+{data: { id: 'TRAPPC4', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y296" }},
+{data: { id: 'TRAPPC8', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2L5" }},
+{data: { id: 'TRAPPC1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5R8" }}], 
+ edges: [{ data: { source: 'TRAPPC10', target: 'TRAPPC5', directed: 'false', weight: 0.6446850000000001} },
+{ data: { source: 'TRAPPC10', target: 'TRAPPC1', directed: 'false', weight: 0.584483} },
+{ data: { source: 'TRAPPC10', target: 'ZNF547', directed: 'false', weight: 0.5} },
+{ data: { source: 'TRAPPC10', target: 'TRAPPC9', directed: 'false', weight: 0.0501087} },
+{ data: { source: 'TRAPPC10', target: 'TRAPPC4', directed: 'false', weight: 0.0259246} },
+{ data: { source: 'TRAPPC10', target: 'TRAPPC2L', directed: 'false', weight: 0.0221638} },
+{ data: { source: 'TRAPPC6A', target: 'TRAPPC1', directed: 'false', weight: 0.667736} },
+{ data: { source: 'TRAPPC6A', target: 'TRAPPC5', directed: 'false', weight: 0.483232} },
+{ data: { source: 'TRAPPC6A', target: 'ZNF547', directed: 'false', weight: 0.27312} },
+{ data: { source: 'TRAPPC6A', target: 'TRAPPC8', directed: 'false', weight: 0.137276} },
+{ data: { source: 'TRAPPC6A', target: 'TRAPPC12', directed: 'false', weight: 0.046343199999999994} },
+{ data: { source: 'TRAPPC6A', target: 'TRAPPC11', directed: 'false', weight: 0.0212009} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC5', directed: 'false', weight: 0.901651} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC1', directed: 'false', weight: 0.882388} },
+{ data: { source: 'TRAPPC3', target: 'ZNF547', directed: 'false', weight: 0.35893600000000003} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC12', directed: 'false', weight: 0.223322} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC11', directed: 'false', weight: 0.10626500000000001} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC2L', directed: 'false', weight: 0.0462591} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC9', directed: 'false', weight: 0.0212305} },
+{ data: { source: 'TRAPPC8', target: 'TRAPPC12', directed: 'false', weight: 0.9995450000000001} },
+{ data: { source: 'TRAPPC8', target: 'TRAPPC5', directed: 'false', weight: 0.9983120000000001} },
+{ data: { source: 'TRAPPC8', target: 'ZNF547', directed: 'false', weight: 0.993503} },
+{ data: { source: 'TRAPPC8', target: 'TRAPPC1', directed: 'false', weight: 0.983941} },
+{ data: { source: 'TRAPPC8', target: 'TRAPPC2L', directed: 'false', weight: 0.10743299999999999} },
+{ data: { source: 'TRAPPC11', target: 'TRAPPC12', directed: 'false', weight: 0.9999600000000001} },
+{ data: { source: 'TRAPPC11', target: 'TRAPPC5', directed: 'false', weight: 0.9979309999999999} },
+{ data: { source: 'TRAPPC11', target: 'TRAPPC1', directed: 'false', weight: 0.990366} },
+{ data: { source: 'TRAPPC11', target: 'ZNF547', directed: 'false', weight: 0.672077} },
+{ data: { source: 'TRAPPC11', target: 'TRAPPC2L', directed: 'false', weight: 0.297281} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC1', directed: 'false', weight: 0.966851} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC5', directed: 'false', weight: 0.601426} },
+{ data: { source: 'TRAPPC4', target: 'ZNF547', directed: 'false', weight: 0.278792} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC12', directed: 'false', weight: 0.14682} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC2L', directed: 'false', weight: 0.047988} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC9', directed: 'false', weight: 0.0291264} },
+{ data: { source: 'TRAPPC1', target: 'TRAPPC12', directed: 'false', weight: 0.918099} },
+{ data: { source: 'TRAPPC1', target: 'TRAPPC2L', directed: 'false', weight: 0.80701} },
+{ data: { source: 'TRAPPC1', target: 'TRAPPC9', directed: 'false', weight: 0.690339} },
+{ data: { source: 'TRAPPC1', target: 'TRAPPC5', directed: 'false', weight: 0.653154} },
+{ data: { source: 'TRAPPC1', target: 'TRAPPC6B', directed: 'false', weight: 0.619242} },
+{ data: { source: 'TRAPPC1', target: 'ZNF547', directed: 'false', weight: 0.466933} },
+{ data: { source: 'TRAPPC9', target: 'TRAPPC5', directed: 'false', weight: 0.523941} },
+{ data: { source: 'TRAPPC9', target: 'ZNF547', directed: 'false', weight: 0.401163} },
+{ data: { source: 'TRAPPC9', target: 'TRAPPC2L', directed: 'false', weight: 0.0234187} },
+{ data: { source: 'ZNF547', target: 'TRAPPC2L', directed: 'false', weight: 0.695227} },
+{ data: { source: 'ZNF547', target: 'TRAPPC5', directed: 'false', weight: 0.51822} },
+{ data: { source: 'ZNF547', target: 'TRAPPC6B', directed: 'false', weight: 0.306867} },
+{ data: { source: 'ZNF547', target: 'TRAPPC12', directed: 'false', weight: 0.133487} },
+{ data: { source: 'TRAPPC12', target: 'TRAPPC5', directed: 'false', weight: 0.166562} },
+{ data: { source: 'TRAPPC12', target: 'TRAPPC2L', directed: 'false', weight: 0.0853508} },
+{ data: { source: 'TRAPPC12', target: 'TRAPPC6B', directed: 'false', weight: 0.0475347} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC2L', directed: 'false', weight: 0.8623780000000001} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC6B', directed: 'false', weight: 0.5773159999999999} },
+{ data: { source: 'TRAPPC6B', target: 'TRAPPC2L', directed: 'false', weight: 0.0235377} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    TRAPP complex	<br> Unweighted Density = 0.59
+    </section>
+    </body>
+    </html>
+    

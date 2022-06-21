@@ -1,0 +1,257 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 SNARE complex (VAMP3, VAMP4, VAMP8, STX6)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex295.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'VAMP8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BV40" }},
+{data: { id: 'STX6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43752" }},
+{data: { id: 'VAMP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15836" }},
+{data: { id: 'VTI1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UEU0" }},
+{data: { id: 'NAPA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P54920" }},
+{data: { id: 'VAMP4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75379" }},
+{data: { id: 'VTI1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96AJ9" }},
+{data: { id: 'STX5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13190" }},
+{data: { id: 'GOSR1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95249" }},
+{data: { id: 'STX7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15400" }},
+{data: { id: 'SKA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96BD8" }},
+{data: { id: 'STX10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60499" }},
+{data: { id: 'SNAP29', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95721" }},
+{data: { id: 'OPTN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96CV9" }},
+{data: { id: 'BET1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15155" }},
+{data: { id: 'GOSR2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14653" }},
+{data: { id: 'STX8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UNK0" }},
+{data: { id: 'STX12', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86Y82" }},
+{data: { id: 'STXBP5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5T5C0" }}], 
+ edges: [{ data: { source: 'VTI1B', target: 'STX8', directed: 'false', weight: 0.991461} },
+{ data: { source: 'VTI1B', target: 'VAMP8', directed: 'false', weight: 0.777771} },
+{ data: { source: 'VTI1B', target: 'STX6', directed: 'false', weight: 0.7736390000000001} },
+{ data: { source: 'VTI1B', target: 'STX7', directed: 'false', weight: 0.655357} },
+{ data: { source: 'VTI1B', target: 'VTI1A', directed: 'false', weight: 0.5343859999999999} },
+{ data: { source: 'VTI1B', target: 'STX12', directed: 'false', weight: 0.458121} },
+{ data: { source: 'VTI1B', target: 'VAMP4', directed: 'false', weight: 0.405673} },
+{ data: { source: 'VTI1B', target: 'STX10', directed: 'false', weight: 0.392646} },
+{ data: { source: 'VTI1B', target: 'STX5', directed: 'false', weight: 0.387473} },
+{ data: { source: 'VTI1B', target: 'GOSR2', directed: 'false', weight: 0.359342} },
+{ data: { source: 'VTI1B', target: 'NAPA', directed: 'false', weight: 0.352453} },
+{ data: { source: 'VTI1B', target: 'GOSR1', directed: 'false', weight: 0.184594} },
+{ data: { source: 'VTI1B', target: 'BET1', directed: 'false', weight: 0.175529} },
+{ data: { source: 'VTI1B', target: 'SNAP29', directed: 'false', weight: 0.164605} },
+{ data: { source: 'VTI1B', target: 'VAMP3', directed: 'false', weight: 0.134324} },
+{ data: { source: 'VTI1B', target: 'STXBP5', directed: 'false', weight: 0.113825} },
+{ data: { source: 'BET1', target: 'STX7', directed: 'false', weight: 0.539833} },
+{ data: { source: 'BET1', target: 'NAPA', directed: 'false', weight: 0.5} },
+{ data: { source: 'BET1', target: 'STX12', directed: 'false', weight: 0.478029} },
+{ data: { source: 'BET1', target: 'STX6', directed: 'false', weight: 0.281327} },
+{ data: { source: 'BET1', target: 'VAMP8', directed: 'false', weight: 0.270295} },
+{ data: { source: 'BET1', target: 'STX8', directed: 'false', weight: 0.22222399999999998} },
+{ data: { source: 'BET1', target: 'STX5', directed: 'false', weight: 0.19934000000000002} },
+{ data: { source: 'BET1', target: 'VTI1A', directed: 'false', weight: 0.165074} },
+{ data: { source: 'BET1', target: 'STX10', directed: 'false', weight: 0.125737} },
+{ data: { source: 'BET1', target: 'VAMP4', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'BET1', target: 'SNAP29', directed: 'false', weight: 0.0104572} },
+{ data: { source: 'VAMP4', target: 'STX7', directed: 'false', weight: 0.774058} },
+{ data: { source: 'VAMP4', target: 'STX8', directed: 'false', weight: 0.643868} },
+{ data: { source: 'VAMP4', target: 'STX6', directed: 'false', weight: 0.39405999999999997} },
+{ data: { source: 'VAMP4', target: 'STX12', directed: 'false', weight: 0.359786} },
+{ data: { source: 'VAMP4', target: 'STX5', directed: 'false', weight: 0.349532} },
+{ data: { source: 'VAMP4', target: 'GOSR1', directed: 'false', weight: 0.33181700000000003} },
+{ data: { source: 'VAMP4', target: 'STX10', directed: 'false', weight: 0.33181700000000003} },
+{ data: { source: 'VAMP4', target: 'VAMP8', directed: 'false', weight: 0.33181700000000003} },
+{ data: { source: 'VAMP4', target: 'GOSR2', directed: 'false', weight: 0.313012} },
+{ data: { source: 'VAMP4', target: 'VTI1A', directed: 'false', weight: 0.313012} },
+{ data: { source: 'VAMP4', target: 'STXBP5', directed: 'false', weight: 0.222874} },
+{ data: { source: 'VAMP4', target: 'VAMP3', directed: 'false', weight: 0.170846} },
+{ data: { source: 'VAMP4', target: 'SNAP29', directed: 'false', weight: 0.16145} },
+{ data: { source: 'VAMP4', target: 'NAPA', directed: 'false', weight: 0.127868} },
+{ data: { source: 'STXBP5', target: 'SNAP29', directed: 'false', weight: 0.868192} },
+{ data: { source: 'STXBP5', target: 'STX7', directed: 'false', weight: 0.742896} },
+{ data: { source: 'STXBP5', target: 'VAMP3', directed: 'false', weight: 0.64045} },
+{ data: { source: 'STXBP5', target: 'STX10', directed: 'false', weight: 0.48647299999999993} },
+{ data: { source: 'STXBP5', target: 'VAMP8', directed: 'false', weight: 0.48647299999999993} },
+{ data: { source: 'STXBP5', target: 'STX5', directed: 'false', weight: 0.46953599999999995} },
+{ data: { source: 'STXBP5', target: 'STX12', directed: 'false', weight: 0.382773} },
+{ data: { source: 'STXBP5', target: 'STX8', directed: 'false', weight: 0.343587} },
+{ data: { source: 'STXBP5', target: 'GOSR1', directed: 'false', weight: 0.292948} },
+{ data: { source: 'STXBP5', target: 'GOSR2', directed: 'false', weight: 0.287896} },
+{ data: { source: 'STXBP5', target: 'VTI1A', directed: 'false', weight: 0.287896} },
+{ data: { source: 'STXBP5', target: 'NAPA', directed: 'false', weight: 0.27714} },
+{ data: { source: 'STXBP5', target: 'STX6', directed: 'false', weight: 0.22674} },
+{ data: { source: 'STXBP5', target: 'SKA1', directed: 'false', weight: 0.0925023} },
+{ data: { source: 'STX10', target: 'STX7', directed: 'false', weight: 0.891966} },
+{ data: { source: 'STX10', target: 'STX5', directed: 'false', weight: 0.848183} },
+{ data: { source: 'STX10', target: 'STX6', directed: 'false', weight: 0.8292889999999999} },
+{ data: { source: 'STX10', target: 'STX8', directed: 'false', weight: 0.771656} },
+{ data: { source: 'STX10', target: 'GOSR1', directed: 'false', weight: 0.677012} },
+{ data: { source: 'STX10', target: 'VTI1A', directed: 'false', weight: 0.67237} },
+{ data: { source: 'STX10', target: 'STX12', directed: 'false', weight: 0.574395} },
+{ data: { source: 'STX10', target: 'SNAP29', directed: 'false', weight: 0.48356099999999996} },
+{ data: { source: 'STX10', target: 'GOSR2', directed: 'false', weight: 0.46998900000000005} },
+{ data: { source: 'STX10', target: 'VAMP8', directed: 'false', weight: 0.418013} },
+{ data: { source: 'STX10', target: 'VAMP3', directed: 'false', weight: 0.328104} },
+{ data: { source: 'STX10', target: 'NAPA', directed: 'false', weight: 0.20732899999999999} },
+{ data: { source: 'SKA1', target: 'SNAP29', directed: 'false', weight: 0.992822} },
+{ data: { source: 'STX6', target: 'VTI1A', directed: 'false', weight: 0.9210729999999999} },
+{ data: { source: 'STX6', target: 'STX5', directed: 'false', weight: 0.8553950000000001} },
+{ data: { source: 'STX6', target: 'STX7', directed: 'false', weight: 0.8330569999999999} },
+{ data: { source: 'STX6', target: 'VAMP8', directed: 'false', weight: 0.822234} },
+{ data: { source: 'STX6', target: 'STX8', directed: 'false', weight: 0.816803} },
+{ data: { source: 'STX6', target: 'GOSR2', directed: 'false', weight: 0.811817} },
+{ data: { source: 'STX6', target: 'STX12', directed: 'false', weight: 0.555175} },
+{ data: { source: 'STX6', target: 'SNAP29', directed: 'false', weight: 0.304101} },
+{ data: { source: 'STX6', target: 'VAMP3', directed: 'false', weight: 0.23933600000000002} },
+{ data: { source: 'STX6', target: 'GOSR1', directed: 'false', weight: 0.138931} },
+{ data: { source: 'STX6', target: 'NAPA', directed: 'false', weight: 0.13163} },
+{ data: { source: 'NAPA', target: 'SNAP29', directed: 'false', weight: 0.9990129999999999} },
+{ data: { source: 'NAPA', target: 'STX7', directed: 'false', weight: 0.41068699999999997} },
+{ data: { source: 'NAPA', target: 'STX12', directed: 'false', weight: 0.386768} },
+{ data: { source: 'NAPA', target: 'STX5', directed: 'false', weight: 0.295028} },
+{ data: { source: 'NAPA', target: 'STX8', directed: 'false', weight: 0.268194} },
+{ data: { source: 'NAPA', target: 'GOSR2', directed: 'false', weight: 0.1711} },
+{ data: { source: 'NAPA', target: 'VTI1A', directed: 'false', weight: 0.1711} },
+{ data: { source: 'NAPA', target: 'GOSR1', directed: 'false', weight: 0.13768699999999998} },
+{ data: { source: 'NAPA', target: 'VAMP8', directed: 'false', weight: 0.13768699999999998} },
+{ data: { source: 'NAPA', target: 'VAMP3', directed: 'false', weight: 0.115193} },
+{ data: { source: 'VTI1A', target: 'STX12', directed: 'false', weight: 0.895616} },
+{ data: { source: 'VTI1A', target: 'STX7', directed: 'false', weight: 0.7990970000000001} },
+{ data: { source: 'VTI1A', target: 'GOSR2', directed: 'false', weight: 0.714739} },
+{ data: { source: 'VTI1A', target: 'STX8', directed: 'false', weight: 0.610322} },
+{ data: { source: 'VTI1A', target: 'STX5', directed: 'false', weight: 0.5397109999999999} },
+{ data: { source: 'VTI1A', target: 'VAMP8', directed: 'false', weight: 0.512418} },
+{ data: { source: 'VTI1A', target: 'GOSR1', directed: 'false', weight: 0.46998900000000005} },
+{ data: { source: 'VTI1A', target: 'SNAP29', directed: 'false', weight: 0.325994} },
+{ data: { source: 'VTI1A', target: 'VAMP3', directed: 'false', weight: 0.22501500000000002} },
+{ data: { source: 'VAMP8', target: 'STX8', directed: 'false', weight: 0.829868} },
+{ data: { source: 'VAMP8', target: 'SNAP29', directed: 'false', weight: 0.7595149999999999} },
+{ data: { source: 'VAMP8', target: 'STX7', directed: 'false', weight: 0.604754} },
+{ data: { source: 'VAMP8', target: 'STX5', directed: 'false', weight: 0.5764670000000001} },
+{ data: { source: 'VAMP8', target: 'STX12', directed: 'false', weight: 0.466218} },
+{ data: { source: 'VAMP8', target: 'VAMP3', directed: 'false', weight: 0.328104} },
+{ data: { source: 'VAMP8', target: 'GOSR2', directed: 'false', weight: 0.251136} },
+{ data: { source: 'VAMP8', target: 'GOSR1', directed: 'false', weight: 0.239643} },
+{ data: { source: 'STX7', target: 'SNAP29', directed: 'false', weight: 0.998008} },
+{ data: { source: 'STX7', target: 'STX8', directed: 'false', weight: 0.863137} },
+{ data: { source: 'STX7', target: 'STX5', directed: 'false', weight: 0.86249} },
+{ data: { source: 'STX7', target: 'GOSR2', directed: 'false', weight: 0.671405} },
+{ data: { source: 'STX7', target: 'GOSR1', directed: 'false', weight: 0.571956} },
+{ data: { source: 'STX7', target: 'VAMP3', directed: 'false', weight: 0.539035} },
+{ data: { source: 'STX7', target: 'STX12', directed: 'false', weight: 0.24961799999999998} },
+{ data: { source: 'OPTN', target: 'STX12', directed: 'false', weight: 0.938853} },
+{ data: { source: 'GOSR2', target: 'GOSR1', directed: 'false', weight: 0.622206} },
+{ data: { source: 'GOSR2', target: 'STX5', directed: 'false', weight: 0.5397109999999999} },
+{ data: { source: 'GOSR2', target: 'STX12', directed: 'false', weight: 0.45719099999999996} },
+{ data: { source: 'GOSR2', target: 'STX8', directed: 'false', weight: 0.359342} },
+{ data: { source: 'GOSR2', target: 'VAMP3', directed: 'false', weight: 0.22501500000000002} },
+{ data: { source: 'GOSR2', target: 'SNAP29', directed: 'false', weight: 0.145337} },
+{ data: { source: 'STX8', target: 'STX5', directed: 'false', weight: 0.9522459999999999} },
+{ data: { source: 'STX8', target: 'GOSR1', directed: 'false', weight: 0.7261989999999999} },
+{ data: { source: 'STX8', target: 'STX12', directed: 'false', weight: 0.401656} },
+{ data: { source: 'STX8', target: 'SNAP29', directed: 'false', weight: 0.251778} },
+{ data: { source: 'STX8', target: 'VAMP3', directed: 'false', weight: 0.21285300000000001} },
+{ data: { source: 'STX5', target: 'GOSR1', directed: 'false', weight: 0.7673989999999999} },
+{ data: { source: 'STX5', target: 'SNAP29', directed: 'false', weight: 0.41140699999999997} },
+{ data: { source: 'STX5', target: 'VAMP3', directed: 'false', weight: 0.175286} },
+{ data: { source: 'STX5', target: 'STX12', directed: 'false', weight: 0.0892265} },
+{ data: { source: 'SNAP29', target: 'VAMP3', directed: 'false', weight: 0.178015} },
+{ data: { source: 'SNAP29', target: 'GOSR1', directed: 'false', weight: 0.109203} },
+{ data: { source: 'SNAP29', target: 'STX12', directed: 'false', weight: 0.0764291} },
+{ data: { source: 'GOSR1', target: 'STX12', directed: 'false', weight: 0.575846} },
+{ data: { source: 'GOSR1', target: 'VAMP3', directed: 'false', weight: 0.281145} },
+{ data: { source: 'STX12', target: 'VAMP3', directed: 'false', weight: 0.45975} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 SNARE complex (VAMP3, VAMP4, VAMP8, STX6)<br> Complex Score (from Super.Complex) = 0.76778<br> Unweighted Density = 0.79
+    </section>
+    </body>
+    </html>
+    

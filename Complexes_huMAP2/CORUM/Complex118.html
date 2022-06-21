@@ -1,0 +1,88 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CCDC93-COMMD1-COMMD6 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex119.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'COMMD6', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z4G1" }},
+{data: { id: 'CCDC93', score: 5, href: "https://www.uniprot.org/uniprot/Q567U6" }},
+{data: { id: 'COMMD1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N668" }}], 
+ edges: [{ data: { source: 'COMMD6', target: 'CCDC93', directed: 'false', weight: 0.994866} },
+{ data: { source: 'COMMD6', target: 'COMMD1', directed: 'false', weight: 0.807279} },
+{ data: { source: 'CCDC93', target: 'COMMD1', directed: 'false', weight: 0.263278} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CCDC93-COMMD1-COMMD6 complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,100 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Telomerase holoenzyme</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2000.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TERT', score: 5, href: "https://www.uniprot.org/uniprot/O14746" }},
+{data: { id: 'DKC1', score: 5, href: "https://www.uniprot.org/uniprot/O60832" }},
+{data: { id: 'SMG6', score: 5, href: "https://www.uniprot.org/uniprot/Q86US8" }},
+{data: { id: 'WRAP53', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUR4" }},
+{data: { id: 'NOP10', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPE3" }},
+{data: { id: 'NHP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX24" }},
+{data: { id: 'GAR1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NY12" }}], 
+ edges: [{ data: { source: 'NOP10', target: 'GAR1', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'NOP10', target: 'DKC1', directed: 'false', weight: 0.9998440000000001} },
+{ data: { source: 'GAR1', target: 'DKC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'GAR1', target: 'NHP2', directed: 'false', weight: 0.9997540000000001} },
+{ data: { source: 'GAR1', target: 'WRAP53', directed: 'false', weight: 0.07887330000000001} },
+{ data: { source: 'NHP2', target: 'DKC1', directed: 'false', weight: 0.08642960000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Telomerase holoenzyme	<br> Unweighted Density = 0.29
+    </section>
+    </body>
+    </html>
+    

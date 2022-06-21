@@ -1,0 +1,106 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> mRNA decay complex (UPF1, UPF2, UPF3B, DCP2, XRN1, XRN2, EXOSC2, EXOSC4, EXOSC10, PARN)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex466.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PARN', score: 5, href: "https://www.uniprot.org/uniprot/O95453" }},
+{data: { id: 'EXOSC10', score: 5, href: "https://www.uniprot.org/uniprot/Q01780" }},
+{data: { id: 'EXOSC2', score: 5, href: "https://www.uniprot.org/uniprot/Q13868" }},
+{data: { id: 'DCP2', score: 5, href: "https://www.uniprot.org/uniprot/Q8IU60" }},
+{data: { id: 'XRN1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IZH2" }},
+{data: { id: 'UPF1', score: 5, href: "https://www.uniprot.org/uniprot/Q92900" }},
+{data: { id: 'UPF3B', score: 5, href: "https://www.uniprot.org/uniprot/Q9BZI7" }},
+{data: { id: 'XRN2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0D6" }},
+{data: { id: 'UPF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9HAU5" }},
+{data: { id: 'EXOSC4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPD3" }}], 
+ edges: [{ data: { source: 'EXOSC2', target: 'EXOSC10', directed: 'false', weight: 1.0} },
+{ data: { source: 'EXOSC2', target: 'EXOSC4', directed: 'false', weight: 1.0} },
+{ data: { source: 'EXOSC4', target: 'EXOSC10', directed: 'false', weight: 0.999965} },
+{ data: { source: 'UPF2', target: 'UPF3B', directed: 'false', weight: 0.9964639999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    mRNA decay complex (UPF1, UPF2, UPF3B, DCP2, XRN1, XRN2, EXOSC2, EXOSC4, EXOSC10, PARN)	<br> Unweighted Density = 0.09
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>EXOSC2 UPF1
+    </section>
+    </body>
+    </html>
+    

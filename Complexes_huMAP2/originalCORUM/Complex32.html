@@ -1,0 +1,110 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TRAP complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex33.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MED14', score: 5, href: "https://www.uniprot.org/uniprot/O60244" }},
+{data: { id: 'MED24', score: 5, href: "https://www.uniprot.org/uniprot/O75448" }},
+{data: { id: '7067', score: 0 }},
+{data: { id: 'MED1', score: 5, href: "https://www.uniprot.org/uniprot/Q15648" }},
+{data: { id: 'MED12', score: 5, href: "https://www.uniprot.org/uniprot/Q93074" }},
+{data: { id: 'MED17', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVC6" }},
+{data: { id: 'THRAP3', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2W1" }},
+{data: { id: 'MED16', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2X0" }}], 
+ edges: [{ data: { source: 'MED16', target: 'MED14', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'MED16', target: 'MED17', directed: 'false', weight: 0.9999450000000001} },
+{ data: { source: 'MED16', target: 'MED1', directed: 'false', weight: 0.997924} },
+{ data: { source: 'MED16', target: 'MED24', directed: 'false', weight: 0.997656} },
+{ data: { source: 'MED16', target: 'MED12', directed: 'false', weight: 0.93919} },
+{ data: { source: 'MED17', target: 'MED1', directed: 'false', weight: 0.99997} },
+{ data: { source: 'MED17', target: 'MED14', directed: 'false', weight: 0.9998959999999999} },
+{ data: { source: 'MED17', target: 'MED24', directed: 'false', weight: 0.9998379999999999} },
+{ data: { source: 'MED17', target: 'MED12', directed: 'false', weight: 0.987559} },
+{ data: { source: 'MED14', target: 'MED24', directed: 'false', weight: 0.9997940000000001} },
+{ data: { source: 'MED14', target: 'MED1', directed: 'false', weight: 0.99569} },
+{ data: { source: 'MED14', target: 'MED12', directed: 'false', weight: 0.9955940000000001} },
+{ data: { source: 'MED24', target: 'MED1', directed: 'false', weight: 0.9997450000000001} },
+{ data: { source: 'MED24', target: 'MED12', directed: 'false', weight: 0.207148} },
+{ data: { source: 'MED1', target: 'MED12', directed: 'false', weight: 0.9993569999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    TRAP complex	<br> Unweighted Density = 0.54
+    </section>
+    </body>
+    </html>
+    

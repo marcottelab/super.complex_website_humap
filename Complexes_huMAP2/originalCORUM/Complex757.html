@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Mis12 centromere complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex758.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ZWINT', score: 5, href: "https://www.uniprot.org/uniprot/O95229" }},
+{data: { id: 'HEL25', score: 3, href: "https://www.uniprot.org/uniprot/V9HWG0" }},
+{data: { id: 'PMF1', score: 5, href: "https://www.uniprot.org/uniprot/Q6P1K2" }},
+{data: { id: 'C1orf48', score: 5, href: "https://www.uniprot.org/uniprot/Q96IY1" }},
+{data: { id: 'MIS12', score: 5, href: "https://www.uniprot.org/uniprot/Q9H081" }},
+{data: { id: 'DSN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H410" }}], 
+ edges: [{ data: { source: 'HEL25', target: 'DSN1', directed: 'false', weight: 0.24589299999999997} },
+{ data: { source: 'C1orf48', target: 'DSN1', directed: 'false', weight: 1.0} },
+{ data: { source: 'C1orf48', target: 'MIS12', directed: 'false', weight: 0.999999} },
+{ data: { source: 'C1orf48', target: 'PMF1', directed: 'false', weight: 0.969317} },
+{ data: { source: 'C1orf48', target: 'ZWINT', directed: 'false', weight: 0.9675870000000001} },
+{ data: { source: 'ZWINT', target: 'DSN1', directed: 'false', weight: 0.9998040000000001} },
+{ data: { source: 'ZWINT', target: 'MIS12', directed: 'false', weight: 0.790445} },
+{ data: { source: 'MIS12', target: 'DSN1', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'MIS12', target: 'PMF1', directed: 'false', weight: 0.22717199999999999} },
+{ data: { source: 'PMF1', target: 'DSN1', directed: 'false', weight: 0.9951530000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Mis12 centromere complex	<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

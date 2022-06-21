@@ -1,0 +1,116 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> PLEKHJ1 PHETA1 OCRL INPP5B PHETA2</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex187.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PLEKHJ1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9NW61" }},
+{data: { id: 'PHETA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N4B1" }},
+{data: { id: 'PHETA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6ICB4" }},
+{data: { id: 'OCRL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q01968" }},
+{data: { id: 'INPP5B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P32019" }}], 
+ edges: [{ data: { source: 'PLEKHJ1', target: 'PHETA2', directed: 'false', weight: 0.939557} },
+{ data: { source: 'PLEKHJ1', target: 'PHETA1', directed: 'false', weight: 0.613784} },
+{ data: { source: 'PLEKHJ1', target: 'OCRL', directed: 'false', weight: 0.0483644} },
+{ data: { source: 'OCRL', target: 'INPP5B', directed: 'false', weight: 0.081749} },
+{ data: { source: 'OCRL', target: 'PHETA1', directed: 'false', weight: 0.0677693} },
+{ data: { source: 'OCRL', target: 'PHETA2', directed: 'false', weight: 0.0232668} },
+{ data: { source: 'PHETA1', target: 'INPP5B', directed: 'false', weight: 0.533933} },
+{ data: { source: 'INPP5B', target: 'PHETA2', directed: 'false', weight: 0.94934} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    PLEKHJ1 PHETA1 OCRL INPP5B PHETA2<br> Complex Score (from Super.Complex) = 0.98300<br> Unweighted Density = 0.80
+    </section>
+    </body>
+    </html>
+    

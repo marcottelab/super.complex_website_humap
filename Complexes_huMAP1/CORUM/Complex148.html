@@ -1,0 +1,118 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> COP9 signalosome complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex149.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'COPS8', score: 5, href: "https://www.uniprot.org/uniprot/Q99627" }},
+{data: { id: 'COPS6', score: 5, href: "https://www.uniprot.org/uniprot/Q7L5N1" }},
+{data: { id: 'COPS4', score: 5, href: "https://www.uniprot.org/uniprot/Q9BT78" }},
+{data: { id: 'COPS3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNS2" }},
+{data: { id: 'COPS7A', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBW8" }},
+{data: { id: 'GPS1', score: 5, href: "https://www.uniprot.org/uniprot/Q13098" }},
+{data: { id: 'COPS5', score: 5, href: "https://www.uniprot.org/uniprot/Q92905" }},
+{data: { id: 'COPS2', score: 5, href: "https://www.uniprot.org/uniprot/P61201" }}], 
+ edges: [{ data: { source: 'COPS8', target: 'COPS6', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'COPS8', target: 'COPS3', directed: 'false', weight: 0.9988520000000001} },
+{ data: { source: 'COPS8', target: 'COPS7A', directed: 'false', weight: 0.9979180000000001} },
+{ data: { source: 'COPS8', target: 'COPS2', directed: 'false', weight: 0.995123} },
+{ data: { source: 'COPS8', target: 'GPS1', directed: 'false', weight: 0.994633} },
+{ data: { source: 'COPS8', target: 'COPS5', directed: 'false', weight: 0.982798} },
+{ data: { source: 'COPS8', target: 'COPS4', directed: 'false', weight: 0.9759040000000001} },
+{ data: { source: 'COPS6', target: 'COPS3', directed: 'false', weight: 0.999999} },
+{ data: { source: 'COPS6', target: 'COPS2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'COPS6', target: 'GPS1', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'COPS6', target: 'COPS7A', directed: 'false', weight: 0.99998} },
+{ data: { source: 'COPS6', target: 'COPS4', directed: 'false', weight: 0.9995940000000001} },
+{ data: { source: 'COPS6', target: 'COPS5', directed: 'false', weight: 0.997016} },
+{ data: { source: 'COPS3', target: 'COPS4', directed: 'false', weight: 0.9999809999999999} },
+{ data: { source: 'COPS3', target: 'COPS2', directed: 'false', weight: 0.999592} },
+{ data: { source: 'COPS3', target: 'GPS1', directed: 'false', weight: 0.9991120000000001} },
+{ data: { source: 'COPS3', target: 'COPS7A', directed: 'false', weight: 0.9938110000000001} },
+{ data: { source: 'COPS3', target: 'COPS5', directed: 'false', weight: 0.9759200000000001} },
+{ data: { source: 'COPS7A', target: 'GPS1', directed: 'false', weight: 0.9997940000000001} },
+{ data: { source: 'COPS7A', target: 'COPS2', directed: 'false', weight: 0.998884} },
+{ data: { source: 'COPS7A', target: 'COPS4', directed: 'false', weight: 0.997619} },
+{ data: { source: 'COPS7A', target: 'COPS5', directed: 'false', weight: 0.996964} },
+{ data: { source: 'COPS4', target: 'COPS2', directed: 'false', weight: 0.999192} },
+{ data: { source: 'COPS4', target: 'GPS1', directed: 'false', weight: 0.999144} },
+{ data: { source: 'COPS4', target: 'COPS5', directed: 'false', weight: 0.98764} },
+{ data: { source: 'GPS1', target: 'COPS2', directed: 'false', weight: 0.999914} },
+{ data: { source: 'GPS1', target: 'COPS5', directed: 'false', weight: 0.998583} },
+{ data: { source: 'COPS5', target: 'COPS2', directed: 'false', weight: 0.9998959999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    COP9 signalosome complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

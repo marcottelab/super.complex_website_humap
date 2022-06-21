@@ -1,0 +1,138 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 Large Drosha complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1019.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DHX15', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43143" }},
+{data: { id: 'HNRNPK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61978" }},
+{data: { id: 'EIF4A3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P38919" }},
+{data: { id: 'TAF15', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92804" }},
+{data: { id: 'HNRNPUL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BUJ2" }},
+{data: { id: 'RBM8A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y5S9" }},
+{data: { id: 'DDX17', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92841" }},
+{data: { id: 'DDX3X', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00571" }},
+{data: { id: 'SARS-CoV2 nsp13', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp13.html" }},
+{data: { id: 'RDX', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/P35241" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp13', target: 'RDX', directed: 'false', weight: 0.912028315, type: 'sars'} },
+{ data: { source: 'DDX3X', target: 'RDX', directed: 'false', weight: 0.987685} },
+{ data: { source: 'DDX3X', target: 'DDX17', directed: 'false', weight: 0.9759549999999999} },
+{ data: { source: 'DDX3X', target: 'DHX15', directed: 'false', weight: 0.975941} },
+{ data: { source: 'DDX3X', target: 'EIF4A3', directed: 'false', weight: 0.975934} },
+{ data: { source: 'DDX3X', target: 'HNRNPUL1', directed: 'false', weight: 0.901963} },
+{ data: { source: 'DDX3X', target: 'TAF15', directed: 'false', weight: 0.15203599999999998} },
+{ data: { source: 'DDX3X', target: 'HNRNPK', directed: 'false', weight: 0.106852} },
+{ data: { source: 'RBM8A', target: 'EIF4A3', directed: 'false', weight: 0.9946510000000001} },
+{ data: { source: 'HNRNPK', target: 'EIF4A3', directed: 'false', weight: 0.965067} },
+{ data: { source: 'HNRNPK', target: 'DDX17', directed: 'false', weight: 0.5301680000000001} },
+{ data: { source: 'HNRNPK', target: 'HNRNPUL1', directed: 'false', weight: 0.10681099999999999} },
+{ data: { source: 'HNRNPK', target: 'TAF15', directed: 'false', weight: 0.093274} },
+{ data: { source: 'RDX', target: 'TAF15', directed: 'false', weight: 0.07624639999999999} },
+{ data: { source: 'RDX', target: 'HNRNPUL1', directed: 'false', weight: 0.0290885} },
+{ data: { source: 'DDX17', target: 'EIF4A3', directed: 'false', weight: 0.975924} },
+{ data: { source: 'DDX17', target: 'DHX15', directed: 'false', weight: 0.975924} },
+{ data: { source: 'DDX17', target: 'TAF15', directed: 'false', weight: 0.83904} },
+{ data: { source: 'DDX17', target: 'HNRNPUL1', directed: 'false', weight: 0.801037} },
+{ data: { source: 'TAF15', target: 'EIF4A3', directed: 'false', weight: 0.08481939999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 Large Drosha complex<br> Complex Score (from Super.Complex) = 0.51310<br> Unweighted Density = 0.53
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>RDX
+    </section>
+    </body>
+    </html>
+    

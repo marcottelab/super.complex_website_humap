@@ -1,0 +1,147 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 Large Drosha complex match 2</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex803.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HNRNPA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09651" }},
+{data: { id: 'SFPQ', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P23246" }},
+{data: { id: 'HNRNPDL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14979" }},
+{data: { id: 'HNRNPM', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P52272" }},
+{data: { id: 'HNRNPL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P14866" }},
+{data: { id: 'HNRNPD', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14103" }},
+{data: { id: 'HNRNPH3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P31942" }},
+{data: { id: 'HNRNPAB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99729" }},
+{data: { id: 'MARCKSL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49006" }},
+{data: { id: 'FUS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P35637" }},
+{data: { id: 'EWSR1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q01844" }}], 
+ edges: [{ data: { source: 'HNRNPD', target: 'HNRNPAB', directed: 'false', weight: 0.999914} },
+{ data: { source: 'HNRNPD', target: 'HNRNPL', directed: 'false', weight: 0.9029719999999999} },
+{ data: { source: 'HNRNPD', target: 'HNRNPH3', directed: 'false', weight: 0.800148} },
+{ data: { source: 'HNRNPD', target: 'SFPQ', directed: 'false', weight: 0.650316} },
+{ data: { source: 'HNRNPD', target: 'FUS', directed: 'false', weight: 0.488476} },
+{ data: { source: 'HNRNPD', target: 'HNRNPDL', directed: 'false', weight: 0.29118499999999997} },
+{ data: { source: 'HNRNPD', target: 'MARCKSL1', directed: 'false', weight: 0.28526799999999997} },
+{ data: { source: 'HNRNPA1', target: 'HNRNPH3', directed: 'false', weight: 0.9998670000000001} },
+{ data: { source: 'HNRNPA1', target: 'HNRNPL', directed: 'false', weight: 0.999616} },
+{ data: { source: 'HNRNPA1', target: 'HNRNPAB', directed: 'false', weight: 0.75564} },
+{ data: { source: 'HNRNPA1', target: 'HNRNPDL', directed: 'false', weight: 0.194139} },
+{ data: { source: 'EWSR1', target: 'HNRNPM', directed: 'false', weight: 0.9759129999999999} },
+{ data: { source: 'EWSR1', target: 'FUS', directed: 'false', weight: 0.9759110000000001} },
+{ data: { source: 'EWSR1', target: 'HNRNPH3', directed: 'false', weight: 0.45716} },
+{ data: { source: 'EWSR1', target: 'HNRNPDL', directed: 'false', weight: 0.427889} },
+{ data: { source: 'FUS', target: 'HNRNPDL', directed: 'false', weight: 0.975927} },
+{ data: { source: 'FUS', target: 'HNRNPL', directed: 'false', weight: 0.8311040000000001} },
+{ data: { source: 'FUS', target: 'HNRNPH3', directed: 'false', weight: 0.7913899999999999} },
+{ data: { source: 'FUS', target: 'HNRNPM', directed: 'false', weight: 0.612192} },
+{ data: { source: 'FUS', target: 'HNRNPAB', directed: 'false', weight: 0.09416189999999999} },
+{ data: { source: 'FUS', target: 'SFPQ', directed: 'false', weight: 0.0480525} },
+{ data: { source: 'SFPQ', target: 'HNRNPL', directed: 'false', weight: 0.9574590000000001} },
+{ data: { source: 'SFPQ', target: 'HNRNPH3', directed: 'false', weight: 0.569994} },
+{ data: { source: 'SFPQ', target: 'HNRNPDL', directed: 'false', weight: 0.10674000000000002} },
+{ data: { source: 'MARCKSL1', target: 'HNRNPAB', directed: 'false', weight: 0.44816000000000006} },
+{ data: { source: 'HNRNPDL', target: 'HNRNPM', directed: 'false', weight: 0.8981549999999999} },
+{ data: { source: 'HNRNPDL', target: 'HNRNPL', directed: 'false', weight: 0.801848} },
+{ data: { source: 'HNRNPDL', target: 'HNRNPH3', directed: 'false', weight: 0.736586} },
+{ data: { source: 'HNRNPDL', target: 'HNRNPAB', directed: 'false', weight: 0.7320180000000001} },
+{ data: { source: 'HNRNPAB', target: 'HNRNPH3', directed: 'false', weight: 0.935474} },
+{ data: { source: 'HNRNPAB', target: 'HNRNPL', directed: 'false', weight: 0.692394} },
+{ data: { source: 'HNRNPH3', target: 'HNRNPM', directed: 'false', weight: 0.991043} },
+{ data: { source: 'HNRNPH3', target: 'HNRNPL', directed: 'false', weight: 0.10694300000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 Large Drosha complex match 2<br> Complex Score (from Super.Complex) = 0.57131<br> Unweighted Density = 0.60
+    </section>
+    </body>
+    </html>
+    

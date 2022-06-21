@@ -1,0 +1,126 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> HLA-DRB1 DIPK1B TMEM30A NETO2 CHST14 IMPAD1 PGAP1</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex743.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CHST14', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NCH0" }},
+{data: { id: 'PGAP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q75T13" }},
+{data: { id: 'DIPK1B', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q5VUD6" }},
+{data: { id: 'HLA-DRB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P01911" }},
+{data: { id: 'NETO2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NC67" }},
+{data: { id: 'TMEM30A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NV96" }},
+{data: { id: 'IMPAD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NX62" }}], 
+ edges: [{ data: { source: 'TMEM30A', target: 'PGAP1', directed: 'false', weight: 0.780148} },
+{ data: { source: 'TMEM30A', target: 'HLA-DRB1', directed: 'false', weight: 0.470394} },
+{ data: { source: 'TMEM30A', target: 'NETO2', directed: 'false', weight: 0.400802} },
+{ data: { source: 'TMEM30A', target: 'CHST14', directed: 'false', weight: 0.26962800000000003} },
+{ data: { source: 'TMEM30A', target: 'IMPAD1', directed: 'false', weight: 0.154798} },
+{ data: { source: 'IMPAD1', target: 'PGAP1', directed: 'false', weight: 0.34665999999999997} },
+{ data: { source: 'IMPAD1', target: 'DIPK1B', directed: 'false', weight: 0.276586} },
+{ data: { source: 'IMPAD1', target: 'NETO2', directed: 'false', weight: 0.143488} },
+{ data: { source: 'IMPAD1', target: 'CHST14', directed: 'false', weight: 0.100271} },
+{ data: { source: 'HLA-DRB1', target: 'NETO2', directed: 'false', weight: 0.365568} },
+{ data: { source: 'HLA-DRB1', target: 'PGAP1', directed: 'false', weight: 0.35996500000000003} },
+{ data: { source: 'DIPK1B', target: 'NETO2', directed: 'false', weight: 0.49374300000000004} },
+{ data: { source: 'DIPK1B', target: 'CHST14', directed: 'false', weight: 0.180576} },
+{ data: { source: 'CHST14', target: 'PGAP1', directed: 'false', weight: 0.41782600000000003} },
+{ data: { source: 'CHST14', target: 'NETO2', directed: 'false', weight: 0.170156} },
+{ data: { source: 'PGAP1', target: 'NETO2', directed: 'false', weight: 0.299547} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    HLA-DRB1 DIPK1B TMEM30A NETO2 CHST14 IMPAD1 PGAP1<br> Complex Score (from Super.Complex) = 0.58821<br> Unweighted Density = 0.76
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,289 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 26S proteasome</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex92.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HEL-S-276', score: 4, href: "https://www.uniprot.org/uniprot/A0A0K0K1K4" }},
+{data: { id: 'PSMC3', score: 5, href: "https://www.uniprot.org/uniprot/P17980" }},
+{data: { id: 'PSMB1', score: 5, href: "https://www.uniprot.org/uniprot/P20618" }},
+{data: { id: 'PSMA1', score: 5, href: "https://www.uniprot.org/uniprot/P25786" }},
+{data: { id: 'PSMA2', score: 5, href: "https://www.uniprot.org/uniprot/P25787" }},
+{data: { id: 'PSMA3', score: 5, href: "https://www.uniprot.org/uniprot/P25788" }},
+{data: { id: 'PSMA4', score: 5, href: "https://www.uniprot.org/uniprot/P25789" }},
+{data: { id: 'PSMA5', score: 5, href: "https://www.uniprot.org/uniprot/P28066" }},
+{data: { id: 'PSMB4', score: 5, href: "https://www.uniprot.org/uniprot/P28070" }},
+{data: { id: 'PSMB6', score: 5, href: "https://www.uniprot.org/uniprot/P28072" }},
+{data: { id: 'PSMB5', score: 5, href: "https://www.uniprot.org/uniprot/P28074" }},
+{data: { id: 'PSMC2', score: 5, href: "https://www.uniprot.org/uniprot/P35998" }},
+{data: { id: 'PSMC4', score: 5, href: "https://www.uniprot.org/uniprot/P43686" }},
+{data: { id: 'PSMB3', score: 5, href: "https://www.uniprot.org/uniprot/P49720" }},
+{data: { id: 'PSMB2', score: 5, href: "https://www.uniprot.org/uniprot/P49721" }},
+{data: { id: 'PSMD4', score: 5, href: "https://www.uniprot.org/uniprot/P55036" }},
+{data: { id: 'PSMA6', score: 5, href: "https://www.uniprot.org/uniprot/P60900" }},
+{data: { id: 'PSMC1', score: 5, href: "https://www.uniprot.org/uniprot/P62191" }},
+{data: { id: 'PSMC5', score: 5, href: "https://www.uniprot.org/uniprot/P62195" }},
+{data: { id: 'PSMC6', score: 5, href: "https://www.uniprot.org/uniprot/P62333" }},
+{data: { id: 'PSMB7', score: 5, href: "https://www.uniprot.org/uniprot/Q99436" }},
+{data: { id: 'PSMD13', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNM6" }}], 
+ edges: [{ data: { source: 'PSMA4', target: 'PSMA1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA4', target: 'PSMA5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA4', target: 'PSMB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA4', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA4', target: 'PSMB7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA4', target: 'HEL-S-276', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMA4', target: 'PSMB2', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMA4', target: 'PSMA2', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMA4', target: 'PSMB5', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'PSMA4', target: 'PSMB6', directed: 'false', weight: 0.999974} },
+{ data: { source: 'PSMA4', target: 'PSMA3', directed: 'false', weight: 0.9998950000000001} },
+{ data: { source: 'PSMA4', target: 'PSMA6', directed: 'false', weight: 0.998976} },
+{ data: { source: 'PSMA4', target: 'PSMC1', directed: 'false', weight: 0.372008} },
+{ data: { source: 'PSMA4', target: 'PSMB3', directed: 'false', weight: 0.254795} },
+{ data: { source: 'PSMA4', target: 'PSMC3', directed: 'false', weight: 0.06902849999999999} },
+{ data: { source: 'PSMA4', target: 'PSMC6', directed: 'false', weight: 0.0307387} },
+{ data: { source: 'PSMA4', target: 'PSMD13', directed: 'false', weight: 0.029661200000000002} },
+{ data: { source: 'PSMA4', target: 'PSMC4', directed: 'false', weight: 0.023813} },
+{ data: { source: 'PSMB1', target: 'PSMA1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB1', target: 'PSMA3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB1', target: 'PSMA5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB1', target: 'HEL-S-276', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB1', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB1', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB1', target: 'PSMB5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB1', target: 'PSMB6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB1', target: 'PSMB7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB1', target: 'PSMA2', directed: 'false', weight: 0.999928} },
+{ data: { source: 'PSMB1', target: 'PSMA6', directed: 'false', weight: 0.9992639999999999} },
+{ data: { source: 'PSMB1', target: 'PSMC1', directed: 'false', weight: 0.557344} },
+{ data: { source: 'PSMB1', target: 'PSMB3', directed: 'false', weight: 0.384316} },
+{ data: { source: 'PSMB1', target: 'PSMC6', directed: 'false', weight: 0.205853} },
+{ data: { source: 'PSMB1', target: 'PSMD13', directed: 'false', weight: 0.191207} },
+{ data: { source: 'PSMB1', target: 'PSMD4', directed: 'false', weight: 0.023185400000000002} },
+{ data: { source: 'PSMA5', target: 'PSMA1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA5', target: 'HEL-S-276', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA5', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA5', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA5', target: 'PSMB7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA5', target: 'PSMA2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMA5', target: 'PSMB6', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'PSMA5', target: 'PSMA3', directed: 'false', weight: 0.999983} },
+{ data: { source: 'PSMA5', target: 'PSMB5', directed: 'false', weight: 0.9999809999999999} },
+{ data: { source: 'PSMA5', target: 'PSMA6', directed: 'false', weight: 0.9845360000000001} },
+{ data: { source: 'PSMA5', target: 'PSMC1', directed: 'false', weight: 0.805982} },
+{ data: { source: 'PSMA5', target: 'PSMB3', directed: 'false', weight: 0.259073} },
+{ data: { source: 'PSMA5', target: 'PSMC5', directed: 'false', weight: 0.220223} },
+{ data: { source: 'PSMA5', target: 'PSMC6', directed: 'false', weight: 0.11432} },
+{ data: { source: 'PSMA5', target: 'PSMC4', directed: 'false', weight: 0.104429} },
+{ data: { source: 'PSMA5', target: 'PSMD13', directed: 'false', weight: 0.0367964} },
+{ data: { source: 'PSMA5', target: 'PSMC3', directed: 'false', weight: 0.0256688} },
+{ data: { source: 'PSMC4', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMC3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMC5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMC6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMC2', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMC4', target: 'PSMD4', directed: 'false', weight: 0.999991} },
+{ data: { source: 'PSMC4', target: 'PSMB4', directed: 'false', weight: 0.275251} },
+{ data: { source: 'PSMC4', target: 'PSMB3', directed: 'false', weight: 0.028635400000000005} },
+{ data: { source: 'PSMB3', target: 'PSMB4', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMB3', target: 'PSMB5', directed: 'false', weight: 0.994834} },
+{ data: { source: 'PSMB3', target: 'PSMB7', directed: 'false', weight: 0.9571} },
+{ data: { source: 'PSMB3', target: 'PSMA1', directed: 'false', weight: 0.695427} },
+{ data: { source: 'PSMB3', target: 'PSMB2', directed: 'false', weight: 0.507838} },
+{ data: { source: 'PSMB3', target: 'PSMA2', directed: 'false', weight: 0.43721499999999996} },
+{ data: { source: 'PSMB3', target: 'HEL-S-276', directed: 'false', weight: 0.325231} },
+{ data: { source: 'PSMB3', target: 'PSMA6', directed: 'false', weight: 0.323777} },
+{ data: { source: 'PSMB3', target: 'PSMA3', directed: 'false', weight: 0.257434} },
+{ data: { source: 'PSMB3', target: 'PSMB6', directed: 'false', weight: 0.202247} },
+{ data: { source: 'PSMB3', target: 'PSMD13', directed: 'false', weight: 0.123029} },
+{ data: { source: 'PSMB3', target: 'PSMC6', directed: 'false', weight: 0.104647} },
+{ data: { source: 'PSMB3', target: 'PSMC1', directed: 'false', weight: 0.057391599999999994} },
+{ data: { source: 'PSMB3', target: 'PSMC3', directed: 'false', weight: 0.043496} },
+{ data: { source: 'PSMB3', target: 'PSMC2', directed: 'false', weight: 0.0323564} },
+{ data: { source: 'PSMB3', target: 'PSMD4', directed: 'false', weight: 0.029143400000000003} },
+{ data: { source: 'PSMB3', target: 'PSMC5', directed: 'false', weight: 0.025332499999999997} },
+{ data: { source: 'PSMC5', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC5', target: 'PSMC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC5', target: 'PSMC3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC5', target: 'PSMC6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC5', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC5', target: 'PSMD4', directed: 'false', weight: 0.999884} },
+{ data: { source: 'PSMC5', target: 'PSMB4', directed: 'false', weight: 0.746678} },
+{ data: { source: 'PSMC5', target: 'PSMB5', directed: 'false', weight: 0.0984862} },
+{ data: { source: 'PSMC5', target: 'PSMB6', directed: 'false', weight: 0.0714504} },
+{ data: { source: 'PSMC5', target: 'PSMB7', directed: 'false', weight: 0.026857799999999998} },
+{ data: { source: 'PSMC2', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMC6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMD4', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'PSMC2', target: 'PSMC3', directed: 'false', weight: 0.999189} },
+{ data: { source: 'PSMC2', target: 'PSMB4', directed: 'false', weight: 0.0829292} },
+{ data: { source: 'PSMC1', target: 'PSMC3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMC6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMD4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMB4', directed: 'false', weight: 0.9999049999999999} },
+{ data: { source: 'PSMC1', target: 'PSMB5', directed: 'false', weight: 0.994685} },
+{ data: { source: 'PSMC1', target: 'PSMA3', directed: 'false', weight: 0.9894879999999999} },
+{ data: { source: 'PSMC1', target: 'PSMB6', directed: 'false', weight: 0.971053} },
+{ data: { source: 'PSMC1', target: 'PSMA1', directed: 'false', weight: 0.957742} },
+{ data: { source: 'PSMC1', target: 'PSMB7', directed: 'false', weight: 0.94865} },
+{ data: { source: 'PSMC1', target: 'PSMB2', directed: 'false', weight: 0.7077859999999999} },
+{ data: { source: 'PSMC1', target: 'HEL-S-276', directed: 'false', weight: 0.34478200000000003} },
+{ data: { source: 'PSMC1', target: 'PSMA2', directed: 'false', weight: 0.309211} },
+{ data: { source: 'PSMC1', target: 'PSMA6', directed: 'false', weight: 0.219362} },
+{ data: { source: 'PSMA1', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA1', target: 'PSMA3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA1', target: 'HEL-S-276', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA1', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA1', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA1', target: 'PSMB5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA1', target: 'PSMB7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA1', target: 'PSMB6', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'PSMA1', target: 'PSMA6', directed: 'false', weight: 0.99998} },
+{ data: { source: 'PSMA1', target: 'PSMC6', directed: 'false', weight: 0.587759} },
+{ data: { source: 'PSMA1', target: 'PSMC3', directed: 'false', weight: 0.0990553} },
+{ data: { source: 'PSMB5', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB5', target: 'PSMA3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB5', target: 'HEL-S-276', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB5', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB5', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB5', target: 'PSMB6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB5', target: 'PSMB7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB5', target: 'PSMC6', directed: 'false', weight: 0.9439489999999999} },
+{ data: { source: 'PSMB5', target: 'PSMA6', directed: 'false', weight: 0.9249059999999999} },
+{ data: { source: 'PSMB5', target: 'PSMD13', directed: 'false', weight: 0.867241} },
+{ data: { source: 'PSMB5', target: 'PSMC3', directed: 'false', weight: 0.613069} },
+{ data: { source: 'PSMB7', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMA3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'HEL-S-276', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMB6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMA6', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMB7', target: 'PSMC6', directed: 'false', weight: 0.34944200000000003} },
+{ data: { source: 'PSMB7', target: 'PSMC3', directed: 'false', weight: 0.093335} },
+{ data: { source: 'PSMB7', target: 'PSMD13', directed: 'false', weight: 0.058844299999999995} },
+{ data: { source: 'PSMC3', target: 'PSMC6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD4', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'PSMC3', target: 'PSMB4', directed: 'false', weight: 0.78579} },
+{ data: { source: 'PSMC3', target: 'PSMB2', directed: 'false', weight: 0.032925300000000005} },
+{ data: { source: 'HEL-S-276', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-276', target: 'PSMA3', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-276', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-276', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-276', target: 'PSMB6', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-276', target: 'PSMA6', directed: 'false', weight: 0.999985} },
+{ data: { source: 'HEL-S-276', target: 'PSMC6', directed: 'false', weight: 0.5} },
+{ data: { source: 'HEL-S-276', target: 'PSMD13', directed: 'false', weight: 0.0613313} },
+{ data: { source: 'PSMB4', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB4', target: 'PSMA3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB4', target: 'PSMA6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB4', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB4', target: 'PSMB6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB4', target: 'PSMC6', directed: 'false', weight: 0.99954} },
+{ data: { source: 'PSMB4', target: 'PSMD4', directed: 'false', weight: 0.898476} },
+{ data: { source: 'PSMB4', target: 'PSMD13', directed: 'false', weight: 0.051762999999999997} },
+{ data: { source: 'PSMC6', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD4', directed: 'false', weight: 0.999994} },
+{ data: { source: 'PSMC6', target: 'PSMB6', directed: 'false', weight: 0.176877} },
+{ data: { source: 'PSMC6', target: 'PSMA3', directed: 'false', weight: 0.12645699999999999} },
+{ data: { source: 'PSMC6', target: 'PSMA2', directed: 'false', weight: 0.042819300000000005} },
+{ data: { source: 'PSMA3', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA3', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA3', target: 'PSMB6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA3', target: 'PSMA6', directed: 'false', weight: 0.9488770000000001} },
+{ data: { source: 'PSMA3', target: 'PSMD13', directed: 'false', weight: 0.114424} },
+{ data: { source: 'PSMB2', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB2', target: 'PSMB6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB2', target: 'PSMA6', directed: 'false', weight: 0.9995950000000001} },
+{ data: { source: 'PSMB2', target: 'PSMD13', directed: 'false', weight: 0.142} },
+{ data: { source: 'PSMD13', target: 'PSMD4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMA6', directed: 'false', weight: 0.0765444} },
+{ data: { source: 'PSMD13', target: 'PSMB6', directed: 'false', weight: 0.0402973} },
+{ data: { source: 'PSMB6', target: 'PSMA2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMB6', target: 'PSMA6', directed: 'false', weight: 0.893525} },
+{ data: { source: 'PSMA6', target: 'PSMA2', directed: 'false', weight: 0.942534} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    26S proteasome	<br> Unweighted Density = 0.78
+    </section>
+    </body>
+    </html>
+    

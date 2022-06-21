@@ -1,0 +1,163 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 LMO4-BRCA1-CTIP-LDB1 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex121.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SMAD4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13485" }},
+{data: { id: 'SSBP2', score: 4, type: '', href: "https://www.uniprot.org/uniprot/P81877" }},
+{data: { id: 'LMO4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61968" }},
+{data: { id: 'SSBP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BWW4" }},
+{data: { id: 'LHX1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48742" }},
+{data: { id: 'ISL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61371" }},
+{data: { id: 'LMX1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60663" }},
+{data: { id: 'ISL2', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q96A47" }},
+{data: { id: 'THAP12', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43422" }},
+{data: { id: 'LDB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86U70" }},
+{data: { id: 'LHX4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q969G2" }},
+{data: { id: 'SSBP4', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9BWG4" }}], 
+ edges: [{ data: { source: 'SMAD4', target: 'LHX4', directed: 'false', weight: 0.98064} },
+{ data: { source: 'SMAD4', target: 'THAP12', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'SSBP2', target: 'SSBP4', directed: 'false', weight: 0.9744440000000001} },
+{ data: { source: 'SSBP2', target: 'LDB1', directed: 'false', weight: 0.959635} },
+{ data: { source: 'SSBP2', target: 'SSBP3', directed: 'false', weight: 0.9480379999999999} },
+{ data: { source: 'SSBP2', target: 'ISL2', directed: 'false', weight: 0.9256629999999999} },
+{ data: { source: 'SSBP2', target: 'LMX1B', directed: 'false', weight: 0.8978360000000001} },
+{ data: { source: 'SSBP2', target: 'ISL1', directed: 'false', weight: 0.822033} },
+{ data: { source: 'SSBP2', target: 'LMO4', directed: 'false', weight: 0.7069880000000001} },
+{ data: { source: 'SSBP2', target: 'LHX4', directed: 'false', weight: 0.483444} },
+{ data: { source: 'SSBP2', target: 'LHX1', directed: 'false', weight: 0.21064699999999997} },
+{ data: { source: 'ISL2', target: 'SSBP4', directed: 'false', weight: 0.964052} },
+{ data: { source: 'ISL2', target: 'SSBP3', directed: 'false', weight: 0.8998450000000001} },
+{ data: { source: 'ISL2', target: 'LDB1', directed: 'false', weight: 0.684525} },
+{ data: { source: 'ISL2', target: 'LMO4', directed: 'false', weight: 0.6375390000000001} },
+{ data: { source: 'ISL2', target: 'ISL1', directed: 'false', weight: 0.6375390000000001} },
+{ data: { source: 'ISL2', target: 'LMX1B', directed: 'false', weight: 0.556438} },
+{ data: { source: 'ISL2', target: 'LHX4', directed: 'false', weight: 0.469896} },
+{ data: { source: 'ISL2', target: 'LHX1', directed: 'false', weight: 0.238157} },
+{ data: { source: 'LMO4', target: 'SSBP4', directed: 'false', weight: 0.9657020000000001} },
+{ data: { source: 'LMO4', target: 'SSBP3', directed: 'false', weight: 0.797691} },
+{ data: { source: 'LMO4', target: 'LMX1B', directed: 'false', weight: 0.6375390000000001} },
+{ data: { source: 'LMO4', target: 'LDB1', directed: 'false', weight: 0.5} },
+{ data: { source: 'LMO4', target: 'ISL1', directed: 'false', weight: 0.390018} },
+{ data: { source: 'LMO4', target: 'LHX1', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'LMO4', target: 'LHX4', directed: 'false', weight: 0.216185} },
+{ data: { source: 'ISL1', target: 'SSBP4', directed: 'false', weight: 0.9530959999999999} },
+{ data: { source: 'ISL1', target: 'SSBP3', directed: 'false', weight: 0.722701} },
+{ data: { source: 'ISL1', target: 'LHX4', directed: 'false', weight: 0.537489} },
+{ data: { source: 'ISL1', target: 'LDB1', directed: 'false', weight: 0.5} },
+{ data: { source: 'ISL1', target: 'LMX1B', directed: 'false', weight: 0.345713} },
+{ data: { source: 'ISL1', target: 'LHX1', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'LDB1', target: 'SSBP4', directed: 'false', weight: 0.986994} },
+{ data: { source: 'LDB1', target: 'SSBP3', directed: 'false', weight: 0.9574090000000001} },
+{ data: { source: 'LDB1', target: 'LMX1B', directed: 'false', weight: 0.841824} },
+{ data: { source: 'LDB1', target: 'LHX4', directed: 'false', weight: 0.391521} },
+{ data: { source: 'LDB1', target: 'LHX1', directed: 'false', weight: 0.200625} },
+{ data: { source: 'LHX1', target: 'SSBP4', directed: 'false', weight: 0.848514} },
+{ data: { source: 'LHX1', target: 'SSBP3', directed: 'false', weight: 0.5854739999999999} },
+{ data: { source: 'LHX1', target: 'LMX1B', directed: 'false', weight: 0.238157} },
+{ data: { source: 'LHX1', target: 'LHX4', directed: 'false', weight: 0.123797} },
+{ data: { source: 'LHX4', target: 'SSBP4', directed: 'false', weight: 0.42894899999999997} },
+{ data: { source: 'LHX4', target: 'THAP12', directed: 'false', weight: 0.32798} },
+{ data: { source: 'LHX4', target: 'LMX1B', directed: 'false', weight: 0.198303} },
+{ data: { source: 'LHX4', target: 'SSBP3', directed: 'false', weight: 0.17435} },
+{ data: { source: 'SSBP3', target: 'SSBP4', directed: 'false', weight: 0.985092} },
+{ data: { source: 'SSBP3', target: 'LMX1B', directed: 'false', weight: 0.911484} },
+{ data: { source: 'LMX1B', target: 'SSBP4', directed: 'false', weight: 0.8940809999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 LMO4-BRCA1-CTIP-LDB1 complex<br> Complex Score (from Super.Complex) = 0.78251<br> Unweighted Density = 0.73
+    </section>
+    </body>
+    </html>
+    

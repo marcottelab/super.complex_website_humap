@@ -1,0 +1,110 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> NAT complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex3.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MED23', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULK4" }},
+{data: { id: 'CDK8', score: 5, href: "https://www.uniprot.org/uniprot/P49336" }},
+{data: { id: 'MED21', score: 5, href: "https://www.uniprot.org/uniprot/Q13503" }},
+{data: { id: 'MED14', score: 5, href: "https://www.uniprot.org/uniprot/O60244" }},
+{data: { id: 'MED10', score: 5, href: "https://www.uniprot.org/uniprot/Q9BTT4" }},
+{data: { id: 'CCNC', score: 5, href: "https://www.uniprot.org/uniprot/P24863" }},
+{data: { id: 'MED6', score: 5, href: "https://www.uniprot.org/uniprot/O75586" }}], 
+ edges: [{ data: { source: 'MED23', target: 'MED14', directed: 'false', weight: 0.999865} },
+{ data: { source: 'MED23', target: 'CDK8', directed: 'false', weight: 0.9992040000000001} },
+{ data: { source: 'MED23', target: 'MED10', directed: 'false', weight: 0.988237} },
+{ data: { source: 'MED23', target: 'MED6', directed: 'false', weight: 0.9188040000000001} },
+{ data: { source: 'MED23', target: 'CCNC', directed: 'false', weight: 0.8870899999999999} },
+{ data: { source: 'MED23', target: 'MED21', directed: 'false', weight: 0.512733} },
+{ data: { source: 'CDK8', target: 'MED6', directed: 'false', weight: 0.999899} },
+{ data: { source: 'CDK8', target: 'CCNC', directed: 'false', weight: 0.9998309999999999} },
+{ data: { source: 'CDK8', target: 'MED10', directed: 'false', weight: 0.999814} },
+{ data: { source: 'CDK8', target: 'MED14', directed: 'false', weight: 0.9978020000000001} },
+{ data: { source: 'CDK8', target: 'MED21', directed: 'false', weight: 0.975749} },
+{ data: { source: 'MED21', target: 'MED6', directed: 'false', weight: 0.8428770000000001} },
+{ data: { source: 'MED21', target: 'CCNC', directed: 'false', weight: 0.760904} },
+{ data: { source: 'MED21', target: 'MED14', directed: 'false', weight: 0.672129} },
+{ data: { source: 'MED21', target: 'MED10', directed: 'false', weight: 0.536385} },
+{ data: { source: 'MED14', target: 'MED6', directed: 'false', weight: 0.999756} },
+{ data: { source: 'MED14', target: 'MED10', directed: 'false', weight: 0.9948940000000001} },
+{ data: { source: 'MED14', target: 'CCNC', directed: 'false', weight: 0.8584299999999999} },
+{ data: { source: 'MED10', target: 'MED6', directed: 'false', weight: 0.998552} },
+{ data: { source: 'MED10', target: 'CCNC', directed: 'false', weight: 0.92055} },
+{ data: { source: 'CCNC', target: 'MED6', directed: 'false', weight: 0.9852219999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    NAT complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

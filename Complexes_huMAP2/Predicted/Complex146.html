@@ -1,0 +1,135 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 Propionyl-CoA carboxylase</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex147.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'KYAT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16773" }},
+{data: { id: 'NONO', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15233" }},
+{data: { id: 'HEL-S-17', score: 3, type: '', href: "https://www.uniprot.org/uniprot/A0A024R4F1" }},
+{data: { id: 'ITPA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BY32" }},
+{data: { id: 'PCCA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P05165" }},
+{data: { id: 'GART', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P22102" }},
+{data: { id: 'HEL-S-64p', score: 3, type: '', href: "https://www.uniprot.org/uniprot/V9HWJ1" }},
+{data: { id: 'PCCB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P05166" }},
+{data: { id: 'CMPK1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30085" }},
+{data: { id: 'SEPHS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49903" }}], 
+ edges: [{ data: { source: 'KYAT1', target: 'CMPK1', directed: 'false', weight: 0.0814534} },
+{ data: { source: 'KYAT1', target: 'PCCA', directed: 'false', weight: 0.0556582} },
+{ data: { source: 'KYAT1', target: 'PCCB', directed: 'false', weight: 0.0203618} },
+{ data: { source: 'PCCB', target: 'PCCA', directed: 'false', weight: 1.0} },
+{ data: { source: 'PCCB', target: 'CMPK1', directed: 'false', weight: 0.229494} },
+{ data: { source: 'PCCB', target: 'SEPHS1', directed: 'false', weight: 0.126911} },
+{ data: { source: 'PCCB', target: 'ITPA', directed: 'false', weight: 0.11971400000000001} },
+{ data: { source: 'PCCB', target: 'NONO', directed: 'false', weight: 0.0437329} },
+{ data: { source: 'PCCB', target: 'GART', directed: 'false', weight: 0.0395782} },
+{ data: { source: 'SEPHS1', target: 'PCCA', directed: 'false', weight: 0.129744} },
+{ data: { source: 'SEPHS1', target: 'CMPK1', directed: 'false', weight: 0.054752300000000004} },
+{ data: { source: 'ITPA', target: 'CMPK1', directed: 'false', weight: 0.356838} },
+{ data: { source: 'ITPA', target: 'PCCA', directed: 'false', weight: 0.06566699999999999} },
+{ data: { source: 'ITPA', target: 'HEL-S-64p', directed: 'false', weight: 0.023188099999999996} },
+{ data: { source: 'NONO', target: 'PCCA', directed: 'false', weight: 0.23631799999999997} },
+{ data: { source: 'CMPK1', target: 'GART', directed: 'false', weight: 0.9222239999999999} },
+{ data: { source: 'CMPK1', target: 'HEL-S-64p', directed: 'false', weight: 0.33155999999999997} },
+{ data: { source: 'CMPK1', target: 'PCCA', directed: 'false', weight: 0.272508} },
+{ data: { source: 'CMPK1', target: 'HEL-S-17', directed: 'false', weight: 0.0400537} },
+{ data: { source: 'HEL-S-64p', target: 'PCCA', directed: 'false', weight: 0.160146} },
+{ data: { source: 'HEL-S-17', target: 'PCCA', directed: 'false', weight: 0.28110599999999997} },
+{ data: { source: 'PCCA', target: 'GART', directed: 'false', weight: 0.904683} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 Propionyl-CoA carboxylase<br> Complex Score (from Super.Complex) = 0.99300<br> Unweighted Density = 0.49
+    </section>
+    </body>
+    </html>
+    

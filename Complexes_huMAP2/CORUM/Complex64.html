@@ -1,0 +1,286 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> PA700 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex65.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PSMC3', score: 5, href: "https://www.uniprot.org/uniprot/P17980" }},
+{data: { id: 'PSMD14', score: 5, href: "https://www.uniprot.org/uniprot/O00487" }},
+{data: { id: 'PSMC6', score: 5, href: "https://www.uniprot.org/uniprot/P62333" }},
+{data: { id: 'PSMC2', score: 5, href: "https://www.uniprot.org/uniprot/P35998" }},
+{data: { id: 'PSMC4', score: 5, href: "https://www.uniprot.org/uniprot/P43686" }},
+{data: { id: 'PSMD4', score: 5, href: "https://www.uniprot.org/uniprot/P55036" }},
+{data: { id: 'PSMD5', score: 5, href: "https://www.uniprot.org/uniprot/Q16401" }},
+{data: { id: 'HEL-S-91n', score: 1, href: "https://www.uniprot.org/uniprot/V9HW09" }},
+{data: { id: 'PSMD2', score: 5, href: "https://www.uniprot.org/uniprot/Q13200" }},
+{data: { id: 'PSMD12', score: 5, href: "https://www.uniprot.org/uniprot/O00232" }},
+{data: { id: 'PSMD13', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNM6" }},
+{data: { id: 'PSMC5', score: 5, href: "https://www.uniprot.org/uniprot/P62195" }},
+{data: { id: 'PSMD3', score: 5, href: "https://www.uniprot.org/uniprot/O43242" }},
+{data: { id: 'PSMD1', score: 5, href: "https://www.uniprot.org/uniprot/Q99460" }},
+{data: { id: 'PSMC1', score: 5, href: "https://www.uniprot.org/uniprot/P62191" }},
+{data: { id: 'PSMD6', score: 5, href: "https://www.uniprot.org/uniprot/Q15008" }},
+{data: { id: 'PSMD11', score: 5, href: "https://www.uniprot.org/uniprot/O00231" }},
+{data: { id: 'PSMD10', score: 5, href: "https://www.uniprot.org/uniprot/O75832" }},
+{data: { id: 'PSMD7', score: 5, href: "https://www.uniprot.org/uniprot/P51665" }},
+{data: { id: 'PSMD9', score: 5, href: "https://www.uniprot.org/uniprot/O00233" }}], 
+ edges: [{ data: { source: 'PSMC3', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD14', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMC4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMC5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMC6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD12', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD4', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'PSMC3', target: 'PSMD10', directed: 'false', weight: 0.999973} },
+{ data: { source: 'PSMC3', target: 'HEL-S-91n', directed: 'false', weight: 0.999813} },
+{ data: { source: 'PSMC3', target: 'PSMD9', directed: 'false', weight: 0.999518} },
+{ data: { source: 'PSMC3', target: 'PSMC2', directed: 'false', weight: 0.999189} },
+{ data: { source: 'PSMC3', target: 'PSMD5', directed: 'false', weight: 0.9961969999999999} },
+{ data: { source: 'PSMD14', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMD2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMD4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'HEL-S-91n', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMD12', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMD10', directed: 'false', weight: 0.999783} },
+{ data: { source: 'PSMD14', target: 'PSMD9', directed: 'false', weight: 0.999307} },
+{ data: { source: 'PSMD14', target: 'PSMD5', directed: 'false', weight: 0.9958319999999999} },
+{ data: { source: 'PSMC6', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMC4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMC5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'HEL-S-91n', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD12', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD1', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMC6', target: 'PSMD2', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMC6', target: 'PSMD4', directed: 'false', weight: 0.999994} },
+{ data: { source: 'PSMC6', target: 'PSMD10', directed: 'false', weight: 0.999927} },
+{ data: { source: 'PSMC6', target: 'PSMD5', directed: 'false', weight: 0.9993549999999999} },
+{ data: { source: 'PSMC6', target: 'PSMD9', directed: 'false', weight: 0.98761} },
+{ data: { source: 'PSMC2', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMC5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMD2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC2', target: 'PSMC4', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMC2', target: 'PSMD12', directed: 'false', weight: 0.999993} },
+{ data: { source: 'PSMC2', target: 'PSMD11', directed: 'false', weight: 0.999991} },
+{ data: { source: 'PSMC2', target: 'PSMD4', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'PSMC2', target: 'PSMD5', directed: 'false', weight: 0.9988379999999999} },
+{ data: { source: 'PSMC2', target: 'PSMD10', directed: 'false', weight: 0.9938629999999999} },
+{ data: { source: 'PSMC2', target: 'PSMD9', directed: 'false', weight: 0.9876379999999999} },
+{ data: { source: 'PSMC2', target: 'HEL-S-91n', directed: 'false', weight: 0.9875200000000001} },
+{ data: { source: 'PSMC4', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMC5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD12', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD2', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMC4', target: 'PSMD10', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMC4', target: 'PSMD4', directed: 'false', weight: 0.999991} },
+{ data: { source: 'PSMC4', target: 'HEL-S-91n', directed: 'false', weight: 0.9989399999999999} },
+{ data: { source: 'PSMC4', target: 'PSMD5', directed: 'false', weight: 0.997589} },
+{ data: { source: 'PSMC4', target: 'PSMD9', directed: 'false', weight: 0.992973} },
+{ data: { source: 'PSMD4', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD4', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD4', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD4', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD4', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD4', target: 'PSMD12', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD4', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD4', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD4', target: 'HEL-S-91n', directed: 'false', weight: 0.9999399999999999} },
+{ data: { source: 'PSMD4', target: 'PSMC5', directed: 'false', weight: 0.999884} },
+{ data: { source: 'PSMD4', target: 'PSMD9', directed: 'false', weight: 0.998972} },
+{ data: { source: 'PSMD4', target: 'PSMD2', directed: 'false', weight: 0.9981479999999999} },
+{ data: { source: 'PSMD4', target: 'PSMD10', directed: 'false', weight: 0.997972} },
+{ data: { source: 'PSMD5', target: 'PSMC1', directed: 'false', weight: 0.999872} },
+{ data: { source: 'PSMD5', target: 'PSMD2', directed: 'false', weight: 0.9996209999999999} },
+{ data: { source: 'PSMD5', target: 'PSMD6', directed: 'false', weight: 0.997717} },
+{ data: { source: 'PSMD5', target: 'PSMD3', directed: 'false', weight: 0.996935} },
+{ data: { source: 'PSMD5', target: 'PSMC5', directed: 'false', weight: 0.991317} },
+{ data: { source: 'PSMD5', target: 'PSMD11', directed: 'false', weight: 0.988684} },
+{ data: { source: 'PSMD5', target: 'HEL-S-91n', directed: 'false', weight: 0.9876940000000001} },
+{ data: { source: 'PSMD5', target: 'PSMD7', directed: 'false', weight: 0.9876790000000001} },
+{ data: { source: 'PSMD5', target: 'PSMD12', directed: 'false', weight: 0.987606} },
+{ data: { source: 'PSMD5', target: 'PSMD9', directed: 'false', weight: 0.987561} },
+{ data: { source: 'HEL-S-91n', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-91n', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-91n', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-91n', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-91n', target: 'PSMD7', directed: 'false', weight: 0.999999} },
+{ data: { source: 'HEL-S-91n', target: 'PSMD12', directed: 'false', weight: 0.999999} },
+{ data: { source: 'HEL-S-91n', target: 'PSMD6', directed: 'false', weight: 0.999999} },
+{ data: { source: 'HEL-S-91n', target: 'PSMD11', directed: 'false', weight: 0.9999370000000001} },
+{ data: { source: 'HEL-S-91n', target: 'PSMD10', directed: 'false', weight: 0.999841} },
+{ data: { source: 'HEL-S-91n', target: 'PSMD2', directed: 'false', weight: 0.999698} },
+{ data: { source: 'HEL-S-91n', target: 'PSMD9', directed: 'false', weight: 0.997483} },
+{ data: { source: 'HEL-S-91n', target: 'PSMC5', directed: 'false', weight: 0.9968959999999999} },
+{ data: { source: 'PSMD2', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD2', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD2', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD2', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD2', target: 'PSMC5', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMD2', target: 'PSMD11', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMD2', target: 'PSMD12', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMD2', target: 'PSMD13', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMD2', target: 'PSMD1', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMD2', target: 'PSMD10', directed: 'false', weight: 0.9999239999999999} },
+{ data: { source: 'PSMD2', target: 'PSMD9', directed: 'false', weight: 0.991926} },
+{ data: { source: 'PSMD12', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD12', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD12', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD12', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD12', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD12', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD12', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD12', target: 'PSMC5', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMD12', target: 'PSMD9', directed: 'false', weight: 0.987614} },
+{ data: { source: 'PSMD12', target: 'PSMD10', directed: 'false', weight: 0.334831} },
+{ data: { source: 'PSMD13', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMC5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMD10', directed: 'false', weight: 0.999906} },
+{ data: { source: 'PSMD13', target: 'PSMD9', directed: 'false', weight: 0.9996520000000001} },
+{ data: { source: 'PSMC5', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC5', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC5', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC5', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC5', target: 'PSMD1', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMC5', target: 'PSMD11', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'PSMC5', target: 'PSMD10', directed: 'false', weight: 0.999994} },
+{ data: { source: 'PSMC5', target: 'PSMD9', directed: 'false', weight: 0.987576} },
+{ data: { source: 'PSMD3', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD3', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD3', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD3', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD3', target: 'PSMD11', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMD3', target: 'PSMD10', directed: 'false', weight: 0.999984} },
+{ data: { source: 'PSMD3', target: 'PSMD9', directed: 'false', weight: 0.997999} },
+{ data: { source: 'PSMD1', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD1', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD1', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD1', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD1', target: 'PSMD9', directed: 'false', weight: 0.999516} },
+{ data: { source: 'PSMD1', target: 'PSMD10', directed: 'false', weight: 0.0416582} },
+{ data: { source: 'PSMC1', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMD10', directed: 'false', weight: 0.999724} },
+{ data: { source: 'PSMD6', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD6', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD6', target: 'PSMD10', directed: 'false', weight: 0.99998} },
+{ data: { source: 'PSMD6', target: 'PSMD9', directed: 'false', weight: 0.9993700000000001} },
+{ data: { source: 'PSMD11', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD11', target: 'PSMD10', directed: 'false', weight: 0.999877} },
+{ data: { source: 'PSMD11', target: 'PSMD9', directed: 'false', weight: 0.988242} },
+{ data: { source: 'PSMD10', target: 'PSMD7', directed: 'false', weight: 0.9963489999999999} },
+{ data: { source: 'PSMD7', target: 'PSMD9', directed: 'false', weight: 0.999309} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    PA700 complex	<br> Unweighted Density = 0.97
+    </section>
+    </body>
+    </html>
+    

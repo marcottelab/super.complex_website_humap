@@ -1,0 +1,140 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 Exon junction complex (EIF4A3, MLN51, UPF3B, MAGOH, Y14, PYM)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex872.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SDE2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6IQ49" }},
+{data: { id: 'CASC3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15234" }},
+{data: { id: 'CCDC9', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3X0" }},
+{data: { id: 'PABPN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86U42" }},
+{data: { id: 'EIF4A3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P38919" }},
+{data: { id: 'SCRN3', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q0VDG4" }},
+{data: { id: 'PYM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BRP8" }},
+{data: { id: 'RBM8A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y5S9" }},
+{data: { id: 'MAGOHB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96A72" }},
+{data: { id: 'MAGOH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61326" }}], 
+ edges: [{ data: { source: 'CASC3', target: 'RBM8A', directed: 'false', weight: 0.769623} },
+{ data: { source: 'CASC3', target: 'MAGOH', directed: 'false', weight: 0.641224} },
+{ data: { source: 'CASC3', target: 'EIF4A3', directed: 'false', weight: 0.619142} },
+{ data: { source: 'CASC3', target: 'PABPN1', directed: 'false', weight: 0.22501500000000002} },
+{ data: { source: 'CASC3', target: 'CCDC9', directed: 'false', weight: 0.21118699999999999} },
+{ data: { source: 'CASC3', target: 'PYM1', directed: 'false', weight: 0.0929508} },
+{ data: { source: 'CASC3', target: 'MAGOHB', directed: 'false', weight: 0.0775955} },
+{ data: { source: 'RBM8A', target: 'MAGOH', directed: 'false', weight: 0.9994200000000001} },
+{ data: { source: 'RBM8A', target: 'EIF4A3', directed: 'false', weight: 0.9946510000000001} },
+{ data: { source: 'RBM8A', target: 'MAGOHB', directed: 'false', weight: 0.989749} },
+{ data: { source: 'RBM8A', target: 'CCDC9', directed: 'false', weight: 0.985891} },
+{ data: { source: 'RBM8A', target: 'SDE2', directed: 'false', weight: 0.949989} },
+{ data: { source: 'RBM8A', target: 'SCRN3', directed: 'false', weight: 0.133456} },
+{ data: { source: 'MAGOHB', target: 'MAGOH', directed: 'false', weight: 0.9556040000000001} },
+{ data: { source: 'MAGOHB', target: 'CCDC9', directed: 'false', weight: 0.939559} },
+{ data: { source: 'MAGOHB', target: 'EIF4A3', directed: 'false', weight: 0.144789} },
+{ data: { source: 'MAGOHB', target: 'SDE2', directed: 'false', weight: 0.0925168} },
+{ data: { source: 'PABPN1', target: 'EIF4A3', directed: 'false', weight: 0.813493} },
+{ data: { source: 'PABPN1', target: 'MAGOH', directed: 'false', weight: 0.5} },
+{ data: { source: 'PYM1', target: 'MAGOH', directed: 'false', weight: 0.9877530000000001} },
+{ data: { source: 'PYM1', target: 'EIF4A3', directed: 'false', weight: 0.0938909} },
+{ data: { source: 'MAGOH', target: 'EIF4A3', directed: 'false', weight: 0.9540489999999999} },
+{ data: { source: 'MAGOH', target: 'CCDC9', directed: 'false', weight: 0.314668} },
+{ data: { source: 'MAGOH', target: 'SCRN3', directed: 'false', weight: 0.291439} },
+{ data: { source: 'MAGOH', target: 'SDE2', directed: 'false', weight: 0.115879} },
+{ data: { source: 'CCDC9', target: 'EIF4A3', directed: 'false', weight: 0.998842} },
+{ data: { source: 'CCDC9', target: 'SDE2', directed: 'false', weight: 0.0960696} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 Exon junction complex (EIF4A3, MLN51, UPF3B, MAGOH, Y14, PYM)<br> Complex Score (from Super.Complex) = 0.55129<br> Unweighted Density = 0.60
+    </section>
+    </body>
+    </html>
+    

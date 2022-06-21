@@ -1,0 +1,241 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.7 eIF3 complex (EIF3S6, EIF3S5, EIF3S4, EIF3S3, EIF3S6IP, EIF3S2, EIF3S9, EIF3S12,  EIF3S10, EIF3S8,  EIF3S1, EIF3S7, PCID1)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex44.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EIF3CL', score: 3, type: '', href: "https://www.uniprot.org/uniprot/B5ME19" }},
+{data: { id: 'SARS-CoV2 nsp12', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp12.html" }},
+{data: { id: 'PRRC2B', score: 4, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q5JSZ5" }},
+{data: { id: 'EIF3J', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75822" }},
+{data: { id: 'RPLP0', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P05388" }},
+{data: { id: 'EIF3I', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13347" }},
+{data: { id: 'JOSD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15040" }},
+{data: { id: 'RPL7A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62424" }},
+{data: { id: 'EIF3E', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P60228" }},
+{data: { id: 'EIF3K', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UBQ5" }},
+{data: { id: 'EIF3H', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15372" }},
+{data: { id: 'EIF3D', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15371" }},
+{data: { id: 'EIF3L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y262" }},
+{data: { id: 'EIF3B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P55884" }},
+{data: { id: 'EIF3F', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00303" }},
+{data: { id: 'EIF2S1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P05198" }},
+{data: { id: 'EIF3G', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75821" }},
+{data: { id: 'EIF3C', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99613" }},
+{data: { id: 'EIF3A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P56537" }},
+{data: { id: 'EIF3M', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7L2H7" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp12', target: 'PRRC2B', directed: 'false', weight: 0.843969576, type: 'sars'} },
+{ data: { source: 'EIF3I', target: 'EIF3C', directed: 'false', weight: 0.999706} },
+{ data: { source: 'EIF3I', target: 'EIF3L', directed: 'false', weight: 0.999685} },
+{ data: { source: 'EIF3I', target: 'EIF3G', directed: 'false', weight: 0.999659} },
+{ data: { source: 'EIF3I', target: 'EIF3A', directed: 'false', weight: 0.999323} },
+{ data: { source: 'EIF3I', target: 'EIF3F', directed: 'false', weight: 0.999251} },
+{ data: { source: 'EIF3I', target: 'EIF3M', directed: 'false', weight: 0.999114} },
+{ data: { source: 'EIF3I', target: 'EIF3D', directed: 'false', weight: 0.997793} },
+{ data: { source: 'EIF3I', target: 'EIF3E', directed: 'false', weight: 0.996606} },
+{ data: { source: 'EIF3I', target: 'EIF3H', directed: 'false', weight: 0.996451} },
+{ data: { source: 'EIF3I', target: 'PRRC2B', directed: 'false', weight: 0.9949879999999999} },
+{ data: { source: 'EIF3I', target: 'EIF3K', directed: 'false', weight: 0.992094} },
+{ data: { source: 'EIF3I', target: 'EIF3B', directed: 'false', weight: 0.97731} },
+{ data: { source: 'EIF3I', target: 'EIF3CL', directed: 'false', weight: 0.9391959999999999} },
+{ data: { source: 'EIF3I', target: 'EIF3J', directed: 'false', weight: 0.5133489999999999} },
+{ data: { source: 'EIF3I', target: 'JOSD1', directed: 'false', weight: 0.128057} },
+{ data: { source: 'EIF3G', target: 'EIF3C', directed: 'false', weight: 0.999999} },
+{ data: { source: 'EIF3G', target: 'EIF3F', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'EIF3G', target: 'EIF3E', directed: 'false', weight: 0.9999170000000001} },
+{ data: { source: 'EIF3G', target: 'EIF3M', directed: 'false', weight: 0.999859} },
+{ data: { source: 'EIF3G', target: 'EIF3L', directed: 'false', weight: 0.999294} },
+{ data: { source: 'EIF3G', target: 'EIF3D', directed: 'false', weight: 0.998648} },
+{ data: { source: 'EIF3G', target: 'EIF3H', directed: 'false', weight: 0.998225} },
+{ data: { source: 'EIF3G', target: 'EIF3A', directed: 'false', weight: 0.997985} },
+{ data: { source: 'EIF3G', target: 'EIF3K', directed: 'false', weight: 0.995418} },
+{ data: { source: 'EIF3G', target: 'EIF3CL', directed: 'false', weight: 0.8867889999999999} },
+{ data: { source: 'EIF3G', target: 'PRRC2B', directed: 'false', weight: 0.623825} },
+{ data: { source: 'EIF3G', target: 'EIF3J', directed: 'false', weight: 0.261734} },
+{ data: { source: 'EIF3G', target: 'JOSD1', directed: 'false', weight: 0.128057} },
+{ data: { source: 'EIF3D', target: 'EIF3H', directed: 'false', weight: 0.997542} },
+{ data: { source: 'EIF3D', target: 'EIF3M', directed: 'false', weight: 0.992642} },
+{ data: { source: 'EIF3D', target: 'EIF3CL', directed: 'false', weight: 0.984886} },
+{ data: { source: 'EIF3D', target: 'EIF3E', directed: 'false', weight: 0.97983} },
+{ data: { source: 'EIF3D', target: 'EIF3F', directed: 'false', weight: 0.979426} },
+{ data: { source: 'EIF3D', target: 'EIF3C', directed: 'false', weight: 0.975935} },
+{ data: { source: 'EIF3D', target: 'EIF3K', directed: 'false', weight: 0.9759180000000001} },
+{ data: { source: 'EIF3D', target: 'EIF3L', directed: 'false', weight: 0.975894} },
+{ data: { source: 'EIF3D', target: 'EIF3B', directed: 'false', weight: 0.975892} },
+{ data: { source: 'EIF3D', target: 'EIF3A', directed: 'false', weight: 0.9758879999999999} },
+{ data: { source: 'EIF3D', target: 'EIF3J', directed: 'false', weight: 0.809134} },
+{ data: { source: 'EIF3D', target: 'PRRC2B', directed: 'false', weight: 0.646196} },
+{ data: { source: 'EIF3D', target: 'JOSD1', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'EIF3L', target: 'EIF3CL', directed: 'false', weight: 0.9998360000000001} },
+{ data: { source: 'EIF3L', target: 'EIF3C', directed: 'false', weight: 0.999677} },
+{ data: { source: 'EIF3L', target: 'EIF3M', directed: 'false', weight: 0.9992280000000001} },
+{ data: { source: 'EIF3L', target: 'EIF3F', directed: 'false', weight: 0.999165} },
+{ data: { source: 'EIF3L', target: 'EIF3H', directed: 'false', weight: 0.997872} },
+{ data: { source: 'EIF3L', target: 'EIF3E', directed: 'false', weight: 0.9922549999999999} },
+{ data: { source: 'EIF3L', target: 'EIF3A', directed: 'false', weight: 0.985769} },
+{ data: { source: 'EIF3L', target: 'EIF3K', directed: 'false', weight: 0.975899} },
+{ data: { source: 'EIF3L', target: 'PRRC2B', directed: 'false', weight: 0.5} },
+{ data: { source: 'EIF3L', target: 'EIF3J', directed: 'false', weight: 0.32760700000000004} },
+{ data: { source: 'EIF3L', target: 'JOSD1', directed: 'false', weight: 0.128057} },
+{ data: { source: 'EIF3A', target: 'EIF3F', directed: 'false', weight: 0.999553} },
+{ data: { source: 'EIF3A', target: 'EIF3E', directed: 'false', weight: 0.985819} },
+{ data: { source: 'EIF3A', target: 'EIF3CL', directed: 'false', weight: 0.9854649999999999} },
+{ data: { source: 'EIF3A', target: 'EIF3H', directed: 'false', weight: 0.979748} },
+{ data: { source: 'EIF3A', target: 'EIF3K', directed: 'false', weight: 0.9776100000000001} },
+{ data: { source: 'EIF3A', target: 'EIF3M', directed: 'false', weight: 0.975931} },
+{ data: { source: 'EIF3A', target: 'EIF3C', directed: 'false', weight: 0.942624} },
+{ data: { source: 'EIF3A', target: 'PRRC2B', directed: 'false', weight: 0.901424} },
+{ data: { source: 'EIF3A', target: 'EIF3J', directed: 'false', weight: 0.39857600000000004} },
+{ data: { source: 'EIF3A', target: 'JOSD1', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'EIF3F', target: 'EIF3C', directed: 'false', weight: 0.99956} },
+{ data: { source: 'EIF3F', target: 'EIF3CL', directed: 'false', weight: 0.999467} },
+{ data: { source: 'EIF3F', target: 'EIF3M', directed: 'false', weight: 0.998825} },
+{ data: { source: 'EIF3F', target: 'EIF3H', directed: 'false', weight: 0.998778} },
+{ data: { source: 'EIF3F', target: 'EIF3K', directed: 'false', weight: 0.998713} },
+{ data: { source: 'EIF3F', target: 'EIF3E', directed: 'false', weight: 0.983089} },
+{ data: { source: 'EIF3F', target: 'JOSD1', directed: 'false', weight: 0.9689270000000001} },
+{ data: { source: 'EIF3F', target: 'PRRC2B', directed: 'false', weight: 0.8838360000000001} },
+{ data: { source: 'EIF3F', target: 'EIF3J', directed: 'false', weight: 0.348493} },
+{ data: { source: 'EIF3E', target: 'EIF3CL', directed: 'false', weight: 0.9998450000000001} },
+{ data: { source: 'EIF3E', target: 'EIF3C', directed: 'false', weight: 0.997886} },
+{ data: { source: 'EIF3E', target: 'EIF3K', directed: 'false', weight: 0.9963700000000001} },
+{ data: { source: 'EIF3E', target: 'EIF3H', directed: 'false', weight: 0.9758969999999999} },
+{ data: { source: 'EIF3E', target: 'EIF3M', directed: 'false', weight: 0.9758959999999999} },
+{ data: { source: 'EIF3E', target: 'PRRC2B', directed: 'false', weight: 0.8989229999999999} },
+{ data: { source: 'EIF3E', target: 'EIF3J', directed: 'false', weight: 0.387153} },
+{ data: { source: 'EIF3E', target: 'JOSD1', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'EIF3J', target: 'EIF3M', directed: 'false', weight: 0.610923} },
+{ data: { source: 'EIF3J', target: 'EIF3K', directed: 'false', weight: 0.5} },
+{ data: { source: 'EIF3J', target: 'EIF3C', directed: 'false', weight: 0.332466} },
+{ data: { source: 'EIF3J', target: 'PRRC2B', directed: 'false', weight: 0.27870100000000003} },
+{ data: { source: 'EIF3J', target: 'EIF3H', directed: 'false', weight: 0.228542} },
+{ data: { source: 'EIF3J', target: 'EIF3CL', directed: 'false', weight: 0.0925023} },
+{ data: { source: 'EIF3H', target: 'EIF3K', directed: 'false', weight: 0.9977159999999999} },
+{ data: { source: 'EIF3H', target: 'EIF3M', directed: 'false', weight: 0.9963200000000001} },
+{ data: { source: 'EIF3H', target: 'EIF3CL', directed: 'false', weight: 0.988943} },
+{ data: { source: 'EIF3H', target: 'EIF3C', directed: 'false', weight: 0.988613} },
+{ data: { source: 'EIF3H', target: 'PRRC2B', directed: 'false', weight: 0.953119} },
+{ data: { source: 'EIF3H', target: 'JOSD1', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'EIF3M', target: 'EIF3CL', directed: 'false', weight: 0.999276} },
+{ data: { source: 'EIF3M', target: 'EIF3C', directed: 'false', weight: 0.9985430000000001} },
+{ data: { source: 'EIF3M', target: 'EIF3K', directed: 'false', weight: 0.9919479999999999} },
+{ data: { source: 'EIF3M', target: 'PRRC2B', directed: 'false', weight: 0.703674} },
+{ data: { source: 'EIF3M', target: 'JOSD1', directed: 'false', weight: 0.120276} },
+{ data: { source: 'EIF3CL', target: 'EIF3K', directed: 'false', weight: 0.998358} },
+{ data: { source: 'EIF3CL', target: 'EIF3C', directed: 'false', weight: 0.41868} },
+{ data: { source: 'EIF3CL', target: 'PRRC2B', directed: 'false', weight: 0.287896} },
+{ data: { source: 'EIF3CL', target: 'JOSD1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'EIF3C', target: 'EIF3K', directed: 'false', weight: 0.998179} },
+{ data: { source: 'EIF3C', target: 'PRRC2B', directed: 'false', weight: 0.41498599999999997} },
+{ data: { source: 'EIF3C', target: 'JOSD1', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'PRRC2B', target: 'EIF3K', directed: 'false', weight: 0.761199} },
+{ data: { source: 'PRRC2B', target: 'JOSD1', directed: 'false', weight: 0.120276} },
+{ data: { source: 'RPLP0', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'EIF3B', directed: 'false', weight: 0.976806} },
+{ data: { source: 'RPLP0', target: 'EIF2S1', directed: 'false', weight: 0.5843020000000001} },
+{ data: { source: 'EIF3K', target: 'JOSD1', directed: 'false', weight: 0.128057} },
+{ data: { source: 'EIF3B', target: 'EIF2S1', directed: 'false', weight: 0.977627} },
+{ data: { source: 'EIF3B', target: 'RPL7A', directed: 'false', weight: 0.22482600000000003} },
+{ data: { source: 'RPL7A', target: 'EIF2S1', directed: 'false', weight: 0.36655} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.7 eIF3 complex (EIF3S6, EIF3S5, EIF3S4, EIF3S3, EIF3S6IP, EIF3S2, EIF3S9, EIF3S12,  EIF3S10, EIF3S8,  EIF3S1, EIF3S7, PCID1)<br> Complex Score (from Super.Complex) = 0.85481<br> Unweighted Density = 0.65
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>PRRC2B
+    </section>
+    </body>
+    </html>
+    

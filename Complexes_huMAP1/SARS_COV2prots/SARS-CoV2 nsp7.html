@@ -1,0 +1,197 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title>SARS-CoV2 nsp7</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: "SARS-CoV2 nsp7", score: 2, type:  "sars" , href: "https://covid-19.uniprot.org/uniprotkb/P0DTC1" }},
+{data: { id: "AGPS", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O00116" }},
+{data: { id: "CYB5B", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O43169" }},
+{data: { id: "ACSL3", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O95573" }},
+{data: { id: "CYB5R3", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P00387" }},
+{data: { id: "RALA", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P11233" }},
+{data: { id: "COMT", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P21964" }},
+{data: { id: "RAB5C", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P51148" }},
+{data: { id: "RAB7A", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P51149" }},
+{data: { id: "RAB8A", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P61006" }},
+{data: { id: "RAB2A", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P61019" }},
+{data: { id: "RAB10", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P61026" }},
+{data: { id: "RAB14", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P61106" }},
+{data: { id: "RHOA", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P61586" }},
+{data: { id: "RAB1A", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P62820" }},
+{data: { id: "GNB1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P62873" }},
+{data: { id: "GNG5", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P63218" }},
+{data: { id: "LMAN2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q12907" }},
+{data: { id: "MOGS", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q13724" }},
+{data: { id: "TOR1AIP1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q5JTV8" }},
+{data: { id: "MTARC1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q5VT66" }},
+{data: { id: "QSOX2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q6ZRP7" }},
+{data: { id: "HS2ST1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q7LGA3" }},
+{data: { id: "NDUFAF2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8N183" }},
+{data: { id: "SCCPDH", score: 1, score_annot: 4, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8NBX0" }},
+{data: { id: "SCARB1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8WTV0" }},
+{data: { id: "NAT14", score: 1, score_annot: 3, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8WUY8" }},
+{data: { id: "DCAKD", score: 1, score_annot: 2, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8WVC6" }},
+{data: { id: "FAM162A", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q96A26" }},
+{data: { id: "DNAJC19", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q96DA6" }},
+{data: { id: "SELENOS", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9BQE4" }},
+{data: { id: "PTGES2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9H7Z7" }},
+{data: { id: "RAB18", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9NP72" }},
+{data: { id: "0.2 Apoptosome match 2", score: 0, type: "complex", href: "../Predicted/Complex609.html" }},
+{data: { id: "0.05 SNARE complex (VAMP2, SNAP25, STX1a, CPLX1)", score: 0, type: "complex", href: "../Predicted/Complex14.html" }},
+{data: { id: "0.2 LAP1-TOR1A complex", score: 0, type: "complex", href: "../Predicted/Complex513.html" }},
+{data: { id: "SNX12 RAB10 RBM12", score: 0, type: "complex", href: "../Predicted/Complex919.html" }},
+{data: { id: "0.2 HK1-VDAC1 complex", score: 0, type: "complex", href: "../Predicted/Complex558.html" }},
+{data: { id: "0.2 PDGFRA-SHP-2 complex, PDGF stimulated", score: 0, type: "complex", href: "../Predicted/Complex921.html" }},
+{data: { id: "0.2 GNAI1-GNB1-GNG4 complex", score: 0, type: "complex", href: "../Predicted/Complex874.html" }},
+{data: { id: "0.4 CCT complex (chaperonin containing TCP1 complex)", score: 0, type: "complex", href: "../Predicted/Complex542.html" }},
+{data: { id: "0.2 p21(ras)GAP-Fyn-Lyn-Yes complex, thrombin stimulated", score: 0, type: "complex", href: "../Predicted/Complex757.html" }},
+{data: { id: "0.1 RAB5-EEA1 complex", score: 0, type: "complex", href: "../Predicted/Complex690.html" }},
+{data: { id: "RAB8B RAB1A GDI2", score: 0, type: "complex", href: "../Predicted/Complex351.html" }}], 
+ edges: [{ data: { source: "0.05 SNARE complex (VAMP2, SNAP25, STX1a, CPLX1)", target: "0.1 RAB5-EEA1 complex", directed: "false",type: "complex2complex", weight: 0.0196078431372549} },
+{ data: { source: "0.2 PDGFRA-SHP-2 complex, PDGF stimulated", target: "0.1 RAB5-EEA1 complex", directed: "false",type: "complex2complex", weight: 0.2857142857142857} },
+{ data: { source: "0.2 GNAI1-GNB1-GNG4 complex", target: "0.2 p21(ras)GAP-Fyn-Lyn-Yes complex, thrombin stimulated", directed: "false",type: "complex2complex", weight: 0.045454545454545456} },
+{ data: { source: "CYB5B", target: "0.2 Apoptosome match 2", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RAB5C", target: "0.1 RAB5-EEA1 complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RAB5C", target: "0.2 PDGFRA-SHP-2 complex, PDGF stimulated", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RAB7A", target: "0.05 SNARE complex (VAMP2, SNAP25, STX1a, CPLX1)", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RAB7A", target: "0.1 RAB5-EEA1 complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RAB8A", target: "0.2 HK1-VDAC1 complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RAB10", target: "SNX12 RAB10 RBM12", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RAB14", target: "0.05 SNARE complex (VAMP2, SNAP25, STX1a, CPLX1)", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RAB1A", target: "RAB8B RAB1A GDI2", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "GNB1", target: "0.2 p21(ras)GAP-Fyn-Lyn-Yes complex, thrombin stimulated", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "GNB1", target: "0.2 GNAI1-GNB1-GNG4 complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "GNG5", target: "0.2 GNAI1-GNB1-GNG4 complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "TOR1AIP1", target: "0.2 LAP1-TOR1A complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "DNAJC19", target: "0.4 CCT complex (chaperonin containing TCP1 complex)", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SARS-CoV2 nsp7", target: "AGPS", directed: "false", type: "sars2prot",weight: 0.826490325} },
+{ data: { source: "SARS-CoV2 nsp7", target: "CYB5B", directed: "false", type: "sars2prot",weight: 0.80351019} },
+{ data: { source: "SARS-CoV2 nsp7", target: "ACSL3", directed: "false", type: "sars2prot",weight: 0.897068932} },
+{ data: { source: "SARS-CoV2 nsp7", target: "CYB5R3", directed: "false", type: "sars2prot",weight: 0.956349351} },
+{ data: { source: "SARS-CoV2 nsp7", target: "RALA", directed: "false", type: "sars2prot",weight: 0.750366485} },
+{ data: { source: "SARS-CoV2 nsp7", target: "COMT", directed: "false", type: "sars2prot",weight: 0.745231765} },
+{ data: { source: "SARS-CoV2 nsp7", target: "RAB5C", directed: "false", type: "sars2prot",weight: 0.87908593} },
+{ data: { source: "SARS-CoV2 nsp7", target: "RAB7A", directed: "false", type: "sars2prot",weight: 0.972724229} },
+{ data: { source: "SARS-CoV2 nsp7", target: "RAB8A", directed: "false", type: "sars2prot",weight: 0.895744596} },
+{ data: { source: "SARS-CoV2 nsp7", target: "RAB2A", directed: "false", type: "sars2prot",weight: 0.97919572} },
+{ data: { source: "SARS-CoV2 nsp7", target: "RAB10", directed: "false", type: "sars2prot",weight: 0.981443071} },
+{ data: { source: "SARS-CoV2 nsp7", target: "RAB14", directed: "false", type: "sars2prot",weight: 0.750712826} },
+{ data: { source: "SARS-CoV2 nsp7", target: "RHOA", directed: "false", type: "sars2prot",weight: 0.829029399} },
+{ data: { source: "SARS-CoV2 nsp7", target: "RAB1A", directed: "false", type: "sars2prot",weight: 0.935289593} },
+{ data: { source: "SARS-CoV2 nsp7", target: "GNB1", directed: "false", type: "sars2prot",weight: 0.839532136} },
+{ data: { source: "SARS-CoV2 nsp7", target: "GNG5", directed: "false", type: "sars2prot",weight: 0.817631566} },
+{ data: { source: "SARS-CoV2 nsp7", target: "LMAN2", directed: "false", type: "sars2prot",weight: 0.725773983} },
+{ data: { source: "SARS-CoV2 nsp7", target: "MOGS", directed: "false", type: "sars2prot",weight: 0.782330987} },
+{ data: { source: "SARS-CoV2 nsp7", target: "TOR1AIP1", directed: "false", type: "sars2prot",weight: 0.74516805} },
+{ data: { source: "SARS-CoV2 nsp7", target: "MTARC1", directed: "false", type: "sars2prot",weight: 0.939721024} },
+{ data: { source: "SARS-CoV2 nsp7", target: "QSOX2", directed: "false", type: "sars2prot",weight: 0.794325146} },
+{ data: { source: "SARS-CoV2 nsp7", target: "HS2ST1", directed: "false", type: "sars2prot",weight: 0.706466834} },
+{ data: { source: "SARS-CoV2 nsp7", target: "NDUFAF2", directed: "false", type: "sars2prot",weight: 0.981444858} },
+{ data: { source: "SARS-CoV2 nsp7", target: "SCCPDH", directed: "false", type: "sars2prot",weight: 0.978675119} },
+{ data: { source: "SARS-CoV2 nsp7", target: "SCARB1", directed: "false", type: "sars2prot",weight: 0.854406247} },
+{ data: { source: "SARS-CoV2 nsp7", target: "NAT14", directed: "false", type: "sars2prot",weight: 0.720285746} },
+{ data: { source: "SARS-CoV2 nsp7", target: "DCAKD", directed: "false", type: "sars2prot",weight: 0.862452335} },
+{ data: { source: "SARS-CoV2 nsp7", target: "FAM162A", directed: "false", type: "sars2prot",weight: 0.748773582} },
+{ data: { source: "SARS-CoV2 nsp7", target: "DNAJC19", directed: "false", type: "sars2prot",weight: 0.981450126} },
+{ data: { source: "SARS-CoV2 nsp7", target: "SELENOS", directed: "false", type: "sars2prot",weight: 0.701764404} },
+{ data: { source: "SARS-CoV2 nsp7", target: "PTGES2", directed: "false", type: "sars2prot",weight: 0.764538331} },
+{ data: { source: "SARS-CoV2 nsp7", target: "RAB18", directed: "false", type: "sars2prot",weight: 0.756605088} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+                				'font-size': 20,
+        'font-weight': 'bold',
+                      'text-wrap': 'wrap',
+    'text-max-width': '300',
+            shape: function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'circle'}
+                                if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                
+  return 'star';
+  },
+            'background-color': function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'blue'}
+                                if ( ele.data('type') == 'sars' ){return 'red'}             
+                                if ( ele.data('score_annot') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score_annot') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score_annot') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score_annot') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score_annot') == 5 ){return 'rgb(52, 136, 74)'}   
+                                 return 'rgb(180, 131, 40)';
+  },
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 5)',
+								'line-color': function( ele ){ 
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
+  return 'red';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'cose',
+	'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'padding': 1,
+	'componentSpacing': 1,
+	 'idealEdgeLength': function( edge ){ return 1; },
+	 // Divisor to compute edge forces
+  'edgeElasticity': function( edge ){ return 20; }
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+    </script>
+
+    	<section>
+    	<br>
+    	<br>
+    	<br> 
+    
+    </section>
+    </body>
+    </html>
+    

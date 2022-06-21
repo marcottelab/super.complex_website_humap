@@ -1,0 +1,108 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TNF-alpha/NF-kappa B signaling complex (CHUK, BTRC, NFKB2, PPP6C, REL, CUL1, IKBKE, SAPS2, SAPS1, ANKRD28, RELA, SKP1)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1583.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PPP6C', score: 5, href: "https://www.uniprot.org/uniprot/O00743" }},
+{data: { id: 'ANKRD28', score: 5, href: "https://www.uniprot.org/uniprot/O15084" }},
+{data: { id: 'CHUK', score: 5, href: "https://www.uniprot.org/uniprot/O15111" }},
+{data: { id: 'PPP6R2', score: 5, href: "https://www.uniprot.org/uniprot/O75170" }},
+{data: { id: 'SKP1', score: 5, href: "https://www.uniprot.org/uniprot/P63208" }},
+{data: { id: 'NFKB2', score: 5, href: "https://www.uniprot.org/uniprot/Q00653" }},
+{data: { id: 'RELA', score: 5, href: "https://www.uniprot.org/uniprot/Q04206" }},
+{data: { id: 'REL', score: 5, href: "https://www.uniprot.org/uniprot/Q04864" }},
+{data: { id: 'CUL1', score: 5, href: "https://www.uniprot.org/uniprot/Q13616" }},
+{data: { id: '9641', score: 0 }},
+{data: { id: 'PPP6R1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UPN7" }},
+{data: { id: 'DKFZp781N011', score: 1, href: "https://www.uniprot.org/uniprot/Q68DS0" }}], 
+ edges: [{ data: { source: 'PPP6R2', target: 'ANKRD28', directed: 'false', weight: 0.9960530000000001} },
+{ data: { source: 'PPP6R2', target: 'PPP6C', directed: 'false', weight: 0.956585} },
+{ data: { source: 'PPP6C', target: 'ANKRD28', directed: 'false', weight: 0.8971110000000001} },
+{ data: { source: 'PPP6C', target: 'PPP6R1', directed: 'false', weight: 0.853864} },
+{ data: { source: 'CUL1', target: 'SKP1', directed: 'false', weight: 0.0884725} },
+{ data: { source: 'NFKB2', target: 'REL', directed: 'false', weight: 0.755448} },
+{ data: { source: 'SKP1', target: 'DKFZp781N011', directed: 'false', weight: 0.10913900000000001} },
+{ data: { source: 'RELA', target: 'REL', directed: 'false', weight: 0.37548000000000004} },
+{ data: { source: 'PPP6R1', target: 'ANKRD28', directed: 'false', weight: 0.9033} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    TNF-alpha/NF-kappa B signaling complex (CHUK, BTRC, NFKB2, PPP6C, REL, CUL1, IKBKE, SAPS2, SAPS1, ANKRD28, RELA, SKP1)	<br> Unweighted Density = 0.14
+    </section>
+    </body>
+    </html>
+    

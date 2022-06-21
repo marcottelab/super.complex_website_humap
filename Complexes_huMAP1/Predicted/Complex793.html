@@ -1,0 +1,115 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> PDXDC1 UGT8 CD244 POMT2 POMT1</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex794.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'UGT8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16880" }},
+{data: { id: 'CD244', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BZW8" }},
+{data: { id: 'POMT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y6A1" }},
+{data: { id: 'POMT2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UKY4" }},
+{data: { id: 'PDXDC1', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q6P996" }}], 
+ edges: [{ data: { source: 'PDXDC1', target: 'CD244', directed: 'false', weight: 0.301819} },
+{ data: { source: 'PDXDC1', target: 'POMT2', directed: 'false', weight: 0.06747439999999999} },
+{ data: { source: 'PDXDC1', target: 'POMT1', directed: 'false', weight: 0.0646543} },
+{ data: { source: 'CD244', target: 'POMT2', directed: 'false', weight: 0.777593} },
+{ data: { source: 'CD244', target: 'POMT1', directed: 'false', weight: 0.595434} },
+{ data: { source: 'POMT2', target: 'UGT8', directed: 'false', weight: 0.275357} },
+{ data: { source: 'POMT2', target: 'POMT1', directed: 'false', weight: 0.134819} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    PDXDC1 UGT8 CD244 POMT2 POMT1<br> Complex Score (from Super.Complex) = 0.57401<br> Unweighted Density = 0.70
+    </section>
+    </body>
+    </html>
+    

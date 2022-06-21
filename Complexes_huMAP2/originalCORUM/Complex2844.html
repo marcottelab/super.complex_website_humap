@@ -1,0 +1,163 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Exosome</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2845.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EXOSC10', score: 5, href: "https://www.uniprot.org/uniprot/Q01780" }},
+{data: { id: 'EXOSC9', score: 5, href: "https://www.uniprot.org/uniprot/Q06265" }},
+{data: { id: 'EXOSC2', score: 5, href: "https://www.uniprot.org/uniprot/Q13868" }},
+{data: { id: 'EXOSC7', score: 5, href: "https://www.uniprot.org/uniprot/Q15024" }},
+{data: { id: 'EXOSC6', score: 5, href: "https://www.uniprot.org/uniprot/Q5RKV6" }},
+{data: { id: 'DIS3L', score: 5, href: "https://www.uniprot.org/uniprot/Q8TF46" }},
+{data: { id: 'EXOSC8', score: 5, href: "https://www.uniprot.org/uniprot/Q96B26" }},
+{data: { id: 'MPHOSPH6', score: 5, href: "https://www.uniprot.org/uniprot/Q99547" }},
+{data: { id: 'EXOSC4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPD3" }},
+{data: { id: 'EXOSC5', score: 5, href: "https://www.uniprot.org/uniprot/Q9NQT4" }},
+{data: { id: 'PNAS-3', score: 1, href: "https://www.uniprot.org/uniprot/Q9NYS3" }},
+{data: { id: 'EXOSC1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3B2" }}], 
+ edges: [{ data: { source: 'EXOSC9', target: 'EXOSC7', directed: 'false', weight: 1.0} },
+{ data: { source: 'EXOSC9', target: 'PNAS-3', directed: 'false', weight: 1.0} },
+{ data: { source: 'EXOSC9', target: 'EXOSC10', directed: 'false', weight: 0.999992} },
+{ data: { source: 'EXOSC9', target: 'EXOSC2', directed: 'false', weight: 0.9999889999999999} },
+{ data: { source: 'EXOSC9', target: 'EXOSC1', directed: 'false', weight: 0.999986} },
+{ data: { source: 'EXOSC9', target: 'EXOSC5', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'EXOSC9', target: 'EXOSC4', directed: 'false', weight: 0.999965} },
+{ data: { source: 'EXOSC9', target: 'EXOSC8', directed: 'false', weight: 0.9999049999999999} },
+{ data: { source: 'EXOSC9', target: 'MPHOSPH6', directed: 'false', weight: 0.995028} },
+{ data: { source: 'EXOSC9', target: 'EXOSC6', directed: 'false', weight: 0.028426299999999998} },
+{ data: { source: 'EXOSC9', target: 'DIS3L', directed: 'false', weight: 0.0265596} },
+{ data: { source: 'EXOSC1', target: 'MPHOSPH6', directed: 'false', weight: 1.0} },
+{ data: { source: 'EXOSC1', target: 'EXOSC10', directed: 'false', weight: 1.0} },
+{ data: { source: 'EXOSC1', target: 'EXOSC2', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'EXOSC1', target: 'PNAS-3', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'EXOSC1', target: 'EXOSC4', directed: 'false', weight: 0.999991} },
+{ data: { source: 'EXOSC1', target: 'EXOSC8', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'EXOSC1', target: 'EXOSC7', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'EXOSC1', target: 'EXOSC5', directed: 'false', weight: 0.99961} },
+{ data: { source: 'EXOSC1', target: 'DIS3L', directed: 'false', weight: 0.9896870000000001} },
+{ data: { source: 'EXOSC1', target: 'EXOSC6', directed: 'false', weight: 0.8938870000000001} },
+{ data: { source: 'EXOSC2', target: 'EXOSC7', directed: 'false', weight: 1.0} },
+{ data: { source: 'EXOSC2', target: 'PNAS-3', directed: 'false', weight: 1.0} },
+{ data: { source: 'EXOSC2', target: 'EXOSC10', directed: 'false', weight: 1.0} },
+{ data: { source: 'EXOSC2', target: 'EXOSC4', directed: 'false', weight: 1.0} },
+{ data: { source: 'EXOSC2', target: 'EXOSC5', directed: 'false', weight: 0.9999180000000001} },
+{ data: { source: 'EXOSC2', target: 'MPHOSPH6', directed: 'false', weight: 0.9998959999999999} },
+{ data: { source: 'EXOSC2', target: 'EXOSC8', directed: 'false', weight: 0.9998610000000001} },
+{ data: { source: 'EXOSC2', target: 'EXOSC6', directed: 'false', weight: 0.9888610000000001} },
+{ data: { source: 'EXOSC2', target: 'DIS3L', directed: 'false', weight: 0.0783418} },
+{ data: { source: 'DIS3L', target: 'PNAS-3', directed: 'false', weight: 0.999991} },
+{ data: { source: 'DIS3L', target: 'EXOSC8', directed: 'false', weight: 0.998675} },
+{ data: { source: 'DIS3L', target: 'EXOSC7', directed: 'false', weight: 0.996167} },
+{ data: { source: 'DIS3L', target: 'EXOSC4', directed: 'false', weight: 0.0440103} },
+{ data: { source: 'DIS3L', target: 'EXOSC5', directed: 'false', weight: 0.037642} },
+{ data: { source: 'DIS3L', target: 'MPHOSPH6', directed: 'false', weight: 0.0219473} },
+{ data: { source: 'EXOSC4', target: 'PNAS-3', directed: 'false', weight: 0.999999} },
+{ data: { source: 'EXOSC4', target: 'EXOSC7', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'EXOSC4', target: 'EXOSC10', directed: 'false', weight: 0.999965} },
+{ data: { source: 'EXOSC4', target: 'MPHOSPH6', directed: 'false', weight: 0.999667} },
+{ data: { source: 'EXOSC4', target: 'EXOSC8', directed: 'false', weight: 0.9995209999999999} },
+{ data: { source: 'EXOSC4', target: 'EXOSC6', directed: 'false', weight: 0.9969530000000001} },
+{ data: { source: 'EXOSC4', target: 'EXOSC5', directed: 'false', weight: 0.9875209999999999} },
+{ data: { source: 'EXOSC8', target: 'EXOSC10', directed: 'false', weight: 0.999999} },
+{ data: { source: 'EXOSC8', target: 'EXOSC5', directed: 'false', weight: 0.9999} },
+{ data: { source: 'EXOSC8', target: 'EXOSC7', directed: 'false', weight: 0.9783870000000001} },
+{ data: { source: 'EXOSC8', target: 'PNAS-3', directed: 'false', weight: 0.969319} },
+{ data: { source: 'EXOSC8', target: 'MPHOSPH6', directed: 'false', weight: 0.685715} },
+{ data: { source: 'EXOSC8', target: 'EXOSC6', directed: 'false', weight: 0.0245252} },
+{ data: { source: 'PNAS-3', target: 'EXOSC5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PNAS-3', target: 'EXOSC7', directed: 'false', weight: 0.999984} },
+{ data: { source: 'PNAS-3', target: 'EXOSC10', directed: 'false', weight: 0.99955} },
+{ data: { source: 'PNAS-3', target: 'EXOSC6', directed: 'false', weight: 0.9993} },
+{ data: { source: 'PNAS-3', target: 'MPHOSPH6', directed: 'false', weight: 0.9917459999999999} },
+{ data: { source: 'EXOSC6', target: 'EXOSC7', directed: 'false', weight: 0.87472} },
+{ data: { source: 'EXOSC6', target: 'MPHOSPH6', directed: 'false', weight: 0.844202} },
+{ data: { source: 'EXOSC6', target: 'EXOSC5', directed: 'false', weight: 0.524766} },
+{ data: { source: 'EXOSC6', target: 'EXOSC10', directed: 'false', weight: 0.0299675} },
+{ data: { source: 'MPHOSPH6', target: 'EXOSC5', directed: 'false', weight: 0.999489} },
+{ data: { source: 'MPHOSPH6', target: 'EXOSC7', directed: 'false', weight: 0.998606} },
+{ data: { source: 'MPHOSPH6', target: 'EXOSC10', directed: 'false', weight: 0.992872} },
+{ data: { source: 'EXOSC10', target: 'EXOSC7', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'EXOSC10', target: 'EXOSC5', directed: 'false', weight: 0.999966} },
+{ data: { source: 'EXOSC5', target: 'EXOSC7', directed: 'false', weight: 0.9989030000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Exosome	<br> Unweighted Density = 0.97
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        3 interacting protein(s): <br>EXOSC2 EXOSC8 EXOSC5
+    </section>
+    </body>
+    </html>
+    

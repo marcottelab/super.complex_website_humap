@@ -1,0 +1,129 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> ATAC complex, GCN5-linked</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2287.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TADA2A', score: 5, href: "https://www.uniprot.org/uniprot/O75478" }},
+{data: { id: 'TADA3L', score: 5, href: "https://www.uniprot.org/uniprot/O75528" }},
+{data: { id: 'WDR5', score: 5, href: "https://www.uniprot.org/uniprot/P61964" }},
+{data: { id: 'DKFZp666G145', score: 3, href: "https://www.uniprot.org/uniprot/Q658N3" }},
+{data: { id: 'ZZZ3', score: 5, href: "https://www.uniprot.org/uniprot/Q8IYH5" }},
+{data: { id: 'KAT2A', score: 5, href: "https://www.uniprot.org/uniprot/Q92830" }},
+{data: { id: 'SGF29', score: 5, href: "https://www.uniprot.org/uniprot/Q96ES7" }},
+{data: { id: 'KAT14', score: 5, href: "https://www.uniprot.org/uniprot/Q9H8E8" }},
+{data: { id: 'MBIP', score: 5, href: "https://www.uniprot.org/uniprot/Q9NS73" }},
+{data: { id: 'YEATS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULM3" }}], 
+ edges: [{ data: { source: 'KAT2A', target: 'SGF29', directed: 'false', weight: 0.9811139999999999} },
+{ data: { source: 'KAT2A', target: 'TADA3L', directed: 'false', weight: 0.961841} },
+{ data: { source: 'KAT2A', target: 'MBIP', directed: 'false', weight: 0.5846210000000001} },
+{ data: { source: 'KAT2A', target: 'WDR5', directed: 'false', weight: 0.029415800000000002} },
+{ data: { source: 'KAT2A', target: 'TADA2A', directed: 'false', weight: 0.0205704} },
+{ data: { source: 'DKFZp666G145', target: 'MBIP', directed: 'false', weight: 0.33103899999999997} },
+{ data: { source: 'MBIP', target: 'KAT14', directed: 'false', weight: 0.999909} },
+{ data: { source: 'MBIP', target: 'ZZZ3', directed: 'false', weight: 0.999246} },
+{ data: { source: 'MBIP', target: 'YEATS2', directed: 'false', weight: 0.9990209999999999} },
+{ data: { source: 'MBIP', target: 'WDR5', directed: 'false', weight: 0.992036} },
+{ data: { source: 'MBIP', target: 'TADA2A', directed: 'false', weight: 0.9865079999999999} },
+{ data: { source: 'MBIP', target: 'TADA3L', directed: 'false', weight: 0.9461579999999999} },
+{ data: { source: 'MBIP', target: 'SGF29', directed: 'false', weight: 0.872474} },
+{ data: { source: 'TADA3L', target: 'SGF29', directed: 'false', weight: 0.999999} },
+{ data: { source: 'TADA3L', target: 'KAT14', directed: 'false', weight: 0.986504} },
+{ data: { source: 'TADA3L', target: 'TADA2A', directed: 'false', weight: 0.9629459999999999} },
+{ data: { source: 'TADA3L', target: 'YEATS2', directed: 'false', weight: 0.895144} },
+{ data: { source: 'TADA3L', target: 'ZZZ3', directed: 'false', weight: 0.818245} },
+{ data: { source: 'TADA3L', target: 'WDR5', directed: 'false', weight: 0.0211511} },
+{ data: { source: 'YEATS2', target: 'SGF29', directed: 'false', weight: 0.969403} },
+{ data: { source: 'YEATS2', target: 'WDR5', directed: 'false', weight: 0.963283} },
+{ data: { source: 'YEATS2', target: 'ZZZ3', directed: 'false', weight: 0.08568719999999999} },
+{ data: { source: 'YEATS2', target: 'KAT14', directed: 'false', weight: 0.0580374} },
+{ data: { source: 'YEATS2', target: 'TADA2A', directed: 'false', weight: 0.021359299999999998} },
+{ data: { source: 'KAT14', target: 'WDR5', directed: 'false', weight: 0.9604950000000001} },
+{ data: { source: 'KAT14', target: 'ZZZ3', directed: 'false', weight: 0.0604077} },
+{ data: { source: 'KAT14', target: 'TADA2A', directed: 'false', weight: 0.0200895} },
+{ data: { source: 'ZZZ3', target: 'WDR5', directed: 'false', weight: 0.971628} },
+{ data: { source: 'ZZZ3', target: 'SGF29', directed: 'false', weight: 0.8712690000000001} },
+{ data: { source: 'ZZZ3', target: 'TADA2A', directed: 'false', weight: 0.0247656} },
+{ data: { source: 'WDR5', target: 'TADA2A', directed: 'false', weight: 0.238323} },
+{ data: { source: 'TADA2A', target: 'SGF29', directed: 'false', weight: 0.971748} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    ATAC complex, GCN5-linked	<br> Unweighted Density = 0.71
+    </section>
+    </body>
+    </html>
+    

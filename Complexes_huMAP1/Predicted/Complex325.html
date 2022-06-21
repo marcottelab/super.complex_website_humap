@@ -1,0 +1,189 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 Multisynthetase complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex326.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GFPT2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94808" }},
+{data: { id: 'GFPT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q06210" }},
+{data: { id: 'SDCBP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00560" }},
+{data: { id: 'EEF1E1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43324" }},
+{data: { id: 'KARS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15046" }},
+{data: { id: 'LARS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P2J5" }},
+{data: { id: 'TARSL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/A2RTX5" }},
+{data: { id: 'IARS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P41252" }},
+{data: { id: 'MARS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P56192" }},
+{data: { id: 'AIMP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12904" }},
+{data: { id: 'RARS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P54136" }},
+{data: { id: 'DARS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P14868" }},
+{data: { id: 'QARS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P07814" }},
+{data: { id: 'YTHDF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y5A9" }},
+{data: { id: 'SIRT6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N6T7" }},
+{data: { id: 'AIMP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13155" }}], 
+ edges: [{ data: { source: 'KARS', target: 'MARS', directed: 'false', weight: 0.9982639999999999} },
+{ data: { source: 'KARS', target: 'RARS', directed: 'false', weight: 0.998122} },
+{ data: { source: 'KARS', target: 'IARS', directed: 'false', weight: 0.997459} },
+{ data: { source: 'KARS', target: 'QARS', directed: 'false', weight: 0.997402} },
+{ data: { source: 'KARS', target: 'EEF1E1', directed: 'false', weight: 0.996618} },
+{ data: { source: 'KARS', target: 'DARS', directed: 'false', weight: 0.979759} },
+{ data: { source: 'KARS', target: 'AIMP2', directed: 'false', weight: 0.975936} },
+{ data: { source: 'KARS', target: 'LARS', directed: 'false', weight: 0.975924} },
+{ data: { source: 'KARS', target: 'AIMP1', directed: 'false', weight: 0.9759209999999999} },
+{ data: { source: 'KARS', target: 'SDCBP', directed: 'false', weight: 0.136184} },
+{ data: { source: 'KARS', target: 'YTHDF2', directed: 'false', weight: 0.0797143} },
+{ data: { source: 'RARS', target: 'IARS', directed: 'false', weight: 0.9997870000000001} },
+{ data: { source: 'RARS', target: 'AIMP1', directed: 'false', weight: 0.9993200000000001} },
+{ data: { source: 'RARS', target: 'MARS', directed: 'false', weight: 0.9992030000000001} },
+{ data: { source: 'RARS', target: 'QARS', directed: 'false', weight: 0.995035} },
+{ data: { source: 'RARS', target: 'AIMP2', directed: 'false', weight: 0.992539} },
+{ data: { source: 'RARS', target: 'EEF1E1', directed: 'false', weight: 0.986461} },
+{ data: { source: 'RARS', target: 'LARS', directed: 'false', weight: 0.9758959999999999} },
+{ data: { source: 'RARS', target: 'DARS', directed: 'false', weight: 0.9758950000000001} },
+{ data: { source: 'RARS', target: 'SDCBP', directed: 'false', weight: 0.11553} },
+{ data: { source: 'RARS', target: 'YTHDF2', directed: 'false', weight: 0.0363805} },
+{ data: { source: 'SDCBP', target: 'AIMP2', directed: 'false', weight: 0.702426} },
+{ data: { source: 'SDCBP', target: 'TARSL2', directed: 'false', weight: 0.526891} },
+{ data: { source: 'SDCBP', target: 'EEF1E1', directed: 'false', weight: 0.370217} },
+{ data: { source: 'SDCBP', target: 'AIMP1', directed: 'false', weight: 0.30703600000000003} },
+{ data: { source: 'SDCBP', target: 'DARS', directed: 'false', weight: 0.21793400000000002} },
+{ data: { source: 'SDCBP', target: 'LARS', directed: 'false', weight: 0.20933600000000002} },
+{ data: { source: 'SDCBP', target: 'IARS', directed: 'false', weight: 0.19083699999999998} },
+{ data: { source: 'SDCBP', target: 'QARS', directed: 'false', weight: 0.167627} },
+{ data: { source: 'SDCBP', target: 'MARS', directed: 'false', weight: 0.139502} },
+{ data: { source: 'QARS', target: 'AIMP2', directed: 'false', weight: 0.9974290000000001} },
+{ data: { source: 'QARS', target: 'DARS', directed: 'false', weight: 0.9970620000000001} },
+{ data: { source: 'QARS', target: 'AIMP1', directed: 'false', weight: 0.994034} },
+{ data: { source: 'QARS', target: 'MARS', directed: 'false', weight: 0.9874569999999999} },
+{ data: { source: 'QARS', target: 'LARS', directed: 'false', weight: 0.975922} },
+{ data: { source: 'QARS', target: 'IARS', directed: 'false', weight: 0.9758979999999999} },
+{ data: { source: 'QARS', target: 'EEF1E1', directed: 'false', weight: 0.9758889999999999} },
+{ data: { source: 'QARS', target: 'YTHDF2', directed: 'false', weight: 0.398733} },
+{ data: { source: 'GFPT2', target: 'SIRT6', directed: 'false', weight: 0.9026799999999999} },
+{ data: { source: 'GFPT2', target: 'TARSL2', directed: 'false', weight: 0.6229279999999999} },
+{ data: { source: 'EEF1E1', target: 'IARS', directed: 'false', weight: 0.9998870000000001} },
+{ data: { source: 'EEF1E1', target: 'MARS', directed: 'false', weight: 0.997826} },
+{ data: { source: 'EEF1E1', target: 'DARS', directed: 'false', weight: 0.993771} },
+{ data: { source: 'EEF1E1', target: 'AIMP1', directed: 'false', weight: 0.9759209999999999} },
+{ data: { source: 'EEF1E1', target: 'LARS', directed: 'false', weight: 0.975914} },
+{ data: { source: 'EEF1E1', target: 'AIMP2', directed: 'false', weight: 0.9758959999999999} },
+{ data: { source: 'EEF1E1', target: 'YTHDF2', directed: 'false', weight: 0.0192885} },
+{ data: { source: 'IARS', target: 'MARS', directed: 'false', weight: 0.9997799999999999} },
+{ data: { source: 'IARS', target: 'LARS', directed: 'false', weight: 0.9988} },
+{ data: { source: 'IARS', target: 'AIMP1', directed: 'false', weight: 0.992401} },
+{ data: { source: 'IARS', target: 'DARS', directed: 'false', weight: 0.9893049999999999} },
+{ data: { source: 'IARS', target: 'AIMP2', directed: 'false', weight: 0.9882799999999999} },
+{ data: { source: 'IARS', target: 'YTHDF2', directed: 'false', weight: 0.38866300000000004} },
+{ data: { source: 'MARS', target: 'DARS', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'MARS', target: 'AIMP1', directed: 'false', weight: 0.9999299999999999} },
+{ data: { source: 'MARS', target: 'AIMP2', directed: 'false', weight: 0.99929} },
+{ data: { source: 'MARS', target: 'LARS', directed: 'false', weight: 0.997748} },
+{ data: { source: 'MARS', target: 'YTHDF2', directed: 'false', weight: 0.100952} },
+{ data: { source: 'SIRT6', target: 'GFPT1', directed: 'false', weight: 0.6234430000000001} },
+{ data: { source: 'YTHDF2', target: 'AIMP1', directed: 'false', weight: 0.509232} },
+{ data: { source: 'YTHDF2', target: 'LARS', directed: 'false', weight: 0.0589429} },
+{ data: { source: 'YTHDF2', target: 'AIMP2', directed: 'false', weight: 0.0424376} },
+{ data: { source: 'YTHDF2', target: 'DARS', directed: 'false', weight: 0.016868099999999997} },
+{ data: { source: 'AIMP2', target: 'DARS', directed: 'false', weight: 0.9962549999999999} },
+{ data: { source: 'AIMP2', target: 'AIMP1', directed: 'false', weight: 0.976775} },
+{ data: { source: 'AIMP2', target: 'LARS', directed: 'false', weight: 0.9759329999999999} },
+{ data: { source: 'DARS', target: 'AIMP1', directed: 'false', weight: 0.999635} },
+{ data: { source: 'DARS', target: 'LARS', directed: 'false', weight: 0.982991} },
+{ data: { source: 'TARSL2', target: 'GFPT1', directed: 'false', weight: 0.46690200000000004} },
+{ data: { source: 'AIMP1', target: 'LARS', directed: 'false', weight: 0.97593} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 Multisynthetase complex<br> Complex Score (from Super.Complex) = 0.76569<br> Unweighted Density = 0.58
+    </section>
+    </body>
+    </html>
+    

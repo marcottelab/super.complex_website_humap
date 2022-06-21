@@ -1,0 +1,165 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 Set1B complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex709.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'BOD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96IK1" }},
+{data: { id: 'KDM6A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15550" }},
+{data: { id: 'BOD1L1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NFC6" }},
+{data: { id: 'PAXIP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6ZW49" }},
+{data: { id: 'CXXC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P0U4" }},
+{data: { id: 'WDR5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61964" }},
+{data: { id: 'ASH2L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UBL3" }},
+{data: { id: 'SETD1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UPS6" }},
+{data: { id: 'RBBP5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15291" }},
+{data: { id: 'SETD1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15047" }},
+{data: { id: 'KMT2B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UMN6" }},
+{data: { id: 'ATN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P54259" }}], 
+ edges: [{ data: { source: 'RBBP5', target: 'CXXC1', directed: 'false', weight: 0.942367} },
+{ data: { source: 'RBBP5', target: 'SETD1B', directed: 'false', weight: 0.7619739999999999} },
+{ data: { source: 'RBBP5', target: 'WDR5', directed: 'false', weight: 0.7104} },
+{ data: { source: 'RBBP5', target: 'ASH2L', directed: 'false', weight: 0.669512} },
+{ data: { source: 'RBBP5', target: 'BOD1', directed: 'false', weight: 0.263819} },
+{ data: { source: 'RBBP5', target: 'SETD1A', directed: 'false', weight: 0.202422} },
+{ data: { source: 'RBBP5', target: 'KDM6A', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RBBP5', target: 'ATN1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RBBP5', target: 'BOD1L1', directed: 'false', weight: 0.0296632} },
+{ data: { source: 'WDR5', target: 'ASH2L', directed: 'false', weight: 0.992806} },
+{ data: { source: 'WDR5', target: 'ATN1', directed: 'false', weight: 0.982352} },
+{ data: { source: 'WDR5', target: 'PAXIP1', directed: 'false', weight: 0.9799479999999999} },
+{ data: { source: 'WDR5', target: 'KDM6A', directed: 'false', weight: 0.974462} },
+{ data: { source: 'WDR5', target: 'SETD1B', directed: 'false', weight: 0.9673200000000001} },
+{ data: { source: 'WDR5', target: 'CXXC1', directed: 'false', weight: 0.9610209999999999} },
+{ data: { source: 'WDR5', target: 'KMT2B', directed: 'false', weight: 0.9600420000000001} },
+{ data: { source: 'WDR5', target: 'SETD1A', directed: 'false', weight: 0.938709} },
+{ data: { source: 'WDR5', target: 'BOD1L1', directed: 'false', weight: 0.758884} },
+{ data: { source: 'WDR5', target: 'BOD1', directed: 'false', weight: 0.583972} },
+{ data: { source: 'ATN1', target: 'KMT2B', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ATN1', target: 'KDM6A', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ATN1', target: 'PAXIP1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ATN1', target: 'ASH2L', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ATN1', target: 'SETD1B', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ATN1', target: 'BOD1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'ATN1', target: 'BOD1L1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'ATN1', target: 'CXXC1', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'ATN1', target: 'SETD1A', directed: 'false', weight: 0.120276} },
+{ data: { source: 'PAXIP1', target: 'KMT2B', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PAXIP1', target: 'KDM6A', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PAXIP1', target: 'ASH2L', directed: 'false', weight: 0.151455} },
+{ data: { source: 'KMT2B', target: 'KDM6A', directed: 'false', weight: 0.171414} },
+{ data: { source: 'KMT2B', target: 'ASH2L', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CXXC1', target: 'SETD1A', directed: 'false', weight: 0.991296} },
+{ data: { source: 'CXXC1', target: 'SETD1B', directed: 'false', weight: 0.979276} },
+{ data: { source: 'CXXC1', target: 'ASH2L', directed: 'false', weight: 0.829432} },
+{ data: { source: 'CXXC1', target: 'BOD1L1', directed: 'false', weight: 0.790716} },
+{ data: { source: 'CXXC1', target: 'KDM6A', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'SETD1A', target: 'BOD1L1', directed: 'false', weight: 0.880941} },
+{ data: { source: 'SETD1A', target: 'SETD1B', directed: 'false', weight: 0.29546300000000003} },
+{ data: { source: 'SETD1A', target: 'ASH2L', directed: 'false', weight: 0.134825} },
+{ data: { source: 'SETD1A', target: 'KDM6A', directed: 'false', weight: 0.120276} },
+{ data: { source: 'KDM6A', target: 'ASH2L', directed: 'false', weight: 0.151455} },
+{ data: { source: 'KDM6A', target: 'SETD1B', directed: 'false', weight: 0.151455} },
+{ data: { source: 'KDM6A', target: 'BOD1L1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'BOD1', target: 'SETD1B', directed: 'false', weight: 0.833442} },
+{ data: { source: 'BOD1', target: 'ASH2L', directed: 'false', weight: 0.254207} },
+{ data: { source: 'BOD1L1', target: 'ASH2L', directed: 'false', weight: 0.166865} },
+{ data: { source: 'BOD1L1', target: 'SETD1B', directed: 'false', weight: 0.159729} },
+{ data: { source: 'ASH2L', target: 'SETD1B', directed: 'false', weight: 0.5569109999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 Set1B complex<br> Complex Score (from Super.Complex) = 0.60636<br> Unweighted Density = 0.76
+    </section>
+    </body>
+    </html>
+    

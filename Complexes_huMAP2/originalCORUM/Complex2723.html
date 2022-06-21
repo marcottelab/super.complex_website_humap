@@ -1,0 +1,91 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> ING5 complex (ING5, JADE3, KAT7, MEAF6)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2724.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'KAT7', score: 5, href: "https://www.uniprot.org/uniprot/O95251" }},
+{data: { id: 'ING5', score: 5, href: "https://www.uniprot.org/uniprot/Q8WYH8" }},
+{data: { id: 'PHF16', score: 5, href: "https://www.uniprot.org/uniprot/Q92613" }},
+{data: { id: 'MEAF6', score: 5, href: "https://www.uniprot.org/uniprot/Q9HAF1" }}], 
+ edges: [{ data: { source: 'KAT7', target: 'PHF16', directed: 'false', weight: 0.6620149999999999} },
+{ data: { source: 'KAT7', target: 'MEAF6', directed: 'false', weight: 0.164919} },
+{ data: { source: 'KAT7', target: 'ING5', directed: 'false', weight: 0.0449042} },
+{ data: { source: 'MEAF6', target: 'PHF16', directed: 'false', weight: 0.946519} },
+{ data: { source: 'MEAF6', target: 'ING5', directed: 'false', weight: 0.466095} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    ING5 complex (ING5, JADE3, KAT7, MEAF6)	<br> Unweighted Density = 0.83
+    </section>
+    </body>
+    </html>
+    

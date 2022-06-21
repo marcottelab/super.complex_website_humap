@@ -1,0 +1,120 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> DNA synthesome complex (15 subunits)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex606.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'POLA1', score: 5, href: "https://www.uniprot.org/uniprot/P09884" }},
+{data: { id: 'PCNA', score: 5, href: "https://www.uniprot.org/uniprot/P12004" }},
+{data: { id: 'LIG1', score: 5, href: "https://www.uniprot.org/uniprot/P18858" }},
+{data: { id: 'POLD1', score: 5, href: "https://www.uniprot.org/uniprot/P28340" }},
+{data: { id: 'RFC1', score: 5, href: "https://www.uniprot.org/uniprot/P35251" }},
+{data: { id: 'POLD2', score: 5, href: "https://www.uniprot.org/uniprot/P49005" }},
+{data: { id: 'PRIM1', score: 5, href: "https://www.uniprot.org/uniprot/P49642" }},
+{data: { id: 'PRIM2A', score: 5, href: "https://www.uniprot.org/uniprot/P49643" }},
+{data: { id: 'POLE2', score: 5, href: "https://www.uniprot.org/uniprot/P56282" }},
+{data: { id: 'POLE', score: 5, href: "https://www.uniprot.org/uniprot/Q07864" }},
+{data: { id: 'POLA2', score: 5, href: "https://www.uniprot.org/uniprot/Q14181" }},
+{data: { id: 'POLD3', score: 5, href: "https://www.uniprot.org/uniprot/Q15054" }},
+{data: { id: 'POLD4', score: 5, href: "https://www.uniprot.org/uniprot/Q9HCU8" }},
+{data: { id: 'POLE4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NR33" }},
+{data: { id: 'POLE3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRF9" }}], 
+ edges: [{ data: { source: 'POLD1', target: 'POLD2', directed: 'false', weight: 0.998445} },
+{ data: { source: 'PRIM1', target: 'POLA1', directed: 'false', weight: 0.96819} },
+{ data: { source: 'PRIM1', target: 'PRIM2A', directed: 'false', weight: 0.819625} },
+{ data: { source: 'PRIM1', target: 'POLA2', directed: 'false', weight: 0.643833} },
+{ data: { source: 'POLA2', target: 'POLA1', directed: 'false', weight: 0.902167} },
+{ data: { source: 'POLD3', target: 'POLD2', directed: 'false', weight: 0.0608953} },
+{ data: { source: 'POLE4', target: 'POLE3', directed: 'false', weight: 0.950932} },
+{ data: { source: 'POLE4', target: 'POLE', directed: 'false', weight: 0.310567} },
+{ data: { source: 'POLE4', target: 'POLE2', directed: 'false', weight: 0.0449869} },
+{ data: { source: 'POLE2', target: 'POLE', directed: 'false', weight: 0.215642} },
+{ data: { source: 'POLD4', target: 'POLD2', directed: 'false', weight: 0.9560930000000001} },
+{ data: { source: 'POLE3', target: 'POLE', directed: 'false', weight: 0.270331} },
+{ data: { source: 'POLA1', target: 'POLE', directed: 'false', weight: 0.579335} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    DNA synthesome complex (15 subunits)	<br> Unweighted Density = 0.12
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        3 interacting protein(s): <br>POLA1 PRIM1 POLA2
+    </section>
+    </body>
+    </html>
+    

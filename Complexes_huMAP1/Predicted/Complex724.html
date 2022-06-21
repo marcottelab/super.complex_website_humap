@@ -1,0 +1,145 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 Hip1R-cortactin complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex725.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PICALM', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13492" }},
+{data: { id: 'CLTCL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P53675" }},
+{data: { id: 'CLINT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14677" }},
+{data: { id: 'HIP1R', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75146" }},
+{data: { id: 'STAMBP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95630" }},
+{data: { id: 'GTSE1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NYZ3" }},
+{data: { id: 'PFKFB3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16875" }},
+{data: { id: 'DENND1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TEH3" }},
+{data: { id: 'GAK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14976" }},
+{data: { id: 'PIK3C2A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00443" }}], 
+ edges: [{ data: { source: 'CLINT1', target: 'CLTCL1', directed: 'false', weight: 0.605769} },
+{ data: { source: 'CLINT1', target: 'PIK3C2A', directed: 'false', weight: 0.555558} },
+{ data: { source: 'CLINT1', target: 'HIP1R', directed: 'false', weight: 0.478813} },
+{ data: { source: 'CLINT1', target: 'STAMBP', directed: 'false', weight: 0.427098} },
+{ data: { source: 'CLINT1', target: 'PICALM', directed: 'false', weight: 0.312639} },
+{ data: { source: 'CLINT1', target: 'DENND1A', directed: 'false', weight: 0.15970399999999998} },
+{ data: { source: 'CLINT1', target: 'GAK', directed: 'false', weight: 0.08262989999999999} },
+{ data: { source: 'STAMBP', target: 'CLTCL1', directed: 'false', weight: 0.9299729999999999} },
+{ data: { source: 'STAMBP', target: 'PIK3C2A', directed: 'false', weight: 0.7186670000000001} },
+{ data: { source: 'STAMBP', target: 'GAK', directed: 'false', weight: 0.6669619999999999} },
+{ data: { source: 'STAMBP', target: 'DENND1A', directed: 'false', weight: 0.0964212} },
+{ data: { source: 'STAMBP', target: 'HIP1R', directed: 'false', weight: 0.09289410000000001} },
+{ data: { source: 'STAMBP', target: 'PICALM', directed: 'false', weight: 0.0911987} },
+{ data: { source: 'PFKFB3', target: 'HIP1R', directed: 'false', weight: 0.308924} },
+{ data: { source: 'GTSE1', target: 'PICALM', directed: 'false', weight: 0.558426} },
+{ data: { source: 'GTSE1', target: 'HIP1R', directed: 'false', weight: 0.537763} },
+{ data: { source: 'GTSE1', target: 'DENND1A', directed: 'false', weight: 0.112978} },
+{ data: { source: 'GAK', target: 'CLTCL1', directed: 'false', weight: 0.593422} },
+{ data: { source: 'GAK', target: 'HIP1R', directed: 'false', weight: 0.427257} },
+{ data: { source: 'GAK', target: 'PIK3C2A', directed: 'false', weight: 0.21817199999999998} },
+{ data: { source: 'GAK', target: 'DENND1A', directed: 'false', weight: 0.10206599999999999} },
+{ data: { source: 'GAK', target: 'PICALM', directed: 'false', weight: 0.0935398} },
+{ data: { source: 'DENND1A', target: 'PICALM', directed: 'false', weight: 0.801531} },
+{ data: { source: 'DENND1A', target: 'HIP1R', directed: 'false', weight: 0.478813} },
+{ data: { source: 'DENND1A', target: 'CLTCL1', directed: 'false', weight: 0.283875} },
+{ data: { source: 'DENND1A', target: 'PIK3C2A', directed: 'false', weight: 0.159179} },
+{ data: { source: 'PICALM', target: 'HIP1R', directed: 'false', weight: 0.998074} },
+{ data: { source: 'PICALM', target: 'CLTCL1', directed: 'false', weight: 0.892317} },
+{ data: { source: 'PICALM', target: 'PIK3C2A', directed: 'false', weight: 0.718195} },
+{ data: { source: 'CLTCL1', target: 'PIK3C2A', directed: 'false', weight: 0.800037} },
+{ data: { source: 'CLTCL1', target: 'HIP1R', directed: 'false', weight: 0.677269} },
+{ data: { source: 'PIK3C2A', target: 'HIP1R', directed: 'false', weight: 0.594202} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 Hip1R-cortactin complex<br> Complex Score (from Super.Complex) = 0.59486<br> Unweighted Density = 0.71
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,108 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> PAK6 ARHGEF11 PAK5 PAK4</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex465.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PAK4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O96013" }},
+{data: { id: 'PAK6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NQU5" }},
+{data: { id: 'PAK5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P286" }},
+{data: { id: 'ARHGEF11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15085" }}], 
+ edges: [{ data: { source: 'PAK4', target: 'PAK6', directed: 'false', weight: 0.9742860000000001} },
+{ data: { source: 'PAK4', target: 'PAK5', directed: 'false', weight: 0.9680979999999999} },
+{ data: { source: 'PAK4', target: 'ARHGEF11', directed: 'false', weight: 0.95641} },
+{ data: { source: 'PAK6', target: 'PAK5', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PAK6', target: 'ARHGEF11', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ARHGEF11', target: 'PAK5', directed: 'false', weight: 0.151455} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    PAK6 ARHGEF11 PAK5 PAK4<br> Complex Score (from Super.Complex) = 0.71277<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

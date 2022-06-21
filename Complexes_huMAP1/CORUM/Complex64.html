@@ -1,0 +1,297 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> PA700 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex65.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PSMD2', score: 5, href: "https://www.uniprot.org/uniprot/Q13200" }},
+{data: { id: 'PSMD14', score: 5, href: "https://www.uniprot.org/uniprot/O00487" }},
+{data: { id: 'PSMD9', score: 5, href: "https://www.uniprot.org/uniprot/O00233" }},
+{data: { id: 'PSMC4', score: 5, href: "https://www.uniprot.org/uniprot/P43686" }},
+{data: { id: 'PSMD13', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNM6" }},
+{data: { id: 'PSMC3', score: 5, href: "https://www.uniprot.org/uniprot/P17980" }},
+{data: { id: 'PSMD8', score: 5, href: "https://www.uniprot.org/uniprot/P48556" }},
+{data: { id: 'PSMC6', score: 5, href: "https://www.uniprot.org/uniprot/P62333" }},
+{data: { id: 'PSMD10', score: 5, href: "https://www.uniprot.org/uniprot/O75832" }},
+{data: { id: 'PSMC1', score: 5, href: "https://www.uniprot.org/uniprot/P62191" }},
+{data: { id: 'PSMD12', score: 5, href: "https://www.uniprot.org/uniprot/O00232" }},
+{data: { id: 'PSMC2', score: 5, href: "https://www.uniprot.org/uniprot/P35998" }},
+{data: { id: 'PSMD3', score: 5, href: "https://www.uniprot.org/uniprot/O43242" }},
+{data: { id: 'PSMD1', score: 5, href: "https://www.uniprot.org/uniprot/Q99460" }},
+{data: { id: 'PSMD6', score: 5, href: "https://www.uniprot.org/uniprot/Q15008" }},
+{data: { id: 'PSMC5', score: 5, href: "https://www.uniprot.org/uniprot/P62195" }},
+{data: { id: 'PSMD4', score: 5, href: "https://www.uniprot.org/uniprot/P55036" }},
+{data: { id: 'PSMD5', score: 5, href: "https://www.uniprot.org/uniprot/Q16401" }},
+{data: { id: 'PSMD11', score: 5, href: "https://www.uniprot.org/uniprot/O00231" }},
+{data: { id: 'PSMD7', score: 5, href: "https://www.uniprot.org/uniprot/P51665" }}], 
+ edges: [{ data: { source: 'PSMD2', target: 'PSMD10', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD2', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD2', target: 'PSMD14', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD2', target: 'PSMD4', directed: 'false', weight: 0.999966} },
+{ data: { source: 'PSMD2', target: 'PSMD11', directed: 'false', weight: 0.999956} },
+{ data: { source: 'PSMD2', target: 'PSMD7', directed: 'false', weight: 0.9999239999999999} },
+{ data: { source: 'PSMD2', target: 'PSMD6', directed: 'false', weight: 0.999817} },
+{ data: { source: 'PSMD2', target: 'PSMD12', directed: 'false', weight: 0.9997860000000001} },
+{ data: { source: 'PSMD2', target: 'PSMC3', directed: 'false', weight: 0.999432} },
+{ data: { source: 'PSMD2', target: 'PSMD1', directed: 'false', weight: 0.999342} },
+{ data: { source: 'PSMD2', target: 'PSMD5', directed: 'false', weight: 0.998547} },
+{ data: { source: 'PSMD2', target: 'PSMC1', directed: 'false', weight: 0.9977090000000001} },
+{ data: { source: 'PSMD2', target: 'PSMD3', directed: 'false', weight: 0.997518} },
+{ data: { source: 'PSMD2', target: 'PSMC6', directed: 'false', weight: 0.9969520000000001} },
+{ data: { source: 'PSMD2', target: 'PSMC5', directed: 'false', weight: 0.981664} },
+{ data: { source: 'PSMD2', target: 'PSMC2', directed: 'false', weight: 0.9513} },
+{ data: { source: 'PSMD2', target: 'PSMC4', directed: 'false', weight: 0.922264} },
+{ data: { source: 'PSMD2', target: 'PSMD8', directed: 'false', weight: 0.9189579999999999} },
+{ data: { source: 'PSMD2', target: 'PSMD9', directed: 'false', weight: 0.48597700000000005} },
+{ data: { source: 'PSMD9', target: 'PSMC3', directed: 'false', weight: 0.989949} },
+{ data: { source: 'PSMD9', target: 'PSMD7', directed: 'false', weight: 0.928049} },
+{ data: { source: 'PSMD9', target: 'PSMD13', directed: 'false', weight: 0.921533} },
+{ data: { source: 'PSMD9', target: 'PSMC6', directed: 'false', weight: 0.909164} },
+{ data: { source: 'PSMD9', target: 'PSMD14', directed: 'false', weight: 0.850376} },
+{ data: { source: 'PSMD9', target: 'PSMC4', directed: 'false', weight: 0.8459139999999999} },
+{ data: { source: 'PSMD9', target: 'PSMD3', directed: 'false', weight: 0.825824} },
+{ data: { source: 'PSMD9', target: 'PSMD5', directed: 'false', weight: 0.749908} },
+{ data: { source: 'PSMD9', target: 'PSMD6', directed: 'false', weight: 0.73945} },
+{ data: { source: 'PSMD9', target: 'PSMD11', directed: 'false', weight: 0.701182} },
+{ data: { source: 'PSMD9', target: 'PSMD1', directed: 'false', weight: 0.640441} },
+{ data: { source: 'PSMD9', target: 'PSMD4', directed: 'false', weight: 0.609154} },
+{ data: { source: 'PSMD9', target: 'PSMD8', directed: 'false', weight: 0.588093} },
+{ data: { source: 'PSMD9', target: 'PSMC5', directed: 'false', weight: 0.543549} },
+{ data: { source: 'PSMD9', target: 'PSMC2', directed: 'false', weight: 0.5416770000000001} },
+{ data: { source: 'PSMD9', target: 'PSMD12', directed: 'false', weight: 0.430267} },
+{ data: { source: 'PSMD9', target: 'PSMD10', directed: 'false', weight: 0.139738} },
+{ data: { source: 'PSMD9', target: 'PSMC1', directed: 'false', weight: 0.121121} },
+{ data: { source: 'PSMD14', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD14', target: 'PSMC2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMD14', target: 'PSMD13', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'PSMD14', target: 'PSMD10', directed: 'false', weight: 0.999994} },
+{ data: { source: 'PSMD14', target: 'PSMD4', directed: 'false', weight: 0.999993} },
+{ data: { source: 'PSMD14', target: 'PSMD12', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'PSMD14', target: 'PSMD6', directed: 'false', weight: 0.999974} },
+{ data: { source: 'PSMD14', target: 'PSMD11', directed: 'false', weight: 0.999916} },
+{ data: { source: 'PSMD14', target: 'PSMD8', directed: 'false', weight: 0.999916} },
+{ data: { source: 'PSMD14', target: 'PSMD3', directed: 'false', weight: 0.999659} },
+{ data: { source: 'PSMD14', target: 'PSMD7', directed: 'false', weight: 0.9942700000000001} },
+{ data: { source: 'PSMD14', target: 'PSMD5', directed: 'false', weight: 0.984676} },
+{ data: { source: 'PSMC4', target: 'PSMD13', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD10', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC4', target: 'PSMD11', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'PSMC4', target: 'PSMD12', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'PSMC4', target: 'PSMD6', directed: 'false', weight: 0.999976} },
+{ data: { source: 'PSMC4', target: 'PSMD1', directed: 'false', weight: 0.999919} },
+{ data: { source: 'PSMC4', target: 'PSMD4', directed: 'false', weight: 0.999877} },
+{ data: { source: 'PSMC4', target: 'PSMC1', directed: 'false', weight: 0.999402} },
+{ data: { source: 'PSMC4', target: 'PSMD3', directed: 'false', weight: 0.9993770000000001} },
+{ data: { source: 'PSMC4', target: 'PSMC5', directed: 'false', weight: 0.9991} },
+{ data: { source: 'PSMC4', target: 'PSMC6', directed: 'false', weight: 0.998635} },
+{ data: { source: 'PSMC4', target: 'PSMC3', directed: 'false', weight: 0.998376} },
+{ data: { source: 'PSMC4', target: 'PSMD8', directed: 'false', weight: 0.994826} },
+{ data: { source: 'PSMC4', target: 'PSMD5', directed: 'false', weight: 0.990598} },
+{ data: { source: 'PSMC4', target: 'PSMC2', directed: 'false', weight: 0.987309} },
+{ data: { source: 'PSMD13', target: 'PSMD4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMC3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMC6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMC5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMD12', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMD13', target: 'PSMD8', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMD13', target: 'PSMD3', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'PSMD13', target: 'PSMD11', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMD13', target: 'PSMD10', directed: 'false', weight: 0.999991} },
+{ data: { source: 'PSMD13', target: 'PSMD6', directed: 'false', weight: 0.999969} },
+{ data: { source: 'PSMD13', target: 'PSMD7', directed: 'false', weight: 0.999934} },
+{ data: { source: 'PSMD13', target: 'PSMD5', directed: 'false', weight: 0.09653049999999999} },
+{ data: { source: 'PSMC3', target: 'PSMD10', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD6', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMC3', target: 'PSMD1', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMC3', target: 'PSMD12', directed: 'false', weight: 0.999993} },
+{ data: { source: 'PSMC3', target: 'PSMD4', directed: 'false', weight: 0.999965} },
+{ data: { source: 'PSMC3', target: 'PSMD7', directed: 'false', weight: 0.9998540000000001} },
+{ data: { source: 'PSMC3', target: 'PSMD11', directed: 'false', weight: 0.9996440000000001} },
+{ data: { source: 'PSMC3', target: 'PSMC6', directed: 'false', weight: 0.9996219999999999} },
+{ data: { source: 'PSMC3', target: 'PSMD3', directed: 'false', weight: 0.9996079999999999} },
+{ data: { source: 'PSMC3', target: 'PSMC5', directed: 'false', weight: 0.9965370000000001} },
+{ data: { source: 'PSMC3', target: 'PSMC1', directed: 'false', weight: 0.996042} },
+{ data: { source: 'PSMC3', target: 'PSMD5', directed: 'false', weight: 0.923889} },
+{ data: { source: 'PSMC3', target: 'PSMC2', directed: 'false', weight: 0.920666} },
+{ data: { source: 'PSMC3', target: 'PSMD8', directed: 'false', weight: 0.106826} },
+{ data: { source: 'PSMD8', target: 'PSMD3', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMD8', target: 'PSMD1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'PSMD8', target: 'PSMD10', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'PSMD8', target: 'PSMC6', directed: 'false', weight: 0.999985} },
+{ data: { source: 'PSMD8', target: 'PSMD12', directed: 'false', weight: 0.9998459999999999} },
+{ data: { source: 'PSMD8', target: 'PSMD7', directed: 'false', weight: 0.9996440000000001} },
+{ data: { source: 'PSMD8', target: 'PSMC1', directed: 'false', weight: 0.999499} },
+{ data: { source: 'PSMD8', target: 'PSMD6', directed: 'false', weight: 0.998495} },
+{ data: { source: 'PSMD8', target: 'PSMD4', directed: 'false', weight: 0.9964370000000001} },
+{ data: { source: 'PSMD8', target: 'PSMD5', directed: 'false', weight: 0.9168790000000001} },
+{ data: { source: 'PSMD8', target: 'PSMD11', directed: 'false', weight: 0.6125659999999999} },
+{ data: { source: 'PSMD8', target: 'PSMC5', directed: 'false', weight: 0.5} },
+{ data: { source: 'PSMD8', target: 'PSMC2', directed: 'false', weight: 0.042333800000000005} },
+{ data: { source: 'PSMC6', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD10', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD12', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC6', target: 'PSMC1', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMC6', target: 'PSMD3', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMC6', target: 'PSMD11', directed: 'false', weight: 0.999993} },
+{ data: { source: 'PSMC6', target: 'PSMC5', directed: 'false', weight: 0.9999520000000001} },
+{ data: { source: 'PSMC6', target: 'PSMD4', directed: 'false', weight: 0.999892} },
+{ data: { source: 'PSMC6', target: 'PSMD1', directed: 'false', weight: 0.999873} },
+{ data: { source: 'PSMC6', target: 'PSMC2', directed: 'false', weight: 0.9994940000000001} },
+{ data: { source: 'PSMC6', target: 'PSMD5', directed: 'false', weight: 0.85687} },
+{ data: { source: 'PSMD10', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD10', target: 'PSMC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD10', target: 'PSMC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD10', target: 'PSMD11', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMD10', target: 'PSMD3', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMD10', target: 'PSMC5', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMD10', target: 'PSMD4', directed: 'false', weight: 0.9999540000000001} },
+{ data: { source: 'PSMD10', target: 'PSMD6', directed: 'false', weight: 0.999743} },
+{ data: { source: 'PSMD10', target: 'PSMD1', directed: 'false', weight: 0.9916360000000001} },
+{ data: { source: 'PSMD10', target: 'PSMD12', directed: 'false', weight: 0.973091} },
+{ data: { source: 'PSMD10', target: 'PSMD5', directed: 'false', weight: 0.11106300000000001} },
+{ data: { source: 'PSMC1', target: 'PSMD6', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMD11', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC1', target: 'PSMD12', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMC1', target: 'PSMD1', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'PSMC1', target: 'PSMC5', directed: 'false', weight: 0.999656} },
+{ data: { source: 'PSMC1', target: 'PSMD4', directed: 'false', weight: 0.999647} },
+{ data: { source: 'PSMC1', target: 'PSMD5', directed: 'false', weight: 0.998616} },
+{ data: { source: 'PSMC1', target: 'PSMC2', directed: 'false', weight: 0.995459} },
+{ data: { source: 'PSMD12', target: 'PSMD7', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMD12', target: 'PSMD4', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMD12', target: 'PSMD1', directed: 'false', weight: 0.999992} },
+{ data: { source: 'PSMD12', target: 'PSMC5', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'PSMD12', target: 'PSMD6', directed: 'false', weight: 0.99998} },
+{ data: { source: 'PSMD12', target: 'PSMD11', directed: 'false', weight: 0.999627} },
+{ data: { source: 'PSMD12', target: 'PSMC2', directed: 'false', weight: 0.999526} },
+{ data: { source: 'PSMD12', target: 'PSMD3', directed: 'false', weight: 0.999008} },
+{ data: { source: 'PSMD12', target: 'PSMD5', directed: 'false', weight: 0.9798450000000001} },
+{ data: { source: 'PSMC2', target: 'PSMD7', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'PSMC2', target: 'PSMD6', directed: 'false', weight: 0.9998940000000001} },
+{ data: { source: 'PSMC2', target: 'PSMD4', directed: 'false', weight: 0.99987} },
+{ data: { source: 'PSMC2', target: 'PSMD1', directed: 'false', weight: 0.9990030000000001} },
+{ data: { source: 'PSMC2', target: 'PSMD3', directed: 'false', weight: 0.9989100000000001} },
+{ data: { source: 'PSMC2', target: 'PSMD11', directed: 'false', weight: 0.998627} },
+{ data: { source: 'PSMC2', target: 'PSMD5', directed: 'false', weight: 0.99813} },
+{ data: { source: 'PSMC2', target: 'PSMC5', directed: 'false', weight: 0.9637030000000001} },
+{ data: { source: 'PSMD3', target: 'PSMD7', directed: 'false', weight: 0.999993} },
+{ data: { source: 'PSMD3', target: 'PSMD1', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'PSMD3', target: 'PSMC5', directed: 'false', weight: 0.9999610000000001} },
+{ data: { source: 'PSMD3', target: 'PSMD4', directed: 'false', weight: 0.9997379999999999} },
+{ data: { source: 'PSMD3', target: 'PSMD6', directed: 'false', weight: 0.9911459999999999} },
+{ data: { source: 'PSMD3', target: 'PSMD5', directed: 'false', weight: 0.98935} },
+{ data: { source: 'PSMD3', target: 'PSMD11', directed: 'false', weight: 0.9558190000000001} },
+{ data: { source: 'PSMD1', target: 'PSMD7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD1', target: 'PSMD6', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMD1', target: 'PSMD11', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMD1', target: 'PSMD4', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMD1', target: 'PSMC5', directed: 'false', weight: 0.9997799999999999} },
+{ data: { source: 'PSMD1', target: 'PSMD5', directed: 'false', weight: 0.08696960000000001} },
+{ data: { source: 'PSMD6', target: 'PSMC5', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'PSMD6', target: 'PSMD4', directed: 'false', weight: 0.999974} },
+{ data: { source: 'PSMD6', target: 'PSMD7', directed: 'false', weight: 0.9999170000000001} },
+{ data: { source: 'PSMD6', target: 'PSMD5', directed: 'false', weight: 0.9937729999999999} },
+{ data: { source: 'PSMD6', target: 'PSMD11', directed: 'false', weight: 0.979353} },
+{ data: { source: 'PSMC5', target: 'PSMD7', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'PSMC5', target: 'PSMD11', directed: 'false', weight: 0.999967} },
+{ data: { source: 'PSMC5', target: 'PSMD4', directed: 'false', weight: 0.9995930000000001} },
+{ data: { source: 'PSMC5', target: 'PSMD5', directed: 'false', weight: 0.936767} },
+{ data: { source: 'PSMD4', target: 'PSMD7', directed: 'false', weight: 0.999991} },
+{ data: { source: 'PSMD4', target: 'PSMD11', directed: 'false', weight: 0.9999809999999999} },
+{ data: { source: 'PSMD4', target: 'PSMD5', directed: 'false', weight: 0.0638192} },
+{ data: { source: 'PSMD5', target: 'PSMD11', directed: 'false', weight: 0.984274} },
+{ data: { source: 'PSMD5', target: 'PSMD7', directed: 'false', weight: 0.961772} },
+{ data: { source: 'PSMD11', target: 'PSMD7', directed: 'false', weight: 0.9997870000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    PA700 complex	<br> Unweighted Density = 1.00
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>PSMD8
+    </section>
+    </body>
+    </html>
+    

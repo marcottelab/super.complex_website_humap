@@ -1,0 +1,131 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 HAUS augmin-like complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex53.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CEP27', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NVX0" }},
+{data: { id: 'HAUS5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94927" }},
+{data: { id: 'HAUS6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z4H7" }},
+{data: { id: 'HAUS8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BT25" }},
+{data: { id: 'HAUS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96CS2" }},
+{data: { id: 'HAUS4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H6D7" }},
+{data: { id: 'HAUS7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99871" }},
+{data: { id: 'HAUS3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q68CZ6" }}], 
+ edges: [{ data: { source: 'CEP27', target: 'HAUS7', directed: 'false', weight: 1.0} },
+{ data: { source: 'CEP27', target: 'HAUS3', directed: 'false', weight: 0.9850120000000001} },
+{ data: { source: 'CEP27', target: 'HAUS8', directed: 'false', weight: 0.9777819999999999} },
+{ data: { source: 'CEP27', target: 'HAUS4', directed: 'false', weight: 0.9634219999999999} },
+{ data: { source: 'CEP27', target: 'HAUS5', directed: 'false', weight: 0.9437979999999999} },
+{ data: { source: 'CEP27', target: 'HAUS1', directed: 'false', weight: 0.9053399999999999} },
+{ data: { source: 'CEP27', target: 'HAUS6', directed: 'false', weight: 0.632099} },
+{ data: { source: 'HAUS8', target: 'HAUS7', directed: 'false', weight: 0.999949} },
+{ data: { source: 'HAUS8', target: 'HAUS4', directed: 'false', weight: 0.680901} },
+{ data: { source: 'HAUS8', target: 'HAUS6', directed: 'false', weight: 0.382686} },
+{ data: { source: 'HAUS8', target: 'HAUS1', directed: 'false', weight: 0.154948} },
+{ data: { source: 'HAUS8', target: 'HAUS3', directed: 'false', weight: 0.022047999999999998} },
+{ data: { source: 'HAUS8', target: 'HAUS5', directed: 'false', weight: 0.0206446} },
+{ data: { source: 'HAUS4', target: 'HAUS7', directed: 'false', weight: 1.0} },
+{ data: { source: 'HAUS4', target: 'HAUS1', directed: 'false', weight: 0.997423} },
+{ data: { source: 'HAUS4', target: 'HAUS3', directed: 'false', weight: 0.850677} },
+{ data: { source: 'HAUS4', target: 'HAUS5', directed: 'false', weight: 0.7966979999999999} },
+{ data: { source: 'HAUS4', target: 'HAUS6', directed: 'false', weight: 0.330002} },
+{ data: { source: 'HAUS3', target: 'HAUS7', directed: 'false', weight: 0.999986} },
+{ data: { source: 'HAUS3', target: 'HAUS1', directed: 'false', weight: 0.756474} },
+{ data: { source: 'HAUS6', target: 'HAUS7', directed: 'false', weight: 0.999691} },
+{ data: { source: 'HAUS6', target: 'HAUS1', directed: 'false', weight: 0.1614} },
+{ data: { source: 'HAUS5', target: 'HAUS7', directed: 'false', weight: 0.999864} },
+{ data: { source: 'HAUS5', target: 'HAUS1', directed: 'false', weight: 0.31193200000000004} },
+{ data: { source: 'HAUS1', target: 'HAUS7', directed: 'false', weight: 1.0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 HAUS augmin-like complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.89
+    </section>
+    </body>
+    </html>
+    

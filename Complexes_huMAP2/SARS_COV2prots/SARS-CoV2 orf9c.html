@@ -1,0 +1,174 @@
+
+    <!doctype html>
+    
+    <html>
+    
+    <head>
+    <title>SARS-CoV2 orf9c</title>
+
+    		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    
+    		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+    <script src="https://unpkg.com/cose-base/cose-base.js"></script>
+    <script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+        </head>
+        
+        <style>
+            #cy {
+                width: 90%;
+                height: 90%;
+                position: absolute;
+                middle: 0px;
+                left: 0px;
+            }
+        </style>
+        
+        <body>
+        <section>
+        
+
+         </section>
+            <div id="cy"></div>
+            <script>
+              var cy = cytoscape({
+          container: document.getElementById('cy'),
+          
+elements:{nodes: [{data: { id: "SARS-CoV2 orf9c", score: 2, type:  "sars" , href: "https://covid-19.uniprot.org/uniprotkb/P0DTD3" }},
+{data: { id: "UBXN8", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O00124" }},
+{data: { id: "GPAA1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O43292" }},
+{data: { id: "WFS1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O76024" }},
+{data: { id: "ABCC1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P33527" }},
+{data: { id: "F2RL1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P55085" }},
+{data: { id: "SCAP", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q12770" }},
+{data: { id: "DPY19L1", score: 1, score_annot: 3, type:  "human" , href: "https://www.uniprot.org/uniprot/Q2PZI1" }},
+{data: { id: "TMEM97", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q5BJF2" }},
+{data: { id: "SLC30A6", score: 1, score_annot: 4, type:  "human" , href: "https://www.uniprot.org/uniprot/Q6NXT4" }},
+{data: { id: "TAPT1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q6NXT6" }},
+{data: { id: "ERMP1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q7Z2K6" }},
+{data: { id: "NLRX1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q86UT6" }},
+{data: { id: "RETREG3", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q86VR2" }},
+{data: { id: "PIGO", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8TEQ8" }},
+{data: { id: "FAR2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q96K12" }},
+{data: { id: "ECSIT", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9BQ95" }},
+{data: { id: "ALG8", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9BVK2" }},
+{data: { id: "TMEM39B", score: 1, score_annot: 3, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9GZU3" }},
+{data: { id: "GHITM", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9H3K2" }},
+{data: { id: "ACAD9", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9H845" }},
+{data: { id: "NDFIP2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9NV92" }},
+{data: { id: "BCS1L", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9Y276" }},
+{data: { id: "NDUFAF1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9Y375" }},
+{data: { id: "TMED5", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9Y3A6" }},
+{data: { id: "NDUFB9", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9Y6M9" }},
+{data: { id: "PIGS", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q96S52" }},
+{data: { id: "0.3 SNARE complex (VAMP4, STX6, STX16, VTI1a, VTI1b)", score: 0, type: "complex", href: "../Predicted/Complex76.html" }},
+{data: { id: "0.8 HAUS augmin-like complex", score: 0, type: "complex", href: "../Predicted/Complex52.html" }},
+{data: { id: "Isocitrate dehydrogenase [NAD], mitochondrial", score: 0, type: "complex", href: "../Predicted/Complex208.html" }},
+{data: { id: "0.1 CEN complex", score: 0, type: "complex", href: "../Predicted/Complex136.html" }},
+{data: { id: "0.1 DVL2-INVS-NPHP4-RPGRIP1L complex", score: 0, type: "complex", href: "../Predicted/Complex576.html" }}], 
+ edges: [{ data: { source: "GPAA1", target: "0.1 CEN complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SLC30A6", target: "0.1 DVL2-INVS-NPHP4-RPGRIP1L complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "ECSIT", target: "Isocitrate dehydrogenase [NAD], mitochondrial", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "ACAD9", target: "Isocitrate dehydrogenase [NAD], mitochondrial", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "NDUFAF1", target: "Isocitrate dehydrogenase [NAD], mitochondrial", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "TMED5", target: "0.8 HAUS augmin-like complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "NDUFB9", target: "0.3 SNARE complex (VAMP4, STX6, STX16, VTI1a, VTI1b)", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "PIGS", target: "0.1 CEN complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SARS-CoV2 orf9c", target: "UBXN8", directed: "false", type: "sars2prot",weight: 0.770566762} },
+{ data: { source: "SARS-CoV2 orf9c", target: "GPAA1", directed: "false", type: "sars2prot",weight: 0.804405154} },
+{ data: { source: "SARS-CoV2 orf9c", target: "WFS1", directed: "false", type: "sars2prot",weight: 0.955124813} },
+{ data: { source: "SARS-CoV2 orf9c", target: "ABCC1", directed: "false", type: "sars2prot",weight: 0.77999958} },
+{ data: { source: "SARS-CoV2 orf9c", target: "F2RL1", directed: "false", type: "sars2prot",weight: 0.891878677} },
+{ data: { source: "SARS-CoV2 orf9c", target: "SCAP", directed: "false", type: "sars2prot",weight: 0.895648601} },
+{ data: { source: "SARS-CoV2 orf9c", target: "DPY19L1", directed: "false", type: "sars2prot",weight: 0.968853805} },
+{ data: { source: "SARS-CoV2 orf9c", target: "TMEM97", directed: "false", type: "sars2prot",weight: 0.730637585} },
+{ data: { source: "SARS-CoV2 orf9c", target: "SLC30A6", directed: "false", type: "sars2prot",weight: 0.774357796} },
+{ data: { source: "SARS-CoV2 orf9c", target: "TAPT1", directed: "false", type: "sars2prot",weight: 0.941527935} },
+{ data: { source: "SARS-CoV2 orf9c", target: "ERMP1", directed: "false", type: "sars2prot",weight: 0.793920345} },
+{ data: { source: "SARS-CoV2 orf9c", target: "NLRX1", directed: "false", type: "sars2prot",weight: 0.93198593} },
+{ data: { source: "SARS-CoV2 orf9c", target: "RETREG3", directed: "false", type: "sars2prot",weight: 0.731626333} },
+{ data: { source: "SARS-CoV2 orf9c", target: "PIGO", directed: "false", type: "sars2prot",weight: 0.746326481} },
+{ data: { source: "SARS-CoV2 orf9c", target: "FAR2", directed: "false", type: "sars2prot",weight: 0.734768532} },
+{ data: { source: "SARS-CoV2 orf9c", target: "ECSIT", directed: "false", type: "sars2prot",weight: 0.776412187} },
+{ data: { source: "SARS-CoV2 orf9c", target: "ALG8", directed: "false", type: "sars2prot",weight: 0.796680672} },
+{ data: { source: "SARS-CoV2 orf9c", target: "TMEM39B", directed: "false", type: "sars2prot",weight: 0.751831436} },
+{ data: { source: "SARS-CoV2 orf9c", target: "GHITM", directed: "false", type: "sars2prot",weight: 0.722254821} },
+{ data: { source: "SARS-CoV2 orf9c", target: "ACAD9", directed: "false", type: "sars2prot",weight: 0.720456009} },
+{ data: { source: "SARS-CoV2 orf9c", target: "NDFIP2", directed: "false", type: "sars2prot",weight: 0.980637174} },
+{ data: { source: "SARS-CoV2 orf9c", target: "BCS1L", directed: "false", type: "sars2prot",weight: 0.992309958} },
+{ data: { source: "SARS-CoV2 orf9c", target: "NDUFAF1", directed: "false", type: "sars2prot",weight: 0.762046149} },
+{ data: { source: "SARS-CoV2 orf9c", target: "TMED5", directed: "false", type: "sars2prot",weight: 0.705393478} },
+{ data: { source: "SARS-CoV2 orf9c", target: "NDUFB9", directed: "false", type: "sars2prot",weight: 0.966177822} },
+{ data: { source: "SARS-CoV2 orf9c", target: "PIGS", directed: "false", type: "sars2prot",weight: 0.647089409} }]},
+
+    style: [
+        {
+            selector: 'node',
+            style: {
+                    				'font-size': 20,
+            'font-weight': 'bold',
+                          'text-wrap': 'wrap',
+        'text-max-width': '300',
+                shape: function( ele ){ 
+                                    if ( ele.data('type') == 'complex' ){return 'circle'}
+                                    if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                    
+      return 'star';
+      },
+                'background-color': function( ele ){ 
+                                    if ( ele.data('type') == 'complex' ){return 'blue'}
+                                    if ( ele.data('type') == 'sars' ){return 'red'}             
+                                    if ( ele.data('score_annot') == 1 ){return 'rgb(201, 160, 54)'} 
+    								if ( ele.data('score_annot') == 2 ){return 'rgb(211, 186, 63)'}  
+                                     if ( ele.data('score_annot') == 3 ){return 'rgb(160, 171, 105)'}   
+                                     if ( ele.data('score_annot') == 4 ){return 'rgb(78, 148, 70)'}   
+                                     if ( ele.data('score_annot') == 5 ){return 'rgb(52, 136, 74)'}   
+                                     return 'rgb(180, 131, 40)';
+      },
+                label: 'data(id)'
+            }
+        },
+    							{
+    							selector: 'edge',
+    							style: {
+    								'width': 'mapData(weight, 0, 1, 0, 5)',
+    								'line-color': function( ele ){ 
+                                    if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                      if ( ele.data('type') == 'complex2complex' ){return 'blue'}
+      return 'red';
+      },
+    								'opacity': 0.5
+    							}
+    						}
+    	]
+        
+    });
+    
+    cy.layout({
+        'name': 'cose',
+    	'animate':false,
+    	'nodeDimensionsIncludeLabels':true,
+    	'padding': 1,
+    	'componentSpacing': 1,
+    	 'idealEdgeLength': function( edge ){ return 1; },
+    	 // Divisor to compute edge forces
+      'edgeElasticity': function( edge ){ return 20; }
+    }).run();
+        
+    cy.on('tap', 'node', function(){
+      try { // your browser may block popups
+        window.open( this.data('href') );
+      } catch(e){ // fall back on url change
+        window.location.href = this.data('href');
+      }
+    });      
+        </script>
+    
+        	<section>
+        	<br>
+        	<br>
+        	<br> 
+        
+        </section>
+        </body>
+        </html>
+        

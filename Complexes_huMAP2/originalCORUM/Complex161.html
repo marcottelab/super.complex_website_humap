@@ -1,0 +1,98 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> HMGB1-HMGB2-HSC70-ERP60-GAPDH complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex162.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HEL-S-162eP', score: 4, href: "https://www.uniprot.org/uniprot/V9HVZ4" }},
+{data: { id: 'HMGB1', score: 5, href: "https://www.uniprot.org/uniprot/P09429" }},
+{data: { id: 'HEL-S-72p', score: 3, href: "https://www.uniprot.org/uniprot/V9HW22" }},
+{data: { id: 'HMGB2', score: 5, href: "https://www.uniprot.org/uniprot/P26583" }},
+{data: { id: 'HEL-S-269', score: 3, href: "https://www.uniprot.org/uniprot/V9HVY3" }}], 
+ edges: [{ data: { source: 'HEL-S-162eP', target: 'HEL-S-72p', directed: 'false', weight: 0.9875290000000001} },
+{ data: { source: 'HEL-S-162eP', target: 'HEL-S-269', directed: 'false', weight: 0.609888} },
+{ data: { source: 'HEL-S-269', target: 'HEL-S-72p', directed: 'false', weight: 0.987555} },
+{ data: { source: 'HEL-S-269', target: 'HMGB1', directed: 'false', weight: 0.154998} },
+{ data: { source: 'HEL-S-72p', target: 'HMGB1', directed: 'false', weight: 0.10725499999999999} },
+{ data: { source: 'HMGB1', target: 'HMGB2', directed: 'false', weight: 0.34227199999999997} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    HMGB1-HMGB2-HSC70-ERP60-GAPDH complex	<br> Unweighted Density = 0.60
+    </section>
+    </body>
+    </html>
+    

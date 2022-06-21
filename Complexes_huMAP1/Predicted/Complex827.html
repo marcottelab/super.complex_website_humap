@@ -1,0 +1,130 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 DLGAP1-DLG4-DYNLL2 complex match 2</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex828.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp12', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp12.html" }},
+{data: { id: 'PPIL3', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9H2H8" }},
+{data: { id: 'FUBP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96AE4" }},
+{data: { id: 'GSR', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P00390" }},
+{data: { id: 'DYNLL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96FJ2" }},
+{data: { id: 'HSD17B14', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BPX1" }},
+{data: { id: 'RBM38', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H0Z9" }},
+{data: { id: 'FUBP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96I24" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp12', target: 'PPIL3', directed: 'false', weight: 0.986726338, type: 'sars'} },
+{ data: { source: 'FUBP3', target: 'GSR', directed: 'false', weight: 0.9251469999999999} },
+{ data: { source: 'FUBP3', target: 'RBM38', directed: 'false', weight: 0.8804860000000001} },
+{ data: { source: 'FUBP3', target: 'PPIL3', directed: 'false', weight: 0.87835} },
+{ data: { source: 'FUBP3', target: 'DYNLL2', directed: 'false', weight: 0.395694} },
+{ data: { source: 'FUBP3', target: 'FUBP1', directed: 'false', weight: 0.343647} },
+{ data: { source: 'RBM38', target: 'PPIL3', directed: 'false', weight: 0.07224639999999999} },
+{ data: { source: 'HSD17B14', target: 'GSR', directed: 'false', weight: 0.826786} },
+{ data: { source: 'HSD17B14', target: 'DYNLL2', directed: 'false', weight: 0.34079299999999996} },
+{ data: { source: 'PPIL3', target: 'FUBP1', directed: 'false', weight: 0.609316} },
+{ data: { source: 'PPIL3', target: 'DYNLL2', directed: 'false', weight: 0.0353536} },
+{ data: { source: 'DYNLL2', target: 'GSR', directed: 'false', weight: 0.903711} },
+{ data: { source: 'DYNLL2', target: 'FUBP1', directed: 'false', weight: 0.275392} },
+{ data: { source: 'FUBP1', target: 'GSR', directed: 'false', weight: 0.7931819999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 DLGAP1-DLG4-DYNLL2 complex match 2<br> Complex Score (from Super.Complex) = 0.56373<br> Unweighted Density = 0.62
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>PPIL3
+    </section>
+    </body>
+    </html>
+    

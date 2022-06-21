@@ -1,0 +1,308 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 PBAF complex (Polybromo- and BAF containing complex)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex14.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SMARCD2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92925" }},
+{data: { id: 'PBRM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86U86" }},
+{data: { id: 'ARID1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14497" }},
+{data: { id: 'SMARCE1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q969G3" }},
+{data: { id: 'SMARCC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92922" }},
+{data: { id: 'SMARCA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P51531" }},
+{data: { id: 'ARID1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NFD5" }},
+{data: { id: 'SMARCA4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P51532" }},
+{data: { id: 'ACTL6A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O96019" }},
+{data: { id: 'DPF3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92784" }},
+{data: { id: 'ARID2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q68CP9" }},
+{data: { id: 'SMARCB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12824" }},
+{data: { id: 'BCL7B', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9BQE9" }},
+{data: { id: 'SMARCD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96GM5" }},
+{data: { id: 'BCL7A', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q4VC05" }},
+{data: { id: 'BCL7C', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q8WUZ0" }},
+{data: { id: 'BRD7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NPI1" }},
+{data: { id: 'SMARCC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TAQ2" }},
+{data: { id: 'SMARCD3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6STE5" }},
+{data: { id: 'DPF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92785" }}], 
+ edges: [{ data: { source: 'ARID2', target: 'SMARCD1', directed: 'false', weight: 0.996618} },
+{ data: { source: 'ARID2', target: 'PBRM1', directed: 'false', weight: 0.9867600000000001} },
+{ data: { source: 'ARID2', target: 'SMARCE1', directed: 'false', weight: 0.9852} },
+{ data: { source: 'ARID2', target: 'SMARCC1', directed: 'false', weight: 0.9796540000000001} },
+{ data: { source: 'ARID2', target: 'BRD7', directed: 'false', weight: 0.970899} },
+{ data: { source: 'ARID2', target: 'SMARCD2', directed: 'false', weight: 0.958192} },
+{ data: { source: 'ARID2', target: 'ARID1A', directed: 'false', weight: 0.9527030000000001} },
+{ data: { source: 'ARID2', target: 'ARID1B', directed: 'false', weight: 0.867241} },
+{ data: { source: 'ARID2', target: 'SMARCC2', directed: 'false', weight: 0.8592420000000001} },
+{ data: { source: 'ARID2', target: 'SMARCA4', directed: 'false', weight: 0.850333} },
+{ data: { source: 'ARID2', target: 'DPF3', directed: 'false', weight: 0.847432} },
+{ data: { source: 'ARID2', target: 'SMARCB1', directed: 'false', weight: 0.844359} },
+{ data: { source: 'ARID2', target: 'ACTL6A', directed: 'false', weight: 0.658871} },
+{ data: { source: 'ARID2', target: 'SMARCA2', directed: 'false', weight: 0.601999} },
+{ data: { source: 'ARID2', target: 'BCL7B', directed: 'false', weight: 0.563912} },
+{ data: { source: 'ARID2', target: 'BCL7A', directed: 'false', weight: 0.48795299999999997} },
+{ data: { source: 'ARID2', target: 'SMARCD3', directed: 'false', weight: 0.36375} },
+{ data: { source: 'ARID2', target: 'DPF2', directed: 'false', weight: 0.290337} },
+{ data: { source: 'ARID2', target: 'BCL7C', directed: 'false', weight: 0.08883869999999999} },
+{ data: { source: 'ACTL6A', target: 'SMARCC1', directed: 'false', weight: 0.999959} },
+{ data: { source: 'ACTL6A', target: 'SMARCA4', directed: 'false', weight: 0.99954} },
+{ data: { source: 'ACTL6A', target: 'SMARCD1', directed: 'false', weight: 0.998872} },
+{ data: { source: 'ACTL6A', target: 'SMARCE1', directed: 'false', weight: 0.998042} },
+{ data: { source: 'ACTL6A', target: 'ARID1A', directed: 'false', weight: 0.998017} },
+{ data: { source: 'ACTL6A', target: 'SMARCC2', directed: 'false', weight: 0.9977520000000001} },
+{ data: { source: 'ACTL6A', target: 'DPF2', directed: 'false', weight: 0.996001} },
+{ data: { source: 'ACTL6A', target: 'SMARCB1', directed: 'false', weight: 0.995555} },
+{ data: { source: 'ACTL6A', target: 'SMARCA2', directed: 'false', weight: 0.993091} },
+{ data: { source: 'ACTL6A', target: 'SMARCD2', directed: 'false', weight: 0.975899} },
+{ data: { source: 'ACTL6A', target: 'SMARCD3', directed: 'false', weight: 0.962461} },
+{ data: { source: 'ACTL6A', target: 'ARID1B', directed: 'false', weight: 0.916084} },
+{ data: { source: 'ACTL6A', target: 'PBRM1', directed: 'false', weight: 0.8494659999999999} },
+{ data: { source: 'ACTL6A', target: 'BCL7A', directed: 'false', weight: 0.701774} },
+{ data: { source: 'ACTL6A', target: 'DPF3', directed: 'false', weight: 0.58995} },
+{ data: { source: 'ACTL6A', target: 'BCL7B', directed: 'false', weight: 0.581678} },
+{ data: { source: 'ACTL6A', target: 'BRD7', directed: 'false', weight: 0.547408} },
+{ data: { source: 'ACTL6A', target: 'BCL7C', directed: 'false', weight: 0.22421} },
+{ data: { source: 'PBRM1', target: 'BRD7', directed: 'false', weight: 0.997114} },
+{ data: { source: 'PBRM1', target: 'SMARCE1', directed: 'false', weight: 0.9824069999999999} },
+{ data: { source: 'PBRM1', target: 'SMARCA4', directed: 'false', weight: 0.9715860000000001} },
+{ data: { source: 'PBRM1', target: 'SMARCA2', directed: 'false', weight: 0.9563229999999999} },
+{ data: { source: 'PBRM1', target: 'ARID1A', directed: 'false', weight: 0.948852} },
+{ data: { source: 'PBRM1', target: 'SMARCC1', directed: 'false', weight: 0.9477469999999999} },
+{ data: { source: 'PBRM1', target: 'SMARCC2', directed: 'false', weight: 0.891334} },
+{ data: { source: 'PBRM1', target: 'SMARCD2', directed: 'false', weight: 0.8498110000000001} },
+{ data: { source: 'PBRM1', target: 'SMARCD1', directed: 'false', weight: 0.685132} },
+{ data: { source: 'PBRM1', target: 'ARID1B', directed: 'false', weight: 0.614323} },
+{ data: { source: 'PBRM1', target: 'DPF3', directed: 'false', weight: 0.44} },
+{ data: { source: 'PBRM1', target: 'SMARCB1', directed: 'false', weight: 0.426534} },
+{ data: { source: 'PBRM1', target: 'BCL7B', directed: 'false', weight: 0.39405999999999997} },
+{ data: { source: 'PBRM1', target: 'SMARCD3', directed: 'false', weight: 0.348583} },
+{ data: { source: 'PBRM1', target: 'DPF2', directed: 'false', weight: 0.34467600000000004} },
+{ data: { source: 'PBRM1', target: 'BCL7A', directed: 'false', weight: 0.221683} },
+{ data: { source: 'PBRM1', target: 'BCL7C', directed: 'false', weight: 0.0447033} },
+{ data: { source: 'SMARCB1', target: 'SMARCC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCB1', target: 'SMARCC2', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SMARCB1', target: 'SMARCD2', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'SMARCB1', target: 'SMARCE1', directed: 'false', weight: 0.999978} },
+{ data: { source: 'SMARCB1', target: 'SMARCD1', directed: 'false', weight: 0.999965} },
+{ data: { source: 'SMARCB1', target: 'SMARCD3', directed: 'false', weight: 0.9998239999999999} },
+{ data: { source: 'SMARCB1', target: 'SMARCA4', directed: 'false', weight: 0.999704} },
+{ data: { source: 'SMARCB1', target: 'ARID1A', directed: 'false', weight: 0.9992709999999999} },
+{ data: { source: 'SMARCB1', target: 'SMARCA2', directed: 'false', weight: 0.998525} },
+{ data: { source: 'SMARCB1', target: 'ARID1B', directed: 'false', weight: 0.9971760000000001} },
+{ data: { source: 'SMARCB1', target: 'DPF3', directed: 'false', weight: 0.9855389999999999} },
+{ data: { source: 'SMARCB1', target: 'DPF2', directed: 'false', weight: 0.97591} },
+{ data: { source: 'SMARCB1', target: 'BCL7B', directed: 'false', weight: 0.970145} },
+{ data: { source: 'SMARCB1', target: 'BCL7A', directed: 'false', weight: 0.9269879999999999} },
+{ data: { source: 'SMARCB1', target: 'BRD7', directed: 'false', weight: 0.785768} },
+{ data: { source: 'SMARCB1', target: 'BCL7C', directed: 'false', weight: 0.45291499999999996} },
+{ data: { source: 'DPF3', target: 'SMARCC1', directed: 'false', weight: 0.975203} },
+{ data: { source: 'DPF3', target: 'SMARCA2', directed: 'false', weight: 0.929889} },
+{ data: { source: 'DPF3', target: 'SMARCC2', directed: 'false', weight: 0.926798} },
+{ data: { source: 'DPF3', target: 'ARID1B', directed: 'false', weight: 0.925375} },
+{ data: { source: 'DPF3', target: 'ARID1A', directed: 'false', weight: 0.8682719999999999} },
+{ data: { source: 'DPF3', target: 'SMARCA4', directed: 'false', weight: 0.851297} },
+{ data: { source: 'DPF3', target: 'SMARCD2', directed: 'false', weight: 0.830831} },
+{ data: { source: 'DPF3', target: 'SMARCD1', directed: 'false', weight: 0.830519} },
+{ data: { source: 'DPF3', target: 'BCL7B', directed: 'false', weight: 0.7752760000000001} },
+{ data: { source: 'DPF3', target: 'SMARCD3', directed: 'false', weight: 0.757076} },
+{ data: { source: 'DPF3', target: 'SMARCE1', directed: 'false', weight: 0.71753} },
+{ data: { source: 'DPF3', target: 'BRD7', directed: 'false', weight: 0.620162} },
+{ data: { source: 'DPF3', target: 'BCL7A', directed: 'false', weight: 0.604398} },
+{ data: { source: 'DPF3', target: 'BCL7C', directed: 'false', weight: 0.395617} },
+{ data: { source: 'DPF3', target: 'DPF2', directed: 'false', weight: 0.23121599999999998} },
+{ data: { source: 'SMARCC2', target: 'SMARCE1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SMARCC2', target: 'SMARCD1', directed: 'false', weight: 0.999992} },
+{ data: { source: 'SMARCC2', target: 'SMARCD2', directed: 'false', weight: 0.999976} },
+{ data: { source: 'SMARCC2', target: 'SMARCD3', directed: 'false', weight: 0.9999450000000001} },
+{ data: { source: 'SMARCC2', target: 'SMARCA4', directed: 'false', weight: 0.9999120000000001} },
+{ data: { source: 'SMARCC2', target: 'ARID1A', directed: 'false', weight: 0.999833} },
+{ data: { source: 'SMARCC2', target: 'SMARCA2', directed: 'false', weight: 0.999741} },
+{ data: { source: 'SMARCC2', target: 'SMARCC1', directed: 'false', weight: 0.999553} },
+{ data: { source: 'SMARCC2', target: 'ARID1B', directed: 'false', weight: 0.992698} },
+{ data: { source: 'SMARCC2', target: 'DPF2', directed: 'false', weight: 0.9908309999999999} },
+{ data: { source: 'SMARCC2', target: 'BRD7', directed: 'false', weight: 0.9633209999999999} },
+{ data: { source: 'SMARCC2', target: 'BCL7A', directed: 'false', weight: 0.937474} },
+{ data: { source: 'SMARCC2', target: 'BCL7B', directed: 'false', weight: 0.68042} },
+{ data: { source: 'SMARCC2', target: 'BCL7C', directed: 'false', weight: 0.580122} },
+{ data: { source: 'SMARCD1', target: 'SMARCC1', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'SMARCD1', target: 'SMARCE1', directed: 'false', weight: 0.999883} },
+{ data: { source: 'SMARCD1', target: 'SMARCD2', directed: 'false', weight: 0.999693} },
+{ data: { source: 'SMARCD1', target: 'SMARCA4', directed: 'false', weight: 0.9996459999999999} },
+{ data: { source: 'SMARCD1', target: 'ARID1A', directed: 'false', weight: 0.998976} },
+{ data: { source: 'SMARCD1', target: 'SMARCA2', directed: 'false', weight: 0.996129} },
+{ data: { source: 'SMARCD1', target: 'ARID1B', directed: 'false', weight: 0.9919040000000001} },
+{ data: { source: 'SMARCD1', target: 'BCL7B', directed: 'false', weight: 0.99151} },
+{ data: { source: 'SMARCD1', target: 'BRD7', directed: 'false', weight: 0.8827309999999999} },
+{ data: { source: 'SMARCD1', target: 'DPF2', directed: 'false', weight: 0.832256} },
+{ data: { source: 'SMARCD1', target: 'SMARCD3', directed: 'false', weight: 0.831636} },
+{ data: { source: 'SMARCD1', target: 'BCL7A', directed: 'false', weight: 0.740174} },
+{ data: { source: 'SMARCD1', target: 'BCL7C', directed: 'false', weight: 0.350453} },
+{ data: { source: 'DPF2', target: 'SMARCE1', directed: 'false', weight: 0.999848} },
+{ data: { source: 'DPF2', target: 'SMARCA4', directed: 'false', weight: 0.994625} },
+{ data: { source: 'DPF2', target: 'ARID1A', directed: 'false', weight: 0.975932} },
+{ data: { source: 'DPF2', target: 'SMARCC1', directed: 'false', weight: 0.97593} },
+{ data: { source: 'DPF2', target: 'SMARCD2', directed: 'false', weight: 0.974045} },
+{ data: { source: 'DPF2', target: 'BCL7B', directed: 'false', weight: 0.9006790000000001} },
+{ data: { source: 'DPF2', target: 'ARID1B', directed: 'false', weight: 0.578939} },
+{ data: { source: 'DPF2', target: 'BCL7A', directed: 'false', weight: 0.567263} },
+{ data: { source: 'DPF2', target: 'BCL7C', directed: 'false', weight: 0.46835600000000005} },
+{ data: { source: 'DPF2', target: 'BRD7', directed: 'false', weight: 0.35585} },
+{ data: { source: 'DPF2', target: 'SMARCD3', directed: 'false', weight: 0.106931} },
+{ data: { source: 'DPF2', target: 'SMARCA2', directed: 'false', weight: 0.1069} },
+{ data: { source: 'BCL7A', target: 'SMARCD3', directed: 'false', weight: 0.937363} },
+{ data: { source: 'BCL7A', target: 'ARID1A', directed: 'false', weight: 0.934057} },
+{ data: { source: 'BCL7A', target: 'SMARCC1', directed: 'false', weight: 0.932558} },
+{ data: { source: 'BCL7A', target: 'ARID1B', directed: 'false', weight: 0.931113} },
+{ data: { source: 'BCL7A', target: 'SMARCD2', directed: 'false', weight: 0.912557} },
+{ data: { source: 'BCL7A', target: 'SMARCA2', directed: 'false', weight: 0.8734930000000001} },
+{ data: { source: 'BCL7A', target: 'SMARCA4', directed: 'false', weight: 0.8599} },
+{ data: { source: 'BCL7A', target: 'BCL7B', directed: 'false', weight: 0.7282689999999999} },
+{ data: { source: 'BCL7A', target: 'BCL7C', directed: 'false', weight: 0.61002} },
+{ data: { source: 'BCL7A', target: 'SMARCE1', directed: 'false', weight: 0.58995} },
+{ data: { source: 'BCL7A', target: 'BRD7', directed: 'false', weight: 0.12438800000000001} },
+{ data: { source: 'SMARCA4', target: 'SMARCC1', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'SMARCA4', target: 'SMARCE1', directed: 'false', weight: 0.999857} },
+{ data: { source: 'SMARCA4', target: 'SMARCD2', directed: 'false', weight: 0.999769} },
+{ data: { source: 'SMARCA4', target: 'SMARCD3', directed: 'false', weight: 0.999331} },
+{ data: { source: 'SMARCA4', target: 'ARID1A', directed: 'false', weight: 0.998769} },
+{ data: { source: 'SMARCA4', target: 'BCL7B', directed: 'false', weight: 0.985459} },
+{ data: { source: 'SMARCA4', target: 'ARID1B', directed: 'false', weight: 0.9848379999999999} },
+{ data: { source: 'SMARCA4', target: 'BRD7', directed: 'false', weight: 0.949256} },
+{ data: { source: 'SMARCA4', target: 'SMARCA2', directed: 'false', weight: 0.768} },
+{ data: { source: 'SMARCA4', target: 'BCL7C', directed: 'false', weight: 0.538118} },
+{ data: { source: 'SMARCE1', target: 'SMARCC1', directed: 'false', weight: 0.999992} },
+{ data: { source: 'SMARCE1', target: 'SMARCD2', directed: 'false', weight: 0.999957} },
+{ data: { source: 'SMARCE1', target: 'ARID1A', directed: 'false', weight: 0.999951} },
+{ data: { source: 'SMARCE1', target: 'SMARCA2', directed: 'false', weight: 0.999691} },
+{ data: { source: 'SMARCE1', target: 'ARID1B', directed: 'false', weight: 0.997692} },
+{ data: { source: 'SMARCE1', target: 'SMARCD3', directed: 'false', weight: 0.9895440000000001} },
+{ data: { source: 'SMARCE1', target: 'BCL7C', directed: 'false', weight: 0.9224530000000001} },
+{ data: { source: 'SMARCE1', target: 'BRD7', directed: 'false', weight: 0.855533} },
+{ data: { source: 'SMARCE1', target: 'BCL7B', directed: 'false', weight: 0.784226} },
+{ data: { source: 'ARID1A', target: 'SMARCC1', directed: 'false', weight: 0.999194} },
+{ data: { source: 'ARID1A', target: 'SMARCD2', directed: 'false', weight: 0.9977879999999999} },
+{ data: { source: 'ARID1A', target: 'SMARCA2', directed: 'false', weight: 0.9962} },
+{ data: { source: 'ARID1A', target: 'ARID1B', directed: 'false', weight: 0.988242} },
+{ data: { source: 'ARID1A', target: 'SMARCD3', directed: 'false', weight: 0.932815} },
+{ data: { source: 'ARID1A', target: 'BCL7B', directed: 'false', weight: 0.927207} },
+{ data: { source: 'ARID1A', target: 'BRD7', directed: 'false', weight: 0.906708} },
+{ data: { source: 'ARID1A', target: 'BCL7C', directed: 'false', weight: 0.629238} },
+{ data: { source: 'BCL7C', target: 'ARID1B', directed: 'false', weight: 0.758977} },
+{ data: { source: 'BCL7C', target: 'SMARCC1', directed: 'false', weight: 0.666898} },
+{ data: { source: 'BCL7C', target: 'SMARCA2', directed: 'false', weight: 0.656909} },
+{ data: { source: 'BCL7C', target: 'SMARCD3', directed: 'false', weight: 0.563566} },
+{ data: { source: 'BCL7C', target: 'SMARCD2', directed: 'false', weight: 0.480584} },
+{ data: { source: 'BCL7C', target: 'BCL7B', directed: 'false', weight: 0.44938999999999996} },
+{ data: { source: 'BCL7C', target: 'BRD7', directed: 'false', weight: 0.160164} },
+{ data: { source: 'BRD7', target: 'SMARCD2', directed: 'false', weight: 0.8757219999999999} },
+{ data: { source: 'BRD7', target: 'SMARCC1', directed: 'false', weight: 0.728067} },
+{ data: { source: 'BRD7', target: 'ARID1B', directed: 'false', weight: 0.64865} },
+{ data: { source: 'BRD7', target: 'SMARCA2', directed: 'false', weight: 0.584504} },
+{ data: { source: 'BRD7', target: 'BCL7B', directed: 'false', weight: 0.538582} },
+{ data: { source: 'BRD7', target: 'SMARCD3', directed: 'false', weight: 0.46838100000000005} },
+{ data: { source: 'SMARCD2', target: 'SMARCC1', directed: 'false', weight: 0.999976} },
+{ data: { source: 'SMARCD2', target: 'ARID1B', directed: 'false', weight: 0.989441} },
+{ data: { source: 'SMARCD2', target: 'SMARCA2', directed: 'false', weight: 0.9817879999999999} },
+{ data: { source: 'SMARCD2', target: 'BCL7B', directed: 'false', weight: 0.9705309999999999} },
+{ data: { source: 'SMARCD2', target: 'SMARCD3', directed: 'false', weight: 0.655328} },
+{ data: { source: 'BCL7B', target: 'SMARCD3', directed: 'false', weight: 0.950607} },
+{ data: { source: 'BCL7B', target: 'ARID1B', directed: 'false', weight: 0.9240729999999999} },
+{ data: { source: 'BCL7B', target: 'SMARCA2', directed: 'false', weight: 0.876775} },
+{ data: { source: 'BCL7B', target: 'SMARCC1', directed: 'false', weight: 0.48647299999999993} },
+{ data: { source: 'SMARCD3', target: 'SMARCC1', directed: 'false', weight: 0.999984} },
+{ data: { source: 'SMARCD3', target: 'SMARCA2', directed: 'false', weight: 0.99905} },
+{ data: { source: 'SMARCD3', target: 'ARID1B', directed: 'false', weight: 0.573786} },
+{ data: { source: 'SMARCC1', target: 'SMARCA2', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'SMARCC1', target: 'ARID1B', directed: 'false', weight: 0.9960829999999999} },
+{ data: { source: 'SMARCA2', target: 'ARID1B', directed: 'false', weight: 0.991654} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 PBAF complex (Polybromo- and BAF containing complex)<br> Complex Score (from Super.Complex) = 0.98387<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

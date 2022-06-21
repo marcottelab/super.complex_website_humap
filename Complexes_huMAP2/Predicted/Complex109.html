@@ -1,0 +1,126 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 Dynein-2 complex, cytoplasmic</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex110.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DYNC1H1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14204" }},
+{data: { id: 'DKFZp686J08252', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q63HJ8" }},
+{data: { id: 'DYNLRB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NP97" }},
+{data: { id: 'DYNC1LI1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y6G9" }},
+{data: { id: 'PAFAH1B1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P43034" }},
+{data: { id: 'DYNC1I2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13409" }},
+{data: { id: 'DYNLT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P63172" }}], 
+ edges: [{ data: { source: 'DYNC1I2', target: 'DYNC1H1', directed: 'false', weight: 1.0} },
+{ data: { source: 'DYNC1I2', target: 'DYNC1LI1', directed: 'false', weight: 1.0} },
+{ data: { source: 'DYNC1I2', target: 'DKFZp686J08252', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'DYNC1I2', target: 'DYNLT1', directed: 'false', weight: 0.799113} },
+{ data: { source: 'DYNC1I2', target: 'PAFAH1B1', directed: 'false', weight: 0.038943900000000004} },
+{ data: { source: 'DYNC1LI1', target: 'DYNC1H1', directed: 'false', weight: 1.0} },
+{ data: { source: 'DYNC1LI1', target: 'DKFZp686J08252', directed: 'false', weight: 0.999099} },
+{ data: { source: 'DYNC1LI1', target: 'DYNLT1', directed: 'false', weight: 0.997664} },
+{ data: { source: 'DYNC1LI1', target: 'DYNLRB1', directed: 'false', weight: 0.9092680000000001} },
+{ data: { source: 'DYNC1LI1', target: 'PAFAH1B1', directed: 'false', weight: 0.6067560000000001} },
+{ data: { source: 'DYNLT1', target: 'DKFZp686J08252', directed: 'false', weight: 0.9603459999999999} },
+{ data: { source: 'DYNLT1', target: 'DYNLRB1', directed: 'false', weight: 0.699891} },
+{ data: { source: 'DYNLRB1', target: 'DKFZp686J08252', directed: 'false', weight: 0.33243} },
+{ data: { source: 'DYNC1H1', target: 'DKFZp686J08252', directed: 'false', weight: 1.0} },
+{ data: { source: 'DYNC1H1', target: 'PAFAH1B1', directed: 'false', weight: 0.0546589} },
+{ data: { source: 'DKFZp686J08252', target: 'PAFAH1B1', directed: 'false', weight: 0.0985275} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 Dynein-2 complex, cytoplasmic<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.76
+    </section>
+    </body>
+    </html>
+    

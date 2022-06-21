@@ -1,0 +1,146 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 HDAC1-associated protein complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex61.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GATAD2A', score: 5, href: "https://www.uniprot.org/uniprot/Q86YP4" }},
+{data: { id: 'HDAC2', score: 5, href: "https://www.uniprot.org/uniprot/Q92769" }},
+{data: { id: 'MBD2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBB5" }},
+{data: { id: 'RCOR1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKL0" }},
+{data: { id: 'RBBP7', score: 5, href: "https://www.uniprot.org/uniprot/Q16576" }},
+{data: { id: 'RBBP4', score: 5, href: "https://www.uniprot.org/uniprot/Q09028" }},
+{data: { id: 'MBD3', score: 5, href: "https://www.uniprot.org/uniprot/O95983" }},
+{data: { id: 'KDM1A', score: 5, href: "https://www.uniprot.org/uniprot/O60341" }},
+{data: { id: 'CHD3', score: 5, href: "https://www.uniprot.org/uniprot/Q12873" }},
+{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'MTA2', score: 5, href: "https://www.uniprot.org/uniprot/O94776" }}], 
+ edges: [{ data: { source: 'GATAD2A', target: 'MTA2', directed: 'false', weight: 0.999992} },
+{ data: { source: 'GATAD2A', target: 'MBD2', directed: 'false', weight: 0.999755} },
+{ data: { source: 'GATAD2A', target: 'MBD3', directed: 'false', weight: 0.997757} },
+{ data: { source: 'GATAD2A', target: 'RBBP4', directed: 'false', weight: 0.993682} },
+{ data: { source: 'GATAD2A', target: 'HDAC1', directed: 'false', weight: 0.9823270000000001} },
+{ data: { source: 'GATAD2A', target: 'RBBP7', directed: 'false', weight: 0.8319700000000001} },
+{ data: { source: 'GATAD2A', target: 'HDAC2', directed: 'false', weight: 0.605059} },
+{ data: { source: 'GATAD2A', target: 'KDM1A', directed: 'false', weight: 0.287113} },
+{ data: { source: 'GATAD2A', target: 'CHD3', directed: 'false', weight: 0.07909580000000001} },
+{ data: { source: 'HDAC2', target: 'HDAC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HDAC2', target: 'MTA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'HDAC2', target: 'RBBP7', directed: 'false', weight: 0.9976290000000001} },
+{ data: { source: 'HDAC2', target: 'RBBP4', directed: 'false', weight: 0.9922850000000001} },
+{ data: { source: 'HDAC2', target: 'MBD2', directed: 'false', weight: 0.963541} },
+{ data: { source: 'HDAC2', target: 'KDM1A', directed: 'false', weight: 0.8368549999999999} },
+{ data: { source: 'HDAC2', target: 'MBD3', directed: 'false', weight: 0.6930189999999999} },
+{ data: { source: 'MBD2', target: 'MTA2', directed: 'false', weight: 0.9998389999999999} },
+{ data: { source: 'MBD2', target: 'RBBP7', directed: 'false', weight: 0.9994790000000001} },
+{ data: { source: 'MBD2', target: 'HDAC1', directed: 'false', weight: 0.994289} },
+{ data: { source: 'MBD2', target: 'RBBP4', directed: 'false', weight: 0.779633} },
+{ data: { source: 'MBD2', target: 'MBD3', directed: 'false', weight: 0.034424800000000005} },
+{ data: { source: 'MBD2', target: 'CHD3', directed: 'false', weight: 0.0265651} },
+{ data: { source: 'RCOR1', target: 'KDM1A', directed: 'false', weight: 0.999993} },
+{ data: { source: 'RCOR1', target: 'HDAC1', directed: 'false', weight: 0.654434} },
+{ data: { source: 'RBBP7', target: 'RBBP4', directed: 'false', weight: 1.0} },
+{ data: { source: 'RBBP7', target: 'HDAC1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RBBP7', target: 'MTA2', directed: 'false', weight: 0.9998600000000001} },
+{ data: { source: 'RBBP7', target: 'MBD3', directed: 'false', weight: 0.945973} },
+{ data: { source: 'RBBP7', target: 'CHD3', directed: 'false', weight: 0.746373} },
+{ data: { source: 'RBBP4', target: 'MTA2', directed: 'false', weight: 0.999983} },
+{ data: { source: 'RBBP4', target: 'HDAC1', directed: 'false', weight: 0.9999520000000001} },
+{ data: { source: 'RBBP4', target: 'KDM1A', directed: 'false', weight: 0.9875879999999999} },
+{ data: { source: 'RBBP4', target: 'MBD3', directed: 'false', weight: 0.9875870000000001} },
+{ data: { source: 'RBBP4', target: 'CHD3', directed: 'false', weight: 0.680595} },
+{ data: { source: 'MBD3', target: 'MTA2', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'MBD3', target: 'HDAC1', directed: 'false', weight: 0.9998950000000001} },
+{ data: { source: 'MBD3', target: 'KDM1A', directed: 'false', weight: 0.0244236} },
+{ data: { source: 'MBD3', target: 'CHD3', directed: 'false', weight: 0.023650499999999998} },
+{ data: { source: 'KDM1A', target: 'HDAC1', directed: 'false', weight: 0.985182} },
+{ data: { source: 'KDM1A', target: 'MTA2', directed: 'false', weight: 0.872066} },
+{ data: { source: 'CHD3', target: 'HDAC1', directed: 'false', weight: 0.998059} },
+{ data: { source: 'CHD3', target: 'MTA2', directed: 'false', weight: 0.947089} },
+{ data: { source: 'HDAC1', target: 'MTA2', directed: 'false', weight: 1.0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 HDAC1-associated protein complex	<br> Unweighted Density = 0.78
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HDAC2
+    </section>
+    </body>
+    </html>
+    

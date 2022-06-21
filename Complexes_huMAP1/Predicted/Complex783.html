@@ -1,0 +1,130 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 RBPJ-NOTCH1-MAML1 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex784.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NOTCH1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46531" }},
+{data: { id: 'MAML1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92585" }},
+{data: { id: 'FBXO42', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q6P3S6" }},
+{data: { id: 'RBPJ', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q06330" }},
+{data: { id: 'ZNF589', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86UQ0" }},
+{data: { id: 'ANKRD44', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q8N8A2" }},
+{data: { id: 'NOTCH3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UM47" }},
+{data: { id: 'NOTCH2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q04721" }}], 
+ edges: [{ data: { source: 'NOTCH1', target: 'ANKRD44', directed: 'false', weight: 0.979675} },
+{ data: { source: 'NOTCH1', target: 'RBPJ', directed: 'false', weight: 0.920143} },
+{ data: { source: 'NOTCH1', target: 'NOTCH2', directed: 'false', weight: 0.311189} },
+{ data: { source: 'NOTCH1', target: 'MAML1', directed: 'false', weight: 0.304485} },
+{ data: { source: 'NOTCH1', target: 'NOTCH3', directed: 'false', weight: 0.222827} },
+{ data: { source: 'NOTCH1', target: 'FBXO42', directed: 'false', weight: 0.151455} },
+{ data: { source: 'NOTCH1', target: 'ZNF589', directed: 'false', weight: 0.133456} },
+{ data: { source: 'RBPJ', target: 'MAML1', directed: 'false', weight: 0.9995879999999999} },
+{ data: { source: 'RBPJ', target: 'ZNF589', directed: 'false', weight: 0.974557} },
+{ data: { source: 'RBPJ', target: 'NOTCH2', directed: 'false', weight: 0.867424} },
+{ data: { source: 'RBPJ', target: 'FBXO42', directed: 'false', weight: 0.82952} },
+{ data: { source: 'NOTCH2', target: 'ANKRD44', directed: 'false', weight: 0.897634} },
+{ data: { source: 'NOTCH2', target: 'NOTCH3', directed: 'false', weight: 0.349532} },
+{ data: { source: 'NOTCH2', target: 'MAML1', directed: 'false', weight: 0.1888} },
+{ data: { source: 'NOTCH2', target: 'ZNF589', directed: 'false', weight: 0.151927} },
+{ data: { source: 'ZNF589', target: 'MAML1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ZNF589', target: 'FBXO42', directed: 'false', weight: 0.151455} },
+{ data: { source: 'FBXO42', target: 'MAML1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ANKRD44', target: 'NOTCH3', directed: 'false', weight: 0.698549} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 RBPJ-NOTCH1-MAML1 complex<br> Complex Score (from Super.Complex) = 0.57597<br> Unweighted Density = 0.68
+    </section>
+    </body>
+    </html>
+    

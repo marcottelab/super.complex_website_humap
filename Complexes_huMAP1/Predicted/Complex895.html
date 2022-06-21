@@ -1,0 +1,149 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 AFF4 super elongation complex (SEC)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex896.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NSMAF', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92636" }},
+{data: { id: 'AFF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P51825" }},
+{data: { id: 'MLLT3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P42568" }},
+{data: { id: 'HEXIM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94992" }},
+{data: { id: 'CCNT2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60583" }},
+{data: { id: 'ELL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00472" }},
+{data: { id: 'CCNT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60563" }},
+{data: { id: 'ELL3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HB65" }},
+{data: { id: 'HEXIM2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96MH2" }},
+{data: { id: 'CDK9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P50750" }},
+{data: { id: 'AFF4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UHB7" }},
+{data: { id: 'MLLT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q03111" }}], 
+ edges: [{ data: { source: 'CDK9', target: 'CCNT1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDK9', target: 'CCNT2', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'CDK9', target: 'AFF4', directed: 'false', weight: 0.970325} },
+{ data: { source: 'CDK9', target: 'MLLT1', directed: 'false', weight: 0.8799110000000001} },
+{ data: { source: 'CDK9', target: 'HEXIM2', directed: 'false', weight: 0.74747} },
+{ data: { source: 'CDK9', target: 'MLLT3', directed: 'false', weight: 0.579627} },
+{ data: { source: 'CDK9', target: 'AFF1', directed: 'false', weight: 0.55633} },
+{ data: { source: 'CDK9', target: 'ELL2', directed: 'false', weight: 0.24809699999999998} },
+{ data: { source: 'NSMAF', target: 'HEXIM1', directed: 'false', weight: 0.977773} },
+{ data: { source: 'NSMAF', target: 'HEXIM2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ELL3', target: 'AFF4', directed: 'false', weight: 0.914861} },
+{ data: { source: 'ELL3', target: 'MLLT1', directed: 'false', weight: 0.8862959999999999} },
+{ data: { source: 'CCNT1', target: 'AFF4', directed: 'false', weight: 0.9185450000000001} },
+{ data: { source: 'CCNT1', target: 'CCNT2', directed: 'false', weight: 0.911014} },
+{ data: { source: 'CCNT1', target: 'MLLT1', directed: 'false', weight: 0.598057} },
+{ data: { source: 'CCNT1', target: 'ELL2', directed: 'false', weight: 0.268136} },
+{ data: { source: 'CCNT1', target: 'MLLT3', directed: 'false', weight: 0.253081} },
+{ data: { source: 'CCNT1', target: 'AFF1', directed: 'false', weight: 0.209236} },
+{ data: { source: 'MLLT3', target: 'MLLT1', directed: 'false', weight: 0.983456} },
+{ data: { source: 'MLLT3', target: 'AFF4', directed: 'false', weight: 0.9766889999999999} },
+{ data: { source: 'MLLT3', target: 'AFF1', directed: 'false', weight: 0.959147} },
+{ data: { source: 'MLLT3', target: 'ELL2', directed: 'false', weight: 0.816184} },
+{ data: { source: 'MLLT3', target: 'CCNT2', directed: 'false', weight: 0.437488} },
+{ data: { source: 'AFF1', target: 'MLLT1', directed: 'false', weight: 0.9844870000000001} },
+{ data: { source: 'AFF1', target: 'AFF4', directed: 'false', weight: 0.887666} },
+{ data: { source: 'AFF1', target: 'ELL2', directed: 'false', weight: 0.832894} },
+{ data: { source: 'AFF1', target: 'CCNT2', directed: 'false', weight: 0.540101} },
+{ data: { source: 'CCNT2', target: 'MLLT1', directed: 'false', weight: 0.963211} },
+{ data: { source: 'CCNT2', target: 'AFF4', directed: 'false', weight: 0.8286709999999999} },
+{ data: { source: 'CCNT2', target: 'ELL2', directed: 'false', weight: 0.28284699999999996} },
+{ data: { source: 'HEXIM1', target: 'HEXIM2', directed: 'false', weight: 0.97964} },
+{ data: { source: 'MLLT1', target: 'AFF4', directed: 'false', weight: 0.9978290000000001} },
+{ data: { source: 'MLLT1', target: 'ELL2', directed: 'false', weight: 0.804193} },
+{ data: { source: 'ELL2', target: 'AFF4', directed: 'false', weight: 0.981095} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 AFF4 super elongation complex (SEC)<br> Complex Score (from Super.Complex) = 0.54134<br> Unweighted Density = 0.52
+    </section>
+    </body>
+    </html>
+    

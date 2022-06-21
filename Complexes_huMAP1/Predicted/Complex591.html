@@ -1,0 +1,108 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> FBLN7 TXNDC11 EDEM2 444</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex592.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EDEM2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BV94" }},
+{data: { id: 'TXNDC11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6PKC3" }},
+{data: { id: 'FBLN7', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q53RD9" }},
+{data: { id: 'ASPH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12797" }}], 
+ edges: [{ data: { source: 'TXNDC11', target: 'EDEM2', directed: 'false', weight: 0.520771} },
+{ data: { source: 'TXNDC11', target: 'FBLN7', directed: 'false', weight: 0.153087} },
+{ data: { source: 'TXNDC11', target: 'ASPH', directed: 'false', weight: 0.11511199999999999} },
+{ data: { source: 'ASPH', target: 'EDEM2', directed: 'false', weight: 0.42663199999999996} },
+{ data: { source: 'ASPH', target: 'FBLN7', directed: 'false', weight: 0.166388} },
+{ data: { source: 'EDEM2', target: 'FBLN7', directed: 'false', weight: 0.271173} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    FBLN7 TXNDC11 EDEM2 444<br> Complex Score (from Super.Complex) = 0.66184<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

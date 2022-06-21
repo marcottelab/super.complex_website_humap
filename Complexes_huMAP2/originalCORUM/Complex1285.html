@@ -1,0 +1,138 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Respiratory chain complex I (beta subunit) mitochondrial</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1286.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: '4697', score: 0 }},
+{data: { id: 'NDUFAB1', score: 5, href: "https://www.uniprot.org/uniprot/O14561" }},
+{data: { id: 'NDUFB5', score: 5, href: "https://www.uniprot.org/uniprot/O43674" }},
+{data: { id: 'NDUFB3', score: 5, href: "https://www.uniprot.org/uniprot/O43676" }},
+{data: { id: 'NDUFB1', score: 5, href: "https://www.uniprot.org/uniprot/O75438" }},
+{data: { id: 'NDUFB6', score: 5, href: "https://www.uniprot.org/uniprot/O95139" }},
+{data: { id: 'NDUFB4', score: 5, href: "https://www.uniprot.org/uniprot/O95168" }},
+{data: { id: 'NDUFB8', score: 5, href: "https://www.uniprot.org/uniprot/O95169" }},
+{data: { id: '4708', score: 0 }},
+{data: { id: 'NDUFC2', score: 5, href: "https://www.uniprot.org/uniprot/O95298" }},
+{data: { id: 'NDUFB10', score: 5, href: "https://www.uniprot.org/uniprot/O96000" }},
+{data: { id: 'ND4', score: 5, href: "https://www.uniprot.org/uniprot/P03905" }},
+{data: { id: 'MT-ND5', score: 5, href: "https://www.uniprot.org/uniprot/P03915" }},
+{data: { id: 'NDUFB7', score: 5, href: "https://www.uniprot.org/uniprot/P17568" }},
+{data: { id: 'NDUFB11', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX14" }},
+{data: { id: 'NDUFB9', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6M9" }}], 
+ edges: [{ data: { source: 'NDUFB7', target: 'NDUFB11', directed: 'false', weight: 0.738904} },
+{ data: { source: 'NDUFB7', target: 'NDUFB9', directed: 'false', weight: 0.0911328} },
+{ data: { source: 'NDUFB7', target: 'NDUFB8', directed: 'false', weight: 0.0808096} },
+{ data: { source: 'NDUFB7', target: 'NDUFB10', directed: 'false', weight: 0.052882000000000005} },
+{ data: { source: 'NDUFB7', target: 'NDUFB5', directed: 'false', weight: 0.0265941} },
+{ data: { source: 'NDUFB7', target: 'NDUFB4', directed: 'false', weight: 0.024597} },
+{ data: { source: 'NDUFC2', target: 'NDUFB11', directed: 'false', weight: 0.09987599999999999} },
+{ data: { source: 'NDUFB8', target: 'NDUFB9', directed: 'false', weight: 0.402527} },
+{ data: { source: 'NDUFB8', target: 'NDUFB11', directed: 'false', weight: 0.185341} },
+{ data: { source: 'NDUFB8', target: 'NDUFB4', directed: 'false', weight: 0.137499} },
+{ data: { source: 'NDUFB8', target: 'NDUFB5', directed: 'false', weight: 0.10371500000000002} },
+{ data: { source: 'NDUFB8', target: 'MT-ND5', directed: 'false', weight: 0.0206345} },
+{ data: { source: 'NDUFB10', target: 'NDUFB11', directed: 'false', weight: 0.395527} },
+{ data: { source: 'NDUFB10', target: 'NDUFB5', directed: 'false', weight: 0.17966400000000002} },
+{ data: { source: 'ND4', target: 'NDUFB5', directed: 'false', weight: 0.159807} },
+{ data: { source: 'ND4', target: 'NDUFB11', directed: 'false', weight: 0.045773} },
+{ data: { source: 'NDUFB3', target: 'NDUFB11', directed: 'false', weight: 0.203961} },
+{ data: { source: 'NDUFB3', target: 'NDUFB5', directed: 'false', weight: 0.100486} },
+{ data: { source: 'NDUFB3', target: 'MT-ND5', directed: 'false', weight: 0.0232077} },
+{ data: { source: 'NDUFB6', target: 'NDUFB11', directed: 'false', weight: 0.640904} },
+{ data: { source: 'NDUFB6', target: 'NDUFB5', directed: 'false', weight: 0.0859307} },
+{ data: { source: 'NDUFB5', target: 'MT-ND5', directed: 'false', weight: 0.0868842} },
+{ data: { source: 'NDUFB5', target: 'NDUFB11', directed: 'false', weight: 0.0861999} },
+{ data: { source: 'NDUFB5', target: 'NDUFB9', directed: 'false', weight: 0.0764214} },
+{ data: { source: 'NDUFB5', target: 'NDUFB1', directed: 'false', weight: 0.0646405} },
+{ data: { source: 'NDUFB1', target: 'NDUFB11', directed: 'false', weight: 0.044893} },
+{ data: { source: 'MT-ND5', target: 'NDUFB11', directed: 'false', weight: 0.236357} },
+{ data: { source: 'NDUFB11', target: 'NDUFB9', directed: 'false', weight: 0.390805} },
+{ data: { source: 'NDUFB11', target: 'NDUFB4', directed: 'false', weight: 0.0229444} },
+{ data: { source: 'NDUFB4', target: 'NDUFB9', directed: 'false', weight: 0.030531299999999997} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Respiratory chain complex I (beta subunit) mitochondrial	<br> Unweighted Density = 0.25
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>NDUFB9
+    </section>
+    </body>
+    </html>
+    

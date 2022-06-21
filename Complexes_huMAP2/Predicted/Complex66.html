@@ -1,0 +1,130 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.3 TFIID-beta complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex67.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TAF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P21675" }},
+{data: { id: 'TAF7L', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q5H9L4" }},
+{data: { id: 'TAF5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15542" }},
+{data: { id: 'TAF4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00268" }},
+{data: { id: 'TAF9B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HBM6" }},
+{data: { id: 'TAF8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z7C8" }},
+{data: { id: 'TAF3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5VWG9" }},
+{data: { id: 'TAF6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49848" }}], 
+ edges: [{ data: { source: 'TAF7L', target: 'TAF1', directed: 'false', weight: 0.9908610000000001} },
+{ data: { source: 'TAF7L', target: 'TAF3', directed: 'false', weight: 0.815678} },
+{ data: { source: 'TAF7L', target: 'TAF8', directed: 'false', weight: 0.184764} },
+{ data: { source: 'TAF7L', target: 'TAF6', directed: 'false', weight: 0.15724100000000002} },
+{ data: { source: 'TAF7L', target: 'TAF5', directed: 'false', weight: 0.14343499999999998} },
+{ data: { source: 'TAF7L', target: 'TAF9B', directed: 'false', weight: 0.11246300000000001} },
+{ data: { source: 'TAF7L', target: 'TAF4', directed: 'false', weight: 0.105733} },
+{ data: { source: 'TAF8', target: 'TAF4', directed: 'false', weight: 0.9976360000000001} },
+{ data: { source: 'TAF8', target: 'TAF5', directed: 'false', weight: 0.9965700000000001} },
+{ data: { source: 'TAF8', target: 'TAF6', directed: 'false', weight: 0.9934059999999999} },
+{ data: { source: 'TAF8', target: 'TAF1', directed: 'false', weight: 0.888496} },
+{ data: { source: 'TAF8', target: 'TAF9B', directed: 'false', weight: 0.8587440000000001} },
+{ data: { source: 'TAF8', target: 'TAF3', directed: 'false', weight: 0.328808} },
+{ data: { source: 'TAF1', target: 'TAF6', directed: 'false', weight: 0.996555} },
+{ data: { source: 'TAF1', target: 'TAF3', directed: 'false', weight: 0.990792} },
+{ data: { source: 'TAF1', target: 'TAF5', directed: 'false', weight: 0.9875889999999999} },
+{ data: { source: 'TAF1', target: 'TAF4', directed: 'false', weight: 0.923105} },
+{ data: { source: 'TAF9B', target: 'TAF5', directed: 'false', weight: 0.993233} },
+{ data: { source: 'TAF9B', target: 'TAF6', directed: 'false', weight: 0.9684229999999999} },
+{ data: { source: 'TAF9B', target: 'TAF4', directed: 'false', weight: 0.9564280000000001} },
+{ data: { source: 'TAF3', target: 'TAF6', directed: 'false', weight: 0.991209} },
+{ data: { source: 'TAF5', target: 'TAF6', directed: 'false', weight: 0.9931610000000001} },
+{ data: { source: 'TAF5', target: 'TAF4', directed: 'false', weight: 0.987518} },
+{ data: { source: 'TAF6', target: 'TAF4', directed: 'false', weight: 0.9875290000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.3 TFIID-beta complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.86
+    </section>
+    </body>
+    </html>
+    

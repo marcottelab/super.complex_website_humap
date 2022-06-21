@@ -1,0 +1,128 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Kinase maturation complex 1</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1586.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EL52', score: 4, href: "https://www.uniprot.org/uniprot/K9JA46" }},
+{data: { id: 'HSP90AB1', score: 5, href: "https://www.uniprot.org/uniprot/P08238" }},
+{data: { id: 'YWHAQ', score: 5, href: "https://www.uniprot.org/uniprot/P27348" }},
+{data: { id: 'HEL-S-1', score: 2, href: "https://www.uniprot.org/uniprot/V9HWD6" }},
+{data: { id: 'HSPA4', score: 5, href: "https://www.uniprot.org/uniprot/P34932" }},
+{data: { id: 'YWHAG', score: 5, href: "https://www.uniprot.org/uniprot/P61981" }},
+{data: { id: 'HEL2', score: 3, href: "https://www.uniprot.org/uniprot/V9HW98" }},
+{data: { id: 'YWHAZ', score: 5, href: "https://www.uniprot.org/uniprot/P63104" }},
+{data: { id: 'YWHAH', score: 5, href: "https://www.uniprot.org/uniprot/Q04917" }},
+{data: { id: 'MAP2K5', score: 5, href: "https://www.uniprot.org/uniprot/Q13163" }},
+{data: { id: 'CDC37', score: 5, href: "https://www.uniprot.org/uniprot/Q16543" }},
+{data: { id: 'TRAF7', score: 5, href: "https://www.uniprot.org/uniprot/Q6Q0C0" }},
+{data: { id: 'MARK2', score: 5, href: "https://www.uniprot.org/uniprot/Q7KZI7" }},
+{data: { id: 'MAP3K3', score: 5, href: "https://www.uniprot.org/uniprot/Q99759" }},
+{data: { id: 'PDRG1', score: 4, href: "https://www.uniprot.org/uniprot/Q9NUG6" }},
+{data: { id: 'PFDN2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHV9" }}], 
+ edges: [{ data: { source: 'YWHAH', target: 'HEL-S-1', directed: 'false', weight: 1.0} },
+{ data: { source: 'YWHAH', target: 'HEL2', directed: 'false', weight: 1.0} },
+{ data: { source: 'YWHAH', target: 'YWHAG', directed: 'false', weight: 1.0} },
+{ data: { source: 'YWHAH', target: 'YWHAQ', directed: 'false', weight: 1.0} },
+{ data: { source: 'YWHAH', target: 'YWHAZ', directed: 'false', weight: 1.0} },
+{ data: { source: 'HSP90AB1', target: 'EL52', directed: 'false', weight: 1.0} },
+{ data: { source: 'HSP90AB1', target: 'CDC37', directed: 'false', weight: 0.999906} },
+{ data: { source: 'MAP2K5', target: 'MAP3K3', directed: 'false', weight: 0.08934360000000001} },
+{ data: { source: 'HEL2', target: 'HEL-S-1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL2', target: 'YWHAQ', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL2', target: 'YWHAG', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL2', target: 'YWHAZ', directed: 'false', weight: 1.0} },
+{ data: { source: 'YWHAQ', target: 'YWHAG', directed: 'false', weight: 1.0} },
+{ data: { source: 'YWHAQ', target: 'YWHAZ', directed: 'false', weight: 1.0} },
+{ data: { source: 'YWHAQ', target: 'HEL-S-1', directed: 'false', weight: 0.807634} },
+{ data: { source: 'PDRG1', target: 'PFDN2', directed: 'false', weight: 0.996497} },
+{ data: { source: 'EL52', target: 'CDC37', directed: 'false', weight: 0.9999629999999999} },
+{ data: { source: 'HEL-S-1', target: 'YWHAG', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-1', target: 'YWHAZ', directed: 'false', weight: 1.0} },
+{ data: { source: 'YWHAG', target: 'YWHAZ', directed: 'false', weight: 1.0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Kinase maturation complex 1	<br> Unweighted Density = 0.17
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>MARK2
+    </section>
+    </body>
+    </html>
+    

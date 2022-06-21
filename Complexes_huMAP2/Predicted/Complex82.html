@@ -1,0 +1,145 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 Ubiquilin-proteasome complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex83.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MTHFD1L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6UB35" }},
+{data: { id: 'HIBCH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6NVY1" }},
+{data: { id: 'FAHD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P587" }},
+{data: { id: 'UBQLN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UMX0" }},
+{data: { id: 'CFL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y281" }},
+{data: { id: 'IDH1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75874" }},
+{data: { id: 'SARS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49591" }},
+{data: { id: 'UBQLN4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NRR5" }},
+{data: { id: 'UBQLN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UHD9" }},
+{data: { id: 'IDH2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48735" }}], 
+ edges: [{ data: { source: 'IDH2', target: 'MTHFD1L', directed: 'false', weight: 0.991389} },
+{ data: { source: 'IDH2', target: 'UBQLN2', directed: 'false', weight: 0.9135700000000001} },
+{ data: { source: 'IDH2', target: 'HIBCH', directed: 'false', weight: 0.7520399999999999} },
+{ data: { source: 'IDH2', target: 'IDH1', directed: 'false', weight: 0.73346} },
+{ data: { source: 'IDH2', target: 'CFL2', directed: 'false', weight: 0.288986} },
+{ data: { source: 'IDH2', target: 'UBQLN1', directed: 'false', weight: 0.170842} },
+{ data: { source: 'IDH2', target: 'UBQLN4', directed: 'false', weight: 0.0827836} },
+{ data: { source: 'UBQLN2', target: 'FAHD1', directed: 'false', weight: 0.28919} },
+{ data: { source: 'UBQLN2', target: 'HIBCH', directed: 'false', weight: 0.25295500000000004} },
+{ data: { source: 'UBQLN2', target: 'IDH1', directed: 'false', weight: 0.118726} },
+{ data: { source: 'UBQLN2', target: 'UBQLN1', directed: 'false', weight: 0.05591990000000001} },
+{ data: { source: 'FAHD1', target: 'SARS1', directed: 'false', weight: 0.371237} },
+{ data: { source: 'FAHD1', target: 'HIBCH', directed: 'false', weight: 0.263602} },
+{ data: { source: 'FAHD1', target: 'UBQLN4', directed: 'false', weight: 0.133069} },
+{ data: { source: 'FAHD1', target: 'CFL2', directed: 'false', weight: 0.108269} },
+{ data: { source: 'FAHD1', target: 'UBQLN1', directed: 'false', weight: 0.08776110000000001} },
+{ data: { source: 'CFL2', target: 'HIBCH', directed: 'false', weight: 0.398029} },
+{ data: { source: 'CFL2', target: 'SARS1', directed: 'false', weight: 0.0596408} },
+{ data: { source: 'CFL2', target: 'IDH1', directed: 'false', weight: 0.05610509999999999} },
+{ data: { source: 'UBQLN4', target: 'IDH1', directed: 'false', weight: 0.43949499999999997} },
+{ data: { source: 'UBQLN4', target: 'HIBCH', directed: 'false', weight: 0.213407} },
+{ data: { source: 'UBQLN4', target: 'MTHFD1L', directed: 'false', weight: 0.14743} },
+{ data: { source: 'UBQLN4', target: 'SARS1', directed: 'false', weight: 0.14736300000000002} },
+{ data: { source: 'UBQLN4', target: 'UBQLN1', directed: 'false', weight: 0.101328} },
+{ data: { source: 'IDH1', target: 'MTHFD1L', directed: 'false', weight: 0.955425} },
+{ data: { source: 'IDH1', target: 'HIBCH', directed: 'false', weight: 0.8809040000000001} },
+{ data: { source: 'IDH1', target: 'SARS1', directed: 'false', weight: 0.290563} },
+{ data: { source: 'IDH1', target: 'UBQLN1', directed: 'false', weight: 0.049023800000000006} },
+{ data: { source: 'HIBCH', target: 'UBQLN1', directed: 'false', weight: 0.287197} },
+{ data: { source: 'HIBCH', target: 'SARS1', directed: 'false', weight: 0.226606} },
+{ data: { source: 'SARS1', target: 'UBQLN1', directed: 'false', weight: 0.306358} },
+{ data: { source: 'UBQLN1', target: 'MTHFD1L', directed: 'false', weight: 0.061560000000000004} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 Ubiquilin-proteasome complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.71
+    </section>
+    </body>
+    </html>
+    

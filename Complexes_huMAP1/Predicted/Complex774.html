@@ -1,0 +1,111 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CSNK1E GAPVD1 CSNK1D SNX24</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex775.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GAPVD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14C86" }},
+{data: { id: 'CSNK1E', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49674" }},
+{data: { id: 'CSNK1D', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48730" }},
+{data: { id: 'SNX24', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9Y343" }}], 
+ edges: [{ data: { source: 'CSNK1D', target: 'GAPVD1', directed: 'false', weight: 0.596639} },
+{ data: { source: 'GAPVD1', target: 'SNX24', directed: 'false', weight: 0.54677} },
+{ data: { source: 'GAPVD1', target: 'CSNK1E', directed: 'false', weight: 0.48277} },
+{ data: { source: 'SNX24', target: 'CSNK1E', directed: 'false', weight: 0.538844} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CSNK1E GAPVD1 CSNK1D SNX24<br> Complex Score (from Super.Complex) = 0.57929<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

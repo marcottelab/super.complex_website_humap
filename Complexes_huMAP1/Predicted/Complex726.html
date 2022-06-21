@@ -1,0 +1,162 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 Exocyst complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex727.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EXOC3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60645" }},
+{data: { id: 'EXOC8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IYI6" }},
+{data: { id: 'EXOC7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UPT5" }},
+{data: { id: 'EXOC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96KP1" }},
+{data: { id: 'BTAF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14981" }},
+{data: { id: 'TNPO3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y5L0" }},
+{data: { id: 'EXOC4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96A65" }},
+{data: { id: 'EXOC5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00471" }},
+{data: { id: 'XPO4', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9C0E2" }},
+{data: { id: 'EXOC6B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y2D4" }},
+{data: { id: 'EXOC6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TAG9" }},
+{data: { id: 'CIP2A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TCG1" }},
+{data: { id: 'EXOC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NV70" }}], 
+ edges: [{ data: { source: 'CIP2A', target: 'XPO4', directed: 'false', weight: 0.921811} },
+{ data: { source: 'CIP2A', target: 'BTAF1', directed: 'false', weight: 0.38485} },
+{ data: { source: 'CIP2A', target: 'EXOC7', directed: 'false', weight: 0.299547} },
+{ data: { source: 'CIP2A', target: 'TNPO3', directed: 'false', weight: 0.272864} },
+{ data: { source: 'EXOC1', target: 'EXOC2', directed: 'false', weight: 0.99465} },
+{ data: { source: 'EXOC1', target: 'EXOC4', directed: 'false', weight: 0.988402} },
+{ data: { source: 'EXOC1', target: 'EXOC3', directed: 'false', weight: 0.630786} },
+{ data: { source: 'EXOC1', target: 'EXOC6', directed: 'false', weight: 0.32147} },
+{ data: { source: 'EXOC1', target: 'EXOC7', directed: 'false', weight: 0.246162} },
+{ data: { source: 'EXOC1', target: 'EXOC5', directed: 'false', weight: 0.2302} },
+{ data: { source: 'EXOC1', target: 'EXOC8', directed: 'false', weight: 0.0737342} },
+{ data: { source: 'EXOC1', target: 'EXOC6B', directed: 'false', weight: 0.043981} },
+{ data: { source: 'EXOC6B', target: 'EXOC7', directed: 'false', weight: 0.943888} },
+{ data: { source: 'EXOC6B', target: 'EXOC2', directed: 'false', weight: 0.85955} },
+{ data: { source: 'EXOC6B', target: 'EXOC8', directed: 'false', weight: 0.8248479999999999} },
+{ data: { source: 'EXOC6B', target: 'EXOC5', directed: 'false', weight: 0.748164} },
+{ data: { source: 'EXOC6B', target: 'EXOC6', directed: 'false', weight: 0.414998} },
+{ data: { source: 'EXOC6B', target: 'EXOC3', directed: 'false', weight: 0.12218499999999999} },
+{ data: { source: 'EXOC6B', target: 'EXOC4', directed: 'false', weight: 0.11431500000000001} },
+{ data: { source: 'EXOC7', target: 'EXOC6', directed: 'false', weight: 0.9997360000000001} },
+{ data: { source: 'EXOC7', target: 'EXOC8', directed: 'false', weight: 0.999384} },
+{ data: { source: 'EXOC7', target: 'EXOC2', directed: 'false', weight: 0.993339} },
+{ data: { source: 'EXOC7', target: 'EXOC4', directed: 'false', weight: 0.9667459999999999} },
+{ data: { source: 'EXOC7', target: 'EXOC3', directed: 'false', weight: 0.9409639999999999} },
+{ data: { source: 'EXOC7', target: 'EXOC5', directed: 'false', weight: 0.8117489999999999} },
+{ data: { source: 'EXOC7', target: 'XPO4', directed: 'false', weight: 0.583155} },
+{ data: { source: 'EXOC7', target: 'BTAF1', directed: 'false', weight: 0.460873} },
+{ data: { source: 'EXOC7', target: 'TNPO3', directed: 'false', weight: 0.141529} },
+{ data: { source: 'XPO4', target: 'TNPO3', directed: 'false', weight: 0.66161} },
+{ data: { source: 'XPO4', target: 'BTAF1', directed: 'false', weight: 0.484392} },
+{ data: { source: 'EXOC4', target: 'EXOC2', directed: 'false', weight: 0.9980399999999999} },
+{ data: { source: 'EXOC4', target: 'EXOC3', directed: 'false', weight: 0.997235} },
+{ data: { source: 'EXOC4', target: 'EXOC5', directed: 'false', weight: 0.931449} },
+{ data: { source: 'EXOC4', target: 'EXOC6', directed: 'false', weight: 0.9230370000000001} },
+{ data: { source: 'EXOC4', target: 'EXOC8', directed: 'false', weight: 0.917636} },
+{ data: { source: 'EXOC5', target: 'EXOC6', directed: 'false', weight: 0.9965069999999999} },
+{ data: { source: 'EXOC5', target: 'EXOC2', directed: 'false', weight: 0.942052} },
+{ data: { source: 'EXOC5', target: 'EXOC8', directed: 'false', weight: 0.7380180000000001} },
+{ data: { source: 'EXOC5', target: 'EXOC3', directed: 'false', weight: 0.736039} },
+{ data: { source: 'EXOC6', target: 'EXOC8', directed: 'false', weight: 0.999024} },
+{ data: { source: 'EXOC6', target: 'EXOC2', directed: 'false', weight: 0.996875} },
+{ data: { source: 'EXOC6', target: 'EXOC3', directed: 'false', weight: 0.987658} },
+{ data: { source: 'EXOC2', target: 'EXOC3', directed: 'false', weight: 0.9986700000000001} },
+{ data: { source: 'EXOC2', target: 'EXOC8', directed: 'false', weight: 0.981664} },
+{ data: { source: 'BTAF1', target: 'TNPO3', directed: 'false', weight: 0.17485599999999998} },
+{ data: { source: 'EXOC8', target: 'EXOC3', directed: 'false', weight: 0.9544219999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 Exocyst complex<br> Complex Score (from Super.Complex) = 0.59436<br> Unweighted Density = 0.59
+    </section>
+    </body>
+    </html>
+    

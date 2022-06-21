@@ -1,0 +1,105 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TNF-alpha/NF-kappa B signaling complex (SEC16A, CHUK, IKBKB, NFKB2, REL, IKBKG, MAP3K14, RELA, FBXW7, USP2)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1581.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'IKBKB', score: 5, href: "https://www.uniprot.org/uniprot/O14920" }},
+{data: { id: 'SEC16A', score: 5, href: "https://www.uniprot.org/uniprot/O15027" }},
+{data: { id: 'CHUK', score: 5, href: "https://www.uniprot.org/uniprot/O15111" }},
+{data: { id: '9099', score: 0 }},
+{data: { id: 'NFKB2', score: 5, href: "https://www.uniprot.org/uniprot/Q00653" }},
+{data: { id: 'RELA', score: 5, href: "https://www.uniprot.org/uniprot/Q04206" }},
+{data: { id: 'REL', score: 5, href: "https://www.uniprot.org/uniprot/Q04864" }},
+{data: { id: 'FBXW7', score: 5, href: "https://www.uniprot.org/uniprot/Q969H0" }},
+{data: { id: 'DKFZp686J04131', score: 1, href: "https://www.uniprot.org/uniprot/Q68D39" }},
+{data: { id: 'IKBKG', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6K9" }}], 
+ edges: [{ data: { source: 'IKBKB', target: 'IKBKG', directed: 'false', weight: 0.9982850000000001} },
+{ data: { source: 'IKBKB', target: 'CHUK', directed: 'false', weight: 0.06807769999999999} },
+{ data: { source: 'IKBKB', target: 'DKFZp686J04131', directed: 'false', weight: 0.040108099999999994} },
+{ data: { source: 'CHUK', target: 'IKBKG', directed: 'false', weight: 0.989293} },
+{ data: { source: 'CHUK', target: 'DKFZp686J04131', directed: 'false', weight: 0.06304610000000001} },
+{ data: { source: 'NFKB2', target: 'REL', directed: 'false', weight: 0.755448} },
+{ data: { source: 'DKFZp686J04131', target: 'IKBKG', directed: 'false', weight: 0.039152099999999995} },
+{ data: { source: 'RELA', target: 'REL', directed: 'false', weight: 0.37548000000000004} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    TNF-alpha/NF-kappa B signaling complex (SEC16A, CHUK, IKBKB, NFKB2, REL, IKBKG, MAP3K14, RELA, FBXW7, USP2)	<br> Unweighted Density = 0.18
+    </section>
+    </body>
+    </html>
+    

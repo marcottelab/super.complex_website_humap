@@ -1,0 +1,144 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 HUSH complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex992.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NSMCE1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WV22" }},
+{data: { id: 'NSMCE2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96MF7" }},
+{data: { id: 'SMC6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96SB8" }},
+{data: { id: 'ZNF597', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96LX8" }},
+{data: { id: 'NSMCE4A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NXX6" }},
+{data: { id: 'SLF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IX21" }},
+{data: { id: 'MPHOSPH8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99549" }},
+{data: { id: 'SMC5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IY18" }},
+{data: { id: 'TASOR', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UK61" }},
+{data: { id: 'TASOR2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5VWN6" }},
+{data: { id: 'NSMCE3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96MG7" }}], 
+ edges: [{ data: { source: 'NSMCE2', target: 'NSMCE1', directed: 'false', weight: 0.998885} },
+{ data: { source: 'NSMCE2', target: 'NSMCE3', directed: 'false', weight: 0.939469} },
+{ data: { source: 'NSMCE2', target: 'SMC5', directed: 'false', weight: 0.9069010000000001} },
+{ data: { source: 'NSMCE2', target: 'SMC6', directed: 'false', weight: 0.884648} },
+{ data: { source: 'NSMCE2', target: 'ZNF597', directed: 'false', weight: 0.654899} },
+{ data: { source: 'NSMCE2', target: 'NSMCE4A', directed: 'false', weight: 0.25451599999999996} },
+{ data: { source: 'SMC6', target: 'NSMCE1', directed: 'false', weight: 0.99782} },
+{ data: { source: 'SMC6', target: 'NSMCE3', directed: 'false', weight: 0.981799} },
+{ data: { source: 'SMC6', target: 'SMC5', directed: 'false', weight: 0.9799209999999999} },
+{ data: { source: 'SMC6', target: 'NSMCE4A', directed: 'false', weight: 0.957367} },
+{ data: { source: 'SMC6', target: 'SLF2', directed: 'false', weight: 0.782887} },
+{ data: { source: 'SMC6', target: 'ZNF597', directed: 'false', weight: 0.45031099999999996} },
+{ data: { source: 'NSMCE1', target: 'SMC5', directed: 'false', weight: 0.999025} },
+{ data: { source: 'NSMCE1', target: 'NSMCE3', directed: 'false', weight: 0.9982040000000001} },
+{ data: { source: 'NSMCE1', target: 'SLF2', directed: 'false', weight: 0.9904959999999999} },
+{ data: { source: 'NSMCE1', target: 'NSMCE4A', directed: 'false', weight: 0.983734} },
+{ data: { source: 'NSMCE1', target: 'ZNF597', directed: 'false', weight: 0.395406} },
+{ data: { source: 'ZNF597', target: 'MPHOSPH8', directed: 'false', weight: 0.9825200000000001} },
+{ data: { source: 'ZNF597', target: 'TASOR2', directed: 'false', weight: 0.961757} },
+{ data: { source: 'ZNF597', target: 'SMC5', directed: 'false', weight: 0.5} },
+{ data: { source: 'ZNF597', target: 'NSMCE4A', directed: 'false', weight: 0.45423800000000003} },
+{ data: { source: 'ZNF597', target: 'NSMCE3', directed: 'false', weight: 0.172549} },
+{ data: { source: 'MPHOSPH8', target: 'TASOR2', directed: 'false', weight: 0.8843850000000001} },
+{ data: { source: 'MPHOSPH8', target: 'TASOR', directed: 'false', weight: 0.8178850000000001} },
+{ data: { source: 'TASOR2', target: 'TASOR', directed: 'false', weight: 0.18832100000000002} },
+{ data: { source: 'NSMCE4A', target: 'NSMCE3', directed: 'false', weight: 0.93665} },
+{ data: { source: 'NSMCE4A', target: 'SMC5', directed: 'false', weight: 0.321225} },
+{ data: { source: 'NSMCE4A', target: 'SLF2', directed: 'false', weight: 0.226996} },
+{ data: { source: 'SLF2', target: 'NSMCE3', directed: 'false', weight: 0.24556} },
+{ data: { source: 'NSMCE3', target: 'SMC5', directed: 'false', weight: 0.95688} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 HUSH complex<br> Complex Score (from Super.Complex) = 0.52575<br> Unweighted Density = 0.55
+    </section>
+    </body>
+    </html>
+    

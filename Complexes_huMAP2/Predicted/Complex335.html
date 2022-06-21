@@ -1,0 +1,128 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 20S proteasome</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex336.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'C1orf63', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9BUV0" }},
+{data: { id: 'NIP30', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9GZU8" }},
+{data: { id: 'ZBTB9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96C00" }},
+{data: { id: 'RASL10B', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q96S79" }},
+{data: { id: 'HEL-S-283', score: 2, type: '', href: "https://www.uniprot.org/uniprot/V9HWJ8" }},
+{data: { id: 'CHD8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HCK8" }},
+{data: { id: 'PSMB4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P28070" }},
+{data: { id: 'FBXL19', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6PCT2" }},
+{data: { id: 'PSMB5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P28074" }},
+{data: { id: 'BAP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92560" }},
+{data: { id: 'RAB40AL', score: 4, type: '', href: "https://www.uniprot.org/uniprot/P0C0E4" }}], 
+ edges: [{ data: { source: 'NIP30', target: 'HEL-S-283', directed: 'false', weight: 1.0} },
+{ data: { source: 'NIP30', target: 'RAB40AL', directed: 'false', weight: 0.0455792} },
+{ data: { source: 'NIP30', target: 'RASL10B', directed: 'false', weight: 0.021888499999999998} },
+{ data: { source: 'NIP30', target: 'PSMB4', directed: 'false', weight: 0.0212621} },
+{ data: { source: 'FBXL19', target: 'HEL-S-283', directed: 'false', weight: 0.703229} },
+{ data: { source: 'CHD8', target: 'HEL-S-283', directed: 'false', weight: 0.191571} },
+{ data: { source: 'PSMB5', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB5', target: 'HEL-S-283', directed: 'false', weight: 0.047219300000000006} },
+{ data: { source: 'BAP1', target: 'HEL-S-283', directed: 'false', weight: 0.16225599999999998} },
+{ data: { source: 'ZBTB9', target: 'HEL-S-283', directed: 'false', weight: 0.642529} },
+{ data: { source: 'HEL-S-283', target: 'C1orf63', directed: 'false', weight: 0.57658} },
+{ data: { source: 'HEL-S-283', target: 'PSMB4', directed: 'false', weight: 0.339769} },
+{ data: { source: 'HEL-S-283', target: 'RAB40AL', directed: 'false', weight: 0.0718993} },
+{ data: { source: 'HEL-S-283', target: 'RASL10B', directed: 'false', weight: 0.020435400000000003} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 20S proteasome<br> Complex Score (from Super.Complex) = 0.75300<br> Unweighted Density = 0.25
+    </section>
+    </body>
+    </html>
+    

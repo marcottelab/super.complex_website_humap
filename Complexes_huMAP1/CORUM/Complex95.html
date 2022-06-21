@@ -1,0 +1,108 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> BHC complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex96.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'KDM1A', score: 5, href: "https://www.uniprot.org/uniprot/O60341" }},
+{data: { id: 'RCOR1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKL0" }},
+{data: { id: 'PHF21A', score: 5, href: "https://www.uniprot.org/uniprot/Q96BD5" }},
+{data: { id: 'HDAC2', score: 5, href: "https://www.uniprot.org/uniprot/Q92769" }},
+{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'HMG20B', score: 5, href: "https://www.uniprot.org/uniprot/Q9P0W2" }}], 
+ edges: [{ data: { source: 'RCOR1', target: 'KDM1A', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RCOR1', target: 'HMG20B', directed: 'false', weight: 0.96454} },
+{ data: { source: 'RCOR1', target: 'HDAC1', directed: 'false', weight: 0.9042190000000001} },
+{ data: { source: 'RCOR1', target: 'PHF21A', directed: 'false', weight: 0.206618} },
+{ data: { source: 'HDAC2', target: 'HDAC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PHF21A', target: 'HMG20B', directed: 'false', weight: 0.828659} },
+{ data: { source: 'PHF21A', target: 'KDM1A', directed: 'false', weight: 0.157086} },
+{ data: { source: 'HDAC1', target: 'KDM1A', directed: 'false', weight: 0.8338209999999999} },
+{ data: { source: 'HDAC1', target: 'HMG20B', directed: 'false', weight: 0.425537} },
+{ data: { source: 'HMG20B', target: 'KDM1A', directed: 'false', weight: 0.919858} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    BHC complex	<br> Unweighted Density = 0.67
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HDAC2
+    </section>
+    </body>
+    </html>
+    

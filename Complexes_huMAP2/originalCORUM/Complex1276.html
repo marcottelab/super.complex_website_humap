@@ -1,0 +1,120 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Respiratory chain complex I (intermediate), mitochondrial</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1277.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NDUFS4', score: 5, href: "https://www.uniprot.org/uniprot/O43181" }},
+{data: { id: 'NDUFA2', score: 5, href: "https://www.uniprot.org/uniprot/O43678" }},
+{data: { id: 'NDUFS5', score: 5, href: "https://www.uniprot.org/uniprot/O43920" }},
+{data: { id: 'NDUFS7', score: 5, href: "https://www.uniprot.org/uniprot/O75251" }},
+{data: { id: 'NDUFS2', score: 5, href: "https://www.uniprot.org/uniprot/O75306" }},
+{data: { id: 'NDUFS3', score: 5, href: "https://www.uniprot.org/uniprot/O75489" }},
+{data: { id: 'NDUFB6', score: 5, href: "https://www.uniprot.org/uniprot/O95139" }},
+{data: { id: 'MT-ND1', score: 5, href: "https://www.uniprot.org/uniprot/P03886" }},
+{data: { id: 'NDUFV2', score: 5, href: "https://www.uniprot.org/uniprot/P19404" }},
+{data: { id: 'NDUFA6', score: 5, href: "https://www.uniprot.org/uniprot/P56556" }},
+{data: { id: 'NDUFA9', score: 5, href: "https://www.uniprot.org/uniprot/Q16795" }}], 
+ edges: [{ data: { source: 'NDUFA6', target: 'NDUFS3', directed: 'false', weight: 0.9846719999999999} },
+{ data: { source: 'NDUFA6', target: 'NDUFA9', directed: 'false', weight: 0.244069} },
+{ data: { source: 'NDUFA6', target: 'NDUFV2', directed: 'false', weight: 0.0399714} },
+{ data: { source: 'NDUFA9', target: 'NDUFS3', directed: 'false', weight: 0.649918} },
+{ data: { source: 'NDUFA9', target: 'MT-ND1', directed: 'false', weight: 0.09274760000000001} },
+{ data: { source: 'NDUFA9', target: 'NDUFV2', directed: 'false', weight: 0.046017800000000005} },
+{ data: { source: 'MT-ND1', target: 'NDUFS3', directed: 'false', weight: 0.987574} },
+{ data: { source: 'MT-ND1', target: 'NDUFV2', directed: 'false', weight: 0.0201594} },
+{ data: { source: 'NDUFS3', target: 'NDUFS2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'NDUFS3', target: 'NDUFV2', directed: 'false', weight: 0.83044} },
+{ data: { source: 'NDUFS3', target: 'NDUFS4', directed: 'false', weight: 0.621617} },
+{ data: { source: 'NDUFS3', target: 'NDUFS7', directed: 'false', weight: 0.5483439999999999} },
+{ data: { source: 'NDUFS3', target: 'NDUFB6', directed: 'false', weight: 0.331973} },
+{ data: { source: 'NDUFS3', target: 'NDUFS5', directed: 'false', weight: 0.32311999999999996} },
+{ data: { source: 'NDUFS3', target: 'NDUFA2', directed: 'false', weight: 0.0587501} },
+{ data: { source: 'NDUFS7', target: 'NDUFS2', directed: 'false', weight: 0.0496839} },
+{ data: { source: 'NDUFS7', target: 'NDUFB6', directed: 'false', weight: 0.0209722} },
+{ data: { source: 'NDUFV2', target: 'NDUFA2', directed: 'false', weight: 0.774364} },
+{ data: { source: 'NDUFV2', target: 'NDUFS2', directed: 'false', weight: 0.0594234} },
+{ data: { source: 'NDUFS2', target: 'NDUFA2', directed: 'false', weight: 0.0357429} },
+{ data: { source: 'NDUFS5', target: 'NDUFS4', directed: 'false', weight: 0.031622500000000005} },
+{ data: { source: 'NDUFS4', target: 'NDUFA2', directed: 'false', weight: 0.173742} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Respiratory chain complex I (intermediate), mitochondrial	<br> Unweighted Density = 0.40
+    </section>
+    </body>
+    </html>
+    

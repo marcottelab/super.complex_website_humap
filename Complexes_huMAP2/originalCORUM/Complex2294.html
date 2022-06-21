@@ -1,0 +1,111 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> PI4K2A-WASH complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2295.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'AP3B1', score: 5, href: "https://www.uniprot.org/uniprot/O00203" }},
+{data: { id: 'NEDD4', score: 5, href: "https://www.uniprot.org/uniprot/P46934" }},
+{data: { id: 'CAPZB', score: 5, href: "https://www.uniprot.org/uniprot/P47756" }},
+{data: { id: 'DNM2', score: 5, href: "https://www.uniprot.org/uniprot/P50570" }},
+{data: { id: 'CAPZA1', score: 5, href: "https://www.uniprot.org/uniprot/P52907" }},
+{data: { id: 'CLTC', score: 5, href: "https://www.uniprot.org/uniprot/Q00610" }},
+{data: { id: 'WASHC5', score: 5, href: "https://www.uniprot.org/uniprot/Q12768" }},
+{data: { id: 'WASHC4', score: 5, href: "https://www.uniprot.org/uniprot/Q2M389" }},
+{data: { id: 'FKBP15', score: 5, href: "https://www.uniprot.org/uniprot/Q5T1M5" }},
+{data: { id: 'WASHC2A', score: 5, href: "https://www.uniprot.org/uniprot/Q641Q2" }},
+{data: { id: 'ARHGEF1', score: 5, href: "https://www.uniprot.org/uniprot/Q92888" }},
+{data: { id: 'ARHGEF2', score: 5, href: "https://www.uniprot.org/uniprot/Q92974" }},
+{data: { id: 'DOCK7', score: 5, href: "https://www.uniprot.org/uniprot/Q96N67" }},
+{data: { id: 'PI4K2A', score: 5, href: "https://www.uniprot.org/uniprot/Q9BTU6" }}], 
+ edges: [{ data: { source: 'CAPZA1', target: 'CAPZB', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'CAPZA1', target: 'CLTC', directed: 'false', weight: 0.8653709999999999} },
+{ data: { source: 'WASHC2A', target: 'WASHC5', directed: 'false', weight: 0.03309840000000001} },
+{ data: { source: 'CAPZB', target: 'CLTC', directed: 'false', weight: 0.0634374} },
+{ data: { source: 'WASHC5', target: 'WASHC4', directed: 'false', weight: 0.37219} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    PI4K2A-WASH complex	<br> Unweighted Density = 0.05
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        3 interacting protein(s): <br>AP3B1 WASHC4 FKBP15
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,122 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Integrator-RNAPII complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex638.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'POLR2A', score: 5, href: "https://www.uniprot.org/uniprot/P24928" }},
+{data: { id: 'POLR2B', score: 5, href: "https://www.uniprot.org/uniprot/P30876" }},
+{data: { id: 'CPSF3L', score: 5, href: "https://www.uniprot.org/uniprot/Q5TA45" }},
+{data: { id: 'INTS3', score: 5, href: "https://www.uniprot.org/uniprot/Q68E01" }},
+{data: { id: 'INTS5', score: 5, href: "https://www.uniprot.org/uniprot/Q6P9B9" }},
+{data: { id: 'INTS8', score: 5, href: "https://www.uniprot.org/uniprot/Q75QN2" }},
+{data: { id: 'INTS1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N201" }},
+{data: { id: 'INTS12', score: 5, href: "https://www.uniprot.org/uniprot/Q96CB8" }},
+{data: { id: 'INTS4', score: 5, href: "https://www.uniprot.org/uniprot/Q96HW7" }},
+{data: { id: 'INTS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0H0" }},
+{data: { id: 'INTS9', score: 5, href: "https://www.uniprot.org/uniprot/Q9NV88" }},
+{data: { id: 'INTS7', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVH2" }},
+{data: { id: 'INTS10', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVR2" }},
+{data: { id: 'INTS6', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL03" }}], 
+ edges: [{ data: { source: 'INTS10', target: 'INTS2', directed: 'false', weight: 0.948098} },
+{ data: { source: 'INTS5', target: 'INTS4', directed: 'false', weight: 0.998812} },
+{ data: { source: 'INTS5', target: 'INTS9', directed: 'false', weight: 0.994977} },
+{ data: { source: 'INTS5', target: 'INTS7', directed: 'false', weight: 0.9923860000000001} },
+{ data: { source: 'POLR2A', target: 'POLR2B', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'INTS12', target: 'INTS1', directed: 'false', weight: 0.999991} },
+{ data: { source: 'INTS12', target: 'INTS4', directed: 'false', weight: 0.19677999999999998} },
+{ data: { source: 'INTS7', target: 'CPSF3L', directed: 'false', weight: 0.994957} },
+{ data: { source: 'INTS7', target: 'INTS1', directed: 'false', weight: 0.993217} },
+{ data: { source: 'INTS7', target: 'INTS2', directed: 'false', weight: 0.118926} },
+{ data: { source: 'INTS6', target: 'INTS4', directed: 'false', weight: 0.16095399999999999} },
+{ data: { source: 'INTS3', target: 'INTS1', directed: 'false', weight: 0.997656} },
+{ data: { source: 'INTS2', target: 'INTS1', directed: 'false', weight: 0.9961540000000001} },
+{ data: { source: 'INTS9', target: 'CPSF3L', directed: 'false', weight: 0.9947739999999999} },
+{ data: { source: 'INTS9', target: 'INTS4', directed: 'false', weight: 0.803558} },
+{ data: { source: 'CPSF3L', target: 'INTS4', directed: 'false', weight: 0.99939} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Integrator-RNAPII complex	<br> Unweighted Density = 0.18
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>INTS4
+    </section>
+    </body>
+    </html>
+    

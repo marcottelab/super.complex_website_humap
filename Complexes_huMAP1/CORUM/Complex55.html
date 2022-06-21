@@ -1,0 +1,137 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TRAP-SMCC mediator complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex56.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MED17', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVC6" }},
+{data: { id: 'MED8', score: 5, href: "https://www.uniprot.org/uniprot/Q96G25" }},
+{data: { id: 'MED25', score: 5, href: "https://www.uniprot.org/uniprot/Q71SY5" }},
+{data: { id: 'MED11', score: 5, href: "https://www.uniprot.org/uniprot/Q9P086" }},
+{data: { id: 'MED18', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUE0" }},
+{data: { id: 'MED1', score: 5, href: "https://www.uniprot.org/uniprot/O95243" }},
+{data: { id: 'MED19', score: 5, href: "https://www.uniprot.org/uniprot/A0JLT2" }},
+{data: { id: 'MED4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPJ6" }},
+{data: { id: 'MED22', score: 5, href: "https://www.uniprot.org/uniprot/Q15528" }},
+{data: { id: 'MED29', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX70" }}], 
+ edges: [{ data: { source: 'MED17', target: 'MED29', directed: 'false', weight: 0.9999049999999999} },
+{ data: { source: 'MED17', target: 'MED8', directed: 'false', weight: 0.999875} },
+{ data: { source: 'MED17', target: 'MED4', directed: 'false', weight: 0.999724} },
+{ data: { source: 'MED17', target: 'MED22', directed: 'false', weight: 0.9991690000000001} },
+{ data: { source: 'MED17', target: 'MED19', directed: 'false', weight: 0.9984209999999999} },
+{ data: { source: 'MED17', target: 'MED1', directed: 'false', weight: 0.997978} },
+{ data: { source: 'MED17', target: 'MED18', directed: 'false', weight: 0.996721} },
+{ data: { source: 'MED17', target: 'MED11', directed: 'false', weight: 0.992567} },
+{ data: { source: 'MED17', target: 'MED25', directed: 'false', weight: 0.50753} },
+{ data: { source: 'MED8', target: 'MED29', directed: 'false', weight: 0.9995209999999999} },
+{ data: { source: 'MED8', target: 'MED4', directed: 'false', weight: 0.998444} },
+{ data: { source: 'MED8', target: 'MED18', directed: 'false', weight: 0.997878} },
+{ data: { source: 'MED8', target: 'MED1', directed: 'false', weight: 0.997509} },
+{ data: { source: 'MED8', target: 'MED19', directed: 'false', weight: 0.995368} },
+{ data: { source: 'MED8', target: 'MED22', directed: 'false', weight: 0.9929459999999999} },
+{ data: { source: 'MED8', target: 'MED11', directed: 'false', weight: 0.985877} },
+{ data: { source: 'MED8', target: 'MED25', directed: 'false', weight: 0.767352} },
+{ data: { source: 'MED25', target: 'MED22', directed: 'false', weight: 0.888856} },
+{ data: { source: 'MED25', target: 'MED19', directed: 'false', weight: 0.814901} },
+{ data: { source: 'MED25', target: 'MED1', directed: 'false', weight: 0.799642} },
+{ data: { source: 'MED25', target: 'MED29', directed: 'false', weight: 0.743568} },
+{ data: { source: 'MED25', target: 'MED18', directed: 'false', weight: 0.653451} },
+{ data: { source: 'MED25', target: 'MED4', directed: 'false', weight: 0.608717} },
+{ data: { source: 'MED25', target: 'MED11', directed: 'false', weight: 0.424291} },
+{ data: { source: 'MED11', target: 'MED22', directed: 'false', weight: 0.993898} },
+{ data: { source: 'MED11', target: 'MED18', directed: 'false', weight: 0.9887309999999999} },
+{ data: { source: 'MED11', target: 'MED19', directed: 'false', weight: 0.973931} },
+{ data: { source: 'MED11', target: 'MED29', directed: 'false', weight: 0.962902} },
+{ data: { source: 'MED11', target: 'MED4', directed: 'false', weight: 0.956665} },
+{ data: { source: 'MED11', target: 'MED1', directed: 'false', weight: 0.548308} },
+{ data: { source: 'MED18', target: 'MED29', directed: 'false', weight: 0.999391} },
+{ data: { source: 'MED18', target: 'MED4', directed: 'false', weight: 0.998592} },
+{ data: { source: 'MED18', target: 'MED19', directed: 'false', weight: 0.986024} },
+{ data: { source: 'MED18', target: 'MED22', directed: 'false', weight: 0.973925} },
+{ data: { source: 'MED18', target: 'MED1', directed: 'false', weight: 0.932039} },
+{ data: { source: 'MED1', target: 'MED4', directed: 'false', weight: 0.9996209999999999} },
+{ data: { source: 'MED1', target: 'MED29', directed: 'false', weight: 0.9936780000000001} },
+{ data: { source: 'MED1', target: 'MED22', directed: 'false', weight: 0.9859829999999999} },
+{ data: { source: 'MED1', target: 'MED19', directed: 'false', weight: 0.9831190000000001} },
+{ data: { source: 'MED19', target: 'MED29', directed: 'false', weight: 0.9931969999999999} },
+{ data: { source: 'MED19', target: 'MED4', directed: 'false', weight: 0.981957} },
+{ data: { source: 'MED19', target: 'MED22', directed: 'false', weight: 0.7133609999999999} },
+{ data: { source: 'MED4', target: 'MED29', directed: 'false', weight: 0.999783} },
+{ data: { source: 'MED4', target: 'MED22', directed: 'false', weight: 0.984806} },
+{ data: { source: 'MED22', target: 'MED29', directed: 'false', weight: 0.9976379999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    TRAP-SMCC mediator complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

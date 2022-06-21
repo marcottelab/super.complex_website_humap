@@ -1,0 +1,133 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 DGCR8 multiprotein complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex976.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CPSF6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16630" }},
+{data: { id: 'NMT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30419" }},
+{data: { id: 'ILF3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12906" }},
+{data: { id: 'STRBP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96SI9" }},
+{data: { id: 'DHX9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q08211" }},
+{data: { id: 'SNRPD2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62316" }},
+{data: { id: 'FEN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P39748" }},
+{data: { id: 'USP39', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q53GS9" }},
+{data: { id: 'SBF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95248" }}], 
+ edges: [{ data: { source: 'SBF1', target: 'DHX9', directed: 'false', weight: 0.360748} },
+{ data: { source: 'SBF1', target: 'NMT1', directed: 'false', weight: 0.026628199999999998} },
+{ data: { source: 'STRBP', target: 'DHX9', directed: 'false', weight: 0.883617} },
+{ data: { source: 'STRBP', target: 'FEN1', directed: 'false', weight: 0.7633310000000001} },
+{ data: { source: 'STRBP', target: 'USP39', directed: 'false', weight: 0.372716} },
+{ data: { source: 'STRBP', target: 'ILF3', directed: 'false', weight: 0.326058} },
+{ data: { source: 'STRBP', target: 'NMT1', directed: 'false', weight: 0.14887999999999998} },
+{ data: { source: 'USP39', target: 'DHX9', directed: 'false', weight: 0.9759209999999999} },
+{ data: { source: 'USP39', target: 'SNRPD2', directed: 'false', weight: 0.8703700000000001} },
+{ data: { source: 'USP39', target: 'CPSF6', directed: 'false', weight: 0.806683} },
+{ data: { source: 'USP39', target: 'NMT1', directed: 'false', weight: 0.800991} },
+{ data: { source: 'USP39', target: 'FEN1', directed: 'false', weight: 0.5820390000000001} },
+{ data: { source: 'SNRPD2', target: 'CPSF6', directed: 'false', weight: 0.959023} },
+{ data: { source: 'SNRPD2', target: 'DHX9', directed: 'false', weight: 0.9171790000000001} },
+{ data: { source: 'DHX9', target: 'CPSF6', directed: 'false', weight: 0.975883} },
+{ data: { source: 'DHX9', target: 'ILF3', directed: 'false', weight: 0.9400649999999999} },
+{ data: { source: 'DHX9', target: 'NMT1', directed: 'false', weight: 0.45346099999999995} },
+{ data: { source: 'DHX9', target: 'FEN1', directed: 'false', weight: 0.332731} },
+{ data: { source: 'FEN1', target: 'NMT1', directed: 'false', weight: 0.5293439999999999} },
+{ data: { source: 'FEN1', target: 'ILF3', directed: 'false', weight: 0.0858466} },
+{ data: { source: 'NMT1', target: 'ILF3', directed: 'false', weight: 0.425461} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 DGCR8 multiprotein complex<br> Complex Score (from Super.Complex) = 0.52842<br> Unweighted Density = 0.58
+    </section>
+    </body>
+    </html>
+    

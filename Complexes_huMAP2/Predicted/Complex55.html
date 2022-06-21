@@ -1,0 +1,140 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 Sororin-cohesin complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex56.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'STAG1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WVM7" }},
+{data: { id: 'RAD21', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60216" }},
+{data: { id: 'CDCA5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96FF9" }},
+{data: { id: 'DKFZp686I05169', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q6MZP3" }},
+{data: { id: 'SMC1L1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14683" }},
+{data: { id: 'SMC3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UQE7" }},
+{data: { id: 'SMC1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NDV3" }},
+{data: { id: 'PDS5B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NTI5" }},
+{data: { id: 'PDS5A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q29RF7" }}], 
+ edges: [{ data: { source: 'SMC3', target: 'SMC1L1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMC3', target: 'SMC1B', directed: 'false', weight: 0.997817} },
+{ data: { source: 'SMC3', target: 'PDS5A', directed: 'false', weight: 0.9930959999999999} },
+{ data: { source: 'SMC3', target: 'RAD21', directed: 'false', weight: 0.989136} },
+{ data: { source: 'SMC3', target: 'PDS5B', directed: 'false', weight: 0.98755} },
+{ data: { source: 'SMC3', target: 'DKFZp686I05169', directed: 'false', weight: 0.599957} },
+{ data: { source: 'SMC3', target: 'CDCA5', directed: 'false', weight: 0.35378200000000004} },
+{ data: { source: 'SMC3', target: 'STAG1', directed: 'false', weight: 0.0885982} },
+{ data: { source: 'CDCA5', target: 'RAD21', directed: 'false', weight: 0.988231} },
+{ data: { source: 'CDCA5', target: 'DKFZp686I05169', directed: 'false', weight: 0.591082} },
+{ data: { source: 'CDCA5', target: 'SMC1L1', directed: 'false', weight: 0.247428} },
+{ data: { source: 'CDCA5', target: 'STAG1', directed: 'false', weight: 0.0227094} },
+{ data: { source: 'DKFZp686I05169', target: 'SMC1B', directed: 'false', weight: 0.997735} },
+{ data: { source: 'DKFZp686I05169', target: 'PDS5A', directed: 'false', weight: 0.99624} },
+{ data: { source: 'DKFZp686I05169', target: 'RAD21', directed: 'false', weight: 0.980485} },
+{ data: { source: 'DKFZp686I05169', target: 'SMC1L1', directed: 'false', weight: 0.7539819999999999} },
+{ data: { source: 'DKFZp686I05169', target: 'STAG1', directed: 'false', weight: 0.020655200000000002} },
+{ data: { source: 'PDS5B', target: 'PDS5A', directed: 'false', weight: 0.999812} },
+{ data: { source: 'PDS5B', target: 'SMC1L1', directed: 'false', weight: 0.9978090000000001} },
+{ data: { source: 'PDS5B', target: 'STAG1', directed: 'false', weight: 0.98824} },
+{ data: { source: 'PDS5B', target: 'RAD21', directed: 'false', weight: 0.636848} },
+{ data: { source: 'RAD21', target: 'SMC1B', directed: 'false', weight: 0.99774} },
+{ data: { source: 'RAD21', target: 'SMC1L1', directed: 'false', weight: 0.995036} },
+{ data: { source: 'RAD21', target: 'STAG1', directed: 'false', weight: 0.994289} },
+{ data: { source: 'RAD21', target: 'PDS5A', directed: 'false', weight: 0.14319500000000002} },
+{ data: { source: 'SMC1L1', target: 'PDS5A', directed: 'false', weight: 0.996482} },
+{ data: { source: 'SMC1L1', target: 'STAG1', directed: 'false', weight: 0.7137859999999999} },
+{ data: { source: 'SMC1B', target: 'STAG1', directed: 'false', weight: 0.9974639999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 Sororin-cohesin complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.78
+    </section>
+    </body>
+    </html>
+    

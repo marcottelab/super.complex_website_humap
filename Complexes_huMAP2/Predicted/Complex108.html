@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 SEC23-SEC24 adaptor complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex109.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SEC23B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15437" }},
+{data: { id: 'SEC23A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15436" }},
+{data: { id: 'SEC24A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95486" }},
+{data: { id: 'SEC24D', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94855" }},
+{data: { id: 'SEC24C', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P53992" }}], 
+ edges: [{ data: { source: 'SEC23A', target: 'SEC24C', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEC23A', target: 'SEC23B', directed: 'false', weight: 0.9999600000000001} },
+{ data: { source: 'SEC23A', target: 'SEC24A', directed: 'false', weight: 0.775749} },
+{ data: { source: 'SEC23A', target: 'SEC24D', directed: 'false', weight: 0.551139} },
+{ data: { source: 'SEC24D', target: 'SEC24A', directed: 'false', weight: 0.803022} },
+{ data: { source: 'SEC24D', target: 'SEC23B', directed: 'false', weight: 0.678562} },
+{ data: { source: 'SEC24D', target: 'SEC24C', directed: 'false', weight: 0.039011000000000004} },
+{ data: { source: 'SEC23B', target: 'SEC24C', directed: 'false', weight: 0.9992270000000001} },
+{ data: { source: 'SEC23B', target: 'SEC24A', directed: 'false', weight: 0.0718676} },
+{ data: { source: 'SEC24C', target: 'SEC24A', directed: 'false', weight: 0.023227599999999998} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 SEC23-SEC24 adaptor complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

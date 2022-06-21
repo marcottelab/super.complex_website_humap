@@ -1,0 +1,134 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 GRASP1-GRIP1 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex251.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TCP10L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TDR4" }},
+{data: { id: 'GATD1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q8NB37" }},
+{data: { id: 'CRYZL1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/O95825" }},
+{data: { id: 'C12orf4', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9NQ89" }},
+{data: { id: 'IL6R', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P08887" }},
+{data: { id: 'SARS-CoV2 nsp13', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp13.html" }},
+{data: { id: 'GRIPAP1', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q4V328" }},
+{data: { id: 'TBCK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TEA7" }},
+{data: { id: 'PPP1R21', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6ZMI0" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp13', target: 'GRIPAP1', directed: 'false', weight: 0.989815969, type: 'sars'} },
+{ data: { source: 'GATD1', target: 'TBCK', directed: 'false', weight: 0.130083} },
+{ data: { source: 'GATD1', target: 'PPP1R21', directed: 'false', weight: 0.0533442} },
+{ data: { source: 'C12orf4', target: 'TCP10L', directed: 'false', weight: 0.629624} },
+{ data: { source: 'C12orf4', target: 'IL6R', directed: 'false', weight: 0.223408} },
+{ data: { source: 'C12orf4', target: 'TBCK', directed: 'false', weight: 0.103485} },
+{ data: { source: 'C12orf4', target: 'PPP1R21', directed: 'false', weight: 0.0569831} },
+{ data: { source: 'TCP10L', target: 'GRIPAP1', directed: 'false', weight: 0.799373} },
+{ data: { source: 'TCP10L', target: 'TBCK', directed: 'false', weight: 0.5091220000000001} },
+{ data: { source: 'TCP10L', target: 'PPP1R21', directed: 'false', weight: 0.22284099999999998} },
+{ data: { source: 'TCP10L', target: 'CRYZL1', directed: 'false', weight: 0.0504849} },
+{ data: { source: 'IL6R', target: 'TBCK', directed: 'false', weight: 0.42917700000000003} },
+{ data: { source: 'IL6R', target: 'PPP1R21', directed: 'false', weight: 0.107829} },
+{ data: { source: 'IL6R', target: 'CRYZL1', directed: 'false', weight: 0.046907} },
+{ data: { source: 'PPP1R21', target: 'CRYZL1', directed: 'false', weight: 0.916149} },
+{ data: { source: 'PPP1R21', target: 'TBCK', directed: 'false', weight: 0.183559} },
+{ data: { source: 'TBCK', target: 'CRYZL1', directed: 'false', weight: 0.09182560000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 GRASP1-GRIP1 complex<br> Complex Score (from Super.Complex) = 0.96400<br> Unweighted Density = 0.57
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>GRIPAP1
+    </section>
+    </body>
+    </html>
+    

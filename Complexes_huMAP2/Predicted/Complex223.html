@@ -1,0 +1,128 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 SRCAP-associated chromatin remodeling complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex224.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MIER3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z3K6" }},
+{data: { id: 'H2BC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96A08" }},
+{data: { id: 'MIER1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N108" }},
+{data: { id: 'H2BC13', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99880" }},
+{data: { id: 'VPS72', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15906" }},
+{data: { id: 'CFDP1', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9UEE9" }},
+{data: { id: 'BAHD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TBE0" }},
+{data: { id: 'YEATS4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95619" }},
+{data: { id: 'ANP32E', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BTT0" }},
+{data: { id: 'C16orf87', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q6PH81" }},
+{data: { id: 'ZNHIT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43257" }}], 
+ edges: [{ data: { source: 'MIER3', target: 'H2BC1', directed: 'false', weight: 0.9878889999999999} },
+{ data: { source: 'MIER3', target: 'C16orf87', directed: 'false', weight: 0.776569} },
+{ data: { source: 'VPS72', target: 'YEATS4', directed: 'false', weight: 0.999994} },
+{ data: { source: 'VPS72', target: 'H2BC1', directed: 'false', weight: 0.487063} },
+{ data: { source: 'MIER1', target: 'H2BC1', directed: 'false', weight: 0.9992030000000001} },
+{ data: { source: 'MIER1', target: 'C16orf87', directed: 'false', weight: 0.185924} },
+{ data: { source: 'ZNHIT1', target: 'YEATS4', directed: 'false', weight: 0.9863120000000001} },
+{ data: { source: 'ZNHIT1', target: 'H2BC1', directed: 'false', weight: 0.8444709999999999} },
+{ data: { source: 'ANP32E', target: 'H2BC1', directed: 'false', weight: 0.9613510000000001} },
+{ data: { source: 'BAHD1', target: 'H2BC1', directed: 'false', weight: 0.9982120000000001} },
+{ data: { source: 'YEATS4', target: 'H2BC1', directed: 'false', weight: 0.061041399999999996} },
+{ data: { source: 'CFDP1', target: 'H2BC1', directed: 'false', weight: 0.901543} },
+{ data: { source: 'H2BC1', target: 'H2BC13', directed: 'false', weight: 0.939528} },
+{ data: { source: 'H2BC1', target: 'C16orf87', directed: 'false', weight: 0.823264} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 SRCAP-associated chromatin remodeling complex<br> Complex Score (from Super.Complex) = 0.98000<br> Unweighted Density = 0.25
+    </section>
+    </body>
+    </html>
+    

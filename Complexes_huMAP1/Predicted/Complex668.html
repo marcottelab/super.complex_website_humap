@@ -1,0 +1,133 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 Integrator complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex669.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'INTS12', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96CB8" }},
+{data: { id: 'INTS6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UL03" }},
+{data: { id: 'SARS-CoV2 M', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 M.html" }},
+{data: { id: 'INTS4', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q96HW7" }},
+{data: { id: 'INTS5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P9B9" }},
+{data: { id: 'INTS11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5TA45" }},
+{data: { id: 'INTS4P2', score: 0, type: '', href: "https://www.ncbi.nlm.nih.gov/gene/644619" }},
+{data: { id: 'INTS9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NV88" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 M', target: 'INTS4', directed: 'false', weight: 0.943304706, type: 'sars'} },
+{ data: { source: 'INTS11', target: 'INTS4', directed: 'false', weight: 0.9990889999999999} },
+{ data: { source: 'INTS11', target: 'INTS9', directed: 'false', weight: 0.9990610000000001} },
+{ data: { source: 'INTS11', target: 'INTS6', directed: 'false', weight: 0.7521329999999999} },
+{ data: { source: 'INTS11', target: 'INTS12', directed: 'false', weight: 0.56548} },
+{ data: { source: 'INTS11', target: 'INTS5', directed: 'false', weight: 0.126941} },
+{ data: { source: 'INTS4P2', target: 'INTS4', directed: 'false', weight: 0.809639} },
+{ data: { source: 'INTS4', target: 'INTS12', directed: 'false', weight: 0.9956809999999999} },
+{ data: { source: 'INTS4', target: 'INTS9', directed: 'false', weight: 0.9917809999999999} },
+{ data: { source: 'INTS4', target: 'INTS6', directed: 'false', weight: 0.9819379999999999} },
+{ data: { source: 'INTS4', target: 'INTS5', directed: 'false', weight: 0.9738540000000001} },
+{ data: { source: 'INTS9', target: 'INTS5', directed: 'false', weight: 0.906415} },
+{ data: { source: 'INTS9', target: 'INTS12', directed: 'false', weight: 0.65632} },
+{ data: { source: 'INTS9', target: 'INTS6', directed: 'false', weight: 0.594072} },
+{ data: { source: 'INTS5', target: 'INTS12', directed: 'false', weight: 0.376256} },
+{ data: { source: 'INTS5', target: 'INTS6', directed: 'false', weight: 0.113652} },
+{ data: { source: 'INTS12', target: 'INTS6', directed: 'false', weight: 0.5} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 Integrator complex<br> Complex Score (from Super.Complex) = 0.62947<br> Unweighted Density = 0.76
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>INTS4
+    </section>
+    </body>
+    </html>
+    

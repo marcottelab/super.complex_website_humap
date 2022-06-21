@@ -1,0 +1,178 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.3 5FMC (Friends of Methylated Chtop) complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex897.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DDX47', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H0S4" }},
+{data: { id: 'PELP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IZL8" }},
+{data: { id: 'EMG1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92979" }},
+{data: { id: 'MPG', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P29372" }},
+{data: { id: 'USP36', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P275" }},
+{data: { id: 'SENP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H4L4" }},
+{data: { id: 'PDCD11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14690" }},
+{data: { id: 'TEX10', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9NXF1" }},
+{data: { id: 'SERBP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NC51" }},
+{data: { id: 'WDR18', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BV38" }},
+{data: { id: 'NPM3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75607" }},
+{data: { id: 'TTC37', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6PGP7" }},
+{data: { id: 'RPP25L', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q8N5L8" }},
+{data: { id: 'NPM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P06748" }}], 
+ edges: [{ data: { source: 'SERBP1', target: 'NPM1', directed: 'false', weight: 0.99487} },
+{ data: { source: 'SERBP1', target: 'MPG', directed: 'false', weight: 0.860606} },
+{ data: { source: 'SERBP1', target: 'NPM3', directed: 'false', weight: 0.661929} },
+{ data: { source: 'SERBP1', target: 'DDX47', directed: 'false', weight: 0.594016} },
+{ data: { source: 'SERBP1', target: 'TTC37', directed: 'false', weight: 0.535428} },
+{ data: { source: 'SERBP1', target: 'EMG1', directed: 'false', weight: 0.5} },
+{ data: { source: 'PDCD11', target: 'NPM1', directed: 'false', weight: 0.9707549999999999} },
+{ data: { source: 'PDCD11', target: 'TEX10', directed: 'false', weight: 0.553063} },
+{ data: { source: 'PDCD11', target: 'PELP1', directed: 'false', weight: 0.2873} },
+{ data: { source: 'PDCD11', target: 'USP36', directed: 'false', weight: 0.168999} },
+{ data: { source: 'PDCD11', target: 'NPM3', directed: 'false', weight: 0.16605599999999998} },
+{ data: { source: 'PDCD11', target: 'RPP25L', directed: 'false', weight: 0.13172999999999999} },
+{ data: { source: 'PDCD11', target: 'TTC37', directed: 'false', weight: 0.116478} },
+{ data: { source: 'PDCD11', target: 'MPG', directed: 'false', weight: 0.0871659} },
+{ data: { source: 'PDCD11', target: 'EMG1', directed: 'false', weight: 0.0871659} },
+{ data: { source: 'EMG1', target: 'NPM1', directed: 'false', weight: 0.909056} },
+{ data: { source: 'EMG1', target: 'MPG', directed: 'false', weight: 0.56548} },
+{ data: { source: 'EMG1', target: 'NPM3', directed: 'false', weight: 0.5} },
+{ data: { source: 'EMG1', target: 'DDX47', directed: 'false', weight: 0.44267399999999996} },
+{ data: { source: 'EMG1', target: 'TTC37', directed: 'false', weight: 0.398094} },
+{ data: { source: 'EMG1', target: 'TEX10', directed: 'false', weight: 0.115551} },
+{ data: { source: 'EMG1', target: 'RPP25L', directed: 'false', weight: 0.10798699999999999} },
+{ data: { source: 'EMG1', target: 'USP36', directed: 'false', weight: 0.100579} },
+{ data: { source: 'EMG1', target: 'PELP1', directed: 'false', weight: 0.100579} },
+{ data: { source: 'NPM1', target: 'NPM3', directed: 'false', weight: 0.990566} },
+{ data: { source: 'NPM1', target: 'TEX10', directed: 'false', weight: 0.987609} },
+{ data: { source: 'NPM1', target: 'DDX47', directed: 'false', weight: 0.985181} },
+{ data: { source: 'NPM1', target: 'MPG', directed: 'false', weight: 0.9139430000000001} },
+{ data: { source: 'NPM1', target: 'RPP25L', directed: 'false', weight: 0.8602069999999999} },
+{ data: { source: 'NPM1', target: 'USP36', directed: 'false', weight: 0.818046} },
+{ data: { source: 'NPM1', target: 'PELP1', directed: 'false', weight: 0.484555} },
+{ data: { source: 'NPM1', target: 'TTC37', directed: 'false', weight: 0.30354000000000003} },
+{ data: { source: 'DDX47', target: 'MPG', directed: 'false', weight: 0.691619} },
+{ data: { source: 'DDX47', target: 'TTC37', directed: 'false', weight: 0.676471} },
+{ data: { source: 'DDX47', target: 'NPM3', directed: 'false', weight: 0.594016} },
+{ data: { source: 'TEX10', target: 'PELP1', directed: 'false', weight: 0.999958} },
+{ data: { source: 'TEX10', target: 'WDR18', directed: 'false', weight: 0.9998739999999999} },
+{ data: { source: 'TEX10', target: 'SENP3', directed: 'false', weight: 0.9814780000000001} },
+{ data: { source: 'TEX10', target: 'MPG', directed: 'false', weight: 0.189659} },
+{ data: { source: 'TEX10', target: 'NPM3', directed: 'false', weight: 0.174905} },
+{ data: { source: 'TEX10', target: 'TTC37', directed: 'false', weight: 0.144789} },
+{ data: { source: 'TEX10', target: 'USP36', directed: 'false', weight: 0.13062} },
+{ data: { source: 'TEX10', target: 'RPP25L', directed: 'false', weight: 0.100994} },
+{ data: { source: 'USP36', target: 'NPM3', directed: 'false', weight: 0.35196700000000003} },
+{ data: { source: 'USP36', target: 'RPP25L', directed: 'false', weight: 0.166199} },
+{ data: { source: 'USP36', target: 'TTC37', directed: 'false', weight: 0.16530799999999998} },
+{ data: { source: 'USP36', target: 'PELP1', directed: 'false', weight: 0.160476} },
+{ data: { source: 'USP36', target: 'MPG', directed: 'false', weight: 0.100579} },
+{ data: { source: 'MPG', target: 'TTC37', directed: 'false', weight: 0.6364489999999999} },
+{ data: { source: 'MPG', target: 'NPM3', directed: 'false', weight: 0.5} },
+{ data: { source: 'MPG', target: 'RPP25L', directed: 'false', weight: 0.171006} },
+{ data: { source: 'MPG', target: 'PELP1', directed: 'false', weight: 0.100579} },
+{ data: { source: 'TTC37', target: 'NPM3', directed: 'false', weight: 0.535428} },
+{ data: { source: 'TTC37', target: 'RPP25L', directed: 'false', weight: 0.204007} },
+{ data: { source: 'TTC37', target: 'PELP1', directed: 'false', weight: 0.0924993} },
+{ data: { source: 'WDR18', target: 'PELP1', directed: 'false', weight: 0.9999389999999999} },
+{ data: { source: 'WDR18', target: 'SENP3', directed: 'false', weight: 0.9935440000000001} },
+{ data: { source: 'SENP3', target: 'PELP1', directed: 'false', weight: 0.997985} },
+{ data: { source: 'NPM3', target: 'RPP25L', directed: 'false', weight: 0.314822} },
+{ data: { source: 'NPM3', target: 'PELP1', directed: 'false', weight: 0.153256} },
+{ data: { source: 'PELP1', target: 'RPP25L', directed: 'false', weight: 0.0855589} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.3 5FMC (Friends of Methylated Chtop) complex<br> Complex Score (from Super.Complex) = 0.54112<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

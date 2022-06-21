@@ -1,0 +1,136 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 LAS1L-PELP1-TEX10-WDR18-NOL9-SENP3  complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1011.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PELP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IZL8" }},
+{data: { id: 'SENP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H4L4" }},
+{data: { id: 'RPL7A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62424" }},
+{data: { id: 'TEX10', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9NXF1" }},
+{data: { id: 'NOL9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5SY16" }},
+{data: { id: 'RPLP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P05387" }},
+{data: { id: 'WDR18', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BV38" }},
+{data: { id: 'FBL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P22087" }},
+{data: { id: 'LAS1L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y4W2" }},
+{data: { id: 'NPM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P06748" }}], 
+ edges: [{ data: { source: 'LAS1L', target: 'TEX10', directed: 'false', weight: 0.983856} },
+{ data: { source: 'LAS1L', target: 'PELP1', directed: 'false', weight: 0.9758979999999999} },
+{ data: { source: 'LAS1L', target: 'NOL9', directed: 'false', weight: 0.945572} },
+{ data: { source: 'LAS1L', target: 'WDR18', directed: 'false', weight: 0.6717350000000001} },
+{ data: { source: 'LAS1L', target: 'SENP3', directed: 'false', weight: 0.115879} },
+{ data: { source: 'NPM1', target: 'RPL7A', directed: 'false', weight: 0.999999} },
+{ data: { source: 'NPM1', target: 'TEX10', directed: 'false', weight: 0.987609} },
+{ data: { source: 'NPM1', target: 'FBL', directed: 'false', weight: 0.941789} },
+{ data: { source: 'NPM1', target: 'PELP1', directed: 'false', weight: 0.484555} },
+{ data: { source: 'NPM1', target: 'RPLP2', directed: 'false', weight: 0.18376099999999998} },
+{ data: { source: 'RPL7A', target: 'RPLP2', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'FBL', directed: 'false', weight: 0.162211} },
+{ data: { source: 'RPLP2', target: 'FBL', directed: 'false', weight: 0.97593} },
+{ data: { source: 'TEX10', target: 'PELP1', directed: 'false', weight: 0.999958} },
+{ data: { source: 'TEX10', target: 'WDR18', directed: 'false', weight: 0.9998739999999999} },
+{ data: { source: 'TEX10', target: 'SENP3', directed: 'false', weight: 0.9814780000000001} },
+{ data: { source: 'TEX10', target: 'NOL9', directed: 'false', weight: 0.9467409999999999} },
+{ data: { source: 'NOL9', target: 'WDR18', directed: 'false', weight: 0.989361} },
+{ data: { source: 'NOL9', target: 'PELP1', directed: 'false', weight: 0.8864719999999999} },
+{ data: { source: 'NOL9', target: 'SENP3', directed: 'false', weight: 0.247908} },
+{ data: { source: 'WDR18', target: 'PELP1', directed: 'false', weight: 0.9999389999999999} },
+{ data: { source: 'WDR18', target: 'SENP3', directed: 'false', weight: 0.9935440000000001} },
+{ data: { source: 'SENP3', target: 'PELP1', directed: 'false', weight: 0.997985} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 LAS1L-PELP1-TEX10-WDR18-NOL9-SENP3  complex<br> Complex Score (from Super.Complex) = 0.51914<br> Unweighted Density = 0.51
+    </section>
+    </body>
+    </html>
+    

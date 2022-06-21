@@ -1,0 +1,108 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> SLC6A8 USP3 RHOG NT5E</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex252.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RHOG', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P84095" }},
+{data: { id: 'USP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y6I4" }},
+{data: { id: 'SLC6A8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48029" }},
+{data: { id: 'NT5E', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P21589" }}], 
+ edges: [{ data: { source: 'NT5E', target: 'RHOG', directed: 'false', weight: 0.917115} },
+{ data: { source: 'NT5E', target: 'USP3', directed: 'false', weight: 0.9076879999999999} },
+{ data: { source: 'NT5E', target: 'SLC6A8', directed: 'false', weight: 0.542176} },
+{ data: { source: 'RHOG', target: 'USP3', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RHOG', target: 'SLC6A8', directed: 'false', weight: 0.151455} },
+{ data: { source: 'SLC6A8', target: 'USP3', directed: 'false', weight: 0.133456} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    SLC6A8 USP3 RHOG NT5E<br> Complex Score (from Super.Complex) = 0.77005<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

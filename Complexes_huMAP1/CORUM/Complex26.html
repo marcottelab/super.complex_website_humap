@@ -1,0 +1,97 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> EIF2B1-EIF2B2-EIF2B3-EIF2B4-EIF2B5 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex27.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EIF2B4', score: 5, href: "https://www.uniprot.org/uniprot/Q9UI10" }},
+{data: { id: 'EIF2B1', score: 5, href: "https://www.uniprot.org/uniprot/Q14232" }},
+{data: { id: 'EIF2B3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NR50" }},
+{data: { id: 'EIF2B5', score: 5, href: "https://www.uniprot.org/uniprot/Q13144" }},
+{data: { id: 'EIF2B2', score: 5, href: "https://www.uniprot.org/uniprot/P49770" }}], 
+ edges: [{ data: { source: 'EIF2B4', target: 'EIF2B3', directed: 'false', weight: 1.0} },
+{ data: { source: 'EIF2B4', target: 'EIF2B5', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'EIF2B4', target: 'EIF2B2', directed: 'false', weight: 0.9999239999999999} },
+{ data: { source: 'EIF2B4', target: 'EIF2B1', directed: 'false', weight: 0.9980379999999999} },
+{ data: { source: 'EIF2B1', target: 'EIF2B3', directed: 'false', weight: 0.999972} },
+{ data: { source: 'EIF2B1', target: 'EIF2B5', directed: 'false', weight: 0.9995379999999999} },
+{ data: { source: 'EIF2B1', target: 'EIF2B2', directed: 'false', weight: 0.998859} },
+{ data: { source: 'EIF2B3', target: 'EIF2B5', directed: 'false', weight: 1.0} },
+{ data: { source: 'EIF2B3', target: 'EIF2B2', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'EIF2B5', target: 'EIF2B2', directed: 'false', weight: 0.999993} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    EIF2B1-EIF2B2-EIF2B3-EIF2B4-EIF2B5 complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,119 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TNF-alpha/NF-kappa B signaling complex (CHUK, KPNA3, NFKB2, NFKBIB, REL, IKBKG,  NFKB1, NFKBIE, RELB,  NFKBIA, RELA, TNIP2)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1580.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NFKBIE', score: 5, href: "https://www.uniprot.org/uniprot/O00221" }},
+{data: { id: 'CHUK', score: 5, href: "https://www.uniprot.org/uniprot/O15111" }},
+{data: { id: 'NFKB1', score: 5, href: "https://www.uniprot.org/uniprot/P19838" }},
+{data: { id: 'NFKBIA', score: 5, href: "https://www.uniprot.org/uniprot/P25963" }},
+{data: { id: 'NFKB2', score: 5, href: "https://www.uniprot.org/uniprot/Q00653" }},
+{data: { id: 'RELB', score: 5, href: "https://www.uniprot.org/uniprot/Q01201" }},
+{data: { id: 'RELA', score: 5, href: "https://www.uniprot.org/uniprot/Q04206" }},
+{data: { id: 'REL', score: 5, href: "https://www.uniprot.org/uniprot/Q04864" }},
+{data: { id: 'NFKBIB', score: 5, href: "https://www.uniprot.org/uniprot/Q15653" }},
+{data: { id: 'TNIP2', score: 5, href: "https://www.uniprot.org/uniprot/Q8NFZ5" }},
+{data: { id: 'IKBKG', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6K9" }}], 
+ edges: [{ data: { source: 'NFKBIB', target: 'RELA', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'NFKBIB', target: 'REL', directed: 'false', weight: 0.9977719999999999} },
+{ data: { source: 'NFKBIB', target: 'NFKB1', directed: 'false', weight: 0.957225} },
+{ data: { source: 'NFKBIB', target: 'NFKB2', directed: 'false', weight: 0.8867780000000001} },
+{ data: { source: 'NFKBIB', target: 'NFKBIA', directed: 'false', weight: 0.0282744} },
+{ data: { source: 'NFKBIE', target: 'RELB', directed: 'false', weight: 0.527942} },
+{ data: { source: 'NFKBIE', target: 'REL', directed: 'false', weight: 0.41515100000000005} },
+{ data: { source: 'IKBKG', target: 'CHUK', directed: 'false', weight: 0.989293} },
+{ data: { source: 'IKBKG', target: 'NFKBIA', directed: 'false', weight: 0.0842982} },
+{ data: { source: 'NFKB2', target: 'NFKBIA', directed: 'false', weight: 0.999999} },
+{ data: { source: 'NFKB2', target: 'RELB', directed: 'false', weight: 0.9971540000000001} },
+{ data: { source: 'NFKB2', target: 'REL', directed: 'false', weight: 0.755448} },
+{ data: { source: 'NFKBIA', target: 'RELA', directed: 'false', weight: 1.0} },
+{ data: { source: 'NFKBIA', target: 'REL', directed: 'false', weight: 0.999999} },
+{ data: { source: 'NFKBIA', target: 'NFKB1', directed: 'false', weight: 0.999984} },
+{ data: { source: 'NFKBIA', target: 'RELB', directed: 'false', weight: 0.901631} },
+{ data: { source: 'RELB', target: 'NFKB1', directed: 'false', weight: 0.831356} },
+{ data: { source: 'RELB', target: 'REL', directed: 'false', weight: 0.241019} },
+{ data: { source: 'RELB', target: 'RELA', directed: 'false', weight: 0.13886099999999998} },
+{ data: { source: 'RELA', target: 'REL', directed: 'false', weight: 0.37548000000000004} },
+{ data: { source: 'REL', target: 'NFKB1', directed: 'false', weight: 0.656369} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    TNF-alpha/NF-kappa B signaling complex (CHUK, KPNA3, NFKB2, NFKBIB, REL, IKBKG,  NFKB1, NFKBIE, RELB,  NFKBIA, RELA, TNIP2)	<br> Unweighted Density = 0.38
+    </section>
+    </body>
+    </html>
+    

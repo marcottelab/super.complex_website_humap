@@ -1,0 +1,152 @@
+
+    <!doctype html>
+    
+    <html>
+    
+    <head>
+    <title>SARS-CoV2 nsp9</title>
+
+    		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    
+    		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+    <script src="https://unpkg.com/cose-base/cose-base.js"></script>
+    <script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+        </head>
+        
+        <style>
+            #cy {
+                width: 90%;
+                height: 90%;
+                position: absolute;
+                middle: 0px;
+                left: 0px;
+            }
+        </style>
+        
+        <body>
+        <section>
+        
+
+         </section>
+            <div id="cy"></div>
+            <script>
+              var cy = cytoscape({
+          container: document.getElementById('cy'),
+          
+elements:{nodes: [{data: { id: "SARS-CoV2 nsp9", score: 2, type:  "sars" , href: "https://covid-19.uniprot.org/uniprotkb/P0DTC1" }},
+{data: { id: "GTF2F2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P13984" }},
+{data: { id: "FBN1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P35555" }},
+{data: { id: "FBN2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P35556" }},
+{data: { id: "NUP214", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P35658" }},
+{data: { id: "NUP62", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P37198" }},
+{data: { id: "DCAF7", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P61962" }},
+{data: { id: "EIF4H", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q15056" }},
+{data: { id: "NUP54", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q7Z3B4" }},
+{data: { id: "MIB1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q86YT6" }},
+{data: { id: "SPART", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8N0X7" }},
+{data: { id: "NEK9", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8TD19" }},
+{data: { id: "ZNF503", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q96F45" }},
+{data: { id: "NUP88", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q99567" }},
+{data: { id: "NUP58", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9BVL2" }},
+{data: { id: "MAT2B", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9NZL9" }},
+{data: { id: "FBLN5", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9UBX5" }},
+{data: { id: "0.1 NPC subcomplex (NUP98, NUP107, NUP133, NUP160)", score: 0, type: "complex", href: "../Predicted/Complex172.html" }},
+{data: { id: "0.05 Emerin complex 25", score: 0, type: "complex", href: "../Predicted/Complex316.html" }},
+{data: { id: "0.3 TREX complex", score: 0, type: "complex", href: "../Predicted/Complex58.html" }},
+{data: { id: "DYRK1B LZTS2 DYRK1A DKFZp686H01244 DCAF7 FAM53C CEFIP", score: 0, type: "complex", href: "../Predicted/Complex258.html" }},
+{data: { id: "0.5 Septin complex", score: 0, type: "complex", href: "../Predicted/Complex26.html" }}], 
+ edges: [{ data: { source: "GTF2F2", target: "0.5 Septin complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "NUP214", target: "0.1 NPC subcomplex (NUP98, NUP107, NUP133, NUP160)", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "DCAF7", target: "DYRK1B LZTS2 DYRK1A DKFZp686H01244 DCAF7 FAM53C CEFIP", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "MIB1", target: "0.3 TREX complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "NUP88", target: "0.1 NPC subcomplex (NUP98, NUP107, NUP133, NUP160)", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "MAT2B", target: "0.05 Emerin complex 25", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SARS-CoV2 nsp9", target: "GTF2F2", directed: "false", type: "sars2prot",weight: 0.877426938} },
+{ data: { source: "SARS-CoV2 nsp9", target: "FBN1", directed: "false", type: "sars2prot",weight: 0.992372395} },
+{ data: { source: "SARS-CoV2 nsp9", target: "FBN2", directed: "false", type: "sars2prot",weight: 0.991012329} },
+{ data: { source: "SARS-CoV2 nsp9", target: "NUP214", directed: "false", type: "sars2prot",weight: 0.962233264} },
+{ data: { source: "SARS-CoV2 nsp9", target: "NUP62", directed: "false", type: "sars2prot",weight: 0.993010451} },
+{ data: { source: "SARS-CoV2 nsp9", target: "DCAF7", directed: "false", type: "sars2prot",weight: 0.969234024} },
+{ data: { source: "SARS-CoV2 nsp9", target: "EIF4H", directed: "false", type: "sars2prot",weight: 0.86901939} },
+{ data: { source: "SARS-CoV2 nsp9", target: "NUP54", directed: "false", type: "sars2prot",weight: 0.991624822} },
+{ data: { source: "SARS-CoV2 nsp9", target: "MIB1", directed: "false", type: "sars2prot",weight: 0.89782233} },
+{ data: { source: "SARS-CoV2 nsp9", target: "SPART", directed: "false", type: "sars2prot",weight: 0.962964129} },
+{ data: { source: "SARS-CoV2 nsp9", target: "NEK9", directed: "false", type: "sars2prot",weight: 0.991972865} },
+{ data: { source: "SARS-CoV2 nsp9", target: "ZNF503", directed: "false", type: "sars2prot",weight: 0.777581447} },
+{ data: { source: "SARS-CoV2 nsp9", target: "NUP88", directed: "false", type: "sars2prot",weight: 0.92724312} },
+{ data: { source: "SARS-CoV2 nsp9", target: "NUP58", directed: "false", type: "sars2prot",weight: 0.979586223} },
+{ data: { source: "SARS-CoV2 nsp9", target: "MAT2B", directed: "false", type: "sars2prot",weight: 0.978282655} },
+{ data: { source: "SARS-CoV2 nsp9", target: "FBLN5", directed: "false", type: "sars2prot",weight: 0.992002193} }]},
+
+    style: [
+        {
+            selector: 'node',
+            style: {
+                    				'font-size': 20,
+            'font-weight': 'bold',
+                          'text-wrap': 'wrap',
+        'text-max-width': '300',
+                shape: function( ele ){ 
+                                    if ( ele.data('type') == 'complex' ){return 'circle'}
+                                    if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                    
+      return 'star';
+      },
+                'background-color': function( ele ){ 
+                                    if ( ele.data('type') == 'complex' ){return 'blue'}
+                                    if ( ele.data('type') == 'sars' ){return 'red'}             
+                                    if ( ele.data('score_annot') == 1 ){return 'rgb(201, 160, 54)'} 
+    								if ( ele.data('score_annot') == 2 ){return 'rgb(211, 186, 63)'}  
+                                     if ( ele.data('score_annot') == 3 ){return 'rgb(160, 171, 105)'}   
+                                     if ( ele.data('score_annot') == 4 ){return 'rgb(78, 148, 70)'}   
+                                     if ( ele.data('score_annot') == 5 ){return 'rgb(52, 136, 74)'}   
+                                     return 'rgb(180, 131, 40)';
+      },
+                label: 'data(id)'
+            }
+        },
+    							{
+    							selector: 'edge',
+    							style: {
+    								'width': 'mapData(weight, 0, 1, 0, 5)',
+    								'line-color': function( ele ){ 
+                                    if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                      if ( ele.data('type') == 'complex2complex' ){return 'blue'}
+      return 'red';
+      },
+    								'opacity': 0.5
+    							}
+    						}
+    	]
+        
+    });
+    
+    cy.layout({
+        'name': 'cose',
+    	'animate':false,
+    	'nodeDimensionsIncludeLabels':true,
+    	'padding': 1,
+    	'componentSpacing': 1,
+    	 'idealEdgeLength': function( edge ){ return 1; },
+    	 // Divisor to compute edge forces
+      'edgeElasticity': function( edge ){ return 20; }
+    }).run();
+        
+    cy.on('tap', 'node', function(){
+      try { // your browser may block popups
+        window.open( this.data('href') );
+      } catch(e){ // fall back on url change
+        window.location.href = this.data('href');
+      }
+    });      
+        </script>
+    
+        	<section>
+        	<br>
+        	<br>
+        	<br> 
+        
+        </section>
+        </body>
+        </html>
+        

@@ -1,0 +1,100 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CHTF18-RFC2-5 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex936.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RFC4', score: 5, href: "https://www.uniprot.org/uniprot/P35249" }},
+{data: { id: 'RFC2', score: 5, href: "https://www.uniprot.org/uniprot/P35250" }},
+{data: { id: 'RFC5', score: 5, href: "https://www.uniprot.org/uniprot/P40937" }},
+{data: { id: 'RFC3', score: 5, href: "https://www.uniprot.org/uniprot/P40938" }},
+{data: { id: 'CHTF18', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVB6" }}], 
+ edges: [{ data: { source: 'RFC4', target: 'RFC2', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'RFC4', target: 'RFC5', directed: 'false', weight: 0.9998049999999999} },
+{ data: { source: 'RFC4', target: 'RFC3', directed: 'false', weight: 0.9997950000000001} },
+{ data: { source: 'RFC4', target: 'CHTF18', directed: 'false', weight: 0.296229} },
+{ data: { source: 'RFC2', target: 'RFC3', directed: 'false', weight: 0.999714} },
+{ data: { source: 'RFC2', target: 'RFC5', directed: 'false', weight: 0.998811} },
+{ data: { source: 'RFC5', target: 'RFC3', directed: 'false', weight: 0.999994} },
+{ data: { source: 'RFC5', target: 'CHTF18', directed: 'false', weight: 0.187959} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CHTF18-RFC2-5 complex	<br> Unweighted Density = 0.80
+    </section>
+    </body>
+    </html>
+    

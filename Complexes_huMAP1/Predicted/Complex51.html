@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 MEP50-PRMT5-ICLN complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex52.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RIOK1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BRS2" }},
+{data: { id: 'WDR77', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BQA1" }},
+{data: { id: 'CLNS1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P54105" }},
+{data: { id: 'PRMT5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14744" }},
+{data: { id: 'COPRS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NQ92" }}], 
+ edges: [{ data: { source: 'WDR77', target: 'PRMT5', directed: 'false', weight: 0.99874} },
+{ data: { source: 'WDR77', target: 'RIOK1', directed: 'false', weight: 0.778345} },
+{ data: { source: 'WDR77', target: 'COPRS', directed: 'false', weight: 0.546363} },
+{ data: { source: 'WDR77', target: 'CLNS1A', directed: 'false', weight: 0.46472700000000006} },
+{ data: { source: 'COPRS', target: 'PRMT5', directed: 'false', weight: 0.9946450000000001} },
+{ data: { source: 'COPRS', target: 'CLNS1A', directed: 'false', weight: 0.8906219999999999} },
+{ data: { source: 'COPRS', target: 'RIOK1', directed: 'false', weight: 0.5798939999999999} },
+{ data: { source: 'PRMT5', target: 'CLNS1A', directed: 'false', weight: 0.994735} },
+{ data: { source: 'PRMT5', target: 'RIOK1', directed: 'false', weight: 0.958583} },
+{ data: { source: 'RIOK1', target: 'CLNS1A', directed: 'false', weight: 0.359452} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 MEP50-PRMT5-ICLN complex<br> Complex Score (from Super.Complex) = 0.83584<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

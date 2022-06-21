@@ -1,0 +1,204 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title>SARS-CoV2 N</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: "SARS-CoV2 N", score: 2, type:  "sars" , href: "https://covid-19.uniprot.org/uniprotkb/P0DTC9" }},
+{data: { id: "RRP9", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O43818" }},
+{data: { id: "PABPC1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P11940" }},
+{data: { id: "CSNK2A2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P19784" }},
+{data: { id: "CSNK2B", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P67870" }},
+{data: { id: "G3BP1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q13283" }},
+{data: { id: "PABPC4", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q13310" }},
+{data: { id: "LARP1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q6PKG0" }},
+{data: { id: "FAM98A", score: 1, score_annot: 4, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8NCA5" }},
+{data: { id: "SNIP1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8TAD8" }},
+{data: { id: "UPF1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q92900" }},
+{data: { id: "MOV10", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9HCE1" }},
+{data: { id: "G3BP2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9UN86" }},
+{data: { id: "DDX21", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9NR30" }},
+{data: { id: "RBM28", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9NW13" }},
+{data: { id: "RPL36", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9Y3U8" }},
+{data: { id: "0.3 Casein kinase II (beta-dimer, alpha, alpha')", score: 0, type: "complex", href: "../Predicted/Complex784.html" }},
+{data: { id: "0.1 Nop56p-associated pre-rRNA complex", score: 0, type: "complex", href: "../Predicted/Complex2.html" }},
+{data: { id: "0.1 CTFC-TAF1 complex", score: 0, type: "complex", href: "../Predicted/Complex21.html" }},
+{data: { id: "0.1 Nop56p-associated pre-rRNA complex match 2", score: 0, type: "complex", href: "../Predicted/Complex5.html" }},
+{data: { id: "0.1 SF3b complex", score: 0, type: "complex", href: "../Predicted/Complex27.html" }},
+{data: { id: "0.1 GAIT complex", score: 0, type: "complex", href: "../Predicted/Complex180.html" }},
+{data: { id: "0.1 Casein kinase II (beta-dimer, alpha'-dimer)", score: 0, type: "complex", href: "../Predicted/Complex541.html" }},
+{data: { id: "0.6 Ribosome, cytoplasmic", score: 0, type: "complex", href: "../Predicted/Complex1.html" }},
+{data: { id: "0.1 IMP3-IMP4-MPP10 complex", score: 0, type: "complex", href: "../Predicted/Complex25.html" }},
+{data: { id: "0.1 60S ribosomal subunit, cytoplasmic match 2", score: 0, type: "complex", href: "../Predicted/Complex39.html" }},
+{data: { id: "0.1 Ribosome, cytoplasmic", score: 0, type: "complex", href: "../Predicted/Complex60.html" }},
+{data: { id: "0.3 Ribosome, cytoplasmic", score: 0, type: "complex", href: "../Predicted/Complex4.html" }},
+{data: { id: "0.1 Apoptosis- and splicing-associated protein complex (ASAP-L), SAP18, RNPS1, Acinus-L", score: 0, type: "complex", href: "../Predicted/Complex959.html" }},
+{data: { id: "0.4 Casein kinase II (beta-dimer, alpha, alpha')", score: 0, type: "complex", href: "../Predicted/Complex712.html" }}], 
+ edges: [{ data: { source: "0.3 Casein kinase II (beta-dimer, alpha, alpha')", target: "0.1 Casein kinase II (beta-dimer, alpha'-dimer)", directed: "false",type: "complex2complex", weight: 0.25} },
+{ data: { source: "0.3 Casein kinase II (beta-dimer, alpha, alpha')", target: "0.4 Casein kinase II (beta-dimer, alpha, alpha')", directed: "false",type: "complex2complex", weight: 0.23076923076923078} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex", target: "0.1 CTFC-TAF1 complex", directed: "false",type: "complex2complex", weight: 0.13402061855670103} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex", target: "0.1 Nop56p-associated pre-rRNA complex match 2", directed: "false",type: "complex2complex", weight: 0.26851851851851855} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex", target: "0.1 SF3b complex", directed: "false",type: "complex2complex", weight: 0.1} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex", target: "0.1 GAIT complex", directed: "false",type: "complex2complex", weight: 0.010526315789473684} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex", target: "0.6 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.025} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex", target: "0.1 IMP3-IMP4-MPP10 complex", directed: "false",type: "complex2complex", weight: 0.12244897959183673} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex", target: "0.1 60S ribosomal subunit, cytoplasmic match 2", directed: "false",type: "complex2complex", weight: 0.009174311926605505} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex", target: "0.1 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.009174311926605505} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex", target: "0.3 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.008333333333333333} },
+{ data: { source: "0.1 CTFC-TAF1 complex", target: "0.1 Nop56p-associated pre-rRNA complex match 2", directed: "false",type: "complex2complex", weight: 0.1016949152542373} },
+{ data: { source: "0.1 CTFC-TAF1 complex", target: "0.1 SF3b complex", directed: "false",type: "complex2complex", weight: 0.11764705882352941} },
+{ data: { source: "0.1 CTFC-TAF1 complex", target: "0.1 IMP3-IMP4-MPP10 complex", directed: "false",type: "complex2complex", weight: 0.05555555555555555} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex match 2", target: "0.1 SF3b complex", directed: "false",type: "complex2complex", weight: 0.06557377049180328} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex match 2", target: "0.1 GAIT complex", directed: "false",type: "complex2complex", weight: 0.02} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex match 2", target: "0.6 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.00847457627118644} },
+{ data: { source: "0.1 Nop56p-associated pre-rRNA complex match 2", target: "0.1 IMP3-IMP4-MPP10 complex", directed: "false",type: "complex2complex", weight: 0.1206896551724138} },
+{ data: { source: "0.1 SF3b complex", target: "0.6 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.01098901098901099} },
+{ data: { source: "0.1 SF3b complex", target: "0.1 IMP3-IMP4-MPP10 complex", directed: "false",type: "complex2complex", weight: 0.08571428571428572} },
+{ data: { source: "0.1 GAIT complex", target: "0.6 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.012987012987012988} },
+{ data: { source: "0.1 GAIT complex", target: "0.1 60S ribosomal subunit, cytoplasmic match 2", directed: "false",type: "complex2complex", weight: 0.043478260869565216} },
+{ data: { source: "0.1 GAIT complex", target: "0.3 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.06060606060606061} },
+{ data: { source: "0.1 Casein kinase II (beta-dimer, alpha'-dimer)", target: "0.4 Casein kinase II (beta-dimer, alpha, alpha')", directed: "false",type: "complex2complex", weight: 0.08333333333333333} },
+{ data: { source: "0.6 Ribosome, cytoplasmic", target: "0.1 60S ribosomal subunit, cytoplasmic match 2", directed: "false",type: "complex2complex", weight: 0.12195121951219512} },
+{ data: { source: "0.6 Ribosome, cytoplasmic", target: "0.1 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.10843373493975904} },
+{ data: { source: "0.6 Ribosome, cytoplasmic", target: "0.3 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.2875} },
+{ data: { source: "0.1 60S ribosomal subunit, cytoplasmic match 2", target: "0.1 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.02702702702702703} },
+{ data: { source: "0.1 60S ribosomal subunit, cytoplasmic match 2", target: "0.3 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.13953488372093023} },
+{ data: { source: "0.1 Ribosome, cytoplasmic", target: "0.3 Ribosome, cytoplasmic", directed: "false",type: "complex2complex", weight: 0.06521739130434782} },
+{ data: { source: "RRP9", target: "0.1 Nop56p-associated pre-rRNA complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RRP9", target: "0.1 CTFC-TAF1 complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "CSNK2A2", target: "0.1 Casein kinase II (beta-dimer, alpha'-dimer)", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "CSNK2A2", target: "0.4 Casein kinase II (beta-dimer, alpha, alpha')", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "CSNK2A2", target: "0.3 Casein kinase II (beta-dimer, alpha, alpha')", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "CSNK2B", target: "0.4 Casein kinase II (beta-dimer, alpha, alpha')", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "CSNK2B", target: "0.3 Casein kinase II (beta-dimer, alpha, alpha')", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "G3BP1", target: "0.1 Ribosome, cytoplasmic", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "PABPC4", target: "0.1 Nop56p-associated pre-rRNA complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "LARP1", target: "0.1 Nop56p-associated pre-rRNA complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "LARP1", target: "0.1 Nop56p-associated pre-rRNA complex match 2", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "LARP1", target: "0.1 IMP3-IMP4-MPP10 complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SNIP1", target: "0.1 Apoptosis- and splicing-associated protein complex (ASAP-L), SAP18, RNPS1, Acinus-L", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "UPF1", target: "0.1 Nop56p-associated pre-rRNA complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "MOV10", target: "0.1 Nop56p-associated pre-rRNA complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "DDX21", target: "0.1 Nop56p-associated pre-rRNA complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "DDX21", target: "0.1 Nop56p-associated pre-rRNA complex match 2", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "DDX21", target: "0.1 CTFC-TAF1 complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "DDX21", target: "0.1 SF3b complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RBM28", target: "0.1 Nop56p-associated pre-rRNA complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RBM28", target: "0.1 Nop56p-associated pre-rRNA complex match 2", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RPL36", target: "0.6 Ribosome, cytoplasmic", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RPL36", target: "0.3 Ribosome, cytoplasmic", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RPL36", target: "0.1 60S ribosomal subunit, cytoplasmic match 2", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "RPL36", target: "0.1 GAIT complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SARS-CoV2 N", target: "RRP9", directed: "false", type: "sars2prot",weight: 0.861168798} },
+{ data: { source: "SARS-CoV2 N", target: "PABPC1", directed: "false", type: "sars2prot",weight: 0.736635929} },
+{ data: { source: "SARS-CoV2 N", target: "CSNK2A2", directed: "false", type: "sars2prot",weight: 0.875048268} },
+{ data: { source: "SARS-CoV2 N", target: "CSNK2B", directed: "false", type: "sars2prot",weight: 0.803607895} },
+{ data: { source: "SARS-CoV2 N", target: "G3BP1", directed: "false", type: "sars2prot",weight: 0.95331626} },
+{ data: { source: "SARS-CoV2 N", target: "PABPC4", directed: "false", type: "sars2prot",weight: 0.846200046} },
+{ data: { source: "SARS-CoV2 N", target: "LARP1", directed: "false", type: "sars2prot",weight: 0.73787466} },
+{ data: { source: "SARS-CoV2 N", target: "FAM98A", directed: "false", type: "sars2prot",weight: 0.921076719} },
+{ data: { source: "SARS-CoV2 N", target: "SNIP1", directed: "false", type: "sars2prot",weight: 0.818230245} },
+{ data: { source: "SARS-CoV2 N", target: "UPF1", directed: "false", type: "sars2prot",weight: 0.753067271} },
+{ data: { source: "SARS-CoV2 N", target: "MOV10", directed: "false", type: "sars2prot",weight: 0.736672944} },
+{ data: { source: "SARS-CoV2 N", target: "G3BP2", directed: "false", type: "sars2prot",weight: 0.958133672} },
+{ data: { source: "SARS-CoV2 N", target: "DDX21", directed: "false", type: "sars2prot",weight: 0.613544528} },
+{ data: { source: "SARS-CoV2 N", target: "RBM28", directed: "false", type: "sars2prot",weight: 0.628043125} },
+{ data: { source: "SARS-CoV2 N", target: "RPL36", directed: "false", type: "sars2prot",weight: 0.631167513} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+                				'font-size': 20,
+        'font-weight': 'bold',
+                      'text-wrap': 'wrap',
+    'text-max-width': '300',
+            shape: function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'circle'}
+                                if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                
+  return 'star';
+  },
+            'background-color': function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'blue'}
+                                if ( ele.data('type') == 'sars' ){return 'red'}             
+                                if ( ele.data('score_annot') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score_annot') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score_annot') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score_annot') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score_annot') == 5 ){return 'rgb(52, 136, 74)'}   
+                                 return 'rgb(180, 131, 40)';
+  },
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 5)',
+								'line-color': function( ele ){ 
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
+  return 'red';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'cose',
+	'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'padding': 1,
+	'componentSpacing': 1,
+	 'idealEdgeLength': function( edge ){ return 1; },
+	 // Divisor to compute edge forces
+  'edgeElasticity': function( edge ){ return 20; }
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+    </script>
+
+    	<section>
+    	<br>
+    	<br>
+    	<br> 
+    
+    </section>
+    </body>
+    </html>
+    

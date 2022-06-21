@@ -1,0 +1,118 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> SMCC complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex49.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MED24', score: 5, href: "https://www.uniprot.org/uniprot/O75448" }},
+{data: { id: 'CDK8', score: 5, href: "https://www.uniprot.org/uniprot/P49336" }},
+{data: { id: 'MED21', score: 5, href: "https://www.uniprot.org/uniprot/Q13503" }},
+{data: { id: 'CCNC', score: 5, href: "https://www.uniprot.org/uniprot/P24863" }},
+{data: { id: 'MED14', score: 5, href: "https://www.uniprot.org/uniprot/O60244" }},
+{data: { id: 'MED1', score: 5, href: "https://www.uniprot.org/uniprot/O95243" }},
+{data: { id: 'MED6', score: 5, href: "https://www.uniprot.org/uniprot/O75586" }},
+{data: { id: 'MED31', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3C7" }}], 
+ edges: [{ data: { source: 'MED24', target: 'MED14', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'MED24', target: 'MED1', directed: 'false', weight: 0.999943} },
+{ data: { source: 'MED24', target: 'MED6', directed: 'false', weight: 0.9984149999999999} },
+{ data: { source: 'MED24', target: 'CDK8', directed: 'false', weight: 0.9978239999999999} },
+{ data: { source: 'MED24', target: 'CCNC', directed: 'false', weight: 0.8322} },
+{ data: { source: 'MED24', target: 'MED31', directed: 'false', weight: 0.6040449999999999} },
+{ data: { source: 'MED24', target: 'MED21', directed: 'false', weight: 0.374078} },
+{ data: { source: 'CDK8', target: 'MED6', directed: 'false', weight: 0.999899} },
+{ data: { source: 'CDK8', target: 'CCNC', directed: 'false', weight: 0.9998309999999999} },
+{ data: { source: 'CDK8', target: 'MED14', directed: 'false', weight: 0.9978020000000001} },
+{ data: { source: 'CDK8', target: 'MED1', directed: 'false', weight: 0.997194} },
+{ data: { source: 'CDK8', target: 'MED31', directed: 'false', weight: 0.990029} },
+{ data: { source: 'CDK8', target: 'MED21', directed: 'false', weight: 0.975749} },
+{ data: { source: 'MED21', target: 'MED6', directed: 'false', weight: 0.8428770000000001} },
+{ data: { source: 'MED21', target: 'CCNC', directed: 'false', weight: 0.760904} },
+{ data: { source: 'MED21', target: 'MED31', directed: 'false', weight: 0.740197} },
+{ data: { source: 'MED21', target: 'MED14', directed: 'false', weight: 0.672129} },
+{ data: { source: 'MED21', target: 'MED1', directed: 'false', weight: 0.603676} },
+{ data: { source: 'MED14', target: 'MED6', directed: 'false', weight: 0.999756} },
+{ data: { source: 'MED14', target: 'MED1', directed: 'false', weight: 0.9994940000000001} },
+{ data: { source: 'MED14', target: 'CCNC', directed: 'false', weight: 0.8584299999999999} },
+{ data: { source: 'MED14', target: 'MED31', directed: 'false', weight: 0.805845} },
+{ data: { source: 'CCNC', target: 'MED6', directed: 'false', weight: 0.9852219999999999} },
+{ data: { source: 'CCNC', target: 'MED1', directed: 'false', weight: 0.8875059999999999} },
+{ data: { source: 'CCNC', target: 'MED31', directed: 'false', weight: 0.8677090000000001} },
+{ data: { source: 'MED1', target: 'MED6', directed: 'false', weight: 0.9959950000000001} },
+{ data: { source: 'MED1', target: 'MED31', directed: 'false', weight: 0.8625079999999999} },
+{ data: { source: 'MED6', target: 'MED31', directed: 'false', weight: 0.930702} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    SMCC complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

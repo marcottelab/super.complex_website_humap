@@ -1,0 +1,344 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.05 Isocitrate dehydrogenase [NADP], mitochondrial</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex25.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PGD', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P52209" }},
+{data: { id: 'HEL20', score: 1, type: '', href: "https://www.uniprot.org/uniprot/V9HWF9" }},
+{data: { id: 'AK2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P54819" }},
+{data: { id: 'HEL-S-281', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q5U077" }},
+{data: { id: 'FUBP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96AE4" }},
+{data: { id: 'PPIF', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30405" }},
+{data: { id: 'HEL-S-52', score: 3, type: '', href: "https://www.uniprot.org/uniprot/V9HWG7" }},
+{data: { id: 'CFL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y281" }},
+{data: { id: 'LDHC', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P07864" }},
+{data: { id: 'HEL-S-15', score: 2, type: '', href: "https://www.uniprot.org/uniprot/V9HWI5" }},
+{data: { id: 'CMPK1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30085" }},
+{data: { id: 'LDHAL6A', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q6ZMR3" }},
+{data: { id: 'FKBP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P26885" }},
+{data: { id: 'ENO3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P13929" }},
+{data: { id: 'IDH2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48735" }},
+{data: { id: 'ADSL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30566" }},
+{data: { id: 'AKR1B1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P15121" }},
+{data: { id: 'HEL-S-17', score: 3, type: '', href: "https://www.uniprot.org/uniprot/A0A024R4F1" }},
+{data: { id: 'DKFZp686O1117', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q5JPB8" }},
+{data: { id: 'ADSS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30520" }},
+{data: { id: 'ADSS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N142" }},
+{data: { id: 'DKFZp727E011', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q9NTF0" }},
+{data: { id: 'AHCY', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P23526" }},
+{data: { id: 'UBE2V1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13404" }},
+{data: { id: 'ENO2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09104" }},
+{data: { id: 'ADH5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P11766" }},
+{data: { id: 'HEL-S-1a', score: 3, type: '', href: "https://www.uniprot.org/uniprot/V9HWC3" }},
+{data: { id: 'HIBCH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6NVY1" }}], 
+ edges: [{ data: { source: 'FUBP1', target: 'HIBCH', directed: 'false', weight: 0.945089} },
+{ data: { source: 'FUBP1', target: 'HEL20', directed: 'false', weight: 0.428203} },
+{ data: { source: 'FUBP1', target: 'ADSS', directed: 'false', weight: 0.26376900000000003} },
+{ data: { source: 'FUBP1', target: 'CMPK1', directed: 'false', weight: 0.243657} },
+{ data: { source: 'FUBP1', target: 'HEL-S-52', directed: 'false', weight: 0.137854} },
+{ data: { source: 'FUBP1', target: 'DKFZp727E011', directed: 'false', weight: 0.12318499999999999} },
+{ data: { source: 'FUBP1', target: 'ADSS1', directed: 'false', weight: 0.0574202} },
+{ data: { source: 'FUBP1', target: 'PPIF', directed: 'false', weight: 0.05573009999999999} },
+{ data: { source: 'FKBP2', target: 'IDH2', directed: 'false', weight: 0.999246} },
+{ data: { source: 'FKBP2', target: 'UBE2V1', directed: 'false', weight: 0.925586} },
+{ data: { source: 'FKBP2', target: 'ENO3', directed: 'false', weight: 0.871925} },
+{ data: { source: 'FKBP2', target: 'CMPK1', directed: 'false', weight: 0.8215950000000001} },
+{ data: { source: 'FKBP2', target: 'ADSL', directed: 'false', weight: 0.7316819999999999} },
+{ data: { source: 'FKBP2', target: 'HEL-S-1a', directed: 'false', weight: 0.631642} },
+{ data: { source: 'FKBP2', target: 'ENO2', directed: 'false', weight: 0.593987} },
+{ data: { source: 'FKBP2', target: 'AK2', directed: 'false', weight: 0.17926199999999998} },
+{ data: { source: 'FKBP2', target: 'HEL-S-17', directed: 'false', weight: 0.145592} },
+{ data: { source: 'FKBP2', target: 'AKR1B1', directed: 'false', weight: 0.144705} },
+{ data: { source: 'FKBP2', target: 'HEL20', directed: 'false', weight: 0.0505691} },
+{ data: { source: 'FKBP2', target: 'DKFZp686O1117', directed: 'false', weight: 0.0491158} },
+{ data: { source: 'FKBP2', target: 'PPIF', directed: 'false', weight: 0.045065100000000004} },
+{ data: { source: 'FKBP2', target: 'ADSS1', directed: 'false', weight: 0.038842} },
+{ data: { source: 'HEL-S-1a', target: 'HEL20', directed: 'false', weight: 0.816951} },
+{ data: { source: 'HEL-S-1a', target: 'HEL-S-15', directed: 'false', weight: 0.698851} },
+{ data: { source: 'HEL-S-1a', target: 'AK2', directed: 'false', weight: 0.569056} },
+{ data: { source: 'HEL-S-1a', target: 'IDH2', directed: 'false', weight: 0.36935300000000004} },
+{ data: { source: 'HEL-S-1a', target: 'CFL2', directed: 'false', weight: 0.294423} },
+{ data: { source: 'HEL-S-1a', target: 'UBE2V1', directed: 'false', weight: 0.23309499999999997} },
+{ data: { source: 'HEL-S-1a', target: 'PGD', directed: 'false', weight: 0.21335500000000002} },
+{ data: { source: 'HEL-S-1a', target: 'AHCY', directed: 'false', weight: 0.151363} },
+{ data: { source: 'HEL-S-1a', target: 'PPIF', directed: 'false', weight: 0.148606} },
+{ data: { source: 'HEL-S-1a', target: 'ADSS', directed: 'false', weight: 0.0602448} },
+{ data: { source: 'HEL-S-1a', target: 'DKFZp727E011', directed: 'false', weight: 0.0296068} },
+{ data: { source: 'HEL-S-1a', target: 'ENO3', directed: 'false', weight: 0.028812} },
+{ data: { source: 'HEL-S-1a', target: 'ADH5', directed: 'false', weight: 0.023525} },
+{ data: { source: 'HEL-S-1a', target: 'CMPK1', directed: 'false', weight: 0.020194999999999998} },
+{ data: { source: 'HEL20', target: 'PPIF', directed: 'false', weight: 0.997683} },
+{ data: { source: 'HEL20', target: 'ENO2', directed: 'false', weight: 0.822824} },
+{ data: { source: 'HEL20', target: 'UBE2V1', directed: 'false', weight: 0.817919} },
+{ data: { source: 'HEL20', target: 'IDH2', directed: 'false', weight: 0.791246} },
+{ data: { source: 'HEL20', target: 'ADH5', directed: 'false', weight: 0.650385} },
+{ data: { source: 'HEL20', target: 'HIBCH', directed: 'false', weight: 0.5338609999999999} },
+{ data: { source: 'HEL20', target: 'ENO3', directed: 'false', weight: 0.484808} },
+{ data: { source: 'HEL20', target: 'HEL-S-17', directed: 'false', weight: 0.311069} },
+{ data: { source: 'HEL20', target: 'ADSL', directed: 'false', weight: 0.293779} },
+{ data: { source: 'HEL20', target: 'CMPK1', directed: 'false', weight: 0.140828} },
+{ data: { source: 'HEL20', target: 'LDHC', directed: 'false', weight: 0.0930933} },
+{ data: { source: 'HEL20', target: 'AK2', directed: 'false', weight: 0.049311900000000006} },
+{ data: { source: 'HEL20', target: 'HEL-S-15', directed: 'false', weight: 0.039856} },
+{ data: { source: 'CMPK1', target: 'PPIF', directed: 'false', weight: 0.939418} },
+{ data: { source: 'CMPK1', target: 'DKFZp727E011', directed: 'false', weight: 0.9095610000000001} },
+{ data: { source: 'CMPK1', target: 'ENO2', directed: 'false', weight: 0.74507} },
+{ data: { source: 'CMPK1', target: 'UBE2V1', directed: 'false', weight: 0.33524899999999996} },
+{ data: { source: 'CMPK1', target: 'IDH2', directed: 'false', weight: 0.264847} },
+{ data: { source: 'CMPK1', target: 'ENO3', directed: 'false', weight: 0.22276300000000002} },
+{ data: { source: 'CMPK1', target: 'ADSL', directed: 'false', weight: 0.127592} },
+{ data: { source: 'CMPK1', target: 'HIBCH', directed: 'false', weight: 0.101912} },
+{ data: { source: 'CMPK1', target: 'HEL-S-52', directed: 'false', weight: 0.0562217} },
+{ data: { source: 'CMPK1', target: 'HEL-S-17', directed: 'false', weight: 0.0400537} },
+{ data: { source: 'AKR1B1', target: 'PPIF', directed: 'false', weight: 0.8079149999999999} },
+{ data: { source: 'AKR1B1', target: 'HIBCH', directed: 'false', weight: 0.664054} },
+{ data: { source: 'AKR1B1', target: 'LDHC', directed: 'false', weight: 0.48518100000000003} },
+{ data: { source: 'AKR1B1', target: 'ENO2', directed: 'false', weight: 0.139499} },
+{ data: { source: 'AKR1B1', target: 'PGD', directed: 'false', weight: 0.133597} },
+{ data: { source: 'AKR1B1', target: 'AK2', directed: 'false', weight: 0.109349} },
+{ data: { source: 'AKR1B1', target: 'LDHAL6A', directed: 'false', weight: 0.107896} },
+{ data: { source: 'AKR1B1', target: 'ENO3', directed: 'false', weight: 0.0545026} },
+{ data: { source: 'AKR1B1', target: 'DKFZp686O1117', directed: 'false', weight: 0.0262247} },
+{ data: { source: 'ENO2', target: 'ADH5', directed: 'false', weight: 0.9793229999999999} },
+{ data: { source: 'ENO2', target: 'ADSS', directed: 'false', weight: 0.959391} },
+{ data: { source: 'ENO2', target: 'HEL-S-17', directed: 'false', weight: 0.942059} },
+{ data: { source: 'ENO2', target: 'HIBCH', directed: 'false', weight: 0.882653} },
+{ data: { source: 'ENO2', target: 'DKFZp686O1117', directed: 'false', weight: 0.8272370000000001} },
+{ data: { source: 'ENO2', target: 'PPIF', directed: 'false', weight: 0.723413} },
+{ data: { source: 'ENO2', target: 'ADSL', directed: 'false', weight: 0.712792} },
+{ data: { source: 'ENO2', target: 'AHCY', directed: 'false', weight: 0.680503} },
+{ data: { source: 'ENO2', target: 'LDHAL6A', directed: 'false', weight: 0.637896} },
+{ data: { source: 'ENO2', target: 'AK2', directed: 'false', weight: 0.467625} },
+{ data: { source: 'ENO2', target: 'IDH2', directed: 'false', weight: 0.355403} },
+{ data: { source: 'ENO2', target: 'DKFZp727E011', directed: 'false', weight: 0.171348} },
+{ data: { source: 'ENO2', target: 'LDHC', directed: 'false', weight: 0.136021} },
+{ data: { source: 'ENO2', target: 'PGD', directed: 'false', weight: 0.0637063} },
+{ data: { source: 'ENO2', target: 'HEL-S-281', directed: 'false', weight: 0.061239999999999996} },
+{ data: { source: 'ENO2', target: 'HEL-S-15', directed: 'false', weight: 0.0478221} },
+{ data: { source: 'ENO2', target: 'CFL2', directed: 'false', weight: 0.030371600000000002} },
+{ data: { source: 'PPIF', target: 'ADH5', directed: 'false', weight: 0.997043} },
+{ data: { source: 'PPIF', target: 'HEL-S-52', directed: 'false', weight: 0.965239} },
+{ data: { source: 'PPIF', target: 'AHCY', directed: 'false', weight: 0.938874} },
+{ data: { source: 'PPIF', target: 'DKFZp727E011', directed: 'false', weight: 0.8809879999999999} },
+{ data: { source: 'PPIF', target: 'PGD', directed: 'false', weight: 0.8375670000000001} },
+{ data: { source: 'PPIF', target: 'HIBCH', directed: 'false', weight: 0.830887} },
+{ data: { source: 'PPIF', target: 'ADSS1', directed: 'false', weight: 0.81472} },
+{ data: { source: 'PPIF', target: 'LDHAL6A', directed: 'false', weight: 0.7830199999999999} },
+{ data: { source: 'PPIF', target: 'DKFZp686O1117', directed: 'false', weight: 0.6725180000000001} },
+{ data: { source: 'PPIF', target: 'AK2', directed: 'false', weight: 0.664902} },
+{ data: { source: 'PPIF', target: 'ADSS', directed: 'false', weight: 0.618664} },
+{ data: { source: 'PPIF', target: 'IDH2', directed: 'false', weight: 0.6008020000000001} },
+{ data: { source: 'PPIF', target: 'ENO3', directed: 'false', weight: 0.283078} },
+{ data: { source: 'PPIF', target: 'HEL-S-17', directed: 'false', weight: 0.27826} },
+{ data: { source: 'PPIF', target: 'HEL-S-15', directed: 'false', weight: 0.14091099999999998} },
+{ data: { source: 'PPIF', target: 'ADSL', directed: 'false', weight: 0.06980239999999999} },
+{ data: { source: 'PPIF', target: 'HEL-S-281', directed: 'false', weight: 0.031785} },
+{ data: { source: 'HEL-S-17', target: 'ADSS1', directed: 'false', weight: 0.995143} },
+{ data: { source: 'HEL-S-17', target: 'HEL-S-15', directed: 'false', weight: 0.915739} },
+{ data: { source: 'HEL-S-17', target: 'DKFZp686O1117', directed: 'false', weight: 0.831155} },
+{ data: { source: 'HEL-S-17', target: 'ADSS', directed: 'false', weight: 0.745221} },
+{ data: { source: 'HEL-S-17', target: 'IDH2', directed: 'false', weight: 0.6157020000000001} },
+{ data: { source: 'HEL-S-17', target: 'LDHC', directed: 'false', weight: 0.464167} },
+{ data: { source: 'HEL-S-17', target: 'HIBCH', directed: 'false', weight: 0.436547} },
+{ data: { source: 'HEL-S-17', target: 'ADSL', directed: 'false', weight: 0.380941} },
+{ data: { source: 'HEL-S-17', target: 'HEL-S-281', directed: 'false', weight: 0.34672600000000003} },
+{ data: { source: 'HEL-S-17', target: 'UBE2V1', directed: 'false', weight: 0.33104} },
+{ data: { source: 'HEL-S-17', target: 'DKFZp727E011', directed: 'false', weight: 0.188619} },
+{ data: { source: 'HEL-S-17', target: 'AHCY', directed: 'false', weight: 0.182106} },
+{ data: { source: 'HEL-S-17', target: 'LDHAL6A', directed: 'false', weight: 0.155332} },
+{ data: { source: 'HEL-S-17', target: 'ADH5', directed: 'false', weight: 0.0596538} },
+{ data: { source: 'HEL-S-17', target: 'AK2', directed: 'false', weight: 0.0426211} },
+{ data: { source: 'HEL-S-17', target: 'ENO3', directed: 'false', weight: 0.0340653} },
+{ data: { source: 'UBE2V1', target: 'ADSL', directed: 'false', weight: 0.9145049999999999} },
+{ data: { source: 'UBE2V1', target: 'DKFZp686O1117', directed: 'false', weight: 0.5072220000000001} },
+{ data: { source: 'UBE2V1', target: 'HEL-S-281', directed: 'false', weight: 0.39631900000000003} },
+{ data: { source: 'UBE2V1', target: 'LDHC', directed: 'false', weight: 0.338095} },
+{ data: { source: 'UBE2V1', target: 'ADSS', directed: 'false', weight: 0.284484} },
+{ data: { source: 'UBE2V1', target: 'HEL-S-15', directed: 'false', weight: 0.20136700000000002} },
+{ data: { source: 'UBE2V1', target: 'ADH5', directed: 'false', weight: 0.104349} },
+{ data: { source: 'UBE2V1', target: 'CFL2', directed: 'false', weight: 0.090154} },
+{ data: { source: 'UBE2V1', target: 'DKFZp727E011', directed: 'false', weight: 0.0714076} },
+{ data: { source: 'UBE2V1', target: 'AHCY', directed: 'false', weight: 0.0291341} },
+{ data: { source: 'DKFZp686O1117', target: 'ENO3', directed: 'false', weight: 0.930608} },
+{ data: { source: 'DKFZp686O1117', target: 'AHCY', directed: 'false', weight: 0.915488} },
+{ data: { source: 'DKFZp686O1117', target: 'ADSS', directed: 'false', weight: 0.580267} },
+{ data: { source: 'DKFZp686O1117', target: 'PGD', directed: 'false', weight: 0.336952} },
+{ data: { source: 'DKFZp686O1117', target: 'IDH2', directed: 'false', weight: 0.197168} },
+{ data: { source: 'DKFZp686O1117', target: 'ADSL', directed: 'false', weight: 0.178115} },
+{ data: { source: 'DKFZp686O1117', target: 'HEL-S-15', directed: 'false', weight: 0.0852464} },
+{ data: { source: 'DKFZp686O1117', target: 'CFL2', directed: 'false', weight: 0.0829755} },
+{ data: { source: 'DKFZp686O1117', target: 'ADH5', directed: 'false', weight: 0.0661054} },
+{ data: { source: 'ADH5', target: 'HIBCH', directed: 'false', weight: 0.946549} },
+{ data: { source: 'ADH5', target: 'LDHC', directed: 'false', weight: 0.697866} },
+{ data: { source: 'ADH5', target: 'ENO3', directed: 'false', weight: 0.564469} },
+{ data: { source: 'ADH5', target: 'LDHAL6A', directed: 'false', weight: 0.146472} },
+{ data: { source: 'ADH5', target: 'ADSL', directed: 'false', weight: 0.117974} },
+{ data: { source: 'ADH5', target: 'ADSS1', directed: 'false', weight: 0.0856591} },
+{ data: { source: 'ADH5', target: 'DKFZp727E011', directed: 'false', weight: 0.08227419999999999} },
+{ data: { source: 'HIBCH', target: 'ENO3', directed: 'false', weight: 0.9345100000000001} },
+{ data: { source: 'HIBCH', target: 'PGD', directed: 'false', weight: 0.863626} },
+{ data: { source: 'HIBCH', target: 'IDH2', directed: 'false', weight: 0.7520399999999999} },
+{ data: { source: 'HIBCH', target: 'LDHC', directed: 'false', weight: 0.562102} },
+{ data: { source: 'HIBCH', target: 'AK2', directed: 'false', weight: 0.466621} },
+{ data: { source: 'HIBCH', target: 'CFL2', directed: 'false', weight: 0.398029} },
+{ data: { source: 'HIBCH', target: 'ADSL', directed: 'false', weight: 0.374295} },
+{ data: { source: 'HIBCH', target: 'LDHAL6A', directed: 'false', weight: 0.33354} },
+{ data: { source: 'HIBCH', target: 'HEL-S-15', directed: 'false', weight: 0.122525} },
+{ data: { source: 'HIBCH', target: 'AHCY', directed: 'false', weight: 0.09329} },
+{ data: { source: 'HIBCH', target: 'DKFZp727E011', directed: 'false', weight: 0.0779258} },
+{ data: { source: 'HIBCH', target: 'ADSS', directed: 'false', weight: 0.043767400000000005} },
+{ data: { source: 'AK2', target: 'IDH2', directed: 'false', weight: 0.6603859999999999} },
+{ data: { source: 'AK2', target: 'ADSL', directed: 'false', weight: 0.44104499999999996} },
+{ data: { source: 'AK2', target: 'ADSS1', directed: 'false', weight: 0.25609699999999996} },
+{ data: { source: 'AK2', target: 'DKFZp727E011', directed: 'false', weight: 0.120946} },
+{ data: { source: 'AK2', target: 'ENO3', directed: 'false', weight: 0.0738702} },
+{ data: { source: 'AK2', target: 'LDHAL6A', directed: 'false', weight: 0.07104939999999998} },
+{ data: { source: 'AK2', target: 'AHCY', directed: 'false', weight: 0.0536476} },
+{ data: { source: 'AK2', target: 'ADSS', directed: 'false', weight: 0.0243474} },
+{ data: { source: 'LDHC', target: 'ADSL', directed: 'false', weight: 0.743173} },
+{ data: { source: 'LDHC', target: 'ADSS', directed: 'false', weight: 0.293256} },
+{ data: { source: 'LDHC', target: 'AHCY', directed: 'false', weight: 0.26911799999999997} },
+{ data: { source: 'LDHC', target: 'HEL-S-15', directed: 'false', weight: 0.0962562} },
+{ data: { source: 'LDHC', target: 'HEL-S-281', directed: 'false', weight: 0.0703937} },
+{ data: { source: 'LDHC', target: 'CFL2', directed: 'false', weight: 0.057593200000000004} },
+{ data: { source: 'DKFZp727E011', target: 'ADSL', directed: 'false', weight: 0.977658} },
+{ data: { source: 'DKFZp727E011', target: 'AHCY', directed: 'false', weight: 0.976499} },
+{ data: { source: 'DKFZp727E011', target: 'ENO3', directed: 'false', weight: 0.760149} },
+{ data: { source: 'DKFZp727E011', target: 'HEL-S-281', directed: 'false', weight: 0.459771} },
+{ data: { source: 'DKFZp727E011', target: 'ADSS', directed: 'false', weight: 0.410401} },
+{ data: { source: 'DKFZp727E011', target: 'CFL2', directed: 'false', weight: 0.14385499999999998} },
+{ data: { source: 'DKFZp727E011', target: 'HEL-S-52', directed: 'false', weight: 0.08970089999999999} },
+{ data: { source: 'DKFZp727E011', target: 'HEL-S-15', directed: 'false', weight: 0.06613789999999999} },
+{ data: { source: 'ADSS1', target: 'ADSS', directed: 'false', weight: 1.0} },
+{ data: { source: 'ADSS1', target: 'HEL-S-15', directed: 'false', weight: 0.775213} },
+{ data: { source: 'ADSS1', target: 'CFL2', directed: 'false', weight: 0.5813520000000001} },
+{ data: { source: 'PGD', target: 'ADSL', directed: 'false', weight: 0.729418} },
+{ data: { source: 'PGD', target: 'IDH2', directed: 'false', weight: 0.058077199999999995} },
+{ data: { source: 'PGD', target: 'ENO3', directed: 'false', weight: 0.057388699999999994} },
+{ data: { source: 'PGD', target: 'HEL-S-15', directed: 'false', weight: 0.026757099999999995} },
+{ data: { source: 'LDHAL6A', target: 'ADSL', directed: 'false', weight: 0.0962662} },
+{ data: { source: 'LDHAL6A', target: 'ENO3', directed: 'false', weight: 0.0856852} },
+{ data: { source: 'LDHAL6A', target: 'CFL2', directed: 'false', weight: 0.0556621} },
+{ data: { source: 'LDHAL6A', target: 'HEL-S-15', directed: 'false', weight: 0.021996599999999998} },
+{ data: { source: 'IDH2', target: 'ADSS', directed: 'false', weight: 0.983548} },
+{ data: { source: 'IDH2', target: 'ADSL', directed: 'false', weight: 0.9401870000000001} },
+{ data: { source: 'IDH2', target: 'ENO3', directed: 'false', weight: 0.571933} },
+{ data: { source: 'IDH2', target: 'CFL2', directed: 'false', weight: 0.288986} },
+{ data: { source: 'IDH2', target: 'HEL-S-281', directed: 'false', weight: 0.246232} },
+{ data: { source: 'IDH2', target: 'HEL-S-15', directed: 'false', weight: 0.16489700000000002} },
+{ data: { source: 'IDH2', target: 'AHCY', directed: 'false', weight: 0.110383} },
+{ data: { source: 'IDH2', target: 'HEL-S-52', directed: 'false', weight: 0.0450489} },
+{ data: { source: 'HEL-S-281', target: 'HEL-S-15', directed: 'false', weight: 0.09671619999999999} },
+{ data: { source: 'HEL-S-281', target: 'ADSL', directed: 'false', weight: 0.0900103} },
+{ data: { source: 'HEL-S-281', target: 'ENO3', directed: 'false', weight: 0.0848702} },
+{ data: { source: 'HEL-S-52', target: 'CFL2', directed: 'false', weight: 0.9991} },
+{ data: { source: 'HEL-S-52', target: 'HEL-S-15', directed: 'false', weight: 0.993685} },
+{ data: { source: 'HEL-S-52', target: 'ADSS', directed: 'false', weight: 0.26351399999999997} },
+{ data: { source: 'AHCY', target: 'ADSL', directed: 'false', weight: 0.14693699999999998} },
+{ data: { source: 'AHCY', target: 'ADSS', directed: 'false', weight: 0.0294163} },
+{ data: { source: 'ENO3', target: 'ADSS', directed: 'false', weight: 0.944527} },
+{ data: { source: 'ENO3', target: 'ADSL', directed: 'false', weight: 0.5} },
+{ data: { source: 'ENO3', target: 'CFL2', directed: 'false', weight: 0.10102799999999999} },
+{ data: { source: 'ENO3', target: 'HEL-S-15', directed: 'false', weight: 0.08781699999999999} },
+{ data: { source: 'ADSS', target: 'CFL2', directed: 'false', weight: 0.389425} },
+{ data: { source: 'ADSS', target: 'HEL-S-15', directed: 'false', weight: 0.0375961} },
+{ data: { source: 'CFL2', target: 'ADSL', directed: 'false', weight: 0.064074} },
+{ data: { source: 'HEL-S-15', target: 'ADSL', directed: 'false', weight: 0.290684} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.05 Isocitrate dehydrogenase [NADP], mitochondrial<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.56
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,106 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> BCOR complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex657.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HEL-S-72p', score: 3, href: "https://www.uniprot.org/uniprot/V9HW22" }},
+{data: { id: 'SKP1', score: 5, href: "https://www.uniprot.org/uniprot/P63208" }},
+{data: { id: 'RING1', score: 5, href: "https://www.uniprot.org/uniprot/Q06587" }},
+{data: { id: 'BCOR', score: 5, href: "https://www.uniprot.org/uniprot/Q6W2J9" }},
+{data: { id: 'RYBP', score: 5, href: "https://www.uniprot.org/uniprot/Q8N488" }},
+{data: { id: 'KDM2B', score: 5, href: "https://www.uniprot.org/uniprot/Q8NHM5" }},
+{data: { id: 'RNF2', score: 5, href: "https://www.uniprot.org/uniprot/Q99496" }},
+{data: { id: 'PCGF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BSM1" }}], 
+ edges: [{ data: { source: 'PCGF1', target: 'RYBP', directed: 'false', weight: 0.9993620000000001} },
+{ data: { source: 'PCGF1', target: 'KDM2B', directed: 'false', weight: 0.263856} },
+{ data: { source: 'PCGF1', target: 'BCOR', directed: 'false', weight: 0.144399} },
+{ data: { source: 'PCGF1', target: 'RING1', directed: 'false', weight: 0.0636906} },
+{ data: { source: 'RING1', target: 'RYBP', directed: 'false', weight: 0.999842} },
+{ data: { source: 'RING1', target: 'RNF2', directed: 'false', weight: 0.550963} },
+{ data: { source: 'HEL-S-72p', target: 'SKP1', directed: 'false', weight: 0.699936} },
+{ data: { source: 'RNF2', target: 'RYBP', directed: 'false', weight: 0.9998739999999999} },
+{ data: { source: 'RYBP', target: 'BCOR', directed: 'false', weight: 0.862555} },
+{ data: { source: 'RYBP', target: 'KDM2B', directed: 'false', weight: 0.771663} },
+{ data: { source: 'BCOR', target: 'KDM2B', directed: 'false', weight: 0.0399889} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    BCOR complex	<br> Unweighted Density = 0.39
+    </section>
+    </body>
+    </html>
+    

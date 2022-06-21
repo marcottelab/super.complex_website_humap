@@ -1,0 +1,242 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 CCT complex (chaperonin containing TCP1 complex)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex543.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MLST8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BVC4" }},
+{data: { id: 'CCT5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48643" }},
+{data: { id: 'CCT6A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P40227" }},
+{data: { id: 'CCT8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P50990" }},
+{data: { id: 'TXNDC9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14530" }},
+{data: { id: 'PDCD5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14737" }},
+{data: { id: 'CCT7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99832" }},
+{data: { id: 'HGH1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9BTY7" }},
+{data: { id: 'TCP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P17987" }},
+{data: { id: 'PDCL3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H2J4" }},
+{data: { id: 'CCT3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49368" }},
+{data: { id: 'PDCL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13371" }},
+{data: { id: 'UBA3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TBC4" }},
+{data: { id: 'SARS-CoV2 nsp7', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp7.html" }},
+{data: { id: 'DNAJC19', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q96DA6" }},
+{data: { id: 'CCT4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P50991" }},
+{data: { id: 'CCT6B', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q92526" }},
+{data: { id: 'TUBA3E', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6PEY2" }},
+{data: { id: 'CCT2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P78371" }},
+{data: { id: 'TCEA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P23193" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp7', target: 'DNAJC19', directed: 'false', weight: 0.981450126, type: 'sars'} },
+{ data: { source: 'TCEA1', target: 'CCT5', directed: 'false', weight: 0.8737729999999999} },
+{ data: { source: 'TCEA1', target: 'CCT2', directed: 'false', weight: 0.72835} },
+{ data: { source: 'TCEA1', target: 'CCT7', directed: 'false', weight: 0.624598} },
+{ data: { source: 'TCEA1', target: 'TCP1', directed: 'false', weight: 0.518662} },
+{ data: { source: 'TCEA1', target: 'CCT4', directed: 'false', weight: 0.487257} },
+{ data: { source: 'TCEA1', target: 'CCT6B', directed: 'false', weight: 0.442351} },
+{ data: { source: 'TCEA1', target: 'CCT6A', directed: 'false', weight: 0.27002} },
+{ data: { source: 'TCEA1', target: 'CCT3', directed: 'false', weight: 0.115077} },
+{ data: { source: 'TCEA1', target: 'UBA3', directed: 'false', weight: 0.075571} },
+{ data: { source: 'TCEA1', target: 'PDCD5', directed: 'false', weight: 0.0488906} },
+{ data: { source: 'TCEA1', target: 'PDCL3', directed: 'false', weight: 0.026841200000000003} },
+{ data: { source: 'CCT6A', target: 'CCT6B', directed: 'false', weight: 0.999374} },
+{ data: { source: 'CCT6A', target: 'CCT7', directed: 'false', weight: 0.9985809999999999} },
+{ data: { source: 'CCT6A', target: 'CCT5', directed: 'false', weight: 0.9811350000000001} },
+{ data: { source: 'CCT6A', target: 'CCT3', directed: 'false', weight: 0.9678329999999999} },
+{ data: { source: 'CCT6A', target: 'TCP1', directed: 'false', weight: 0.9589340000000001} },
+{ data: { source: 'CCT6A', target: 'CCT8', directed: 'false', weight: 0.765667} },
+{ data: { source: 'CCT6A', target: 'TUBA3E', directed: 'false', weight: 0.601568} },
+{ data: { source: 'PDCD5', target: 'HGH1', directed: 'false', weight: 0.741451} },
+{ data: { source: 'PDCD5', target: 'TXNDC9', directed: 'false', weight: 0.577996} },
+{ data: { source: 'PDCD5', target: 'PDCL3', directed: 'false', weight: 0.541415} },
+{ data: { source: 'PDCD5', target: 'CCT4', directed: 'false', weight: 0.5} },
+{ data: { source: 'PDCD5', target: 'CCT7', directed: 'false', weight: 0.486422} },
+{ data: { source: 'PDCD5', target: 'CCT3', directed: 'false', weight: 0.47026999999999997} },
+{ data: { source: 'PDCD5', target: 'PDCL', directed: 'false', weight: 0.45839399999999997} },
+{ data: { source: 'PDCD5', target: 'MLST8', directed: 'false', weight: 0.387818} },
+{ data: { source: 'PDCD5', target: 'CCT8', directed: 'false', weight: 0.143282} },
+{ data: { source: 'PDCD5', target: 'DNAJC19', directed: 'false', weight: 0.10441700000000001} },
+{ data: { source: 'PDCD5', target: 'CCT2', directed: 'false', weight: 0.0434735} },
+{ data: { source: 'PDCD5', target: 'TCP1', directed: 'false', weight: 0.026084500000000004} },
+{ data: { source: 'PDCD5', target: 'CCT6B', directed: 'false', weight: 0.016999900000000002} },
+{ data: { source: 'CCT4', target: 'CCT2', directed: 'false', weight: 0.999993} },
+{ data: { source: 'CCT4', target: 'CCT6B', directed: 'false', weight: 0.9998790000000001} },
+{ data: { source: 'CCT4', target: 'TXNDC9', directed: 'false', weight: 0.9995950000000001} },
+{ data: { source: 'CCT4', target: 'CCT7', directed: 'false', weight: 0.9944629999999999} },
+{ data: { source: 'CCT4', target: 'TCP1', directed: 'false', weight: 0.9805520000000001} },
+{ data: { source: 'CCT4', target: 'PDCL3', directed: 'false', weight: 0.980367} },
+{ data: { source: 'CCT4', target: 'CCT3', directed: 'false', weight: 0.968973} },
+{ data: { source: 'CCT4', target: 'CCT8', directed: 'false', weight: 0.950254} },
+{ data: { source: 'CCT4', target: 'PDCL', directed: 'false', weight: 0.8235049999999999} },
+{ data: { source: 'CCT4', target: 'MLST8', directed: 'false', weight: 0.645393} },
+{ data: { source: 'CCT4', target: 'TUBA3E', directed: 'false', weight: 0.574101} },
+{ data: { source: 'CCT4', target: 'UBA3', directed: 'false', weight: 0.49483} },
+{ data: { source: 'CCT4', target: 'HGH1', directed: 'false', weight: 0.0862565} },
+{ data: { source: 'CCT4', target: 'DNAJC19', directed: 'false', weight: 0.066383} },
+{ data: { source: 'UBA3', target: 'CCT3', directed: 'false', weight: 0.285051} },
+{ data: { source: 'UBA3', target: 'CCT7', directed: 'false', weight: 0.26858899999999997} },
+{ data: { source: 'UBA3', target: 'CCT2', directed: 'false', weight: 0.157554} },
+{ data: { source: 'UBA3', target: 'TCP1', directed: 'false', weight: 0.140558} },
+{ data: { source: 'UBA3', target: 'CCT6B', directed: 'false', weight: 0.127195} },
+{ data: { source: 'UBA3', target: 'TXNDC9', directed: 'false', weight: 0.0546523} },
+{ data: { source: 'CCT7', target: 'CCT2', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT7', target: 'CCT6B', directed: 'false', weight: 0.9998879999999999} },
+{ data: { source: 'CCT7', target: 'TCP1', directed: 'false', weight: 0.999423} },
+{ data: { source: 'CCT7', target: 'CCT3', directed: 'false', weight: 0.9988020000000001} },
+{ data: { source: 'CCT7', target: 'TXNDC9', directed: 'false', weight: 0.9985430000000001} },
+{ data: { source: 'CCT7', target: 'CCT5', directed: 'false', weight: 0.9980760000000001} },
+{ data: { source: 'CCT7', target: 'PDCL3', directed: 'false', weight: 0.9874780000000001} },
+{ data: { source: 'CCT7', target: 'TUBA3E', directed: 'false', weight: 0.492904} },
+{ data: { source: 'CCT7', target: 'MLST8', directed: 'false', weight: 0.311056} },
+{ data: { source: 'CCT7', target: 'DNAJC19', directed: 'false', weight: 0.0684556} },
+{ data: { source: 'CCT7', target: 'HGH1', directed: 'false', weight: 0.033237800000000005} },
+{ data: { source: 'MLST8', target: 'CCT3', directed: 'false', weight: 0.548959} },
+{ data: { source: 'MLST8', target: 'CCT8', directed: 'false', weight: 0.509305} },
+{ data: { source: 'MLST8', target: 'CCT2', directed: 'false', weight: 0.406149} },
+{ data: { source: 'MLST8', target: 'HGH1', directed: 'false', weight: 0.387818} },
+{ data: { source: 'MLST8', target: 'TCP1', directed: 'false', weight: 0.31459899999999996} },
+{ data: { source: 'MLST8', target: 'PDCL3', directed: 'false', weight: 0.26104499999999997} },
+{ data: { source: 'MLST8', target: 'TXNDC9', directed: 'false', weight: 0.26104499999999997} },
+{ data: { source: 'MLST8', target: 'PDCL', directed: 'false', weight: 0.216471} },
+{ data: { source: 'MLST8', target: 'DNAJC19', directed: 'false', weight: 0.100579} },
+{ data: { source: 'MLST8', target: 'CCT6B', directed: 'false', weight: 0.0675612} },
+{ data: { source: 'CCT3', target: 'CCT2', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'CCT6B', directed: 'false', weight: 0.999941} },
+{ data: { source: 'CCT3', target: 'TXNDC9', directed: 'false', weight: 0.996568} },
+{ data: { source: 'CCT3', target: 'CCT5', directed: 'false', weight: 0.990518} },
+{ data: { source: 'CCT3', target: 'TCP1', directed: 'false', weight: 0.916768} },
+{ data: { source: 'CCT3', target: 'PDCL3', directed: 'false', weight: 0.832842} },
+{ data: { source: 'CCT3', target: 'TUBA3E', directed: 'false', weight: 0.46436700000000003} },
+{ data: { source: 'CCT3', target: 'DNAJC19', directed: 'false', weight: 0.06670380000000001} },
+{ data: { source: 'CCT3', target: 'HGH1', directed: 'false', weight: 0.0545991} },
+{ data: { source: 'CCT2', target: 'CCT6B', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT2', target: 'TCP1', directed: 'false', weight: 0.999984} },
+{ data: { source: 'CCT2', target: 'TXNDC9', directed: 'false', weight: 0.9987090000000001} },
+{ data: { source: 'CCT2', target: 'PDCL3', directed: 'false', weight: 0.862714} },
+{ data: { source: 'CCT2', target: 'TUBA3E', directed: 'false', weight: 0.562075} },
+{ data: { source: 'CCT2', target: 'DNAJC19', directed: 'false', weight: 0.5311170000000001} },
+{ data: { source: 'CCT2', target: 'HGH1', directed: 'false', weight: 0.12062200000000001} },
+{ data: { source: 'CCT5', target: 'CCT6B', directed: 'false', weight: 0.999969} },
+{ data: { source: 'CCT5', target: 'TCP1', directed: 'false', weight: 0.9798959999999999} },
+{ data: { source: 'CCT5', target: 'TUBA3E', directed: 'false', weight: 0.5425260000000001} },
+{ data: { source: 'PDCL3', target: 'CCT8', directed: 'false', weight: 0.9387030000000001} },
+{ data: { source: 'PDCL3', target: 'TXNDC9', directed: 'false', weight: 0.8945860000000001} },
+{ data: { source: 'PDCL3', target: 'PDCL', directed: 'false', weight: 0.6724680000000001} },
+{ data: { source: 'PDCL3', target: 'TCP1', directed: 'false', weight: 0.661042} },
+{ data: { source: 'PDCL3', target: 'HGH1', directed: 'false', weight: 0.541415} },
+{ data: { source: 'PDCL3', target: 'CCT6B', directed: 'false', weight: 0.125696} },
+{ data: { source: 'PDCL3', target: 'DNAJC19', directed: 'false', weight: 0.0947832} },
+{ data: { source: 'TXNDC9', target: 'CCT8', directed: 'false', weight: 0.9953870000000001} },
+{ data: { source: 'TXNDC9', target: 'TCP1', directed: 'false', weight: 0.9873219999999999} },
+{ data: { source: 'TXNDC9', target: 'TUBA3E', directed: 'false', weight: 0.7232850000000001} },
+{ data: { source: 'TXNDC9', target: 'CCT6B', directed: 'false', weight: 0.6816439999999999} },
+{ data: { source: 'TXNDC9', target: 'PDCL', directed: 'false', weight: 0.593971} },
+{ data: { source: 'TXNDC9', target: 'HGH1', directed: 'false', weight: 0.541415} },
+{ data: { source: 'TXNDC9', target: 'DNAJC19', directed: 'false', weight: 0.0947832} },
+{ data: { source: 'DNAJC19', target: 'HGH1', directed: 'false', weight: 0.10441700000000001} },
+{ data: { source: 'DNAJC19', target: 'TCP1', directed: 'false', weight: 0.067723} },
+{ data: { source: 'TUBA3E', target: 'TCP1', directed: 'false', weight: 0.547888} },
+{ data: { source: 'TCP1', target: 'CCT6B', directed: 'false', weight: 0.9970399999999999} },
+{ data: { source: 'TCP1', target: 'HGH1', directed: 'false', weight: 0.128025} },
+{ data: { source: 'HGH1', target: 'PDCL', directed: 'false', weight: 0.45839399999999997} },
+{ data: { source: 'HGH1', target: 'CCT8', directed: 'false', weight: 0.0416611} },
+{ data: { source: 'CCT8', target: 'PDCL', directed: 'false', weight: 0.923367} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 CCT complex (chaperonin containing TCP1 complex)<br> Complex Score (from Super.Complex) = 0.67615<br> Unweighted Density = 0.66
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>DNAJC19
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,127 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 SELK multiprotein complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex152.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DNAJB11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UBS4" }},
+{data: { id: 'LMAN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49257" }},
+{data: { id: 'TCTN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96GX1" }},
+{data: { id: 'TCTN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q2MV58" }},
+{data: { id: 'MLEC', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14165" }},
+{data: { id: 'TCTN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6NUS6" }},
+{data: { id: 'CANX', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P27824" }},
+{data: { id: 'RPN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P04844" }}], 
+ edges: [{ data: { source: 'TCTN1', target: 'DNAJB11', directed: 'false', weight: 0.214013} },
+{ data: { source: 'TCTN1', target: 'RPN2', directed: 'false', weight: 0.1045} },
+{ data: { source: 'TCTN1', target: 'TCTN3', directed: 'false', weight: 0.0970544} },
+{ data: { source: 'TCTN1', target: 'TCTN2', directed: 'false', weight: 0.0751462} },
+{ data: { source: 'TCTN1', target: 'MLEC', directed: 'false', weight: 0.063712} },
+{ data: { source: 'TCTN1', target: 'CANX', directed: 'false', weight: 0.060967099999999996} },
+{ data: { source: 'TCTN1', target: 'LMAN1', directed: 'false', weight: 0.046678500000000005} },
+{ data: { source: 'CANX', target: 'TCTN2', directed: 'false', weight: 0.0678714} },
+{ data: { source: 'CANX', target: 'TCTN3', directed: 'false', weight: 0.025818999999999998} },
+{ data: { source: 'LMAN1', target: 'TCTN2', directed: 'false', weight: 0.271032} },
+{ data: { source: 'TCTN2', target: 'DNAJB11', directed: 'false', weight: 0.665706} },
+{ data: { source: 'TCTN2', target: 'MLEC', directed: 'false', weight: 0.572364} },
+{ data: { source: 'TCTN2', target: 'RPN2', directed: 'false', weight: 0.0910154} },
+{ data: { source: 'TCTN2', target: 'TCTN3', directed: 'false', weight: 0.0813169} },
+{ data: { source: 'MLEC', target: 'RPN2', directed: 'false', weight: 0.13572599999999999} },
+{ data: { source: 'TCTN3', target: 'RPN2', directed: 'false', weight: 0.0310447} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 SELK multiprotein complex<br> Complex Score (from Super.Complex) = 0.99200<br> Unweighted Density = 0.57
+    </section>
+    </body>
+    </html>
+    

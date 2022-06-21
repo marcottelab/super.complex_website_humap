@@ -1,0 +1,110 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> ESCRT-III complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex663.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CHMP2A', score: 5, href: "https://www.uniprot.org/uniprot/O43633" }},
+{data: { id: 'CHMP1B', score: 5, href: "https://www.uniprot.org/uniprot/Q7LBR1" }},
+{data: { id: 'CHMP4C', score: 5, href: "https://www.uniprot.org/uniprot/Q96CF2" }},
+{data: { id: '79643', score: 0 }},
+{data: { id: 'CHMP4A', score: 5, href: "https://www.uniprot.org/uniprot/Q9BY43" }},
+{data: { id: 'CHMP4B', score: 5, href: "https://www.uniprot.org/uniprot/Q9H444" }},
+{data: { id: 'CHMP1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9HD42" }},
+{data: { id: 'CHMP5', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZZ3" }},
+{data: { id: 'CHMP2B', score: 5, href: "https://www.uniprot.org/uniprot/Q9UQN3" }},
+{data: { id: 'CHMP3', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3E7" }}], 
+ edges: [{ data: { source: 'CHMP4A', target: 'CHMP5', directed: 'false', weight: 0.9875379999999999} },
+{ data: { source: 'CHMP5', target: 'CHMP4B', directed: 'false', weight: 0.943859} },
+{ data: { source: 'CHMP5', target: 'CHMP1A', directed: 'false', weight: 0.0237229} },
+{ data: { source: 'CHMP5', target: 'CHMP2A', directed: 'false', weight: 0.0211002} },
+{ data: { source: 'CHMP2B', target: 'CHMP2A', directed: 'false', weight: 0.462264} },
+{ data: { source: 'CHMP1A', target: 'CHMP4B', directed: 'false', weight: 0.0489114} },
+{ data: { source: 'CHMP3', target: 'CHMP1B', directed: 'false', weight: 0.0300777} },
+{ data: { source: 'CHMP4C', target: 'CHMP1B', directed: 'false', weight: 0.0904125} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    ESCRT-III complex	<br> Unweighted Density = 0.18
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>CHMP2A
+    </section>
+    </body>
+    </html>
+    

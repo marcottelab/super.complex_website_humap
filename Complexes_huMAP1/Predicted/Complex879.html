@@ -1,0 +1,169 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 MCM complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex880.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MCM5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P33992" }},
+{data: { id: 'MCM10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7L590" }},
+{data: { id: 'CCDC88C', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P219" }},
+{data: { id: 'MCMBP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BTE3" }},
+{data: { id: 'SUB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P53999" }},
+{data: { id: 'EIF2S2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P20042" }},
+{data: { id: 'MCM6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14566" }},
+{data: { id: 'MCM2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P33993" }},
+{data: { id: 'MCM4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P33991" }},
+{data: { id: 'MCM7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P33993" }},
+{data: { id: 'SARS-CoV2 orf8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 orf8.html" }},
+{data: { id: 'DNMT1', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/P26358" }},
+{data: { id: 'MCM3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P25205" }},
+{data: { id: 'FNBP1L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5T0N5" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 orf8', target: 'DNMT1', directed: 'false', weight: 0.795844505, type: 'sars'} },
+{ data: { source: 'MCM3', target: 'MCM2', directed: 'false', weight: 1.0} },
+{ data: { source: 'MCM3', target: 'MCM7', directed: 'false', weight: 0.999999} },
+{ data: { source: 'MCM3', target: 'MCM4', directed: 'false', weight: 0.999993} },
+{ data: { source: 'MCM3', target: 'MCM6', directed: 'false', weight: 0.9998389999999999} },
+{ data: { source: 'MCM3', target: 'MCM5', directed: 'false', weight: 0.9978950000000001} },
+{ data: { source: 'MCM3', target: 'MCMBP', directed: 'false', weight: 0.938457} },
+{ data: { source: 'MCM3', target: 'DNMT1', directed: 'false', weight: 0.281514} },
+{ data: { source: 'MCM3', target: 'CCDC88C', directed: 'false', weight: 0.10703800000000001} },
+{ data: { source: 'MCM7', target: 'MCM5', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'MCM7', target: 'MCM2', directed: 'false', weight: 0.995124} },
+{ data: { source: 'MCM7', target: 'MCM6', directed: 'false', weight: 0.993956} },
+{ data: { source: 'MCM7', target: 'MCMBP', directed: 'false', weight: 0.9863649999999999} },
+{ data: { source: 'MCM7', target: 'MCM4', directed: 'false', weight: 0.9811120000000001} },
+{ data: { source: 'MCM7', target: 'CCDC88C', directed: 'false', weight: 0.620908} },
+{ data: { source: 'MCM7', target: 'SUB1', directed: 'false', weight: 0.513426} },
+{ data: { source: 'MCM7', target: 'FNBP1L', directed: 'false', weight: 0.44950200000000007} },
+{ data: { source: 'MCM7', target: 'DNMT1', directed: 'false', weight: 0.045353} },
+{ data: { source: 'MCM5', target: 'MCM2', directed: 'false', weight: 0.999976} },
+{ data: { source: 'MCM5', target: 'MCM4', directed: 'false', weight: 0.999374} },
+{ data: { source: 'MCM5', target: 'MCM6', directed: 'false', weight: 0.9930209999999999} },
+{ data: { source: 'MCM5', target: 'MCMBP', directed: 'false', weight: 0.968301} },
+{ data: { source: 'MCM5', target: 'DNMT1', directed: 'false', weight: 0.760243} },
+{ data: { source: 'MCM5', target: 'CCDC88C', directed: 'false', weight: 0.10416800000000001} },
+{ data: { source: 'MCM5', target: 'FNBP1L', directed: 'false', weight: 0.021954400000000002} },
+{ data: { source: 'MCM5', target: 'SUB1', directed: 'false', weight: 0.00705846} },
+{ data: { source: 'MCMBP', target: 'MCM6', directed: 'false', weight: 0.994662} },
+{ data: { source: 'MCMBP', target: 'MCM2', directed: 'false', weight: 0.451304} },
+{ data: { source: 'MCMBP', target: 'MCM4', directed: 'false', weight: 0.311137} },
+{ data: { source: 'MCMBP', target: 'CCDC88C', directed: 'false', weight: 0.108674} },
+{ data: { source: 'MCMBP', target: 'DNMT1', directed: 'false', weight: 0.0713188} },
+{ data: { source: 'SUB1', target: 'MCM2', directed: 'false', weight: 0.899734} },
+{ data: { source: 'SUB1', target: 'MCM4', directed: 'false', weight: 0.352016} },
+{ data: { source: 'SUB1', target: 'MCM6', directed: 'false', weight: 0.023556599999999997} },
+{ data: { source: 'MCM6', target: 'MCM2', directed: 'false', weight: 0.9209149999999999} },
+{ data: { source: 'MCM6', target: 'MCM4', directed: 'false', weight: 0.8703299999999999} },
+{ data: { source: 'MCM6', target: 'MCM10', directed: 'false', weight: 0.7865300000000001} },
+{ data: { source: 'MCM6', target: 'FNBP1L', directed: 'false', weight: 0.31086199999999997} },
+{ data: { source: 'MCM6', target: 'CCDC88C', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'DNMT1', target: 'MCM4', directed: 'false', weight: 0.07913819999999999} },
+{ data: { source: 'DNMT1', target: 'MCM2', directed: 'false', weight: 0.0597354} },
+{ data: { source: 'CCDC88C', target: 'MCM4', directed: 'false', weight: 0.120276} },
+{ data: { source: 'CCDC88C', target: 'MCM2', directed: 'false', weight: 0.108674} },
+{ data: { source: 'MCM2', target: 'MCM4', directed: 'false', weight: 0.935776} },
+{ data: { source: 'MCM2', target: 'EIF2S2', directed: 'false', weight: 0.763009} },
+{ data: { source: 'MCM2', target: 'FNBP1L', directed: 'false', weight: 0.49344799999999994} },
+{ data: { source: 'MCM4', target: 'FNBP1L', directed: 'false', weight: 0.777964} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 MCM complex<br> Complex Score (from Super.Complex) = 0.54746<br> Unweighted Density = 0.59
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>DNMT1
+    </section>
+    </body>
+    </html>
+    

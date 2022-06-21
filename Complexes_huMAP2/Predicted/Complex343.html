@@ -1,0 +1,118 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> GRAMD1C GRAMD1B EXD2 MARCHF5 GRAMD2B EFCAB14 GRAMD1A</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex344.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MARCHF5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NX47" }},
+{data: { id: 'EFCAB14', score: 2, type: '', href: "https://www.uniprot.org/uniprot/O75071" }},
+{data: { id: 'GRAMD1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96CP6" }},
+{data: { id: 'GRAMD1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q3KR37" }},
+{data: { id: 'EXD2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NVH0" }},
+{data: { id: 'GRAMD1C', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q8IYS0" }},
+{data: { id: 'GRAMD2B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96HH9" }}], 
+ edges: [{ data: { source: 'EXD2', target: 'GRAMD2B', directed: 'false', weight: 0.16760899999999998} },
+{ data: { source: 'EFCAB14', target: 'GRAMD2B', directed: 'false', weight: 0.999827} },
+{ data: { source: 'GRAMD1B', target: 'GRAMD2B', directed: 'false', weight: 0.9828600000000001} },
+{ data: { source: 'GRAMD1B', target: 'GRAMD1C', directed: 'false', weight: 0.07783999999999999} },
+{ data: { source: 'GRAMD1B', target: 'GRAMD1A', directed: 'false', weight: 0.034334500000000004} },
+{ data: { source: 'MARCHF5', target: 'GRAMD2B', directed: 'false', weight: 0.380415} },
+{ data: { source: 'GRAMD2B', target: 'GRAMD1C', directed: 'false', weight: 0.903955} },
+{ data: { source: 'GRAMD2B', target: 'GRAMD1A', directed: 'false', weight: 0.583576} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    GRAMD1C GRAMD1B EXD2 MARCHF5 GRAMD2B EFCAB14 GRAMD1A<br> Complex Score (from Super.Complex) = 0.68400<br> Unweighted Density = 0.38
+    </section>
+    </body>
+    </html>
+    

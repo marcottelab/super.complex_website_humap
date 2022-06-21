@@ -1,0 +1,171 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> SIN3-ING1b complex II</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex405.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SAP18', score: 5, href: "https://www.uniprot.org/uniprot/O00422" }},
+{data: { id: 'ARID1A', score: 5, href: "https://www.uniprot.org/uniprot/O14497" }},
+{data: { id: 'SAP30', score: 5, href: "https://www.uniprot.org/uniprot/O75446" }},
+{data: { id: 'ACTL6A', score: 5, href: "https://www.uniprot.org/uniprot/O96019" }},
+{data: { id: 'SMARCA4', score: 5, href: "https://www.uniprot.org/uniprot/P51532" }},
+{data: { id: 'RBBP4', score: 5, href: "https://www.uniprot.org/uniprot/Q09028" }},
+{data: { id: 'SMARCB1', score: 5, href: "https://www.uniprot.org/uniprot/Q12824" }},
+{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'RBBP7', score: 5, href: "https://www.uniprot.org/uniprot/Q16576" }},
+{data: { id: 'ARID4B', score: 5, href: "https://www.uniprot.org/uniprot/Q4LE39" }},
+{data: { id: 'SMARCC2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAQ2" }},
+{data: { id: 'HDAC2', score: 5, href: "https://www.uniprot.org/uniprot/Q92769" }},
+{data: { id: 'SMARCC1', score: 5, href: "https://www.uniprot.org/uniprot/Q92922" }},
+{data: { id: 'SMARCD1', score: 5, href: "https://www.uniprot.org/uniprot/Q96GM5" }},
+{data: { id: 'SIN3A', score: 5, href: "https://www.uniprot.org/uniprot/Q96ST3" }},
+{data: { id: 'ING1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UK53" }}], 
+ edges: [{ data: { source: 'SAP30', target: 'ARID4B', directed: 'false', weight: 0.9997309999999999} },
+{ data: { source: 'SAP30', target: 'RBBP7', directed: 'false', weight: 0.910157} },
+{ data: { source: 'SAP30', target: 'HDAC1', directed: 'false', weight: 0.534219} },
+{ data: { source: 'SAP30', target: 'SIN3A', directed: 'false', weight: 0.216033} },
+{ data: { source: 'SAP30', target: 'ING1', directed: 'false', weight: 0.088751} },
+{ data: { source: 'RBBP7', target: 'RBBP4', directed: 'false', weight: 1.0} },
+{ data: { source: 'RBBP7', target: 'HDAC1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RBBP7', target: 'SIN3A', directed: 'false', weight: 0.997858} },
+{ data: { source: 'RBBP7', target: 'HDAC2', directed: 'false', weight: 0.9976290000000001} },
+{ data: { source: 'RBBP7', target: 'ARID4B', directed: 'false', weight: 0.987585} },
+{ data: { source: 'RBBP7', target: 'ING1', directed: 'false', weight: 0.5664779999999999} },
+{ data: { source: 'RBBP7', target: 'SMARCB1', directed: 'false', weight: 0.136879} },
+{ data: { source: 'RBBP7', target: 'ACTL6A', directed: 'false', weight: 0.0249534} },
+{ data: { source: 'RBBP7', target: 'SMARCC2', directed: 'false', weight: 0.020617700000000003} },
+{ data: { source: 'ARID1A', target: 'SMARCC1', directed: 'false', weight: 0.999999} },
+{ data: { source: 'ARID1A', target: 'SMARCC2', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'ARID1A', target: 'SMARCA4', directed: 'false', weight: 0.999974} },
+{ data: { source: 'ARID1A', target: 'ACTL6A', directed: 'false', weight: 0.9994649999999999} },
+{ data: { source: 'ARID1A', target: 'SMARCB1', directed: 'false', weight: 0.999324} },
+{ data: { source: 'ARID1A', target: 'SMARCD1', directed: 'false', weight: 0.998548} },
+{ data: { source: 'ARID1A', target: 'RBBP4', directed: 'false', weight: 0.866624} },
+{ data: { source: 'ARID1A', target: 'HDAC2', directed: 'false', weight: 0.0998666} },
+{ data: { source: 'HDAC1', target: 'HDAC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'HDAC1', target: 'SIN3A', directed: 'false', weight: 0.9999520000000001} },
+{ data: { source: 'HDAC1', target: 'RBBP4', directed: 'false', weight: 0.9999520000000001} },
+{ data: { source: 'HDAC1', target: 'SMARCC2', directed: 'false', weight: 0.9875290000000001} },
+{ data: { source: 'HDAC1', target: 'SMARCC1', directed: 'false', weight: 0.9823569999999999} },
+{ data: { source: 'HDAC1', target: 'SMARCD1', directed: 'false', weight: 0.957565} },
+{ data: { source: 'HDAC1', target: 'SMARCA4', directed: 'false', weight: 0.850299} },
+{ data: { source: 'HDAC1', target: 'ACTL6A', directed: 'false', weight: 0.561489} },
+{ data: { source: 'HDAC1', target: 'ARID4B', directed: 'false', weight: 0.293141} },
+{ data: { source: 'SMARCC1', target: 'SMARCA4', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCC1', target: 'SMARCB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCC1', target: 'SMARCD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCC1', target: 'ACTL6A', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCC1', target: 'SMARCC2', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SMARCC1', target: 'RBBP4', directed: 'false', weight: 0.9989379999999999} },
+{ data: { source: 'SMARCC1', target: 'HDAC2', directed: 'false', weight: 0.9948790000000001} },
+{ data: { source: 'SMARCD1', target: 'ACTL6A', directed: 'false', weight: 0.999999} },
+{ data: { source: 'SMARCD1', target: 'SMARCC2', directed: 'false', weight: 0.999964} },
+{ data: { source: 'SMARCD1', target: 'SMARCB1', directed: 'false', weight: 0.999933} },
+{ data: { source: 'SMARCD1', target: 'SMARCA4', directed: 'false', weight: 0.999667} },
+{ data: { source: 'SMARCD1', target: 'RBBP4', directed: 'false', weight: 0.967783} },
+{ data: { source: 'SMARCD1', target: 'HDAC2', directed: 'false', weight: 0.961714} },
+{ data: { source: 'SMARCA4', target: 'SMARCC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCA4', target: 'SMARCB1', directed: 'false', weight: 0.999976} },
+{ data: { source: 'SMARCA4', target: 'ACTL6A', directed: 'false', weight: 0.9999450000000001} },
+{ data: { source: 'SMARCA4', target: 'RBBP4', directed: 'false', weight: 0.993175} },
+{ data: { source: 'SMARCA4', target: 'HDAC2', directed: 'false', weight: 0.8749170000000001} },
+{ data: { source: 'RBBP4', target: 'SMARCC2', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'RBBP4', target: 'HDAC2', directed: 'false', weight: 0.9922850000000001} },
+{ data: { source: 'RBBP4', target: 'ACTL6A', directed: 'false', weight: 0.9875790000000001} },
+{ data: { source: 'RBBP4', target: 'SMARCB1', directed: 'false', weight: 0.9875510000000001} },
+{ data: { source: 'ACTL6A', target: 'SMARCC2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'ACTL6A', target: 'SMARCB1', directed: 'false', weight: 0.999975} },
+{ data: { source: 'ACTL6A', target: 'HDAC2', directed: 'false', weight: 0.968199} },
+{ data: { source: 'ARID4B', target: 'SIN3A', directed: 'false', weight: 0.999017} },
+{ data: { source: 'ARID4B', target: 'HDAC2', directed: 'false', weight: 0.04530630000000001} },
+{ data: { source: 'SMARCC2', target: 'SMARCB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCC2', target: 'HDAC2', directed: 'false', weight: 0.999943} },
+{ data: { source: 'HDAC2', target: 'SMARCB1', directed: 'false', weight: 0.97105} },
+{ data: { source: 'HDAC2', target: 'SIN3A', directed: 'false', weight: 0.287039} },
+{ data: { source: 'ING1', target: 'SIN3A', directed: 'false', weight: 0.0473011} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    SIN3-ING1b complex II	<br> Unweighted Density = 0.53
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HDAC2
+    </section>
+    </body>
+    </html>
+    

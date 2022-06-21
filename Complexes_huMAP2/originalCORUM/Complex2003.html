@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> MIB complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2004.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MTX2', score: 5, href: "https://www.uniprot.org/uniprot/O75431" }},
+{data: { id: 'MTX1', score: 5, href: "https://www.uniprot.org/uniprot/Q13505" }},
+{data: { id: 'IMMT', score: 5, href: "https://www.uniprot.org/uniprot/Q16891" }},
+{data: { id: '440574', score: 0 }},
+{data: { id: '125988', score: 0 }},
+{data: { id: 'APOOL', score: 5, href: "https://www.uniprot.org/uniprot/Q6UXV4" }},
+{data: { id: 'CHCHD6', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRQ6" }},
+{data: { id: '79135', score: 0 }},
+{data: { id: 'DNAJC11', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVH1" }},
+{data: { id: 'CHCHD3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX63" }},
+{data: { id: 'SAMM50', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y512" }}], 
+ edges: [{ data: { source: 'CHCHD6', target: 'MTX2', directed: 'false', weight: 0.999658} },
+{ data: { source: 'CHCHD6', target: 'IMMT', directed: 'false', weight: 0.0403474} },
+{ data: { source: 'CHCHD6', target: 'SAMM50', directed: 'false', weight: 0.030949} },
+{ data: { source: 'CHCHD6', target: 'CHCHD3', directed: 'false', weight: 0.021202099999999998} },
+{ data: { source: 'IMMT', target: 'MTX2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'IMMT', target: 'CHCHD3', directed: 'false', weight: 0.0641305} },
+{ data: { source: 'IMMT', target: 'SAMM50', directed: 'false', weight: 0.0216108} },
+{ data: { source: 'MTX2', target: 'SAMM50', directed: 'false', weight: 0.999768} },
+{ data: { source: 'MTX2', target: 'CHCHD3', directed: 'false', weight: 0.996655} },
+{ data: { source: 'SAMM50', target: 'CHCHD3', directed: 'false', weight: 0.729985} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    MIB complex	<br> Unweighted Density = 0.18
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>DNAJC11
+    </section>
+    </body>
+    </html>
+    

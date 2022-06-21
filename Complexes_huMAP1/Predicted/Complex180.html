@@ -1,0 +1,122 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 GAIT complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex181.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SARS-CoV2 N', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 N.html" }},
+{data: { id: 'RPL36', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9Y3U8" }},
+{data: { id: 'RPS12', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P25398" }},
+{data: { id: 'RPL13A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P40429" }},
+{data: { id: 'FAU', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62861" }},
+{data: { id: 'COX5B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P10606" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 N', target: 'RPL36', directed: 'false', weight: 0.631167513, type: 'sars'} },
+{ data: { source: 'RPL36', target: 'RPL13A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL36', target: 'RPS12', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPL36', target: 'FAU', directed: 'false', weight: 0.999991} },
+{ data: { source: 'RPL13A', target: 'RPS12', directed: 'false', weight: 0.9961639999999999} },
+{ data: { source: 'RPL13A', target: 'FAU', directed: 'false', weight: 0.9759059999999999} },
+{ data: { source: 'COX5B', target: 'RPS12', directed: 'false', weight: 0.30086999999999997} },
+{ data: { source: 'FAU', target: 'RPS12', directed: 'false', weight: 0.99374} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 GAIT complex<br> Complex Score (from Super.Complex) = 0.77378<br> Unweighted Density = 0.70
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>RPL36
+    </section>
+    </body>
+    </html>
+    

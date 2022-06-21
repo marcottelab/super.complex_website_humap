@@ -1,0 +1,93 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Ecsit complex (ECSIT, NDUFS3, NDUFAF1)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex167.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NDUFS3', score: 5, href: "https://www.uniprot.org/uniprot/O75489" }},
+{data: { id: 'NDUFAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y375" }},
+{data: { id: 'ECSIT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ95" }}], 
+ edges: [{ data: { source: 'NDUFS3', target: 'NDUFAF1', directed: 'false', weight: 0.0509976} },
+{ data: { source: 'NDUFS3', target: 'ECSIT', directed: 'false', weight: 0.027666500000000004} },
+{ data: { source: 'NDUFAF1', target: 'ECSIT', directed: 'false', weight: 0.999157} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Ecsit complex (ECSIT, NDUFS3, NDUFAF1)	<br> Unweighted Density = 1.00
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>NDUFAF1 ECSIT
+    </section>
+    </body>
+    </html>
+    

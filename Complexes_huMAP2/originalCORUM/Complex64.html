@@ -1,0 +1,127 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Rnase/Mrp complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex65.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'POP7', score: 5, href: "https://www.uniprot.org/uniprot/O75817" }},
+{data: { id: 'RPP40', score: 5, href: "https://www.uniprot.org/uniprot/O75818" }},
+{data: { id: 'RPP14', score: 5, href: "https://www.uniprot.org/uniprot/O95059" }},
+{data: { id: 'POP4', score: 5, href: "https://www.uniprot.org/uniprot/O95707" }},
+{data: { id: 'RPP38', score: 5, href: "https://www.uniprot.org/uniprot/P78345" }},
+{data: { id: 'RPP30', score: 5, href: "https://www.uniprot.org/uniprot/P78346" }},
+{data: { id: 'POP5', score: 5, href: "https://www.uniprot.org/uniprot/Q969H6" }},
+{data: { id: 'POP1', score: 5, href: "https://www.uniprot.org/uniprot/Q99575" }},
+{data: { id: 'RPP25', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUL9" }},
+{data: { id: 'RPP21', score: 5, href: "https://www.uniprot.org/uniprot/Q9H633" }}], 
+ edges: [{ data: { source: 'RPP21', target: 'POP4', directed: 'false', weight: 0.0734687} },
+{ data: { source: 'RPP21', target: 'RPP14', directed: 'false', weight: 0.0669505} },
+{ data: { source: 'RPP21', target: 'POP7', directed: 'false', weight: 0.065198} },
+{ data: { source: 'RPP21', target: 'RPP38', directed: 'false', weight: 0.051685699999999994} },
+{ data: { source: 'RPP21', target: 'RPP25', directed: 'false', weight: 0.0432639} },
+{ data: { source: 'RPP21', target: 'RPP40', directed: 'false', weight: 0.0414787} },
+{ data: { source: 'RPP21', target: 'POP1', directed: 'false', weight: 0.035938300000000006} },
+{ data: { source: 'RPP21', target: 'POP5', directed: 'false', weight: 0.031845099999999994} },
+{ data: { source: 'RPP38', target: 'RPP25', directed: 'false', weight: 0.853741} },
+{ data: { source: 'RPP38', target: 'POP4', directed: 'false', weight: 0.711251} },
+{ data: { source: 'RPP38', target: 'RPP30', directed: 'false', weight: 0.663308} },
+{ data: { source: 'RPP38', target: 'RPP40', directed: 'false', weight: 0.0203075} },
+{ data: { source: 'RPP40', target: 'RPP25', directed: 'false', weight: 0.950523} },
+{ data: { source: 'RPP40', target: 'POP4', directed: 'false', weight: 0.8833979999999999} },
+{ data: { source: 'RPP40', target: 'RPP30', directed: 'false', weight: 0.47893800000000003} },
+{ data: { source: 'POP4', target: 'RPP30', directed: 'false', weight: 0.827556} },
+{ data: { source: 'POP4', target: 'RPP25', directed: 'false', weight: 0.656796} },
+{ data: { source: 'POP4', target: 'POP7', directed: 'false', weight: 0.47944799999999993} },
+{ data: { source: 'POP4', target: 'POP1', directed: 'false', weight: 0.301557} },
+{ data: { source: 'POP4', target: 'RPP14', directed: 'false', weight: 0.134062} },
+{ data: { source: 'POP4', target: 'POP5', directed: 'false', weight: 0.0628845} },
+{ data: { source: 'POP7', target: 'RPP25', directed: 'false', weight: 0.978777} },
+{ data: { source: 'POP7', target: 'RPP30', directed: 'false', weight: 0.025981099999999997} },
+{ data: { source: 'RPP30', target: 'RPP14', directed: 'false', weight: 0.302617} },
+{ data: { source: 'RPP30', target: 'RPP25', directed: 'false', weight: 0.15070799999999998} },
+{ data: { source: 'RPP30', target: 'POP1', directed: 'false', weight: 0.0437094} },
+{ data: { source: 'RPP30', target: 'POP5', directed: 'false', weight: 0.029833299999999997} },
+{ data: { source: 'RPP14', target: 'RPP25', directed: 'false', weight: 0.0413194} },
+{ data: { source: 'POP1', target: 'RPP25', directed: 'false', weight: 0.24467600000000003} },
+{ data: { source: 'POP5', target: 'RPP25', directed: 'false', weight: 0.41948} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Rnase/Mrp complex	<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

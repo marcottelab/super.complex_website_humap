@@ -1,0 +1,97 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Condensin II</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex81.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SMC2L1', score: 5, href: "https://www.uniprot.org/uniprot/O95347" }},
+{data: { id: 'NCAPD3', score: 5, href: "https://www.uniprot.org/uniprot/P42695" }},
+{data: { id: 'NCAPH2', score: 5, href: "https://www.uniprot.org/uniprot/Q6IBW4" }},
+{data: { id: 'NCAPG2', score: 5, href: "https://www.uniprot.org/uniprot/Q86XI2" }},
+{data: { id: 'SMC4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NTJ3" }}], 
+ edges: [{ data: { source: 'NCAPG2', target: 'NCAPD3', directed: 'false', weight: 1.0} },
+{ data: { source: 'NCAPG2', target: 'NCAPH2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'NCAPG2', target: 'SMC4', directed: 'false', weight: 0.9885229999999999} },
+{ data: { source: 'NCAPG2', target: 'SMC2L1', directed: 'false', weight: 0.820157} },
+{ data: { source: 'NCAPD3', target: 'NCAPH2', directed: 'false', weight: 0.999984} },
+{ data: { source: 'NCAPD3', target: 'SMC2L1', directed: 'false', weight: 0.9684860000000001} },
+{ data: { source: 'NCAPD3', target: 'SMC4', directed: 'false', weight: 0.774492} },
+{ data: { source: 'NCAPH2', target: 'SMC4', directed: 'false', weight: 0.999476} },
+{ data: { source: 'NCAPH2', target: 'SMC2L1', directed: 'false', weight: 0.929948} },
+{ data: { source: 'SMC4', target: 'SMC2L1', directed: 'false', weight: 1.0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Condensin II	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

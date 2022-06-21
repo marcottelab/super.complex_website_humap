@@ -1,0 +1,462 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 28S ribosomal subunit, mitochondrial</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex8.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MRPS28', score: 4, type: '', href: "https://www.uniprot.org/uniprot/P82673" }},
+{data: { id: 'MRPS33', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9Y291" }},
+{data: { id: 'MRPS17', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9Y2R5" }},
+{data: { id: 'MRPS9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P82933" }},
+{data: { id: 'MRPS26', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9BYN8" }},
+{data: { id: 'MRPS15', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P82914" }},
+{data: { id: 'MRPS10', score: 3, type: '', href: "https://www.uniprot.org/uniprot/P82664" }},
+{data: { id: 'SARS-CoV2 nsp8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp8.html" }},
+{data: { id: 'MRPS2', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9Y399" }},
+{data: { id: 'MRPS35', score: 4, type: '', href: "https://www.uniprot.org/uniprot/P82673" }},
+{data: { id: 'MRPS31', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92665" }},
+{data: { id: 'MRPS21', score: 4, type: '', href: "https://www.uniprot.org/uniprot/P82921" }},
+{data: { id: 'MRPS7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y2R9" }},
+{data: { id: 'MRPS22', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P82650" }},
+{data: { id: 'MRPS34', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P82930" }},
+{data: { id: 'MRPS6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P82932" }},
+{data: { id: 'MRPS18C', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3D5" }},
+{data: { id: 'SARS-CoV2 nsp8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp8.html" }},
+{data: { id: 'MRPS27', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q92552" }},
+{data: { id: 'SARS-CoV2 nsp8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp8.html" }},
+{data: { id: 'MRPS5', score: 4, type: 'cov_link', href: "https://www.uniprot.org/uniprot/P82675" }},
+{data: { id: 'DAP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95886" }},
+{data: { id: 'MRPS18B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y676" }},
+{data: { id: 'MRPS14', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60783" }},
+{data: { id: 'MRPS23', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3D9" }},
+{data: { id: 'MRPS16', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3D3" }},
+{data: { id: 'MRPS24', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q96EL2" }},
+{data: { id: 'SARS-CoV2 nsp8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp8.html" }},
+{data: { id: 'MRPS25', score: 4, type: 'cov_link', href: "https://www.uniprot.org/uniprot/P82663" }},
+{data: { id: 'PTCD3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96EY7" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp8', target: 'MRPS2', directed: 'false', weight: 0.972057569, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 nsp8', target: 'MRPS27', directed: 'false', weight: 0.602806863, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 nsp8', target: 'MRPS5', directed: 'false', weight: 0.63637328, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 nsp8', target: 'MRPS25', directed: 'false', weight: 0.826437119, type: 'sars'} },
+{ data: { source: 'MRPS5', target: 'DAP3', directed: 'false', weight: 0.999492} },
+{ data: { source: 'MRPS5', target: 'MRPS35', directed: 'false', weight: 0.9994860000000001} },
+{ data: { source: 'MRPS5', target: 'MRPS34', directed: 'false', weight: 0.996865} },
+{ data: { source: 'MRPS5', target: 'PTCD3', directed: 'false', weight: 0.995992} },
+{ data: { source: 'MRPS5', target: 'MRPS33', directed: 'false', weight: 0.99521} },
+{ data: { source: 'MRPS5', target: 'MRPS22', directed: 'false', weight: 0.9931450000000001} },
+{ data: { source: 'MRPS5', target: 'MRPS26', directed: 'false', weight: 0.993138} },
+{ data: { source: 'MRPS5', target: 'MRPS2', directed: 'false', weight: 0.9928530000000001} },
+{ data: { source: 'MRPS5', target: 'MRPS24', directed: 'false', weight: 0.9926360000000001} },
+{ data: { source: 'MRPS5', target: 'MRPS6', directed: 'false', weight: 0.989267} },
+{ data: { source: 'MRPS5', target: 'MRPS31', directed: 'false', weight: 0.987966} },
+{ data: { source: 'MRPS5', target: 'MRPS7', directed: 'false', weight: 0.986203} },
+{ data: { source: 'MRPS5', target: 'MRPS27', directed: 'false', weight: 0.984283} },
+{ data: { source: 'MRPS5', target: 'MRPS9', directed: 'false', weight: 0.9789389999999999} },
+{ data: { source: 'MRPS5', target: 'MRPS14', directed: 'false', weight: 0.9721129999999999} },
+{ data: { source: 'MRPS5', target: 'MRPS21', directed: 'false', weight: 0.957573} },
+{ data: { source: 'MRPS5', target: 'MRPS23', directed: 'false', weight: 0.9327120000000001} },
+{ data: { source: 'MRPS5', target: 'MRPS18C', directed: 'false', weight: 0.932207} },
+{ data: { source: 'MRPS5', target: 'MRPS15', directed: 'false', weight: 0.925465} },
+{ data: { source: 'MRPS5', target: 'MRPS18B', directed: 'false', weight: 0.921811} },
+{ data: { source: 'MRPS5', target: 'MRPS17', directed: 'false', weight: 0.9164690000000001} },
+{ data: { source: 'MRPS5', target: 'MRPS25', directed: 'false', weight: 0.914507} },
+{ data: { source: 'MRPS5', target: 'MRPS10', directed: 'false', weight: 0.885329} },
+{ data: { source: 'MRPS5', target: 'MRPS16', directed: 'false', weight: 0.707631} },
+{ data: { source: 'MRPS5', target: 'MRPS28', directed: 'false', weight: 0.648505} },
+{ data: { source: 'MRPS33', target: 'PTCD3', directed: 'false', weight: 0.9998879999999999} },
+{ data: { source: 'MRPS33', target: 'MRPS9', directed: 'false', weight: 0.99961} },
+{ data: { source: 'MRPS33', target: 'DAP3', directed: 'false', weight: 0.9995209999999999} },
+{ data: { source: 'MRPS33', target: 'MRPS35', directed: 'false', weight: 0.999396} },
+{ data: { source: 'MRPS33', target: 'MRPS31', directed: 'false', weight: 0.9962260000000001} },
+{ data: { source: 'MRPS33', target: 'MRPS14', directed: 'false', weight: 0.9894430000000001} },
+{ data: { source: 'MRPS33', target: 'MRPS22', directed: 'false', weight: 0.9879959999999999} },
+{ data: { source: 'MRPS33', target: 'MRPS2', directed: 'false', weight: 0.986576} },
+{ data: { source: 'MRPS33', target: 'MRPS23', directed: 'false', weight: 0.984691} },
+{ data: { source: 'MRPS33', target: 'MRPS15', directed: 'false', weight: 0.984517} },
+{ data: { source: 'MRPS33', target: 'MRPS24', directed: 'false', weight: 0.9782799999999999} },
+{ data: { source: 'MRPS33', target: 'MRPS26', directed: 'false', weight: 0.9761209999999999} },
+{ data: { source: 'MRPS33', target: 'MRPS27', directed: 'false', weight: 0.975758} },
+{ data: { source: 'MRPS33', target: 'MRPS7', directed: 'false', weight: 0.964283} },
+{ data: { source: 'MRPS33', target: 'MRPS25', directed: 'false', weight: 0.962527} },
+{ data: { source: 'MRPS33', target: 'MRPS34', directed: 'false', weight: 0.9616020000000001} },
+{ data: { source: 'MRPS33', target: 'MRPS21', directed: 'false', weight: 0.961161} },
+{ data: { source: 'MRPS33', target: 'MRPS6', directed: 'false', weight: 0.94799} },
+{ data: { source: 'MRPS33', target: 'MRPS18C', directed: 'false', weight: 0.930276} },
+{ data: { source: 'MRPS33', target: 'MRPS18B', directed: 'false', weight: 0.898797} },
+{ data: { source: 'MRPS33', target: 'MRPS10', directed: 'false', weight: 0.864038} },
+{ data: { source: 'MRPS33', target: 'MRPS16', directed: 'false', weight: 0.800211} },
+{ data: { source: 'MRPS33', target: 'MRPS28', directed: 'false', weight: 0.786514} },
+{ data: { source: 'MRPS33', target: 'MRPS17', directed: 'false', weight: 0.747266} },
+{ data: { source: 'MRPS34', target: 'MRPS22', directed: 'false', weight: 0.999765} },
+{ data: { source: 'MRPS34', target: 'DAP3', directed: 'false', weight: 0.9992270000000001} },
+{ data: { source: 'MRPS34', target: 'PTCD3', directed: 'false', weight: 0.9984639999999999} },
+{ data: { source: 'MRPS34', target: 'MRPS9', directed: 'false', weight: 0.998291} },
+{ data: { source: 'MRPS34', target: 'MRPS18B', directed: 'false', weight: 0.9972129999999999} },
+{ data: { source: 'MRPS34', target: 'MRPS23', directed: 'false', weight: 0.996251} },
+{ data: { source: 'MRPS34', target: 'MRPS35', directed: 'false', weight: 0.9948520000000001} },
+{ data: { source: 'MRPS34', target: 'MRPS27', directed: 'false', weight: 0.9947389999999999} },
+{ data: { source: 'MRPS34', target: 'MRPS7', directed: 'false', weight: 0.9945139999999999} },
+{ data: { source: 'MRPS34', target: 'MRPS2', directed: 'false', weight: 0.991187} },
+{ data: { source: 'MRPS34', target: 'MRPS26', directed: 'false', weight: 0.9883280000000001} },
+{ data: { source: 'MRPS34', target: 'MRPS25', directed: 'false', weight: 0.983751} },
+{ data: { source: 'MRPS34', target: 'MRPS15', directed: 'false', weight: 0.9805530000000001} },
+{ data: { source: 'MRPS34', target: 'MRPS16', directed: 'false', weight: 0.9696030000000001} },
+{ data: { source: 'MRPS34', target: 'MRPS24', directed: 'false', weight: 0.965506} },
+{ data: { source: 'MRPS34', target: 'MRPS14', directed: 'false', weight: 0.962585} },
+{ data: { source: 'MRPS34', target: 'MRPS31', directed: 'false', weight: 0.9516959999999999} },
+{ data: { source: 'MRPS34', target: 'MRPS6', directed: 'false', weight: 0.9465959999999999} },
+{ data: { source: 'MRPS34', target: 'MRPS10', directed: 'false', weight: 0.9364549999999999} },
+{ data: { source: 'MRPS34', target: 'MRPS17', directed: 'false', weight: 0.918009} },
+{ data: { source: 'MRPS34', target: 'MRPS18C', directed: 'false', weight: 0.912391} },
+{ data: { source: 'MRPS34', target: 'MRPS21', directed: 'false', weight: 0.896183} },
+{ data: { source: 'MRPS34', target: 'MRPS28', directed: 'false', weight: 0.663569} },
+{ data: { source: 'MRPS22', target: 'MRPS9', directed: 'false', weight: 0.999999} },
+{ data: { source: 'MRPS22', target: 'MRPS27', directed: 'false', weight: 0.999999} },
+{ data: { source: 'MRPS22', target: 'MRPS26', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'MRPS22', target: 'MRPS7', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'MRPS22', target: 'PTCD3', directed: 'false', weight: 0.999978} },
+{ data: { source: 'MRPS22', target: 'MRPS18B', directed: 'false', weight: 0.99995} },
+{ data: { source: 'MRPS22', target: 'DAP3', directed: 'false', weight: 0.9999040000000001} },
+{ data: { source: 'MRPS22', target: 'MRPS2', directed: 'false', weight: 0.999828} },
+{ data: { source: 'MRPS22', target: 'MRPS23', directed: 'false', weight: 0.9996370000000001} },
+{ data: { source: 'MRPS22', target: 'MRPS35', directed: 'false', weight: 0.9996200000000001} },
+{ data: { source: 'MRPS22', target: 'MRPS25', directed: 'false', weight: 0.9953} },
+{ data: { source: 'MRPS22', target: 'MRPS6', directed: 'false', weight: 0.994115} },
+{ data: { source: 'MRPS22', target: 'MRPS31', directed: 'false', weight: 0.988303} },
+{ data: { source: 'MRPS22', target: 'MRPS10', directed: 'false', weight: 0.9845940000000001} },
+{ data: { source: 'MRPS22', target: 'MRPS17', directed: 'false', weight: 0.980281} },
+{ data: { source: 'MRPS22', target: 'MRPS28', directed: 'false', weight: 0.9459489999999999} },
+{ data: { source: 'MRPS22', target: 'MRPS24', directed: 'false', weight: 0.9414600000000001} },
+{ data: { source: 'MRPS22', target: 'MRPS21', directed: 'false', weight: 0.888842} },
+{ data: { source: 'MRPS22', target: 'MRPS18C', directed: 'false', weight: 0.881661} },
+{ data: { source: 'MRPS22', target: 'MRPS15', directed: 'false', weight: 0.873224} },
+{ data: { source: 'MRPS22', target: 'MRPS14', directed: 'false', weight: 0.873224} },
+{ data: { source: 'MRPS22', target: 'MRPS16', directed: 'false', weight: 0.7953399999999999} },
+{ data: { source: 'MRPS28', target: 'PTCD3', directed: 'false', weight: 0.974477} },
+{ data: { source: 'MRPS28', target: 'DAP3', directed: 'false', weight: 0.946326} },
+{ data: { source: 'MRPS28', target: 'MRPS18C', directed: 'false', weight: 0.9068} },
+{ data: { source: 'MRPS28', target: 'MRPS21', directed: 'false', weight: 0.887754} },
+{ data: { source: 'MRPS28', target: 'MRPS27', directed: 'false', weight: 0.8840450000000001} },
+{ data: { source: 'MRPS28', target: 'MRPS15', directed: 'false', weight: 0.8480260000000001} },
+{ data: { source: 'MRPS28', target: 'MRPS25', directed: 'false', weight: 0.8480260000000001} },
+{ data: { source: 'MRPS28', target: 'MRPS14', directed: 'false', weight: 0.8480260000000001} },
+{ data: { source: 'MRPS28', target: 'MRPS2', directed: 'false', weight: 0.8398479999999999} },
+{ data: { source: 'MRPS28', target: 'MRPS24', directed: 'false', weight: 0.807106} },
+{ data: { source: 'MRPS28', target: 'MRPS10', directed: 'false', weight: 0.775307} },
+{ data: { source: 'MRPS28', target: 'MRPS6', directed: 'false', weight: 0.745579} },
+{ data: { source: 'MRPS28', target: 'MRPS23', directed: 'false', weight: 0.745579} },
+{ data: { source: 'MRPS28', target: 'MRPS18B', directed: 'false', weight: 0.716569} },
+{ data: { source: 'MRPS28', target: 'MRPS26', directed: 'false', weight: 0.645754} },
+{ data: { source: 'MRPS28', target: 'MRPS31', directed: 'false', weight: 0.621222} },
+{ data: { source: 'MRPS28', target: 'MRPS16', directed: 'false', weight: 0.611458} },
+{ data: { source: 'MRPS28', target: 'MRPS7', directed: 'false', weight: 0.610863} },
+{ data: { source: 'MRPS28', target: 'MRPS17', directed: 'false', weight: 0.5989760000000001} },
+{ data: { source: 'MRPS28', target: 'MRPS9', directed: 'false', weight: 0.593847} },
+{ data: { source: 'MRPS28', target: 'MRPS35', directed: 'false', weight: 0.483908} },
+{ data: { source: 'MRPS21', target: 'MRPS25', directed: 'false', weight: 0.982615} },
+{ data: { source: 'MRPS21', target: 'PTCD3', directed: 'false', weight: 0.948501} },
+{ data: { source: 'MRPS21', target: 'MRPS15', directed: 'false', weight: 0.9440559999999999} },
+{ data: { source: 'MRPS21', target: 'MRPS14', directed: 'false', weight: 0.9440559999999999} },
+{ data: { source: 'MRPS21', target: 'MRPS27', directed: 'false', weight: 0.935499} },
+{ data: { source: 'MRPS21', target: 'MRPS24', directed: 'false', weight: 0.916014} },
+{ data: { source: 'MRPS21', target: 'DAP3', directed: 'false', weight: 0.909415} },
+{ data: { source: 'MRPS21', target: 'MRPS26', directed: 'false', weight: 0.882167} },
+{ data: { source: 'MRPS21', target: 'MRPS2', directed: 'false', weight: 0.875453} },
+{ data: { source: 'MRPS21', target: 'MRPS6', directed: 'false', weight: 0.860835} },
+{ data: { source: 'MRPS21', target: 'MRPS23', directed: 'false', weight: 0.860835} },
+{ data: { source: 'MRPS21', target: 'MRPS7', directed: 'false', weight: 0.8519979999999999} },
+{ data: { source: 'MRPS21', target: 'MRPS9', directed: 'false', weight: 0.8359719999999999} },
+{ data: { source: 'MRPS21', target: 'MRPS31', directed: 'false', weight: 0.8212219999999999} },
+{ data: { source: 'MRPS21', target: 'MRPS17', directed: 'false', weight: 0.808983} },
+{ data: { source: 'MRPS21', target: 'MRPS18B', directed: 'false', weight: 0.798551} },
+{ data: { source: 'MRPS21', target: 'MRPS10', directed: 'false', weight: 0.760304} },
+{ data: { source: 'MRPS21', target: 'MRPS18C', directed: 'false', weight: 0.670354} },
+{ data: { source: 'MRPS21', target: 'MRPS35', directed: 'false', weight: 0.66161} },
+{ data: { source: 'MRPS21', target: 'MRPS16', directed: 'false', weight: 0.584761} },
+{ data: { source: 'MRPS24', target: 'MRPS31', directed: 'false', weight: 0.9985709999999999} },
+{ data: { source: 'MRPS24', target: 'PTCD3', directed: 'false', weight: 0.996223} },
+{ data: { source: 'MRPS24', target: 'MRPS9', directed: 'false', weight: 0.9951909999999999} },
+{ data: { source: 'MRPS24', target: 'MRPS35', directed: 'false', weight: 0.9949620000000001} },
+{ data: { source: 'MRPS24', target: 'MRPS14', directed: 'false', weight: 0.9931989999999999} },
+{ data: { source: 'MRPS24', target: 'MRPS6', directed: 'false', weight: 0.986869} },
+{ data: { source: 'MRPS24', target: 'MRPS7', directed: 'false', weight: 0.977834} },
+{ data: { source: 'MRPS24', target: 'MRPS27', directed: 'false', weight: 0.973339} },
+{ data: { source: 'MRPS24', target: 'DAP3', directed: 'false', weight: 0.9721139999999999} },
+{ data: { source: 'MRPS24', target: 'MRPS18B', directed: 'false', weight: 0.969359} },
+{ data: { source: 'MRPS24', target: 'MRPS2', directed: 'false', weight: 0.962584} },
+{ data: { source: 'MRPS24', target: 'MRPS23', directed: 'false', weight: 0.962333} },
+{ data: { source: 'MRPS24', target: 'MRPS26', directed: 'false', weight: 0.9579610000000001} },
+{ data: { source: 'MRPS24', target: 'MRPS17', directed: 'false', weight: 0.954836} },
+{ data: { source: 'MRPS24', target: 'MRPS18C', directed: 'false', weight: 0.9399639999999999} },
+{ data: { source: 'MRPS24', target: 'MRPS15', directed: 'false', weight: 0.937386} },
+{ data: { source: 'MRPS24', target: 'MRPS25', directed: 'false', weight: 0.937386} },
+{ data: { source: 'MRPS24', target: 'MRPS10', directed: 'false', weight: 0.8864040000000001} },
+{ data: { source: 'MRPS24', target: 'MRPS16', directed: 'false', weight: 0.64551} },
+{ data: { source: 'MRPS27', target: 'MRPS2', directed: 'false', weight: 0.998149} },
+{ data: { source: 'MRPS27', target: 'MRPS7', directed: 'false', weight: 0.995783} },
+{ data: { source: 'MRPS27', target: 'MRPS9', directed: 'false', weight: 0.995035} },
+{ data: { source: 'MRPS27', target: 'MRPS26', directed: 'false', weight: 0.9944370000000001} },
+{ data: { source: 'MRPS27', target: 'PTCD3', directed: 'false', weight: 0.9920100000000001} },
+{ data: { source: 'MRPS27', target: 'MRPS17', directed: 'false', weight: 0.9917819999999999} },
+{ data: { source: 'MRPS27', target: 'DAP3', directed: 'false', weight: 0.9857299999999999} },
+{ data: { source: 'MRPS27', target: 'MRPS6', directed: 'false', weight: 0.985474} },
+{ data: { source: 'MRPS27', target: 'MRPS25', directed: 'false', weight: 0.980734} },
+{ data: { source: 'MRPS27', target: 'MRPS31', directed: 'false', weight: 0.976583} },
+{ data: { source: 'MRPS27', target: 'MRPS23', directed: 'false', weight: 0.9618450000000001} },
+{ data: { source: 'MRPS27', target: 'MRPS14', directed: 'false', weight: 0.950844} },
+{ data: { source: 'MRPS27', target: 'MRPS15', directed: 'false', weight: 0.9458629999999999} },
+{ data: { source: 'MRPS27', target: 'MRPS35', directed: 'false', weight: 0.943808} },
+{ data: { source: 'MRPS27', target: 'MRPS18C', directed: 'false', weight: 0.8989940000000001} },
+{ data: { source: 'MRPS27', target: 'MRPS10', directed: 'false', weight: 0.890869} },
+{ data: { source: 'MRPS27', target: 'MRPS18B', directed: 'false', weight: 0.8359719999999999} },
+{ data: { source: 'MRPS27', target: 'MRPS16', directed: 'false', weight: 0.577792} },
+{ data: { source: 'MRPS10', target: 'PTCD3', directed: 'false', weight: 0.99777} },
+{ data: { source: 'MRPS10', target: 'DAP3', directed: 'false', weight: 0.98559} },
+{ data: { source: 'MRPS10', target: 'MRPS9', directed: 'false', weight: 0.9835520000000001} },
+{ data: { source: 'MRPS10', target: 'MRPS2', directed: 'false', weight: 0.9807110000000001} },
+{ data: { source: 'MRPS10', target: 'MRPS35', directed: 'false', weight: 0.977139} },
+{ data: { source: 'MRPS10', target: 'MRPS16', directed: 'false', weight: 0.956559} },
+{ data: { source: 'MRPS10', target: 'MRPS15', directed: 'false', weight: 0.926491} },
+{ data: { source: 'MRPS10', target: 'MRPS14', directed: 'false', weight: 0.926491} },
+{ data: { source: 'MRPS10', target: 'MRPS23', directed: 'false', weight: 0.916833} },
+{ data: { source: 'MRPS10', target: 'MRPS7', directed: 'false', weight: 0.9034139999999999} },
+{ data: { source: 'MRPS10', target: 'MRPS18B', directed: 'false', weight: 0.8896620000000001} },
+{ data: { source: 'MRPS10', target: 'MRPS31', directed: 'false', weight: 0.853938} },
+{ data: { source: 'MRPS10', target: 'MRPS26', directed: 'false', weight: 0.8306520000000001} },
+{ data: { source: 'MRPS10', target: 'MRPS25', directed: 'false', weight: 0.828779} },
+{ data: { source: 'MRPS10', target: 'MRPS6', directed: 'false', weight: 0.81576} },
+{ data: { source: 'MRPS10', target: 'MRPS18C', directed: 'false', weight: 0.647457} },
+{ data: { source: 'MRPS10', target: 'MRPS17', directed: 'false', weight: 0.596251} },
+{ data: { source: 'MRPS14', target: 'MRPS31', directed: 'false', weight: 0.9932209999999999} },
+{ data: { source: 'MRPS14', target: 'MRPS25', directed: 'false', weight: 0.9814879999999999} },
+{ data: { source: 'MRPS14', target: 'MRPS15', directed: 'false', weight: 0.977944} },
+{ data: { source: 'MRPS14', target: 'MRPS2', directed: 'false', weight: 0.9744430000000001} },
+{ data: { source: 'MRPS14', target: 'PTCD3', directed: 'false', weight: 0.972673} },
+{ data: { source: 'MRPS14', target: 'MRPS9', directed: 'false', weight: 0.9573209999999999} },
+{ data: { source: 'MRPS14', target: 'MRPS18C', directed: 'false', weight: 0.9552120000000001} },
+{ data: { source: 'MRPS14', target: 'MRPS35', directed: 'false', weight: 0.95515} },
+{ data: { source: 'MRPS14', target: 'DAP3', directed: 'false', weight: 0.954888} },
+{ data: { source: 'MRPS14', target: 'MRPS6', directed: 'false', weight: 0.951182} },
+{ data: { source: 'MRPS14', target: 'MRPS23', directed: 'false', weight: 0.951182} },
+{ data: { source: 'MRPS14', target: 'MRPS18B', directed: 'false', weight: 0.9440559999999999} },
+{ data: { source: 'MRPS14', target: 'MRPS7', directed: 'false', weight: 0.939326} },
+{ data: { source: 'MRPS14', target: 'MRPS17', directed: 'false', weight: 0.937386} },
+{ data: { source: 'MRPS14', target: 'MRPS26', directed: 'false', weight: 0.89007} },
+{ data: { source: 'MRPS14', target: 'MRPS16', directed: 'false', weight: 0.71015} },
+{ data: { source: 'MRPS16', target: 'MRPS2', directed: 'false', weight: 0.998951} },
+{ data: { source: 'MRPS16', target: 'MRPS9', directed: 'false', weight: 0.996949} },
+{ data: { source: 'MRPS16', target: 'MRPS18B', directed: 'false', weight: 0.9968290000000001} },
+{ data: { source: 'MRPS16', target: 'MRPS26', directed: 'false', weight: 0.990122} },
+{ data: { source: 'MRPS16', target: 'MRPS35', directed: 'false', weight: 0.902658} },
+{ data: { source: 'MRPS16', target: 'PTCD3', directed: 'false', weight: 0.896282} },
+{ data: { source: 'MRPS16', target: 'DAP3', directed: 'false', weight: 0.885279} },
+{ data: { source: 'MRPS16', target: 'MRPS15', directed: 'false', weight: 0.8676790000000001} },
+{ data: { source: 'MRPS16', target: 'MRPS18C', directed: 'false', weight: 0.78918} },
+{ data: { source: 'MRPS16', target: 'MRPS7', directed: 'false', weight: 0.7843180000000001} },
+{ data: { source: 'MRPS16', target: 'MRPS25', directed: 'false', weight: 0.71015} },
+{ data: { source: 'MRPS16', target: 'MRPS31', directed: 'false', weight: 0.632898} },
+{ data: { source: 'MRPS16', target: 'MRPS6', directed: 'false', weight: 0.563001} },
+{ data: { source: 'MRPS16', target: 'MRPS23', directed: 'false', weight: 0.563001} },
+{ data: { source: 'MRPS16', target: 'MRPS17', directed: 'false', weight: 0.455333} },
+{ data: { source: 'MRPS35', target: 'MRPS9', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'MRPS35', target: 'DAP3', directed: 'false', weight: 0.999992} },
+{ data: { source: 'MRPS35', target: 'MRPS31', directed: 'false', weight: 0.999969} },
+{ data: { source: 'MRPS35', target: 'PTCD3', directed: 'false', weight: 0.999964} },
+{ data: { source: 'MRPS35', target: 'MRPS18B', directed: 'false', weight: 0.999763} },
+{ data: { source: 'MRPS35', target: 'MRPS7', directed: 'false', weight: 0.999707} },
+{ data: { source: 'MRPS35', target: 'MRPS2', directed: 'false', weight: 0.996826} },
+{ data: { source: 'MRPS35', target: 'MRPS23', directed: 'false', weight: 0.993492} },
+{ data: { source: 'MRPS35', target: 'MRPS26', directed: 'false', weight: 0.991451} },
+{ data: { source: 'MRPS35', target: 'MRPS6', directed: 'false', weight: 0.958585} },
+{ data: { source: 'MRPS35', target: 'MRPS25', directed: 'false', weight: 0.939932} },
+{ data: { source: 'MRPS35', target: 'MRPS15', directed: 'false', weight: 0.930148} },
+{ data: { source: 'MRPS35', target: 'MRPS18C', directed: 'false', weight: 0.796026} },
+{ data: { source: 'MRPS35', target: 'MRPS17', directed: 'false', weight: 0.755358} },
+{ data: { source: 'MRPS17', target: 'MRPS6', directed: 'false', weight: 0.962333} },
+{ data: { source: 'MRPS17', target: 'MRPS7', directed: 'false', weight: 0.9399059999999999} },
+{ data: { source: 'MRPS17', target: 'MRPS25', directed: 'false', weight: 0.937386} },
+{ data: { source: 'MRPS17', target: 'MRPS9', directed: 'false', weight: 0.932634} },
+{ data: { source: 'MRPS17', target: 'DAP3', directed: 'false', weight: 0.93129} },
+{ data: { source: 'MRPS17', target: 'MRPS31', directed: 'false', weight: 0.916356} },
+{ data: { source: 'MRPS17', target: 'MRPS2', directed: 'false', weight: 0.91619} },
+{ data: { source: 'MRPS17', target: 'MRPS26', directed: 'false', weight: 0.9034780000000001} },
+{ data: { source: 'MRPS17', target: 'PTCD3', directed: 'false', weight: 0.8877370000000001} },
+{ data: { source: 'MRPS17', target: 'MRPS18C', directed: 'false', weight: 0.853382} },
+{ data: { source: 'MRPS17', target: 'MRPS23', directed: 'false', weight: 0.814976} },
+{ data: { source: 'MRPS17', target: 'MRPS18B', directed: 'false', weight: 0.808983} },
+{ data: { source: 'MRPS17', target: 'MRPS15', directed: 'false', weight: 0.787359} },
+{ data: { source: 'MRPS18B', target: 'PTCD3', directed: 'false', weight: 0.9993620000000001} },
+{ data: { source: 'MRPS18B', target: 'MRPS9', directed: 'false', weight: 0.999287} },
+{ data: { source: 'MRPS18B', target: 'DAP3', directed: 'false', weight: 0.9991709999999999} },
+{ data: { source: 'MRPS18B', target: 'MRPS7', directed: 'false', weight: 0.997088} },
+{ data: { source: 'MRPS18B', target: 'MRPS2', directed: 'false', weight: 0.995172} },
+{ data: { source: 'MRPS18B', target: 'MRPS6', directed: 'false', weight: 0.9910530000000001} },
+{ data: { source: 'MRPS18B', target: 'MRPS23', directed: 'false', weight: 0.9821549999999999} },
+{ data: { source: 'MRPS18B', target: 'MRPS31', directed: 'false', weight: 0.948966} },
+{ data: { source: 'MRPS18B', target: 'MRPS26', directed: 'false', weight: 0.882167} },
+{ data: { source: 'MRPS18B', target: 'MRPS15', directed: 'false', weight: 0.8639819999999999} },
+{ data: { source: 'MRPS18B', target: 'MRPS25', directed: 'false', weight: 0.8639819999999999} },
+{ data: { source: 'MRPS18B', target: 'MRPS18C', directed: 'false', weight: 0.8214739999999999} },
+{ data: { source: 'MRPS7', target: 'MRPS9', directed: 'false', weight: 1.0} },
+{ data: { source: 'MRPS7', target: 'PTCD3', directed: 'false', weight: 0.9999809999999999} },
+{ data: { source: 'MRPS7', target: 'MRPS31', directed: 'false', weight: 0.9999610000000001} },
+{ data: { source: 'MRPS7', target: 'MRPS2', directed: 'false', weight: 0.9999600000000001} },
+{ data: { source: 'MRPS7', target: 'MRPS23', directed: 'false', weight: 0.999907} },
+{ data: { source: 'MRPS7', target: 'DAP3', directed: 'false', weight: 0.997764} },
+{ data: { source: 'MRPS7', target: 'MRPS26', directed: 'false', weight: 0.988874} },
+{ data: { source: 'MRPS7', target: 'MRPS6', directed: 'false', weight: 0.9688389999999999} },
+{ data: { source: 'MRPS7', target: 'MRPS18C', directed: 'false', weight: 0.9608200000000001} },
+{ data: { source: 'MRPS7', target: 'MRPS15', directed: 'false', weight: 0.857822} },
+{ data: { source: 'MRPS7', target: 'MRPS25', directed: 'false', weight: 0.857822} },
+{ data: { source: 'MRPS25', target: 'MRPS15', directed: 'false', weight: 0.995791} },
+{ data: { source: 'MRPS25', target: 'MRPS26', directed: 'false', weight: 0.9855360000000001} },
+{ data: { source: 'MRPS25', target: 'MRPS6', directed: 'false', weight: 0.9713790000000001} },
+{ data: { source: 'MRPS25', target: 'PTCD3', directed: 'false', weight: 0.959573} },
+{ data: { source: 'MRPS25', target: 'DAP3', directed: 'false', weight: 0.945125} },
+{ data: { source: 'MRPS25', target: 'MRPS31', directed: 'false', weight: 0.9207989999999999} },
+{ data: { source: 'MRPS25', target: 'MRPS2', directed: 'false', weight: 0.9068120000000001} },
+{ data: { source: 'MRPS25', target: 'MRPS23', directed: 'false', weight: 0.885942} },
+{ data: { source: 'MRPS25', target: 'MRPS9', directed: 'false', weight: 0.8792840000000001} },
+{ data: { source: 'MRPS25', target: 'MRPS18C', directed: 'false', weight: 0.808786} },
+{ data: { source: 'MRPS6', target: 'MRPS2', directed: 'false', weight: 0.9767870000000001} },
+{ data: { source: 'MRPS6', target: 'PTCD3', directed: 'false', weight: 0.974894} },
+{ data: { source: 'MRPS6', target: 'DAP3', directed: 'false', weight: 0.968097} },
+{ data: { source: 'MRPS6', target: 'MRPS31', directed: 'false', weight: 0.965722} },
+{ data: { source: 'MRPS6', target: 'MRPS23', directed: 'false', weight: 0.963201} },
+{ data: { source: 'MRPS6', target: 'MRPS9', directed: 'false', weight: 0.9618450000000001} },
+{ data: { source: 'MRPS6', target: 'MRPS18C', directed: 'false', weight: 0.940106} },
+{ data: { source: 'MRPS6', target: 'MRPS26', directed: 'false', weight: 0.795166} },
+{ data: { source: 'MRPS6', target: 'MRPS15', directed: 'false', weight: 0.768741} },
+{ data: { source: 'MRPS9', target: 'MRPS2', directed: 'false', weight: 1.0} },
+{ data: { source: 'MRPS9', target: 'DAP3', directed: 'false', weight: 0.999999} },
+{ data: { source: 'MRPS9', target: 'MRPS31', directed: 'false', weight: 0.999999} },
+{ data: { source: 'MRPS9', target: 'PTCD3', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'MRPS9', target: 'MRPS23', directed: 'false', weight: 0.999991} },
+{ data: { source: 'MRPS9', target: 'MRPS26', directed: 'false', weight: 0.9944370000000001} },
+{ data: { source: 'MRPS9', target: 'MRPS18C', directed: 'false', weight: 0.940367} },
+{ data: { source: 'MRPS9', target: 'MRPS15', directed: 'false', weight: 0.860168} },
+{ data: { source: 'MRPS2', target: 'MRPS23', directed: 'false', weight: 0.999966} },
+{ data: { source: 'MRPS2', target: 'DAP3', directed: 'false', weight: 0.9999520000000001} },
+{ data: { source: 'MRPS2', target: 'PTCD3', directed: 'false', weight: 0.999857} },
+{ data: { source: 'MRPS2', target: 'MRPS31', directed: 'false', weight: 0.98908} },
+{ data: { source: 'MRPS2', target: 'MRPS18C', directed: 'false', weight: 0.9687100000000001} },
+{ data: { source: 'MRPS2', target: 'MRPS26', directed: 'false', weight: 0.9395979999999999} },
+{ data: { source: 'MRPS2', target: 'MRPS15', directed: 'false', weight: 0.8855709999999999} },
+{ data: { source: 'MRPS23', target: 'DAP3', directed: 'false', weight: 0.9999709999999999} },
+{ data: { source: 'MRPS23', target: 'PTCD3', directed: 'false', weight: 0.9998950000000001} },
+{ data: { source: 'MRPS23', target: 'MRPS31', directed: 'false', weight: 0.998891} },
+{ data: { source: 'MRPS23', target: 'MRPS26', directed: 'false', weight: 0.949609} },
+{ data: { source: 'MRPS23', target: 'MRPS15', directed: 'false', weight: 0.885942} },
+{ data: { source: 'MRPS23', target: 'MRPS18C', directed: 'false', weight: 0.817208} },
+{ data: { source: 'MRPS26', target: 'PTCD3', directed: 'false', weight: 0.991727} },
+{ data: { source: 'MRPS26', target: 'MRPS31', directed: 'false', weight: 0.9912549999999999} },
+{ data: { source: 'MRPS26', target: 'DAP3', directed: 'false', weight: 0.978152} },
+{ data: { source: 'MRPS26', target: 'MRPS15', directed: 'false', weight: 0.973716} },
+{ data: { source: 'MRPS26', target: 'MRPS18C', directed: 'false', weight: 0.819939} },
+{ data: { source: 'DAP3', target: 'PTCD3', directed: 'false', weight: 0.9999889999999999} },
+{ data: { source: 'DAP3', target: 'MRPS31', directed: 'false', weight: 0.99997} },
+{ data: { source: 'DAP3', target: 'MRPS15', directed: 'false', weight: 0.937953} },
+{ data: { source: 'DAP3', target: 'MRPS18C', directed: 'false', weight: 0.855109} },
+{ data: { source: 'PTCD3', target: 'MRPS31', directed: 'false', weight: 0.999993} },
+{ data: { source: 'PTCD3', target: 'MRPS18C', directed: 'false', weight: 0.9043} },
+{ data: { source: 'PTCD3', target: 'MRPS15', directed: 'false', weight: 0.902583} },
+{ data: { source: 'MRPS31', target: 'MRPS15', directed: 'false', weight: 0.969406} },
+{ data: { source: 'MRPS31', target: 'MRPS18C', directed: 'false', weight: 0.954101} },
+{ data: { source: 'MRPS18C', target: 'MRPS15', directed: 'false', weight: 0.8972530000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 28S ribosomal subunit, mitochondrial<br> Complex Score (from Super.Complex) = 0.99665<br> Unweighted Density = 1.00
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        4 interacting protein(s): <br>MRPS2 MRPS27 MRPS5 MRPS25
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,210 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> ESR2-TRAP/Mediator coactivator complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2909.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CRSP9', score: 5, href: "https://www.uniprot.org/uniprot/O43513" }},
+{data: { id: 'MED14', score: 5, href: "https://www.uniprot.org/uniprot/O60244" }},
+{data: { id: 'MED24', score: 5, href: "https://www.uniprot.org/uniprot/O75448" }},
+{data: { id: 'MED6', score: 5, href: "https://www.uniprot.org/uniprot/O75586" }},
+{data: { id: 'CCNC', score: 5, href: "https://www.uniprot.org/uniprot/P24863" }},
+{data: { id: 'CDK8', score: 5, href: "https://www.uniprot.org/uniprot/P49336" }},
+{data: { id: 'EP300', score: 5, href: "https://www.uniprot.org/uniprot/Q09472" }},
+{data: { id: 'SURB7', score: 5, href: "https://www.uniprot.org/uniprot/Q13503" }},
+{data: { id: 'MED1', score: 5, href: "https://www.uniprot.org/uniprot/Q15648" }},
+{data: { id: 'NCOA1', score: 5, href: "https://www.uniprot.org/uniprot/Q15788" }},
+{data: { id: '2100', score: 0 }},
+{data: { id: 'MED12', score: 5, href: "https://www.uniprot.org/uniprot/Q93074" }},
+{data: { id: 'MED10', score: 5, href: "https://www.uniprot.org/uniprot/Q9BTT4" }},
+{data: { id: 'TRFP', score: 5, href: "https://www.uniprot.org/uniprot/Q9H944" }},
+{data: { id: 'MED17', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVC6" }},
+{data: { id: 'THRAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHV7" }},
+{data: { id: 'MED23', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULK4" }},
+{data: { id: 'MED16', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2X0" }}], 
+ edges: [{ data: { source: 'MED10', target: 'CDK8', directed: 'false', weight: 0.9876159999999999} },
+{ data: { source: 'MED10', target: 'TRFP', directed: 'false', weight: 0.987541} },
+{ data: { source: 'MED10', target: 'MED16', directed: 'false', weight: 0.944232} },
+{ data: { source: 'MED10', target: 'MED14', directed: 'false', weight: 0.924228} },
+{ data: { source: 'MED10', target: 'SURB7', directed: 'false', weight: 0.8620969999999999} },
+{ data: { source: 'MED10', target: 'MED12', directed: 'false', weight: 0.8491360000000001} },
+{ data: { source: 'MED10', target: 'MED6', directed: 'false', weight: 0.806285} },
+{ data: { source: 'MED10', target: 'MED17', directed: 'false', weight: 0.7840060000000001} },
+{ data: { source: 'MED10', target: 'MED24', directed: 'false', weight: 0.739661} },
+{ data: { source: 'MED10', target: 'MED1', directed: 'false', weight: 0.5} },
+{ data: { source: 'MED10', target: 'THRAP1', directed: 'false', weight: 0.5} },
+{ data: { source: 'MED10', target: 'CRSP9', directed: 'false', weight: 0.392343} },
+{ data: { source: 'MED10', target: 'MED23', directed: 'false', weight: 0.178751} },
+{ data: { source: 'MED10', target: 'CCNC', directed: 'false', weight: 0.157642} },
+{ data: { source: 'MED23', target: 'MED14', directed: 'false', weight: 0.999984} },
+{ data: { source: 'MED23', target: 'MED24', directed: 'false', weight: 0.9999299999999999} },
+{ data: { source: 'MED23', target: 'CDK8', directed: 'false', weight: 0.9768540000000001} },
+{ data: { source: 'MED23', target: 'MED1', directed: 'false', weight: 0.562671} },
+{ data: { source: 'MED23', target: 'SURB7', directed: 'false', weight: 0.472159} },
+{ data: { source: 'MED23', target: 'CRSP9', directed: 'false', weight: 0.407744} },
+{ data: { source: 'MED23', target: 'CCNC', directed: 'false', weight: 0.34409} },
+{ data: { source: 'MED23', target: 'MED12', directed: 'false', weight: 0.0973643} },
+{ data: { source: 'MED23', target: 'THRAP1', directed: 'false', weight: 0.0506374} },
+{ data: { source: 'MED23', target: 'MED16', directed: 'false', weight: 0.0420449} },
+{ data: { source: 'MED23', target: 'TRFP', directed: 'false', weight: 0.038268199999999995} },
+{ data: { source: 'MED23', target: 'MED6', directed: 'false', weight: 0.036138300000000005} },
+{ data: { source: 'MED23', target: 'MED17', directed: 'false', weight: 0.0314266} },
+{ data: { source: 'MED16', target: 'MED14', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'MED16', target: 'THRAP1', directed: 'false', weight: 0.9999809999999999} },
+{ data: { source: 'MED16', target: 'MED17', directed: 'false', weight: 0.9999450000000001} },
+{ data: { source: 'MED16', target: 'MED6', directed: 'false', weight: 0.9997889999999999} },
+{ data: { source: 'MED16', target: 'MED1', directed: 'false', weight: 0.997924} },
+{ data: { source: 'MED16', target: 'MED24', directed: 'false', weight: 0.997656} },
+{ data: { source: 'MED16', target: 'MED12', directed: 'false', weight: 0.93919} },
+{ data: { source: 'MED16', target: 'CDK8', directed: 'false', weight: 0.8996280000000001} },
+{ data: { source: 'MED16', target: 'SURB7', directed: 'false', weight: 0.66708} },
+{ data: { source: 'MED16', target: 'CCNC', directed: 'false', weight: 0.223396} },
+{ data: { source: 'MED16', target: 'CRSP9', directed: 'false', weight: 0.0656197} },
+{ data: { source: 'MED16', target: 'TRFP', directed: 'false', weight: 0.0343107} },
+{ data: { source: 'TRFP', target: 'MED6', directed: 'false', weight: 0.999986} },
+{ data: { source: 'TRFP', target: 'MED24', directed: 'false', weight: 0.999958} },
+{ data: { source: 'TRFP', target: 'MED1', directed: 'false', weight: 0.9991760000000001} },
+{ data: { source: 'TRFP', target: 'MED17', directed: 'false', weight: 0.9984799999999999} },
+{ data: { source: 'TRFP', target: 'MED14', directed: 'false', weight: 0.9956959999999999} },
+{ data: { source: 'TRFP', target: 'CRSP9', directed: 'false', weight: 0.766238} },
+{ data: { source: 'TRFP', target: 'SURB7', directed: 'false', weight: 0.608291} },
+{ data: { source: 'TRFP', target: 'MED12', directed: 'false', weight: 0.408481} },
+{ data: { source: 'TRFP', target: 'CDK8', directed: 'false', weight: 0.272208} },
+{ data: { source: 'TRFP', target: 'CCNC', directed: 'false', weight: 0.230952} },
+{ data: { source: 'TRFP', target: 'THRAP1', directed: 'false', weight: 0.045036099999999996} },
+{ data: { source: 'SURB7', target: 'CRSP9', directed: 'false', weight: 0.9821620000000001} },
+{ data: { source: 'SURB7', target: 'MED12', directed: 'false', weight: 0.975514} },
+{ data: { source: 'SURB7', target: 'CDK8', directed: 'false', weight: 0.9591770000000001} },
+{ data: { source: 'SURB7', target: 'MED14', directed: 'false', weight: 0.95257} },
+{ data: { source: 'SURB7', target: 'THRAP1', directed: 'false', weight: 0.869917} },
+{ data: { source: 'SURB7', target: 'MED6', directed: 'false', weight: 0.8659110000000001} },
+{ data: { source: 'SURB7', target: 'MED24', directed: 'false', weight: 0.865776} },
+{ data: { source: 'SURB7', target: 'MED17', directed: 'false', weight: 0.8387049999999999} },
+{ data: { source: 'SURB7', target: 'MED1', directed: 'false', weight: 0.466149} },
+{ data: { source: 'SURB7', target: 'CCNC', directed: 'false', weight: 0.192065} },
+{ data: { source: 'MED17', target: 'MED6', directed: 'false', weight: 0.999999} },
+{ data: { source: 'MED17', target: 'MED1', directed: 'false', weight: 0.99997} },
+{ data: { source: 'MED17', target: 'THRAP1', directed: 'false', weight: 0.999965} },
+{ data: { source: 'MED17', target: 'MED14', directed: 'false', weight: 0.9998959999999999} },
+{ data: { source: 'MED17', target: 'MED24', directed: 'false', weight: 0.9998379999999999} },
+{ data: { source: 'MED17', target: 'MED12', directed: 'false', weight: 0.987559} },
+{ data: { source: 'MED17', target: 'CDK8', directed: 'false', weight: 0.905085} },
+{ data: { source: 'MED17', target: 'CRSP9', directed: 'false', weight: 0.560958} },
+{ data: { source: 'MED17', target: 'CCNC', directed: 'false', weight: 0.363205} },
+{ data: { source: 'MED14', target: 'THRAP1', directed: 'false', weight: 0.999964} },
+{ data: { source: 'MED14', target: 'MED6', directed: 'false', weight: 0.99992} },
+{ data: { source: 'MED14', target: 'MED24', directed: 'false', weight: 0.9997940000000001} },
+{ data: { source: 'MED14', target: 'MED1', directed: 'false', weight: 0.99569} },
+{ data: { source: 'MED14', target: 'MED12', directed: 'false', weight: 0.9955940000000001} },
+{ data: { source: 'MED14', target: 'CDK8', directed: 'false', weight: 0.987043} },
+{ data: { source: 'MED14', target: 'CRSP9', directed: 'false', weight: 0.858419} },
+{ data: { source: 'MED14', target: 'CCNC', directed: 'false', weight: 0.719906} },
+{ data: { source: 'MED24', target: 'MED6', directed: 'false', weight: 0.9998459999999999} },
+{ data: { source: 'MED24', target: 'MED1', directed: 'false', weight: 0.9997450000000001} },
+{ data: { source: 'MED24', target: 'THRAP1', directed: 'false', weight: 0.9996799999999999} },
+{ data: { source: 'MED24', target: 'CDK8', directed: 'false', weight: 0.9986309999999999} },
+{ data: { source: 'MED24', target: 'CCNC', directed: 'false', weight: 0.975663} },
+{ data: { source: 'MED24', target: 'CRSP9', directed: 'false', weight: 0.5627409999999999} },
+{ data: { source: 'MED24', target: 'MED12', directed: 'false', weight: 0.207148} },
+{ data: { source: 'MED6', target: 'MED1', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'MED6', target: 'THRAP1', directed: 'false', weight: 0.999933} },
+{ data: { source: 'MED6', target: 'CDK8', directed: 'false', weight: 0.9971780000000001} },
+{ data: { source: 'MED6', target: 'MED12', directed: 'false', weight: 0.98854} },
+{ data: { source: 'MED6', target: 'CRSP9', directed: 'false', weight: 0.938544} },
+{ data: { source: 'MED6', target: 'CCNC', directed: 'false', weight: 0.908488} },
+{ data: { source: 'MED1', target: 'THRAP1', directed: 'false', weight: 0.999909} },
+{ data: { source: 'MED1', target: 'MED12', directed: 'false', weight: 0.9993569999999999} },
+{ data: { source: 'MED1', target: 'CDK8', directed: 'false', weight: 0.986936} },
+{ data: { source: 'MED1', target: 'CRSP9', directed: 'false', weight: 0.9854790000000001} },
+{ data: { source: 'MED1', target: 'CCNC', directed: 'false', weight: 0.774524} },
+{ data: { source: 'THRAP1', target: 'MED12', directed: 'false', weight: 0.99984} },
+{ data: { source: 'THRAP1', target: 'CDK8', directed: 'false', weight: 0.9990610000000001} },
+{ data: { source: 'THRAP1', target: 'CCNC', directed: 'false', weight: 0.938959} },
+{ data: { source: 'THRAP1', target: 'CRSP9', directed: 'false', weight: 0.882165} },
+{ data: { source: 'MED12', target: 'CDK8', directed: 'false', weight: 0.98103} },
+{ data: { source: 'MED12', target: 'CRSP9', directed: 'false', weight: 0.975008} },
+{ data: { source: 'MED12', target: 'CCNC', directed: 'false', weight: 0.677642} },
+{ data: { source: 'CRSP9', target: 'CCNC', directed: 'false', weight: 0.07768639999999999} },
+{ data: { source: 'CRSP9', target: 'CDK8', directed: 'false', weight: 0.069758} },
+{ data: { source: 'CCNC', target: 'CDK8', directed: 'false', weight: 0.999915} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    ESR2-TRAP/Mediator coactivator complex	<br> Unweighted Density = 0.69
+    </section>
+    </body>
+    </html>
+    

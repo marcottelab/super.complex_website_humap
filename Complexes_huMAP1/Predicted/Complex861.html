@@ -1,0 +1,127 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> FLYWCH1 CDK5RAP3 UFL1 UFM1 ABHD6 DDRGK1 UBA5 GCSH</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex862.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DDRGK1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96HY6" }},
+{data: { id: 'ABHD6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BV23" }},
+{data: { id: 'UBA5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9GZZ9" }},
+{data: { id: 'GCSH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P23434" }},
+{data: { id: 'UFM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61960" }},
+{data: { id: 'CDK5RAP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96JB5" }},
+{data: { id: 'FLYWCH1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q4VC44" }},
+{data: { id: 'UFL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94874" }}], 
+ edges: [{ data: { source: 'DDRGK1', target: 'UFL1', directed: 'false', weight: 0.9930899999999999} },
+{ data: { source: 'DDRGK1', target: 'CDK5RAP3', directed: 'false', weight: 0.967009} },
+{ data: { source: 'DDRGK1', target: 'UFM1', directed: 'false', weight: 0.494576} },
+{ data: { source: 'DDRGK1', target: 'ABHD6', directed: 'false', weight: 0.165074} },
+{ data: { source: 'DDRGK1', target: 'FLYWCH1', directed: 'false', weight: 0.11585699999999999} },
+{ data: { source: 'UFL1', target: 'CDK5RAP3', directed: 'false', weight: 0.9656450000000001} },
+{ data: { source: 'UFL1', target: 'UFM1', directed: 'false', weight: 0.8839290000000001} },
+{ data: { source: 'UFL1', target: 'ABHD6', directed: 'false', weight: 0.69462} },
+{ data: { source: 'UFL1', target: 'FLYWCH1', directed: 'false', weight: 0.371052} },
+{ data: { source: 'FLYWCH1', target: 'ABHD6', directed: 'false', weight: 0.11585699999999999} },
+{ data: { source: 'FLYWCH1', target: 'UFM1', directed: 'false', weight: 0.100579} },
+{ data: { source: 'CDK5RAP3', target: 'GCSH', directed: 'false', weight: 0.45086400000000004} },
+{ data: { source: 'CDK5RAP3', target: 'UFM1', directed: 'false', weight: 0.285983} },
+{ data: { source: 'CDK5RAP3', target: 'ABHD6', directed: 'false', weight: 0.165074} },
+{ data: { source: 'ABHD6', target: 'UFM1', directed: 'false', weight: 0.144297} },
+{ data: { source: 'UBA5', target: 'UFM1', directed: 'false', weight: 0.981557} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    FLYWCH1 CDK5RAP3 UFL1 UFM1 ABHD6 DDRGK1 UBA5 GCSH<br> Complex Score (from Super.Complex) = 0.55567<br> Unweighted Density = 0.57
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,175 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 Anaphase-promoting complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex8.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DKFZp762H177', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q69YV3" }},
+{data: { id: 'CDC16', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13042" }},
+{data: { id: 'ANAPC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UJX6" }},
+{data: { id: 'CDC27', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30260" }},
+{data: { id: 'ANAPC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H1A4" }},
+{data: { id: 'ANAPC5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UJX4" }},
+{data: { id: 'ANAPC13', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9BS18" }},
+{data: { id: 'CDC26', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NHZ8" }},
+{data: { id: 'C11orf51', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P60006" }},
+{data: { id: 'CDC23', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UJX2" }},
+{data: { id: 'ANAPC4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UJX5" }},
+{data: { id: 'C10orf104', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96DE5" }}], 
+ edges: [{ data: { source: 'CDC26', target: 'CDC16', directed: 'false', weight: 0.9998600000000001} },
+{ data: { source: 'CDC26', target: 'ANAPC13', directed: 'false', weight: 0.9990610000000001} },
+{ data: { source: 'CDC26', target: 'CDC27', directed: 'false', weight: 0.9872489999999999} },
+{ data: { source: 'CDC26', target: 'C10orf104', directed: 'false', weight: 0.9199860000000001} },
+{ data: { source: 'CDC26', target: 'ANAPC1', directed: 'false', weight: 0.8690180000000001} },
+{ data: { source: 'CDC26', target: 'ANAPC4', directed: 'false', weight: 0.60097} },
+{ data: { source: 'CDC26', target: 'ANAPC2', directed: 'false', weight: 0.521696} },
+{ data: { source: 'CDC26', target: 'CDC23', directed: 'false', weight: 0.353026} },
+{ data: { source: 'CDC26', target: 'ANAPC5', directed: 'false', weight: 0.21059} },
+{ data: { source: 'CDC26', target: 'DKFZp762H177', directed: 'false', weight: 0.15951600000000002} },
+{ data: { source: 'CDC26', target: 'C11orf51', directed: 'false', weight: 0.12159400000000001} },
+{ data: { source: 'ANAPC2', target: 'CDC16', directed: 'false', weight: 0.999873} },
+{ data: { source: 'ANAPC2', target: 'ANAPC4', directed: 'false', weight: 0.9978790000000001} },
+{ data: { source: 'ANAPC2', target: 'ANAPC13', directed: 'false', weight: 0.994075} },
+{ data: { source: 'ANAPC2', target: 'ANAPC1', directed: 'false', weight: 0.648705} },
+{ data: { source: 'ANAPC2', target: 'CDC23', directed: 'false', weight: 0.481488} },
+{ data: { source: 'ANAPC2', target: 'CDC27', directed: 'false', weight: 0.41700699999999996} },
+{ data: { source: 'ANAPC2', target: 'DKFZp762H177', directed: 'false', weight: 0.413117} },
+{ data: { source: 'ANAPC2', target: 'C10orf104', directed: 'false', weight: 0.401748} },
+{ data: { source: 'ANAPC2', target: 'ANAPC5', directed: 'false', weight: 0.354758} },
+{ data: { source: 'ANAPC2', target: 'C11orf51', directed: 'false', weight: 0.198709} },
+{ data: { source: 'CDC16', target: 'ANAPC4', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC16', target: 'ANAPC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC16', target: 'CDC23', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC16', target: 'CDC27', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC16', target: 'ANAPC5', directed: 'false', weight: 0.999983} },
+{ data: { source: 'CDC16', target: 'ANAPC13', directed: 'false', weight: 0.999849} },
+{ data: { source: 'CDC16', target: 'DKFZp762H177', directed: 'false', weight: 0.998707} },
+{ data: { source: 'CDC16', target: 'C10orf104', directed: 'false', weight: 0.996258} },
+{ data: { source: 'CDC16', target: 'C11orf51', directed: 'false', weight: 0.342524} },
+{ data: { source: 'ANAPC5', target: 'ANAPC1', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'ANAPC5', target: 'C10orf104', directed: 'false', weight: 0.999743} },
+{ data: { source: 'ANAPC5', target: 'ANAPC4', directed: 'false', weight: 0.9985850000000001} },
+{ data: { source: 'ANAPC5', target: 'ANAPC13', directed: 'false', weight: 0.993201} },
+{ data: { source: 'ANAPC5', target: 'CDC23', directed: 'false', weight: 0.733313} },
+{ data: { source: 'ANAPC5', target: 'CDC27', directed: 'false', weight: 0.111148} },
+{ data: { source: 'ANAPC5', target: 'C11orf51', directed: 'false', weight: 0.11096400000000001} },
+{ data: { source: 'ANAPC1', target: 'CDC27', directed: 'false', weight: 1.0} },
+{ data: { source: 'ANAPC1', target: 'C10orf104', directed: 'false', weight: 0.999976} },
+{ data: { source: 'ANAPC1', target: 'ANAPC4', directed: 'false', weight: 0.999877} },
+{ data: { source: 'ANAPC1', target: 'DKFZp762H177', directed: 'false', weight: 0.987558} },
+{ data: { source: 'ANAPC1', target: 'ANAPC13', directed: 'false', weight: 0.984483} },
+{ data: { source: 'ANAPC1', target: 'CDC23', directed: 'false', weight: 0.763652} },
+{ data: { source: 'ANAPC1', target: 'C11orf51', directed: 'false', weight: 0.0881296} },
+{ data: { source: 'CDC23', target: 'CDC27', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC23', target: 'C10orf104', directed: 'false', weight: 0.999999} },
+{ data: { source: 'CDC23', target: 'ANAPC4', directed: 'false', weight: 0.9995809999999999} },
+{ data: { source: 'CDC23', target: 'DKFZp762H177', directed: 'false', weight: 0.9995799999999999} },
+{ data: { source: 'CDC23', target: 'ANAPC13', directed: 'false', weight: 0.997876} },
+{ data: { source: 'CDC23', target: 'C11orf51', directed: 'false', weight: 0.15920299999999998} },
+{ data: { source: 'ANAPC13', target: 'CDC27', directed: 'false', weight: 0.9869950000000001} },
+{ data: { source: 'ANAPC13', target: 'C10orf104', directed: 'false', weight: 0.966475} },
+{ data: { source: 'ANAPC13', target: 'DKFZp762H177', directed: 'false', weight: 0.965231} },
+{ data: { source: 'ANAPC13', target: 'ANAPC4', directed: 'false', weight: 0.965182} },
+{ data: { source: 'ANAPC13', target: 'C11orf51', directed: 'false', weight: 0.252979} },
+{ data: { source: 'ANAPC4', target: 'CDC27', directed: 'false', weight: 0.9997959999999999} },
+{ data: { source: 'ANAPC4', target: 'C10orf104', directed: 'false', weight: 0.999398} },
+{ data: { source: 'ANAPC4', target: 'DKFZp762H177', directed: 'false', weight: 0.9886280000000001} },
+{ data: { source: 'ANAPC4', target: 'C11orf51', directed: 'false', weight: 0.0607515} },
+{ data: { source: 'CDC27', target: 'C10orf104', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'CDC27', target: 'DKFZp762H177', directed: 'false', weight: 0.9974200000000001} },
+{ data: { source: 'CDC27', target: 'C11orf51', directed: 'false', weight: 0.0795416} },
+{ data: { source: 'C11orf51', target: 'C10orf104', directed: 'false', weight: 0.21224} },
+{ data: { source: 'C11orf51', target: 'DKFZp762H177', directed: 'false', weight: 0.0996033} },
+{ data: { source: 'C10orf104', target: 'DKFZp762H177', directed: 'false', weight: 0.9961709999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 Anaphase-promoting complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.98
+    </section>
+    </body>
+    </html>
+    

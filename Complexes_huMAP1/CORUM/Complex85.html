@@ -1,0 +1,165 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.9 Respiratory chain complex I (lambda subunit) mitochondrial</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex86.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NDUFV3', score: 5, href: "https://www.uniprot.org/uniprot/P56181" }},
+{data: { id: 'NDUFA5', score: 5, href: "https://www.uniprot.org/uniprot/Q16718" }},
+{data: { id: 'NDUFV1', score: 5, href: "https://www.uniprot.org/uniprot/P49821" }},
+{data: { id: 'NDUFS7', score: 5, href: "https://www.uniprot.org/uniprot/O75251" }},
+{data: { id: 'NDUFS6', score: 4, href: "https://www.uniprot.org/uniprot/O75380" }},
+{data: { id: 'NDUFS8', score: 5, href: "https://www.uniprot.org/uniprot/O00217" }},
+{data: { id: 'NDUFS3', score: 5, href: "https://www.uniprot.org/uniprot/O75489" }},
+{data: { id: 'NDUFA2', score: 5, href: "https://www.uniprot.org/uniprot/O43678" }},
+{data: { id: 'NDUFA7', score: 5, href: "https://www.uniprot.org/uniprot/O95182" }},
+{data: { id: 'NDUFA12', score: 5, href: "https://www.uniprot.org/uniprot/Q9UI09" }},
+{data: { id: 'NDUFA13', score: 5, href: "https://www.uniprot.org/uniprot/Q9P0J0" }},
+{data: { id: 'NDUFS4', score: 5, href: "https://www.uniprot.org/uniprot/O43181" }},
+{data: { id: 'NDUFS1', score: 5, href: "https://www.uniprot.org/uniprot/P28331" }},
+{data: { id: 'NDUFV2', score: 5, href: "https://www.uniprot.org/uniprot/P19404" }},
+{data: { id: 'NDUFS2', score: 5, href: "https://www.uniprot.org/uniprot/O75306" }}], 
+ edges: [{ data: { source: 'NDUFV3', target: 'NDUFS4', directed: 'false', weight: 0.6375390000000001} },
+{ data: { source: 'NDUFV3', target: 'NDUFS3', directed: 'false', weight: 0.605604} },
+{ data: { source: 'NDUFV3', target: 'NDUFA13', directed: 'false', weight: 0.238157} },
+{ data: { source: 'NDUFV3', target: 'NDUFA5', directed: 'false', weight: 0.238157} },
+{ data: { source: 'NDUFV3', target: 'NDUFS7', directed: 'false', weight: 0.198303} },
+{ data: { source: 'NDUFV3', target: 'NDUFS8', directed: 'false', weight: 0.175861} },
+{ data: { source: 'NDUFV3', target: 'NDUFV1', directed: 'false', weight: 0.175861} },
+{ data: { source: 'NDUFV3', target: 'NDUFS2', directed: 'false', weight: 0.133243} },
+{ data: { source: 'NDUFA5', target: 'NDUFS3', directed: 'false', weight: 0.8686200000000001} },
+{ data: { source: 'NDUFA5', target: 'NDUFS4', directed: 'false', weight: 0.514948} },
+{ data: { source: 'NDUFA5', target: 'NDUFA12', directed: 'false', weight: 0.5} },
+{ data: { source: 'NDUFA5', target: 'NDUFA13', directed: 'false', weight: 0.46778800000000004} },
+{ data: { source: 'NDUFA5', target: 'NDUFS8', directed: 'false', weight: 0.448564} },
+{ data: { source: 'NDUFA5', target: 'NDUFV1', directed: 'false', weight: 0.43126000000000003} },
+{ data: { source: 'NDUFA5', target: 'NDUFS2', directed: 'false', weight: 0.43021800000000004} },
+{ data: { source: 'NDUFA5', target: 'NDUFA7', directed: 'false', weight: 0.344229} },
+{ data: { source: 'NDUFA5', target: 'NDUFS7', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'NDUFS7', target: 'NDUFS3', directed: 'false', weight: 0.701616} },
+{ data: { source: 'NDUFS7', target: 'NDUFS8', directed: 'false', weight: 0.463714} },
+{ data: { source: 'NDUFS7', target: 'NDUFS2', directed: 'false', weight: 0.329598} },
+{ data: { source: 'NDUFS7', target: 'NDUFA13', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'NDUFS7', target: 'NDUFS4', directed: 'false', weight: 0.216185} },
+{ data: { source: 'NDUFS7', target: 'NDUFV1', directed: 'false', weight: 0.216185} },
+{ data: { source: 'NDUFS6', target: 'NDUFV2', directed: 'false', weight: 0.9284399999999999} },
+{ data: { source: 'NDUFS6', target: 'NDUFS1', directed: 'false', weight: 0.8113640000000001} },
+{ data: { source: 'NDUFS6', target: 'NDUFA2', directed: 'false', weight: 0.7403420000000001} },
+{ data: { source: 'NDUFS6', target: 'NDUFA7', directed: 'false', weight: 0.713267} },
+{ data: { source: 'NDUFS6', target: 'NDUFA12', directed: 'false', weight: 0.70418} },
+{ data: { source: 'NDUFS6', target: 'NDUFV1', directed: 'false', weight: 0.654465} },
+{ data: { source: 'NDUFS8', target: 'NDUFS3', directed: 'false', weight: 0.9926719999999999} },
+{ data: { source: 'NDUFS8', target: 'NDUFS2', directed: 'false', weight: 0.46736099999999997} },
+{ data: { source: 'NDUFS8', target: 'NDUFS4', directed: 'false', weight: 0.35441300000000003} },
+{ data: { source: 'NDUFS8', target: 'NDUFA13', directed: 'false', weight: 0.313178} },
+{ data: { source: 'NDUFS8', target: 'NDUFV1', directed: 'false', weight: 0.28234000000000004} },
+{ data: { source: 'NDUFS3', target: 'NDUFA12', directed: 'false', weight: 0.963023} },
+{ data: { source: 'NDUFS3', target: 'NDUFS4', directed: 'false', weight: 0.9565030000000001} },
+{ data: { source: 'NDUFS3', target: 'NDUFA7', directed: 'false', weight: 0.9161299999999999} },
+{ data: { source: 'NDUFS3', target: 'NDUFS2', directed: 'false', weight: 0.902331} },
+{ data: { source: 'NDUFS3', target: 'NDUFV1', directed: 'false', weight: 0.807696} },
+{ data: { source: 'NDUFS3', target: 'NDUFA13', directed: 'false', weight: 0.606688} },
+{ data: { source: 'NDUFA2', target: 'NDUFA12', directed: 'false', weight: 0.8265549999999999} },
+{ data: { source: 'NDUFA2', target: 'NDUFA7', directed: 'false', weight: 0.819256} },
+{ data: { source: 'NDUFA2', target: 'NDUFS1', directed: 'false', weight: 0.6479520000000001} },
+{ data: { source: 'NDUFA2', target: 'NDUFV2', directed: 'false', weight: 0.132967} },
+{ data: { source: 'NDUFA7', target: 'NDUFA12', directed: 'false', weight: 0.9366610000000001} },
+{ data: { source: 'NDUFA7', target: 'NDUFS1', directed: 'false', weight: 0.9322870000000001} },
+{ data: { source: 'NDUFA7', target: 'NDUFV1', directed: 'false', weight: 0.867618} },
+{ data: { source: 'NDUFA7', target: 'NDUFV2', directed: 'false', weight: 0.824261} },
+{ data: { source: 'NDUFA7', target: 'NDUFS4', directed: 'false', weight: 0.46353999999999995} },
+{ data: { source: 'NDUFA7', target: 'NDUFS2', directed: 'false', weight: 0.202292} },
+{ data: { source: 'NDUFA13', target: 'NDUFS4', directed: 'false', weight: 0.37025} },
+{ data: { source: 'NDUFA13', target: 'NDUFV1', directed: 'false', weight: 0.298598} },
+{ data: { source: 'NDUFA13', target: 'NDUFS2', directed: 'false', weight: 0.297782} },
+{ data: { source: 'NDUFA12', target: 'NDUFS1', directed: 'false', weight: 0.866136} },
+{ data: { source: 'NDUFA12', target: 'NDUFV1', directed: 'false', weight: 0.864432} },
+{ data: { source: 'NDUFA12', target: 'NDUFV2', directed: 'false', weight: 0.700807} },
+{ data: { source: 'NDUFA12', target: 'NDUFS4', directed: 'false', weight: 0.406883} },
+{ data: { source: 'NDUFA12', target: 'NDUFS2', directed: 'false', weight: 0.32921} },
+{ data: { source: 'NDUFV1', target: 'NDUFV2', directed: 'false', weight: 0.9885870000000001} },
+{ data: { source: 'NDUFV1', target: 'NDUFS2', directed: 'false', weight: 0.646989} },
+{ data: { source: 'NDUFV1', target: 'NDUFS4', directed: 'false', weight: 0.175311} },
+{ data: { source: 'NDUFS4', target: 'NDUFS2', directed: 'false', weight: 0.337502} },
+{ data: { source: 'NDUFS1', target: 'NDUFV2', directed: 'false', weight: 0.21909} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.9 Respiratory chain complex I (lambda subunit) mitochondrial	<br> Unweighted Density = 0.60
+    </section>
+    </body>
+    </html>
+    

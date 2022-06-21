@@ -1,0 +1,136 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 KAT2A-Oxoglutarate dehydrogenase complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex100.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PDK3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15120" }},
+{data: { id: 'DLST', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P36957" }},
+{data: { id: 'DLD', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09622" }},
+{data: { id: 'PDHX', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00330" }},
+{data: { id: 'PDHA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P08559" }},
+{data: { id: 'STAT5B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P51692" }},
+{data: { id: 'PDHB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P11177" }},
+{data: { id: 'DLAT', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P10515" }},
+{data: { id: 'STAT5A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P42229" }}], 
+ edges: [{ data: { source: 'DLD', target: 'DLAT', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'DLD', target: 'DLST', directed: 'false', weight: 0.999712} },
+{ data: { source: 'DLD', target: 'PDHA1', directed: 'false', weight: 0.9741879999999999} },
+{ data: { source: 'DLD', target: 'PDHX', directed: 'false', weight: 0.9089430000000001} },
+{ data: { source: 'DLD', target: 'PDHB', directed: 'false', weight: 0.0423284} },
+{ data: { source: 'DLAT', target: 'PDHB', directed: 'false', weight: 0.999984} },
+{ data: { source: 'DLAT', target: 'DLST', directed: 'false', weight: 0.9998790000000001} },
+{ data: { source: 'DLAT', target: 'PDHA1', directed: 'false', weight: 0.148748} },
+{ data: { source: 'DLAT', target: 'PDK3', directed: 'false', weight: 0.0895622} },
+{ data: { source: 'DLAT', target: 'STAT5A', directed: 'false', weight: 0.0796137} },
+{ data: { source: 'DLAT', target: 'PDHX', directed: 'false', weight: 0.0618201} },
+{ data: { source: 'PDHX', target: 'PDHB', directed: 'false', weight: 0.5314939999999999} },
+{ data: { source: 'PDHX', target: 'STAT5A', directed: 'false', weight: 0.16597} },
+{ data: { source: 'PDHX', target: 'PDK3', directed: 'false', weight: 0.14517} },
+{ data: { source: 'PDHX', target: 'STAT5B', directed: 'false', weight: 0.0723969} },
+{ data: { source: 'PDHX', target: 'PDHA1', directed: 'false', weight: 0.0542606} },
+{ data: { source: 'STAT5A', target: 'STAT5B', directed: 'false', weight: 1.0} },
+{ data: { source: 'STAT5A', target: 'PDHA1', directed: 'false', weight: 0.336925} },
+{ data: { source: 'STAT5A', target: 'PDHB', directed: 'false', weight: 0.304232} },
+{ data: { source: 'PDHA1', target: 'PDHB', directed: 'false', weight: 1.0} },
+{ data: { source: 'PDHA1', target: 'PDK3', directed: 'false', weight: 0.16513699999999998} },
+{ data: { source: 'PDHA1', target: 'STAT5B', directed: 'false', weight: 0.0411414} },
+{ data: { source: 'STAT5B', target: 'PDHB', directed: 'false', weight: 0.07097189999999999} },
+{ data: { source: 'PDK3', target: 'PDHB', directed: 'false', weight: 0.735757} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 KAT2A-Oxoglutarate dehydrogenase complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

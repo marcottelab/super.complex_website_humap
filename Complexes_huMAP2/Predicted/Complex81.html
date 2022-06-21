@@ -1,0 +1,143 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 CF IIAm complex (Cleavage factor IIAm complex)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex82.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'LUC7L2', score: 5.0, type: '', href: "https://www.uniprot.org/uniprot/Q9Y383" }},
+{data: { id: 'U2AF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P26368" }},
+{data: { id: 'DDX46', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7L014" }},
+{data: { id: 'LUC7L3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95232" }},
+{data: { id: 'DKFZp686A11192', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q6N037" }},
+{data: { id: 'U2AF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q01081" }},
+{data: { id: 'SREK1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WXA9" }},
+{data: { id: 'LUC7L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NQ29" }},
+{data: { id: 'SRSF11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q05519" }},
+{data: { id: 'PRPF4B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13523" }}], 
+ edges: [{ data: { source: 'LUC7L2', target: 'LUC7L3', directed: 'false', weight: 0.238254} },
+{ data: { source: 'LUC7L2', target: 'U2AF2', directed: 'false', weight: 0.136229} },
+{ data: { source: 'LUC7L2', target: 'DKFZp686A11192', directed: 'false', weight: 0.11528499999999998} },
+{ data: { source: 'SREK1', target: 'SRSF11', directed: 'false', weight: 0.143999} },
+{ data: { source: 'SREK1', target: 'DKFZp686A11192', directed: 'false', weight: 0.139828} },
+{ data: { source: 'SREK1', target: 'DDX46', directed: 'false', weight: 0.0889702} },
+{ data: { source: 'SREK1', target: 'PRPF4B', directed: 'false', weight: 0.050804699999999994} },
+{ data: { source: 'SREK1', target: 'LUC7L3', directed: 'false', weight: 0.0224699} },
+{ data: { source: 'SRSF11', target: 'DKFZp686A11192', directed: 'false', weight: 0.898826} },
+{ data: { source: 'SRSF11', target: 'U2AF2', directed: 'false', weight: 0.813573} },
+{ data: { source: 'SRSF11', target: 'LUC7L', directed: 'false', weight: 0.351763} },
+{ data: { source: 'SRSF11', target: 'LUC7L3', directed: 'false', weight: 0.223119} },
+{ data: { source: 'SRSF11', target: 'DDX46', directed: 'false', weight: 0.0867857} },
+{ data: { source: 'SRSF11', target: 'PRPF4B', directed: 'false', weight: 0.0664549} },
+{ data: { source: 'LUC7L3', target: 'DKFZp686A11192', directed: 'false', weight: 0.99925} },
+{ data: { source: 'LUC7L3', target: 'U2AF2', directed: 'false', weight: 0.7724989999999999} },
+{ data: { source: 'LUC7L3', target: 'LUC7L', directed: 'false', weight: 0.676452} },
+{ data: { source: 'LUC7L3', target: 'DDX46', directed: 'false', weight: 0.0742173} },
+{ data: { source: 'LUC7L3', target: 'PRPF4B', directed: 'false', weight: 0.058672699999999994} },
+{ data: { source: 'LUC7L3', target: 'U2AF1', directed: 'false', weight: 0.041834300000000005} },
+{ data: { source: 'U2AF1', target: 'U2AF2', directed: 'false', weight: 0.99526} },
+{ data: { source: 'U2AF1', target: 'DKFZp686A11192', directed: 'false', weight: 0.0411481} },
+{ data: { source: 'PRPF4B', target: 'LUC7L', directed: 'false', weight: 0.127324} },
+{ data: { source: 'PRPF4B', target: 'U2AF2', directed: 'false', weight: 0.0693778} },
+{ data: { source: 'PRPF4B', target: 'DKFZp686A11192', directed: 'false', weight: 0.0206962} },
+{ data: { source: 'DDX46', target: 'U2AF2', directed: 'false', weight: 0.607912} },
+{ data: { source: 'DDX46', target: 'DKFZp686A11192', directed: 'false', weight: 0.097548} },
+{ data: { source: 'DKFZp686A11192', target: 'U2AF2', directed: 'false', weight: 0.9997780000000001} },
+{ data: { source: 'DKFZp686A11192', target: 'LUC7L', directed: 'false', weight: 0.163528} },
+{ data: { source: 'U2AF2', target: 'LUC7L', directed: 'false', weight: 0.293163} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 CF IIAm complex (Cleavage factor IIAm complex)<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

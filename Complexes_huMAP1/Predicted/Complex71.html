@@ -1,0 +1,123 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 90850 STK26 STK25 KIF20A C4orf19 PDCD10 STK24</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex72.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'C4orf19', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q8IY42" }},
+{data: { id: 'STK25', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00506" }},
+{data: { id: 'ZNF598', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86UK7" }},
+{data: { id: 'STK26', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P289" }},
+{data: { id: 'PDCD10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BUL8" }},
+{data: { id: 'KIF20A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95235" }},
+{data: { id: 'STK24', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y6E0" }}], 
+ edges: [{ data: { source: 'KIF20A', target: 'STK25', directed: 'false', weight: 0.41368900000000003} },
+{ data: { source: 'KIF20A', target: 'PDCD10', directed: 'false', weight: 0.140692} },
+{ data: { source: 'KIF20A', target: 'STK24', directed: 'false', weight: 0.133451} },
+{ data: { source: 'KIF20A', target: 'STK26', directed: 'false', weight: 0.11473699999999999} },
+{ data: { source: 'STK24', target: 'PDCD10', directed: 'false', weight: 0.9909020000000001} },
+{ data: { source: 'STK24', target: 'STK25', directed: 'false', weight: 0.980984} },
+{ data: { source: 'STK24', target: 'STK26', directed: 'false', weight: 0.7338899999999999} },
+{ data: { source: 'STK24', target: 'C4orf19', directed: 'false', weight: 0.17586300000000002} },
+{ data: { source: 'STK24', target: 'ZNF598', directed: 'false', weight: 0.133451} },
+{ data: { source: 'ZNF598', target: 'STK25', directed: 'false', weight: 0.49140100000000003} },
+{ data: { source: 'ZNF598', target: 'PDCD10', directed: 'false', weight: 0.140692} },
+{ data: { source: 'ZNF598', target: 'STK26', directed: 'false', weight: 0.11473699999999999} },
+{ data: { source: 'STK26', target: 'STK25', directed: 'false', weight: 0.987663} },
+{ data: { source: 'STK26', target: 'PDCD10', directed: 'false', weight: 0.9726549999999999} },
+{ data: { source: 'STK26', target: 'C4orf19', directed: 'false', weight: 0.0936427} },
+{ data: { source: 'PDCD10', target: 'STK25', directed: 'false', weight: 0.999925} },
+{ data: { source: 'PDCD10', target: 'C4orf19', directed: 'false', weight: 0.737308} },
+{ data: { source: 'C4orf19', target: 'STK25', directed: 'false', weight: 0.507413} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    90850 STK26 STK25 KIF20A C4orf19 PDCD10 STK24<br> Complex Score (from Super.Complex) = 0.81207<br> Unweighted Density = 0.86
+    </section>
+    </body>
+    </html>
+    

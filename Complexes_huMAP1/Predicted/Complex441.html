@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 CERF complex (CECR2-containing remodeling factor complex)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex442.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DEF6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q01524" }},
+{data: { id: 'GRID1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9ULK0" }},
+{data: { id: 'CECR2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BXF3" }},
+{data: { id: 'ANKS1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92625" }},
+{data: { id: 'ARHGAP42', score: 4, type: '', href: "https://www.uniprot.org/uniprot/A6NI28" }}], 
+ edges: [{ data: { source: 'DEF6', target: 'ANKS1A', directed: 'false', weight: 0.9782069999999999} },
+{ data: { source: 'DEF6', target: 'ARHGAP42', directed: 'false', weight: 0.9776360000000001} },
+{ data: { source: 'DEF6', target: 'GRID1', directed: 'false', weight: 0.957851} },
+{ data: { source: 'DEF6', target: 'CECR2', directed: 'false', weight: 0.76331} },
+{ data: { source: 'GRID1', target: 'CECR2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'GRID1', target: 'ANKS1A', directed: 'false', weight: 0.171414} },
+{ data: { source: 'GRID1', target: 'ARHGAP42', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ANKS1A', target: 'CECR2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ANKS1A', target: 'ARHGAP42', directed: 'false', weight: 0.171414} },
+{ data: { source: 'CECR2', target: 'ARHGAP42', directed: 'false', weight: 0.171414} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 CERF complex (CECR2-containing remodeling factor complex)<br> Complex Score (from Super.Complex) = 0.73672<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,129 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> DMAP1-associated complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex448.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ACTL6A', score: 5, href: "https://www.uniprot.org/uniprot/O96019" }},
+{data: { id: 'VPS72', score: 5, href: "https://www.uniprot.org/uniprot/Q15906" }},
+{data: { id: 'SRCAP', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZRS2" }},
+{data: { id: 'EP400', score: 5, href: "https://www.uniprot.org/uniprot/Q96L91" }},
+{data: { id: 'BRD8', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0E9" }},
+{data: { id: 'EPC1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H2F5" }},
+{data: { id: 'DMAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPF5" }},
+{data: { id: 'RUVBL2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y230" }},
+{data: { id: 'RUVBL1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y265" }},
+{data: { id: 'TRRAP', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4A5" }}], 
+ edges: [{ data: { source: 'SRCAP', target: 'RUVBL1', directed: 'false', weight: 0.905482} },
+{ data: { source: 'SRCAP', target: 'RUVBL2', directed: 'false', weight: 0.5946670000000001} },
+{ data: { source: 'TRRAP', target: 'EP400', directed: 'false', weight: 0.973317} },
+{ data: { source: 'TRRAP', target: 'RUVBL1', directed: 'false', weight: 0.958549} },
+{ data: { source: 'TRRAP', target: 'VPS72', directed: 'false', weight: 0.5} },
+{ data: { source: 'TRRAP', target: 'RUVBL2', directed: 'false', weight: 0.494489} },
+{ data: { source: 'TRRAP', target: 'BRD8', directed: 'false', weight: 0.425917} },
+{ data: { source: 'TRRAP', target: 'DMAP1', directed: 'false', weight: 0.302757} },
+{ data: { source: 'TRRAP', target: 'EPC1', directed: 'false', weight: 0.05983580000000001} },
+{ data: { source: 'RUVBL2', target: 'RUVBL1', directed: 'false', weight: 1.0} },
+{ data: { source: 'RUVBL2', target: 'DMAP1', directed: 'false', weight: 0.999157} },
+{ data: { source: 'RUVBL2', target: 'BRD8', directed: 'false', weight: 0.9881049999999999} },
+{ data: { source: 'RUVBL2', target: 'EP400', directed: 'false', weight: 0.9875950000000001} },
+{ data: { source: 'RUVBL2', target: 'VPS72', directed: 'false', weight: 0.9354540000000001} },
+{ data: { source: 'RUVBL2', target: 'EPC1', directed: 'false', weight: 0.6939} },
+{ data: { source: 'RUVBL2', target: 'ACTL6A', directed: 'false', weight: 0.21275700000000003} },
+{ data: { source: 'ACTL6A', target: 'RUVBL1', directed: 'false', weight: 0.125722} },
+{ data: { source: 'ACTL6A', target: 'EP400', directed: 'false', weight: 0.08912510000000001} },
+{ data: { source: 'ACTL6A', target: 'VPS72', directed: 'false', weight: 0.0318543} },
+{ data: { source: 'ACTL6A', target: 'BRD8', directed: 'false', weight: 0.030014999999999997} },
+{ data: { source: 'ACTL6A', target: 'EPC1', directed: 'false', weight: 0.0293224} },
+{ data: { source: 'ACTL6A', target: 'DMAP1', directed: 'false', weight: 0.020116299999999997} },
+{ data: { source: 'EPC1', target: 'RUVBL1', directed: 'false', weight: 0.492778} },
+{ data: { source: 'EPC1', target: 'EP400', directed: 'false', weight: 0.11479500000000001} },
+{ data: { source: 'EPC1', target: 'BRD8', directed: 'false', weight: 0.111527} },
+{ data: { source: 'EPC1', target: 'VPS72', directed: 'false', weight: 0.0774312} },
+{ data: { source: 'EPC1', target: 'DMAP1', directed: 'false', weight: 0.0660809} },
+{ data: { source: 'DMAP1', target: 'VPS72', directed: 'false', weight: 0.999999} },
+{ data: { source: 'DMAP1', target: 'RUVBL1', directed: 'false', weight: 0.9990180000000001} },
+{ data: { source: 'DMAP1', target: 'BRD8', directed: 'false', weight: 0.631458} },
+{ data: { source: 'DMAP1', target: 'EP400', directed: 'false', weight: 0.106342} },
+{ data: { source: 'RUVBL1', target: 'BRD8', directed: 'false', weight: 0.9962780000000001} },
+{ data: { source: 'RUVBL1', target: 'VPS72', directed: 'false', weight: 0.986038} },
+{ data: { source: 'RUVBL1', target: 'EP400', directed: 'false', weight: 0.9659260000000001} },
+{ data: { source: 'BRD8', target: 'EP400', directed: 'false', weight: 0.151825} },
+{ data: { source: 'BRD8', target: 'VPS72', directed: 'false', weight: 0.0984467} },
+{ data: { source: 'VPS72', target: 'EP400', directed: 'false', weight: 0.123189} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    DMAP1-associated complex	<br> Unweighted Density = 0.82
+    </section>
+    </body>
+    </html>
+    

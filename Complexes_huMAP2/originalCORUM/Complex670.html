@@ -1,0 +1,120 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> E2F-6 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex671.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'E2F6', score: 5, href: "https://www.uniprot.org/uniprot/O75461" }},
+{data: { id: '2707', score: 0 }},
+{data: { id: 'MAX', score: 5, href: "https://www.uniprot.org/uniprot/P61244" }},
+{data: { id: 'RING1', score: 5, href: "https://www.uniprot.org/uniprot/Q06587" }},
+{data: { id: 'TFDP1', score: 5, href: "https://www.uniprot.org/uniprot/Q14186" }},
+{data: { id: 'MGA', score: 5, href: "https://www.uniprot.org/uniprot/Q8IWI9" }},
+{data: { id: 'YAF2', score: 5, href: "https://www.uniprot.org/uniprot/Q8IY57" }},
+{data: { id: 'L3MBTL2', score: 5, href: "https://www.uniprot.org/uniprot/Q969R5" }},
+{data: { id: 'EHMT2', score: 5, href: "https://www.uniprot.org/uniprot/Q96KQ7" }},
+{data: { id: 'RNF2', score: 5, href: "https://www.uniprot.org/uniprot/Q99496" }},
+{data: { id: 'PCGF6', score: 5, href: "https://www.uniprot.org/uniprot/Q9BYE7" }},
+{data: { id: 'EHMT1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H9B1" }}], 
+ edges: [{ data: { source: 'MGA', target: 'L3MBTL2', directed: 'false', weight: 0.996419} },
+{ data: { source: 'MGA', target: 'PCGF6', directed: 'false', weight: 0.9881629999999999} },
+{ data: { source: 'MGA', target: 'E2F6', directed: 'false', weight: 0.911974} },
+{ data: { source: 'MGA', target: 'YAF2', directed: 'false', weight: 0.025109299999999998} },
+{ data: { source: 'MGA', target: 'RING1', directed: 'false', weight: 0.0244912} },
+{ data: { source: 'MGA', target: 'RNF2', directed: 'false', weight: 0.020059} },
+{ data: { source: 'RING1', target: 'YAF2', directed: 'false', weight: 0.8915690000000001} },
+{ data: { source: 'RING1', target: 'PCGF6', directed: 'false', weight: 0.706906} },
+{ data: { source: 'RING1', target: 'RNF2', directed: 'false', weight: 0.550963} },
+{ data: { source: 'RING1', target: 'L3MBTL2', directed: 'false', weight: 0.18983699999999998} },
+{ data: { source: 'YAF2', target: 'RNF2', directed: 'false', weight: 0.887898} },
+{ data: { source: 'YAF2', target: 'PCGF6', directed: 'false', weight: 0.09258960000000001} },
+{ data: { source: 'RNF2', target: 'PCGF6', directed: 'false', weight: 0.811601} },
+{ data: { source: 'RNF2', target: 'L3MBTL2', directed: 'false', weight: 0.034037599999999994} },
+{ data: { source: 'EHMT2', target: 'EHMT1', directed: 'false', weight: 0.0280707} },
+{ data: { source: 'PCGF6', target: 'L3MBTL2', directed: 'false', weight: 0.9775360000000001} },
+{ data: { source: 'PCGF6', target: 'E2F6', directed: 'false', weight: 0.7059979999999999} },
+{ data: { source: 'PCGF6', target: 'TFDP1', directed: 'false', weight: 0.256067} },
+{ data: { source: 'L3MBTL2', target: 'E2F6', directed: 'false', weight: 0.9972409999999999} },
+{ data: { source: 'L3MBTL2', target: 'TFDP1', directed: 'false', weight: 0.785149} },
+{ data: { source: 'TFDP1', target: 'E2F6', directed: 'false', weight: 0.557834} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    E2F-6 complex	<br> Unweighted Density = 0.32
+    </section>
+    </body>
+    </html>
+    

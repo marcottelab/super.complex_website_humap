@@ -1,0 +1,126 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Polycomb repressive complex 1 (PRC1, hPRC-H)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex60.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CBX4', score: 5, href: "https://www.uniprot.org/uniprot/O00257" }},
+{data: { id: 'SMARCA5', score: 5, href: "https://www.uniprot.org/uniprot/O60264" }},
+{data: { id: 'HSPA1B', score: 5, href: "https://www.uniprot.org/uniprot/P0DMV9" }},
+{data: { id: 'BMI1', score: 5, href: "https://www.uniprot.org/uniprot/P35226" }},
+{data: { id: 'DKFZp686A1782', score: 1, href: "https://www.uniprot.org/uniprot/Q6N083" }},
+{data: { id: 'RING1', score: 5, href: "https://www.uniprot.org/uniprot/Q06587" }},
+{data: { id: 'CBX2', score: 5, href: "https://www.uniprot.org/uniprot/Q14781" }},
+{data: { id: 'PHC2', score: 5, href: "https://www.uniprot.org/uniprot/Q8IXK0" }},
+{data: { id: 'PHC3', score: 5, href: "https://www.uniprot.org/uniprot/Q8NDX5" }},
+{data: { id: 'SCMH1', score: 5, href: "https://www.uniprot.org/uniprot/Q96GD3" }},
+{data: { id: 'RNF2', score: 5, href: "https://www.uniprot.org/uniprot/Q99496" }},
+{data: { id: 'CBX8', score: 5, href: "https://www.uniprot.org/uniprot/Q9HC52" }}], 
+ edges: [{ data: { source: 'PHC3', target: 'DKFZp686A1782', directed: 'false', weight: 0.364159} },
+{ data: { source: 'PHC3', target: 'CBX8', directed: 'false', weight: 0.122582} },
+{ data: { source: 'PHC3', target: 'RING1', directed: 'false', weight: 0.08253189999999999} },
+{ data: { source: 'PHC3', target: 'RNF2', directed: 'false', weight: 0.07335850000000001} },
+{ data: { source: 'PHC3', target: 'CBX4', directed: 'false', weight: 0.0615231} },
+{ data: { source: 'RING1', target: 'RNF2', directed: 'false', weight: 0.550963} },
+{ data: { source: 'RING1', target: 'DKFZp686A1782', directed: 'false', weight: 0.398976} },
+{ data: { source: 'RING1', target: 'CBX8', directed: 'false', weight: 0.0698877} },
+{ data: { source: 'RING1', target: 'CBX4', directed: 'false', weight: 0.0637698} },
+{ data: { source: 'RING1', target: 'BMI1', directed: 'false', weight: 0.04204430000000001} },
+{ data: { source: 'RING1', target: 'PHC2', directed: 'false', weight: 0.027052499999999997} },
+{ data: { source: 'CBX2', target: 'DKFZp686A1782', directed: 'false', weight: 0.599712} },
+{ data: { source: 'CBX4', target: 'DKFZp686A1782', directed: 'false', weight: 0.863726} },
+{ data: { source: 'CBX4', target: 'CBX8', directed: 'false', weight: 0.0728846} },
+{ data: { source: 'CBX4', target: 'PHC2', directed: 'false', weight: 0.041081099999999995} },
+{ data: { source: 'CBX4', target: 'BMI1', directed: 'false', weight: 0.0265246} },
+{ data: { source: 'CBX4', target: 'RNF2', directed: 'false', weight: 0.023210400000000003} },
+{ data: { source: 'PHC2', target: 'DKFZp686A1782', directed: 'false', weight: 0.20955100000000002} },
+{ data: { source: 'PHC2', target: 'CBX8', directed: 'false', weight: 0.0672097} },
+{ data: { source: 'PHC2', target: 'RNF2', directed: 'false', weight: 0.0517293} },
+{ data: { source: 'SCMH1', target: 'DKFZp686A1782', directed: 'false', weight: 0.9646} },
+{ data: { source: 'RNF2', target: 'DKFZp686A1782', directed: 'false', weight: 0.325966} },
+{ data: { source: 'RNF2', target: 'BMI1', directed: 'false', weight: 0.06752310000000002} },
+{ data: { source: 'RNF2', target: 'CBX8', directed: 'false', weight: 0.036110500000000004} },
+{ data: { source: 'CBX8', target: 'DKFZp686A1782', directed: 'false', weight: 0.9859479999999999} },
+{ data: { source: 'CBX8', target: 'BMI1', directed: 'false', weight: 0.0406684} },
+{ data: { source: 'DKFZp686A1782', target: 'BMI1', directed: 'false', weight: 0.0866298} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Polycomb repressive complex 1 (PRC1, hPRC-H)	<br> Unweighted Density = 0.41
+    </section>
+    </body>
+    </html>
+    

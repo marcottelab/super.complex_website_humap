@@ -1,0 +1,176 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 20S proteasome</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex19.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PSMA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P25787" }},
+{data: { id: 'PSMB7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99436" }},
+{data: { id: 'PSMB2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49721" }},
+{data: { id: 'PSMB9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P28065" }},
+{data: { id: 'PSMA3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P25788" }},
+{data: { id: 'HEL-S-276', score: 4, type: '', href: "https://www.uniprot.org/uniprot/A0A0K0K1K4" }},
+{data: { id: 'PSMB4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P28070" }},
+{data: { id: 'PSMB3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49720" }},
+{data: { id: 'PSME4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14997" }},
+{data: { id: 'PSMA5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P28066" }},
+{data: { id: 'PSMA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P25786" }},
+{data: { id: 'PSMB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P20618" }}], 
+ edges: [{ data: { source: 'PSMB9', target: 'PSMA2', directed: 'false', weight: 0.981325} },
+{ data: { source: 'PSMB9', target: 'HEL-S-276', directed: 'false', weight: 0.976691} },
+{ data: { source: 'PSMB9', target: 'PSMB7', directed: 'false', weight: 0.95225} },
+{ data: { source: 'PSMB9', target: 'PSMA3', directed: 'false', weight: 0.9388340000000001} },
+{ data: { source: 'PSMB9', target: 'PSMA5', directed: 'false', weight: 0.9205700000000001} },
+{ data: { source: 'PSMB9', target: 'PSME4', directed: 'false', weight: 0.835348} },
+{ data: { source: 'PSMB9', target: 'PSMB2', directed: 'false', weight: 0.802285} },
+{ data: { source: 'PSMB9', target: 'PSMB1', directed: 'false', weight: 0.735514} },
+{ data: { source: 'PSMB9', target: 'PSMA1', directed: 'false', weight: 0.638753} },
+{ data: { source: 'PSMB9', target: 'PSMB3', directed: 'false', weight: 0.599142} },
+{ data: { source: 'PSMB9', target: 'PSMB4', directed: 'false', weight: 0.27420300000000003} },
+{ data: { source: 'PSMA3', target: 'PSMA1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA3', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA3', target: 'HEL-S-276', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA3', target: 'PSMB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA3', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA3', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA3', target: 'PSMB7', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA3', target: 'PSMA5', directed: 'false', weight: 0.999983} },
+{ data: { source: 'PSMA3', target: 'PSMB3', directed: 'false', weight: 0.257434} },
+{ data: { source: 'PSMA3', target: 'PSME4', directed: 'false', weight: 0.18751400000000001} },
+{ data: { source: 'PSMB7', target: 'PSMA1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMA5', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'HEL-S-276', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB7', target: 'PSMB3', directed: 'false', weight: 0.9571} },
+{ data: { source: 'PSMB7', target: 'PSME4', directed: 'false', weight: 0.9461649999999999} },
+{ data: { source: 'PSME4', target: 'PSMA1', directed: 'false', weight: 0.858632} },
+{ data: { source: 'PSME4', target: 'PSMB1', directed: 'false', weight: 0.658993} },
+{ data: { source: 'PSME4', target: 'PSMB2', directed: 'false', weight: 0.614988} },
+{ data: { source: 'PSME4', target: 'PSMB4', directed: 'false', weight: 0.556708} },
+{ data: { source: 'PSME4', target: 'PSMB3', directed: 'false', weight: 0.234015} },
+{ data: { source: 'PSME4', target: 'PSMA5', directed: 'false', weight: 0.176777} },
+{ data: { source: 'PSME4', target: 'PSMA2', directed: 'false', weight: 0.025863599999999997} },
+{ data: { source: 'PSME4', target: 'HEL-S-276', directed: 'false', weight: 0.025210200000000002} },
+{ data: { source: 'PSMA5', target: 'PSMA1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA5', target: 'HEL-S-276', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA5', target: 'PSMB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA5', target: 'PSMB2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA5', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA5', target: 'PSMA2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PSMA5', target: 'PSMB3', directed: 'false', weight: 0.259073} },
+{ data: { source: 'PSMB2', target: 'PSMA1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB2', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB2', target: 'HEL-S-276', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB2', target: 'PSMB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB2', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB2', target: 'PSMB3', directed: 'false', weight: 0.507838} },
+{ data: { source: 'PSMB3', target: 'PSMB4', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMB3', target: 'PSMA1', directed: 'false', weight: 0.695427} },
+{ data: { source: 'PSMB3', target: 'PSMA2', directed: 'false', weight: 0.43721499999999996} },
+{ data: { source: 'PSMB3', target: 'PSMB1', directed: 'false', weight: 0.384316} },
+{ data: { source: 'PSMB3', target: 'HEL-S-276', directed: 'false', weight: 0.325231} },
+{ data: { source: 'HEL-S-276', target: 'PSMA1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-276', target: 'PSMA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-276', target: 'PSMB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-276', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA2', target: 'PSMA1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA2', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA2', target: 'PSMB1', directed: 'false', weight: 0.999928} },
+{ data: { source: 'PSMA1', target: 'PSMB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMA1', target: 'PSMB4', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMB4', target: 'PSMB1', directed: 'false', weight: 1.0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 20S proteasome<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

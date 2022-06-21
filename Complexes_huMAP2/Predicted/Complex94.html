@@ -1,0 +1,117 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.3 ILK-LIMS1-PARVA complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex95.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RSU1', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q15404" }},
+{data: { id: 'LIMS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48059" }},
+{data: { id: 'PARVA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NVD7" }},
+{data: { id: 'HEL-S-28', score: 4, type: '', href: "https://www.uniprot.org/uniprot/V9HWF0" }},
+{data: { id: 'PARVB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HBI1" }},
+{data: { id: 'PARVG', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HBI0" }}], 
+ edges: [{ data: { source: 'PARVA', target: 'HEL-S-28', directed: 'false', weight: 1.0} },
+{ data: { source: 'PARVA', target: 'PARVB', directed: 'false', weight: 0.999851} },
+{ data: { source: 'PARVA', target: 'RSU1', directed: 'false', weight: 0.9791350000000001} },
+{ data: { source: 'PARVA', target: 'LIMS1', directed: 'false', weight: 0.867499} },
+{ data: { source: 'HEL-S-28', target: 'PARVB', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'HEL-S-28', target: 'LIMS1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'HEL-S-28', target: 'RSU1', directed: 'false', weight: 0.999866} },
+{ data: { source: 'HEL-S-28', target: 'PARVG', directed: 'false', weight: 0.9856370000000001} },
+{ data: { source: 'LIMS1', target: 'PARVB', directed: 'false', weight: 0.989883} },
+{ data: { source: 'LIMS1', target: 'RSU1', directed: 'false', weight: 0.9850959999999999} },
+{ data: { source: 'LIMS1', target: 'PARVG', directed: 'false', weight: 0.6829850000000001} },
+{ data: { source: 'PARVB', target: 'RSU1', directed: 'false', weight: 0.996439} },
+{ data: { source: 'RSU1', target: 'PARVG', directed: 'false', weight: 0.893911} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.3 ILK-LIMS1-PARVA complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.87
+    </section>
+    </body>
+    </html>
+    

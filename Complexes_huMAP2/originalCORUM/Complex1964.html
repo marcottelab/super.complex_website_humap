@@ -1,0 +1,102 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> B-WICH complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1965.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MYO1C', score: 5, href: "https://www.uniprot.org/uniprot/O00159" }},
+{data: { id: 'SMARCA5', score: 5, href: "https://www.uniprot.org/uniprot/O60264" }},
+{data: { id: 'SF3B1', score: 5, href: "https://www.uniprot.org/uniprot/O75533" }},
+{data: { id: 'DEK', score: 5, href: "https://www.uniprot.org/uniprot/P35659" }},
+{data: { id: '2074', score: 0 }},
+{data: { id: 'MYBBP1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQG0" }},
+{data: { id: 'DDX21', score: 5, href: "https://www.uniprot.org/uniprot/Q9NR30" }},
+{data: { id: 'BAZ1B', score: 5, href: "https://www.uniprot.org/uniprot/Q9UIG0" }}], 
+ edges: [{ data: { source: 'MYBBP1A', target: 'DDX21', directed: 'false', weight: 0.998084} },
+{ data: { source: 'SF3B1', target: 'DDX21', directed: 'false', weight: 0.748633} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    B-WICH complex	<br> Unweighted Density = 0.07
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>DDX21
+    </section>
+    </body>
+    </html>
+    

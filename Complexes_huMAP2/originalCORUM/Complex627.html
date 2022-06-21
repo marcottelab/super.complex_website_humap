@@ -1,0 +1,157 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> SMN complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex628.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GEMIN2', score: 5, href: "https://www.uniprot.org/uniprot/O14893" }},
+{data: { id: 'SNRPB', score: 5, href: "https://www.uniprot.org/uniprot/P14678" }},
+{data: { id: 'GEMIN4', score: 5, href: "https://www.uniprot.org/uniprot/P57678" }},
+{data: { id: 'SNRPE', score: 5, href: "https://www.uniprot.org/uniprot/P62304" }},
+{data: { id: 'SNRPF', score: 5, href: "https://www.uniprot.org/uniprot/P62306" }},
+{data: { id: 'SNRPG', score: 5, href: "https://www.uniprot.org/uniprot/P62308" }},
+{data: { id: 'SNRPD1', score: 5, href: "https://www.uniprot.org/uniprot/P62314" }},
+{data: { id: 'SNRPD2', score: 5, href: "https://www.uniprot.org/uniprot/P62316" }},
+{data: { id: 'SNRPD3', score: 5, href: "https://www.uniprot.org/uniprot/P62318" }},
+{data: { id: 'GEMIN5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEQ6" }},
+{data: { id: 'GEMIN6', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXD5" }},
+{data: { id: 'GEMIN7', score: 5, href: "https://www.uniprot.org/uniprot/Q9H840" }},
+{data: { id: 'FAM51A1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWZ8" }},
+{data: { id: 'DDX20', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHI6" }},
+{data: { id: 'STRAP', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3F4" }}], 
+ edges: [{ data: { source: 'DDX20', target: 'GEMIN5', directed: 'false', weight: 0.99764} },
+{ data: { source: 'DDX20', target: 'GEMIN4', directed: 'false', weight: 0.9968520000000001} },
+{ data: { source: 'DDX20', target: 'GEMIN7', directed: 'false', weight: 0.9902790000000001} },
+{ data: { source: 'DDX20', target: 'FAM51A1', directed: 'false', weight: 0.6830970000000001} },
+{ data: { source: 'DDX20', target: 'GEMIN6', directed: 'false', weight: 0.5975739999999999} },
+{ data: { source: 'DDX20', target: 'GEMIN2', directed: 'false', weight: 0.535733} },
+{ data: { source: 'DDX20', target: 'STRAP', directed: 'false', weight: 0.356738} },
+{ data: { source: 'SNRPD2', target: 'SNRPD1', directed: 'false', weight: 0.999999} },
+{ data: { source: 'SNRPD2', target: 'SNRPD3', directed: 'false', weight: 0.999165} },
+{ data: { source: 'SNRPD2', target: 'SNRPE', directed: 'false', weight: 0.9981639999999999} },
+{ data: { source: 'SNRPD2', target: 'SNRPF', directed: 'false', weight: 0.396742} },
+{ data: { source: 'SNRPD2', target: 'SNRPG', directed: 'false', weight: 0.23465100000000003} },
+{ data: { source: 'SNRPD2', target: 'STRAP', directed: 'false', weight: 0.228359} },
+{ data: { source: 'SNRPD2', target: 'SNRPB', directed: 'false', weight: 0.0755833} },
+{ data: { source: 'GEMIN7', target: 'STRAP', directed: 'false', weight: 0.999965} },
+{ data: { source: 'GEMIN7', target: 'FAM51A1', directed: 'false', weight: 0.9683950000000001} },
+{ data: { source: 'GEMIN7', target: 'GEMIN2', directed: 'false', weight: 0.121419} },
+{ data: { source: 'GEMIN7', target: 'GEMIN6', directed: 'false', weight: 0.0289558} },
+{ data: { source: 'GEMIN7', target: 'GEMIN4', directed: 'false', weight: 0.026432} },
+{ data: { source: 'SNRPG', target: 'SNRPD1', directed: 'false', weight: 0.764563} },
+{ data: { source: 'SNRPG', target: 'SNRPB', directed: 'false', weight: 0.7381810000000001} },
+{ data: { source: 'SNRPG', target: 'SNRPE', directed: 'false', weight: 0.583522} },
+{ data: { source: 'SNRPG', target: 'SNRPD3', directed: 'false', weight: 0.443511} },
+{ data: { source: 'SNRPG', target: 'SNRPF', directed: 'false', weight: 0.26966999999999997} },
+{ data: { source: 'SNRPG', target: 'GEMIN5', directed: 'false', weight: 0.025992400000000002} },
+{ data: { source: 'SNRPG', target: 'GEMIN2', directed: 'false', weight: 0.0242307} },
+{ data: { source: 'SNRPF', target: 'SNRPD1', directed: 'false', weight: 0.333597} },
+{ data: { source: 'SNRPF', target: 'SNRPB', directed: 'false', weight: 0.270957} },
+{ data: { source: 'SNRPF', target: 'SNRPE', directed: 'false', weight: 0.235394} },
+{ data: { source: 'SNRPF', target: 'SNRPD3', directed: 'false', weight: 0.232977} },
+{ data: { source: 'GEMIN6', target: 'STRAP', directed: 'false', weight: 0.968722} },
+{ data: { source: 'GEMIN6', target: 'FAM51A1', directed: 'false', weight: 0.8833030000000001} },
+{ data: { source: 'GEMIN6', target: 'GEMIN2', directed: 'false', weight: 0.226032} },
+{ data: { source: 'GEMIN6', target: 'GEMIN4', directed: 'false', weight: 0.126635} },
+{ data: { source: 'GEMIN6', target: 'GEMIN5', directed: 'false', weight: 0.057612699999999996} },
+{ data: { source: 'STRAP', target: 'GEMIN5', directed: 'false', weight: 0.683852} },
+{ data: { source: 'STRAP', target: 'FAM51A1', directed: 'false', weight: 0.347641} },
+{ data: { source: 'STRAP', target: 'GEMIN4', directed: 'false', weight: 0.215363} },
+{ data: { source: 'STRAP', target: 'GEMIN2', directed: 'false', weight: 0.0399857} },
+{ data: { source: 'STRAP', target: 'SNRPD3', directed: 'false', weight: 0.0379733} },
+{ data: { source: 'SNRPD3', target: 'SNRPE', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'SNRPD3', target: 'SNRPD1', directed: 'false', weight: 0.999339} },
+{ data: { source: 'SNRPD3', target: 'SNRPB', directed: 'false', weight: 0.040878} },
+{ data: { source: 'FAM51A1', target: 'GEMIN2', directed: 'false', weight: 0.354756} },
+{ data: { source: 'FAM51A1', target: 'GEMIN4', directed: 'false', weight: 0.11413} },
+{ data: { source: 'FAM51A1', target: 'GEMIN5', directed: 'false', weight: 0.08691439999999999} },
+{ data: { source: 'FAM51A1', target: 'SNRPD1', directed: 'false', weight: 0.0229467} },
+{ data: { source: 'SNRPB', target: 'SNRPE', directed: 'false', weight: 0.209648} },
+{ data: { source: 'SNRPB', target: 'SNRPD1', directed: 'false', weight: 0.0467705} },
+{ data: { source: 'GEMIN4', target: 'GEMIN2', directed: 'false', weight: 0.10887999999999999} },
+{ data: { source: 'GEMIN2', target: 'GEMIN5', directed: 'false', weight: 0.0898501} },
+{ data: { source: 'GEMIN2', target: 'SNRPD1', directed: 'false', weight: 0.0241195} },
+{ data: { source: 'GEMIN2', target: 'SNRPE', directed: 'false', weight: 0.020462900000000003} },
+{ data: { source: 'SNRPE', target: 'SNRPD1', directed: 'false', weight: 0.998884} },
+{ data: { source: 'SNRPE', target: 'GEMIN5', directed: 'false', weight: 0.024337599999999997} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    SMN complex	<br> Unweighted Density = 0.52
+    </section>
+    </body>
+    </html>
+    

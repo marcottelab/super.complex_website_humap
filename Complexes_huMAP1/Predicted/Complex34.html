@@ -1,0 +1,134 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> HAUS augmin-like complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex35.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HAUS6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z4H7" }},
+{data: { id: 'HAUS7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99871" }},
+{data: { id: 'HAUS5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94927" }},
+{data: { id: 'HAUS8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BT25" }},
+{data: { id: 'HAUS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96CS2" }},
+{data: { id: 'HAUS4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H6D7" }},
+{data: { id: 'HAUS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NVX0" }},
+{data: { id: 'HAUS3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q68CZ6" }}], 
+ edges: [{ data: { source: 'HAUS4', target: 'HAUS1', directed: 'false', weight: 0.999899} },
+{ data: { source: 'HAUS4', target: 'HAUS3', directed: 'false', weight: 0.998901} },
+{ data: { source: 'HAUS4', target: 'HAUS7', directed: 'false', weight: 0.998704} },
+{ data: { source: 'HAUS4', target: 'HAUS2', directed: 'false', weight: 0.998549} },
+{ data: { source: 'HAUS4', target: 'HAUS8', directed: 'false', weight: 0.9967590000000001} },
+{ data: { source: 'HAUS4', target: 'HAUS5', directed: 'false', weight: 0.994259} },
+{ data: { source: 'HAUS4', target: 'HAUS6', directed: 'false', weight: 0.974902} },
+{ data: { source: 'HAUS6', target: 'HAUS2', directed: 'false', weight: 0.9892120000000001} },
+{ data: { source: 'HAUS6', target: 'HAUS7', directed: 'false', weight: 0.988876} },
+{ data: { source: 'HAUS6', target: 'HAUS8', directed: 'false', weight: 0.966623} },
+{ data: { source: 'HAUS6', target: 'HAUS1', directed: 'false', weight: 0.790028} },
+{ data: { source: 'HAUS6', target: 'HAUS3', directed: 'false', weight: 0.35725100000000004} },
+{ data: { source: 'HAUS6', target: 'HAUS5', directed: 'false', weight: 0.22820300000000002} },
+{ data: { source: 'HAUS8', target: 'HAUS2', directed: 'false', weight: 0.998286} },
+{ data: { source: 'HAUS8', target: 'HAUS7', directed: 'false', weight: 0.9975809999999999} },
+{ data: { source: 'HAUS8', target: 'HAUS3', directed: 'false', weight: 0.643822} },
+{ data: { source: 'HAUS8', target: 'HAUS1', directed: 'false', weight: 0.5} },
+{ data: { source: 'HAUS8', target: 'HAUS5', directed: 'false', weight: 0.270473} },
+{ data: { source: 'HAUS1', target: 'HAUS3', directed: 'false', weight: 0.996325} },
+{ data: { source: 'HAUS1', target: 'HAUS2', directed: 'false', weight: 0.9891120000000001} },
+{ data: { source: 'HAUS1', target: 'HAUS7', directed: 'false', weight: 0.943846} },
+{ data: { source: 'HAUS1', target: 'HAUS5', directed: 'false', weight: 0.686075} },
+{ data: { source: 'HAUS7', target: 'HAUS2', directed: 'false', weight: 0.999549} },
+{ data: { source: 'HAUS7', target: 'HAUS3', directed: 'false', weight: 0.998293} },
+{ data: { source: 'HAUS7', target: 'HAUS5', directed: 'false', weight: 0.9698} },
+{ data: { source: 'HAUS3', target: 'HAUS2', directed: 'false', weight: 0.997497} },
+{ data: { source: 'HAUS3', target: 'HAUS5', directed: 'false', weight: 0.4341} },
+{ data: { source: 'HAUS2', target: 'HAUS5', directed: 'false', weight: 0.995072} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    HAUS augmin-like complex<br> Complex Score (from Super.Complex) = 0.90476<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

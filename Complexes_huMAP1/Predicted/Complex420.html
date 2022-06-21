@@ -1,0 +1,232 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.3 TREX complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex421.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ZC3H11A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75152" }},
+{data: { id: 'SF3A1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15459" }},
+{data: { id: 'CPSF6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16630" }},
+{data: { id: 'THOC6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86W42" }},
+{data: { id: 'SF3A3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12874" }},
+{data: { id: 'THOC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NI27" }},
+{data: { id: 'THOC5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13769" }},
+{data: { id: 'THOC3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96J01" }},
+{data: { id: 'CCDC9B', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q6ZUT6" }},
+{data: { id: 'CHTOP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3Y2" }},
+{data: { id: 'RBM15', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96T37" }},
+{data: { id: 'NCBP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q53F19" }},
+{data: { id: 'C19orf47', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q8N9M1" }},
+{data: { id: 'NUDT21', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43809" }},
+{data: { id: 'THOC7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6I9Y2" }},
+{data: { id: 'THOC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96FV9" }},
+{data: { id: 'DDX39A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00148" }},
+{data: { id: 'DDX39B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13838" }},
+{data: { id: 'POLDIP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BY77" }}], 
+ edges: [{ data: { source: 'DDX39B', target: 'THOC1', directed: 'false', weight: 0.996492} },
+{ data: { source: 'DDX39B', target: 'THOC2', directed: 'false', weight: 0.990466} },
+{ data: { source: 'DDX39B', target: 'THOC7', directed: 'false', weight: 0.986317} },
+{ data: { source: 'DDX39B', target: 'NCBP3', directed: 'false', weight: 0.985511} },
+{ data: { source: 'DDX39B', target: 'THOC5', directed: 'false', weight: 0.974117} },
+{ data: { source: 'DDX39B', target: 'THOC6', directed: 'false', weight: 0.563882} },
+{ data: { source: 'DDX39B', target: 'THOC3', directed: 'false', weight: 0.548399} },
+{ data: { source: 'DDX39B', target: 'POLDIP3', directed: 'false', weight: 0.478813} },
+{ data: { source: 'DDX39B', target: 'C19orf47', directed: 'false', weight: 0.366471} },
+{ data: { source: 'DDX39B', target: 'ZC3H11A', directed: 'false', weight: 0.299174} },
+{ data: { source: 'DDX39B', target: 'DDX39A', directed: 'false', weight: 0.127063} },
+{ data: { source: 'DDX39B', target: 'RBM15', directed: 'false', weight: 0.0815438} },
+{ data: { source: 'CHTOP', target: 'THOC7', directed: 'false', weight: 0.975683} },
+{ data: { source: 'CHTOP', target: 'THOC1', directed: 'false', weight: 0.9558700000000001} },
+{ data: { source: 'CHTOP', target: 'THOC5', directed: 'false', weight: 0.9328209999999999} },
+{ data: { source: 'CHTOP', target: 'THOC3', directed: 'false', weight: 0.398094} },
+{ data: { source: 'CHTOP', target: 'NCBP3', directed: 'false', weight: 0.294178} },
+{ data: { source: 'CHTOP', target: 'THOC6', directed: 'false', weight: 0.226525} },
+{ data: { source: 'CHTOP', target: 'ZC3H11A', directed: 'false', weight: 0.22483499999999998} },
+{ data: { source: 'CHTOP', target: 'C19orf47', directed: 'false', weight: 0.179983} },
+{ data: { source: 'CHTOP', target: 'CCDC9B', directed: 'false', weight: 0.16530799999999998} },
+{ data: { source: 'CHTOP', target: 'POLDIP3', directed: 'false', weight: 0.12671} },
+{ data: { source: 'DDX39A', target: 'THOC2', directed: 'false', weight: 0.96141} },
+{ data: { source: 'DDX39A', target: 'THOC5', directed: 'false', weight: 0.832583} },
+{ data: { source: 'DDX39A', target: 'NCBP3', directed: 'false', weight: 0.686295} },
+{ data: { source: 'DDX39A', target: 'THOC1', directed: 'false', weight: 0.599692} },
+{ data: { source: 'DDX39A', target: 'THOC7', directed: 'false', weight: 0.539341} },
+{ data: { source: 'DDX39A', target: 'THOC6', directed: 'false', weight: 0.373726} },
+{ data: { source: 'DDX39A', target: 'C19orf47', directed: 'false', weight: 0.373726} },
+{ data: { source: 'DDX39A', target: 'THOC3', directed: 'false', weight: 0.292026} },
+{ data: { source: 'DDX39A', target: 'ZC3H11A', directed: 'false', weight: 0.241222} },
+{ data: { source: 'DDX39A', target: 'POLDIP3', directed: 'false', weight: 0.158719} },
+{ data: { source: 'DDX39A', target: 'RBM15', directed: 'false', weight: 0.06725700000000001} },
+{ data: { source: 'NUDT21', target: 'CPSF6', directed: 'false', weight: 0.98503} },
+{ data: { source: 'NUDT21', target: 'THOC2', directed: 'false', weight: 0.9759190000000001} },
+{ data: { source: 'NUDT21', target: 'RBM15', directed: 'false', weight: 0.975916} },
+{ data: { source: 'NUDT21', target: 'SF3A1', directed: 'false', weight: 0.945831} },
+{ data: { source: 'NUDT21', target: 'SF3A3', directed: 'false', weight: 0.843578} },
+{ data: { source: 'THOC5', target: 'THOC3', directed: 'false', weight: 0.999992} },
+{ data: { source: 'THOC5', target: 'THOC7', directed: 'false', weight: 0.999975} },
+{ data: { source: 'THOC5', target: 'THOC6', directed: 'false', weight: 0.999956} },
+{ data: { source: 'THOC5', target: 'THOC2', directed: 'false', weight: 0.9998290000000001} },
+{ data: { source: 'THOC5', target: 'THOC1', directed: 'false', weight: 0.999706} },
+{ data: { source: 'THOC5', target: 'POLDIP3', directed: 'false', weight: 0.987593} },
+{ data: { source: 'THOC5', target: 'ZC3H11A', directed: 'false', weight: 0.96354} },
+{ data: { source: 'THOC5', target: 'C19orf47', directed: 'false', weight: 0.939426} },
+{ data: { source: 'THOC5', target: 'NCBP3', directed: 'false', weight: 0.926586} },
+{ data: { source: 'THOC5', target: 'RBM15', directed: 'false', weight: 0.408783} },
+{ data: { source: 'THOC5', target: 'CCDC9B', directed: 'false', weight: 0.16530799999999998} },
+{ data: { source: 'THOC7', target: 'THOC1', directed: 'false', weight: 0.999933} },
+{ data: { source: 'THOC7', target: 'THOC6', directed: 'false', weight: 0.999923} },
+{ data: { source: 'THOC7', target: 'THOC2', directed: 'false', weight: 0.9999170000000001} },
+{ data: { source: 'THOC7', target: 'THOC3', directed: 'false', weight: 0.9986079999999999} },
+{ data: { source: 'THOC7', target: 'POLDIP3', directed: 'false', weight: 0.992195} },
+{ data: { source: 'THOC7', target: 'ZC3H11A', directed: 'false', weight: 0.9561280000000001} },
+{ data: { source: 'THOC7', target: 'CCDC9B', directed: 'false', weight: 0.950182} },
+{ data: { source: 'THOC7', target: 'NCBP3', directed: 'false', weight: 0.909791} },
+{ data: { source: 'THOC7', target: 'C19orf47', directed: 'false', weight: 0.523947} },
+{ data: { source: 'THOC7', target: 'RBM15', directed: 'false', weight: 0.481836} },
+{ data: { source: 'THOC2', target: 'THOC1', directed: 'false', weight: 0.999951} },
+{ data: { source: 'THOC2', target: 'THOC3', directed: 'false', weight: 0.9999239999999999} },
+{ data: { source: 'THOC2', target: 'THOC6', directed: 'false', weight: 0.9998360000000001} },
+{ data: { source: 'THOC2', target: 'POLDIP3', directed: 'false', weight: 0.9953989999999999} },
+{ data: { source: 'THOC2', target: 'CPSF6', directed: 'false', weight: 0.993977} },
+{ data: { source: 'THOC2', target: 'ZC3H11A', directed: 'false', weight: 0.9776379999999999} },
+{ data: { source: 'THOC2', target: 'C19orf47', directed: 'false', weight: 0.966925} },
+{ data: { source: 'THOC2', target: 'NCBP3', directed: 'false', weight: 0.962857} },
+{ data: { source: 'THOC2', target: 'SF3A3', directed: 'false', weight: 0.8916370000000001} },
+{ data: { source: 'THOC2', target: 'RBM15', directed: 'false', weight: 0.82295} },
+{ data: { source: 'THOC2', target: 'SF3A1', directed: 'false', weight: 0.7903319999999999} },
+{ data: { source: 'ZC3H11A', target: 'THOC1', directed: 'false', weight: 0.992101} },
+{ data: { source: 'ZC3H11A', target: 'NCBP3', directed: 'false', weight: 0.984296} },
+{ data: { source: 'ZC3H11A', target: 'THOC6', directed: 'false', weight: 0.615988} },
+{ data: { source: 'ZC3H11A', target: 'THOC3', directed: 'false', weight: 0.5903510000000001} },
+{ data: { source: 'ZC3H11A', target: 'POLDIP3', directed: 'false', weight: 0.49262} },
+{ data: { source: 'ZC3H11A', target: 'C19orf47', directed: 'false', weight: 0.257701} },
+{ data: { source: 'ZC3H11A', target: 'CCDC9B', directed: 'false', weight: 0.158403} },
+{ data: { source: 'ZC3H11A', target: 'RBM15', directed: 'false', weight: 0.127887} },
+{ data: { source: 'CPSF6', target: 'RBM15', directed: 'false', weight: 0.982899} },
+{ data: { source: 'CPSF6', target: 'SF3A3', directed: 'false', weight: 0.973651} },
+{ data: { source: 'CPSF6', target: 'SF3A1', directed: 'false', weight: 0.9570770000000001} },
+{ data: { source: 'NCBP3', target: 'THOC1', directed: 'false', weight: 0.974096} },
+{ data: { source: 'NCBP3', target: 'THOC6', directed: 'false', weight: 0.912436} },
+{ data: { source: 'NCBP3', target: 'C19orf47', directed: 'false', weight: 0.9009209999999999} },
+{ data: { source: 'NCBP3', target: 'THOC3', directed: 'false', weight: 0.33265500000000003} },
+{ data: { source: 'NCBP3', target: 'CCDC9B', directed: 'false', weight: 0.194708} },
+{ data: { source: 'NCBP3', target: 'POLDIP3', directed: 'false', weight: 0.18567} },
+{ data: { source: 'NCBP3', target: 'RBM15', directed: 'false', weight: 0.0220826} },
+{ data: { source: 'THOC1', target: 'THOC6', directed: 'false', weight: 0.9999520000000001} },
+{ data: { source: 'THOC1', target: 'THOC3', directed: 'false', weight: 0.9998540000000001} },
+{ data: { source: 'THOC1', target: 'POLDIP3', directed: 'false', weight: 0.997295} },
+{ data: { source: 'THOC1', target: 'CCDC9B', directed: 'false', weight: 0.9419959999999999} },
+{ data: { source: 'THOC1', target: 'C19orf47', directed: 'false', weight: 0.932399} },
+{ data: { source: 'THOC1', target: 'RBM15', directed: 'false', weight: 0.882602} },
+{ data: { source: 'C19orf47', target: 'THOC6', directed: 'false', weight: 0.3264} },
+{ data: { source: 'C19orf47', target: 'THOC3', directed: 'false', weight: 0.26104499999999997} },
+{ data: { source: 'C19orf47', target: 'POLDIP3', directed: 'false', weight: 0.212146} },
+{ data: { source: 'C19orf47', target: 'CCDC9B', directed: 'false', weight: 0.173369} },
+{ data: { source: 'POLDIP3', target: 'THOC3', directed: 'false', weight: 0.510579} },
+{ data: { source: 'POLDIP3', target: 'THOC6', directed: 'false', weight: 0.334363} },
+{ data: { source: 'POLDIP3', target: 'CCDC9B', directed: 'false', weight: 0.147098} },
+{ data: { source: 'POLDIP3', target: 'RBM15', directed: 'false', weight: 0.118479} },
+{ data: { source: 'SF3A3', target: 'SF3A1', directed: 'false', weight: 0.5489609999999999} },
+{ data: { source: 'SF3A3', target: 'RBM15', directed: 'false', weight: 0.5} },
+{ data: { source: 'THOC6', target: 'THOC3', directed: 'false', weight: 0.9963069999999999} },
+{ data: { source: 'THOC6', target: 'CCDC9B', directed: 'false', weight: 0.173369} },
+{ data: { source: 'THOC6', target: 'RBM15', directed: 'false', weight: 0.0871576} },
+{ data: { source: 'SF3A1', target: 'RBM15', directed: 'false', weight: 0.605607} },
+{ data: { source: 'THOC3', target: 'RBM15', directed: 'false', weight: 0.464397} },
+{ data: { source: 'THOC3', target: 'CCDC9B', directed: 'false', weight: 0.194708} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.3 TREX complex<br> Complex Score (from Super.Complex) = 0.74984<br> Unweighted Density = 0.64
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,136 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Large Drosha complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex734.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DDX3X', score: 5, href: "https://www.uniprot.org/uniprot/O00571" }},
+{data: { id: 'HNRPDL', score: 5, href: "https://www.uniprot.org/uniprot/O14979" }},
+{data: { id: 'DHX15', score: 5, href: "https://www.uniprot.org/uniprot/O43143" }},
+{data: { id: 'DDX5', score: 5, href: "https://www.uniprot.org/uniprot/P17844" }},
+{data: { id: 'HNRNPH1', score: 5, href: "https://www.uniprot.org/uniprot/P31943" }},
+{data: { id: 'FUS', score: 5, href: "https://www.uniprot.org/uniprot/P35637" }},
+{data: { id: 'HNRNPM', score: 5, href: "https://www.uniprot.org/uniprot/P52272" }},
+{data: { id: 'HNRNPU', score: 5, href: "https://www.uniprot.org/uniprot/Q00839" }},
+{data: { id: 'EWSR1', score: 5, href: "https://www.uniprot.org/uniprot/Q01844" }},
+{data: { id: 'ILF2', score: 5, href: "https://www.uniprot.org/uniprot/Q12905" }},
+{data: { id: 'ILF3', score: 5, href: "https://www.uniprot.org/uniprot/Q12906" }},
+{data: { id: 'TARDBP', score: 5, href: "https://www.uniprot.org/uniprot/Q13148" }},
+{data: { id: 'DGCR8', score: 5, href: "https://www.uniprot.org/uniprot/Q8WYQ5" }},
+{data: { id: 'DDX1', score: 5, href: "https://www.uniprot.org/uniprot/Q92499" }},
+{data: { id: 'TAF15', score: 5, href: "https://www.uniprot.org/uniprot/Q92804" }},
+{data: { id: 'DDX17', score: 5, href: "https://www.uniprot.org/uniprot/Q92841" }},
+{data: { id: 'SRPK1', score: 5, href: "https://www.uniprot.org/uniprot/Q96SB4" }},
+{data: { id: 'HNRPUL1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUJ2" }},
+{data: { id: 'DROSHA', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRR4" }},
+{data: { id: 'RALY', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKM9" }}], 
+ edges: [{ data: { source: 'RALY', target: 'ILF2', directed: 'false', weight: 0.04639480000000001} },
+{ data: { source: 'HNRNPU', target: 'DHX15', directed: 'false', weight: 0.8803200000000001} },
+{ data: { source: 'HNRNPU', target: 'DDX5', directed: 'false', weight: 0.561793} },
+{ data: { source: 'HNRNPU', target: 'DDX17', directed: 'false', weight: 0.436493} },
+{ data: { source: 'HNRNPU', target: 'HNRNPM', directed: 'false', weight: 0.349355} },
+{ data: { source: 'HNRNPU', target: 'HNRNPH1', directed: 'false', weight: 0.12080999999999999} },
+{ data: { source: 'HNRNPU', target: 'ILF3', directed: 'false', weight: 0.0752915} },
+{ data: { source: 'HNRNPU', target: 'DDX3X', directed: 'false', weight: 0.046881} },
+{ data: { source: 'HNRNPU', target: 'SRPK1', directed: 'false', weight: 0.0308121} },
+{ data: { source: 'HNRNPU', target: 'ILF2', directed: 'false', weight: 0.022722} },
+{ data: { source: 'HNRNPU', target: 'HNRPUL1', directed: 'false', weight: 0.0216639} },
+{ data: { source: 'ILF3', target: 'ILF2', directed: 'false', weight: 1.0} },
+{ data: { source: 'ILF3', target: 'DHX15', directed: 'false', weight: 0.260353} },
+{ data: { source: 'ILF3', target: 'HNRPDL', directed: 'false', weight: 0.0367778} },
+{ data: { source: 'DROSHA', target: 'DGCR8', directed: 'false', weight: 0.9925799999999999} },
+{ data: { source: 'DDX1', target: 'HNRNPM', directed: 'false', weight: 0.579001} },
+{ data: { source: 'DDX1', target: 'DHX15', directed: 'false', weight: 0.382286} },
+{ data: { source: 'DDX1', target: 'HNRNPH1', directed: 'false', weight: 0.0291545} },
+{ data: { source: 'DDX1', target: 'TARDBP', directed: 'false', weight: 0.026639999999999997} },
+{ data: { source: 'HNRNPM', target: 'DHX15', directed: 'false', weight: 0.711878} },
+{ data: { source: 'HNRNPM', target: 'DDX5', directed: 'false', weight: 0.25952} },
+{ data: { source: 'HNRNPM', target: 'DDX17', directed: 'false', weight: 0.0432858} },
+{ data: { source: 'DDX5', target: 'DDX17', directed: 'false', weight: 0.08087480000000001} },
+{ data: { source: 'DDX5', target: 'DHX15', directed: 'false', weight: 0.0571025} },
+{ data: { source: 'DDX3X', target: 'TARDBP', directed: 'false', weight: 0.0483795} },
+{ data: { source: 'DDX17', target: 'DHX15', directed: 'false', weight: 0.9843270000000001} },
+{ data: { source: 'DDX17', target: 'HNRNPH1', directed: 'false', weight: 0.0235034} },
+{ data: { source: 'DHX15', target: 'HNRPUL1', directed: 'false', weight: 0.0342116} },
+{ data: { source: 'HNRNPH1', target: 'TARDBP', directed: 'false', weight: 0.763412} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Large Drosha complex	<br> Unweighted Density = 0.15
+    </section>
+    </body>
+    </html>
+    

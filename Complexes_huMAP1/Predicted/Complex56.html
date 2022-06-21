@@ -1,0 +1,134 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> PBX3 PIGL PBX1 MAB21L1 MEIS1 PBX2 MEIS2 MEIS3</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex57.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PBX3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P40426" }},
+{data: { id: 'PIGL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y2B2" }},
+{data: { id: 'PBX2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P40425" }},
+{data: { id: 'PBX1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P40424" }},
+{data: { id: 'MAB21L1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13394" }},
+{data: { id: 'MEIS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00470" }},
+{data: { id: 'MEIS3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99687" }},
+{data: { id: 'MEIS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14770" }}], 
+ edges: [{ data: { source: 'MEIS3', target: 'MEIS2', directed: 'false', weight: 0.981441} },
+{ data: { source: 'MEIS3', target: 'PIGL', directed: 'false', weight: 0.171414} },
+{ data: { source: 'MEIS3', target: 'MAB21L1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'MEIS3', target: 'MEIS1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'MEIS3', target: 'PBX3', directed: 'false', weight: 0.128057} },
+{ data: { source: 'MEIS3', target: 'PBX2', directed: 'false', weight: 0.11473699999999999} },
+{ data: { source: 'MEIS3', target: 'PBX1', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'PBX2', target: 'PBX1', directed: 'false', weight: 0.9583370000000001} },
+{ data: { source: 'PBX2', target: 'MEIS2', directed: 'false', weight: 0.930668} },
+{ data: { source: 'PBX2', target: 'PBX3', directed: 'false', weight: 0.6435810000000001} },
+{ data: { source: 'PBX2', target: 'MEIS1', directed: 'false', weight: 0.46998900000000005} },
+{ data: { source: 'PBX2', target: 'MAB21L1', directed: 'false', weight: 0.385114} },
+{ data: { source: 'PBX2', target: 'PIGL', directed: 'false', weight: 0.11473699999999999} },
+{ data: { source: 'PIGL', target: 'MEIS2', directed: 'false', weight: 0.9690270000000001} },
+{ data: { source: 'PIGL', target: 'MAB21L1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PIGL', target: 'MEIS1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'PIGL', target: 'PBX3', directed: 'false', weight: 0.128057} },
+{ data: { source: 'PIGL', target: 'PBX1', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'PBX1', target: 'MEIS2', directed: 'false', weight: 0.831751} },
+{ data: { source: 'PBX1', target: 'PBX3', directed: 'false', weight: 0.579203} },
+{ data: { source: 'PBX1', target: 'MEIS1', directed: 'false', weight: 0.41868} },
+{ data: { source: 'PBX1', target: 'MAB21L1', directed: 'false', weight: 0.275252} },
+{ data: { source: 'MEIS1', target: 'MEIS2', directed: 'false', weight: 0.838651} },
+{ data: { source: 'MEIS1', target: 'MAB21L1', directed: 'false', weight: 0.817917} },
+{ data: { source: 'MEIS1', target: 'PBX3', directed: 'false', weight: 0.6375390000000001} },
+{ data: { source: 'MEIS2', target: 'MAB21L1', directed: 'false', weight: 0.970283} },
+{ data: { source: 'MEIS2', target: 'PBX3', directed: 'false', weight: 0.9369569999999999} },
+{ data: { source: 'MAB21L1', target: 'PBX3', directed: 'false', weight: 0.5} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    PBX3 PIGL PBX1 MAB21L1 MEIS1 PBX2 MEIS2 MEIS3<br> Complex Score (from Super.Complex) = 0.83042<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

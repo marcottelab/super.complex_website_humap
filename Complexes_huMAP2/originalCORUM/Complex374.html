@@ -1,0 +1,132 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> MeCP1 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex375.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MTA2', score: 5, href: "https://www.uniprot.org/uniprot/O94776" }},
+{data: { id: 'MBD3', score: 5, href: "https://www.uniprot.org/uniprot/O95983" }},
+{data: { id: 'RBBP4', score: 5, href: "https://www.uniprot.org/uniprot/Q09028" }},
+{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'CHD4', score: 5, href: "https://www.uniprot.org/uniprot/Q14839" }},
+{data: { id: 'RBBP7', score: 5, href: "https://www.uniprot.org/uniprot/Q16576" }},
+{data: { id: 'GATAD2B', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXI9" }},
+{data: { id: 'HDAC2', score: 5, href: "https://www.uniprot.org/uniprot/Q92769" }},
+{data: { id: 'MBD2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBB5" }}], 
+ edges: [{ data: { source: 'RBBP7', target: 'RBBP4', directed: 'false', weight: 1.0} },
+{ data: { source: 'RBBP7', target: 'HDAC1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RBBP7', target: 'CHD4', directed: 'false', weight: 0.9999370000000001} },
+{ data: { source: 'RBBP7', target: 'MTA2', directed: 'false', weight: 0.9998600000000001} },
+{ data: { source: 'RBBP7', target: 'MBD2', directed: 'false', weight: 0.9994790000000001} },
+{ data: { source: 'RBBP7', target: 'HDAC2', directed: 'false', weight: 0.9976290000000001} },
+{ data: { source: 'RBBP7', target: 'MBD3', directed: 'false', weight: 0.945973} },
+{ data: { source: 'RBBP7', target: 'GATAD2B', directed: 'false', weight: 0.8495209999999999} },
+{ data: { source: 'MBD3', target: 'MTA2', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'MBD3', target: 'HDAC1', directed: 'false', weight: 0.9998950000000001} },
+{ data: { source: 'MBD3', target: 'GATAD2B', directed: 'false', weight: 0.9954799999999999} },
+{ data: { source: 'MBD3', target: 'RBBP4', directed: 'false', weight: 0.9875870000000001} },
+{ data: { source: 'MBD3', target: 'CHD4', directed: 'false', weight: 0.9875309999999999} },
+{ data: { source: 'MBD3', target: 'HDAC2', directed: 'false', weight: 0.6930189999999999} },
+{ data: { source: 'MBD3', target: 'MBD2', directed: 'false', weight: 0.034424800000000005} },
+{ data: { source: 'HDAC1', target: 'HDAC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'HDAC1', target: 'MTA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'HDAC1', target: 'CHD4', directed: 'false', weight: 0.999999} },
+{ data: { source: 'HDAC1', target: 'RBBP4', directed: 'false', weight: 0.9999520000000001} },
+{ data: { source: 'HDAC1', target: 'GATAD2B', directed: 'false', weight: 0.999927} },
+{ data: { source: 'HDAC1', target: 'MBD2', directed: 'false', weight: 0.994289} },
+{ data: { source: 'MTA2', target: 'HDAC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'MTA2', target: 'RBBP4', directed: 'false', weight: 0.999983} },
+{ data: { source: 'MTA2', target: 'CHD4', directed: 'false', weight: 0.999973} },
+{ data: { source: 'MTA2', target: 'MBD2', directed: 'false', weight: 0.9998389999999999} },
+{ data: { source: 'MTA2', target: 'GATAD2B', directed: 'false', weight: 0.987614} },
+{ data: { source: 'RBBP4', target: 'GATAD2B', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RBBP4', target: 'CHD4', directed: 'false', weight: 0.999898} },
+{ data: { source: 'RBBP4', target: 'HDAC2', directed: 'false', weight: 0.9922850000000001} },
+{ data: { source: 'RBBP4', target: 'MBD2', directed: 'false', weight: 0.779633} },
+{ data: { source: 'MBD2', target: 'GATAD2B', directed: 'false', weight: 0.999994} },
+{ data: { source: 'MBD2', target: 'HDAC2', directed: 'false', weight: 0.963541} },
+{ data: { source: 'MBD2', target: 'CHD4', directed: 'false', weight: 0.455276} },
+{ data: { source: 'HDAC2', target: 'GATAD2B', directed: 'false', weight: 0.987491} },
+{ data: { source: 'HDAC2', target: 'CHD4', directed: 'false', weight: 0.9844379999999999} },
+{ data: { source: 'CHD4', target: 'GATAD2B', directed: 'false', weight: 0.9875860000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    MeCP1 complex	<br> Unweighted Density = 1.00
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HDAC2
+    </section>
+    </body>
+    </html>
+    

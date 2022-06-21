@@ -1,0 +1,133 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 DNA ligase III-XRCC1-PNK-DNA-pol III multiprotein complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex730.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MSH3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P20585" }},
+{data: { id: 'APTX', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z2E3" }},
+{data: { id: 'PNKP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96T60" }},
+{data: { id: 'LIG3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49916" }},
+{data: { id: 'XRCC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P18887" }},
+{data: { id: 'APLF', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IW19" }},
+{data: { id: 'POLB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P06746" }},
+{data: { id: 'XRCC5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P13010" }},
+{data: { id: 'HLTF', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14527" }}], 
+ edges: [{ data: { source: 'APTX', target: 'XRCC1', directed: 'false', weight: 0.5531689999999999} },
+{ data: { source: 'APTX', target: 'PNKP', directed: 'false', weight: 0.469113} },
+{ data: { source: 'APTX', target: 'POLB', directed: 'false', weight: 0.311327} },
+{ data: { source: 'PNKP', target: 'POLB', directed: 'false', weight: 0.986183} },
+{ data: { source: 'PNKP', target: 'XRCC1', directed: 'false', weight: 0.466135} },
+{ data: { source: 'PNKP', target: 'LIG3', directed: 'false', weight: 0.155246} },
+{ data: { source: 'XRCC1', target: 'LIG3', directed: 'false', weight: 0.9938379999999999} },
+{ data: { source: 'XRCC1', target: 'POLB', directed: 'false', weight: 0.98935} },
+{ data: { source: 'XRCC1', target: 'APLF', directed: 'false', weight: 0.571429} },
+{ data: { source: 'XRCC1', target: 'HLTF', directed: 'false', weight: 0.405673} },
+{ data: { source: 'LIG3', target: 'POLB', directed: 'false', weight: 0.992373} },
+{ data: { source: 'LIG3', target: 'XRCC5', directed: 'false', weight: 0.7282689999999999} },
+{ data: { source: 'LIG3', target: 'APLF', directed: 'false', weight: 0.659787} },
+{ data: { source: 'LIG3', target: 'HLTF', directed: 'false', weight: 0.594344} },
+{ data: { source: 'HLTF', target: 'XRCC5', directed: 'false', weight: 0.5} },
+{ data: { source: 'HLTF', target: 'APLF', directed: 'false', weight: 0.45387299999999997} },
+{ data: { source: 'HLTF', target: 'POLB', directed: 'false', weight: 0.212556} },
+{ data: { source: 'HLTF', target: 'MSH3', directed: 'false', weight: 0.10554300000000001} },
+{ data: { source: 'POLB', target: 'APLF', directed: 'false', weight: 0.607927} },
+{ data: { source: 'APLF', target: 'MSH3', directed: 'false', weight: 0.963989} },
+{ data: { source: 'APLF', target: 'XRCC5', directed: 'false', weight: 0.815588} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 DNA ligase III-XRCC1-PNK-DNA-pol III multiprotein complex<br> Complex Score (from Super.Complex) = 0.59186<br> Unweighted Density = 0.58
+    </section>
+    </body>
+    </html>
+    

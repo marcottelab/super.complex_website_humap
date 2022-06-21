@@ -1,0 +1,246 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 p27-cyclinE-Cdk2 - Ubiquitin E3 ligase (SKP1A, SKP2, CUL1, CKS1B, RBX1) complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex868.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CDK3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q00526" }},
+{data: { id: 'CDKN1C', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49918" }},
+{data: { id: 'CCNB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P14635" }},
+{data: { id: 'CCNE2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O96020" }},
+{data: { id: 'SKP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13309" }},
+{data: { id: 'CDK2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P24941" }},
+{data: { id: 'RBL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P28749" }},
+{data: { id: 'CKS1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61024" }},
+{data: { id: 'GMNN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75496" }},
+{data: { id: 'CDK1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P06493" }},
+{data: { id: 'CCNE1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P24864" }},
+{data: { id: 'CDKN1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46527" }},
+{data: { id: 'CDKN1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P38936" }},
+{data: { id: 'CREBBP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92793" }},
+{data: { id: 'CCND3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30281" }},
+{data: { id: 'CDKN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q00526" }},
+{data: { id: 'CCNA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P20248" }},
+{data: { id: 'CDT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H211" }},
+{data: { id: 'RBL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q08999" }}], 
+ edges: [{ data: { source: 'CREBBP', target: 'CDK2', directed: 'false', weight: 0.596483} },
+{ data: { source: 'CREBBP', target: 'RBL2', directed: 'false', weight: 0.390018} },
+{ data: { source: 'CREBBP', target: 'RBL1', directed: 'false', weight: 0.390018} },
+{ data: { source: 'CREBBP', target: 'CDKN1C', directed: 'false', weight: 0.163688} },
+{ data: { source: 'CREBBP', target: 'CCNA2', directed: 'false', weight: 0.154109} },
+{ data: { source: 'CREBBP', target: 'CDKN1B', directed: 'false', weight: 0.139738} },
+{ data: { source: 'CREBBP', target: 'CDKN3', directed: 'false', weight: 0.117318} },
+{ data: { source: 'CREBBP', target: 'CCNE2', directed: 'false', weight: 0.102931} },
+{ data: { source: 'CREBBP', target: 'CKS1B', directed: 'false', weight: 0.102931} },
+{ data: { source: 'CREBBP', target: 'CCNE1', directed: 'false', weight: 0.0986491} },
+{ data: { source: 'CREBBP', target: 'GMNN', directed: 'false', weight: 0.0952728} },
+{ data: { source: 'CREBBP', target: 'CDK3', directed: 'false', weight: 0.0952728} },
+{ data: { source: 'CREBBP', target: 'SKP2', directed: 'false', weight: 0.0925023} },
+{ data: { source: 'CDKN1C', target: 'CDK2', directed: 'false', weight: 0.998208} },
+{ data: { source: 'CDKN1C', target: 'CCNA2', directed: 'false', weight: 0.992373} },
+{ data: { source: 'CDKN1C', target: 'CDKN1B', directed: 'false', weight: 0.96429} },
+{ data: { source: 'CDKN1C', target: 'CDKN1A', directed: 'false', weight: 0.882042} },
+{ data: { source: 'CDKN1C', target: 'CCND3', directed: 'false', weight: 0.841917} },
+{ data: { source: 'CDKN1C', target: 'CKS1B', directed: 'false', weight: 0.6569619999999999} },
+{ data: { source: 'CDKN1C', target: 'CDK1', directed: 'false', weight: 0.623617} },
+{ data: { source: 'CDKN1C', target: 'CDK3', directed: 'false', weight: 0.5275350000000001} },
+{ data: { source: 'CDKN1C', target: 'SKP2', directed: 'false', weight: 0.522824} },
+{ data: { source: 'CDKN1C', target: 'GMNN', directed: 'false', weight: 0.393505} },
+{ data: { source: 'CDKN1C', target: 'CDT1', directed: 'false', weight: 0.322583} },
+{ data: { source: 'CDKN1C', target: 'RBL2', directed: 'false', weight: 0.313012} },
+{ data: { source: 'CDKN1C', target: 'CCNE1', directed: 'false', weight: 0.306738} },
+{ data: { source: 'CDKN1C', target: 'CCNE2', directed: 'false', weight: 0.29534699999999997} },
+{ data: { source: 'CDKN1C', target: 'CCNB1', directed: 'false', weight: 0.266945} },
+{ data: { source: 'CDKN1C', target: 'CDKN3', directed: 'false', weight: 0.222827} },
+{ data: { source: 'CDKN1C', target: 'RBL1', directed: 'false', weight: 0.0952728} },
+{ data: { source: 'CDK1', target: 'CCNB1', directed: 'false', weight: 0.999956} },
+{ data: { source: 'CDK1', target: 'CKS1B', directed: 'false', weight: 0.9995700000000001} },
+{ data: { source: 'CDK1', target: 'CDKN1B', directed: 'false', weight: 0.9445290000000001} },
+{ data: { source: 'CDK1', target: 'SKP2', directed: 'false', weight: 0.927307} },
+{ data: { source: 'CDK1', target: 'CCNA2', directed: 'false', weight: 0.816192} },
+{ data: { source: 'CDKN1A', target: 'CCNE2', directed: 'false', weight: 0.999244} },
+{ data: { source: 'CDKN1A', target: 'CCND3', directed: 'false', weight: 0.9984270000000001} },
+{ data: { source: 'CDKN1A', target: 'CDK2', directed: 'false', weight: 0.989224} },
+{ data: { source: 'CDKN1A', target: 'CDKN1B', directed: 'false', weight: 0.864395} },
+{ data: { source: 'CDKN1A', target: 'CCNE1', directed: 'false', weight: 0.375628} },
+{ data: { source: 'CCNE1', target: 'CDK2', directed: 'false', weight: 0.960686} },
+{ data: { source: 'CCNE1', target: 'CCNA2', directed: 'false', weight: 0.618629} },
+{ data: { source: 'CCNE1', target: 'CDK3', directed: 'false', weight: 0.607645} },
+{ data: { source: 'CCNE1', target: 'CDKN1B', directed: 'false', weight: 0.593596} },
+{ data: { source: 'CCNE1', target: 'CCNE2', directed: 'false', weight: 0.586024} },
+{ data: { source: 'CCNE1', target: 'CKS1B', directed: 'false', weight: 0.29352399999999995} },
+{ data: { source: 'CCNE1', target: 'SKP2', directed: 'false', weight: 0.233444} },
+{ data: { source: 'CCNE1', target: 'GMNN', directed: 'false', weight: 0.149338} },
+{ data: { source: 'CCNE1', target: 'CCND3', directed: 'false', weight: 0.125737} },
+{ data: { source: 'CCNE1', target: 'CDT1', directed: 'false', weight: 0.112499} },
+{ data: { source: 'CCNE1', target: 'CDKN3', directed: 'false', weight: 0.112499} },
+{ data: { source: 'CCNE1', target: 'RBL2', directed: 'false', weight: 0.0986491} },
+{ data: { source: 'CCNE1', target: 'RBL1', directed: 'false', weight: 0.0986491} },
+{ data: { source: 'RBL2', target: 'CDK2', directed: 'false', weight: 0.776558} },
+{ data: { source: 'RBL2', target: 'CDKN1B', directed: 'false', weight: 0.251136} },
+{ data: { source: 'RBL2', target: 'RBL1', directed: 'false', weight: 0.1922} },
+{ data: { source: 'RBL2', target: 'CCNA2', directed: 'false', weight: 0.154109} },
+{ data: { source: 'RBL2', target: 'CDKN3', directed: 'false', weight: 0.117318} },
+{ data: { source: 'RBL2', target: 'CCNE2', directed: 'false', weight: 0.102931} },
+{ data: { source: 'RBL2', target: 'CKS1B', directed: 'false', weight: 0.102931} },
+{ data: { source: 'RBL2', target: 'GMNN', directed: 'false', weight: 0.0952728} },
+{ data: { source: 'RBL2', target: 'CDK3', directed: 'false', weight: 0.0952728} },
+{ data: { source: 'RBL2', target: 'SKP2', directed: 'false', weight: 0.0925023} },
+{ data: { source: 'CDKN1B', target: 'CDK2', directed: 'false', weight: 0.9898290000000001} },
+{ data: { source: 'CDKN1B', target: 'CCNA2', directed: 'false', weight: 0.982893} },
+{ data: { source: 'CDKN1B', target: 'CCNB1', directed: 'false', weight: 0.921651} },
+{ data: { source: 'CDKN1B', target: 'CCND3', directed: 'false', weight: 0.8919940000000001} },
+{ data: { source: 'CDKN1B', target: 'CKS1B', directed: 'false', weight: 0.682646} },
+{ data: { source: 'CDKN1B', target: 'CDK3', directed: 'false', weight: 0.570008} },
+{ data: { source: 'CDKN1B', target: 'SKP2', directed: 'false', weight: 0.339965} },
+{ data: { source: 'CDKN1B', target: 'GMNN', directed: 'false', weight: 0.286729} },
+{ data: { source: 'CDKN1B', target: 'CDT1', directed: 'false', weight: 0.24989699999999998} },
+{ data: { source: 'CDKN1B', target: 'CCNE2', directed: 'false', weight: 0.226737} },
+{ data: { source: 'CDKN1B', target: 'CDKN3', directed: 'false', weight: 0.192166} },
+{ data: { source: 'CDKN1B', target: 'RBL1', directed: 'false', weight: 0.0881436} },
+{ data: { source: 'CCNE2', target: 'CDK2', directed: 'false', weight: 0.9869870000000001} },
+{ data: { source: 'CCNE2', target: 'CCNA2', directed: 'false', weight: 0.5941770000000001} },
+{ data: { source: 'CCNE2', target: 'CDK3', directed: 'false', weight: 0.353921} },
+{ data: { source: 'CCNE2', target: 'CKS1B', directed: 'false', weight: 0.282317} },
+{ data: { source: 'CCNE2', target: 'CCND3', directed: 'false', weight: 0.229492} },
+{ data: { source: 'CCNE2', target: 'SKP2', directed: 'false', weight: 0.22389} },
+{ data: { source: 'CCNE2', target: 'GMNN', directed: 'false', weight: 0.163688} },
+{ data: { source: 'CCNE2', target: 'CDT1', directed: 'false', weight: 0.117318} },
+{ data: { source: 'CCNE2', target: 'CDKN3', directed: 'false', weight: 0.117318} },
+{ data: { source: 'CCNE2', target: 'RBL1', directed: 'false', weight: 0.102931} },
+{ data: { source: 'CDK2', target: 'CCNA2', directed: 'false', weight: 0.999647} },
+{ data: { source: 'CDK2', target: 'CKS1B', directed: 'false', weight: 0.9989299999999999} },
+{ data: { source: 'CDK2', target: 'SKP2', directed: 'false', weight: 0.9903059999999999} },
+{ data: { source: 'CDK2', target: 'RBL1', directed: 'false', weight: 0.8419030000000001} },
+{ data: { source: 'CDK2', target: 'GMNN', directed: 'false', weight: 0.8271569999999999} },
+{ data: { source: 'CDK2', target: 'CDKN3', directed: 'false', weight: 0.689573} },
+{ data: { source: 'CDK2', target: 'CDK3', directed: 'false', weight: 0.456788} },
+{ data: { source: 'CDK2', target: 'CCND3', directed: 'false', weight: 0.133734} },
+{ data: { source: 'CDK2', target: 'CDT1', directed: 'false', weight: 0.00862177} },
+{ data: { source: 'RBL1', target: 'CCNA2', directed: 'false', weight: 0.154109} },
+{ data: { source: 'RBL1', target: 'CDKN3', directed: 'false', weight: 0.117318} },
+{ data: { source: 'RBL1', target: 'CKS1B', directed: 'false', weight: 0.102931} },
+{ data: { source: 'RBL1', target: 'GMNN', directed: 'false', weight: 0.0952728} },
+{ data: { source: 'RBL1', target: 'CDK3', directed: 'false', weight: 0.0952728} },
+{ data: { source: 'RBL1', target: 'SKP2', directed: 'false', weight: 0.0925023} },
+{ data: { source: 'GMNN', target: 'CDT1', directed: 'false', weight: 0.9866309999999999} },
+{ data: { source: 'GMNN', target: 'CCNA2', directed: 'false', weight: 0.960642} },
+{ data: { source: 'GMNN', target: 'SKP2', directed: 'false', weight: 0.886666} },
+{ data: { source: 'GMNN', target: 'CKS1B', directed: 'false', weight: 0.831472} },
+{ data: { source: 'GMNN', target: 'CDK3', directed: 'false', weight: 0.545612} },
+{ data: { source: 'GMNN', target: 'CDKN3', directed: 'false', weight: 0.222827} },
+{ data: { source: 'CDK3', target: 'CDT1', directed: 'false', weight: 0.697041} },
+{ data: { source: 'CDK3', target: 'CCNA2', directed: 'false', weight: 0.649161} },
+{ data: { source: 'CDK3', target: 'SKP2', directed: 'false', weight: 0.5229189999999999} },
+{ data: { source: 'CDK3', target: 'CKS1B', directed: 'false', weight: 0.33715100000000003} },
+{ data: { source: 'CDK3', target: 'CDKN3', directed: 'false', weight: 0.222827} },
+{ data: { source: 'CCNA2', target: 'SKP2', directed: 'false', weight: 0.99445} },
+{ data: { source: 'CCNA2', target: 'CKS1B', directed: 'false', weight: 0.991534} },
+{ data: { source: 'CCNA2', target: 'CCNB1', directed: 'false', weight: 0.613309} },
+{ data: { source: 'CCNA2', target: 'CDT1', directed: 'false', weight: 0.582594} },
+{ data: { source: 'CCNA2', target: 'CDKN3', directed: 'false', weight: 0.21064699999999997} },
+{ data: { source: 'SKP2', target: 'CKS1B', directed: 'false', weight: 0.972658} },
+{ data: { source: 'SKP2', target: 'CDKN3', directed: 'false', weight: 0.21064699999999997} },
+{ data: { source: 'SKP2', target: 'CCNB1', directed: 'false', weight: 0.194209} },
+{ data: { source: 'SKP2', target: 'CDT1', directed: 'false', weight: 0.12648399999999999} },
+{ data: { source: 'CKS1B', target: 'CCNB1', directed: 'false', weight: 0.9252790000000001} },
+{ data: { source: 'CKS1B', target: 'CDT1', directed: 'false', weight: 0.42068599999999995} },
+{ data: { source: 'CKS1B', target: 'CDKN3', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'CDKN3', target: 'CDT1', directed: 'false', weight: 0.133456} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 p27-cyclinE-Cdk2 - Ubiquitin E3 ligase (SKP1A, SKP2, CUL1, CKS1B, RBX1) complex<br> Complex Score (from Super.Complex) = 0.55305<br> Unweighted Density = 0.73
+    </section>
+    </body>
+    </html>
+    

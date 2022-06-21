@@ -1,0 +1,148 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 PP2A A/C-striatin complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex43.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'STRIP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9ULQ0" }},
+{data: { id: 'TRAF3IP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y228" }},
+{data: { id: 'STRN4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NRL3" }},
+{data: { id: 'SIKE1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BRV8" }},
+{data: { id: 'STRIP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5VSL9" }},
+{data: { id: 'PREI3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3A3" }},
+{data: { id: 'PPP2CB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62714" }},
+{data: { id: 'STRN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43815" }},
+{data: { id: 'FGFR1OP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NVK5" }},
+{data: { id: 'STRN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13033" }}], 
+ edges: [{ data: { source: 'TRAF3IP3', target: 'FGFR1OP2', directed: 'false', weight: 0.942584} },
+{ data: { source: 'TRAF3IP3', target: 'STRIP2', directed: 'false', weight: 0.850692} },
+{ data: { source: 'TRAF3IP3', target: 'SIKE1', directed: 'false', weight: 0.352923} },
+{ data: { source: 'TRAF3IP3', target: 'STRIP1', directed: 'false', weight: 0.195052} },
+{ data: { source: 'TRAF3IP3', target: 'STRN', directed: 'false', weight: 0.15145899999999998} },
+{ data: { source: 'TRAF3IP3', target: 'STRN4', directed: 'false', weight: 0.08093389999999999} },
+{ data: { source: 'TRAF3IP3', target: 'PREI3', directed: 'false', weight: 0.0624544} },
+{ data: { source: 'TRAF3IP3', target: 'STRN3', directed: 'false', weight: 0.0500597} },
+{ data: { source: 'SIKE1', target: 'PPP2CB', directed: 'false', weight: 0.97716} },
+{ data: { source: 'SIKE1', target: 'STRN4', directed: 'false', weight: 0.184896} },
+{ data: { source: 'SIKE1', target: 'STRN', directed: 'false', weight: 0.139829} },
+{ data: { source: 'SIKE1', target: 'STRIP1', directed: 'false', weight: 0.118626} },
+{ data: { source: 'SIKE1', target: 'PREI3', directed: 'false', weight: 0.10857} },
+{ data: { source: 'SIKE1', target: 'STRN3', directed: 'false', weight: 0.106153} },
+{ data: { source: 'SIKE1', target: 'FGFR1OP2', directed: 'false', weight: 0.0959212} },
+{ data: { source: 'PREI3', target: 'STRN', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PREI3', target: 'STRN3', directed: 'false', weight: 0.99998} },
+{ data: { source: 'PREI3', target: 'STRN4', directed: 'false', weight: 0.999948} },
+{ data: { source: 'PREI3', target: 'PPP2CB', directed: 'false', weight: 0.9740209999999999} },
+{ data: { source: 'PREI3', target: 'STRIP1', directed: 'false', weight: 0.36340300000000003} },
+{ data: { source: 'PREI3', target: 'FGFR1OP2', directed: 'false', weight: 0.33632399999999996} },
+{ data: { source: 'FGFR1OP2', target: 'PPP2CB', directed: 'false', weight: 0.931637} },
+{ data: { source: 'FGFR1OP2', target: 'STRN', directed: 'false', weight: 0.5723600000000001} },
+{ data: { source: 'FGFR1OP2', target: 'STRN4', directed: 'false', weight: 0.356158} },
+{ data: { source: 'FGFR1OP2', target: 'STRN3', directed: 'false', weight: 0.15069200000000002} },
+{ data: { source: 'FGFR1OP2', target: 'STRIP1', directed: 'false', weight: 0.130475} },
+{ data: { source: 'FGFR1OP2', target: 'STRIP2', directed: 'false', weight: 0.0315129} },
+{ data: { source: 'STRN', target: 'PPP2CB', directed: 'false', weight: 0.9981459999999999} },
+{ data: { source: 'STRN', target: 'STRN4', directed: 'false', weight: 0.965619} },
+{ data: { source: 'STRN', target: 'STRN3', directed: 'false', weight: 0.768393} },
+{ data: { source: 'STRN', target: 'STRIP1', directed: 'false', weight: 0.527079} },
+{ data: { source: 'STRN', target: 'STRIP2', directed: 'false', weight: 0.0635864} },
+{ data: { source: 'STRIP1', target: 'PPP2CB', directed: 'false', weight: 0.9986860000000001} },
+{ data: { source: 'STRIP1', target: 'STRN3', directed: 'false', weight: 0.590692} },
+{ data: { source: 'STRIP1', target: 'STRN4', directed: 'false', weight: 0.5} },
+{ data: { source: 'STRN4', target: 'PPP2CB', directed: 'false', weight: 0.998909} },
+{ data: { source: 'STRN4', target: 'STRN3', directed: 'false', weight: 0.9466870000000001} },
+{ data: { source: 'PPP2CB', target: 'STRIP2', directed: 'false', weight: 0.9996219999999999} },
+{ data: { source: 'PPP2CB', target: 'STRN3', directed: 'false', weight: 0.998848} },
+{ data: { source: 'STRN3', target: 'STRIP2', directed: 'false', weight: 0.15171099999999998} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 PP2A A/C-striatin complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.89
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,91 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 tRNA Splicing Ligase Complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex75.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DDX1', score: 5, href: "https://www.uniprot.org/uniprot/Q92499" }},
+{data: { id: 'C14orf166', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y224" }},
+{data: { id: 'FAM98B', score: 5, href: "https://www.uniprot.org/uniprot/Q52LJ0" }},
+{data: { id: 'RTCB', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3I0" }}], 
+ edges: [{ data: { source: 'C14orf166', target: 'FAM98B', directed: 'false', weight: 0.919057} },
+{ data: { source: 'C14orf166', target: 'RTCB', directed: 'false', weight: 0.440833} },
+{ data: { source: 'C14orf166', target: 'DDX1', directed: 'false', weight: 0.282169} },
+{ data: { source: 'FAM98B', target: 'RTCB', directed: 'false', weight: 0.0274379} },
+{ data: { source: 'DDX1', target: 'RTCB', directed: 'false', weight: 0.999908} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 tRNA Splicing Ligase Complex	<br> Unweighted Density = 0.83
+    </section>
+    </body>
+    </html>
+    

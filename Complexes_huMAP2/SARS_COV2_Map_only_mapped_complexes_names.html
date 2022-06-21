@@ -1,0 +1,270 @@
+
+    <!doctype html>
+    
+    <html>
+    
+    <head>
+    <title> SARS-COV2-human map </title>
+
+    		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    
+    		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+    <script src="https://unpkg.com/cose-base/cose-base.js"></script>
+    <script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 1920px;
+            height: 1080px;
+            position: absolute;
+                top: 100px;
+                right: -300px;	
+        }
+    </style>
+    
+    <body>
+    <section>
+    
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp6', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp6.html" }},
+{data: { id: 'SARS-CoV2 nsp7', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp7.html" }},
+{data: { id: 'SARS-CoV2 orf10', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 orf10.html" }},
+{data: { id: 'SARS-CoV2 nsp13', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp13.html" }},
+{data: { id: 'SARS-CoV2 E', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 E.html" }},
+{data: { id: 'SARS-CoV2 nsp14', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp14.html" }},
+{data: { id: 'SARS-CoV2 nsp1', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp1.html" }},
+{data: { id: 'SARS-CoV2 nsp5_C145A', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp5_C145A.html" }},
+{data: { id: 'SARS-CoV2 orf9b', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 orf9b.html" }},
+{data: { id: 'SARS-CoV2 M', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 M.html" }},
+{data: { id: 'SARS-CoV2 nsp15', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp15.html" }},
+{data: { id: 'SARS-CoV2 orf8', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 orf8.html" }},
+{data: { id: 'SARS-CoV2 orf9c', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 orf9c.html" }},
+{data: { id: 'SARS-CoV2 N', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 N.html" }},
+{data: { id: 'SARS-CoV2 orf3a', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 orf3a.html" }},
+{data: { id: 'SARS-CoV2 nsp12', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp12.html" }},
+{data: { id: 'SARS-CoV2 nsp5', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp5.html" }},
+{data: { id: 'SARS-CoV2 nsp9', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp9.html" }},
+{data: { id: 'SARS-CoV2 orf6', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 orf6.html" }},
+{data: { id: 'SARS-CoV2 nsp2', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp2.html" }},
+{data: { id: 'SARS-CoV2 orf3b', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 orf3b.html" }},
+{data: { id: 'SARS-CoV2 orf7a', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 orf7a.html" }},
+{data: { id: 'SARS-CoV2 Spike', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 Spike.html" }},
+{data: { id: 'SARS-CoV2 nsp8', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp8.html" }},
+{data: { id: 'SARS-CoV2 nsp4', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp4.html" }},
+{data: { id: 'SARS-CoV2 nsp10', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp10.html" }},
+{data: { id: 'SARS-CoV2 nsp11', score: 2, type:  'sars' , href: "./SARS_COV2prots/SARS-CoV2 nsp11.html" }},
+{data: { id:"IMPDH ANKRD9 IMPDH2", score: 0, type: 'complex', href: "./Predicted/Complex229.html" }},
+{data: { id:"0.1 NPC subcomplex (NUP98, NUP107, NUP133, NUP160)", score: 0, type: 'complex', href: "./Predicted/Complex172.html" }},
+{data: { id:"0.2 SERCA-PLN complex", score: 0, type: 'complex', href: "./Predicted/Complex549.html" }},
+{data: { id:"0.2 ABCB1-PPP2R3C-TFPI2 complex", score: 0, type: 'complex', href: "./Predicted/Complex228.html" }},
+{data: { id:"0.2 SEPHS1-SEPHS2-SEPSECS-SECp43 complex", score: 0, type: 'complex', href: "./Predicted/Complex348.html" }},
+{data: { id:"0.1 CDC5L core complex", score: 0, type: 'complex', href: "./Predicted/Complex133.html" }},
+{data: { id:"DYRK1B LZTS2 DYRK1A DKFZp686H01244 DCAF7 FAM53C CEFIP", score: 0, type: 'complex', href: "./Predicted/Complex258.html" }},
+{data: { id:"0.2 HSPA9-GRPEL1 complex", score: 0, type: 'complex', href: "./Predicted/Complex247.html" }},
+{data: { id:"CTNNA3 CDH4 CDH3", score: 0, type: 'complex', href: "./Predicted/Complex372.html" }},
+{data: { id:"0.2 Nogo-potassium channel complex", score: 0, type: 'complex', href: "./Predicted/Complex554.html" }},
+{data: { id:"0.3 SNARE complex (VAMP4, STX6, STX16, VTI1a, VTI1b)", score: 0, type: 'complex', href: "./Predicted/Complex76.html" }},
+{data: { id:"0.2 BIN1-EHBP1-RAB8A complex", score: 0, type: 'complex', href: "./Predicted/Complex311.html" }},
+{data: { id:"0.3 Apoptosis- and splicing-associated protein complex (ASAP-L), SAP18, RNPS1, Acinus-L", score: 0, type: 'complex', href: "./Predicted/Complex142.html" }},
+{data: { id:"CTDSPL CTDSP2 MAP7D1 CDCA3 CTDSP1", score: 0, type: 'complex', href: "./Predicted/Complex282.html" }},
+{data: { id:"0.6 Arp2/3 protein complex", score: 0, type: 'complex', href: "./Predicted/Complex31.html" }},
+{data: { id:"0.1 CEN complex", score: 0, type: 'complex', href: "./Predicted/Complex136.html" }},
+{data: { id:"RTL8C PEG10 RTL8A", score: 0, type: 'complex', href: "./Predicted/Complex407.html" }},
+{data: { id:"0.1 BRD4-P-TEFb complex", score: 0, type: 'complex', href: "./Predicted/Complex269.html" }},
+{data: { id:"0.2 WWTR1 homodimer", score: 0, type: 'complex', href: "./Predicted/Complex119.html" }},
+{data: { id:"0.3 RPA complex", score: 0, type: 'complex', href: "./Predicted/Complex54.html" }},
+{data: { id:"0.6 Decapping complex", score: 0, type: 'complex', href: "./Predicted/Complex75.html" }},
+{data: { id:"SYTL2 SYTL1 RAB27B", score: 0, type: 'complex', href: "./Predicted/Complex456.html" }},
+{data: { id:"0.3 MEP50-PRMT5-ICLN complex", score: 0, type: 'complex', href: "./Predicted/Complex130.html" }},
+{data: { id:"0.1 Ku antigen complex", score: 0, type: 'complex', href: "./Predicted/Complex98.html" }},
+{data: { id:"GDI1 RAB8B RAB1A AKR1C2 RAB33B LDHC RAB1B ACOX1", score: 0, type: 'complex', href: "./Predicted/Complex340.html" }},
+{data: { id:"0.05 Emerin complex 25", score: 0, type: 'complex', href: "./Predicted/Complex316.html" }},
+{data: { id:"0.6 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)", score: 0, type: 'complex', href: "./Predicted/Complex91.html" }},
+{data: { id:"0.2 GNAI1-GNB5-GNGT1 complex", score: 0, type: 'complex', href: "./Predicted/Complex231.html" }},
+{data: { id:"0.6 Rnase/Mrp complex", score: 0, type: 'complex', href: "./Predicted/Complex73.html" }},
+{data: { id:"0.4 WASH complex", score: 0, type: 'complex', href: "./Predicted/Complex117.html" }},
+{data: { id:"0.1 ATL3-SPG31 complex", score: 0, type: 'complex', href: "./Predicted/Complex580.html" }},
+{data: { id:"0.2 c-Jun-ATF3 complex", score: 0, type: 'complex', href: "./Predicted/Complex49.html" }},
+{data: { id:"0.8 CORVET complex", score: 0, type: 'complex', href: "./Predicted/Complex123.html" }},
+{data: { id:"NIN CEP170P1 CEP170", score: 0, type: 'complex', href: "./Predicted/Complex368.html" }},
+{data: { id:"0.5 Septin complex", score: 0, type: 'complex', href: "./Predicted/Complex26.html" }},
+{data: { id:"0.5 GM130-GRASP65 complex", score: 0, type: 'complex', href: "./Predicted/Complex266.html" }},
+{data: { id:"0.1 SNF2H-BAZ1A complex", score: 0, type: 'complex', href: "./Predicted/Complex63.html" }},
+{data: { id:"MLX PNKD MLXIP", score: 0, type: 'complex', href: "./Predicted/Complex413.html" }},
+{data: { id:"0.3 TREX complex", score: 0, type: 'complex', href: "./Predicted/Complex58.html" }},
+{data: { id:"0.7 TRAPP complex", score: 0, type: 'complex', href: "./Predicted/Complex41.html" }},
+{data: { id:"0.1 Gamma-secretase complex (APH1A, PSENEN, PSEN1, NCSTN, TMP21)", score: 0, type: 'complex', href: "./Predicted/Complex105.html" }},
+{data: { id:"0.2 TIMM8A-TIMM13 complex", score: 0, type: 'complex', href: "./Predicted/Complex295.html" }},
+{data: { id:"Isocitrate dehydrogenase [NAD], mitochondrial", score: 0, type: 'complex', href: "./Predicted/Complex208.html" }},
+{data: { id:"0.05 C complex spliceosome", score: 0, type: 'complex', href: "./Predicted/Complex270.html" }},
+{data: { id:"0.2 PKA (RII-alpha and RII-beta)-AKAP5-ADRB1 complex", score: 0, type: 'complex', href: "./Predicted/Complex88.html" }},
+{data: { id:"0.7 LIN9-BMYB complex", score: 0, type: 'complex', href: "./Predicted/Complex214.html" }},
+{data: { id:"0.1 Ubiquilin-proteasome complex", score: 0, type: 'complex', href: "./Predicted/Complex82.html" }},
+{data: { id:"0.1 GRASP1-GRIP1 complex", score: 0, type: 'complex', href: "./Predicted/Complex250.html" }},
+{data: { id:"0.3 GALNS-lysosomal hydrolase 1.27 MDa complex", score: 0, type: 'complex', href: "./Predicted/Complex525.html" }},
+{data: { id:"FNDC3A FNDC3B TENT5A", score: 0, type: 'complex', href: "./Predicted/Complex419.html" }},
+{data: { id:"0.1 SELK multiprotein complex", score: 0, type: 'complex', href: "./Predicted/Complex151.html" }},
+{data: { id:"0.3 Integrator complex", score: 0, type: 'complex', href: "./Predicted/Complex122.html" }},
+{data: { id:"0.2 GNAI1-GNB1-GNG12 complex", score: 0, type: 'complex', href: "./Predicted/Complex158.html" }},
+{data: { id:"0.6 Condensin II", score: 0, type: 'complex', href: "./Predicted/Complex100.html" }},
+{data: { id:"0.2 REP-RGGT-Rab complex match 2", score: 0, type: 'complex', href: "./Predicted/Complex254.html" }},
+{data: { id:"GINM1 RCHY1 PLEKHA5", score: 0, type: 'complex', href: "./Predicted/Complex562.html" }},
+{data: { id:"0.5 MIS18 complex", score: 0, type: 'complex', href: "./Predicted/Complex387.html" }},
+{data: { id:"PHGDH EPN2 EPN3", score: 0, type: 'complex', href: "./Predicted/Complex380.html" }},
+{data: { id:"0.2 RIAM-VASP complex", score: 0, type: 'complex', href: "./Predicted/Complex185.html" }},
+{data: { id:"0.8 HAUS augmin-like complex", score: 0, type: 'complex', href: "./Predicted/Complex52.html" }},
+{data: { id:"0.6 Bag6-Ubl4A-Trc35 Complex", score: 0, type: 'complex', href: "./Predicted/Complex116.html" }},
+{data: { id:"0.2 SCAMP1-SCAMP2 complex", score: 0, type: 'complex', href: "./Predicted/Complex451.html" }},
+{data: { id:"0.1 DVL2-INVS-NPHP4-RPGRIP1L complex", score: 0, type: 'complex', href: "./Predicted/Complex576.html" }},
+{data: { id:"0.3 p27-cyclinE-Cdk2 - Ubiquitin E3 ligase (SKP1A, SKP2, CUL1, CKS1B, RBX1) complex", score: 0, type: 'complex', href: "./Predicted/Complex92.html" }}], 
+ edges: [{ data: { source: "0.1 CDC5L core complex", target: "0.2 HSPA9-GRPEL1 complex", directed: 'false',type: 'complex2complex', weight: 0.05} },
+{ data: { source: "0.2 Nogo-potassium channel complex", target: "0.1 ATL3-SPG31 complex", directed: 'false',type: 'complex2complex', weight: 0.09090909090909091} },
+{ data: { source: "0.3 SNARE complex (VAMP4, STX6, STX16, VTI1a, VTI1b)", target: "0.5 GM130-GRASP65 complex", directed: 'false',type: 'complex2complex', weight: 0.0625} },
+{ data: { source: "0.3 RPA complex", target: "0.1 Ku antigen complex", directed: 'false',type: 'complex2complex', weight: 0.05263157894736842} },
+{ data: { source: "SARS-CoV2 E", target: "0.6 Decapping complex", directed: 'false',type: 'prot2complex', weight: 0.25679715388135177} },
+{ data: { source: "SARS-CoV2 E", target: "0.6 Condensin II", directed: 'false',type: 'prot2complex', weight: 0.2607783702061282} },
+{ data: { source: "SARS-CoV2 E", target: "0.1 BRD4-P-TEFb complex", directed: 'false',type: 'prot2complex', weight: 0.5023957718274827} },
+{ data: { source: "SARS-CoV2 M", target: "0.2 SERCA-PLN complex", directed: 'false',type: 'prot2complex', weight: 0.21790660222739094} },
+{ data: { source: "SARS-CoV2 M", target: "0.6 Bag6-Ubl4A-Trc35 Complex", directed: 'false',type: 'prot2complex', weight: 0.21186022768554746} },
+{ data: { source: "SARS-CoV2 M", target: "0.2 REP-RGGT-Rab complex match 2", directed: 'false',type: 'prot2complex', weight: 0.21186022768554746} },
+{ data: { source: "SARS-CoV2 M", target: "0.2 SCAMP1-SCAMP2 complex", directed: 'false',type: 'prot2complex', weight: 0.4980421587567794} },
+{ data: { source: "SARS-CoV2 M", target: "0.3 p27-cyclinE-Cdk2 - Ubiquitin E3 ligase (SKP1A, SKP2, CUL1, CKS1B, RBX1) complex", directed: 'false',type: 'prot2complex', weight: 0.4246027591879363} },
+{ data: { source: "SARS-CoV2 M", target: "0.2 Nogo-potassium channel complex", directed: 'false',type: 'prot2complex', weight: 0.2328846791269841} },
+{ data: { source: "SARS-CoV2 M", target: "0.1 ATL3-SPG31 complex", directed: 'false',type: 'prot2complex', weight: 0.2328846791269841} },
+{ data: { source: "SARS-CoV2 M", target: "0.7 LIN9-BMYB complex", directed: 'false',type: 'prot2complex', weight: 0.21360540636643136} },
+{ data: { source: "SARS-CoV2 M", target: "0.2 BIN1-EHBP1-RAB8A complex", directed: 'false',type: 'prot2complex', weight: 0.2015797792629396} },
+{ data: { source: "SARS-CoV2 N", target: "0.4 WASH complex", directed: 'false',type: 'prot2complex', weight: 0.22951136374266537} },
+{ data: { source: "SARS-CoV2 N", target: "0.8 CORVET complex", directed: 'false',type: 'prot2complex', weight: 0.4516755405658843} },
+{ data: { source: "SARS-CoV2 N", target: "0.1 SELK multiprotein complex", directed: 'false',type: 'prot2complex', weight: 0.42184394516718354} },
+{ data: { source: "SARS-CoV2 N", target: "0.2 HSPA9-GRPEL1 complex", directed: 'false',type: 'prot2complex', weight: 0.19632192554964725} },
+{ data: { source: "SARS-CoV2 N", target: "0.3 MEP50-PRMT5-ICLN complex", directed: 'false',type: 'prot2complex', weight: 0.24547751193524986} },
+{ data: { source: "SARS-CoV2 N", target: "RTL8C PEG10 RTL8A", directed: 'false',type: 'prot2complex', weight: 0.2180677467896894} },
+{ data: { source: "SARS-CoV2 Spike", target: "MLX PNKD MLXIP", directed: 'false',type: 'prot2complex', weight: 0.2618179416428892} },
+{ data: { source: "SARS-CoV2 nsp1", target: "IMPDH ANKRD9 IMPDH2", directed: 'false',type: 'prot2complex', weight: 0.7745387751138091} },
+{ data: { source: "SARS-CoV2 nsp1", target: "0.6 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)", directed: 'false',type: 'prot2complex', weight: 0.2116431490281246} },
+{ data: { source: "SARS-CoV2 nsp10", target: "0.1 SNF2H-BAZ1A complex", directed: 'false',type: 'prot2complex', weight: 0.5261027102697556} },
+{ data: { source: "SARS-CoV2 nsp10", target: "0.3 Apoptosis- and splicing-associated protein complex (ASAP-L), SAP18, RNPS1, Acinus-L", directed: 'false',type: 'prot2complex', weight: 0.2619556936937816} },
+{ data: { source: "SARS-CoV2 nsp10", target: "0.2 HSPA9-GRPEL1 complex", directed: 'false',type: 'prot2complex', weight: 0.262936774923893} },
+{ data: { source: "SARS-CoV2 nsp12", target: "0.2 WWTR1 homodimer", directed: 'false',type: 'prot2complex', weight: 0.2249275737752392} },
+{ data: { source: "SARS-CoV2 nsp12", target: "0.05 C complex spliceosome", directed: 'false',type: 'prot2complex', weight: 0.26139911406789595} },
+{ data: { source: "SARS-CoV2 nsp12", target: "0.2 GNAI1-GNB1-GNG12 complex", directed: 'false',type: 'prot2complex', weight: 0.26459988539473694} },
+{ data: { source: "SARS-CoV2 nsp12", target: "GINM1 RCHY1 PLEKHA5", directed: 'false',type: 'prot2complex', weight: 0.2639905634151121} },
+{ data: { source: "SARS-CoV2 nsp13", target: "0.3 TREX complex", directed: 'false',type: 'prot2complex', weight: 0.2615997609605308} },
+{ data: { source: "SARS-CoV2 nsp13", target: "0.2 GNAI1-GNB5-GNGT1 complex", directed: 'false',type: 'prot2complex', weight: 0.4928144346983864} },
+{ data: { source: "SARS-CoV2 nsp13", target: "0.7 TRAPP complex", directed: 'false',type: 'prot2complex', weight: 1.0} },
+{ data: { source: "SARS-CoV2 nsp13", target: "0.2 c-Jun-ATF3 complex", directed: 'false',type: 'prot2complex', weight: 0.24306600846861523} },
+{ data: { source: "SARS-CoV2 nsp13", target: "0.1 CDC5L core complex", directed: 'false',type: 'prot2complex', weight: 0.5071179811905264} },
+{ data: { source: "SARS-CoV2 nsp13", target: "0.5 GM130-GRASP65 complex", directed: 'false',type: 'prot2complex', weight: 0.5168140885532869} },
+{ data: { source: "SARS-CoV2 nsp13", target: "0.1 GRASP1-GRIP1 complex", directed: 'false',type: 'prot2complex', weight: 0.2637973106167483} },
+{ data: { source: "SARS-CoV2 nsp13", target: "0.5 MIS18 complex", directed: 'false',type: 'prot2complex', weight: 0.2599265419760765} },
+{ data: { source: "SARS-CoV2 nsp13", target: "NIN CEP170P1 CEP170", directed: 'false',type: 'prot2complex', weight: 0.26426829635233473} },
+{ data: { source: "SARS-CoV2 nsp13", target: "CTNNA3 CDH4 CDH3", directed: 'false',type: 'prot2complex', weight: 0.23276087761907818} },
+{ data: { source: "SARS-CoV2 nsp13", target: "PHGDH EPN2 EPN3", directed: 'false',type: 'prot2complex', weight: 0.2649045663729097} },
+{ data: { source: "SARS-CoV2 nsp13", target: "0.2 RIAM-VASP complex", directed: 'false',type: 'prot2complex', weight: 0.2649252170142949} },
+{ data: { source: "SARS-CoV2 nsp14", target: "0.2 ABCB1-PPP2R3C-TFPI2 complex", directed: 'false',type: 'prot2complex', weight: 0.2637577707082945} },
+{ data: { source: "SARS-CoV2 nsp2", target: "0.3 RPA complex", directed: 'false',type: 'prot2complex', weight: 0.2590798478230157} },
+{ data: { source: "SARS-CoV2 nsp2", target: "FNDC3A FNDC3B TENT5A", directed: 'false',type: 'prot2complex', weight: 0.2044741452823858} },
+{ data: { source: "SARS-CoV2 nsp5", target: "0.6 Rnase/Mrp complex", directed: 'false',type: 'prot2complex', weight: 0.2648346889306086} },
+{ data: { source: "SARS-CoV2 nsp5", target: "0.1 Gamma-secretase complex (APH1A, PSENEN, PSEN1, NCSTN, TMP21)", directed: 'false',type: 'prot2complex', weight: 0.2648346889306086} },
+{ data: { source: "SARS-CoV2 nsp5", target: "0.8 CORVET complex", directed: 'false',type: 'prot2complex', weight: 0.2648346889306086} },
+{ data: { source: "SARS-CoV2 nsp7", target: "0.1 ATL3-SPG31 complex", directed: 'false',type: 'prot2complex', weight: 0.2548780730005303} },
+{ data: { source: "SARS-CoV2 nsp7", target: "GDI1 RAB8B RAB1A AKR1C2 RAB33B LDHC RAB1B ACOX1", directed: 'false',type: 'prot2complex', weight: 0.24926540590216836} },
+{ data: { source: "SARS-CoV2 nsp8", target: "0.2 PKA (RII-alpha and RII-beta)-AKAP5-ADRB1 complex", directed: 'false',type: 'prot2complex', weight: 0.631039942154218} },
+{ data: { source: "SARS-CoV2 nsp8", target: "0.2 SEPHS1-SEPHS2-SEPSECS-SECp43 complex", directed: 'false',type: 'prot2complex', weight: 0.21575682635154564} },
+{ data: { source: "SARS-CoV2 nsp8", target: "0.1 Ku antigen complex", directed: 'false',type: 'prot2complex', weight: 0.3302557236203547} },
+{ data: { source: "SARS-CoV2 nsp9", target: "0.5 Septin complex", directed: 'false',type: 'prot2complex', weight: 0.23384434456127506} },
+{ data: { source: "SARS-CoV2 nsp9", target: "0.1 NPC subcomplex (NUP98, NUP107, NUP133, NUP160)", directed: 'false',type: 'prot2complex', weight: 0.5035671318544451} },
+{ data: { source: "SARS-CoV2 nsp9", target: "DYRK1B LZTS2 DYRK1A DKFZp686H01244 DCAF7 FAM53C CEFIP", directed: 'false',type: 'prot2complex', weight: 0.25831198616421686} },
+{ data: { source: "SARS-CoV2 nsp9", target: "0.3 TREX complex", directed: 'false',type: 'prot2complex', weight: 0.23927995049922526} },
+{ data: { source: "SARS-CoV2 nsp9", target: "0.05 Emerin complex 25", directed: 'false',type: 'prot2complex', weight: 0.26072355012895554} },
+{ data: { source: "SARS-CoV2 orf10", target: "0.3 GALNS-lysosomal hydrolase 1.27 MDa complex", directed: 'false',type: 'prot2complex', weight: 0.21808370976079874} },
+{ data: { source: "SARS-CoV2 orf10", target: "CTDSPL CTDSP2 MAP7D1 CDCA3 CTDSP1", directed: 'false',type: 'prot2complex', weight: 0.21697860235361077} },
+{ data: { source: "SARS-CoV2 orf10", target: "0.2 TIMM8A-TIMM13 complex", directed: 'false',type: 'prot2complex', weight: 0.20068246765210349} },
+{ data: { source: "SARS-CoV2 orf10", target: "0.2 REP-RGGT-Rab complex match 2", directed: 'false',type: 'prot2complex', weight: 0.17462711247319793} },
+{ data: { source: "SARS-CoV2 orf3a", target: "0.3 Integrator complex", directed: 'false',type: 'prot2complex', weight: 0.25794464993811467} },
+{ data: { source: "SARS-CoV2 orf6", target: "0.6 Arp2/3 protein complex", directed: 'false',type: 'prot2complex', weight: 0.24081079372526457} },
+{ data: { source: "SARS-CoV2 orf6", target: "0.1 NPC subcomplex (NUP98, NUP107, NUP133, NUP160)", directed: 'false',type: 'prot2complex', weight: 0.24081079372526457} },
+{ data: { source: "SARS-CoV2 orf8", target: "0.6 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)", directed: 'false',type: 'prot2complex', weight: 0.2645082163754402} },
+{ data: { source: "SARS-CoV2 orf8", target: "SYTL2 SYTL1 RAB27B", directed: 'false',type: 'prot2complex', weight: 0.24826368122648151} },
+{ data: { source: "SARS-CoV2 orf8", target: "0.1 Ubiquilin-proteasome complex", directed: 'false',type: 'prot2complex', weight: 0.1928950085786045} },
+{ data: { source: "SARS-CoV2 orf9c", target: "0.1 CEN complex", directed: 'false',type: 'prot2complex', weight: 0.3868399521590587} },
+{ data: { source: "SARS-CoV2 orf9c", target: "0.1 DVL2-INVS-NPHP4-RPGRIP1L complex", directed: 'false',type: 'prot2complex', weight: 0.20637523583933268} },
+{ data: { source: "SARS-CoV2 orf9c", target: "Isocitrate dehydrogenase [NAD], mitochondrial", directed: 'false',type: 'prot2complex', weight: 0.6020265865447899} },
+{ data: { source: "SARS-CoV2 orf9c", target: "0.8 HAUS augmin-like complex", directed: 'false',type: 'prot2complex', weight: 0.1879954539539202} },
+{ data: { source: "SARS-CoV2 orf9c", target: "0.3 SNARE complex (VAMP4, STX6, STX16, VTI1a, VTI1b)", directed: 'false',type: 'prot2complex', weight: 0.25749747327136463} }]},
+
+    style: [
+        {
+            selector: 'node',
+            style: {
+            				'font-size': 20,
+            'font-weight': 'bold',
+                'shape': function( ele ){ 
+                                    if ( ele.data('type') == 'complex' ){return 'circle'}
+                                    if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                    
+      return 'rectangle';
+      },
+                'background-color': function( ele ){ 
+                                    if ( ele.data('type') == 'complex' ){return 'blue'}
+                                    if ( ele.data('type') == 'sars' ){return 'red'}             
+      return 'yellow';
+      },
+                  'text-wrap': 'wrap',
+        'text-max-width': '250',
+                'label': 'data(id)'
+            }
+        },
+    							{
+    							selector: 'edge',
+    							style: {
+    								'width': 'mapData(weight, 0, 1, 0, 5)',
+    								'line-color': function( ele ){ 
+                                    if ( ele.data('type') == 'prot2complex' ){return 'red'}
+      return 'blue';
+      },
+    								'opacity': 0.5
+    							}
+    						}
+    	]
+        
+    });
+    
+    cy.layout({
+        'name': 'cose',
+    	'animate':false,
+    	'nodeDimensionsIncludeLabels':true,
+    	'padding': 1,
+    	'componentSpacing': 20,
+    	 'idealEdgeLength': function( edge ){ return 10; },
+    	 // Divisor to compute edge forces
+      'edgeElasticity': function( edge ){ return 20; },
+       'fit': true,
+      'gravity' : 100   
+    }).run();
+        
+    cy.on('tap', 'node', function(){
+      try { // your browser may block popups
+        window.open( this.data('href') );
+      } catch(e){ // fall back on url change
+        window.location.href = this.data('href');
+      }
+    });      
+        </script>
+    
+    	<section>
+    	<br>
+    	<br>
+    	<br> 
+    
+    </section>
+    </body>
+    </html>
+    

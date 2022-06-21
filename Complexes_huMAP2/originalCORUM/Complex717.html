@@ -1,0 +1,97 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> SRm160/300 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex718.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DKFZp434N041', score: 1, href: "https://www.uniprot.org/uniprot/Q9UFS1" }},
+{data: { id: 'SNRPA1', score: 5, href: "https://www.uniprot.org/uniprot/P09661" }},
+{data: { id: 'TRA2B', score: 5, href: "https://www.uniprot.org/uniprot/P62995" }},
+{data: { id: 'SRRM1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IYB3" }},
+{data: { id: 'SRRM2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UQ35" }}], 
+ edges: [{ data: { source: 'TRA2B', target: 'SRRM2', directed: 'false', weight: 0.987612} },
+{ data: { source: 'TRA2B', target: 'DKFZp434N041', directed: 'false', weight: 0.9679709999999999} },
+{ data: { source: 'TRA2B', target: 'SRRM1', directed: 'false', weight: 0.083113} },
+{ data: { source: 'SRRM1', target: 'SRRM2', directed: 'false', weight: 0.138492} },
+{ data: { source: 'SRRM1', target: 'DKFZp434N041', directed: 'false', weight: 0.0414374} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    SRm160/300 complex	<br> Unweighted Density = 0.50
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,121 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TFIIH transcription factor complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex124.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ERCC2', score: 5, href: "https://www.uniprot.org/uniprot/P18074" }},
+{data: { id: 'CDK7', score: 5, href: "https://www.uniprot.org/uniprot/P50613" }},
+{data: { id: 'GTF2H3', score: 5, href: "https://www.uniprot.org/uniprot/Q13889" }},
+{data: { id: 'GTF2H1', score: 5, href: "https://www.uniprot.org/uniprot/P32780" }},
+{data: { id: 'MNAT1', score: 5, href: "https://www.uniprot.org/uniprot/P51948" }},
+{data: { id: 'CCNH', score: 5, href: "https://www.uniprot.org/uniprot/P51946" }},
+{data: { id: 'GTF2H5', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZYL4" }},
+{data: { id: 'ERCC3', score: 5, href: "https://www.uniprot.org/uniprot/P19447" }},
+{data: { id: 'GTF2H4', score: 5, href: "https://www.uniprot.org/uniprot/Q92759" }},
+{data: { id: 'GTF2H2', score: 5, href: "https://www.uniprot.org/uniprot/Q13888" }}], 
+ edges: [{ data: { source: 'ERCC2', target: 'CCNH', directed: 'false', weight: 0.218712} },
+{ data: { source: 'ERCC2', target: 'CDK7', directed: 'false', weight: 0.0696097} },
+{ data: { source: 'ERCC2', target: 'GTF2H5', directed: 'false', weight: 0.0292967} },
+{ data: { source: 'ERCC2', target: 'MNAT1', directed: 'false', weight: 0.0269902} },
+{ data: { source: 'CDK7', target: 'CCNH', directed: 'false', weight: 0.947509} },
+{ data: { source: 'CDK7', target: 'MNAT1', directed: 'false', weight: 0.778617} },
+{ data: { source: 'CDK7', target: 'GTF2H5', directed: 'false', weight: 0.0375103} },
+{ data: { source: 'GTF2H3', target: 'GTF2H1', directed: 'false', weight: 0.999901} },
+{ data: { source: 'GTF2H3', target: 'GTF2H5', directed: 'false', weight: 0.9858549999999999} },
+{ data: { source: 'GTF2H3', target: 'GTF2H2', directed: 'false', weight: 0.962284} },
+{ data: { source: 'GTF2H3', target: 'ERCC3', directed: 'false', weight: 0.9446} },
+{ data: { source: 'GTF2H3', target: 'GTF2H4', directed: 'false', weight: 0.9298} },
+{ data: { source: 'GTF2H1', target: 'ERCC3', directed: 'false', weight: 0.999914} },
+{ data: { source: 'GTF2H1', target: 'GTF2H4', directed: 'false', weight: 0.997658} },
+{ data: { source: 'GTF2H1', target: 'GTF2H5', directed: 'false', weight: 0.980325} },
+{ data: { source: 'GTF2H1', target: 'GTF2H2', directed: 'false', weight: 0.963936} },
+{ data: { source: 'MNAT1', target: 'CCNH', directed: 'false', weight: 0.99995} },
+{ data: { source: 'CCNH', target: 'GTF2H5', directed: 'false', weight: 0.0217554} },
+{ data: { source: 'GTF2H5', target: 'GTF2H4', directed: 'false', weight: 0.9825440000000001} },
+{ data: { source: 'GTF2H5', target: 'ERCC3', directed: 'false', weight: 0.9513860000000001} },
+{ data: { source: 'GTF2H5', target: 'GTF2H2', directed: 'false', weight: 0.746542} },
+{ data: { source: 'ERCC3', target: 'GTF2H4', directed: 'false', weight: 0.9996120000000001} },
+{ data: { source: 'ERCC3', target: 'GTF2H2', directed: 'false', weight: 0.9892780000000001} },
+{ data: { source: 'GTF2H4', target: 'GTF2H2', directed: 'false', weight: 0.823206} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    TFIIH transcription factor complex	<br> Unweighted Density = 0.53
+    </section>
+    </body>
+    </html>
+    

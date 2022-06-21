@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CRYZL1 PPP1R21 TBCK GATD1 C12orf4</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex59.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TBCK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TEA7" }},
+{data: { id: 'CRYZL1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/O95825" }},
+{data: { id: 'GATD1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q8NB37" }},
+{data: { id: 'PPP1R21', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6ZMI0" }},
+{data: { id: 'C12orf4', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9NQ89" }}], 
+ edges: [{ data: { source: 'GATD1', target: 'TBCK', directed: 'false', weight: 0.9411729999999999} },
+{ data: { source: 'GATD1', target: 'PPP1R21', directed: 'false', weight: 0.809246} },
+{ data: { source: 'GATD1', target: 'CRYZL1', directed: 'false', weight: 0.25852800000000004} },
+{ data: { source: 'GATD1', target: 'C12orf4', directed: 'false', weight: 0.25852800000000004} },
+{ data: { source: 'C12orf4', target: 'TBCK', directed: 'false', weight: 0.9132170000000001} },
+{ data: { source: 'C12orf4', target: 'PPP1R21', directed: 'false', weight: 0.812434} },
+{ data: { source: 'C12orf4', target: 'CRYZL1', directed: 'false', weight: 0.213613} },
+{ data: { source: 'PPP1R21', target: 'CRYZL1', directed: 'false', weight: 0.993237} },
+{ data: { source: 'PPP1R21', target: 'TBCK', directed: 'false', weight: 0.954095} },
+{ data: { source: 'TBCK', target: 'CRYZL1', directed: 'false', weight: 0.798455} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CRYZL1 PPP1R21 TBCK GATD1 C12orf4<br> Complex Score (from Super.Complex) = 0.82828<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

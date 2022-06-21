@@ -1,0 +1,247 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 CCC complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex38.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'VPS29', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UBQ0" }},
+{data: { id: 'COMMD2', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q86X83" }},
+{data: { id: 'COMMD5', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9GZQ3" }},
+{data: { id: 'COMMD8', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9NX08" }},
+{data: { id: 'COMMD9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P000" }},
+{data: { id: 'RANBP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P43487" }},
+{data: { id: 'VPS35', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96QK1" }},
+{data: { id: 'VPS26C', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14972" }},
+{data: { id: 'COMMD4', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9H0A8" }},
+{data: { id: 'VPS26A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75436" }},
+{data: { id: 'CCDC93', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q567U6" }},
+{data: { id: 'FAM45A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TCE6" }},
+{data: { id: 'COMMD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N668" }},
+{data: { id: 'CCDC22', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60826" }},
+{data: { id: 'COMMD10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y6G5" }},
+{data: { id: 'COMMD3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UBI1" }},
+{data: { id: 'COMMD7', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q86VX2" }},
+{data: { id: 'COMMD6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z4G1" }},
+{data: { id: 'VPS26B', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q4G0F5" }}], 
+ edges: [{ data: { source: 'VPS29', target: 'VPS26B', directed: 'false', weight: 0.999649} },
+{ data: { source: 'VPS29', target: 'VPS26A', directed: 'false', weight: 0.9950889999999999} },
+{ data: { source: 'VPS29', target: 'VPS35', directed: 'false', weight: 0.9759110000000001} },
+{ data: { source: 'VPS29', target: 'COMMD3', directed: 'false', weight: 0.931486} },
+{ data: { source: 'VPS29', target: 'CCDC22', directed: 'false', weight: 0.810412} },
+{ data: { source: 'VPS29', target: 'COMMD10', directed: 'false', weight: 0.721302} },
+{ data: { source: 'VPS29', target: 'COMMD5', directed: 'false', weight: 0.721302} },
+{ data: { source: 'VPS29', target: 'COMMD1', directed: 'false', weight: 0.721302} },
+{ data: { source: 'VPS29', target: 'VPS26C', directed: 'false', weight: 0.720171} },
+{ data: { source: 'VPS29', target: 'COMMD4', directed: 'false', weight: 0.714525} },
+{ data: { source: 'VPS29', target: 'COMMD8', directed: 'false', weight: 0.664317} },
+{ data: { source: 'VPS29', target: 'COMMD6', directed: 'false', weight: 0.664317} },
+{ data: { source: 'VPS29', target: 'COMMD9', directed: 'false', weight: 0.62961} },
+{ data: { source: 'VPS29', target: 'COMMD2', directed: 'false', weight: 0.6026} },
+{ data: { source: 'VPS29', target: 'COMMD7', directed: 'false', weight: 0.553717} },
+{ data: { source: 'VPS29', target: 'FAM45A', directed: 'false', weight: 0.5263869999999999} },
+{ data: { source: 'VPS29', target: 'RANBP1', directed: 'false', weight: 0.30775} },
+{ data: { source: 'VPS29', target: 'CCDC93', directed: 'false', weight: 0.270362} },
+{ data: { source: 'COMMD5', target: 'COMMD3', directed: 'false', weight: 0.999316} },
+{ data: { source: 'COMMD5', target: 'COMMD4', directed: 'false', weight: 0.9141090000000001} },
+{ data: { source: 'COMMD5', target: 'COMMD6', directed: 'false', weight: 0.874792} },
+{ data: { source: 'COMMD5', target: 'CCDC93', directed: 'false', weight: 0.8577959999999999} },
+{ data: { source: 'COMMD5', target: 'COMMD9', directed: 'false', weight: 0.855929} },
+{ data: { source: 'COMMD5', target: 'RANBP1', directed: 'false', weight: 0.8308770000000001} },
+{ data: { source: 'COMMD5', target: 'COMMD10', directed: 'false', weight: 0.801185} },
+{ data: { source: 'COMMD5', target: 'CCDC22', directed: 'false', weight: 0.783463} },
+{ data: { source: 'COMMD5', target: 'COMMD8', directed: 'false', weight: 0.749181} },
+{ data: { source: 'COMMD5', target: 'COMMD7', directed: 'false', weight: 0.629486} },
+{ data: { source: 'COMMD5', target: 'FAM45A', directed: 'false', weight: 0.471425} },
+{ data: { source: 'COMMD5', target: 'COMMD2', directed: 'false', weight: 0.44154899999999997} },
+{ data: { source: 'COMMD5', target: 'COMMD1', directed: 'false', weight: 0.250648} },
+{ data: { source: 'COMMD5', target: 'VPS26C', directed: 'false', weight: 0.230046} },
+{ data: { source: 'CCDC93', target: 'VPS26C', directed: 'false', weight: 0.976985} },
+{ data: { source: 'CCDC93', target: 'COMMD7', directed: 'false', weight: 0.971617} },
+{ data: { source: 'CCDC93', target: 'COMMD1', directed: 'false', weight: 0.9538610000000001} },
+{ data: { source: 'CCDC93', target: 'COMMD10', directed: 'false', weight: 0.9399639999999999} },
+{ data: { source: 'CCDC93', target: 'COMMD2', directed: 'false', weight: 0.937475} },
+{ data: { source: 'CCDC93', target: 'COMMD9', directed: 'false', weight: 0.931097} },
+{ data: { source: 'CCDC93', target: 'RANBP1', directed: 'false', weight: 0.883498} },
+{ data: { source: 'CCDC93', target: 'COMMD6', directed: 'false', weight: 0.8787379999999999} },
+{ data: { source: 'CCDC93', target: 'COMMD3', directed: 'false', weight: 0.865294} },
+{ data: { source: 'CCDC93', target: 'FAM45A', directed: 'false', weight: 0.738433} },
+{ data: { source: 'CCDC93', target: 'CCDC22', directed: 'false', weight: 0.65067} },
+{ data: { source: 'CCDC93', target: 'COMMD4', directed: 'false', weight: 0.362122} },
+{ data: { source: 'CCDC93', target: 'COMMD8', directed: 'false', weight: 0.121359} },
+{ data: { source: 'COMMD9', target: 'COMMD4', directed: 'false', weight: 0.991872} },
+{ data: { source: 'COMMD9', target: 'COMMD3', directed: 'false', weight: 0.9794799999999999} },
+{ data: { source: 'COMMD9', target: 'COMMD6', directed: 'false', weight: 0.867927} },
+{ data: { source: 'COMMD9', target: 'COMMD10', directed: 'false', weight: 0.855929} },
+{ data: { source: 'COMMD9', target: 'COMMD1', directed: 'false', weight: 0.855929} },
+{ data: { source: 'COMMD9', target: 'VPS26C', directed: 'false', weight: 0.855929} },
+{ data: { source: 'COMMD9', target: 'CCDC22', directed: 'false', weight: 0.84857} },
+{ data: { source: 'COMMD9', target: 'COMMD8', directed: 'false', weight: 0.821299} },
+{ data: { source: 'COMMD9', target: 'COMMD2', directed: 'false', weight: 0.776278} },
+{ data: { source: 'COMMD9', target: 'FAM45A', directed: 'false', weight: 0.7182350000000001} },
+{ data: { source: 'COMMD9', target: 'COMMD7', directed: 'false', weight: 0.668651} },
+{ data: { source: 'COMMD9', target: 'RANBP1', directed: 'false', weight: 0.285615} },
+{ data: { source: 'COMMD8', target: 'COMMD3', directed: 'false', weight: 0.99903} },
+{ data: { source: 'COMMD8', target: 'COMMD10', directed: 'false', weight: 0.874792} },
+{ data: { source: 'COMMD8', target: 'COMMD6', directed: 'false', weight: 0.8438469999999999} },
+{ data: { source: 'COMMD8', target: 'COMMD7', directed: 'false', weight: 0.723785} },
+{ data: { source: 'COMMD8', target: 'RANBP1', directed: 'false', weight: 0.7113510000000001} },
+{ data: { source: 'COMMD8', target: 'VPS26C', directed: 'false', weight: 0.629767} },
+{ data: { source: 'COMMD8', target: 'COMMD2', directed: 'false', weight: 0.546666} },
+{ data: { source: 'COMMD8', target: 'COMMD4', directed: 'false', weight: 0.414624} },
+{ data: { source: 'COMMD8', target: 'FAM45A', directed: 'false', weight: 0.41415799999999997} },
+{ data: { source: 'COMMD8', target: 'COMMD1', directed: 'false', weight: 0.292418} },
+{ data: { source: 'COMMD8', target: 'CCDC22', directed: 'false', weight: 0.110175} },
+{ data: { source: 'CCDC22', target: 'VPS26C', directed: 'false', weight: 0.958636} },
+{ data: { source: 'CCDC22', target: 'COMMD6', directed: 'false', weight: 0.958357} },
+{ data: { source: 'CCDC22', target: 'COMMD10', directed: 'false', weight: 0.952475} },
+{ data: { source: 'CCDC22', target: 'COMMD3', directed: 'false', weight: 0.928673} },
+{ data: { source: 'CCDC22', target: 'FAM45A', directed: 'false', weight: 0.919075} },
+{ data: { source: 'CCDC22', target: 'COMMD4', directed: 'false', weight: 0.8372700000000001} },
+{ data: { source: 'CCDC22', target: 'COMMD1', directed: 'false', weight: 0.790713} },
+{ data: { source: 'CCDC22', target: 'COMMD7', directed: 'false', weight: 0.789738} },
+{ data: { source: 'CCDC22', target: 'COMMD2', directed: 'false', weight: 0.670705} },
+{ data: { source: 'CCDC22', target: 'RANBP1', directed: 'false', weight: 0.589987} },
+{ data: { source: 'FAM45A', target: 'COMMD3', directed: 'false', weight: 0.996207} },
+{ data: { source: 'FAM45A', target: 'COMMD4', directed: 'false', weight: 0.971666} },
+{ data: { source: 'FAM45A', target: 'COMMD6', directed: 'false', weight: 0.749484} },
+{ data: { source: 'FAM45A', target: 'COMMD1', directed: 'false', weight: 0.742606} },
+{ data: { source: 'FAM45A', target: 'COMMD2', directed: 'false', weight: 0.6986100000000001} },
+{ data: { source: 'FAM45A', target: 'VPS26C', directed: 'false', weight: 0.681972} },
+{ data: { source: 'FAM45A', target: 'COMMD7', directed: 'false', weight: 0.670801} },
+{ data: { source: 'FAM45A', target: 'RANBP1', directed: 'false', weight: 0.596344} },
+{ data: { source: 'FAM45A', target: 'COMMD10', directed: 'false', weight: 0.564438} },
+{ data: { source: 'COMMD3', target: 'COMMD10', directed: 'false', weight: 0.9994430000000001} },
+{ data: { source: 'COMMD3', target: 'VPS26C', directed: 'false', weight: 0.999396} },
+{ data: { source: 'COMMD3', target: 'COMMD1', directed: 'false', weight: 0.9990479999999999} },
+{ data: { source: 'COMMD3', target: 'COMMD4', directed: 'false', weight: 0.997518} },
+{ data: { source: 'COMMD3', target: 'COMMD7', directed: 'false', weight: 0.994574} },
+{ data: { source: 'COMMD3', target: 'COMMD6', directed: 'false', weight: 0.9931969999999999} },
+{ data: { source: 'COMMD3', target: 'COMMD2', directed: 'false', weight: 0.968349} },
+{ data: { source: 'COMMD3', target: 'RANBP1', directed: 'false', weight: 0.30730100000000005} },
+{ data: { source: 'RANBP1', target: 'COMMD10', directed: 'false', weight: 0.833465} },
+{ data: { source: 'RANBP1', target: 'COMMD2', directed: 'false', weight: 0.812392} },
+{ data: { source: 'RANBP1', target: 'COMMD6', directed: 'false', weight: 0.80295} },
+{ data: { source: 'RANBP1', target: 'COMMD4', directed: 'false', weight: 0.720173} },
+{ data: { source: 'RANBP1', target: 'VPS26C', directed: 'false', weight: 0.713388} },
+{ data: { source: 'RANBP1', target: 'COMMD1', directed: 'false', weight: 0.700889} },
+{ data: { source: 'VPS35', target: 'VPS26B', directed: 'false', weight: 0.998783} },
+{ data: { source: 'VPS35', target: 'VPS26A', directed: 'false', weight: 0.975929} },
+{ data: { source: 'COMMD7', target: 'COMMD1', directed: 'false', weight: 0.9169} },
+{ data: { source: 'COMMD7', target: 'COMMD4', directed: 'false', weight: 0.8248559999999999} },
+{ data: { source: 'COMMD7', target: 'COMMD2', directed: 'false', weight: 0.793086} },
+{ data: { source: 'COMMD7', target: 'VPS26C', directed: 'false', weight: 0.775598} },
+{ data: { source: 'COMMD7', target: 'COMMD10', directed: 'false', weight: 0.754743} },
+{ data: { source: 'COMMD7', target: 'COMMD6', directed: 'false', weight: 0.70577} },
+{ data: { source: 'COMMD1', target: 'COMMD6', directed: 'false', weight: 0.874792} },
+{ data: { source: 'COMMD1', target: 'COMMD4', directed: 'false', weight: 0.825426} },
+{ data: { source: 'COMMD1', target: 'COMMD10', directed: 'false', weight: 0.511649} },
+{ data: { source: 'COMMD1', target: 'VPS26C', directed: 'false', weight: 0.41911099999999996} },
+{ data: { source: 'COMMD1', target: 'COMMD2', directed: 'false', weight: 0.26248299999999997} },
+{ data: { source: 'VPS26A', target: 'VPS26B', directed: 'false', weight: 0.9759110000000001} },
+{ data: { source: 'VPS26C', target: 'COMMD6', directed: 'false', weight: 0.874792} },
+{ data: { source: 'VPS26C', target: 'COMMD4', directed: 'false', weight: 0.807029} },
+{ data: { source: 'VPS26C', target: 'COMMD2', directed: 'false', weight: 0.5662020000000001} },
+{ data: { source: 'VPS26C', target: 'COMMD10', directed: 'false', weight: 0.24613200000000002} },
+{ data: { source: 'COMMD2', target: 'COMMD6', directed: 'false', weight: 0.8031119999999999} },
+{ data: { source: 'COMMD2', target: 'COMMD10', directed: 'false', weight: 0.6475310000000001} },
+{ data: { source: 'COMMD2', target: 'COMMD4', directed: 'false', weight: 0.589286} },
+{ data: { source: 'COMMD4', target: 'COMMD10', directed: 'false', weight: 0.998777} },
+{ data: { source: 'COMMD4', target: 'COMMD6', directed: 'false', weight: 0.996511} },
+{ data: { source: 'COMMD6', target: 'COMMD10', directed: 'false', weight: 0.874792} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 CCC complex<br> Complex Score (from Super.Complex) = 0.87641<br> Unweighted Density = 0.73
+    </section>
+    </body>
+    </html>
+    

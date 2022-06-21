@@ -1,0 +1,120 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.05 Respiratory chain complex I (beta subunit) mitochondrial</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex275.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NDUFB4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95168" }},
+{data: { id: 'CYC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P08574" }},
+{data: { id: 'UQCRH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P07919" }},
+{data: { id: 'UQCRC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P22695" }},
+{data: { id: 'UQCRQ', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14949" }},
+{data: { id: 'HCCS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P53701" }},
+{data: { id: 'UQCR10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UDW1" }}], 
+ edges: [{ data: { source: 'UQCRC2', target: 'UQCRQ', directed: 'false', weight: 0.164931} },
+{ data: { source: 'UQCRC2', target: 'CYC1', directed: 'false', weight: 0.0793015} },
+{ data: { source: 'UQCRC2', target: 'NDUFB4', directed: 'false', weight: 0.029599200000000003} },
+{ data: { source: 'CYC1', target: 'UQCRH', directed: 'false', weight: 0.937283} },
+{ data: { source: 'CYC1', target: 'UQCR10', directed: 'false', weight: 0.266099} },
+{ data: { source: 'CYC1', target: 'UQCRQ', directed: 'false', weight: 0.129828} },
+{ data: { source: 'CYC1', target: 'HCCS', directed: 'false', weight: 0.046879199999999996} },
+{ data: { source: 'CYC1', target: 'NDUFB4', directed: 'false', weight: 0.0444745} },
+{ data: { source: 'UQCRQ', target: 'UQCRH', directed: 'false', weight: 0.029943599999999997} },
+{ data: { source: 'UQCR10', target: 'UQCRH', directed: 'false', weight: 0.047870300000000005} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.05 Respiratory chain complex I (beta subunit) mitochondrial<br> Complex Score (from Super.Complex) = 0.90300<br> Unweighted Density = 0.48
+    </section>
+    </body>
+    </html>
+    

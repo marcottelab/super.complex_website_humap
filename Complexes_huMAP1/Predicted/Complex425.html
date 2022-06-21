@@ -1,0 +1,126 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> COPE COPA COPB1 COPG1 ARCN1 OGFOD1 COPZ1</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex426.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'COPZ1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61923" }},
+{data: { id: 'COPB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P53618" }},
+{data: { id: 'COPA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P53621" }},
+{data: { id: 'COPG1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y678" }},
+{data: { id: 'COPE', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14579" }},
+{data: { id: 'ARCN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48444" }},
+{data: { id: 'OGFOD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N543" }}], 
+ edges: [{ data: { source: 'COPZ1', target: 'COPG1', directed: 'false', weight: 0.949242} },
+{ data: { source: 'COPZ1', target: 'COPB1', directed: 'false', weight: 0.8557790000000001} },
+{ data: { source: 'COPZ1', target: 'ARCN1', directed: 'false', weight: 0.814315} },
+{ data: { source: 'COPZ1', target: 'OGFOD1', directed: 'false', weight: 0.769737} },
+{ data: { source: 'COPZ1', target: 'COPA', directed: 'false', weight: 0.765108} },
+{ data: { source: 'COPZ1', target: 'COPE', directed: 'false', weight: 0.159026} },
+{ data: { source: 'ARCN1', target: 'COPB1', directed: 'false', weight: 0.9999040000000001} },
+{ data: { source: 'ARCN1', target: 'COPG1', directed: 'false', weight: 0.999793} },
+{ data: { source: 'ARCN1', target: 'COPA', directed: 'false', weight: 0.996276} },
+{ data: { source: 'ARCN1', target: 'COPE', directed: 'false', weight: 0.955859} },
+{ data: { source: 'ARCN1', target: 'OGFOD1', directed: 'false', weight: 0.701204} },
+{ data: { source: 'OGFOD1', target: 'COPG1', directed: 'false', weight: 0.8137989999999999} },
+{ data: { source: 'OGFOD1', target: 'COPA', directed: 'false', weight: 0.747703} },
+{ data: { source: 'OGFOD1', target: 'COPE', directed: 'false', weight: 0.41071899999999995} },
+{ data: { source: 'OGFOD1', target: 'COPB1', directed: 'false', weight: 0.015976900000000002} },
+{ data: { source: 'COPB1', target: 'COPG1', directed: 'false', weight: 0.963659} },
+{ data: { source: 'COPB1', target: 'COPA', directed: 'false', weight: 0.684221} },
+{ data: { source: 'COPB1', target: 'COPE', directed: 'false', weight: 0.061915099999999994} },
+{ data: { source: 'COPE', target: 'COPA', directed: 'false', weight: 0.6532359999999999} },
+{ data: { source: 'COPE', target: 'COPG1', directed: 'false', weight: 0.43113999999999997} },
+{ data: { source: 'COPA', target: 'COPG1', directed: 'false', weight: 0.979404} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    COPE COPA COPB1 COPG1 ARCN1 OGFOD1 COPZ1<br> Complex Score (from Super.Complex) = 0.74528<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

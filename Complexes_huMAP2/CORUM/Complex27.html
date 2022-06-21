@@ -1,0 +1,97 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Paf complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex28.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CDC73', score: 5, href: "https://www.uniprot.org/uniprot/Q6P1J9" }},
+{data: { id: 'LEO1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVC0" }},
+{data: { id: 'CTR9', score: 5, href: "https://www.uniprot.org/uniprot/Q6PD62" }},
+{data: { id: 'PAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N7H5" }},
+{data: { id: 'WDR61', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZS3" }}], 
+ edges: [{ data: { source: 'CDC73', target: 'LEO1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC73', target: 'PAF1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC73', target: 'WDR61', directed: 'false', weight: 0.999999} },
+{ data: { source: 'CDC73', target: 'CTR9', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'LEO1', target: 'CTR9', directed: 'false', weight: 0.99992} },
+{ data: { source: 'LEO1', target: 'PAF1', directed: 'false', weight: 0.9984799999999999} },
+{ data: { source: 'LEO1', target: 'WDR61', directed: 'false', weight: 0.9966229999999999} },
+{ data: { source: 'CTR9', target: 'PAF1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CTR9', target: 'WDR61', directed: 'false', weight: 0.987575} },
+{ data: { source: 'PAF1', target: 'WDR61', directed: 'false', weight: 0.999444} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Paf complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,114 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title>SARS-CoV2 nsp5_C145A</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: "SARS-CoV2 nsp5_C145A", score: 2, type:  "sars"  }},
+{data: { id: "GPX1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P07203" }},
+{data: { id: "TRMT1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O75648" }},
+{data: { id: "AMPD2 TRMT1 METTL1", score: 0, type: "complex", href: "../Predicted/Complex224.html" }},
+{data: { id: "SEC24A SLC25A29 TRMT1", score: 0, type: "complex", href: "../Predicted/Complex570.html" }}], 
+ edges: [{ data: { source: "AMPD2 TRMT1 METTL1", target: "SEC24A SLC25A29 TRMT1", directed: "false",type: "complex2complex", weight: 0.2} },
+{ data: { source: "TRMT1", target: "AMPD2 TRMT1 METTL1", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "TRMT1", target: "SEC24A SLC25A29 TRMT1", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SARS-CoV2 nsp5_C145A", target: "GPX1", directed: "false", type: "sars2prot",weight: 0.97684084} },
+{ data: { source: "SARS-CoV2 nsp5_C145A", target: "TRMT1", directed: "false", type: "sars2prot",weight: 0.984315505} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+                				'font-size': 20,
+        'font-weight': 'bold',
+                      'text-wrap': 'wrap',
+    'text-max-width': '300',
+            shape: function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'circle'}
+                                if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                
+  return 'star';
+  },
+            'background-color': function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'blue'}
+                                if ( ele.data('type') == 'sars' ){return 'red'}             
+                                if ( ele.data('score_annot') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score_annot') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score_annot') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score_annot') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score_annot') == 5 ){return 'rgb(52, 136, 74)'}   
+                                 return 'rgb(180, 131, 40)';
+  },
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 5)',
+								'line-color': function( ele ){ 
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
+  return 'red';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'cose',
+	'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'padding': 1,
+	'componentSpacing': 1,
+	 'idealEdgeLength': function( edge ){ return 1; },
+	 // Divisor to compute edge forces
+  'edgeElasticity': function( edge ){ return 20; }
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+    </script>
+
+    	<section>
+    	<br>
+    	<br>
+    	<br> 
+    
+    </section>
+    </body>
+    </html>
+    

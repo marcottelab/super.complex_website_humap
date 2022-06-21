@@ -1,0 +1,133 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 WASH complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex118.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CAPZA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P47755" }},
+{data: { id: 'WASH3P', score: 5, type: '', href: "https://www.ncbi.nlm.nih.gov/gene/374666" }},
+{data: { id: 'WASHC2A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q641Q2" }},
+{data: { id: 'WASHC3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3C0" }},
+{data: { id: 'WASHC2C', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y4E1" }},
+{data: { id: 'WASH6P', score: 5.0, type: '', href: "https://www.uniprot.org/uniprot/Q9NQA3" }},
+{data: { id: 'WASHC5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12768" }},
+{data: { id: 'SARS-CoV2 nsp2', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp2.html" }},
+{data: { id: 'WASHC4', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q2M389" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp2', target: 'WASHC4', directed: 'false', weight: 0.972115182, type: 'sars'} },
+{ data: { source: 'WASHC3', target: 'WASHC2C', directed: 'false', weight: 1.0} },
+{ data: { source: 'WASHC3', target: 'WASH3P', directed: 'false', weight: 0.992864} },
+{ data: { source: 'WASHC3', target: 'WASHC4', directed: 'false', weight: 0.983735} },
+{ data: { source: 'WASHC3', target: 'WASHC5', directed: 'false', weight: 0.9835020000000001} },
+{ data: { source: 'WASHC3', target: 'WASHC2A', directed: 'false', weight: 0.9803379999999999} },
+{ data: { source: 'WASHC3', target: 'WASH6P', directed: 'false', weight: 0.9687110000000001} },
+{ data: { source: 'WASHC3', target: 'CAPZA2', directed: 'false', weight: 0.5869810000000001} },
+{ data: { source: 'WASH3P', target: 'CAPZA2', directed: 'false', weight: 0.9975139999999999} },
+{ data: { source: 'WASHC5', target: 'CAPZA2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'WASHC5', target: 'WASHC4', directed: 'false', weight: 0.37219} },
+{ data: { source: 'WASHC5', target: 'WASHC2A', directed: 'false', weight: 0.03309840000000001} },
+{ data: { source: 'WASHC2A', target: 'CAPZA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'WASHC4', target: 'CAPZA2', directed: 'false', weight: 0.999992} },
+{ data: { source: 'WASHC2C', target: 'CAPZA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'WASH6P', target: 'CAPZA2', directed: 'false', weight: 0.991991} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 WASH complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.54
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>WASHC4
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,114 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> BBS-chaperonin complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2002.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TCP1', score: 5, href: "https://www.uniprot.org/uniprot/P17987" }},
+{data: { id: 'HEL-S-69', score: 2, href: "https://www.uniprot.org/uniprot/V9HW37" }},
+{data: { id: 'CCT3', score: 5, href: "https://www.uniprot.org/uniprot/P49368" }},
+{data: { id: 'CCT8', score: 5, href: "https://www.uniprot.org/uniprot/P50990" }},
+{data: { id: 'CCT4', score: 5, href: "https://www.uniprot.org/uniprot/P50991" }},
+{data: { id: 'HEL-S-100n', score: 3, href: "https://www.uniprot.org/uniprot/V9HW96" }},
+{data: { id: 'BBS12', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZW61" }},
+{data: { id: 'BBS7', score: 5, href: "https://www.uniprot.org/uniprot/Q8IWZ6" }},
+{data: { id: 'BBS10', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAM1" }},
+{data: { id: 'MKKS', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPJ1" }}], 
+ edges: [{ data: { source: 'BBS7', target: 'BBS10', directed: 'false', weight: 0.0223796} },
+{ data: { source: 'MKKS', target: 'BBS12', directed: 'false', weight: 0.650233} },
+{ data: { source: 'CCT4', target: 'HEL-S-100n', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'HEL-S-69', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'TCP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'CCT3', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'HEL-S-69', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'TCP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'CCT3', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'TCP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'HEL-S-69', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'HEL-S-69', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT8', target: 'HEL-S-69', directed: 'false', weight: 1.0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    BBS-chaperonin complex	<br> Unweighted Density = 0.38
+    </section>
+    </body>
+    </html>
+    

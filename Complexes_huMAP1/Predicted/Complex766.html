@@ -1,0 +1,129 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 Rev1-Rev3-Rev7-Polkappa complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex767.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TMEM45A', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9NWC5" }},
+{data: { id: 'KCTD17', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N5Z5" }},
+{data: { id: 'PDPK1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15530" }},
+{data: { id: 'SLC1A3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P43003" }},
+{data: { id: 'KCTD5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NXV2" }},
+{data: { id: 'POLK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UBT6" }},
+{data: { id: 'KCTD2', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q14681" }},
+{data: { id: 'PTPN4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P29074" }}], 
+ edges: [{ data: { source: 'TMEM45A', target: 'KCTD5', directed: 'false', weight: 0.9907540000000001} },
+{ data: { source: 'TMEM45A', target: 'SLC1A3', directed: 'false', weight: 0.165074} },
+{ data: { source: 'TMEM45A', target: 'PDPK1', directed: 'false', weight: 0.144297} },
+{ data: { source: 'TMEM45A', target: 'POLK', directed: 'false', weight: 0.133179} },
+{ data: { source: 'TMEM45A', target: 'KCTD2', directed: 'false', weight: 0.12021300000000001} },
+{ data: { source: 'KCTD2', target: 'KCTD5', directed: 'false', weight: 0.995977} },
+{ data: { source: 'KCTD2', target: 'KCTD17', directed: 'false', weight: 0.963677} },
+{ data: { source: 'KCTD2', target: 'POLK', directed: 'false', weight: 0.176452} },
+{ data: { source: 'KCTD2', target: 'SLC1A3', directed: 'false', weight: 0.12021300000000001} },
+{ data: { source: 'KCTD2', target: 'PDPK1', directed: 'false', weight: 0.10441700000000001} },
+{ data: { source: 'SLC1A3', target: 'KCTD5', directed: 'false', weight: 0.922241} },
+{ data: { source: 'SLC1A3', target: 'PDPK1', directed: 'false', weight: 0.144297} },
+{ data: { source: 'SLC1A3', target: 'POLK', directed: 'false', weight: 0.133179} },
+{ data: { source: 'PDPK1', target: 'KCTD5', directed: 'false', weight: 0.98319} },
+{ data: { source: 'PDPK1', target: 'POLK', directed: 'false', weight: 0.115879} },
+{ data: { source: 'POLK', target: 'KCTD5', directed: 'false', weight: 0.949349} },
+{ data: { source: 'PTPN4', target: 'KCTD17', directed: 'false', weight: 0.971305} },
+{ data: { source: 'KCTD5', target: 'KCTD17', directed: 'false', weight: 0.927774} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 Rev1-Rev3-Rev7-Polkappa complex<br> Complex Score (from Super.Complex) = 0.58094<br> Unweighted Density = 0.64
+    </section>
+    </body>
+    </html>
+    

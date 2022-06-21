@@ -1,0 +1,91 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> COMMD1-CCDC22-CCDC93-C16orf62 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2622.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CCDC22', score: 5, href: "https://www.uniprot.org/uniprot/O60826" }},
+{data: { id: 'CCDC93', score: 5, href: "https://www.uniprot.org/uniprot/Q567U6" }},
+{data: { id: 'VPS35L', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z3J2" }},
+{data: { id: 'COMMD1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N668" }}], 
+ edges: [{ data: { source: 'VPS35L', target: 'CCDC22', directed: 'false', weight: 0.999886} },
+{ data: { source: 'VPS35L', target: 'CCDC93', directed: 'false', weight: 0.07874439999999999} },
+{ data: { source: 'VPS35L', target: 'COMMD1', directed: 'false', weight: 0.0316288} },
+{ data: { source: 'COMMD1', target: 'CCDC93', directed: 'false', weight: 0.263278} },
+{ data: { source: 'CCDC93', target: 'CCDC22', directed: 'false', weight: 0.9999899999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    COMMD1-CCDC22-CCDC93-C16orf62 complex	<br> Unweighted Density = 0.83
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,282 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 IMP3-IMP4-MPP10 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex26.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'UTP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NQZ2" }},
+{data: { id: 'RRP15', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3B9" }},
+{data: { id: 'SARS-CoV2 nsp8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp8.html" }},
+{data: { id: 'NGDN', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q8NEJ9" }},
+{data: { id: 'SARS-CoV2 N', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 N.html" }},
+{data: { id: 'LARP1', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q6PKG0" }},
+{data: { id: 'GNL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13823" }},
+{data: { id: 'RPL17', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P18621" }},
+{data: { id: 'PWP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13610" }},
+{data: { id: 'NKRF', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15226" }},
+{data: { id: 'EEF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P13639" }},
+{data: { id: 'RPL26L1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9UNX3" }},
+{data: { id: 'SARS-CoV2 nsp8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp8.html" }},
+{data: { id: 'MPHOSPH10', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/O00566" }},
+{data: { id: 'EBNA1BP2', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q99848" }},
+{data: { id: 'DHX30', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7L2E3" }},
+{data: { id: 'GLYR1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q49A26" }},
+{data: { id: 'GTPBP4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BZE4" }},
+{data: { id: 'IMP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00425" }},
+{data: { id: 'NOP53', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NZM5" }},
+{data: { id: 'PUM3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15397" }},
+{data: { id: 'NSA2', score: 3, type: '', href: "https://www.uniprot.org/uniprot/O95478" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp8', target: 'NGDN', directed: 'false', weight: 0.71407894, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 N', target: 'LARP1', directed: 'false', weight: 0.73787466, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 nsp8', target: 'MPHOSPH10', directed: 'false', weight: 0.728559172, type: 'sars'} },
+{ data: { source: 'EEF2', target: 'PUM3', directed: 'false', weight: 0.078638} },
+{ data: { source: 'GTPBP4', target: 'GNL2', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'GTPBP4', target: 'EBNA1BP2', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'GTPBP4', target: 'RPL17', directed: 'false', weight: 0.999976} },
+{ data: { source: 'GTPBP4', target: 'LARP1', directed: 'false', weight: 0.999707} },
+{ data: { source: 'GTPBP4', target: 'DHX30', directed: 'false', weight: 0.9996459999999999} },
+{ data: { source: 'GTPBP4', target: 'GLYR1', directed: 'false', weight: 0.998685} },
+{ data: { source: 'GTPBP4', target: 'NKRF', directed: 'false', weight: 0.997926} },
+{ data: { source: 'GTPBP4', target: 'PWP1', directed: 'false', weight: 0.9977469999999999} },
+{ data: { source: 'GTPBP4', target: 'RRP15', directed: 'false', weight: 0.997432} },
+{ data: { source: 'GTPBP4', target: 'PUM3', directed: 'false', weight: 0.997365} },
+{ data: { source: 'GTPBP4', target: 'NSA2', directed: 'false', weight: 0.9912549999999999} },
+{ data: { source: 'GTPBP4', target: 'RPL26L1', directed: 'false', weight: 0.990684} },
+{ data: { source: 'GTPBP4', target: 'NOP53', directed: 'false', weight: 0.944973} },
+{ data: { source: 'GTPBP4', target: 'IMP3', directed: 'false', weight: 0.930909} },
+{ data: { source: 'GTPBP4', target: 'MPHOSPH10', directed: 'false', weight: 0.8547450000000001} },
+{ data: { source: 'GTPBP4', target: 'UTP3', directed: 'false', weight: 0.7150270000000001} },
+{ data: { source: 'GTPBP4', target: 'NGDN', directed: 'false', weight: 0.342777} },
+{ data: { source: 'EBNA1BP2', target: 'PUM3', directed: 'false', weight: 0.999758} },
+{ data: { source: 'EBNA1BP2', target: 'RRP15', directed: 'false', weight: 0.999659} },
+{ data: { source: 'EBNA1BP2', target: 'NSA2', directed: 'false', weight: 0.9987020000000001} },
+{ data: { source: 'EBNA1BP2', target: 'RPL17', directed: 'false', weight: 0.99618} },
+{ data: { source: 'EBNA1BP2', target: 'GNL2', directed: 'false', weight: 0.9961459999999999} },
+{ data: { source: 'EBNA1BP2', target: 'RPL26L1', directed: 'false', weight: 0.994966} },
+{ data: { source: 'EBNA1BP2', target: 'DHX30', directed: 'false', weight: 0.9853870000000001} },
+{ data: { source: 'EBNA1BP2', target: 'PWP1', directed: 'false', weight: 0.9556520000000001} },
+{ data: { source: 'EBNA1BP2', target: 'LARP1', directed: 'false', weight: 0.9279149999999999} },
+{ data: { source: 'EBNA1BP2', target: 'GLYR1', directed: 'false', weight: 0.909645} },
+{ data: { source: 'EBNA1BP2', target: 'NOP53', directed: 'false', weight: 0.851934} },
+{ data: { source: 'EBNA1BP2', target: 'NKRF', directed: 'false', weight: 0.817711} },
+{ data: { source: 'EBNA1BP2', target: 'MPHOSPH10', directed: 'false', weight: 0.7710020000000001} },
+{ data: { source: 'EBNA1BP2', target: 'IMP3', directed: 'false', weight: 0.5} },
+{ data: { source: 'EBNA1BP2', target: 'UTP3', directed: 'false', weight: 0.163302} },
+{ data: { source: 'EBNA1BP2', target: 'NGDN', directed: 'false', weight: 0.103743} },
+{ data: { source: 'NGDN', target: 'UTP3', directed: 'false', weight: 0.611872} },
+{ data: { source: 'NGDN', target: 'DHX30', directed: 'false', weight: 0.42352399999999996} },
+{ data: { source: 'NGDN', target: 'NSA2', directed: 'false', weight: 0.40725100000000003} },
+{ data: { source: 'NGDN', target: 'GNL2', directed: 'false', weight: 0.332071} },
+{ data: { source: 'NGDN', target: 'IMP3', directed: 'false', weight: 0.319108} },
+{ data: { source: 'NGDN', target: 'LARP1', directed: 'false', weight: 0.27924499999999997} },
+{ data: { source: 'NGDN', target: 'MPHOSPH10', directed: 'false', weight: 0.23545500000000003} },
+{ data: { source: 'NGDN', target: 'RPL17', directed: 'false', weight: 0.22344899999999998} },
+{ data: { source: 'NGDN', target: 'NKRF', directed: 'false', weight: 0.183421} },
+{ data: { source: 'NGDN', target: 'GLYR1', directed: 'false', weight: 0.150085} },
+{ data: { source: 'NGDN', target: 'NOP53', directed: 'false', weight: 0.150085} },
+{ data: { source: 'NGDN', target: 'RPL26L1', directed: 'false', weight: 0.117552} },
+{ data: { source: 'NGDN', target: 'RRP15', directed: 'false', weight: 0.110069} },
+{ data: { source: 'NGDN', target: 'PUM3', directed: 'false', weight: 0.07753910000000001} },
+{ data: { source: 'NGDN', target: 'PWP1', directed: 'false', weight: 0.0765115} },
+{ data: { source: 'PUM3', target: 'RRP15', directed: 'false', weight: 0.999818} },
+{ data: { source: 'PUM3', target: 'PWP1', directed: 'false', weight: 0.9976729999999999} },
+{ data: { source: 'PUM3', target: 'NOP53', directed: 'false', weight: 0.9910909999999999} },
+{ data: { source: 'PUM3', target: 'GLYR1', directed: 'false', weight: 0.9897549999999999} },
+{ data: { source: 'PUM3', target: 'GNL2', directed: 'false', weight: 0.983173} },
+{ data: { source: 'PUM3', target: 'NSA2', directed: 'false', weight: 0.965026} },
+{ data: { source: 'PUM3', target: 'DHX30', directed: 'false', weight: 0.954557} },
+{ data: { source: 'PUM3', target: 'NKRF', directed: 'false', weight: 0.8322870000000001} },
+{ data: { source: 'PUM3', target: 'RPL17', directed: 'false', weight: 0.819774} },
+{ data: { source: 'PUM3', target: 'RPL26L1', directed: 'false', weight: 0.76894} },
+{ data: { source: 'PUM3', target: 'LARP1', directed: 'false', weight: 0.747638} },
+{ data: { source: 'PUM3', target: 'IMP3', directed: 'false', weight: 0.447254} },
+{ data: { source: 'PUM3', target: 'MPHOSPH10', directed: 'false', weight: 0.23532899999999998} },
+{ data: { source: 'PUM3', target: 'UTP3', directed: 'false', weight: 0.133877} },
+{ data: { source: 'RPL26L1', target: 'GNL2', directed: 'false', weight: 0.9872989999999999} },
+{ data: { source: 'RPL26L1', target: 'RPL17', directed: 'false', weight: 0.951976} },
+{ data: { source: 'RPL26L1', target: 'PWP1', directed: 'false', weight: 0.946305} },
+{ data: { source: 'RPL26L1', target: 'DHX30', directed: 'false', weight: 0.829901} },
+{ data: { source: 'RPL26L1', target: 'GLYR1', directed: 'false', weight: 0.7929510000000001} },
+{ data: { source: 'RPL26L1', target: 'NKRF', directed: 'false', weight: 0.783384} },
+{ data: { source: 'RPL26L1', target: 'NOP53', directed: 'false', weight: 0.778392} },
+{ data: { source: 'RPL26L1', target: 'LARP1', directed: 'false', weight: 0.772931} },
+{ data: { source: 'RPL26L1', target: 'RRP15', directed: 'false', weight: 0.706687} },
+{ data: { source: 'RPL26L1', target: 'NSA2', directed: 'false', weight: 0.691851} },
+{ data: { source: 'RPL26L1', target: 'MPHOSPH10', directed: 'false', weight: 0.30441999999999997} },
+{ data: { source: 'RPL26L1', target: 'IMP3', directed: 'false', weight: 0.280526} },
+{ data: { source: 'RPL26L1', target: 'UTP3', directed: 'false', weight: 0.17163499999999998} },
+{ data: { source: 'UTP3', target: 'MPHOSPH10', directed: 'false', weight: 0.970039} },
+{ data: { source: 'UTP3', target: 'IMP3', directed: 'false', weight: 0.535311} },
+{ data: { source: 'UTP3', target: 'GNL2', directed: 'false', weight: 0.3332} },
+{ data: { source: 'UTP3', target: 'DHX30', directed: 'false', weight: 0.27714} },
+{ data: { source: 'UTP3', target: 'PWP1', directed: 'false', weight: 0.199419} },
+{ data: { source: 'UTP3', target: 'GLYR1', directed: 'false', weight: 0.181151} },
+{ data: { source: 'UTP3', target: 'NOP53', directed: 'false', weight: 0.181151} },
+{ data: { source: 'UTP3', target: 'RPL17', directed: 'false', weight: 0.159734} },
+{ data: { source: 'UTP3', target: 'NKRF', directed: 'false', weight: 0.146788} },
+{ data: { source: 'UTP3', target: 'LARP1', directed: 'false', weight: 0.113205} },
+{ data: { source: 'UTP3', target: 'NSA2', directed: 'false', weight: 0.111562} },
+{ data: { source: 'UTP3', target: 'RRP15', directed: 'false', weight: 0.0956385} },
+{ data: { source: 'PWP1', target: 'GNL2', directed: 'false', weight: 0.9063680000000001} },
+{ data: { source: 'PWP1', target: 'NKRF', directed: 'false', weight: 0.888558} },
+{ data: { source: 'PWP1', target: 'GLYR1', directed: 'false', weight: 0.8707370000000001} },
+{ data: { source: 'PWP1', target: 'DHX30', directed: 'false', weight: 0.836735} },
+{ data: { source: 'PWP1', target: 'RRP15', directed: 'false', weight: 0.763558} },
+{ data: { source: 'PWP1', target: 'IMP3', directed: 'false', weight: 0.5930840000000001} },
+{ data: { source: 'PWP1', target: 'NOP53', directed: 'false', weight: 0.548395} },
+{ data: { source: 'PWP1', target: 'MPHOSPH10', directed: 'false', weight: 0.514748} },
+{ data: { source: 'PWP1', target: 'NSA2', directed: 'false', weight: 0.476633} },
+{ data: { source: 'PWP1', target: 'RPL17', directed: 'false', weight: 0.458247} },
+{ data: { source: 'PWP1', target: 'LARP1', directed: 'false', weight: 0.363684} },
+{ data: { source: 'RPL17', target: 'GNL2', directed: 'false', weight: 0.9994959999999999} },
+{ data: { source: 'RPL17', target: 'LARP1', directed: 'false', weight: 0.993237} },
+{ data: { source: 'RPL17', target: 'DHX30', directed: 'false', weight: 0.9874290000000001} },
+{ data: { source: 'RPL17', target: 'GLYR1', directed: 'false', weight: 0.913381} },
+{ data: { source: 'RPL17', target: 'NSA2', directed: 'false', weight: 0.8860950000000001} },
+{ data: { source: 'RPL17', target: 'NOP53', directed: 'false', weight: 0.8763139999999999} },
+{ data: { source: 'RPL17', target: 'RRP15', directed: 'false', weight: 0.857764} },
+{ data: { source: 'RPL17', target: 'NKRF', directed: 'false', weight: 0.823809} },
+{ data: { source: 'RPL17', target: 'MPHOSPH10', directed: 'false', weight: 0.381457} },
+{ data: { source: 'RPL17', target: 'IMP3', directed: 'false', weight: 0.293028} },
+{ data: { source: 'MPHOSPH10', target: 'IMP3', directed: 'false', weight: 0.99982} },
+{ data: { source: 'MPHOSPH10', target: 'NOP53', directed: 'false', weight: 0.9959100000000001} },
+{ data: { source: 'MPHOSPH10', target: 'DHX30', directed: 'false', weight: 0.923774} },
+{ data: { source: 'MPHOSPH10', target: 'GNL2', directed: 'false', weight: 0.825959} },
+{ data: { source: 'MPHOSPH10', target: 'NKRF', directed: 'false', weight: 0.623622} },
+{ data: { source: 'MPHOSPH10', target: 'NSA2', directed: 'false', weight: 0.589611} },
+{ data: { source: 'MPHOSPH10', target: 'GLYR1', directed: 'false', weight: 0.5847939999999999} },
+{ data: { source: 'MPHOSPH10', target: 'LARP1', directed: 'false', weight: 0.345765} },
+{ data: { source: 'MPHOSPH10', target: 'RRP15', directed: 'false', weight: 0.306556} },
+{ data: { source: 'GNL2', target: 'DHX30', directed: 'false', weight: 0.9995059999999999} },
+{ data: { source: 'GNL2', target: 'LARP1', directed: 'false', weight: 0.999041} },
+{ data: { source: 'GNL2', target: 'NKRF', directed: 'false', weight: 0.992569} },
+{ data: { source: 'GNL2', target: 'GLYR1', directed: 'false', weight: 0.9919629999999999} },
+{ data: { source: 'GNL2', target: 'NOP53', directed: 'false', weight: 0.981405} },
+{ data: { source: 'GNL2', target: 'RRP15', directed: 'false', weight: 0.969986} },
+{ data: { source: 'GNL2', target: 'NSA2', directed: 'false', weight: 0.9560790000000001} },
+{ data: { source: 'GNL2', target: 'IMP3', directed: 'false', weight: 0.9356120000000001} },
+{ data: { source: 'DHX30', target: 'GLYR1', directed: 'false', weight: 0.9945780000000001} },
+{ data: { source: 'DHX30', target: 'LARP1', directed: 'false', weight: 0.9905360000000001} },
+{ data: { source: 'DHX30', target: 'NKRF', directed: 'false', weight: 0.989001} },
+{ data: { source: 'DHX30', target: 'IMP3', directed: 'false', weight: 0.977698} },
+{ data: { source: 'DHX30', target: 'NOP53', directed: 'false', weight: 0.9694790000000001} },
+{ data: { source: 'DHX30', target: 'RRP15', directed: 'false', weight: 0.966199} },
+{ data: { source: 'DHX30', target: 'NSA2', directed: 'false', weight: 0.9598200000000001} },
+{ data: { source: 'NSA2', target: 'NOP53', directed: 'false', weight: 0.907443} },
+{ data: { source: 'NSA2', target: 'GLYR1', directed: 'false', weight: 0.843146} },
+{ data: { source: 'NSA2', target: 'NKRF', directed: 'false', weight: 0.80585} },
+{ data: { source: 'NSA2', target: 'IMP3', directed: 'false', weight: 0.80585} },
+{ data: { source: 'NSA2', target: 'RRP15', directed: 'false', weight: 0.762035} },
+{ data: { source: 'NSA2', target: 'LARP1', directed: 'false', weight: 0.389947} },
+{ data: { source: 'LARP1', target: 'GLYR1', directed: 'false', weight: 0.972721} },
+{ data: { source: 'LARP1', target: 'NKRF', directed: 'false', weight: 0.9144709999999999} },
+{ data: { source: 'LARP1', target: 'RRP15', directed: 'false', weight: 0.677367} },
+{ data: { source: 'LARP1', target: 'NOP53', directed: 'false', weight: 0.610893} },
+{ data: { source: 'LARP1', target: 'IMP3', directed: 'false', weight: 0.52147} },
+{ data: { source: 'RRP15', target: 'NOP53', directed: 'false', weight: 0.778473} },
+{ data: { source: 'RRP15', target: 'NKRF', directed: 'false', weight: 0.754794} },
+{ data: { source: 'RRP15', target: 'GLYR1', directed: 'false', weight: 0.752283} },
+{ data: { source: 'RRP15', target: 'IMP3', directed: 'false', weight: 0.209405} },
+{ data: { source: 'IMP3', target: 'GLYR1', directed: 'false', weight: 0.853382} },
+{ data: { source: 'IMP3', target: 'NOP53', directed: 'false', weight: 0.704543} },
+{ data: { source: 'IMP3', target: 'NKRF', directed: 'false', weight: 0.5259510000000001} },
+{ data: { source: 'GLYR1', target: 'NKRF', directed: 'false', weight: 0.945311} },
+{ data: { source: 'GLYR1', target: 'NOP53', directed: 'false', weight: 0.783961} },
+{ data: { source: 'NOP53', target: 'NKRF', directed: 'false', weight: 0.704543} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 IMP3-IMP4-MPP10 complex<br> Complex Score (from Super.Complex) = 0.95128<br> Unweighted Density = 0.90
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        3 interacting protein(s): <br>NGDN LARP1 MPHOSPH10
+    </section>
+    </body>
+    </html>
+    

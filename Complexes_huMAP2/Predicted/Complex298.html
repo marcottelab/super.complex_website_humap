@@ -1,0 +1,125 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 Ubiquitin E3 ligase (DET1, DDB1, CUL4A, RBX1, COP1)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex299.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DET1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7L5Y6" }},
+{data: { id: 'ETV1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P50549" }},
+{data: { id: 'TRIB2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92519" }},
+{data: { id: 'ETV5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P41161" }},
+{data: { id: 'FAM120B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96EK7" }},
+{data: { id: 'TRIB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96RU8" }},
+{data: { id: 'COP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NHY2" }},
+{data: { id: 'STK40', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N2I9" }}], 
+ edges: [{ data: { source: 'ETV5', target: 'COP1', directed: 'false', weight: 0.222744} },
+{ data: { source: 'ETV5', target: 'DET1', directed: 'false', weight: 0.114025} },
+{ data: { source: 'ETV5', target: 'STK40', directed: 'false', weight: 0.0446528} },
+{ data: { source: 'TRIB2', target: 'DET1', directed: 'false', weight: 0.177791} },
+{ data: { source: 'TRIB2', target: 'STK40', directed: 'false', weight: 0.134421} },
+{ data: { source: 'TRIB2', target: 'COP1', directed: 'false', weight: 0.06510890000000001} },
+{ data: { source: 'FAM120B', target: 'COP1', directed: 'false', weight: 0.045529} },
+{ data: { source: 'ETV1', target: 'COP1', directed: 'false', weight: 0.0590285} },
+{ data: { source: 'STK40', target: 'TRIB1', directed: 'false', weight: 0.290436} },
+{ data: { source: 'STK40', target: 'COP1', directed: 'false', weight: 0.132633} },
+{ data: { source: 'STK40', target: 'DET1', directed: 'false', weight: 0.052154599999999995} },
+{ data: { source: 'COP1', target: 'DET1', directed: 'false', weight: 0.09659569999999999} },
+{ data: { source: 'COP1', target: 'TRIB1', directed: 'false', weight: 0.0871826} },
+{ data: { source: 'DET1', target: 'TRIB1', directed: 'false', weight: 0.154661} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 Ubiquitin E3 ligase (DET1, DDB1, CUL4A, RBX1, COP1)<br> Complex Score (from Super.Complex) = 0.85400<br> Unweighted Density = 0.50
+    </section>
+    </body>
+    </html>
+    

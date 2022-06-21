@@ -1,0 +1,173 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CCC complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex113.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'COMMD2', score: 4, href: "https://www.uniprot.org/uniprot/Q86X83" }},
+{data: { id: 'COMMD6', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z4G1" }},
+{data: { id: 'COMMD5', score: 4, href: "https://www.uniprot.org/uniprot/Q9GZQ3" }},
+{data: { id: 'COMMD7', score: 4, href: "https://www.uniprot.org/uniprot/Q86VX2" }},
+{data: { id: 'COMMD4', score: 4, href: "https://www.uniprot.org/uniprot/Q9H0A8" }},
+{data: { id: 'COMMD1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N668" }},
+{data: { id: 'COMMD9', score: 5, href: "https://www.uniprot.org/uniprot/Q9P000" }},
+{data: { id: 'COMMD10', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6G5" }},
+{data: { id: 'CCDC22', score: 5, href: "https://www.uniprot.org/uniprot/O60826" }},
+{data: { id: 'CCDC93', score: 5, href: "https://www.uniprot.org/uniprot/Q567U6" }},
+{data: { id: 'COMMD3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBI1" }},
+{data: { id: 'COMMD8', score: 4, href: "https://www.uniprot.org/uniprot/Q9NX08" }},
+{data: { id: 'VPS35L', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z3J2" }}], 
+ edges: [{ data: { source: 'VPS35L', target: 'COMMD3', directed: 'false', weight: 0.999708} },
+{ data: { source: 'VPS35L', target: 'CCDC93', directed: 'false', weight: 0.854176} },
+{ data: { source: 'VPS35L', target: 'COMMD6', directed: 'false', weight: 0.8438469999999999} },
+{ data: { source: 'VPS35L', target: 'COMMD9', directed: 'false', weight: 0.821299} },
+{ data: { source: 'VPS35L', target: 'COMMD10', directed: 'false', weight: 0.75049} },
+{ data: { source: 'VPS35L', target: 'CCDC22', directed: 'false', weight: 0.75042} },
+{ data: { source: 'VPS35L', target: 'COMMD4', directed: 'false', weight: 0.682281} },
+{ data: { source: 'VPS35L', target: 'COMMD7', directed: 'false', weight: 0.40326} },
+{ data: { source: 'VPS35L', target: 'COMMD5', directed: 'false', weight: 0.19378199999999998} },
+{ data: { source: 'VPS35L', target: 'COMMD1', directed: 'false', weight: 0.18118599999999999} },
+{ data: { source: 'VPS35L', target: 'COMMD2', directed: 'false', weight: 0.138733} },
+{ data: { source: 'VPS35L', target: 'COMMD8', directed: 'false', weight: 0.132359} },
+{ data: { source: 'COMMD2', target: 'COMMD3', directed: 'false', weight: 0.968349} },
+{ data: { source: 'COMMD2', target: 'CCDC93', directed: 'false', weight: 0.937475} },
+{ data: { source: 'COMMD2', target: 'COMMD6', directed: 'false', weight: 0.8031119999999999} },
+{ data: { source: 'COMMD2', target: 'COMMD7', directed: 'false', weight: 0.793086} },
+{ data: { source: 'COMMD2', target: 'COMMD9', directed: 'false', weight: 0.776278} },
+{ data: { source: 'COMMD2', target: 'CCDC22', directed: 'false', weight: 0.670705} },
+{ data: { source: 'COMMD2', target: 'COMMD10', directed: 'false', weight: 0.6475310000000001} },
+{ data: { source: 'COMMD2', target: 'COMMD4', directed: 'false', weight: 0.589286} },
+{ data: { source: 'COMMD2', target: 'COMMD8', directed: 'false', weight: 0.546666} },
+{ data: { source: 'COMMD2', target: 'COMMD5', directed: 'false', weight: 0.44154899999999997} },
+{ data: { source: 'COMMD2', target: 'COMMD1', directed: 'false', weight: 0.26248299999999997} },
+{ data: { source: 'COMMD7', target: 'COMMD3', directed: 'false', weight: 0.994574} },
+{ data: { source: 'COMMD7', target: 'CCDC93', directed: 'false', weight: 0.971617} },
+{ data: { source: 'COMMD7', target: 'COMMD1', directed: 'false', weight: 0.9169} },
+{ data: { source: 'COMMD7', target: 'COMMD4', directed: 'false', weight: 0.8248559999999999} },
+{ data: { source: 'COMMD7', target: 'CCDC22', directed: 'false', weight: 0.789738} },
+{ data: { source: 'COMMD7', target: 'COMMD10', directed: 'false', weight: 0.754743} },
+{ data: { source: 'COMMD7', target: 'COMMD8', directed: 'false', weight: 0.723785} },
+{ data: { source: 'COMMD7', target: 'COMMD6', directed: 'false', weight: 0.70577} },
+{ data: { source: 'COMMD7', target: 'COMMD9', directed: 'false', weight: 0.668651} },
+{ data: { source: 'COMMD7', target: 'COMMD5', directed: 'false', weight: 0.629486} },
+{ data: { source: 'COMMD4', target: 'COMMD10', directed: 'false', weight: 0.998777} },
+{ data: { source: 'COMMD4', target: 'COMMD3', directed: 'false', weight: 0.997518} },
+{ data: { source: 'COMMD4', target: 'COMMD6', directed: 'false', weight: 0.996511} },
+{ data: { source: 'COMMD4', target: 'COMMD9', directed: 'false', weight: 0.991872} },
+{ data: { source: 'COMMD4', target: 'COMMD5', directed: 'false', weight: 0.9141090000000001} },
+{ data: { source: 'COMMD4', target: 'CCDC22', directed: 'false', weight: 0.8372700000000001} },
+{ data: { source: 'COMMD4', target: 'COMMD1', directed: 'false', weight: 0.825426} },
+{ data: { source: 'COMMD4', target: 'COMMD8', directed: 'false', weight: 0.414624} },
+{ data: { source: 'COMMD4', target: 'CCDC93', directed: 'false', weight: 0.362122} },
+{ data: { source: 'COMMD6', target: 'COMMD3', directed: 'false', weight: 0.9931969999999999} },
+{ data: { source: 'COMMD6', target: 'CCDC22', directed: 'false', weight: 0.958357} },
+{ data: { source: 'COMMD6', target: 'CCDC93', directed: 'false', weight: 0.8787379999999999} },
+{ data: { source: 'COMMD6', target: 'COMMD10', directed: 'false', weight: 0.874792} },
+{ data: { source: 'COMMD6', target: 'COMMD5', directed: 'false', weight: 0.874792} },
+{ data: { source: 'COMMD6', target: 'COMMD1', directed: 'false', weight: 0.874792} },
+{ data: { source: 'COMMD6', target: 'COMMD9', directed: 'false', weight: 0.867927} },
+{ data: { source: 'COMMD6', target: 'COMMD8', directed: 'false', weight: 0.8438469999999999} },
+{ data: { source: 'COMMD5', target: 'COMMD3', directed: 'false', weight: 0.999316} },
+{ data: { source: 'COMMD5', target: 'CCDC93', directed: 'false', weight: 0.8577959999999999} },
+{ data: { source: 'COMMD5', target: 'COMMD9', directed: 'false', weight: 0.855929} },
+{ data: { source: 'COMMD5', target: 'COMMD10', directed: 'false', weight: 0.801185} },
+{ data: { source: 'COMMD5', target: 'CCDC22', directed: 'false', weight: 0.783463} },
+{ data: { source: 'COMMD5', target: 'COMMD8', directed: 'false', weight: 0.749181} },
+{ data: { source: 'COMMD5', target: 'COMMD1', directed: 'false', weight: 0.250648} },
+{ data: { source: 'COMMD1', target: 'COMMD3', directed: 'false', weight: 0.9990479999999999} },
+{ data: { source: 'COMMD1', target: 'CCDC93', directed: 'false', weight: 0.9538610000000001} },
+{ data: { source: 'COMMD1', target: 'COMMD9', directed: 'false', weight: 0.855929} },
+{ data: { source: 'COMMD1', target: 'CCDC22', directed: 'false', weight: 0.790713} },
+{ data: { source: 'COMMD1', target: 'COMMD10', directed: 'false', weight: 0.511649} },
+{ data: { source: 'COMMD1', target: 'COMMD8', directed: 'false', weight: 0.292418} },
+{ data: { source: 'COMMD9', target: 'COMMD3', directed: 'false', weight: 0.9794799999999999} },
+{ data: { source: 'COMMD9', target: 'CCDC93', directed: 'false', weight: 0.931097} },
+{ data: { source: 'COMMD9', target: 'COMMD10', directed: 'false', weight: 0.855929} },
+{ data: { source: 'COMMD9', target: 'CCDC22', directed: 'false', weight: 0.84857} },
+{ data: { source: 'COMMD9', target: 'COMMD8', directed: 'false', weight: 0.821299} },
+{ data: { source: 'COMMD10', target: 'COMMD3', directed: 'false', weight: 0.9994430000000001} },
+{ data: { source: 'COMMD10', target: 'CCDC22', directed: 'false', weight: 0.952475} },
+{ data: { source: 'COMMD10', target: 'CCDC93', directed: 'false', weight: 0.9399639999999999} },
+{ data: { source: 'COMMD10', target: 'COMMD8', directed: 'false', weight: 0.874792} },
+{ data: { source: 'CCDC22', target: 'COMMD3', directed: 'false', weight: 0.928673} },
+{ data: { source: 'CCDC22', target: 'CCDC93', directed: 'false', weight: 0.65067} },
+{ data: { source: 'CCDC22', target: 'COMMD8', directed: 'false', weight: 0.110175} },
+{ data: { source: 'COMMD3', target: 'COMMD8', directed: 'false', weight: 0.99903} },
+{ data: { source: 'COMMD3', target: 'CCDC93', directed: 'false', weight: 0.865294} },
+{ data: { source: 'COMMD8', target: 'CCDC93', directed: 'false', weight: 0.121359} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CCC complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

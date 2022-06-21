@@ -1,0 +1,126 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 CTNNAL1-DNTA complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex168.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SNTB2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13425" }},
+{data: { id: 'SNTG2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NY99" }},
+{data: { id: 'DTNB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60941" }},
+{data: { id: 'hCG_30749', score: 1, type: '', href: "https://www.uniprot.org/uniprot/A0A024RDT2" }},
+{data: { id: 'DMD', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P11532" }},
+{data: { id: 'DTNA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y4J8" }},
+{data: { id: 'CTNNAL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UBT7" }},
+{data: { id: 'SNTB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13884" }},
+{data: { id: 'SNTA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13424" }}], 
+ edges: [{ data: { source: 'DTNB', target: 'DMD', directed: 'false', weight: 0.655724} },
+{ data: { source: 'DTNB', target: 'SNTG2', directed: 'false', weight: 0.445087} },
+{ data: { source: 'hCG_30749', target: 'DMD', directed: 'false', weight: 0.187835} },
+{ data: { source: 'SNTG2', target: 'DMD', directed: 'false', weight: 0.867476} },
+{ data: { source: 'SNTG2', target: 'SNTB1', directed: 'false', weight: 0.841931} },
+{ data: { source: 'SNTG2', target: 'DTNA', directed: 'false', weight: 0.537636} },
+{ data: { source: 'SNTG2', target: 'SNTA1', directed: 'false', weight: 0.34443} },
+{ data: { source: 'SNTG2', target: 'SNTB2', directed: 'false', weight: 0.26806399999999997} },
+{ data: { source: 'SNTG2', target: 'CTNNAL1', directed: 'false', weight: 0.22975} },
+{ data: { source: 'SNTB1', target: 'DMD', directed: 'false', weight: 0.9035540000000001} },
+{ data: { source: 'CTNNAL1', target: 'DMD', directed: 'false', weight: 0.938838} },
+{ data: { source: 'SNTA1', target: 'DMD', directed: 'false', weight: 0.578336} },
+{ data: { source: 'SNTB2', target: 'DMD', directed: 'false', weight: 0.241679} },
+{ data: { source: 'DMD', target: 'DTNA', directed: 'false', weight: 0.6485850000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 CTNNAL1-DNTA complex<br> Complex Score (from Super.Complex) = 0.98700<br> Unweighted Density = 0.39
+    </section>
+    </body>
+    </html>
+    

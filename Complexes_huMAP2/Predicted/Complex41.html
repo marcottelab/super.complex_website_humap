@@ -1,0 +1,171 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.7 TRAPP complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex42.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TRAPPC4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y296" }},
+{data: { id: 'TRAPPC5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IUR0" }},
+{data: { id: 'TRAPPC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y5R8" }},
+{data: { id: 'TRAPPC10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P48553" }},
+{data: { id: 'TRAPPC6B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86SZ2" }},
+{data: { id: 'ZNF547', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q6IBE5" }},
+{data: { id: 'TRAPPC12', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WVT3" }},
+{data: { id: 'TRAPPC14', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WVR3" }},
+{data: { id: 'TRAPPC11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z392" }},
+{data: { id: 'TRAPPC9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96Q05" }},
+{data: { id: 'TRAPPC2L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UL33" }},
+{data: { id: 'TRAPPC8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y2L5" }},
+{data: { id: 'TRAPPC3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43617" }}], 
+ edges: [{ data: { source: 'TRAPPC8', target: 'TRAPPC12', directed: 'false', weight: 0.9995450000000001} },
+{ data: { source: 'TRAPPC8', target: 'TRAPPC5', directed: 'false', weight: 0.9983120000000001} },
+{ data: { source: 'TRAPPC8', target: 'ZNF547', directed: 'false', weight: 0.993503} },
+{ data: { source: 'TRAPPC8', target: 'TRAPPC1', directed: 'false', weight: 0.983941} },
+{ data: { source: 'TRAPPC8', target: 'TRAPPC2L', directed: 'false', weight: 0.10743299999999999} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC1', directed: 'false', weight: 0.966851} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC5', directed: 'false', weight: 0.601426} },
+{ data: { source: 'TRAPPC4', target: 'ZNF547', directed: 'false', weight: 0.278792} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC12', directed: 'false', weight: 0.14682} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC2L', directed: 'false', weight: 0.047988} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC9', directed: 'false', weight: 0.0291264} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC10', directed: 'false', weight: 0.0259246} },
+{ data: { source: 'TRAPPC4', target: 'TRAPPC14', directed: 'false', weight: 0.025827199999999998} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC11', directed: 'false', weight: 0.9979309999999999} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC3', directed: 'false', weight: 0.901651} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC2L', directed: 'false', weight: 0.8623780000000001} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC1', directed: 'false', weight: 0.653154} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC10', directed: 'false', weight: 0.6446850000000001} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC6B', directed: 'false', weight: 0.5773159999999999} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC14', directed: 'false', weight: 0.537745} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC9', directed: 'false', weight: 0.523941} },
+{ data: { source: 'TRAPPC5', target: 'ZNF547', directed: 'false', weight: 0.51822} },
+{ data: { source: 'TRAPPC5', target: 'TRAPPC12', directed: 'false', weight: 0.166562} },
+{ data: { source: 'ZNF547', target: 'TRAPPC2L', directed: 'false', weight: 0.695227} },
+{ data: { source: 'ZNF547', target: 'TRAPPC11', directed: 'false', weight: 0.672077} },
+{ data: { source: 'ZNF547', target: 'TRAPPC10', directed: 'false', weight: 0.5} },
+{ data: { source: 'ZNF547', target: 'TRAPPC14', directed: 'false', weight: 0.47195299999999996} },
+{ data: { source: 'ZNF547', target: 'TRAPPC1', directed: 'false', weight: 0.466933} },
+{ data: { source: 'ZNF547', target: 'TRAPPC9', directed: 'false', weight: 0.401163} },
+{ data: { source: 'ZNF547', target: 'TRAPPC3', directed: 'false', weight: 0.35893600000000003} },
+{ data: { source: 'ZNF547', target: 'TRAPPC6B', directed: 'false', weight: 0.306867} },
+{ data: { source: 'ZNF547', target: 'TRAPPC12', directed: 'false', weight: 0.133487} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC1', directed: 'false', weight: 0.882388} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC12', directed: 'false', weight: 0.223322} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC11', directed: 'false', weight: 0.10626500000000001} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC2L', directed: 'false', weight: 0.0462591} },
+{ data: { source: 'TRAPPC3', target: 'TRAPPC9', directed: 'false', weight: 0.0212305} },
+{ data: { source: 'TRAPPC2L', target: 'TRAPPC1', directed: 'false', weight: 0.80701} },
+{ data: { source: 'TRAPPC2L', target: 'TRAPPC11', directed: 'false', weight: 0.297281} },
+{ data: { source: 'TRAPPC2L', target: 'TRAPPC12', directed: 'false', weight: 0.0853508} },
+{ data: { source: 'TRAPPC2L', target: 'TRAPPC6B', directed: 'false', weight: 0.0235377} },
+{ data: { source: 'TRAPPC2L', target: 'TRAPPC9', directed: 'false', weight: 0.0234187} },
+{ data: { source: 'TRAPPC2L', target: 'TRAPPC10', directed: 'false', weight: 0.0221638} },
+{ data: { source: 'TRAPPC2L', target: 'TRAPPC14', directed: 'false', weight: 0.0217567} },
+{ data: { source: 'TRAPPC14', target: 'TRAPPC1', directed: 'false', weight: 0.210035} },
+{ data: { source: 'TRAPPC14', target: 'TRAPPC10', directed: 'false', weight: 0.030309100000000002} },
+{ data: { source: 'TRAPPC14', target: 'TRAPPC9', directed: 'false', weight: 0.024262} },
+{ data: { source: 'TRAPPC1', target: 'TRAPPC11', directed: 'false', weight: 0.990366} },
+{ data: { source: 'TRAPPC1', target: 'TRAPPC12', directed: 'false', weight: 0.918099} },
+{ data: { source: 'TRAPPC1', target: 'TRAPPC9', directed: 'false', weight: 0.690339} },
+{ data: { source: 'TRAPPC1', target: 'TRAPPC6B', directed: 'false', weight: 0.619242} },
+{ data: { source: 'TRAPPC1', target: 'TRAPPC10', directed: 'false', weight: 0.584483} },
+{ data: { source: 'TRAPPC11', target: 'TRAPPC12', directed: 'false', weight: 0.9999600000000001} },
+{ data: { source: 'TRAPPC12', target: 'TRAPPC6B', directed: 'false', weight: 0.0475347} },
+{ data: { source: 'TRAPPC10', target: 'TRAPPC9', directed: 'false', weight: 0.0501087} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.7 TRAPP complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.71
+    </section>
+    </body>
+    </html>
+    

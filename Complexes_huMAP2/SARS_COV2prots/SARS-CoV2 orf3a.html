@@ -1,0 +1,127 @@
+
+    <!doctype html>
+    
+    <html>
+    
+    <head>
+    <title>SARS-CoV2 orf3a</title>
+
+    		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    
+    		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+    <script src="https://unpkg.com/cose-base/cose-base.js"></script>
+    <script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+        </head>
+        
+        <style>
+            #cy {
+                width: 90%;
+                height: 90%;
+                position: absolute;
+                middle: 0px;
+                left: 0px;
+            }
+        </style>
+        
+        <body>
+        <section>
+        
+
+         </section>
+            <div id="cy"></div>
+            <script>
+              var cy = cytoscape({
+          container: document.getElementById('cy'),
+          
+elements:{nodes: [{data: { id: "SARS-CoV2 orf3a", score: 2, type:  "sars" , href: "https://covid-19.uniprot.org/uniprotkb/P0DTC3" }},
+{data: { id: "HMOX1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P09601" }},
+{data: { id: "TRIM59", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8IWR1" }},
+{data: { id: "ARL6IP6", score: 1, score_annot: 4, type:  "human" , href: "https://www.uniprot.org/uniprot/Q8N6S5" }},
+{data: { id: "VPS39", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q96JC1" }},
+{data: { id: "CLCC1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q96S66" }},
+{data: { id: "VPS11", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9H270" }},
+{data: { id: "SUN2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9UH99" }},
+{data: { id: "ALG5", score: 1, score_annot: 4, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9Y673" }},
+{data: { id: "0.3 Integrator complex", score: 0, type: "complex", href: "../Predicted/Complex122.html" }}], 
+ edges: [{ data: { source: "VPS11", target: "0.3 Integrator complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SARS-CoV2 orf3a", target: "HMOX1", directed: "false", type: "sars2prot",weight: 0.993596312} },
+{ data: { source: "SARS-CoV2 orf3a", target: "TRIM59", directed: "false", type: "sars2prot",weight: 0.979280399} },
+{ data: { source: "SARS-CoV2 orf3a", target: "ARL6IP6", directed: "false", type: "sars2prot",weight: 0.865135022} },
+{ data: { source: "SARS-CoV2 orf3a", target: "VPS39", directed: "false", type: "sars2prot",weight: 0.878755935} },
+{ data: { source: "SARS-CoV2 orf3a", target: "CLCC1", directed: "false", type: "sars2prot",weight: 0.920620901} },
+{ data: { source: "SARS-CoV2 orf3a", target: "VPS11", directed: "false", type: "sars2prot",weight: 0.967855711} },
+{ data: { source: "SARS-CoV2 orf3a", target: "SUN2", directed: "false", type: "sars2prot",weight: 0.880019941} },
+{ data: { source: "SARS-CoV2 orf3a", target: "ALG5", directed: "false", type: "sars2prot",weight: 0.860324884} }]},
+
+    style: [
+        {
+            selector: 'node',
+            style: {
+                    				'font-size': 20,
+            'font-weight': 'bold',
+                          'text-wrap': 'wrap',
+        'text-max-width': '300',
+                shape: function( ele ){ 
+                                    if ( ele.data('type') == 'complex' ){return 'circle'}
+                                    if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                    
+      return 'star';
+      },
+                'background-color': function( ele ){ 
+                                    if ( ele.data('type') == 'complex' ){return 'blue'}
+                                    if ( ele.data('type') == 'sars' ){return 'red'}             
+                                    if ( ele.data('score_annot') == 1 ){return 'rgb(201, 160, 54)'} 
+    								if ( ele.data('score_annot') == 2 ){return 'rgb(211, 186, 63)'}  
+                                     if ( ele.data('score_annot') == 3 ){return 'rgb(160, 171, 105)'}   
+                                     if ( ele.data('score_annot') == 4 ){return 'rgb(78, 148, 70)'}   
+                                     if ( ele.data('score_annot') == 5 ){return 'rgb(52, 136, 74)'}   
+                                     return 'rgb(180, 131, 40)';
+      },
+                label: 'data(id)'
+            }
+        },
+    							{
+    							selector: 'edge',
+    							style: {
+    								'width': 'mapData(weight, 0, 1, 0, 5)',
+    								'line-color': function( ele ){ 
+                                    if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                      if ( ele.data('type') == 'complex2complex' ){return 'blue'}
+      return 'red';
+      },
+    								'opacity': 0.5
+    							}
+    						}
+    	]
+        
+    });
+    
+    cy.layout({
+        'name': 'cose',
+    	'animate':false,
+    	'nodeDimensionsIncludeLabels':true,
+    	'padding': 1,
+    	'componentSpacing': 1,
+    	 'idealEdgeLength': function( edge ){ return 1; },
+    	 // Divisor to compute edge forces
+      'edgeElasticity': function( edge ){ return 20; }
+    }).run();
+        
+    cy.on('tap', 'node', function(){
+      try { // your browser may block popups
+        window.open( this.data('href') );
+      } catch(e){ // fall back on url change
+        window.location.href = this.data('href');
+      }
+    });      
+        </script>
+    
+        	<section>
+        	<br>
+        	<br>
+        	<br> 
+        
+        </section>
+        </body>
+        </html>
+        

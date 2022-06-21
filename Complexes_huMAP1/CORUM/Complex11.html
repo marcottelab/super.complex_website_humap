@@ -1,0 +1,218 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> PA28-20S proteasome</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex12.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PSME1', score: 5, href: "https://www.uniprot.org/uniprot/Q06323" }},
+{data: { id: 'PSMA2', score: 5, href: "https://www.uniprot.org/uniprot/P25787" }},
+{data: { id: 'PSMB2', score: 5, href: "https://www.uniprot.org/uniprot/P49721" }},
+{data: { id: 'PSMA4', score: 5, href: "https://www.uniprot.org/uniprot/P25789" }},
+{data: { id: 'PSMB6', score: 5, href: "https://www.uniprot.org/uniprot/P28072" }},
+{data: { id: 'PSMB7', score: 5, href: "https://www.uniprot.org/uniprot/Q99436" }},
+{data: { id: 'PSMA3', score: 5, href: "https://www.uniprot.org/uniprot/P25788" }},
+{data: { id: 'PSMA7', score: 5, href: "https://www.uniprot.org/uniprot/O14818" }},
+{data: { id: 'PSMB1', score: 5, href: "https://www.uniprot.org/uniprot/P20618" }},
+{data: { id: 'PSME2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL46" }},
+{data: { id: 'PSMA5', score: 5, href: "https://www.uniprot.org/uniprot/P28066" }},
+{data: { id: 'PSMB5', score: 5, href: "https://www.uniprot.org/uniprot/P28074" }},
+{data: { id: 'PSMA1', score: 5, href: "https://www.uniprot.org/uniprot/P25786" }},
+{data: { id: 'PSMB3', score: 5, href: "https://www.uniprot.org/uniprot/P49720" }},
+{data: { id: 'PSMB4', score: 5, href: "https://www.uniprot.org/uniprot/P28070" }},
+{data: { id: 'PSMA6', score: 5, href: "https://www.uniprot.org/uniprot/P60900" }}], 
+ edges: [{ data: { source: 'PSME1', target: 'PSMB4', directed: 'false', weight: 0.9990889999999999} },
+{ data: { source: 'PSME1', target: 'PSMB5', directed: 'false', weight: 0.997128} },
+{ data: { source: 'PSME1', target: 'PSME2', directed: 'false', weight: 0.967461} },
+{ data: { source: 'PSME1', target: 'PSMB7', directed: 'false', weight: 0.95186} },
+{ data: { source: 'PSME1', target: 'PSMA1', directed: 'false', weight: 0.884919} },
+{ data: { source: 'PSME1', target: 'PSMA7', directed: 'false', weight: 0.8448190000000001} },
+{ data: { source: 'PSME1', target: 'PSMA4', directed: 'false', weight: 0.8448190000000001} },
+{ data: { source: 'PSME1', target: 'PSMA6', directed: 'false', weight: 0.83883} },
+{ data: { source: 'PSME1', target: 'PSMA5', directed: 'false', weight: 0.804844} },
+{ data: { source: 'PSME1', target: 'PSMB2', directed: 'false', weight: 0.770115} },
+{ data: { source: 'PSME1', target: 'PSMA3', directed: 'false', weight: 0.756357} },
+{ data: { source: 'PSME1', target: 'PSMB3', directed: 'false', weight: 0.703699} },
+{ data: { source: 'PSME1', target: 'PSMB1', directed: 'false', weight: 0.703699} },
+{ data: { source: 'PSME1', target: 'PSMB6', directed: 'false', weight: 0.64662} },
+{ data: { source: 'PSME1', target: 'PSMA2', directed: 'false', weight: 0.598846} },
+{ data: { source: 'PSMA2', target: 'PSMB3', directed: 'false', weight: 0.983087} },
+{ data: { source: 'PSMA2', target: 'PSME2', directed: 'false', weight: 0.785786} },
+{ data: { source: 'PSMA2', target: 'PSMA7', directed: 'false', weight: 0.360026} },
+{ data: { source: 'PSMA2', target: 'PSMA4', directed: 'false', weight: 0.35591} },
+{ data: { source: 'PSMA2', target: 'PSMB1', directed: 'false', weight: 0.3413} },
+{ data: { source: 'PSMA2', target: 'PSMB2', directed: 'false', weight: 0.335123} },
+{ data: { source: 'PSMA2', target: 'PSMB5', directed: 'false', weight: 0.175315} },
+{ data: { source: 'PSMA2', target: 'PSMB6', directed: 'false', weight: 0.151151} },
+{ data: { source: 'PSMA2', target: 'PSMA1', directed: 'false', weight: 0.11183900000000001} },
+{ data: { source: 'PSMA2', target: 'PSMB4', directed: 'false', weight: 0.106879} },
+{ data: { source: 'PSMA2', target: 'PSMA3', directed: 'false', weight: 0.0886248} },
+{ data: { source: 'PSMA2', target: 'PSMA5', directed: 'false', weight: 0.0815146} },
+{ data: { source: 'PSMA2', target: 'PSMB7', directed: 'false', weight: 0.0674568} },
+{ data: { source: 'PSMA2', target: 'PSMA6', directed: 'false', weight: 0.032026900000000004} },
+{ data: { source: 'PSMB2', target: 'PSMB3', directed: 'false', weight: 0.909064} },
+{ data: { source: 'PSMB2', target: 'PSME2', directed: 'false', weight: 0.8917790000000001} },
+{ data: { source: 'PSMB2', target: 'PSMA4', directed: 'false', weight: 0.508436} },
+{ data: { source: 'PSMB2', target: 'PSMB6', directed: 'false', weight: 0.447639} },
+{ data: { source: 'PSMB2', target: 'PSMB4', directed: 'false', weight: 0.356671} },
+{ data: { source: 'PSMB2', target: 'PSMA3', directed: 'false', weight: 0.339086} },
+{ data: { source: 'PSMB2', target: 'PSMA7', directed: 'false', weight: 0.32207399999999997} },
+{ data: { source: 'PSMB2', target: 'PSMA5', directed: 'false', weight: 0.26758000000000004} },
+{ data: { source: 'PSMB2', target: 'PSMB7', directed: 'false', weight: 0.20288} },
+{ data: { source: 'PSMB2', target: 'PSMB5', directed: 'false', weight: 0.152144} },
+{ data: { source: 'PSMB2', target: 'PSMB1', directed: 'false', weight: 0.135184} },
+{ data: { source: 'PSMB2', target: 'PSMA6', directed: 'false', weight: 0.12372799999999999} },
+{ data: { source: 'PSMB2', target: 'PSMA1', directed: 'false', weight: 0.0819362} },
+{ data: { source: 'PSMA1', target: 'PSMB3', directed: 'false', weight: 0.991643} },
+{ data: { source: 'PSMA1', target: 'PSME2', directed: 'false', weight: 0.9090719999999999} },
+{ data: { source: 'PSMA1', target: 'PSMB1', directed: 'false', weight: 0.645777} },
+{ data: { source: 'PSMA1', target: 'PSMA7', directed: 'false', weight: 0.48117600000000005} },
+{ data: { source: 'PSMA1', target: 'PSMA5', directed: 'false', weight: 0.33626300000000003} },
+{ data: { source: 'PSMA1', target: 'PSMB7', directed: 'false', weight: 0.320141} },
+{ data: { source: 'PSMA1', target: 'PSMB6', directed: 'false', weight: 0.220381} },
+{ data: { source: 'PSMA1', target: 'PSMA4', directed: 'false', weight: 0.17643} },
+{ data: { source: 'PSMA1', target: 'PSMA3', directed: 'false', weight: 0.135214} },
+{ data: { source: 'PSMA1', target: 'PSMB4', directed: 'false', weight: 0.10686400000000001} },
+{ data: { source: 'PSMA1', target: 'PSMA6', directed: 'false', weight: 0.08861039999999999} },
+{ data: { source: 'PSMA1', target: 'PSMB5', directed: 'false', weight: 0.0491152} },
+{ data: { source: 'PSMA4', target: 'PSMB3', directed: 'false', weight: 0.8765120000000001} },
+{ data: { source: 'PSMA4', target: 'PSME2', directed: 'false', weight: 0.853985} },
+{ data: { source: 'PSMA4', target: 'PSMB1', directed: 'false', weight: 0.8450690000000001} },
+{ data: { source: 'PSMA4', target: 'PSMA7', directed: 'false', weight: 0.7532369999999999} },
+{ data: { source: 'PSMA4', target: 'PSMA5', directed: 'false', weight: 0.61463} },
+{ data: { source: 'PSMA4', target: 'PSMB7', directed: 'false', weight: 0.5} },
+{ data: { source: 'PSMA4', target: 'PSMB6', directed: 'false', weight: 0.33852899999999997} },
+{ data: { source: 'PSMA4', target: 'PSMB4', directed: 'false', weight: 0.21365599999999998} },
+{ data: { source: 'PSMA4', target: 'PSMB5', directed: 'false', weight: 0.0937311} },
+{ data: { source: 'PSMA4', target: 'PSMA3', directed: 'false', weight: 0.09040010000000001} },
+{ data: { source: 'PSMA4', target: 'PSMA6', directed: 'false', weight: 0.0780411} },
+{ data: { source: 'PSMA6', target: 'PSMB3', directed: 'false', weight: 0.85339} },
+{ data: { source: 'PSMA6', target: 'PSME2', directed: 'false', weight: 0.8276290000000001} },
+{ data: { source: 'PSMA6', target: 'PSMB1', directed: 'false', weight: 0.48971099999999995} },
+{ data: { source: 'PSMA6', target: 'PSMA7', directed: 'false', weight: 0.359881} },
+{ data: { source: 'PSMA6', target: 'PSMB4', directed: 'false', weight: 0.06856989999999999} },
+{ data: { source: 'PSMA6', target: 'PSMA5', directed: 'false', weight: 0.0592943} },
+{ data: { source: 'PSMA6', target: 'PSMB7', directed: 'false', weight: 0.053525} },
+{ data: { source: 'PSMA6', target: 'PSMB6', directed: 'false', weight: 0.0406375} },
+{ data: { source: 'PSMA6', target: 'PSMA3', directed: 'false', weight: 0.0189353} },
+{ data: { source: 'PSMA6', target: 'PSMB5', directed: 'false', weight: 0.0143525} },
+{ data: { source: 'PSMB7', target: 'PSMB3', directed: 'false', weight: 0.980174} },
+{ data: { source: 'PSMB7', target: 'PSME2', directed: 'false', weight: 0.965957} },
+{ data: { source: 'PSMB7', target: 'PSMB1', directed: 'false', weight: 0.513352} },
+{ data: { source: 'PSMB7', target: 'PSMA3', directed: 'false', weight: 0.304292} },
+{ data: { source: 'PSMB7', target: 'PSMA5', directed: 'false', weight: 0.20252699999999998} },
+{ data: { source: 'PSMB7', target: 'PSMB6', directed: 'false', weight: 0.20239100000000002} },
+{ data: { source: 'PSMB7', target: 'PSMA7', directed: 'false', weight: 0.139062} },
+{ data: { source: 'PSMB7', target: 'PSMB5', directed: 'false', weight: 0.128672} },
+{ data: { source: 'PSMB7', target: 'PSMB4', directed: 'false', weight: 0.08244760000000001} },
+{ data: { source: 'PSMA3', target: 'PSMB3', directed: 'false', weight: 0.816439} },
+{ data: { source: 'PSMA3', target: 'PSME2', directed: 'false', weight: 0.785786} },
+{ data: { source: 'PSMA3', target: 'PSMB1', directed: 'false', weight: 0.650777} },
+{ data: { source: 'PSMA3', target: 'PSMA7', directed: 'false', weight: 0.23508099999999998} },
+{ data: { source: 'PSMA3', target: 'PSMA5', directed: 'false', weight: 0.21365100000000004} },
+{ data: { source: 'PSMA3', target: 'PSMB4', directed: 'false', weight: 0.168268} },
+{ data: { source: 'PSMA3', target: 'PSMB6', directed: 'false', weight: 0.167959} },
+{ data: { source: 'PSMA3', target: 'PSMB5', directed: 'false', weight: 0.0449524} },
+{ data: { source: 'PSMA7', target: 'PSMB3', directed: 'false', weight: 0.959726} },
+{ data: { source: 'PSMA7', target: 'PSME2', directed: 'false', weight: 0.853985} },
+{ data: { source: 'PSMA7', target: 'PSMB6', directed: 'false', weight: 0.7851560000000001} },
+{ data: { source: 'PSMA7', target: 'PSMB4', directed: 'false', weight: 0.7848069999999999} },
+{ data: { source: 'PSMA7', target: 'PSMB1', directed: 'false', weight: 0.457649} },
+{ data: { source: 'PSMA7', target: 'PSMA5', directed: 'false', weight: 0.324969} },
+{ data: { source: 'PSMA7', target: 'PSMB5', directed: 'false', weight: 0.31298000000000004} },
+{ data: { source: 'PSMB1', target: 'PSMB3', directed: 'false', weight: 0.959726} },
+{ data: { source: 'PSMB1', target: 'PSME2', directed: 'false', weight: 0.853985} },
+{ data: { source: 'PSMB1', target: 'PSMA5', directed: 'false', weight: 0.710791} },
+{ data: { source: 'PSMB1', target: 'PSMB6', directed: 'false', weight: 0.677528} },
+{ data: { source: 'PSMB1', target: 'PSMB4', directed: 'false', weight: 0.240321} },
+{ data: { source: 'PSMB1', target: 'PSMB5', directed: 'false', weight: 0.159425} },
+{ data: { source: 'PSME2', target: 'PSMB5', directed: 'false', weight: 0.999848} },
+{ data: { source: 'PSME2', target: 'PSMB4', directed: 'false', weight: 0.996661} },
+{ data: { source: 'PSME2', target: 'PSMB3', directed: 'false', weight: 0.853985} },
+{ data: { source: 'PSME2', target: 'PSMA5', directed: 'false', weight: 0.792389} },
+{ data: { source: 'PSME2', target: 'PSMB6', directed: 'false', weight: 0.7762100000000001} },
+{ data: { source: 'PSMA5', target: 'PSMB3', directed: 'false', weight: 0.822192} },
+{ data: { source: 'PSMA5', target: 'PSMB6', directed: 'false', weight: 0.217061} },
+{ data: { source: 'PSMA5', target: 'PSMB4', directed: 'false', weight: 0.100252} },
+{ data: { source: 'PSMA5', target: 'PSMB5', directed: 'false', weight: 0.060651300000000005} },
+{ data: { source: 'PSMB6', target: 'PSMB3', directed: 'false', weight: 0.797528} },
+{ data: { source: 'PSMB6', target: 'PSMB5', directed: 'false', weight: 0.11144200000000001} },
+{ data: { source: 'PSMB6', target: 'PSMB4', directed: 'false', weight: 0.09627460000000002} },
+{ data: { source: 'PSMB3', target: 'PSMB4', directed: 'false', weight: 0.999985} },
+{ data: { source: 'PSMB3', target: 'PSMB5', directed: 'false', weight: 0.999898} },
+{ data: { source: 'PSMB4', target: 'PSMB5', directed: 'false', weight: 0.170795} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    PA28-20S proteasome	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

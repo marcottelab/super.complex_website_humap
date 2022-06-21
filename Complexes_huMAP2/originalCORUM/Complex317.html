@@ -1,0 +1,167 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> F1F0-ATP synthase, mitochondrial</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex318.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ATP5PD', score: 5, href: "https://www.uniprot.org/uniprot/O75947" }},
+{data: { id: 'ATP5MG', score: 5, href: "https://www.uniprot.org/uniprot/O75964" }},
+{data: { id: 'ATP6', score: 5, href: "https://www.uniprot.org/uniprot/P00846" }},
+{data: { id: 'ATP8', score: 5, href: "https://www.uniprot.org/uniprot/P03928" }},
+{data: { id: 'ATP5G1', score: 5, href: "https://www.uniprot.org/uniprot/P05496" }},
+{data: { id: 'HEL-S-271', score: 3, href: "https://www.uniprot.org/uniprot/V9HW31" }},
+{data: { id: 'ATP5J', score: 5, href: "https://www.uniprot.org/uniprot/P18859" }},
+{data: { id: 'hCG_39985', score: 2, href: "https://www.uniprot.org/uniprot/Q08ET0" }},
+{data: { id: 'HEL-S-123m', score: 3, href: "https://www.uniprot.org/uniprot/V9HW26" }},
+{data: { id: 'ATP5F1D', score: 5, href: "https://www.uniprot.org/uniprot/P30049" }},
+{data: { id: 'ATP5F1C', score: 5, href: "https://www.uniprot.org/uniprot/P36542" }},
+{data: { id: 'ATP5PO', score: 5, href: "https://www.uniprot.org/uniprot/P48047" }},
+{data: { id: 'ATP5MF', score: 5, href: "https://www.uniprot.org/uniprot/P56134" }},
+{data: { id: 'ATP5F1E', score: 5, href: "https://www.uniprot.org/uniprot/P56381" }},
+{data: { id: 'ATP5ME', score: 5, href: "https://www.uniprot.org/uniprot/P56385" }},
+{data: { id: 'ATP5IF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UII2" }}], 
+ edges: [{ data: { source: 'ATP5IF1', target: 'HEL-S-271', directed: 'false', weight: 0.0516481} },
+{ data: { source: 'ATP5IF1', target: 'HEL-S-123m', directed: 'false', weight: 0.0255914} },
+{ data: { source: 'ATP5F1D', target: 'HEL-S-123m', directed: 'false', weight: 0.999985} },
+{ data: { source: 'ATP5F1D', target: 'ATP5PO', directed: 'false', weight: 0.998309} },
+{ data: { source: 'ATP5F1D', target: 'ATP5F1E', directed: 'false', weight: 0.997856} },
+{ data: { source: 'ATP5F1D', target: 'ATP5F1C', directed: 'false', weight: 0.995082} },
+{ data: { source: 'ATP5F1D', target: 'HEL-S-271', directed: 'false', weight: 0.9720770000000001} },
+{ data: { source: 'ATP5F1D', target: 'ATP5PD', directed: 'false', weight: 0.939484} },
+{ data: { source: 'ATP5F1D', target: 'ATP5J', directed: 'false', weight: 0.922372} },
+{ data: { source: 'ATP5F1D', target: 'hCG_39985', directed: 'false', weight: 0.820735} },
+{ data: { source: 'ATP5F1D', target: 'ATP5MF', directed: 'false', weight: 0.560413} },
+{ data: { source: 'ATP5F1D', target: 'ATP5ME', directed: 'false', weight: 0.558114} },
+{ data: { source: 'ATP5F1D', target: 'ATP5MG', directed: 'false', weight: 0.159405} },
+{ data: { source: 'ATP5F1D', target: 'ATP8', directed: 'false', weight: 0.027699099999999997} },
+{ data: { source: 'ATP5F1D', target: 'ATP6', directed: 'false', weight: 0.0246015} },
+{ data: { source: 'ATP5PD', target: 'hCG_39985', directed: 'false', weight: 1.0} },
+{ data: { source: 'ATP5PD', target: 'ATP5PO', directed: 'false', weight: 0.9966389999999999} },
+{ data: { source: 'ATP5PD', target: 'HEL-S-123m', directed: 'false', weight: 0.974928} },
+{ data: { source: 'ATP5PD', target: 'HEL-S-271', directed: 'false', weight: 0.93027} },
+{ data: { source: 'ATP5PD', target: 'ATP5MG', directed: 'false', weight: 0.8245100000000001} },
+{ data: { source: 'ATP5PD', target: 'ATP5ME', directed: 'false', weight: 0.42087399999999997} },
+{ data: { source: 'ATP5PD', target: 'ATP5F1C', directed: 'false', weight: 0.06793210000000001} },
+{ data: { source: 'ATP5MG', target: 'hCG_39985', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'ATP5MG', target: 'ATP5PO', directed: 'false', weight: 0.999822} },
+{ data: { source: 'ATP5MG', target: 'HEL-S-271', directed: 'false', weight: 0.997417} },
+{ data: { source: 'ATP5MG', target: 'ATP5F1C', directed: 'false', weight: 0.9715809999999999} },
+{ data: { source: 'ATP5MG', target: 'HEL-S-123m', directed: 'false', weight: 0.7653949999999999} },
+{ data: { source: 'ATP5MG', target: 'ATP5ME', directed: 'false', weight: 0.749272} },
+{ data: { source: 'ATP8', target: 'hCG_39985', directed: 'false', weight: 0.0948035} },
+{ data: { source: 'ATP8', target: 'HEL-S-271', directed: 'false', weight: 0.0328862} },
+{ data: { source: 'ATP8', target: 'HEL-S-123m', directed: 'false', weight: 0.0226248} },
+{ data: { source: 'ATP8', target: 'ATP5PO', directed: 'false', weight: 0.022167} },
+{ data: { source: 'HEL-S-123m', target: 'HEL-S-271', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-123m', target: 'ATP5F1C', directed: 'false', weight: 0.999933} },
+{ data: { source: 'HEL-S-123m', target: 'hCG_39985', directed: 'false', weight: 0.999928} },
+{ data: { source: 'HEL-S-123m', target: 'ATP5PO', directed: 'false', weight: 0.999444} },
+{ data: { source: 'HEL-S-123m', target: 'ATP5F1E', directed: 'false', weight: 0.300344} },
+{ data: { source: 'HEL-S-123m', target: 'ATP5J', directed: 'false', weight: 0.0448138} },
+{ data: { source: 'HEL-S-123m', target: 'ATP5ME', directed: 'false', weight: 0.023553499999999998} },
+{ data: { source: 'HEL-S-123m', target: 'ATP5MF', directed: 'false', weight: 0.0206603} },
+{ data: { source: 'ATP5ME', target: 'ATP5PO', directed: 'false', weight: 0.979633} },
+{ data: { source: 'ATP5ME', target: 'hCG_39985', directed: 'false', weight: 0.709483} },
+{ data: { source: 'ATP5ME', target: 'ATP5J', directed: 'false', weight: 0.48325} },
+{ data: { source: 'ATP5ME', target: 'HEL-S-271', directed: 'false', weight: 0.35538000000000003} },
+{ data: { source: 'ATP5ME', target: 'ATP5F1E', directed: 'false', weight: 0.0409315} },
+{ data: { source: 'ATP5ME', target: 'ATP5F1C', directed: 'false', weight: 0.0277786} },
+{ data: { source: 'ATP5MF', target: 'HEL-S-271', directed: 'false', weight: 0.063046} },
+{ data: { source: 'ATP5F1C', target: 'ATP5PO', directed: 'false', weight: 0.9999170000000001} },
+{ data: { source: 'ATP5F1C', target: 'HEL-S-271', directed: 'false', weight: 0.9974770000000001} },
+{ data: { source: 'ATP5F1C', target: 'hCG_39985', directed: 'false', weight: 0.9938950000000001} },
+{ data: { source: 'ATP5F1C', target: 'ATP5F1E', directed: 'false', weight: 0.0235831} },
+{ data: { source: 'ATP5F1E', target: 'ATP5J', directed: 'false', weight: 0.364852} },
+{ data: { source: 'ATP5F1E', target: 'HEL-S-271', directed: 'false', weight: 0.026926299999999997} },
+{ data: { source: 'ATP5PO', target: 'hCG_39985', directed: 'false', weight: 1.0} },
+{ data: { source: 'ATP5PO', target: 'HEL-S-271', directed: 'false', weight: 0.999851} },
+{ data: { source: 'ATP5PO', target: 'ATP5J', directed: 'false', weight: 0.999079} },
+{ data: { source: 'hCG_39985', target: 'HEL-S-271', directed: 'false', weight: 0.997682} },
+{ data: { source: 'hCG_39985', target: 'ATP5J', directed: 'false', weight: 0.046787300000000004} },
+{ data: { source: 'ATP5J', target: 'HEL-S-271', directed: 'false', weight: 0.0327117} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    F1F0-ATP synthase, mitochondrial	<br> Unweighted Density = 0.49
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>ATP5MG
+    </section>
+    </body>
+    </html>
+    

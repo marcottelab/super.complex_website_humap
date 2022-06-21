@@ -1,0 +1,116 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> BBSome</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1938.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: '92482', score: 0 }},
+{data: { id: 'B1', score: 2, href: "https://www.uniprot.org/uniprot/A0A090N8P4" }},
+{data: { id: 'BBS7', score: 5, href: "https://www.uniprot.org/uniprot/Q8IWZ6" }},
+{data: { id: 'BBS5', score: 5, href: "https://www.uniprot.org/uniprot/Q8N3I7" }},
+{data: { id: 'BBS1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NFJ9" }},
+{data: { id: 'TTC8', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAM2" }},
+{data: { id: 'BBS4', score: 5, href: "https://www.uniprot.org/uniprot/Q96RK4" }},
+{data: { id: 'BBS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BXC9" }}], 
+ edges: [{ data: { source: 'BBS7', target: 'BBS2', directed: 'false', weight: 0.976137} },
+{ data: { source: 'BBS7', target: 'B1', directed: 'false', weight: 0.85775} },
+{ data: { source: 'BBS7', target: 'BBS5', directed: 'false', weight: 0.8230959999999999} },
+{ data: { source: 'BBS7', target: 'BBS1', directed: 'false', weight: 0.443784} },
+{ data: { source: 'BBS7', target: 'BBS4', directed: 'false', weight: 0.324204} },
+{ data: { source: 'BBS7', target: 'TTC8', directed: 'false', weight: 0.16883299999999998} },
+{ data: { source: 'TTC8', target: 'BBS5', directed: 'false', weight: 0.98562} },
+{ data: { source: 'TTC8', target: 'BBS1', directed: 'false', weight: 0.9729610000000001} },
+{ data: { source: 'TTC8', target: 'B1', directed: 'false', weight: 0.145696} },
+{ data: { source: 'TTC8', target: 'BBS4', directed: 'false', weight: 0.08840419999999999} },
+{ data: { source: 'TTC8', target: 'BBS2', directed: 'false', weight: 0.0246027} },
+{ data: { source: 'BBS1', target: 'BBS5', directed: 'false', weight: 0.9968879999999999} },
+{ data: { source: 'BBS1', target: 'B1', directed: 'false', weight: 0.991941} },
+{ data: { source: 'BBS1', target: 'BBS4', directed: 'false', weight: 0.979126} },
+{ data: { source: 'BBS1', target: 'BBS2', directed: 'false', weight: 0.698634} },
+{ data: { source: 'BBS2', target: 'BBS5', directed: 'false', weight: 0.94755} },
+{ data: { source: 'BBS2', target: 'B1', directed: 'false', weight: 0.11205899999999999} },
+{ data: { source: 'BBS2', target: 'BBS4', directed: 'false', weight: 0.0206947} },
+{ data: { source: 'BBS4', target: 'BBS5', directed: 'false', weight: 0.995174} },
+{ data: { source: 'BBS4', target: 'B1', directed: 'false', weight: 0.0387078} },
+{ data: { source: 'BBS5', target: 'B1', directed: 'false', weight: 0.9964700000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    BBSome	<br> Unweighted Density = 0.75
+    </section>
+    </body>
+    </html>
+    

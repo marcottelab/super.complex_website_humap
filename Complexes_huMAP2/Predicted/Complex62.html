@@ -1,0 +1,213 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 Respiratory chain complex I (lambda subunit) mitochondrial</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex63.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NDUFS7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75251" }},
+{data: { id: 'NDUFB8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95169" }},
+{data: { id: 'NDUFV2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P19404" }},
+{data: { id: 'NDUFA7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95182" }},
+{data: { id: 'NDUFS4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43181" }},
+{data: { id: 'NDUFS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75306" }},
+{data: { id: 'NDUFV1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49821" }},
+{data: { id: 'NDUFS3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75489" }},
+{data: { id: 'SARS-CoV2 orf9c', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 orf9c.html" }},
+{data: { id: 'NDUFB9', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9Y6M9" }},
+{data: { id: 'NDUFS8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00217" }},
+{data: { id: 'NDUFB11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NX14" }},
+{data: { id: 'MT-ND1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P03886" }},
+{data: { id: 'NDUFA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43678" }},
+{data: { id: 'NDUFS6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75380" }},
+{data: { id: 'NDUFA12', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UI09" }},
+{data: { id: 'NDUFA5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16718" }},
+{data: { id: 'NDUFS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P28331" }},
+{data: { id: 'NDUFB5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43674" }},
+{data: { id: 'NDUFA6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P56556" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 orf9c', target: 'NDUFB9', directed: 'false', weight: 0.966177822, type: 'sars'} },
+{ data: { source: 'NDUFA6', target: 'NDUFS3', directed: 'false', weight: 0.9846719999999999} },
+{ data: { source: 'NDUFA6', target: 'NDUFA12', directed: 'false', weight: 0.08719299999999999} },
+{ data: { source: 'NDUFA6', target: 'NDUFS8', directed: 'false', weight: 0.0695102} },
+{ data: { source: 'NDUFA6', target: 'NDUFV2', directed: 'false', weight: 0.0399714} },
+{ data: { source: 'NDUFA6', target: 'NDUFB8', directed: 'false', weight: 0.0375964} },
+{ data: { source: 'NDUFA6', target: 'NDUFB9', directed: 'false', weight: 0.0304376} },
+{ data: { source: 'NDUFA6', target: 'NDUFS6', directed: 'false', weight: 0.0251854} },
+{ data: { source: 'NDUFA5', target: 'NDUFS3', directed: 'false', weight: 0.9875950000000001} },
+{ data: { source: 'NDUFV2', target: 'NDUFV1', directed: 'false', weight: 0.987511} },
+{ data: { source: 'NDUFV2', target: 'NDUFS1', directed: 'false', weight: 0.8959360000000001} },
+{ data: { source: 'NDUFV2', target: 'NDUFS3', directed: 'false', weight: 0.83044} },
+{ data: { source: 'NDUFV2', target: 'NDUFA2', directed: 'false', weight: 0.774364} },
+{ data: { source: 'NDUFV2', target: 'NDUFS6', directed: 'false', weight: 0.6312810000000001} },
+{ data: { source: 'NDUFV2', target: 'NDUFB11', directed: 'false', weight: 0.116816} },
+{ data: { source: 'NDUFV2', target: 'NDUFS2', directed: 'false', weight: 0.0594234} },
+{ data: { source: 'NDUFV2', target: 'NDUFB9', directed: 'false', weight: 0.0251614} },
+{ data: { source: 'NDUFV2', target: 'MT-ND1', directed: 'false', weight: 0.0201594} },
+{ data: { source: 'NDUFV1', target: 'NDUFS1', directed: 'false', weight: 0.88307} },
+{ data: { source: 'NDUFV1', target: 'NDUFS3', directed: 'false', weight: 0.5177689999999999} },
+{ data: { source: 'NDUFV1', target: 'NDUFS4', directed: 'false', weight: 0.49294499999999997} },
+{ data: { source: 'NDUFV1', target: 'NDUFS6', directed: 'false', weight: 0.30508} },
+{ data: { source: 'NDUFV1', target: 'NDUFA2', directed: 'false', weight: 0.201999} },
+{ data: { source: 'NDUFV1', target: 'NDUFS2', directed: 'false', weight: 0.192599} },
+{ data: { source: 'NDUFV1', target: 'NDUFB8', directed: 'false', weight: 0.0828932} },
+{ data: { source: 'NDUFV1', target: 'NDUFB11', directed: 'false', weight: 0.0826949} },
+{ data: { source: 'NDUFV1', target: 'NDUFA12', directed: 'false', weight: 0.034599300000000006} },
+{ data: { source: 'NDUFV1', target: 'NDUFA7', directed: 'false', weight: 0.0205413} },
+{ data: { source: 'NDUFB8', target: 'NDUFS3', directed: 'false', weight: 0.999552} },
+{ data: { source: 'NDUFB8', target: 'NDUFB9', directed: 'false', weight: 0.402527} },
+{ data: { source: 'NDUFB8', target: 'NDUFA12', directed: 'false', weight: 0.355365} },
+{ data: { source: 'NDUFB8', target: 'NDUFB11', directed: 'false', weight: 0.185341} },
+{ data: { source: 'NDUFB8', target: 'NDUFS8', directed: 'false', weight: 0.122156} },
+{ data: { source: 'NDUFB8', target: 'NDUFS6', directed: 'false', weight: 0.11438} },
+{ data: { source: 'NDUFB8', target: 'NDUFB5', directed: 'false', weight: 0.10371500000000002} },
+{ data: { source: 'NDUFB8', target: 'NDUFS2', directed: 'false', weight: 0.06630710000000001} },
+{ data: { source: 'NDUFB8', target: 'NDUFA7', directed: 'false', weight: 0.0212923} },
+{ data: { source: 'NDUFB8', target: 'NDUFS7', directed: 'false', weight: 0.0201861} },
+{ data: { source: 'NDUFB11', target: 'NDUFA12', directed: 'false', weight: 0.449521} },
+{ data: { source: 'NDUFB11', target: 'NDUFB9', directed: 'false', weight: 0.390805} },
+{ data: { source: 'NDUFB11', target: 'NDUFS4', directed: 'false', weight: 0.312945} },
+{ data: { source: 'NDUFB11', target: 'NDUFA7', directed: 'false', weight: 0.30714400000000003} },
+{ data: { source: 'NDUFB11', target: 'NDUFB5', directed: 'false', weight: 0.0861999} },
+{ data: { source: 'NDUFB11', target: 'NDUFS8', directed: 'false', weight: 0.06892589999999998} },
+{ data: { source: 'NDUFB11', target: 'NDUFS7', directed: 'false', weight: 0.026397000000000004} },
+{ data: { source: 'NDUFB9', target: 'NDUFS3', directed: 'false', weight: 0.993159} },
+{ data: { source: 'NDUFB9', target: 'NDUFS8', directed: 'false', weight: 0.08524739999999999} },
+{ data: { source: 'NDUFB9', target: 'NDUFB5', directed: 'false', weight: 0.0764214} },
+{ data: { source: 'NDUFB9', target: 'NDUFS2', directed: 'false', weight: 0.0595149} },
+{ data: { source: 'NDUFB9', target: 'NDUFA12', directed: 'false', weight: 0.056648300000000006} },
+{ data: { source: 'NDUFB9', target: 'NDUFS4', directed: 'false', weight: 0.041119499999999996} },
+{ data: { source: 'NDUFB9', target: 'NDUFS6', directed: 'false', weight: 0.0241502} },
+{ data: { source: 'NDUFA12', target: 'NDUFS3', directed: 'false', weight: 0.9999600000000001} },
+{ data: { source: 'NDUFA12', target: 'NDUFS6', directed: 'false', weight: 0.5} },
+{ data: { source: 'NDUFA12', target: 'NDUFS8', directed: 'false', weight: 0.31887} },
+{ data: { source: 'NDUFA12', target: 'NDUFA7', directed: 'false', weight: 0.0321039} },
+{ data: { source: 'NDUFA12', target: 'NDUFS4', directed: 'false', weight: 0.031085700000000004} },
+{ data: { source: 'NDUFA12', target: 'NDUFS7', directed: 'false', weight: 0.020875} },
+{ data: { source: 'NDUFS4', target: 'NDUFS3', directed: 'false', weight: 0.621617} },
+{ data: { source: 'NDUFS4', target: 'NDUFS1', directed: 'false', weight: 0.42563599999999996} },
+{ data: { source: 'NDUFS4', target: 'NDUFA2', directed: 'false', weight: 0.173742} },
+{ data: { source: 'NDUFS4', target: 'NDUFS6', directed: 'false', weight: 0.16051400000000002} },
+{ data: { source: 'NDUFS4', target: 'NDUFA7', directed: 'false', weight: 0.023043200000000003} },
+{ data: { source: 'NDUFS1', target: 'NDUFA2', directed: 'false', weight: 0.987541} },
+{ data: { source: 'NDUFS1', target: 'NDUFS3', directed: 'false', weight: 0.9874959999999999} },
+{ data: { source: 'NDUFS1', target: 'NDUFS2', directed: 'false', weight: 0.464005} },
+{ data: { source: 'NDUFS1', target: 'NDUFS6', directed: 'false', weight: 0.13338699999999998} },
+{ data: { source: 'NDUFS1', target: 'MT-ND1', directed: 'false', weight: 0.08483450000000001} },
+{ data: { source: 'NDUFS6', target: 'NDUFA7', directed: 'false', weight: 0.6395770000000001} },
+{ data: { source: 'NDUFS6', target: 'NDUFS3', directed: 'false', weight: 0.250357} },
+{ data: { source: 'NDUFS6', target: 'NDUFA2', directed: 'false', weight: 0.07467860000000001} },
+{ data: { source: 'NDUFS6', target: 'NDUFB5', directed: 'false', weight: 0.0412633} },
+{ data: { source: 'NDUFS6', target: 'MT-ND1', directed: 'false', weight: 0.0353708} },
+{ data: { source: 'NDUFS6', target: 'NDUFS8', directed: 'false', weight: 0.034397500000000004} },
+{ data: { source: 'NDUFS3', target: 'NDUFS2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'NDUFS3', target: 'NDUFS8', directed: 'false', weight: 0.999862} },
+{ data: { source: 'NDUFS3', target: 'MT-ND1', directed: 'false', weight: 0.987574} },
+{ data: { source: 'NDUFS3', target: 'NDUFA7', directed: 'false', weight: 0.860389} },
+{ data: { source: 'NDUFS3', target: 'NDUFS7', directed: 'false', weight: 0.5483439999999999} },
+{ data: { source: 'NDUFS3', target: 'NDUFA2', directed: 'false', weight: 0.0587501} },
+{ data: { source: 'NDUFS8', target: 'NDUFS7', directed: 'false', weight: 0.045497} },
+{ data: { source: 'NDUFA2', target: 'NDUFS2', directed: 'false', weight: 0.0357429} },
+{ data: { source: 'NDUFS7', target: 'NDUFS2', directed: 'false', weight: 0.0496839} },
+{ data: { source: 'NDUFS7', target: 'NDUFB5', directed: 'false', weight: 0.027032999999999998} },
+{ data: { source: 'NDUFB5', target: 'NDUFS2', directed: 'false', weight: 0.482804} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 Respiratory chain complex I (lambda subunit) mitochondrial<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.49
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>NDUFB9
+    </section>
+    </body>
+    </html>
+    

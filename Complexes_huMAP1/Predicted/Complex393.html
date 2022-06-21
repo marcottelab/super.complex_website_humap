@@ -1,0 +1,107 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 IRF2BP2-IRF2BP1-IRF2BPL complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex394.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PDLIM7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NR12" }},
+{data: { id: 'IRF2BPL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H1B7" }},
+{data: { id: 'VGLL4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14135" }},
+{data: { id: 'IRF2BP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z5L9" }}], 
+ edges: [{ data: { source: 'VGLL4', target: 'IRF2BPL', directed: 'false', weight: 0.9690989999999999} },
+{ data: { source: 'VGLL4', target: 'IRF2BP2', directed: 'false', weight: 0.807826} },
+{ data: { source: 'PDLIM7', target: 'IRF2BPL', directed: 'false', weight: 0.5711729999999999} },
+{ data: { source: 'PDLIM7', target: 'IRF2BP2', directed: 'false', weight: 0.055830700000000004} },
+{ data: { source: 'IRF2BPL', target: 'IRF2BP2', directed: 'false', weight: 0.896009} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 IRF2BP2-IRF2BP1-IRF2BPL complex<br> Complex Score (from Super.Complex) = 0.75711<br> Unweighted Density = 0.83
+    </section>
+    </body>
+    </html>
+    

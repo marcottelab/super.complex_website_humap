@@ -1,0 +1,118 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CCT complex (chaperonin containing TCP1 complex)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex26.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CCT3', score: 5, href: "https://www.uniprot.org/uniprot/P49368" }},
+{data: { id: 'HEL-S-69', score: 2, href: "https://www.uniprot.org/uniprot/V9HW37" }},
+{data: { id: 'TCP1', score: 5, href: "https://www.uniprot.org/uniprot/P17987" }},
+{data: { id: 'CCT6A', score: 5, href: "https://www.uniprot.org/uniprot/P40227" }},
+{data: { id: 'CCT4', score: 5, href: "https://www.uniprot.org/uniprot/P50991" }},
+{data: { id: 'CCT7', score: 5, href: "https://www.uniprot.org/uniprot/Q99832" }},
+{data: { id: 'HEL-S-100n', score: 3, href: "https://www.uniprot.org/uniprot/V9HW96" }},
+{data: { id: 'CCT8', score: 5, href: "https://www.uniprot.org/uniprot/P50990" }}], 
+ edges: [{ data: { source: 'HEL-S-69', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'CCT4', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'HEL-S-100n', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'TCP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'CCT6A', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'CCT3', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'CCT4', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'CCT6A', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'TCP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'CCT3', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT6A', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT6A', target: 'CCT4', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT6A', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT6A', target: 'TCP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT6A', target: 'CCT3', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'CCT4', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'CCT3', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'CCT3', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT7', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT7', target: 'CCT3', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'CCT8', directed: 'false', weight: 1.0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CCT complex (chaperonin containing TCP1 complex)	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

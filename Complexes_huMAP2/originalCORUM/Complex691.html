@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> H2AX complex, isolated from cells without IR exposure</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex692.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DKFZp686A13234', score: 1, href: "https://www.uniprot.org/uniprot/Q6MZS5" }},
+{data: { id: 'SSB', score: 5, href: "https://www.uniprot.org/uniprot/P05455" }},
+{data: { id: 'NPM1', score: 5, href: "https://www.uniprot.org/uniprot/P06748" }},
+{data: { id: 'HEL-S-89n', score: 5, href: "https://www.uniprot.org/uniprot/V9HWB4" }},
+{data: { id: 'PABPC1', score: 5, href: "https://www.uniprot.org/uniprot/P11940" }},
+{data: { id: 'H2AX', score: 5, href: "https://www.uniprot.org/uniprot/P16104" }},
+{data: { id: 'HEL-S-99n', score: 5, href: "https://www.uniprot.org/uniprot/V9HW88" }},
+{data: { id: 'SSRP1', score: 5, href: "https://www.uniprot.org/uniprot/Q08945" }},
+{data: { id: '128312', score: 0 }},
+{data: { id: 'EIF3L', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y262" }},
+{data: { id: 'SUPT16H', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5B9" }}], 
+ edges: [{ data: { source: 'HEL-S-89n', target: 'NPM1', directed: 'false', weight: 0.371819} },
+{ data: { source: 'HEL-S-89n', target: 'DKFZp686A13234', directed: 'false', weight: 0.071641} },
+{ data: { source: 'HEL-S-89n', target: 'SSB', directed: 'false', weight: 0.027532400000000002} },
+{ data: { source: 'HEL-S-89n', target: 'PABPC1', directed: 'false', weight: 0.0268308} },
+{ data: { source: 'SUPT16H', target: 'SSRP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SUPT16H', target: 'H2AX', directed: 'false', weight: 0.0670671} },
+{ data: { source: 'H2AX', target: 'SSRP1', directed: 'false', weight: 0.09274} },
+{ data: { source: 'DKFZp686A13234', target: 'PABPC1', directed: 'false', weight: 0.157164} },
+{ data: { source: 'DKFZp686A13234', target: 'SSB', directed: 'false', weight: 0.0223445} },
+{ data: { source: 'SSB', target: 'PABPC1', directed: 'false', weight: 0.42817799999999995} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    H2AX complex, isolated from cells without IR exposure	<br> Unweighted Density = 0.18
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>PABPC1
+    </section>
+    </body>
+    </html>
+    

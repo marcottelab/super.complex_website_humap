@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> hTREX84 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1937.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'hCG_2011153', score: 1, href: "https://www.uniprot.org/uniprot/A0A024R1D6" }},
+{data: { id: 'NIF3L1BP1', score: 5, href: "https://www.uniprot.org/uniprot/Q6I9Y2" }},
+{data: { id: 'THOC6', score: 5, href: "https://www.uniprot.org/uniprot/Q86W42" }},
+{data: { id: 'THOC2', score: 5, href: "https://www.uniprot.org/uniprot/Q8NI27" }},
+{data: { id: 'THOC1', score: 5, href: "https://www.uniprot.org/uniprot/Q96FV9" }},
+{data: { id: 'THOC3', score: 5, href: "https://www.uniprot.org/uniprot/Q96J01" }}], 
+ edges: [{ data: { source: 'THOC6', target: 'THOC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'THOC6', target: 'NIF3L1BP1', directed: 'false', weight: 0.9988530000000001} },
+{ data: { source: 'THOC6', target: 'hCG_2011153', directed: 'false', weight: 0.998006} },
+{ data: { source: 'THOC6', target: 'THOC2', directed: 'false', weight: 0.993073} },
+{ data: { source: 'THOC6', target: 'THOC3', directed: 'false', weight: 0.8663559999999999} },
+{ data: { source: 'THOC2', target: 'THOC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'THOC2', target: 'NIF3L1BP1', directed: 'false', weight: 0.999635} },
+{ data: { source: 'THOC2', target: 'THOC3', directed: 'false', weight: 0.9994059999999999} },
+{ data: { source: 'THOC2', target: 'hCG_2011153', directed: 'false', weight: 0.987502} },
+{ data: { source: 'NIF3L1BP1', target: 'THOC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'NIF3L1BP1', target: 'hCG_2011153', directed: 'false', weight: 0.9998309999999999} },
+{ data: { source: 'NIF3L1BP1', target: 'THOC3', directed: 'false', weight: 0.99925} },
+{ data: { source: 'THOC3', target: 'THOC1', directed: 'false', weight: 0.999999} },
+{ data: { source: 'THOC3', target: 'hCG_2011153', directed: 'false', weight: 0.998934} },
+{ data: { source: 'THOC1', target: 'hCG_2011153', directed: 'false', weight: 1.0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    hTREX84 complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

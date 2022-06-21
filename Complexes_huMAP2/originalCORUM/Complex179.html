@@ -1,0 +1,137 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> INO80 chromatin remodeling complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex180.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ACTL6A', score: 5, href: "https://www.uniprot.org/uniprot/O96019" }},
+{data: { id: 'TCF3', score: 5, href: "https://www.uniprot.org/uniprot/P15923" }},
+{data: { id: 'INO80D', score: 5, href: "https://www.uniprot.org/uniprot/Q53TQ3" }},
+{data: { id: 'NFRKB', score: 5, href: "https://www.uniprot.org/uniprot/Q6P4R8" }},
+{data: { id: 'INO80C', score: 5, href: "https://www.uniprot.org/uniprot/Q6PI98" }},
+{data: { id: 'INO80E', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBZ0" }},
+{data: { id: 'MCRS1', score: 5, href: "https://www.uniprot.org/uniprot/Q96EZ8" }},
+{data: { id: 'INO80B', score: 5, href: "https://www.uniprot.org/uniprot/Q9C086" }},
+{data: { id: 'ACTR8', score: 5, href: "https://www.uniprot.org/uniprot/Q9H981" }},
+{data: { id: 'ACTR5', score: 5, href: "https://www.uniprot.org/uniprot/Q9H9F9" }},
+{data: { id: 'INOC1', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULG1" }},
+{data: { id: 'RUVBL2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y230" }},
+{data: { id: 'RUVBL1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y265" }}], 
+ edges: [{ data: { source: 'ACTR8', target: 'NFRKB', directed: 'false', weight: 0.998361} },
+{ data: { source: 'ACTR8', target: 'RUVBL1', directed: 'false', weight: 0.146607} },
+{ data: { source: 'ACTR8', target: 'ACTR5', directed: 'false', weight: 0.0755805} },
+{ data: { source: 'ACTR8', target: 'RUVBL2', directed: 'false', weight: 0.0343826} },
+{ data: { source: 'ACTR8', target: 'INO80C', directed: 'false', weight: 0.0219797} },
+{ data: { source: 'ACTR8', target: 'INO80E', directed: 'false', weight: 0.020558} },
+{ data: { source: 'INOC1', target: 'ACTR5', directed: 'false', weight: 0.999948} },
+{ data: { source: 'INOC1', target: 'INO80E', directed: 'false', weight: 0.999007} },
+{ data: { source: 'INOC1', target: 'NFRKB', directed: 'false', weight: 0.996683} },
+{ data: { source: 'INOC1', target: 'RUVBL2', directed: 'false', weight: 0.986675} },
+{ data: { source: 'INOC1', target: 'RUVBL1', directed: 'false', weight: 0.972858} },
+{ data: { source: 'INOC1', target: 'INO80C', directed: 'false', weight: 0.0231875} },
+{ data: { source: 'INO80B', target: 'RUVBL1', directed: 'false', weight: 0.8962370000000001} },
+{ data: { source: 'INO80B', target: 'RUVBL2', directed: 'false', weight: 0.8506309999999999} },
+{ data: { source: 'INO80B', target: 'ACTR5', directed: 'false', weight: 0.0226817} },
+{ data: { source: 'INO80B', target: 'INO80C', directed: 'false', weight: 0.021509599999999997} },
+{ data: { source: 'INO80B', target: 'INO80E', directed: 'false', weight: 0.020491099999999998} },
+{ data: { source: 'ACTR5', target: 'INO80E', directed: 'false', weight: 0.9999620000000001} },
+{ data: { source: 'ACTR5', target: 'NFRKB', directed: 'false', weight: 0.9999030000000001} },
+{ data: { source: 'ACTR5', target: 'RUVBL1', directed: 'false', weight: 0.9948670000000001} },
+{ data: { source: 'ACTR5', target: 'RUVBL2', directed: 'false', weight: 0.701633} },
+{ data: { source: 'ACTR5', target: 'INO80C', directed: 'false', weight: 0.336991} },
+{ data: { source: 'ACTR5', target: 'INO80D', directed: 'false', weight: 0.0744718} },
+{ data: { source: 'INO80C', target: 'RUVBL1', directed: 'false', weight: 0.825241} },
+{ data: { source: 'INO80C', target: 'RUVBL2', directed: 'false', weight: 0.7278680000000001} },
+{ data: { source: 'INO80C', target: 'INO80E', directed: 'false', weight: 0.0241459} },
+{ data: { source: 'RUVBL2', target: 'RUVBL1', directed: 'false', weight: 1.0} },
+{ data: { source: 'RUVBL2', target: 'INO80D', directed: 'false', weight: 0.830931} },
+{ data: { source: 'RUVBL2', target: 'NFRKB', directed: 'false', weight: 0.603833} },
+{ data: { source: 'RUVBL2', target: 'INO80E', directed: 'false', weight: 0.462221} },
+{ data: { source: 'RUVBL2', target: 'ACTL6A', directed: 'false', weight: 0.21275700000000003} },
+{ data: { source: 'ACTL6A', target: 'RUVBL1', directed: 'false', weight: 0.125722} },
+{ data: { source: 'INO80D', target: 'RUVBL1', directed: 'false', weight: 0.9062680000000001} },
+{ data: { source: 'RUVBL1', target: 'INO80E', directed: 'false', weight: 0.972097} },
+{ data: { source: 'RUVBL1', target: 'NFRKB', directed: 'false', weight: 0.92469} },
+{ data: { source: 'RUVBL1', target: 'MCRS1', directed: 'false', weight: 0.208405} },
+{ data: { source: 'NFRKB', target: 'INO80E', directed: 'false', weight: 0.998416} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    INO80 chromatin remodeling complex	<br> Unweighted Density = 0.47
+    </section>
+    </body>
+    </html>
+    

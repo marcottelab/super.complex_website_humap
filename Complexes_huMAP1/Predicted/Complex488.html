@@ -1,0 +1,187 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 Sororin-cohesin complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex489.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CDC5L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99459" }},
+{data: { id: 'WAPL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z5K2" }},
+{data: { id: 'SAFB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15424" }},
+{data: { id: 'SMC3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UQE7" }},
+{data: { id: 'STAG2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N3U4" }},
+{data: { id: 'EIF2S2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P20042" }},
+{data: { id: 'STAG1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WVM7" }},
+{data: { id: 'PRPF19', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UMS4" }},
+{data: { id: 'PDS5A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q29RF7" }},
+{data: { id: 'SMC1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14683" }},
+{data: { id: 'TRIM38', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00635" }},
+{data: { id: 'PDS5B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NTI5" }},
+{data: { id: 'CDCA5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96FF9" }},
+{data: { id: 'RAD21', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60216" }},
+{data: { id: 'SMC1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NDV3" }}], 
+ edges: [{ data: { source: 'STAG2', target: 'CDCA5', directed: 'false', weight: 0.998558} },
+{ data: { source: 'STAG2', target: 'SMC1A', directed: 'false', weight: 0.993922} },
+{ data: { source: 'STAG2', target: 'PDS5A', directed: 'false', weight: 0.9908969999999999} },
+{ data: { source: 'STAG2', target: 'SMC1B', directed: 'false', weight: 0.98472} },
+{ data: { source: 'STAG2', target: 'RAD21', directed: 'false', weight: 0.9759389999999999} },
+{ data: { source: 'STAG2', target: 'SMC3', directed: 'false', weight: 0.9759200000000001} },
+{ data: { source: 'STAG2', target: 'STAG1', directed: 'false', weight: 0.755897} },
+{ data: { source: 'STAG2', target: 'WAPL', directed: 'false', weight: 0.581803} },
+{ data: { source: 'STAG2', target: 'PDS5B', directed: 'false', weight: 0.43003100000000005} },
+{ data: { source: 'STAG2', target: 'TRIM38', directed: 'false', weight: 0.229492} },
+{ data: { source: 'SMC3', target: 'RAD21', directed: 'false', weight: 0.991294} },
+{ data: { source: 'SMC3', target: 'SMC1A', directed: 'false', weight: 0.988532} },
+{ data: { source: 'SMC3', target: 'CDCA5', directed: 'false', weight: 0.986906} },
+{ data: { source: 'SMC3', target: 'STAG1', directed: 'false', weight: 0.975893} },
+{ data: { source: 'SMC3', target: 'PDS5B', directed: 'false', weight: 0.975392} },
+{ data: { source: 'SMC3', target: 'SMC1B', directed: 'false', weight: 0.95465} },
+{ data: { source: 'SMC3', target: 'WAPL', directed: 'false', weight: 0.91309} },
+{ data: { source: 'SMC3', target: 'PDS5A', directed: 'false', weight: 0.8808520000000001} },
+{ data: { source: 'SMC3', target: 'TRIM38', directed: 'false', weight: 0.47640600000000005} },
+{ data: { source: 'CDCA5', target: 'RAD21', directed: 'false', weight: 0.999189} },
+{ data: { source: 'CDCA5', target: 'SMC1A', directed: 'false', weight: 0.93224} },
+{ data: { source: 'CDCA5', target: 'STAG1', directed: 'false', weight: 0.904459} },
+{ data: { source: 'CDCA5', target: 'PDS5B', directed: 'false', weight: 0.538927} },
+{ data: { source: 'CDCA5', target: 'WAPL', directed: 'false', weight: 0.35547399999999996} },
+{ data: { source: 'CDCA5', target: 'SMC1B', directed: 'false', weight: 0.270202} },
+{ data: { source: 'CDCA5', target: 'PDS5A', directed: 'false', weight: 0.26425} },
+{ data: { source: 'CDCA5', target: 'TRIM38', directed: 'false', weight: 0.229492} },
+{ data: { source: 'PRPF19', target: 'CDC5L', directed: 'false', weight: 0.9993569999999999} },
+{ data: { source: 'PRPF19', target: 'EIF2S2', directed: 'false', weight: 0.717276} },
+{ data: { source: 'PRPF19', target: 'PDS5A', directed: 'false', weight: 0.700889} },
+{ data: { source: 'PRPF19', target: 'PDS5B', directed: 'false', weight: 0.618877} },
+{ data: { source: 'PRPF19', target: 'SAFB', directed: 'false', weight: 0.55116} },
+{ data: { source: 'PRPF19', target: 'SMC1A', directed: 'false', weight: 0.379225} },
+{ data: { source: 'RAD21', target: 'SMC1B', directed: 'false', weight: 0.9936370000000001} },
+{ data: { source: 'RAD21', target: 'SMC1A', directed: 'false', weight: 0.993503} },
+{ data: { source: 'RAD21', target: 'STAG1', directed: 'false', weight: 0.983316} },
+{ data: { source: 'RAD21', target: 'WAPL', directed: 'false', weight: 0.9446129999999999} },
+{ data: { source: 'RAD21', target: 'PDS5B', directed: 'false', weight: 0.901338} },
+{ data: { source: 'RAD21', target: 'PDS5A', directed: 'false', weight: 0.439143} },
+{ data: { source: 'RAD21', target: 'TRIM38', directed: 'false', weight: 0.20959099999999997} },
+{ data: { source: 'SMC1A', target: 'PDS5B', directed: 'false', weight: 0.997533} },
+{ data: { source: 'SMC1A', target: 'STAG1', directed: 'false', weight: 0.996499} },
+{ data: { source: 'SMC1A', target: 'CDC5L', directed: 'false', weight: 0.740161} },
+{ data: { source: 'SMC1A', target: 'PDS5A', directed: 'false', weight: 0.720338} },
+{ data: { source: 'SMC1A', target: 'WAPL', directed: 'false', weight: 0.6517470000000001} },
+{ data: { source: 'SMC1A', target: 'TRIM38', directed: 'false', weight: 0.5483399999999999} },
+{ data: { source: 'SMC1A', target: 'SAFB', directed: 'false', weight: 0.459892} },
+{ data: { source: 'SMC1A', target: 'SMC1B', directed: 'false', weight: 0.102896} },
+{ data: { source: 'SMC1A', target: 'EIF2S2', directed: 'false', weight: 0.034542} },
+{ data: { source: 'PDS5A', target: 'PDS5B', directed: 'false', weight: 0.9996200000000001} },
+{ data: { source: 'PDS5A', target: 'EIF2S2', directed: 'false', weight: 0.592721} },
+{ data: { source: 'PDS5A', target: 'SAFB', directed: 'false', weight: 0.541565} },
+{ data: { source: 'PDS5A', target: 'WAPL', directed: 'false', weight: 0.43431400000000003} },
+{ data: { source: 'PDS5A', target: 'STAG1', directed: 'false', weight: 0.398094} },
+{ data: { source: 'PDS5A', target: 'CDC5L', directed: 'false', weight: 0.324994} },
+{ data: { source: 'PDS5A', target: 'TRIM38', directed: 'false', weight: 0.16530799999999998} },
+{ data: { source: 'TRIM38', target: 'WAPL', directed: 'false', weight: 0.194708} },
+{ data: { source: 'TRIM38', target: 'STAG1', directed: 'false', weight: 0.194708} },
+{ data: { source: 'TRIM38', target: 'PDS5B', directed: 'false', weight: 0.18296800000000002} },
+{ data: { source: 'STAG1', target: 'PDS5B', directed: 'false', weight: 0.982085} },
+{ data: { source: 'STAG1', target: 'SMC1B', directed: 'false', weight: 0.962045} },
+{ data: { source: 'STAG1', target: 'WAPL', directed: 'false', weight: 0.848464} },
+{ data: { source: 'CDC5L', target: 'EIF2S2', directed: 'false', weight: 0.8843260000000001} },
+{ data: { source: 'CDC5L', target: 'SAFB', directed: 'false', weight: 0.6994060000000001} },
+{ data: { source: 'CDC5L', target: 'PDS5B', directed: 'false', weight: 0.521779} },
+{ data: { source: 'PDS5B', target: 'EIF2S2', directed: 'false', weight: 0.904099} },
+{ data: { source: 'PDS5B', target: 'WAPL', directed: 'false', weight: 0.700076} },
+{ data: { source: 'PDS5B', target: 'SAFB', directed: 'false', weight: 0.345173} },
+{ data: { source: 'SAFB', target: 'EIF2S2', directed: 'false', weight: 0.768397} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 Sororin-cohesin complex<br> Complex Score (from Super.Complex) = 0.69626<br> Unweighted Density = 0.66
+    </section>
+    </body>
+    </html>
+    

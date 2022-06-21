@@ -1,0 +1,102 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> GAA1-GPI8-PIGT-PIG-PIGS complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex47.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PIGT', score: 5, href: "https://www.uniprot.org/uniprot/Q969N2" }},
+{data: { id: 'PIGU', score: 5, href: "https://www.uniprot.org/uniprot/Q9H490" }},
+{data: { id: 'GPAA1', score: 5, href: "https://www.uniprot.org/uniprot/O43292" }},
+{data: { id: 'PIGS', score: 5, href: "https://www.uniprot.org/uniprot/Q96S52" }},
+{data: { id: 'PIGK', score: 5, href: "https://www.uniprot.org/uniprot/Q92643" }}], 
+ edges: [{ data: { source: 'PIGT', target: 'PIGS', directed: 'false', weight: 1.0} },
+{ data: { source: 'PIGT', target: 'GPAA1', directed: 'false', weight: 0.682344} },
+{ data: { source: 'PIGT', target: 'PIGK', directed: 'false', weight: 0.544013} },
+{ data: { source: 'PIGT', target: 'PIGU', directed: 'false', weight: 0.307663} },
+{ data: { source: 'PIGU', target: 'PIGS', directed: 'false', weight: 0.990208} },
+{ data: { source: 'PIGU', target: 'PIGK', directed: 'false', weight: 0.216112} },
+{ data: { source: 'PIGU', target: 'GPAA1', directed: 'false', weight: 0.160031} },
+{ data: { source: 'PIGS', target: 'PIGK', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PIGS', target: 'GPAA1', directed: 'false', weight: 0.9999889999999999} },
+{ data: { source: 'GPAA1', target: 'PIGK', directed: 'false', weight: 0.312233} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    GAA1-GPI8-PIGT-PIG-PIGS complex	<br> Unweighted Density = 1.00
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>GPAA1 PIGS
+    </section>
+    </body>
+    </html>
+    

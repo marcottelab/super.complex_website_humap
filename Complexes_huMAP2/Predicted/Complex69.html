@@ -1,0 +1,132 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 TRIM31-MAGEA1-NSE4 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex70.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NSMCE3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96MG7" }},
+{data: { id: 'ZNF597', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96LX8" }},
+{data: { id: 'C8orf36', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96MF7" }},
+{data: { id: 'RCC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P258" }},
+{data: { id: 'SMC6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96SB8" }},
+{data: { id: 'SMC5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IY18" }},
+{data: { id: 'NSMCE1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WV22" }},
+{data: { id: 'NSMCE4A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NXX6" }}], 
+ edges: [{ data: { source: 'NSMCE4A', target: 'NSMCE1', directed: 'false', weight: 0.960957} },
+{ data: { source: 'NSMCE4A', target: 'NSMCE3', directed: 'false', weight: 0.8803690000000001} },
+{ data: { source: 'NSMCE4A', target: 'SMC6', directed: 'false', weight: 0.40801} },
+{ data: { source: 'NSMCE4A', target: 'ZNF597', directed: 'false', weight: 0.313108} },
+{ data: { source: 'NSMCE4A', target: 'C8orf36', directed: 'false', weight: 0.0228225} },
+{ data: { source: 'C8orf36', target: 'NSMCE1', directed: 'false', weight: 0.999992} },
+{ data: { source: 'C8orf36', target: 'SMC6', directed: 'false', weight: 0.990136} },
+{ data: { source: 'C8orf36', target: 'NSMCE3', directed: 'false', weight: 0.9656969999999999} },
+{ data: { source: 'C8orf36', target: 'SMC5', directed: 'false', weight: 0.8862629999999999} },
+{ data: { source: 'C8orf36', target: 'ZNF597', directed: 'false', weight: 0.809433} },
+{ data: { source: 'RCC2', target: 'SMC6', directed: 'false', weight: 0.763922} },
+{ data: { source: 'NSMCE1', target: 'SMC6', directed: 'false', weight: 1.0} },
+{ data: { source: 'NSMCE1', target: 'SMC5', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'NSMCE1', target: 'NSMCE3', directed: 'false', weight: 0.9999620000000001} },
+{ data: { source: 'NSMCE1', target: 'ZNF597', directed: 'false', weight: 0.24240100000000003} },
+{ data: { source: 'NSMCE3', target: 'SMC6', directed: 'false', weight: 0.99882} },
+{ data: { source: 'NSMCE3', target: 'SMC5', directed: 'false', weight: 0.995182} },
+{ data: { source: 'NSMCE3', target: 'ZNF597', directed: 'false', weight: 0.05580159999999999} },
+{ data: { source: 'ZNF597', target: 'SMC5', directed: 'false', weight: 0.985458} },
+{ data: { source: 'ZNF597', target: 'SMC6', directed: 'false', weight: 0.7631720000000001} },
+{ data: { source: 'SMC6', target: 'SMC5', directed: 'false', weight: 0.991477} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 TRIM31-MAGEA1-NSE4 complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.75
+    </section>
+    </body>
+    </html>
+    

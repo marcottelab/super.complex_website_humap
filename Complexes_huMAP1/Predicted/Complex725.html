@@ -1,0 +1,138 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 Kinase maturation complex 1</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex726.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CLK3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49761" }},
+{data: { id: 'YWHAQ', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P27348" }},
+{data: { id: 'YWHAE', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62258" }},
+{data: { id: 'YWHAB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P31946" }},
+{data: { id: 'SRSF8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BRL6" }},
+{data: { id: 'YWHAG', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61981" }},
+{data: { id: 'YWHAH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q04917" }},
+{data: { id: 'FAM83G', score: 5, type: '', href: "https://www.uniprot.org/uniprot/A6ND36" }},
+{data: { id: 'SFN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P31947" }},
+{data: { id: 'SLAIN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P270" }}], 
+ edges: [{ data: { source: 'SLAIN2', target: 'YWHAH', directed: 'false', weight: 0.300252} },
+{ data: { source: 'SLAIN2', target: 'SFN', directed: 'false', weight: 0.272257} },
+{ data: { source: 'SRSF8', target: 'CLK3', directed: 'false', weight: 0.8616090000000001} },
+{ data: { source: 'SRSF8', target: 'YWHAH', directed: 'false', weight: 0.5444319999999999} },
+{ data: { source: 'YWHAH', target: 'YWHAG', directed: 'false', weight: 0.999892} },
+{ data: { source: 'YWHAH', target: 'YWHAB', directed: 'false', weight: 0.997915} },
+{ data: { source: 'YWHAH', target: 'YWHAQ', directed: 'false', weight: 0.98755} },
+{ data: { source: 'YWHAH', target: 'CLK3', directed: 'false', weight: 0.8245610000000001} },
+{ data: { source: 'YWHAH', target: 'SFN', directed: 'false', weight: 0.812722} },
+{ data: { source: 'YWHAH', target: 'YWHAE', directed: 'false', weight: 0.705971} },
+{ data: { source: 'YWHAH', target: 'FAM83G', directed: 'false', weight: 0.440748} },
+{ data: { source: 'FAM83G', target: 'YWHAE', directed: 'false', weight: 0.11228099999999999} },
+{ data: { source: 'FAM83G', target: 'YWHAB', directed: 'false', weight: 0.10926300000000001} },
+{ data: { source: 'FAM83G', target: 'YWHAG', directed: 'false', weight: 0.104379} },
+{ data: { source: 'FAM83G', target: 'YWHAQ', directed: 'false', weight: 0.09888419999999999} },
+{ data: { source: 'YWHAQ', target: 'YWHAG', directed: 'false', weight: 0.994755} },
+{ data: { source: 'YWHAQ', target: 'YWHAB', directed: 'false', weight: 0.985627} },
+{ data: { source: 'YWHAQ', target: 'YWHAE', directed: 'false', weight: 0.970675} },
+{ data: { source: 'YWHAQ', target: 'SFN', directed: 'false', weight: 0.635667} },
+{ data: { source: 'YWHAE', target: 'YWHAG', directed: 'false', weight: 0.979721} },
+{ data: { source: 'YWHAE', target: 'SFN', directed: 'false', weight: 0.9759049999999999} },
+{ data: { source: 'YWHAE', target: 'YWHAB', directed: 'false', weight: 0.857569} },
+{ data: { source: 'YWHAB', target: 'YWHAG', directed: 'false', weight: 0.999977} },
+{ data: { source: 'YWHAB', target: 'SFN', directed: 'false', weight: 0.975914} },
+{ data: { source: 'YWHAG', target: 'SFN', directed: 'false', weight: 0.62568} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 Kinase maturation complex 1<br> Complex Score (from Super.Complex) = 0.59459<br> Unweighted Density = 0.56
+    </section>
+    </body>
+    </html>
+    

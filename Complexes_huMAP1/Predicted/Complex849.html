@@ -1,0 +1,124 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> DNAJC17 POLDIP3 DENR MCTS1 POFUT2 TCEA1 FKBP3</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex850.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'POLDIP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BY77" }},
+{data: { id: 'DENR', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43583" }},
+{data: { id: 'MCTS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9ULC4" }},
+{data: { id: 'FKBP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q00688" }},
+{data: { id: 'DNAJC17', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9NVM6" }},
+{data: { id: 'POFUT2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y2G5" }},
+{data: { id: 'TCEA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P23193" }}], 
+ edges: [{ data: { source: 'POLDIP3', target: 'FKBP3', directed: 'false', weight: 0.410253} },
+{ data: { source: 'POLDIP3', target: 'MCTS1', directed: 'false', weight: 0.340363} },
+{ data: { source: 'POLDIP3', target: 'DENR', directed: 'false', weight: 0.306027} },
+{ data: { source: 'POLDIP3', target: 'TCEA1', directed: 'false', weight: 0.0741937} },
+{ data: { source: 'TCEA1', target: 'MCTS1', directed: 'false', weight: 0.867092} },
+{ data: { source: 'TCEA1', target: 'DENR', directed: 'false', weight: 0.8317399999999999} },
+{ data: { source: 'TCEA1', target: 'DNAJC17', directed: 'false', weight: 0.368698} },
+{ data: { source: 'TCEA1', target: 'FKBP3', directed: 'false', weight: 0.23121599999999998} },
+{ data: { source: 'DNAJC17', target: 'MCTS1', directed: 'false', weight: 0.640177} },
+{ data: { source: 'POFUT2', target: 'DENR', directed: 'false', weight: 0.408666} },
+{ data: { source: 'POFUT2', target: 'MCTS1', directed: 'false', weight: 0.39314499999999997} },
+{ data: { source: 'DENR', target: 'MCTS1', directed: 'false', weight: 0.814361} },
+{ data: { source: 'DENR', target: 'FKBP3', directed: 'false', weight: 0.12165899999999999} },
+{ data: { source: 'MCTS1', target: 'FKBP3', directed: 'false', weight: 0.708858} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    DNAJC17 POLDIP3 DENR MCTS1 POFUT2 TCEA1 FKBP3<br> Complex Score (from Super.Complex) = 0.55825<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

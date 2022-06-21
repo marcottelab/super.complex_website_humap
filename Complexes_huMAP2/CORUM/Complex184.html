@@ -1,0 +1,92 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 Cleavage and polyadenylation factor (CPSF)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex185.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CPSF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2I0" }},
+{data: { id: 'CPSF3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKF6" }},
+{data: { id: 'CPSF4', score: 5, href: "https://www.uniprot.org/uniprot/O95639" }},
+{data: { id: 'CPSF1', score: 5, href: "https://www.uniprot.org/uniprot/Q10570" }}], 
+ edges: [{ data: { source: 'CPSF2', target: 'CPSF3', directed: 'false', weight: 0.999991} },
+{ data: { source: 'CPSF2', target: 'CPSF1', directed: 'false', weight: 0.999036} },
+{ data: { source: 'CPSF2', target: 'CPSF4', directed: 'false', weight: 0.994999} },
+{ data: { source: 'CPSF3', target: 'CPSF1', directed: 'false', weight: 0.999289} },
+{ data: { source: 'CPSF3', target: 'CPSF4', directed: 'false', weight: 0.46945200000000004} },
+{ data: { source: 'CPSF4', target: 'CPSF1', directed: 'false', weight: 0.987606} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 Cleavage and polyadenylation factor (CPSF)	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

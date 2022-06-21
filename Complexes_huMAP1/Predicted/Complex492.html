@@ -1,0 +1,112 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 Ubiquitin E3 ligase (CUL3, KLHL42)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex493.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CUL3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13618" }},
+{data: { id: 'KBTBD6', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q86V97" }},
+{data: { id: 'KLHL13', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P2N7" }},
+{data: { id: 'KLHL24', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6TFL4" }},
+{data: { id: 'KLHL42', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P2K6" }}], 
+ edges: [{ data: { source: 'KLHL13', target: 'CUL3', directed: 'false', weight: 0.692847} },
+{ data: { source: 'KLHL13', target: 'KLHL24', directed: 'false', weight: 0.116251} },
+{ data: { source: 'KLHL13', target: 'KLHL42', directed: 'false', weight: 0.107625} },
+{ data: { source: 'KLHL42', target: 'CUL3', directed: 'false', weight: 0.9847389999999999} },
+{ data: { source: 'KLHL42', target: 'KLHL24', directed: 'false', weight: 0.23005100000000003} },
+{ data: { source: 'KLHL42', target: 'KBTBD6', directed: 'false', weight: 0.149257} },
+{ data: { source: 'KLHL24', target: 'CUL3', directed: 'false', weight: 0.661305} },
+{ data: { source: 'KLHL24', target: 'KBTBD6', directed: 'false', weight: 0.160667} },
+{ data: { source: 'KBTBD6', target: 'CUL3', directed: 'false', weight: 0.94419} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 Ubiquitin E3 ligase (CUL3, KLHL42)<br> Complex Score (from Super.Complex) = 0.69350<br> Unweighted Density = 0.90
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,138 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title>SARS-CoV2 orf9b</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: "SARS-CoV2 orf9b", score: 2, type:  "sars" , href: "https://covid-19.uniprot.org/uniprotkb/P0DTD2" }},
+{data: { id: "SLC9A3R1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O14745" }},
+{data: { id: "CHMP2A", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O43633" }},
+{data: { id: "CSDE1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O75534" }},
+{data: { id: "TOMM70", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/O94826" }},
+{data: { id: "MARK3", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/P27448" }},
+{data: { id: "MARK2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q7KZI7" }},
+{data: { id: "DPH5", score: 1, score_annot: 4, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9H2P9" }},
+{data: { id: "DCTPP1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9H773" }},
+{data: { id: "MARK1", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9P0L2" }},
+{data: { id: "PTBP2", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9UKA9" }},
+{data: { id: "BAG5", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9UL15" }},
+{data: { id: "0.1 Kinase maturation complex 1", score: 0, type: "complex", href: "../Predicted/Complex800.html" }},
+{data: { id: "0.3 ESCRT-III complex", score: 0, type: "complex", href: "../Predicted/Complex920.html" }},
+{data: { id: "0.2 ESCRT-III complex", score: 0, type: "complex", href: "../Predicted/Complex705.html" }},
+{data: { id: "0.5 C-CFTR-NHERF-ezrin complex", score: 0, type: "complex", href: "../Predicted/Complex906.html" }},
+{data: { id: "0.4 MAD1L1-MAD2L1 complex", score: 0, type: "complex", href: "../Predicted/Complex659.html" }}], 
+ edges: [{ data: { source: "0.3 ESCRT-III complex", target: "0.2 ESCRT-III complex", directed: "false",type: "complex2complex", weight: 0.14285714285714285} },
+{ data: { source: "SLC9A3R1", target: "0.5 C-CFTR-NHERF-ezrin complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "CHMP2A", target: "0.2 ESCRT-III complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "CHMP2A", target: "0.3 ESCRT-III complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "MARK2", target: "0.1 Kinase maturation complex 1", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "BAG5", target: "0.4 MAD1L1-MAD2L1 complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SARS-CoV2 orf9b", target: "SLC9A3R1", directed: "false", type: "sars2prot",weight: 0.993764827} },
+{ data: { source: "SARS-CoV2 orf9b", target: "CHMP2A", directed: "false", type: "sars2prot",weight: 0.948289085} },
+{ data: { source: "SARS-CoV2 orf9b", target: "CSDE1", directed: "false", type: "sars2prot",weight: 0.988959751} },
+{ data: { source: "SARS-CoV2 orf9b", target: "TOMM70", directed: "false", type: "sars2prot",weight: 0.978100903} },
+{ data: { source: "SARS-CoV2 orf9b", target: "MARK3", directed: "false", type: "sars2prot",weight: 0.993959488} },
+{ data: { source: "SARS-CoV2 orf9b", target: "MARK2", directed: "false", type: "sars2prot",weight: 0.99404114} },
+{ data: { source: "SARS-CoV2 orf9b", target: "DPH5", directed: "false", type: "sars2prot",weight: 0.956356188} },
+{ data: { source: "SARS-CoV2 orf9b", target: "DCTPP1", directed: "false", type: "sars2prot",weight: 0.753716811} },
+{ data: { source: "SARS-CoV2 orf9b", target: "MARK1", directed: "false", type: "sars2prot",weight: 0.99395635} },
+{ data: { source: "SARS-CoV2 orf9b", target: "PTBP2", directed: "false", type: "sars2prot",weight: 0.991125633} },
+{ data: { source: "SARS-CoV2 orf9b", target: "BAG5", directed: "false", type: "sars2prot",weight: 0.864649763} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+                				'font-size': 20,
+        'font-weight': 'bold',
+                      'text-wrap': 'wrap',
+    'text-max-width': '300',
+            shape: function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'circle'}
+                                if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                
+  return 'star';
+  },
+            'background-color': function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'blue'}
+                                if ( ele.data('type') == 'sars' ){return 'red'}             
+                                if ( ele.data('score_annot') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score_annot') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score_annot') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score_annot') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score_annot') == 5 ){return 'rgb(52, 136, 74)'}   
+                                 return 'rgb(180, 131, 40)';
+  },
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 5)',
+								'line-color': function( ele ){ 
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
+  return 'red';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'cose',
+	'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'padding': 1,
+	'componentSpacing': 1,
+	 'idealEdgeLength': function( edge ){ return 1; },
+	 // Divisor to compute edge forces
+  'edgeElasticity': function( edge ){ return 20; }
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+    </script>
+
+    	<section>
+    	<br>
+    	<br>
+    	<br> 
+    
+    </section>
+    </body>
+    </html>
+    

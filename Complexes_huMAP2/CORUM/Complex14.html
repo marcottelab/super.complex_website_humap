@@ -1,0 +1,101 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Sororin-cohesin complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex15.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SMC1L1', score: 5, href: "https://www.uniprot.org/uniprot/Q14683" }},
+{data: { id: 'SMC3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UQE7" }},
+{data: { id: 'CDCA5', score: 5, href: "https://www.uniprot.org/uniprot/Q96FF9" }},
+{data: { id: 'RAD21', score: 5, href: "https://www.uniprot.org/uniprot/O60216" }},
+{data: { id: 'PDS5A', score: 5, href: "https://www.uniprot.org/uniprot/Q29RF7" }},
+{data: { id: 'PDS5B', score: 5, href: "https://www.uniprot.org/uniprot/Q9NTI5" }}], 
+ edges: [{ data: { source: 'SMC1L1', target: 'SMC3', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMC1L1', target: 'PDS5B', directed: 'false', weight: 0.9978090000000001} },
+{ data: { source: 'SMC1L1', target: 'PDS5A', directed: 'false', weight: 0.996482} },
+{ data: { source: 'SMC1L1', target: 'RAD21', directed: 'false', weight: 0.995036} },
+{ data: { source: 'SMC1L1', target: 'CDCA5', directed: 'false', weight: 0.247428} },
+{ data: { source: 'SMC3', target: 'PDS5A', directed: 'false', weight: 0.9930959999999999} },
+{ data: { source: 'SMC3', target: 'RAD21', directed: 'false', weight: 0.989136} },
+{ data: { source: 'SMC3', target: 'PDS5B', directed: 'false', weight: 0.98755} },
+{ data: { source: 'SMC3', target: 'CDCA5', directed: 'false', weight: 0.35378200000000004} },
+{ data: { source: 'CDCA5', target: 'RAD21', directed: 'false', weight: 0.988231} },
+{ data: { source: 'RAD21', target: 'PDS5B', directed: 'false', weight: 0.636848} },
+{ data: { source: 'RAD21', target: 'PDS5A', directed: 'false', weight: 0.14319500000000002} },
+{ data: { source: 'PDS5A', target: 'PDS5B', directed: 'false', weight: 0.999812} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Sororin-cohesin complex	<br> Unweighted Density = 0.87
+    </section>
+    </body>
+    </html>
+    

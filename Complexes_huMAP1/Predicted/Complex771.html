@@ -1,0 +1,120 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> UBFD1 CHAC2 ARPIN FSD1 EFHD1 GORASP2</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex772.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EFHD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BUP0" }},
+{data: { id: 'CHAC2', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q8WUX2" }},
+{data: { id: 'UBFD1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/O14562" }},
+{data: { id: 'GORASP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H8Y8" }},
+{data: { id: 'FSD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BTV5" }},
+{data: { id: 'ARPIN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z6K5" }}], 
+ edges: [{ data: { source: 'CHAC2', target: 'FSD1', directed: 'false', weight: 0.42126} },
+{ data: { source: 'CHAC2', target: 'UBFD1', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'CHAC2', target: 'EFHD1', directed: 'false', weight: 0.133456} },
+{ data: { source: 'CHAC2', target: 'ARPIN', directed: 'false', weight: 0.112499} },
+{ data: { source: 'EFHD1', target: 'FSD1', directed: 'false', weight: 0.538658} },
+{ data: { source: 'EFHD1', target: 'UBFD1', directed: 'false', weight: 0.133456} },
+{ data: { source: 'EFHD1', target: 'ARPIN', directed: 'false', weight: 0.112499} },
+{ data: { source: 'UBFD1', target: 'GORASP2', directed: 'false', weight: 0.832145} },
+{ data: { source: 'UBFD1', target: 'FSD1', directed: 'false', weight: 0.42233699999999996} },
+{ data: { source: 'UBFD1', target: 'ARPIN', directed: 'false', weight: 0.112499} },
+{ data: { source: 'FSD1', target: 'ARPIN', directed: 'false', weight: 0.41608500000000004} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    UBFD1 CHAC2 ARPIN FSD1 EFHD1 GORASP2<br> Complex Score (from Super.Complex) = 0.57974<br> Unweighted Density = 0.73
+    </section>
+    </body>
+    </html>
+    

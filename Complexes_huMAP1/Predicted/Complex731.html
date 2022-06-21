@@ -1,0 +1,148 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 EIF2B1-EIF2B2-EIF2B3-EIF2B4-EIF2B5 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex732.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SCMH1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96GD3" }},
+{data: { id: 'TNPO1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92973" }},
+{data: { id: 'EIF2B3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NR50" }},
+{data: { id: 'SARS-CoV2 M', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 M.html" }},
+{data: { id: 'SAAL1', score: 3, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q96ER3" }},
+{data: { id: 'ZSWIM6', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9HCJ5" }},
+{data: { id: 'EIF2B4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UI10" }},
+{data: { id: 'EIF2B2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49770" }},
+{data: { id: 'EIF2B1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14232" }},
+{data: { id: 'SARS-CoV2 orf7a', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 orf7a.html" }},
+{data: { id: 'HEATR3', score: 3, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q7Z4Q2" }},
+{data: { id: 'EIF2B5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13144" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 M', target: 'SAAL1', directed: 'false', weight: 0.769472929, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 orf7a', target: 'HEATR3', directed: 'false', weight: 0.789988379, type: 'sars'} },
+{ data: { source: 'EIF2B1', target: 'EIF2B3', directed: 'false', weight: 0.999972} },
+{ data: { source: 'EIF2B1', target: 'EIF2B5', directed: 'false', weight: 0.9995379999999999} },
+{ data: { source: 'EIF2B1', target: 'EIF2B2', directed: 'false', weight: 0.998859} },
+{ data: { source: 'EIF2B1', target: 'EIF2B4', directed: 'false', weight: 0.9980379999999999} },
+{ data: { source: 'EIF2B1', target: 'SAAL1', directed: 'false', weight: 0.463566} },
+{ data: { source: 'EIF2B1', target: 'HEATR3', directed: 'false', weight: 0.130526} },
+{ data: { source: 'HEATR3', target: 'TNPO1', directed: 'false', weight: 0.705683} },
+{ data: { source: 'HEATR3', target: 'SAAL1', directed: 'false', weight: 0.610581} },
+{ data: { source: 'HEATR3', target: 'EIF2B5', directed: 'false', weight: 0.515089} },
+{ data: { source: 'HEATR3', target: 'EIF2B3', directed: 'false', weight: 0.45116300000000004} },
+{ data: { source: 'HEATR3', target: 'EIF2B2', directed: 'false', weight: 0.259304} },
+{ data: { source: 'HEATR3', target: 'EIF2B4', directed: 'false', weight: 0.187903} },
+{ data: { source: 'SCMH1', target: 'EIF2B3', directed: 'false', weight: 0.349582} },
+{ data: { source: 'SCMH1', target: 'ZSWIM6', directed: 'false', weight: 0.2823} },
+{ data: { source: 'EIF2B5', target: 'EIF2B3', directed: 'false', weight: 1.0} },
+{ data: { source: 'EIF2B5', target: 'EIF2B4', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'EIF2B5', target: 'EIF2B2', directed: 'false', weight: 0.999993} },
+{ data: { source: 'EIF2B5', target: 'SAAL1', directed: 'false', weight: 0.726931} },
+{ data: { source: 'TNPO1', target: 'SAAL1', directed: 'false', weight: 0.48707} },
+{ data: { source: 'SAAL1', target: 'EIF2B3', directed: 'false', weight: 0.702625} },
+{ data: { source: 'SAAL1', target: 'EIF2B4', directed: 'false', weight: 0.5507380000000001} },
+{ data: { source: 'SAAL1', target: 'EIF2B2', directed: 'false', weight: 0.396579} },
+{ data: { source: 'EIF2B4', target: 'EIF2B3', directed: 'false', weight: 1.0} },
+{ data: { source: 'EIF2B4', target: 'EIF2B2', directed: 'false', weight: 0.9999239999999999} },
+{ data: { source: 'EIF2B2', target: 'EIF2B3', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'ZSWIM6', target: 'EIF2B3', directed: 'false', weight: 0.396848} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 EIF2B1-EIF2B2-EIF2B3-EIF2B4-EIF2B5 complex<br> Complex Score (from Super.Complex) = 0.59078<br> Unweighted Density = 0.58
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>SAAL1 HEATR3
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,97 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 CENP-A NAC complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex34.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CENPM', score: 5, href: "https://www.uniprot.org/uniprot/Q9NSP4" }},
+{data: { id: 'CENPU', score: 5, href: "https://www.uniprot.org/uniprot/Q71F23" }},
+{data: { id: 'CENPN', score: 5, href: "https://www.uniprot.org/uniprot/Q96H22" }},
+{data: { id: 'CENPH', score: 5, href: "https://www.uniprot.org/uniprot/Q9H3R5" }},
+{data: { id: 'CENPT', score: 5, href: "https://www.uniprot.org/uniprot/Q96BT3" }}], 
+ edges: [{ data: { source: 'CENPM', target: 'CENPH', directed: 'false', weight: 0.980635} },
+{ data: { source: 'CENPM', target: 'CENPU', directed: 'false', weight: 0.7154189999999999} },
+{ data: { source: 'CENPM', target: 'CENPT', directed: 'false', weight: 0.44872399999999996} },
+{ data: { source: 'CENPM', target: 'CENPN', directed: 'false', weight: 0.44872399999999996} },
+{ data: { source: 'CENPU', target: 'CENPT', directed: 'false', weight: 0.985289} },
+{ data: { source: 'CENPU', target: 'CENPN', directed: 'false', weight: 0.935119} },
+{ data: { source: 'CENPU', target: 'CENPH', directed: 'false', weight: 0.6689970000000001} },
+{ data: { source: 'CENPN', target: 'CENPH', directed: 'false', weight: 0.8937430000000001} },
+{ data: { source: 'CENPN', target: 'CENPT', directed: 'false', weight: 0.741451} },
+{ data: { source: 'CENPH', target: 'CENPT', directed: 'false', weight: 0.9378540000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 CENP-A NAC complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

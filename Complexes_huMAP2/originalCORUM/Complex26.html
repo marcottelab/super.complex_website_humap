@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> AP3 adaptor complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex27.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'AP3B1', score: 5, href: "https://www.uniprot.org/uniprot/O00203" }},
+{data: { id: 'AP3D1', score: 5, href: "https://www.uniprot.org/uniprot/O14617" }},
+{data: { id: 'AP3M2', score: 5, href: "https://www.uniprot.org/uniprot/P53677" }},
+{data: { id: 'AP3S2', score: 5, href: "https://www.uniprot.org/uniprot/P59780" }},
+{data: { id: 'AP3B2', score: 5, href: "https://www.uniprot.org/uniprot/Q13367" }},
+{data: { id: 'AP3S1', score: 5, href: "https://www.uniprot.org/uniprot/Q92572" }},
+{data: { id: 'AP3M1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2T2" }}], 
+ edges: [{ data: { source: 'AP3B1', target: 'AP3D1', directed: 'false', weight: 0.999958} },
+{ data: { source: 'AP3B1', target: 'AP3S1', directed: 'false', weight: 0.987599} },
+{ data: { source: 'AP3B1', target: 'AP3M1', directed: 'false', weight: 0.987535} },
+{ data: { source: 'AP3B1', target: 'AP3M2', directed: 'false', weight: 0.252525} },
+{ data: { source: 'AP3M1', target: 'AP3D1', directed: 'false', weight: 0.9875790000000001} },
+{ data: { source: 'AP3M1', target: 'AP3S1', directed: 'false', weight: 0.987562} },
+{ data: { source: 'AP3M1', target: 'AP3B2', directed: 'false', weight: 0.921644} },
+{ data: { source: 'AP3M1', target: 'AP3S2', directed: 'false', weight: 0.427203} },
+{ data: { source: 'AP3M1', target: 'AP3M2', directed: 'false', weight: 0.0998167} },
+{ data: { source: 'AP3S2', target: 'AP3D1', directed: 'false', weight: 0.0212204} },
+{ data: { source: 'AP3B2', target: 'AP3S1', directed: 'false', weight: 0.966832} },
+{ data: { source: 'AP3D1', target: 'AP3S1', directed: 'false', weight: 0.993626} },
+{ data: { source: 'AP3D1', target: 'AP3M2', directed: 'false', weight: 0.0979147} },
+{ data: { source: 'AP3M2', target: 'AP3S1', directed: 'false', weight: 0.7924899999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    AP3 adaptor complex	<br> Unweighted Density = 0.67
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>AP3B1
+    </section>
+    </body>
+    </html>
+    

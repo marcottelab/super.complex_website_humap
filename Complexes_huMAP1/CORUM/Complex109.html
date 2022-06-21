@@ -1,0 +1,150 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.9 CENP-H-I complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex110.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CENPO', score: 5, href: "https://www.uniprot.org/uniprot/Q9BU64" }},
+{data: { id: 'CENPM', score: 5, href: "https://www.uniprot.org/uniprot/Q9NSP4" }},
+{data: { id: 'CENPL', score: 4, href: "https://www.uniprot.org/uniprot/Q8N0S6" }},
+{data: { id: 'CENPI', score: 5, href: "https://www.uniprot.org/uniprot/Q92674" }},
+{data: { id: 'CENPU', score: 5, href: "https://www.uniprot.org/uniprot/Q71F23" }},
+{data: { id: 'CENPQ', score: 5, href: "https://www.uniprot.org/uniprot/Q7L2Z9" }},
+{data: { id: 'CENPN', score: 5, href: "https://www.uniprot.org/uniprot/Q96H22" }},
+{data: { id: 'ITGB3BP', score: 5, href: "https://www.uniprot.org/uniprot/Q13352" }},
+{data: { id: 'CENPH', score: 5, href: "https://www.uniprot.org/uniprot/Q9H3R5" }},
+{data: { id: 'CENPT', score: 5, href: "https://www.uniprot.org/uniprot/Q96BT3" }},
+{data: { id: 'CENPP', score: 5, href: "https://www.uniprot.org/uniprot/Q6IPU0" }},
+{data: { id: 'CENPK', score: 5, href: "https://www.uniprot.org/uniprot/Q9BS16" }}], 
+ edges: [{ data: { source: 'CENPO', target: 'CENPP', directed: 'false', weight: 0.999999} },
+{ data: { source: 'CENPO', target: 'ITGB3BP', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'CENPO', target: 'CENPU', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'CENPO', target: 'CENPQ', directed: 'false', weight: 0.999826} },
+{ data: { source: 'CENPO', target: 'CENPT', directed: 'false', weight: 0.9947959999999999} },
+{ data: { source: 'CENPO', target: 'CENPK', directed: 'false', weight: 0.9944540000000001} },
+{ data: { source: 'CENPO', target: 'CENPI', directed: 'false', weight: 0.991241} },
+{ data: { source: 'CENPO', target: 'CENPN', directed: 'false', weight: 0.9864860000000001} },
+{ data: { source: 'CENPO', target: 'CENPM', directed: 'false', weight: 0.9146620000000001} },
+{ data: { source: 'CENPO', target: 'CENPH', directed: 'false', weight: 0.6949649999999999} },
+{ data: { source: 'CENPM', target: 'CENPH', directed: 'false', weight: 0.980635} },
+{ data: { source: 'CENPM', target: 'CENPI', directed: 'false', weight: 0.8595879999999999} },
+{ data: { source: 'CENPM', target: 'CENPQ', directed: 'false', weight: 0.787393} },
+{ data: { source: 'CENPM', target: 'CENPU', directed: 'false', weight: 0.7154189999999999} },
+{ data: { source: 'CENPM', target: 'CENPK', directed: 'false', weight: 0.594072} },
+{ data: { source: 'CENPM', target: 'CENPT', directed: 'false', weight: 0.44872399999999996} },
+{ data: { source: 'CENPM', target: 'CENPN', directed: 'false', weight: 0.44872399999999996} },
+{ data: { source: 'CENPM', target: 'ITGB3BP', directed: 'false', weight: 0.44872399999999996} },
+{ data: { source: 'CENPM', target: 'CENPP', directed: 'false', weight: 0.44872399999999996} },
+{ data: { source: 'CENPI', target: 'CENPK', directed: 'false', weight: 0.9737530000000001} },
+{ data: { source: 'CENPI', target: 'ITGB3BP', directed: 'false', weight: 0.969385} },
+{ data: { source: 'CENPI', target: 'CENPQ', directed: 'false', weight: 0.960341} },
+{ data: { source: 'CENPI', target: 'CENPH', directed: 'false', weight: 0.9484889999999999} },
+{ data: { source: 'CENPI', target: 'CENPU', directed: 'false', weight: 0.931882} },
+{ data: { source: 'CENPI', target: 'CENPN', directed: 'false', weight: 0.859713} },
+{ data: { source: 'CENPI', target: 'CENPT', directed: 'false', weight: 0.65632} },
+{ data: { source: 'CENPI', target: 'CENPP', directed: 'false', weight: 0.65632} },
+{ data: { source: 'CENPL', target: 'CENPH', directed: 'false', weight: 0.7563949999999999} },
+{ data: { source: 'CENPU', target: 'CENPP', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'CENPU', target: 'ITGB3BP', directed: 'false', weight: 0.999986} },
+{ data: { source: 'CENPU', target: 'CENPQ', directed: 'false', weight: 0.998935} },
+{ data: { source: 'CENPU', target: 'CENPT', directed: 'false', weight: 0.985289} },
+{ data: { source: 'CENPU', target: 'CENPK', directed: 'false', weight: 0.96699} },
+{ data: { source: 'CENPU', target: 'CENPN', directed: 'false', weight: 0.935119} },
+{ data: { source: 'CENPU', target: 'CENPH', directed: 'false', weight: 0.6689970000000001} },
+{ data: { source: 'CENPQ', target: 'CENPP', directed: 'false', weight: 0.999978} },
+{ data: { source: 'CENPQ', target: 'ITGB3BP', directed: 'false', weight: 0.999884} },
+{ data: { source: 'CENPQ', target: 'CENPK', directed: 'false', weight: 0.9659459999999999} },
+{ data: { source: 'CENPQ', target: 'CENPT', directed: 'false', weight: 0.9641200000000001} },
+{ data: { source: 'CENPQ', target: 'CENPN', directed: 'false', weight: 0.944702} },
+{ data: { source: 'CENPQ', target: 'CENPH', directed: 'false', weight: 0.488141} },
+{ data: { source: 'CENPN', target: 'ITGB3BP', directed: 'false', weight: 0.989166} },
+{ data: { source: 'CENPN', target: 'CENPH', directed: 'false', weight: 0.8937430000000001} },
+{ data: { source: 'CENPN', target: 'CENPT', directed: 'false', weight: 0.741451} },
+{ data: { source: 'CENPN', target: 'CENPP', directed: 'false', weight: 0.741451} },
+{ data: { source: 'CENPN', target: 'CENPK', directed: 'false', weight: 0.594072} },
+{ data: { source: 'ITGB3BP', target: 'CENPP', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'ITGB3BP', target: 'CENPT', directed: 'false', weight: 0.9974930000000001} },
+{ data: { source: 'ITGB3BP', target: 'CENPK', directed: 'false', weight: 0.99477} },
+{ data: { source: 'ITGB3BP', target: 'CENPH', directed: 'false', weight: 0.912916} },
+{ data: { source: 'CENPH', target: 'CENPK', directed: 'false', weight: 0.99569} },
+{ data: { source: 'CENPH', target: 'CENPP', directed: 'false', weight: 0.957119} },
+{ data: { source: 'CENPH', target: 'CENPT', directed: 'false', weight: 0.9378540000000001} },
+{ data: { source: 'CENPT', target: 'CENPP', directed: 'false', weight: 0.741451} },
+{ data: { source: 'CENPT', target: 'CENPK', directed: 'false', weight: 0.594072} },
+{ data: { source: 'CENPP', target: 'CENPK', directed: 'false', weight: 0.594072} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.9 CENP-H-I complex	<br> Unweighted Density = 0.85
+    </section>
+    </body>
+    </html>
+    

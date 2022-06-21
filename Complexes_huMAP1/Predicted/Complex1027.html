@@ -1,0 +1,140 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 EXO1-MLH1-PMS2 complex match 2</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1028.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PIKFYVE', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y2I7" }},
+{data: { id: 'WDR83', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BRX9" }},
+{data: { id: 'DHX35', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H5Z1" }},
+{data: { id: 'XAB2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HCS7" }},
+{data: { id: 'RNF187', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5TA31" }},
+{data: { id: 'RIMS4', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9H426" }},
+{data: { id: 'EXO1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UQ84" }},
+{data: { id: 'GPATCH1', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9BRR8" }},
+{data: { id: 'GIGYF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75420" }},
+{data: { id: 'ZNF140', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P52738" }}], 
+ edges: [{ data: { source: 'GPATCH1', target: 'WDR83', directed: 'false', weight: 0.988376} },
+{ data: { source: 'GPATCH1', target: 'DHX35', directed: 'false', weight: 0.778296} },
+{ data: { source: 'GPATCH1', target: 'XAB2', directed: 'false', weight: 0.669534} },
+{ data: { source: 'XAB2', target: 'DHX35', directed: 'false', weight: 0.6992659999999999} },
+{ data: { source: 'XAB2', target: 'WDR83', directed: 'false', weight: 0.44586099999999995} },
+{ data: { source: 'PIKFYVE', target: 'WDR83', directed: 'false', weight: 0.9035209999999999} },
+{ data: { source: 'PIKFYVE', target: 'GIGYF1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PIKFYVE', target: 'EXO1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PIKFYVE', target: 'ZNF140', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PIKFYVE', target: 'RIMS4', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PIKFYVE', target: 'RNF187', directed: 'false', weight: 0.123797} },
+{ data: { source: 'EXO1', target: 'WDR83', directed: 'false', weight: 0.976735} },
+{ data: { source: 'EXO1', target: 'ZNF140', directed: 'false', weight: 0.171414} },
+{ data: { source: 'EXO1', target: 'RIMS4', directed: 'false', weight: 0.171414} },
+{ data: { source: 'EXO1', target: 'GIGYF1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'EXO1', target: 'RNF187', directed: 'false', weight: 0.140692} },
+{ data: { source: 'RIMS4', target: 'WDR83', directed: 'false', weight: 0.972101} },
+{ data: { source: 'RIMS4', target: 'ZNF140', directed: 'false', weight: 0.171414} },
+{ data: { source: 'RIMS4', target: 'GIGYF1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'RIMS4', target: 'RNF187', directed: 'false', weight: 0.140692} },
+{ data: { source: 'ZNF140', target: 'WDR83', directed: 'false', weight: 0.973989} },
+{ data: { source: 'ZNF140', target: 'GIGYF1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ZNF140', target: 'RNF187', directed: 'false', weight: 0.140692} },
+{ data: { source: 'RNF187', target: 'WDR83', directed: 'false', weight: 0.930794} },
+{ data: { source: 'RNF187', target: 'GIGYF1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'DHX35', target: 'WDR83', directed: 'false', weight: 0.962182} },
+{ data: { source: 'WDR83', target: 'GIGYF1', directed: 'false', weight: 0.9583889999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 EXO1-MLH1-PMS2 complex match 2<br> Complex Score (from Super.Complex) = 0.50429<br> Unweighted Density = 0.60
+    </section>
+    </body>
+    </html>
+    

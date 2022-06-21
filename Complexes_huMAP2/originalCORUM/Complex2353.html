@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> SOG complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2354.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SEC13', score: 5, href: "https://www.uniprot.org/uniprot/P55735" }},
+{data: { id: 'C16orf35', score: 5, href: "https://www.uniprot.org/uniprot/Q12980" }},
+{data: { id: 'SZT2', score: 5, href: "https://www.uniprot.org/uniprot/Q5T011" }},
+{data: { id: 'WDR59', score: 5, href: "https://www.uniprot.org/uniprot/Q6PJI9" }},
+{data: { id: 'NPRL2', score: 5, href: "https://www.uniprot.org/uniprot/Q8WTW4" }},
+{data: { id: 'SEH1L', score: 5, href: "https://www.uniprot.org/uniprot/Q96EE3" }},
+{data: { id: 'WDR24', score: 5, href: "https://www.uniprot.org/uniprot/Q96S15" }},
+{data: { id: 'FLJ20323', score: 2, href: "https://www.uniprot.org/uniprot/A0A024RA24" }}], 
+ edges: [{ data: { source: 'FLJ20323', target: 'SEC13', directed: 'false', weight: 0.816388} },
+{ data: { source: 'FLJ20323', target: 'SEH1L', directed: 'false', weight: 0.044832} },
+{ data: { source: 'SEH1L', target: 'SEC13', directed: 'false', weight: 0.5165569999999999} },
+{ data: { source: 'SEH1L', target: 'WDR24', directed: 'false', weight: 0.0694053} },
+{ data: { source: 'SEH1L', target: 'WDR59', directed: 'false', weight: 0.0639103} },
+{ data: { source: 'NPRL2', target: 'C16orf35', directed: 'false', weight: 0.05741519999999999} },
+{ data: { source: 'WDR59', target: 'SEC13', directed: 'false', weight: 0.753741} },
+{ data: { source: 'WDR24', target: 'SEC13', directed: 'false', weight: 0.9254450000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    SOG complex	<br> Unweighted Density = 0.29
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,109 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CORVET complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2091.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'VPS8', score: 5, href: "https://www.uniprot.org/uniprot/Q8N3P4" }},
+{data: { id: 'TGFBRAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WUH2" }},
+{data: { id: 'VPS33A', score: 5, href: "https://www.uniprot.org/uniprot/Q96AX1" }},
+{data: { id: 'VPS16', score: 5, href: "https://www.uniprot.org/uniprot/Q9H269" }},
+{data: { id: 'VPS11', score: 5, href: "https://www.uniprot.org/uniprot/Q9H270" }},
+{data: { id: 'VPS18', score: 5, href: "https://www.uniprot.org/uniprot/Q9P253" }}], 
+ edges: [{ data: { source: 'VPS11', target: 'TGFBRAP1', directed: 'false', weight: 0.999975} },
+{ data: { source: 'VPS11', target: 'VPS18', directed: 'false', weight: 0.950644} },
+{ data: { source: 'VPS11', target: 'VPS8', directed: 'false', weight: 0.0518495} },
+{ data: { source: 'VPS11', target: 'VPS16', directed: 'false', weight: 0.0505084} },
+{ data: { source: 'VPS11', target: 'VPS33A', directed: 'false', weight: 0.050488599999999995} },
+{ data: { source: 'VPS18', target: 'VPS16', directed: 'false', weight: 0.367817} },
+{ data: { source: 'VPS18', target: 'VPS33A', directed: 'false', weight: 0.257231} },
+{ data: { source: 'VPS18', target: 'TGFBRAP1', directed: 'false', weight: 0.14128} },
+{ data: { source: 'VPS18', target: 'VPS8', directed: 'false', weight: 0.0685747} },
+{ data: { source: 'VPS8', target: 'VPS33A', directed: 'false', weight: 0.0315124} },
+{ data: { source: 'VPS33A', target: 'VPS16', directed: 'false', weight: 0.551771} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CORVET complex	<br> Unweighted Density = 0.73
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>VPS11
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,93 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Casein kinase II (beta-dimer, alpha, alpha')</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1597.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CSNK2A2', score: 5, href: "https://www.uniprot.org/uniprot/P19784" }},
+{data: { id: 'CSNK2B', score: 5, href: "https://www.uniprot.org/uniprot/P67870" }},
+{data: { id: 'CSNK2A1', score: 5, href: "https://www.uniprot.org/uniprot/P68400" }}], 
+ edges: [{ data: { source: 'CSNK2A1', target: 'CSNK2A2', directed: 'false', weight: 1.0} },
+{ data: { source: 'CSNK2A1', target: 'CSNK2B', directed: 'false', weight: 1.0} },
+{ data: { source: 'CSNK2B', target: 'CSNK2A2', directed: 'false', weight: 0.9943420000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Casein kinase II (beta-dimer, alpha, alpha')	<br> Unweighted Density = 1.00
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>CSNK2A2 CSNK2B
+    </section>
+    </body>
+    </html>
+    

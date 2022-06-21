@@ -1,0 +1,117 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> v-ATPase-Ragulator-AXIN/LKB1-AMPK complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2439.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'AXIN1', score: 5, href: "https://www.uniprot.org/uniprot/O15169" }},
+{data: { id: 'LAMTOR5', score: 5, href: "https://www.uniprot.org/uniprot/O43504" }},
+{data: { id: 'ATP6V1B2', score: 5, href: "https://www.uniprot.org/uniprot/P21281" }},
+{data: { id: 'ATP6V0C', score: 5, href: "https://www.uniprot.org/uniprot/P27449" }},
+{data: { id: 'ATP6V1A', score: 5, href: "https://www.uniprot.org/uniprot/P38606" }},
+{data: { id: 'PRKAG1', score: 5, href: "https://www.uniprot.org/uniprot/P54619" }},
+{data: { id: 'ATP6V0D1', score: 5, href: "https://www.uniprot.org/uniprot/P61421" }},
+{data: { id: 'LAMTOR4', score: 5, href: "https://www.uniprot.org/uniprot/Q0VGL1" }},
+{data: { id: 'PRKAA1', score: 5, href: "https://www.uniprot.org/uniprot/Q13131" }},
+{data: { id: 'STK11', score: 5, href: "https://www.uniprot.org/uniprot/Q15831" }},
+{data: { id: 'LAMTOR1', score: 5, href: "https://www.uniprot.org/uniprot/Q6IAA8" }},
+{data: { id: 'LAMTOR3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHA4" }},
+{data: { id: 'LAMTOR2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2Q5" }},
+{data: { id: 'PRKAB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y478" }}], 
+ edges: [{ data: { source: 'LAMTOR3', target: 'LAMTOR1', directed: 'false', weight: 0.193103} },
+{ data: { source: 'LAMTOR5', target: 'LAMTOR1', directed: 'false', weight: 0.0482121} },
+{ data: { source: 'LAMTOR5', target: 'ATP6V0D1', directed: 'false', weight: 0.0311879} },
+{ data: { source: 'ATP6V0D1', target: 'ATP6V1B2', directed: 'false', weight: 0.9235479999999999} },
+{ data: { source: 'ATP6V0D1', target: 'ATP6V1A', directed: 'false', weight: 0.74958} },
+{ data: { source: 'ATP6V0D1', target: 'LAMTOR1', directed: 'false', weight: 0.0840657} },
+{ data: { source: 'ATP6V0D1', target: 'ATP6V0C', directed: 'false', weight: 0.0271072} },
+{ data: { source: 'PRKAB1', target: 'PRKAG1', directed: 'false', weight: 0.9998020000000001} },
+{ data: { source: 'PRKAB1', target: 'PRKAA1', directed: 'false', weight: 0.924694} },
+{ data: { source: 'PRKAG1', target: 'PRKAA1', directed: 'false', weight: 0.999999} },
+{ data: { source: 'ATP6V1A', target: 'ATP6V1B2', directed: 'false', weight: 0.999992} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    v-ATPase-Ragulator-AXIN/LKB1-AMPK complex	<br> Unweighted Density = 0.12
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>ATP6V1A
+    </section>
+    </body>
+    </html>
+    

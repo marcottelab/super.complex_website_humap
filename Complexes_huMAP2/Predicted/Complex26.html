@@ -1,0 +1,161 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 Septin complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex27.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SEPTIN4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43236" }},
+{data: { id: 'SEPTIN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UH03" }},
+{data: { id: 'SEPTIN11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NVA2" }},
+{data: { id: 'SEPTIN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15019" }},
+{data: { id: 'SEPTIN6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14141" }},
+{data: { id: 'SEPTIN10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P0V9" }},
+{data: { id: 'SEPTIN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WYJ6" }},
+{data: { id: 'SEPTIN8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92599" }},
+{data: { id: 'SEPTIN7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16181" }},
+{data: { id: 'SEPTIN9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UHD8" }},
+{data: { id: 'SEPT5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99719" }}], 
+ edges: [{ data: { source: 'SEPTIN7', target: 'SEPTIN9', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN10', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN6', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN2', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN11', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN8', directed: 'false', weight: 0.999999} },
+{ data: { source: 'SEPTIN7', target: 'SEPT5', directed: 'false', weight: 0.9999540000000001} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN3', directed: 'false', weight: 0.9992549999999999} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN1', directed: 'false', weight: 0.54776} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN4', directed: 'false', weight: 0.34558} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN10', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN9', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN6', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN8', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN11', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN2', target: 'SEPT5', directed: 'false', weight: 0.999718} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN3', directed: 'false', weight: 0.98336} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN1', directed: 'false', weight: 0.44870600000000005} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN4', directed: 'false', weight: 0.06612430000000001} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN10', directed: 'false', weight: 0.9997} },
+{ data: { source: 'SEPTIN8', target: 'SEPT5', directed: 'false', weight: 0.999316} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN3', directed: 'false', weight: 0.9992} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN6', directed: 'false', weight: 0.9947950000000001} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN1', directed: 'false', weight: 0.860714} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN11', directed: 'false', weight: 0.82384} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN9', directed: 'false', weight: 0.509566} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN4', directed: 'false', weight: 0.020460299999999997} },
+{ data: { source: 'SEPTIN4', target: 'SEPTIN1', directed: 'false', weight: 0.999999} },
+{ data: { source: 'SEPTIN4', target: 'SEPTIN3', directed: 'false', weight: 0.173281} },
+{ data: { source: 'SEPTIN4', target: 'SEPTIN6', directed: 'false', weight: 0.142299} },
+{ data: { source: 'SEPTIN4', target: 'SEPTIN10', directed: 'false', weight: 0.0594472} },
+{ data: { source: 'SEPTIN4', target: 'SEPT5', directed: 'false', weight: 0.0235099} },
+{ data: { source: 'SEPT5', target: 'SEPTIN6', directed: 'false', weight: 0.999991} },
+{ data: { source: 'SEPT5', target: 'SEPTIN1', directed: 'false', weight: 0.99997} },
+{ data: { source: 'SEPT5', target: 'SEPTIN10', directed: 'false', weight: 0.9996290000000001} },
+{ data: { source: 'SEPT5', target: 'SEPTIN11', directed: 'false', weight: 0.999602} },
+{ data: { source: 'SEPT5', target: 'SEPTIN3', directed: 'false', weight: 0.805673} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN11', directed: 'false', weight: 0.7895979999999999} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN9', directed: 'false', weight: 0.716041} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN6', directed: 'false', weight: 0.566646} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN3', directed: 'false', weight: 0.459988} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN10', directed: 'false', weight: 0.367078} },
+{ data: { source: 'SEPTIN6', target: 'SEPTIN9', directed: 'false', weight: 0.999999} },
+{ data: { source: 'SEPTIN6', target: 'SEPTIN11', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'SEPTIN6', target: 'SEPTIN10', directed: 'false', weight: 0.9999530000000001} },
+{ data: { source: 'SEPTIN6', target: 'SEPTIN3', directed: 'false', weight: 0.944377} },
+{ data: { source: 'SEPTIN10', target: 'SEPTIN9', directed: 'false', weight: 0.993944} },
+{ data: { source: 'SEPTIN10', target: 'SEPTIN11', directed: 'false', weight: 0.979675} },
+{ data: { source: 'SEPTIN10', target: 'SEPTIN3', directed: 'false', weight: 0.9124680000000001} },
+{ data: { source: 'SEPTIN9', target: 'SEPTIN11', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN9', target: 'SEPTIN3', directed: 'false', weight: 0.41847399999999996} },
+{ data: { source: 'SEPTIN3', target: 'SEPTIN11', directed: 'false', weight: 0.9531700000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 Septin complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.95
+    </section>
+    </body>
+    </html>
+    

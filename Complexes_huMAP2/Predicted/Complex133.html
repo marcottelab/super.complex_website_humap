@@ -1,0 +1,139 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 CDC5L core complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex134.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SNRNP200', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75643" }},
+{data: { id: 'RPS10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46783" }},
+{data: { id: 'CDC5L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99459" }},
+{data: { id: 'PSIP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75475" }},
+{data: { id: 'PLRG1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43660" }},
+{data: { id: 'EIF2S2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P20042" }},
+{data: { id: 'HEL-S-72p', score: 3, type: '', href: "https://www.uniprot.org/uniprot/V9HW22" }},
+{data: { id: 'HNRNPU', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q00839" }},
+{data: { id: 'ABCF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NE71" }},
+{data: { id: 'RANBP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49792" }}], 
+ edges: [{ data: { source: 'PSIP1', target: 'EIF2S2', directed: 'false', weight: 0.29122800000000004} },
+{ data: { source: 'PSIP1', target: 'ABCF1', directed: 'false', weight: 0.15196199999999999} },
+{ data: { source: 'PSIP1', target: 'RPS10', directed: 'false', weight: 0.0311798} },
+{ data: { source: 'HNRNPU', target: 'CDC5L', directed: 'false', weight: 0.963363} },
+{ data: { source: 'HNRNPU', target: 'RPS10', directed: 'false', weight: 0.189523} },
+{ data: { source: 'HNRNPU', target: 'HEL-S-72p', directed: 'false', weight: 0.138016} },
+{ data: { source: 'HNRNPU', target: 'SNRNP200', directed: 'false', weight: 0.112694} },
+{ data: { source: 'HNRNPU', target: 'RANBP2', directed: 'false', weight: 0.0704494} },
+{ data: { source: 'HNRNPU', target: 'ABCF1', directed: 'false', weight: 0.050041300000000004} },
+{ data: { source: 'HNRNPU', target: 'EIF2S2', directed: 'false', weight: 0.0406083} },
+{ data: { source: 'ABCF1', target: 'HEL-S-72p', directed: 'false', weight: 0.0611034} },
+{ data: { source: 'ABCF1', target: 'EIF2S2', directed: 'false', weight: 0.046566699999999996} },
+{ data: { source: 'SNRNP200', target: 'CDC5L', directed: 'false', weight: 0.9875440000000001} },
+{ data: { source: 'SNRNP200', target: 'RANBP2', directed: 'false', weight: 0.817909} },
+{ data: { source: 'SNRNP200', target: 'HEL-S-72p', directed: 'false', weight: 0.0705804} },
+{ data: { source: 'PLRG1', target: 'CDC5L', directed: 'false', weight: 1.0} },
+{ data: { source: 'PLRG1', target: 'EIF2S2', directed: 'false', weight: 0.0681262} },
+{ data: { source: 'PLRG1', target: 'HEL-S-72p', directed: 'false', weight: 0.0375739} },
+{ data: { source: 'RANBP2', target: 'HEL-S-72p', directed: 'false', weight: 0.07855980000000001} },
+{ data: { source: 'RANBP2', target: 'CDC5L', directed: 'false', weight: 0.047488999999999996} },
+{ data: { source: 'EIF2S2', target: 'CDC5L', directed: 'false', weight: 0.727412} },
+{ data: { source: 'EIF2S2', target: 'HEL-S-72p', directed: 'false', weight: 0.07570980000000001} },
+{ data: { source: 'EIF2S2', target: 'RPS10', directed: 'false', weight: 0.05688150000000001} },
+{ data: { source: 'HEL-S-72p', target: 'CDC5L', directed: 'false', weight: 0.9811209999999999} },
+{ data: { source: 'HEL-S-72p', target: 'RPS10', directed: 'false', weight: 0.152814} },
+{ data: { source: 'CDC5L', target: 'RPS10', directed: 'false', weight: 0.184229} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 CDC5L core complex<br> Complex Score (from Super.Complex) = 0.99600<br> Unweighted Density = 0.58
+    </section>
+    </body>
+    </html>
+    

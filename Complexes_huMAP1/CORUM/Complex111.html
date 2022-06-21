@@ -1,0 +1,104 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex112.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'VPS26A', score: 5, href: "https://www.uniprot.org/uniprot/O75436" }},
+{data: { id: 'SNX1', score: 5, href: "https://www.uniprot.org/uniprot/Q13596" }},
+{data: { id: 'VPS26B', score: 4, href: "https://www.uniprot.org/uniprot/Q4G0F5" }},
+{data: { id: 'SNX2', score: 5, href: "https://www.uniprot.org/uniprot/O60749" }},
+{data: { id: 'VPS35', score: 5, href: "https://www.uniprot.org/uniprot/Q96QK1" }},
+{data: { id: 'VPS29', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBQ0" }}], 
+ edges: [{ data: { source: 'VPS26A', target: 'VPS29', directed: 'false', weight: 0.9950889999999999} },
+{ data: { source: 'VPS26A', target: 'VPS35', directed: 'false', weight: 0.975929} },
+{ data: { source: 'VPS26A', target: 'VPS26B', directed: 'false', weight: 0.9759110000000001} },
+{ data: { source: 'SNX1', target: 'VPS29', directed: 'false', weight: 0.9759540000000001} },
+{ data: { source: 'SNX1', target: 'VPS35', directed: 'false', weight: 0.975916} },
+{ data: { source: 'SNX1', target: 'SNX2', directed: 'false', weight: 0.111562} },
+{ data: { source: 'VPS26B', target: 'VPS29', directed: 'false', weight: 0.999649} },
+{ data: { source: 'VPS26B', target: 'VPS35', directed: 'false', weight: 0.998783} },
+{ data: { source: 'SNX2', target: 'VPS35', directed: 'false', weight: 0.9759209999999999} },
+{ data: { source: 'SNX2', target: 'VPS29', directed: 'false', weight: 0.975914} },
+{ data: { source: 'VPS35', target: 'VPS29', directed: 'false', weight: 0.9759110000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)	<br> Unweighted Density = 0.73
+    </section>
+    </body>
+    </html>
+    

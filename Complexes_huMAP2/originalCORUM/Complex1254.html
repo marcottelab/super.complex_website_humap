@@ -1,0 +1,88 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> P-TEFb-7SKRNA-HEXIM1 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1255.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CCNT1', score: 5, href: "https://www.uniprot.org/uniprot/O60563" }},
+{data: { id: 'HEXIM1', score: 5, href: "https://www.uniprot.org/uniprot/O94992" }},
+{data: { id: 'CDK9', score: 5, href: "https://www.uniprot.org/uniprot/P50750" }}], 
+ edges: [{ data: { source: 'CDK9', target: 'CCNT1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDK9', target: 'HEXIM1', directed: 'false', weight: 0.322464} },
+{ data: { source: 'HEXIM1', target: 'CCNT1', directed: 'false', weight: 0.8739530000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    P-TEFb-7SKRNA-HEXIM1 complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

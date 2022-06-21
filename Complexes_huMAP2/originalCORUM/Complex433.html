@@ -1,0 +1,245 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> LARC complex (LCR-associated remodeling complex)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex434.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ARID1A', score: 5, href: "https://www.uniprot.org/uniprot/O14497" }},
+{data: { id: 'MTA2', score: 5, href: "https://www.uniprot.org/uniprot/O94776" }},
+{data: { id: 'MBD3', score: 5, href: "https://www.uniprot.org/uniprot/O95983" }},
+{data: { id: 'ACTL6A', score: 5, href: "https://www.uniprot.org/uniprot/O96019" }},
+{data: { id: 'HNRNPC', score: 5, href: "https://www.uniprot.org/uniprot/P07910" }},
+{data: { id: 'SMARCA4', score: 5, href: "https://www.uniprot.org/uniprot/P51532" }},
+{data: { id: 'PS1TP5BP1', score: 2, href: "https://www.uniprot.org/uniprot/Q1KLZ0" }},
+{data: { id: 'RBBP4', score: 5, href: "https://www.uniprot.org/uniprot/Q09028" }},
+{data: { id: 'SMARCB1', score: 5, href: "https://www.uniprot.org/uniprot/Q12824" }},
+{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'CHD4', score: 5, href: "https://www.uniprot.org/uniprot/Q14839" }},
+{data: { id: 'SMARCC2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAQ2" }},
+{data: { id: 'GATAD2B', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXI9" }},
+{data: { id: 'HDAC2', score: 5, href: "https://www.uniprot.org/uniprot/Q92769" }},
+{data: { id: 'DPF2', score: 5, href: "https://www.uniprot.org/uniprot/Q92785" }},
+{data: { id: 'SMARCC1', score: 5, href: "https://www.uniprot.org/uniprot/Q92922" }},
+{data: { id: 'SMARCD2', score: 5, href: "https://www.uniprot.org/uniprot/Q92925" }},
+{data: { id: 'SMARCE1', score: 5, href: "https://www.uniprot.org/uniprot/Q969G3" }},
+{data: { id: 'MBD2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBB5" }}], 
+ edges: [{ data: { source: 'ARID1A', target: 'SMARCC1', directed: 'false', weight: 0.999999} },
+{ data: { source: 'ARID1A', target: 'SMARCC2', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'ARID1A', target: 'SMARCE1', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'ARID1A', target: 'SMARCA4', directed: 'false', weight: 0.999974} },
+{ data: { source: 'ARID1A', target: 'ACTL6A', directed: 'false', weight: 0.9994649999999999} },
+{ data: { source: 'ARID1A', target: 'SMARCB1', directed: 'false', weight: 0.999324} },
+{ data: { source: 'ARID1A', target: 'SMARCD2', directed: 'false', weight: 0.9876219999999999} },
+{ data: { source: 'ARID1A', target: 'DPF2', directed: 'false', weight: 0.9875959999999999} },
+{ data: { source: 'ARID1A', target: 'CHD4', directed: 'false', weight: 0.8792059999999999} },
+{ data: { source: 'ARID1A', target: 'RBBP4', directed: 'false', weight: 0.866624} },
+{ data: { source: 'ARID1A', target: 'MBD3', directed: 'false', weight: 0.42996599999999996} },
+{ data: { source: 'ARID1A', target: 'MTA2', directed: 'false', weight: 0.404377} },
+{ data: { source: 'ARID1A', target: 'HDAC2', directed: 'false', weight: 0.0998666} },
+{ data: { source: 'ARID1A', target: 'HNRNPC', directed: 'false', weight: 0.0492828} },
+{ data: { source: 'HDAC1', target: 'HDAC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'HDAC1', target: 'MTA2', directed: 'false', weight: 1.0} },
+{ data: { source: 'HDAC1', target: 'CHD4', directed: 'false', weight: 0.999999} },
+{ data: { source: 'HDAC1', target: 'RBBP4', directed: 'false', weight: 0.9999520000000001} },
+{ data: { source: 'HDAC1', target: 'GATAD2B', directed: 'false', weight: 0.999927} },
+{ data: { source: 'HDAC1', target: 'MBD3', directed: 'false', weight: 0.9998950000000001} },
+{ data: { source: 'HDAC1', target: 'MBD2', directed: 'false', weight: 0.994289} },
+{ data: { source: 'HDAC1', target: 'SMARCC2', directed: 'false', weight: 0.9875290000000001} },
+{ data: { source: 'HDAC1', target: 'SMARCC1', directed: 'false', weight: 0.9823569999999999} },
+{ data: { source: 'HDAC1', target: 'SMARCD2', directed: 'false', weight: 0.866561} },
+{ data: { source: 'HDAC1', target: 'SMARCA4', directed: 'false', weight: 0.850299} },
+{ data: { source: 'HDAC1', target: 'ACTL6A', directed: 'false', weight: 0.561489} },
+{ data: { source: 'HDAC1', target: 'PS1TP5BP1', directed: 'false', weight: 0.47691999999999996} },
+{ data: { source: 'HDAC1', target: 'SMARCE1', directed: 'false', weight: 0.2366} },
+{ data: { source: 'HDAC1', target: 'DPF2', directed: 'false', weight: 0.025082} },
+{ data: { source: 'MTA2', target: 'HDAC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'MTA2', target: 'RBBP4', directed: 'false', weight: 0.999983} },
+{ data: { source: 'MTA2', target: 'MBD3', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'MTA2', target: 'CHD4', directed: 'false', weight: 0.999973} },
+{ data: { source: 'MTA2', target: 'MBD2', directed: 'false', weight: 0.9998389999999999} },
+{ data: { source: 'MTA2', target: 'SMARCA4', directed: 'false', weight: 0.9975360000000001} },
+{ data: { source: 'MTA2', target: 'SMARCE1', directed: 'false', weight: 0.987642} },
+{ data: { source: 'MTA2', target: 'GATAD2B', directed: 'false', weight: 0.987614} },
+{ data: { source: 'MTA2', target: 'SMARCB1', directed: 'false', weight: 0.9875790000000001} },
+{ data: { source: 'MTA2', target: 'ACTL6A', directed: 'false', weight: 0.98756} },
+{ data: { source: 'MTA2', target: 'SMARCC2', directed: 'false', weight: 0.9875450000000001} },
+{ data: { source: 'MTA2', target: 'SMARCC1', directed: 'false', weight: 0.976541} },
+{ data: { source: 'MTA2', target: 'HNRNPC', directed: 'false', weight: 0.659143} },
+{ data: { source: 'MTA2', target: 'DPF2', directed: 'false', weight: 0.50627} },
+{ data: { source: 'MTA2', target: 'SMARCD2', directed: 'false', weight: 0.25087800000000005} },
+{ data: { source: 'HNRNPC', target: 'SMARCE1', directed: 'false', weight: 0.987539} },
+{ data: { source: 'HNRNPC', target: 'SMARCC2', directed: 'false', weight: 0.985965} },
+{ data: { source: 'HNRNPC', target: 'SMARCB1', directed: 'false', weight: 0.9256129999999999} },
+{ data: { source: 'HNRNPC', target: 'SMARCA4', directed: 'false', weight: 0.805106} },
+{ data: { source: 'HNRNPC', target: 'SMARCC1', directed: 'false', weight: 0.21725100000000003} },
+{ data: { source: 'HNRNPC', target: 'HDAC2', directed: 'false', weight: 0.147777} },
+{ data: { source: 'HNRNPC', target: 'DPF2', directed: 'false', weight: 0.144998} },
+{ data: { source: 'HNRNPC', target: 'GATAD2B', directed: 'false', weight: 0.09677569999999999} },
+{ data: { source: 'HNRNPC', target: 'CHD4', directed: 'false', weight: 0.078328} },
+{ data: { source: 'HNRNPC', target: 'MBD3', directed: 'false', weight: 0.0655139} },
+{ data: { source: 'HNRNPC', target: 'ACTL6A', directed: 'false', weight: 0.0432839} },
+{ data: { source: 'MBD2', target: 'GATAD2B', directed: 'false', weight: 0.999994} },
+{ data: { source: 'MBD2', target: 'HDAC2', directed: 'false', weight: 0.963541} },
+{ data: { source: 'MBD2', target: 'RBBP4', directed: 'false', weight: 0.779633} },
+{ data: { source: 'MBD2', target: 'CHD4', directed: 'false', weight: 0.455276} },
+{ data: { source: 'MBD2', target: 'MBD3', directed: 'false', weight: 0.034424800000000005} },
+{ data: { source: 'RBBP4', target: 'GATAD2B', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RBBP4', target: 'SMARCC2', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'RBBP4', target: 'CHD4', directed: 'false', weight: 0.999898} },
+{ data: { source: 'RBBP4', target: 'SMARCC1', directed: 'false', weight: 0.9989379999999999} },
+{ data: { source: 'RBBP4', target: 'SMARCA4', directed: 'false', weight: 0.993175} },
+{ data: { source: 'RBBP4', target: 'HDAC2', directed: 'false', weight: 0.9922850000000001} },
+{ data: { source: 'RBBP4', target: 'MBD3', directed: 'false', weight: 0.9875870000000001} },
+{ data: { source: 'RBBP4', target: 'ACTL6A', directed: 'false', weight: 0.9875790000000001} },
+{ data: { source: 'RBBP4', target: 'SMARCB1', directed: 'false', weight: 0.9875510000000001} },
+{ data: { source: 'RBBP4', target: 'SMARCD2', directed: 'false', weight: 0.845881} },
+{ data: { source: 'RBBP4', target: 'SMARCE1', directed: 'false', weight: 0.812952} },
+{ data: { source: 'RBBP4', target: 'DPF2', directed: 'false', weight: 0.356715} },
+{ data: { source: 'ACTL6A', target: 'SMARCC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'ACTL6A', target: 'SMARCC2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'ACTL6A', target: 'SMARCB1', directed: 'false', weight: 0.999975} },
+{ data: { source: 'ACTL6A', target: 'SMARCA4', directed: 'false', weight: 0.9999450000000001} },
+{ data: { source: 'ACTL6A', target: 'SMARCE1', directed: 'false', weight: 0.9999049999999999} },
+{ data: { source: 'ACTL6A', target: 'SMARCD2', directed: 'false', weight: 0.998648} },
+{ data: { source: 'ACTL6A', target: 'DPF2', directed: 'false', weight: 0.987499} },
+{ data: { source: 'ACTL6A', target: 'CHD4', directed: 'false', weight: 0.9874870000000001} },
+{ data: { source: 'ACTL6A', target: 'HDAC2', directed: 'false', weight: 0.968199} },
+{ data: { source: 'ACTL6A', target: 'MBD3', directed: 'false', weight: 0.11311199999999999} },
+{ data: { source: 'ACTL6A', target: 'GATAD2B', directed: 'false', weight: 0.07932439999999999} },
+{ data: { source: 'HDAC2', target: 'SMARCC2', directed: 'false', weight: 0.999943} },
+{ data: { source: 'HDAC2', target: 'SMARCC1', directed: 'false', weight: 0.9948790000000001} },
+{ data: { source: 'HDAC2', target: 'SMARCE1', directed: 'false', weight: 0.9876209999999999} },
+{ data: { source: 'HDAC2', target: 'GATAD2B', directed: 'false', weight: 0.987491} },
+{ data: { source: 'HDAC2', target: 'CHD4', directed: 'false', weight: 0.9844379999999999} },
+{ data: { source: 'HDAC2', target: 'SMARCB1', directed: 'false', weight: 0.97105} },
+{ data: { source: 'HDAC2', target: 'SMARCD2', directed: 'false', weight: 0.967403} },
+{ data: { source: 'HDAC2', target: 'SMARCA4', directed: 'false', weight: 0.8749170000000001} },
+{ data: { source: 'HDAC2', target: 'DPF2', directed: 'false', weight: 0.753925} },
+{ data: { source: 'HDAC2', target: 'MBD3', directed: 'false', weight: 0.6930189999999999} },
+{ data: { source: 'HDAC2', target: 'PS1TP5BP1', directed: 'false', weight: 0.191451} },
+{ data: { source: 'SMARCC1', target: 'SMARCA4', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCC1', target: 'SMARCB1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCC1', target: 'SMARCD2', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCC1', target: 'SMARCE1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCC1', target: 'SMARCC2', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SMARCC1', target: 'DPF2', directed: 'false', weight: 0.990563} },
+{ data: { source: 'SMARCC1', target: 'CHD4', directed: 'false', weight: 0.9815709999999999} },
+{ data: { source: 'SMARCC1', target: 'GATAD2B', directed: 'false', weight: 0.961467} },
+{ data: { source: 'SMARCC1', target: 'MBD3', directed: 'false', weight: 0.268876} },
+{ data: { source: 'SMARCC1', target: 'PS1TP5BP1', directed: 'false', weight: 0.107478} },
+{ data: { source: 'MBD3', target: 'GATAD2B', directed: 'false', weight: 0.9954799999999999} },
+{ data: { source: 'MBD3', target: 'SMARCC2', directed: 'false', weight: 0.994851} },
+{ data: { source: 'MBD3', target: 'SMARCB1', directed: 'false', weight: 0.987663} },
+{ data: { source: 'MBD3', target: 'SMARCE1', directed: 'false', weight: 0.987611} },
+{ data: { source: 'MBD3', target: 'CHD4', directed: 'false', weight: 0.9875309999999999} },
+{ data: { source: 'MBD3', target: 'DPF2', directed: 'false', weight: 0.782435} },
+{ data: { source: 'MBD3', target: 'SMARCA4', directed: 'false', weight: 0.769992} },
+{ data: { source: 'MBD3', target: 'SMARCD2', directed: 'false', weight: 0.545767} },
+{ data: { source: 'SMARCA4', target: 'SMARCC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCA4', target: 'SMARCE1', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'SMARCA4', target: 'SMARCB1', directed: 'false', weight: 0.999976} },
+{ data: { source: 'SMARCA4', target: 'SMARCD2', directed: 'false', weight: 0.9999239999999999} },
+{ data: { source: 'SMARCA4', target: 'DPF2', directed: 'false', weight: 0.987533} },
+{ data: { source: 'SMARCA4', target: 'CHD4', directed: 'false', weight: 0.860884} },
+{ data: { source: 'SMARCE1', target: 'SMARCC2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'SMARCE1', target: 'SMARCB1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SMARCE1', target: 'DPF2', directed: 'false', weight: 0.999884} },
+{ data: { source: 'SMARCE1', target: 'SMARCD2', directed: 'false', weight: 0.999187} },
+{ data: { source: 'SMARCE1', target: 'GATAD2B', directed: 'false', weight: 0.926111} },
+{ data: { source: 'SMARCE1', target: 'CHD4', directed: 'false', weight: 0.38611599999999996} },
+{ data: { source: 'SMARCB1', target: 'SMARCC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCB1', target: 'SMARCD2', directed: 'false', weight: 0.999999} },
+{ data: { source: 'SMARCB1', target: 'DPF2', directed: 'false', weight: 0.9875370000000001} },
+{ data: { source: 'SMARCB1', target: 'GATAD2B', directed: 'false', weight: 0.934802} },
+{ data: { source: 'SMARCB1', target: 'CHD4', directed: 'false', weight: 0.195516} },
+{ data: { source: 'PS1TP5BP1', target: 'SMARCC2', directed: 'false', weight: 0.198079} },
+{ data: { source: 'DPF2', target: 'SMARCC2', directed: 'false', weight: 0.9950389999999999} },
+{ data: { source: 'DPF2', target: 'SMARCD2', directed: 'false', weight: 0.988676} },
+{ data: { source: 'DPF2', target: 'CHD4', directed: 'false', weight: 0.987558} },
+{ data: { source: 'DPF2', target: 'GATAD2B', directed: 'false', weight: 0.128124} },
+{ data: { source: 'SMARCC2', target: 'SMARCD2', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'SMARCC2', target: 'GATAD2B', directed: 'false', weight: 0.9985059999999999} },
+{ data: { source: 'SMARCC2', target: 'CHD4', directed: 'false', weight: 0.9875649999999999} },
+{ data: { source: 'SMARCD2', target: 'GATAD2B', directed: 'false', weight: 0.41856800000000005} },
+{ data: { source: 'CHD4', target: 'GATAD2B', directed: 'false', weight: 0.9875860000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    LARC complex (LCR-associated remodeling complex)	<br> Unweighted Density = 0.81
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HDAC2
+    </section>
+    </body>
+    </html>
+    

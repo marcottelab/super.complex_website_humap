@@ -1,0 +1,177 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> SNW1 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex735.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SNRNP200', score: 5, href: "https://www.uniprot.org/uniprot/O75643" }},
+{data: { id: 'UBR5', score: 5, href: "https://www.uniprot.org/uniprot/O95071" }},
+{data: { id: 'TUBB', score: 5, href: "https://www.uniprot.org/uniprot/P07437" }},
+{data: { id: 'HEL-S-89n', score: 5, href: "https://www.uniprot.org/uniprot/V9HWB4" }},
+{data: { id: 'PFKL', score: 5, href: "https://www.uniprot.org/uniprot/P17858" }},
+{data: { id: 'SFPQ', score: 5, href: "https://www.uniprot.org/uniprot/P23246" }},
+{data: { id: 'EEF1G', score: 5, href: "https://www.uniprot.org/uniprot/P26641" }},
+{data: { id: 'MATR3', score: 5, href: "https://www.uniprot.org/uniprot/P43243" }},
+{data: { id: 'MSH2', score: 5, href: "https://www.uniprot.org/uniprot/P43246" }},
+{data: { id: 'EEF1A1', score: 5, href: "https://www.uniprot.org/uniprot/P68104" }},
+{data: { id: 'HNRNPU', score: 5, href: "https://www.uniprot.org/uniprot/Q00839" }},
+{data: { id: 'SNW1', score: 5, href: "https://www.uniprot.org/uniprot/Q13573" }},
+{data: { id: 'EFTUD2', score: 5, href: "https://www.uniprot.org/uniprot/Q15029" }},
+{data: { id: 'DDB1', score: 5, href: "https://www.uniprot.org/uniprot/Q16531" }},
+{data: { id: 'PRPF8', score: 5, href: "https://www.uniprot.org/uniprot/Q6P2Q9" }},
+{data: { id: 'CDC5L', score: 5, href: "https://www.uniprot.org/uniprot/Q99459" }},
+{data: { id: 'DDX23', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUQ8" }},
+{data: { id: 'ABCF2', score: 3, href: "https://www.uniprot.org/uniprot/Q9UG63" }}], 
+ edges: [{ data: { source: 'SFPQ', target: 'HEL-S-89n', directed: 'false', weight: 0.98766} },
+{ data: { source: 'SFPQ', target: 'EEF1A1', directed: 'false', weight: 0.9875799999999999} },
+{ data: { source: 'SFPQ', target: 'SNW1', directed: 'false', weight: 0.977917} },
+{ data: { source: 'SFPQ', target: 'HNRNPU', directed: 'false', weight: 0.8594780000000001} },
+{ data: { source: 'SFPQ', target: 'PRPF8', directed: 'false', weight: 0.43042700000000006} },
+{ data: { source: 'SFPQ', target: 'CDC5L', directed: 'false', weight: 0.386941} },
+{ data: { source: 'SFPQ', target: 'EEF1G', directed: 'false', weight: 0.253225} },
+{ data: { source: 'SFPQ', target: 'DDB1', directed: 'false', weight: 0.09803819999999999} },
+{ data: { source: 'SFPQ', target: 'EFTUD2', directed: 'false', weight: 0.0772781} },
+{ data: { source: 'SFPQ', target: 'MSH2', directed: 'false', weight: 0.023622999999999998} },
+{ data: { source: 'EFTUD2', target: 'PRPF8', directed: 'false', weight: 1.0} },
+{ data: { source: 'EFTUD2', target: 'SNRNP200', directed: 'false', weight: 1.0} },
+{ data: { source: 'EFTUD2', target: 'DDX23', directed: 'false', weight: 0.9984209999999999} },
+{ data: { source: 'EFTUD2', target: 'CDC5L', directed: 'false', weight: 0.9900639999999999} },
+{ data: { source: 'EFTUD2', target: 'TUBB', directed: 'false', weight: 0.987658} },
+{ data: { source: 'EFTUD2', target: 'EEF1G', directed: 'false', weight: 0.987614} },
+{ data: { source: 'EFTUD2', target: 'SNW1', directed: 'false', weight: 0.9398799999999999} },
+{ data: { source: 'EFTUD2', target: 'HNRNPU', directed: 'false', weight: 0.906241} },
+{ data: { source: 'EFTUD2', target: 'EEF1A1', directed: 'false', weight: 0.560754} },
+{ data: { source: 'EFTUD2', target: 'MATR3', directed: 'false', weight: 0.0747109} },
+{ data: { source: 'EFTUD2', target: 'MSH2', directed: 'false', weight: 0.024715400000000002} },
+{ data: { source: 'MSH2', target: 'EEF1A1', directed: 'false', weight: 0.0713515} },
+{ data: { source: 'MSH2', target: 'CDC5L', directed: 'false', weight: 0.0225917} },
+{ data: { source: 'HNRNPU', target: 'HEL-S-89n', directed: 'false', weight: 0.987576} },
+{ data: { source: 'HNRNPU', target: 'MATR3', directed: 'false', weight: 0.9875649999999999} },
+{ data: { source: 'HNRNPU', target: 'EEF1A1', directed: 'false', weight: 0.987475} },
+{ data: { source: 'HNRNPU', target: 'CDC5L', directed: 'false', weight: 0.963363} },
+{ data: { source: 'HNRNPU', target: 'EEF1G', directed: 'false', weight: 0.93217} },
+{ data: { source: 'HNRNPU', target: 'DDX23', directed: 'false', weight: 0.8460790000000001} },
+{ data: { source: 'HNRNPU', target: 'PRPF8', directed: 'false', weight: 0.766108} },
+{ data: { source: 'HNRNPU', target: 'UBR5', directed: 'false', weight: 0.181502} },
+{ data: { source: 'HNRNPU', target: 'SNRNP200', directed: 'false', weight: 0.112694} },
+{ data: { source: 'HNRNPU', target: 'DDB1', directed: 'false', weight: 0.0325728} },
+{ data: { source: 'HNRNPU', target: 'TUBB', directed: 'false', weight: 0.026483600000000003} },
+{ data: { source: 'PFKL', target: 'HEL-S-89n', directed: 'false', weight: 0.703875} },
+{ data: { source: 'UBR5', target: 'EEF1A1', directed: 'false', weight: 0.11767799999999999} },
+{ data: { source: 'UBR5', target: 'EEF1G', directed: 'false', weight: 0.0374233} },
+{ data: { source: 'HEL-S-89n', target: 'DDB1', directed: 'false', weight: 0.9875959999999999} },
+{ data: { source: 'HEL-S-89n', target: 'EEF1A1', directed: 'false', weight: 0.9875280000000001} },
+{ data: { source: 'HEL-S-89n', target: 'EEF1G', directed: 'false', weight: 0.987525} },
+{ data: { source: 'HEL-S-89n', target: 'TUBB', directed: 'false', weight: 0.870084} },
+{ data: { source: 'HEL-S-89n', target: 'CDC5L', directed: 'false', weight: 0.828784} },
+{ data: { source: 'HEL-S-89n', target: 'DDX23', directed: 'false', weight: 0.09021799999999999} },
+{ data: { source: 'EEF1G', target: 'EEF1A1', directed: 'false', weight: 1.0} },
+{ data: { source: 'EEF1G', target: 'TUBB', directed: 'false', weight: 0.98759} },
+{ data: { source: 'EEF1G', target: 'SNRNP200', directed: 'false', weight: 0.9875870000000001} },
+{ data: { source: 'EEF1G', target: 'PRPF8', directed: 'false', weight: 0.9874930000000001} },
+{ data: { source: 'EEF1G', target: 'MATR3', directed: 'false', weight: 0.9708209999999999} },
+{ data: { source: 'EEF1G', target: 'DDB1', directed: 'false', weight: 0.687932} },
+{ data: { source: 'EEF1G', target: 'CDC5L', directed: 'false', weight: 0.567292} },
+{ data: { source: 'CDC5L', target: 'SNW1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC5L', target: 'DDX23', directed: 'false', weight: 0.9876010000000001} },
+{ data: { source: 'CDC5L', target: 'SNRNP200', directed: 'false', weight: 0.9875440000000001} },
+{ data: { source: 'CDC5L', target: 'PRPF8', directed: 'false', weight: 0.987504} },
+{ data: { source: 'CDC5L', target: 'EEF1A1', directed: 'false', weight: 0.33539800000000003} },
+{ data: { source: 'CDC5L', target: 'MATR3', directed: 'false', weight: 0.13209500000000002} },
+{ data: { source: 'CDC5L', target: 'DDB1', directed: 'false', weight: 0.060809800000000004} },
+{ data: { source: 'PRPF8', target: 'SNRNP200', directed: 'false', weight: 1.0} },
+{ data: { source: 'PRPF8', target: 'DDX23', directed: 'false', weight: 0.998574} },
+{ data: { source: 'PRPF8', target: 'SNW1', directed: 'false', weight: 0.9876870000000001} },
+{ data: { source: 'PRPF8', target: 'TUBB', directed: 'false', weight: 0.987609} },
+{ data: { source: 'PRPF8', target: 'EEF1A1', directed: 'false', weight: 0.811349} },
+{ data: { source: 'PRPF8', target: 'MATR3', directed: 'false', weight: 0.494489} },
+{ data: { source: 'SNRNP200', target: 'DDX23', directed: 'false', weight: 0.987558} },
+{ data: { source: 'SNRNP200', target: 'TUBB', directed: 'false', weight: 0.8881} },
+{ data: { source: 'SNRNP200', target: 'MATR3', directed: 'false', weight: 0.285144} },
+{ data: { source: 'SNRNP200', target: 'SNW1', directed: 'false', weight: 0.25008} },
+{ data: { source: 'SNRNP200', target: 'DDB1', directed: 'false', weight: 0.040276400000000004} },
+{ data: { source: 'TUBB', target: 'EEF1A1', directed: 'false', weight: 0.987562} },
+{ data: { source: 'DDB1', target: 'EEF1A1', directed: 'false', weight: 0.9047930000000001} },
+{ data: { source: 'SNW1', target: 'EEF1A1', directed: 'false', weight: 0.0392077} },
+{ data: { source: 'EEF1A1', target: 'MATR3', directed: 'false', weight: 0.8024560000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    SNW1 complex	<br> Unweighted Density = 0.47
+    </section>
+    </body>
+    </html>
+    

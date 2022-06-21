@@ -1,0 +1,165 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 KNL1-MIS12-NDC80-SPC24-ZWINT complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex32.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SPC24', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NBT2" }},
+{data: { id: 'PMF1-BGLAP', score: 2, type: '', href: "https://www.uniprot.org/uniprot/U3KQ54" }},
+{data: { id: 'PMF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P1K2" }},
+{data: { id: 'MIS12', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H081" }},
+{data: { id: 'ZWINT', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95229" }},
+{data: { id: 'DSN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H410" }},
+{data: { id: 'NDUFAF6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q330K2" }},
+{data: { id: 'NUF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BZD4" }},
+{data: { id: 'NSL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96IY1" }},
+{data: { id: 'NDC80', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14777" }},
+{data: { id: 'SPC25', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HBM1" }},
+{data: { id: 'KNL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NG31" }}], 
+ edges: [{ data: { source: 'NDC80', target: 'SPC24', directed: 'false', weight: 0.999999} },
+{ data: { source: 'NDC80', target: 'DSN1', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'NDC80', target: 'ZWINT', directed: 'false', weight: 0.999975} },
+{ data: { source: 'NDC80', target: 'SPC25', directed: 'false', weight: 0.999942} },
+{ data: { source: 'NDC80', target: 'MIS12', directed: 'false', weight: 0.999892} },
+{ data: { source: 'NDC80', target: 'NSL1', directed: 'false', weight: 0.9996870000000001} },
+{ data: { source: 'NDC80', target: 'NUF2', directed: 'false', weight: 0.999676} },
+{ data: { source: 'NDC80', target: 'KNL1', directed: 'false', weight: 0.999245} },
+{ data: { source: 'NDC80', target: 'PMF1', directed: 'false', weight: 0.717562} },
+{ data: { source: 'NDC80', target: 'PMF1-BGLAP', directed: 'false', weight: 0.519755} },
+{ data: { source: 'SPC24', target: 'SPC25', directed: 'false', weight: 0.999999} },
+{ data: { source: 'SPC24', target: 'NUF2', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SPC24', target: 'MIS12', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'SPC24', target: 'ZWINT', directed: 'false', weight: 0.999976} },
+{ data: { source: 'SPC24', target: 'KNL1', directed: 'false', weight: 0.999966} },
+{ data: { source: 'SPC24', target: 'DSN1', directed: 'false', weight: 0.999964} },
+{ data: { source: 'SPC24', target: 'NSL1', directed: 'false', weight: 0.9999020000000001} },
+{ data: { source: 'SPC24', target: 'PMF1-BGLAP', directed: 'false', weight: 0.9229360000000001} },
+{ data: { source: 'SPC24', target: 'PMF1', directed: 'false', weight: 0.645363} },
+{ data: { source: 'NUF2', target: 'NSL1', directed: 'false', weight: 0.999871} },
+{ data: { source: 'NUF2', target: 'DSN1', directed: 'false', weight: 0.999865} },
+{ data: { source: 'NUF2', target: 'SPC25', directed: 'false', weight: 0.999807} },
+{ data: { source: 'NUF2', target: 'ZWINT', directed: 'false', weight: 0.999734} },
+{ data: { source: 'NUF2', target: 'MIS12', directed: 'false', weight: 0.9964370000000001} },
+{ data: { source: 'NUF2', target: 'KNL1', directed: 'false', weight: 0.982721} },
+{ data: { source: 'NUF2', target: 'PMF1', directed: 'false', weight: 0.6835060000000001} },
+{ data: { source: 'NUF2', target: 'PMF1-BGLAP', directed: 'false', weight: 0.578454} },
+{ data: { source: 'ZWINT', target: 'KNL1', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'ZWINT', target: 'MIS12', directed: 'false', weight: 0.999985} },
+{ data: { source: 'ZWINT', target: 'DSN1', directed: 'false', weight: 0.999984} },
+{ data: { source: 'ZWINT', target: 'NSL1', directed: 'false', weight: 0.999934} },
+{ data: { source: 'ZWINT', target: 'SPC25', directed: 'false', weight: 0.9998889999999999} },
+{ data: { source: 'ZWINT', target: 'PMF1-BGLAP', directed: 'false', weight: 0.8994120000000001} },
+{ data: { source: 'ZWINT', target: 'PMF1', directed: 'false', weight: 0.658061} },
+{ data: { source: 'PMF1', target: 'NDUFAF6', directed: 'false', weight: 0.971748} },
+{ data: { source: 'PMF1', target: 'DSN1', directed: 'false', weight: 0.963355} },
+{ data: { source: 'PMF1', target: 'SPC25', directed: 'false', weight: 0.917531} },
+{ data: { source: 'PMF1', target: 'NSL1', directed: 'false', weight: 0.89513} },
+{ data: { source: 'PMF1', target: 'KNL1', directed: 'false', weight: 0.5724020000000001} },
+{ data: { source: 'PMF1', target: 'MIS12', directed: 'false', weight: 0.388379} },
+{ data: { source: 'SPC25', target: 'MIS12', directed: 'false', weight: 0.99997} },
+{ data: { source: 'SPC25', target: 'NSL1', directed: 'false', weight: 0.9999379999999999} },
+{ data: { source: 'SPC25', target: 'DSN1', directed: 'false', weight: 0.999771} },
+{ data: { source: 'SPC25', target: 'KNL1', directed: 'false', weight: 0.998026} },
+{ data: { source: 'SPC25', target: 'PMF1-BGLAP', directed: 'false', weight: 0.519755} },
+{ data: { source: 'PMF1-BGLAP', target: 'MIS12', directed: 'false', weight: 0.9937030000000001} },
+{ data: { source: 'PMF1-BGLAP', target: 'DSN1', directed: 'false', weight: 0.94173} },
+{ data: { source: 'PMF1-BGLAP', target: 'KNL1', directed: 'false', weight: 0.8960799999999999} },
+{ data: { source: 'PMF1-BGLAP', target: 'NSL1', directed: 'false', weight: 0.519755} },
+{ data: { source: 'MIS12', target: 'DSN1', directed: 'false', weight: 1.0} },
+{ data: { source: 'MIS12', target: 'NSL1', directed: 'false', weight: 1.0} },
+{ data: { source: 'MIS12', target: 'KNL1', directed: 'false', weight: 0.9992969999999999} },
+{ data: { source: 'KNL1', target: 'DSN1', directed: 'false', weight: 0.999984} },
+{ data: { source: 'KNL1', target: 'NSL1', directed: 'false', weight: 0.9998299999999999} },
+{ data: { source: 'DSN1', target: 'NSL1', directed: 'false', weight: 0.9999959999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 KNL1-MIS12-NDC80-SPC24-ZWINT complex<br> Complex Score (from Super.Complex) = 0.92269<br> Unweighted Density = 0.83
+    </section>
+    </body>
+    </html>
+    

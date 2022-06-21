@@ -1,0 +1,118 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> COG complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex16.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'COG4', score: 5, href: "https://www.uniprot.org/uniprot/Q9H9E3" }},
+{data: { id: 'COG2', score: 5, href: "https://www.uniprot.org/uniprot/Q14746" }},
+{data: { id: 'COG8', score: 5, href: "https://www.uniprot.org/uniprot/Q96MW5" }},
+{data: { id: 'COG5', score: 5, href: "https://www.uniprot.org/uniprot/Q9UP83" }},
+{data: { id: 'COG3', score: 5, href: "https://www.uniprot.org/uniprot/Q96JB2" }},
+{data: { id: 'COG7', score: 5, href: "https://www.uniprot.org/uniprot/P83436" }},
+{data: { id: 'COG6', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2V7" }},
+{data: { id: 'COG1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WTW3" }}], 
+ edges: [{ data: { source: 'COG4', target: 'COG3', directed: 'false', weight: 0.999717} },
+{ data: { source: 'COG4', target: 'COG6', directed: 'false', weight: 0.999509} },
+{ data: { source: 'COG4', target: 'COG7', directed: 'false', weight: 0.994549} },
+{ data: { source: 'COG4', target: 'COG1', directed: 'false', weight: 0.9872780000000001} },
+{ data: { source: 'COG4', target: 'COG2', directed: 'false', weight: 0.986418} },
+{ data: { source: 'COG4', target: 'COG5', directed: 'false', weight: 0.975928} },
+{ data: { source: 'COG4', target: 'COG8', directed: 'false', weight: 0.975893} },
+{ data: { source: 'COG2', target: 'COG3', directed: 'false', weight: 0.999691} },
+{ data: { source: 'COG2', target: 'COG1', directed: 'false', weight: 0.997956} },
+{ data: { source: 'COG2', target: 'COG7', directed: 'false', weight: 0.9954959999999999} },
+{ data: { source: 'COG2', target: 'COG5', directed: 'false', weight: 0.9940629999999999} },
+{ data: { source: 'COG2', target: 'COG6', directed: 'false', weight: 0.975923} },
+{ data: { source: 'COG2', target: 'COG8', directed: 'false', weight: 0.9759120000000001} },
+{ data: { source: 'COG5', target: 'COG6', directed: 'false', weight: 0.9898969999999999} },
+{ data: { source: 'COG5', target: 'COG1', directed: 'false', weight: 0.9871110000000001} },
+{ data: { source: 'COG5', target: 'COG8', directed: 'false', weight: 0.9843040000000001} },
+{ data: { source: 'COG5', target: 'COG7', directed: 'false', weight: 0.9799329999999999} },
+{ data: { source: 'COG5', target: 'COG3', directed: 'false', weight: 0.975922} },
+{ data: { source: 'COG8', target: 'COG3', directed: 'false', weight: 0.982926} },
+{ data: { source: 'COG8', target: 'COG7', directed: 'false', weight: 0.9759479999999999} },
+{ data: { source: 'COG8', target: 'COG1', directed: 'false', weight: 0.9758870000000001} },
+{ data: { source: 'COG8', target: 'COG6', directed: 'false', weight: 0.938739} },
+{ data: { source: 'COG3', target: 'COG6', directed: 'false', weight: 0.997316} },
+{ data: { source: 'COG3', target: 'COG7', directed: 'false', weight: 0.9936219999999999} },
+{ data: { source: 'COG3', target: 'COG1', directed: 'false', weight: 0.992202} },
+{ data: { source: 'COG7', target: 'COG1', directed: 'false', weight: 0.975925} },
+{ data: { source: 'COG7', target: 'COG6', directed: 'false', weight: 0.9759} },
+{ data: { source: 'COG6', target: 'COG1', directed: 'false', weight: 0.9759209999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    COG complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

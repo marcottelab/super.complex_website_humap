@@ -1,0 +1,92 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> RING1-Polycomb repressive complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1708.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CBX4', score: 5, href: "https://www.uniprot.org/uniprot/O00257" }},
+{data: { id: 'BMI1', score: 5, href: "https://www.uniprot.org/uniprot/P35226" }},
+{data: { id: 'DKFZp686A1782', score: 1, href: "https://www.uniprot.org/uniprot/Q6N083" }},
+{data: { id: 'RING1', score: 5, href: "https://www.uniprot.org/uniprot/Q06587" }}], 
+ edges: [{ data: { source: 'DKFZp686A1782', target: 'CBX4', directed: 'false', weight: 0.863726} },
+{ data: { source: 'DKFZp686A1782', target: 'RING1', directed: 'false', weight: 0.398976} },
+{ data: { source: 'DKFZp686A1782', target: 'BMI1', directed: 'false', weight: 0.0866298} },
+{ data: { source: 'RING1', target: 'CBX4', directed: 'false', weight: 0.0637698} },
+{ data: { source: 'RING1', target: 'BMI1', directed: 'false', weight: 0.04204430000000001} },
+{ data: { source: 'BMI1', target: 'CBX4', directed: 'false', weight: 0.0265246} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    RING1-Polycomb repressive complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

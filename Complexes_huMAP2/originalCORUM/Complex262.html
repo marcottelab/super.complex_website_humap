@@ -1,0 +1,109 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TFIID complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex263.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TAF4', score: 5, href: "https://www.uniprot.org/uniprot/O00268" }},
+{data: { id: 'TBP', score: 5, href: "https://www.uniprot.org/uniprot/P20226" }},
+{data: { id: 'TAF1', score: 5, href: "https://www.uniprot.org/uniprot/P21675" }},
+{data: { id: 'TAF6', score: 5, href: "https://www.uniprot.org/uniprot/P49848" }},
+{data: { id: 'TAF10', score: 5, href: "https://www.uniprot.org/uniprot/Q12962" }},
+{data: { id: 'TAF5', score: 5, href: "https://www.uniprot.org/uniprot/Q15542" }},
+{data: { id: 'TAF13', score: 5, href: "https://www.uniprot.org/uniprot/Q15543" }},
+{data: { id: 'TAF11', score: 5, href: "https://www.uniprot.org/uniprot/Q15544" }},
+{data: { id: 'TAF7', score: 5, href: "https://www.uniprot.org/uniprot/Q15545" }},
+{data: { id: 'TAF12', score: 5, href: "https://www.uniprot.org/uniprot/Q16514" }},
+{data: { id: 'TAF9', score: 5, href: "https://www.uniprot.org/uniprot/Q16594" }}], 
+ edges: [{ data: { source: 'TAF12', target: 'TAF10', directed: 'false', weight: 0.023222299999999998} },
+{ data: { source: 'TAF1', target: 'TAF6', directed: 'false', weight: 0.996555} },
+{ data: { source: 'TAF1', target: 'TAF5', directed: 'false', weight: 0.9875889999999999} },
+{ data: { source: 'TAF1', target: 'TAF4', directed: 'false', weight: 0.923105} },
+{ data: { source: 'TAF5', target: 'TAF6', directed: 'false', weight: 0.9931610000000001} },
+{ data: { source: 'TAF5', target: 'TAF4', directed: 'false', weight: 0.987518} },
+{ data: { source: 'TAF5', target: 'TBP', directed: 'false', weight: 0.020399200000000003} },
+{ data: { source: 'TAF6', target: 'TAF10', directed: 'false', weight: 0.9977370000000001} },
+{ data: { source: 'TAF6', target: 'TAF4', directed: 'false', weight: 0.9875290000000001} },
+{ data: { source: 'TAF10', target: 'TAF4', directed: 'false', weight: 0.987634} },
+{ data: { source: 'TAF4', target: 'TAF7', directed: 'false', weight: 0.984569} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    TFIID complex	<br> Unweighted Density = 0.20
+    </section>
+    </body>
+    </html>
+    

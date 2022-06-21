@@ -1,0 +1,158 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CEN complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex520.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SMARCA5', score: 5, href: "https://www.uniprot.org/uniprot/O60264" }},
+{data: { id: 'CENPB', score: 5, href: "https://www.uniprot.org/uniprot/P07199" }},
+{data: { id: 'HEL-S-89n', score: 5, href: "https://www.uniprot.org/uniprot/V9HWB4" }},
+{data: { id: 'HEL-S-72p', score: 3, href: "https://www.uniprot.org/uniprot/V9HW22" }},
+{data: { id: 'FBL', score: 5, href: "https://www.uniprot.org/uniprot/P22087" }},
+{data: { id: 'BMI1', score: 5, href: "https://www.uniprot.org/uniprot/P35226" }},
+{data: { id: 'CENPA', score: 5, href: "https://www.uniprot.org/uniprot/P49450" }},
+{data: { id: 'KIF23', score: 5, href: "https://www.uniprot.org/uniprot/Q02241" }},
+{data: { id: 'CENPC', score: 5, href: "https://www.uniprot.org/uniprot/Q03188" }},
+{data: { id: 'RING1', score: 5, href: "https://www.uniprot.org/uniprot/Q06587" }},
+{data: { id: 'SSRP1', score: 5, href: "https://www.uniprot.org/uniprot/Q08945" }},
+{data: { id: 'CBX3', score: 5, href: "https://www.uniprot.org/uniprot/Q13185" }},
+{data: { id: 'CUL4A', score: 5, href: "https://www.uniprot.org/uniprot/Q13619" }},
+{data: { id: 'WTAP', score: 5, href: "https://www.uniprot.org/uniprot/Q15007" }},
+{data: { id: 'DDB1', score: 5, href: "https://www.uniprot.org/uniprot/Q16531" }},
+{data: { id: 'COBLL1', score: 3, href: "https://www.uniprot.org/uniprot/Q53SF7" }},
+{data: { id: 'ZC3H13', score: 5, href: "https://www.uniprot.org/uniprot/Q5T200" }},
+{data: { id: 'VIRMA', score: 5, href: "https://www.uniprot.org/uniprot/Q69YN4" }},
+{data: { id: 'PLPPR3', score: 4, href: "https://www.uniprot.org/uniprot/Q6T4P5" }},
+{data: { id: 'CENPU', score: 5, href: "https://www.uniprot.org/uniprot/Q71F23" }},
+{data: { id: 'C1orf155', score: 4, href: "https://www.uniprot.org/uniprot/Q8N0S6" }},
+{data: { id: 'NUP93', score: 5, href: "https://www.uniprot.org/uniprot/Q8N1F7" }},
+{data: { id: 'SHCBP1', score: 4, href: "https://www.uniprot.org/uniprot/Q8NEM2" }},
+{data: { id: 'DHX38', score: 5, href: "https://www.uniprot.org/uniprot/Q92620" }},
+{data: { id: 'FSHPRH1', score: 5, href: "https://www.uniprot.org/uniprot/Q92674" }},
+{data: { id: 'hCG_2039447', score: 2, href: "https://www.uniprot.org/uniprot/A0A024R4Z4" }},
+{data: { id: 'RSF1', score: 5, href: "https://www.uniprot.org/uniprot/Q96T23" }},
+{data: { id: 'RNF2', score: 5, href: "https://www.uniprot.org/uniprot/Q99496" }},
+{data: { id: 'CENPK', score: 5, href: "https://www.uniprot.org/uniprot/Q9BS16" }},
+{data: { id: 'CENPO', score: 5, href: "https://www.uniprot.org/uniprot/Q9BU64" }},
+{data: { id: 'SRRT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BXP5" }},
+{data: { id: 'WDR11', score: 5, href: "https://www.uniprot.org/uniprot/Q8WWQ0" }},
+{data: { id: 'RACGAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0H5" }},
+{data: { id: 'CENPH', score: 5, href: "https://www.uniprot.org/uniprot/Q9H3R5" }},
+{data: { id: 'CBX8', score: 5, href: "https://www.uniprot.org/uniprot/Q9HC52" }},
+{data: { id: 'C22orf18', score: 4, href: "https://www.uniprot.org/uniprot/Q9NSP4" }},
+{data: { id: 'SUPT16H', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5B9" }}], 
+ edges: [{ data: { source: 'HEL-S-89n', target: 'HEL-S-72p', directed: 'false', weight: 0.999976} },
+{ data: { source: 'HEL-S-89n', target: 'DDB1', directed: 'false', weight: 0.9875959999999999} },
+{ data: { source: 'HEL-S-89n', target: 'KIF23', directed: 'false', weight: 0.038562599999999995} },
+{ data: { source: 'SUPT16H', target: 'SSRP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'NUP93', target: 'HEL-S-72p', directed: 'false', weight: 0.0470257} },
+{ data: { source: 'DDB1', target: 'CUL4A', directed: 'false', weight: 0.9999549999999999} },
+{ data: { source: 'DDB1', target: 'HEL-S-72p', directed: 'false', weight: 0.662632} },
+{ data: { source: 'DHX38', target: 'SRRT', directed: 'false', weight: 0.024106299999999997} },
+{ data: { source: 'C22orf18', target: 'CENPH', directed: 'false', weight: 0.0655791} },
+{ data: { source: 'C22orf18', target: 'CENPO', directed: 'false', weight: 0.0331315} },
+{ data: { source: 'C22orf18', target: 'FSHPRH1', directed: 'false', weight: 0.030599} },
+{ data: { source: 'RACGAP1', target: 'KIF23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RACGAP1', target: 'SHCBP1', directed: 'false', weight: 0.956586} },
+{ data: { source: 'RING1', target: 'RNF2', directed: 'false', weight: 0.550963} },
+{ data: { source: 'RING1', target: 'CBX8', directed: 'false', weight: 0.0698877} },
+{ data: { source: 'RING1', target: 'BMI1', directed: 'false', weight: 0.04204430000000001} },
+{ data: { source: 'WTAP', target: 'ZC3H13', directed: 'false', weight: 0.954197} },
+{ data: { source: 'WTAP', target: 'VIRMA', directed: 'false', weight: 0.921491} },
+{ data: { source: 'CBX8', target: 'BMI1', directed: 'false', weight: 0.0406684} },
+{ data: { source: 'CBX8', target: 'RNF2', directed: 'false', weight: 0.036110500000000004} },
+{ data: { source: 'SHCBP1', target: 'KIF23', directed: 'false', weight: 0.060752} },
+{ data: { source: 'BMI1', target: 'RNF2', directed: 'false', weight: 0.06752310000000002} },
+{ data: { source: 'CENPK', target: 'CENPH', directed: 'false', weight: 0.224043} },
+{ data: { source: 'CENPK', target: 'CENPO', directed: 'false', weight: 0.194128} },
+{ data: { source: 'CENPK', target: 'FSHPRH1', directed: 'false', weight: 0.10466700000000001} },
+{ data: { source: 'CENPK', target: 'CENPU', directed: 'false', weight: 0.0668891} },
+{ data: { source: 'CENPH', target: 'FSHPRH1', directed: 'false', weight: 0.0715354} },
+{ data: { source: 'CENPH', target: 'CENPU', directed: 'false', weight: 0.034348800000000006} },
+{ data: { source: 'CENPH', target: 'C1orf155', directed: 'false', weight: 0.026295999999999996} },
+{ data: { source: 'CENPH', target: 'CENPO', directed: 'false', weight: 0.0218185} },
+{ data: { source: 'ZC3H13', target: 'VIRMA', directed: 'false', weight: 0.9875010000000001} },
+{ data: { source: 'CENPO', target: 'CENPU', directed: 'false', weight: 0.9985879999999999} },
+{ data: { source: 'CENPO', target: 'FSHPRH1', directed: 'false', weight: 0.177291} },
+{ data: { source: 'CENPU', target: 'FSHPRH1', directed: 'false', weight: 0.126566} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CEN complex	<br> Unweighted Density = 0.05
+    </section>
+    </body>
+    </html>
+    

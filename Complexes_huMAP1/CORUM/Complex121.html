@@ -1,0 +1,163 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> eIF3 complex (EIF3S6, EIF3S5, EIF3S4, EIF3S3, EIF3S6IP, EIF3S2, EIF3S9, EIF3S12,  EIF3S10, EIF3S8,  EIF3S1, EIF3S7, PCID1)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex122.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EIF3D', score: 5, href: "https://www.uniprot.org/uniprot/O15371" }},
+{data: { id: 'EIF3G', score: 5, href: "https://www.uniprot.org/uniprot/O75821" }},
+{data: { id: 'EIF3C', score: 5, href: "https://www.uniprot.org/uniprot/Q99613" }},
+{data: { id: 'EIF3F', score: 5, href: "https://www.uniprot.org/uniprot/O00303" }},
+{data: { id: 'EIF3K', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBQ5" }},
+{data: { id: 'EIF3J', score: 5, href: "https://www.uniprot.org/uniprot/O75822" }},
+{data: { id: 'EIF3I', score: 5, href: "https://www.uniprot.org/uniprot/Q13347" }},
+{data: { id: 'EIF3B', score: 5, href: "https://www.uniprot.org/uniprot/P55884" }},
+{data: { id: 'EIF3A', score: 5, href: "https://www.uniprot.org/uniprot/P56537" }},
+{data: { id: 'EIF3M', score: 5, href: "https://www.uniprot.org/uniprot/Q7L2H7" }},
+{data: { id: 'EIF3H', score: 5, href: "https://www.uniprot.org/uniprot/O15372" }},
+{data: { id: 'EIF3L', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y262" }},
+{data: { id: 'EIF3E', score: 5, href: "https://www.uniprot.org/uniprot/P60228" }}], 
+ edges: [{ data: { source: 'EIF3D', target: 'EIF3G', directed: 'false', weight: 0.998648} },
+{ data: { source: 'EIF3D', target: 'EIF3I', directed: 'false', weight: 0.997793} },
+{ data: { source: 'EIF3D', target: 'EIF3H', directed: 'false', weight: 0.997542} },
+{ data: { source: 'EIF3D', target: 'EIF3M', directed: 'false', weight: 0.992642} },
+{ data: { source: 'EIF3D', target: 'EIF3E', directed: 'false', weight: 0.97983} },
+{ data: { source: 'EIF3D', target: 'EIF3F', directed: 'false', weight: 0.979426} },
+{ data: { source: 'EIF3D', target: 'EIF3C', directed: 'false', weight: 0.975935} },
+{ data: { source: 'EIF3D', target: 'EIF3K', directed: 'false', weight: 0.9759180000000001} },
+{ data: { source: 'EIF3D', target: 'EIF3L', directed: 'false', weight: 0.975894} },
+{ data: { source: 'EIF3D', target: 'EIF3B', directed: 'false', weight: 0.975892} },
+{ data: { source: 'EIF3D', target: 'EIF3A', directed: 'false', weight: 0.9758879999999999} },
+{ data: { source: 'EIF3D', target: 'EIF3J', directed: 'false', weight: 0.809134} },
+{ data: { source: 'EIF3G', target: 'EIF3C', directed: 'false', weight: 0.999999} },
+{ data: { source: 'EIF3G', target: 'EIF3F', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'EIF3G', target: 'EIF3E', directed: 'false', weight: 0.9999170000000001} },
+{ data: { source: 'EIF3G', target: 'EIF3M', directed: 'false', weight: 0.999859} },
+{ data: { source: 'EIF3G', target: 'EIF3I', directed: 'false', weight: 0.999659} },
+{ data: { source: 'EIF3G', target: 'EIF3L', directed: 'false', weight: 0.999294} },
+{ data: { source: 'EIF3G', target: 'EIF3H', directed: 'false', weight: 0.998225} },
+{ data: { source: 'EIF3G', target: 'EIF3A', directed: 'false', weight: 0.997985} },
+{ data: { source: 'EIF3G', target: 'EIF3K', directed: 'false', weight: 0.995418} },
+{ data: { source: 'EIF3G', target: 'EIF3J', directed: 'false', weight: 0.261734} },
+{ data: { source: 'EIF3C', target: 'EIF3I', directed: 'false', weight: 0.999706} },
+{ data: { source: 'EIF3C', target: 'EIF3L', directed: 'false', weight: 0.999677} },
+{ data: { source: 'EIF3C', target: 'EIF3F', directed: 'false', weight: 0.99956} },
+{ data: { source: 'EIF3C', target: 'EIF3M', directed: 'false', weight: 0.9985430000000001} },
+{ data: { source: 'EIF3C', target: 'EIF3K', directed: 'false', weight: 0.998179} },
+{ data: { source: 'EIF3C', target: 'EIF3E', directed: 'false', weight: 0.997886} },
+{ data: { source: 'EIF3C', target: 'EIF3H', directed: 'false', weight: 0.988613} },
+{ data: { source: 'EIF3C', target: 'EIF3A', directed: 'false', weight: 0.942624} },
+{ data: { source: 'EIF3C', target: 'EIF3J', directed: 'false', weight: 0.332466} },
+{ data: { source: 'EIF3F', target: 'EIF3A', directed: 'false', weight: 0.999553} },
+{ data: { source: 'EIF3F', target: 'EIF3I', directed: 'false', weight: 0.999251} },
+{ data: { source: 'EIF3F', target: 'EIF3L', directed: 'false', weight: 0.999165} },
+{ data: { source: 'EIF3F', target: 'EIF3M', directed: 'false', weight: 0.998825} },
+{ data: { source: 'EIF3F', target: 'EIF3H', directed: 'false', weight: 0.998778} },
+{ data: { source: 'EIF3F', target: 'EIF3K', directed: 'false', weight: 0.998713} },
+{ data: { source: 'EIF3F', target: 'EIF3E', directed: 'false', weight: 0.983089} },
+{ data: { source: 'EIF3F', target: 'EIF3J', directed: 'false', weight: 0.348493} },
+{ data: { source: 'EIF3K', target: 'EIF3H', directed: 'false', weight: 0.9977159999999999} },
+{ data: { source: 'EIF3K', target: 'EIF3E', directed: 'false', weight: 0.9963700000000001} },
+{ data: { source: 'EIF3K', target: 'EIF3I', directed: 'false', weight: 0.992094} },
+{ data: { source: 'EIF3K', target: 'EIF3M', directed: 'false', weight: 0.9919479999999999} },
+{ data: { source: 'EIF3K', target: 'EIF3A', directed: 'false', weight: 0.9776100000000001} },
+{ data: { source: 'EIF3K', target: 'EIF3L', directed: 'false', weight: 0.975899} },
+{ data: { source: 'EIF3K', target: 'EIF3J', directed: 'false', weight: 0.5} },
+{ data: { source: 'EIF3J', target: 'EIF3M', directed: 'false', weight: 0.610923} },
+{ data: { source: 'EIF3J', target: 'EIF3I', directed: 'false', weight: 0.5133489999999999} },
+{ data: { source: 'EIF3J', target: 'EIF3A', directed: 'false', weight: 0.39857600000000004} },
+{ data: { source: 'EIF3J', target: 'EIF3E', directed: 'false', weight: 0.387153} },
+{ data: { source: 'EIF3J', target: 'EIF3L', directed: 'false', weight: 0.32760700000000004} },
+{ data: { source: 'EIF3J', target: 'EIF3H', directed: 'false', weight: 0.228542} },
+{ data: { source: 'EIF3I', target: 'EIF3L', directed: 'false', weight: 0.999685} },
+{ data: { source: 'EIF3I', target: 'EIF3A', directed: 'false', weight: 0.999323} },
+{ data: { source: 'EIF3I', target: 'EIF3M', directed: 'false', weight: 0.999114} },
+{ data: { source: 'EIF3I', target: 'EIF3E', directed: 'false', weight: 0.996606} },
+{ data: { source: 'EIF3I', target: 'EIF3H', directed: 'false', weight: 0.996451} },
+{ data: { source: 'EIF3I', target: 'EIF3B', directed: 'false', weight: 0.97731} },
+{ data: { source: 'EIF3A', target: 'EIF3E', directed: 'false', weight: 0.985819} },
+{ data: { source: 'EIF3A', target: 'EIF3L', directed: 'false', weight: 0.985769} },
+{ data: { source: 'EIF3A', target: 'EIF3H', directed: 'false', weight: 0.979748} },
+{ data: { source: 'EIF3A', target: 'EIF3M', directed: 'false', weight: 0.975931} },
+{ data: { source: 'EIF3M', target: 'EIF3L', directed: 'false', weight: 0.9992280000000001} },
+{ data: { source: 'EIF3M', target: 'EIF3H', directed: 'false', weight: 0.9963200000000001} },
+{ data: { source: 'EIF3M', target: 'EIF3E', directed: 'false', weight: 0.9758959999999999} },
+{ data: { source: 'EIF3H', target: 'EIF3L', directed: 'false', weight: 0.997872} },
+{ data: { source: 'EIF3H', target: 'EIF3E', directed: 'false', weight: 0.9758969999999999} },
+{ data: { source: 'EIF3L', target: 'EIF3E', directed: 'false', weight: 0.9922549999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    eIF3 complex (EIF3S6, EIF3S5, EIF3S4, EIF3S3, EIF3S6IP, EIF3S2, EIF3S9, EIF3S12,  EIF3S10, EIF3S8,  EIF3S1, EIF3S7, PCID1)	<br> Unweighted Density = 0.87
+    </section>
+    </body>
+    </html>
+    

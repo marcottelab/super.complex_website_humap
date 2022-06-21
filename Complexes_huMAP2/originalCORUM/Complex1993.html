@@ -1,0 +1,114 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Dynein-2 complex, cytoplasmic</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1994.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DYNLT3', score: 5, href: "https://www.uniprot.org/uniprot/P51808" }},
+{data: { id: 'DNCL1', score: 5, href: "https://www.uniprot.org/uniprot/P63167" }},
+{data: { id: 'DYNLT1', score: 5, href: "https://www.uniprot.org/uniprot/P63172" }},
+{data: { id: 'NUDCD3', score: 5, href: "https://www.uniprot.org/uniprot/Q8IVD9" }},
+{data: { id: 'DYNC2H1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NCM8" }},
+{data: { id: 'DYNC2LI1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TCX1" }},
+{data: { id: 'DYNLRB2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TF09" }},
+{data: { id: 'DYNC2I1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVS4" }},
+{data: { id: 'DYNLT2B', score: 5, href: "https://www.uniprot.org/uniprot/Q8WW35" }},
+{data: { id: 'DYNC2I2', score: 5, href: "https://www.uniprot.org/uniprot/Q96EX3" }},
+{data: { id: 'DYNLL2', score: 5, href: "https://www.uniprot.org/uniprot/Q96FJ2" }},
+{data: { id: 'DYNLRB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NP97" }}], 
+ edges: [{ data: { source: 'DYNC2I2', target: 'DYNLT1', directed: 'false', weight: 0.8568680000000001} },
+{ data: { source: 'DYNC2I2', target: 'DYNLRB1', directed: 'false', weight: 0.771119} },
+{ data: { source: 'DYNC2I2', target: 'DYNLT2B', directed: 'false', weight: 0.25397600000000004} },
+{ data: { source: 'DYNC2I2', target: 'DYNC2I1', directed: 'false', weight: 0.057264800000000005} },
+{ data: { source: 'DYNC2I2', target: 'DNCL1', directed: 'false', weight: 0.0407988} },
+{ data: { source: 'DYNC2H1', target: 'DYNC2LI1', directed: 'false', weight: 0.9875659999999999} },
+{ data: { source: 'DYNLL2', target: 'DNCL1', directed: 'false', weight: 0.38498899999999997} },
+{ data: { source: 'DYNLRB1', target: 'DYNLT1', directed: 'false', weight: 0.699891} },
+{ data: { source: 'DYNLRB1', target: 'DYNC2I1', directed: 'false', weight: 0.21931799999999999} },
+{ data: { source: 'DYNLRB1', target: 'DNCL1', directed: 'false', weight: 0.161348} },
+{ data: { source: 'DYNLRB1', target: 'DYNLT3', directed: 'false', weight: 0.05511619999999999} },
+{ data: { source: 'DNCL1', target: 'DYNLT1', directed: 'false', weight: 0.021497299999999997} },
+{ data: { source: 'DYNC2I1', target: 'DYNLT2B', directed: 'false', weight: 0.9796100000000001} },
+{ data: { source: 'DYNC2I1', target: 'DYNLT1', directed: 'false', weight: 0.343984} },
+{ data: { source: 'DYNLT2B', target: 'DYNLT1', directed: 'false', weight: 0.912134} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Dynein-2 complex, cytoplasmic	<br> Unweighted Density = 0.23
+    </section>
+    </body>
+    </html>
+    

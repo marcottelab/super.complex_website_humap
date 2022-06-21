@@ -1,0 +1,130 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 Intraflagellar transport complex A</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex108.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TULP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75386" }},
+{data: { id: 'IFTAP', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q86VG3" }},
+{data: { id: 'IFT140', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96RY7" }},
+{data: { id: 'TTC21B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z4L5" }},
+{data: { id: 'WDR19', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NEZ3" }},
+{data: { id: 'WDR35', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P2L0" }},
+{data: { id: 'hCG_2028821', score: 2, type: '', href: "https://www.uniprot.org/uniprot/A0A024R6A9" }},
+{data: { id: 'IFT122', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HBG6" }}], 
+ edges: [{ data: { source: 'TULP3', target: 'TTC21B', directed: 'false', weight: 0.977951} },
+{ data: { source: 'TULP3', target: 'WDR35', directed: 'false', weight: 0.76849} },
+{ data: { source: 'TULP3', target: 'IFT122', directed: 'false', weight: 0.6541359999999999} },
+{ data: { source: 'TULP3', target: 'WDR19', directed: 'false', weight: 0.62029} },
+{ data: { source: 'TULP3', target: 'IFT140', directed: 'false', weight: 0.596256} },
+{ data: { source: 'WDR19', target: 'hCG_2028821', directed: 'false', weight: 0.988359} },
+{ data: { source: 'WDR19', target: 'IFT122', directed: 'false', weight: 0.796241} },
+{ data: { source: 'WDR19', target: 'IFTAP', directed: 'false', weight: 0.7886449999999999} },
+{ data: { source: 'WDR19', target: 'WDR35', directed: 'false', weight: 0.0690771} },
+{ data: { source: 'WDR35', target: 'IFTAP', directed: 'false', weight: 0.999655} },
+{ data: { source: 'WDR35', target: 'hCG_2028821', directed: 'false', weight: 0.99935} },
+{ data: { source: 'WDR35', target: 'IFT122', directed: 'false', weight: 0.656137} },
+{ data: { source: 'TTC21B', target: 'hCG_2028821', directed: 'false', weight: 0.9950700000000001} },
+{ data: { source: 'hCG_2028821', target: 'IFT140', directed: 'false', weight: 0.98272} },
+{ data: { source: 'hCG_2028821', target: 'IFT122', directed: 'false', weight: 0.950786} },
+{ data: { source: 'hCG_2028821', target: 'IFTAP', directed: 'false', weight: 0.9445450000000001} },
+{ data: { source: 'IFT122', target: 'IFTAP', directed: 'false', weight: 0.78228} },
+{ data: { source: 'IFT122', target: 'IFT140', directed: 'false', weight: 0.719997} },
+{ data: { source: 'IFTAP', target: 'IFT140', directed: 'false', weight: 0.8633620000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 Intraflagellar transport complex A<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.68
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,92 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> NDC80 kinetochore complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex171.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'KNTC2', score: 5, href: "https://www.uniprot.org/uniprot/O14777" }},
+{data: { id: 'SPC24', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBT2" }},
+{data: { id: 'NUF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BZD4" }},
+{data: { id: 'SPC25', score: 5, href: "https://www.uniprot.org/uniprot/Q15005" }}], 
+ edges: [{ data: { source: 'KNTC2', target: 'SPC24', directed: 'false', weight: 1.0} },
+{ data: { source: 'KNTC2', target: 'SPC25', directed: 'false', weight: 0.995856} },
+{ data: { source: 'KNTC2', target: 'NUF2', directed: 'false', weight: 0.9752549999999999} },
+{ data: { source: 'SPC25', target: 'SPC24', directed: 'false', weight: 1.0} },
+{ data: { source: 'SPC25', target: 'NUF2', directed: 'false', weight: 0.9994360000000001} },
+{ data: { source: 'SPC24', target: 'NUF2', directed: 'false', weight: 1.0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    NDC80 kinetochore complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,130 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> HEL20 HEL-S-66p GMPS UBE2M HEL-S-112 DUT OLA1 PGP HEL-S-36</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex146.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HEL-S-66p', score: 2, type: '', href: "https://www.uniprot.org/uniprot/V9HWB5" }},
+{data: { id: 'HEL20', score: 1, type: '', href: "https://www.uniprot.org/uniprot/V9HWF9" }},
+{data: { id: 'GMPS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49915" }},
+{data: { id: 'UBE2M', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61081" }},
+{data: { id: 'DUT', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P33316" }},
+{data: { id: 'PGP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/A6NDG6" }},
+{data: { id: 'HEL-S-112', score: 2, type: '', href: "https://www.uniprot.org/uniprot/V9HW92" }},
+{data: { id: 'HEL-S-36', score: 1, type: '', href: "https://www.uniprot.org/uniprot/V9HWC5" }},
+{data: { id: 'OLA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NTK5" }}], 
+ edges: [{ data: { source: 'GMPS', target: 'DUT', directed: 'false', weight: 0.9687110000000001} },
+{ data: { source: 'GMPS', target: 'HEL-S-112', directed: 'false', weight: 0.411129} },
+{ data: { source: 'GMPS', target: 'HEL-S-66p', directed: 'false', weight: 0.313949} },
+{ data: { source: 'GMPS', target: 'PGP', directed: 'false', weight: 0.292442} },
+{ data: { source: 'GMPS', target: 'UBE2M', directed: 'false', weight: 0.178793} },
+{ data: { source: 'GMPS', target: 'OLA1', directed: 'false', weight: 0.11610999999999999} },
+{ data: { source: 'GMPS', target: 'HEL20', directed: 'false', weight: 0.0856715} },
+{ data: { source: 'HEL20', target: 'HEL-S-66p', directed: 'false', weight: 0.9130530000000001} },
+{ data: { source: 'HEL20', target: 'HEL-S-36', directed: 'false', weight: 0.337127} },
+{ data: { source: 'HEL20', target: 'UBE2M', directed: 'false', weight: 0.062258400000000005} },
+{ data: { source: 'HEL20', target: 'DUT', directed: 'false', weight: 0.0279279} },
+{ data: { source: 'OLA1', target: 'HEL-S-66p', directed: 'false', weight: 0.635386} },
+{ data: { source: 'UBE2M', target: 'HEL-S-66p', directed: 'false', weight: 0.9763149999999999} },
+{ data: { source: 'UBE2M', target: 'HEL-S-36', directed: 'false', weight: 0.60172} },
+{ data: { source: 'UBE2M', target: 'DUT', directed: 'false', weight: 0.09148200000000001} },
+{ data: { source: 'PGP', target: 'HEL-S-66p', directed: 'false', weight: 0.055374400000000004} },
+{ data: { source: 'DUT', target: 'HEL-S-66p', directed: 'false', weight: 0.999784} },
+{ data: { source: 'HEL-S-112', target: 'HEL-S-66p', directed: 'false', weight: 0.123022} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    HEL20 HEL-S-66p GMPS UBE2M HEL-S-112 DUT OLA1 PGP HEL-S-36<br> Complex Score (from Super.Complex) = 0.99300<br> Unweighted Density = 0.50
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,143 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.3 LLGL2-PAR-6B-PRKCI complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex997.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PRKCZ', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q05513" }},
+{data: { id: 'PARD6A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NPB6" }},
+{data: { id: 'PARD6B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BYG5" }},
+{data: { id: 'PARD3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TEW0" }},
+{data: { id: 'PRKCI', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P41743" }},
+{data: { id: 'PTPN21', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16825" }},
+{data: { id: 'LLGL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P1M3" }},
+{data: { id: 'PTPN14', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15678" }},
+{data: { id: 'WWC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IX03" }},
+{data: { id: 'LLGL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15334" }}], 
+ edges: [{ data: { source: 'PARD6A', target: 'PRKCI', directed: 'false', weight: 0.836302} },
+{ data: { source: 'PARD6A', target: 'LLGL2', directed: 'false', weight: 0.494939} },
+{ data: { source: 'PARD6A', target: 'PARD6B', directed: 'false', weight: 0.229492} },
+{ data: { source: 'PARD6A', target: 'PARD3', directed: 'false', weight: 0.0924993} },
+{ data: { source: 'PTPN21', target: 'PARD6B', directed: 'false', weight: 0.984042} },
+{ data: { source: 'PTPN21', target: 'PTPN14', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PTPN21', target: 'PRKCZ', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PTPN21', target: 'WWC1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PTPN21', target: 'PARD3', directed: 'false', weight: 0.133451} },
+{ data: { source: 'PTPN21', target: 'LLGL1', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'LLGL2', target: 'PARD6B', directed: 'false', weight: 0.9998440000000001} },
+{ data: { source: 'LLGL2', target: 'PRKCI', directed: 'false', weight: 0.975893} },
+{ data: { source: 'LLGL2', target: 'PARD3', directed: 'false', weight: 0.23241199999999998} },
+{ data: { source: 'PRKCI', target: 'PARD6B', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'PRKCI', target: 'PARD3', directed: 'false', weight: 0.9215639999999999} },
+{ data: { source: 'PRKCZ', target: 'PARD6B', directed: 'false', weight: 0.996144} },
+{ data: { source: 'PRKCZ', target: 'LLGL1', directed: 'false', weight: 0.209936} },
+{ data: { source: 'PRKCZ', target: 'PARD3', directed: 'false', weight: 0.183119} },
+{ data: { source: 'PRKCZ', target: 'PTPN14', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PRKCZ', target: 'WWC1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PTPN14', target: 'PARD6B', directed: 'false', weight: 0.87287} },
+{ data: { source: 'PTPN14', target: 'WWC1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PTPN14', target: 'PARD3', directed: 'false', weight: 0.133451} },
+{ data: { source: 'PTPN14', target: 'LLGL1', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'PARD6B', target: 'LLGL1', directed: 'false', weight: 0.998967} },
+{ data: { source: 'PARD6B', target: 'PARD3', directed: 'false', weight: 0.96935} },
+{ data: { source: 'PARD6B', target: 'WWC1', directed: 'false', weight: 0.940599} },
+{ data: { source: 'WWC1', target: 'PARD3', directed: 'false', weight: 0.117318} },
+{ data: { source: 'WWC1', target: 'LLGL1', directed: 'false', weight: 0.108694} },
+{ data: { source: 'PARD3', target: 'LLGL1', directed: 'false', weight: 0.1917} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.3 LLGL2-PAR-6B-PRKCI complex<br> Complex Score (from Super.Complex) = 0.52406<br> Unweighted Density = 0.67
+    </section>
+    </body>
+    </html>
+    

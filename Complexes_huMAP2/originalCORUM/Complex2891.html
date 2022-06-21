@@ -1,0 +1,98 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> LGR4-RSPO supercomplex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2892.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'WASL', score: 5, href: "https://www.uniprot.org/uniprot/O00401" }},
+{data: { id: 'DVL2', score: 5, href: "https://www.uniprot.org/uniprot/O14641" }},
+{data: { id: 'DIAPH1', score: 5, href: "https://www.uniprot.org/uniprot/O60610" }},
+{data: { id: 'MAP2K2', score: 5, href: "https://www.uniprot.org/uniprot/P36507" }},
+{data: { id: 'hCG_1991735', score: 3, href: "https://www.uniprot.org/uniprot/A0A024RC65" }},
+{data: { id: 'PXN', score: 5, href: "https://www.uniprot.org/uniprot/P49023" }},
+{data: { id: 'MAP2K1', score: 5, href: "https://www.uniprot.org/uniprot/Q02750" }},
+{data: { id: 'DKFZp666O0110', score: 4, href: "https://www.uniprot.org/uniprot/Q658W2" }},
+{data: { id: '55366', score: 0 }},
+{data: { id: 'RSPO3', score: 5, href: "https://www.uniprot.org/uniprot/Q9BXY4" }}], 
+ edges: [{ data: { source: 'MAP2K1', target: 'MAP2K2', directed: 'false', weight: 0.8434719999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    LGR4-RSPO supercomplex	<br> Unweighted Density = 0.02
+    </section>
+    </body>
+    </html>
+    

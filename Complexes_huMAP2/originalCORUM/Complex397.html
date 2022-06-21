@@ -1,0 +1,143 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CSA-POLIIa complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex398.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'POLR2A', score: 5, href: "https://www.uniprot.org/uniprot/P24928" }},
+{data: { id: 'COPS2', score: 5, href: "https://www.uniprot.org/uniprot/P61201" }},
+{data: { id: 'RBX1', score: 5, href: "https://www.uniprot.org/uniprot/P62877" }},
+{data: { id: 'GPS1', score: 5, href: "https://www.uniprot.org/uniprot/Q13098" }},
+{data: { id: 'ERCC8', score: 5, href: "https://www.uniprot.org/uniprot/Q13216" }},
+{data: { id: 'CUL4A', score: 5, href: "https://www.uniprot.org/uniprot/Q13619" }},
+{data: { id: 'DDB1', score: 5, href: "https://www.uniprot.org/uniprot/Q16531" }},
+{data: { id: 'COPS6', score: 5, href: "https://www.uniprot.org/uniprot/Q7L5N1" }},
+{data: { id: 'COPS5', score: 5, href: "https://www.uniprot.org/uniprot/Q92905" }},
+{data: { id: 'COPS8', score: 5, href: "https://www.uniprot.org/uniprot/Q99627" }},
+{data: { id: 'COPS4', score: 5, href: "https://www.uniprot.org/uniprot/Q9BT78" }},
+{data: { id: 'COPS7A', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBW8" }},
+{data: { id: 'COPS3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNS2" }}], 
+ edges: [{ data: { source: 'COPS5', target: 'COPS4', directed: 'false', weight: 0.999983} },
+{ data: { source: 'COPS5', target: 'COPS6', directed: 'false', weight: 0.99998} },
+{ data: { source: 'COPS5', target: 'COPS8', directed: 'false', weight: 0.999974} },
+{ data: { source: 'COPS5', target: 'COPS3', directed: 'false', weight: 0.999835} },
+{ data: { source: 'COPS5', target: 'COPS7A', directed: 'false', weight: 0.99959} },
+{ data: { source: 'COPS5', target: 'GPS1', directed: 'false', weight: 0.9932} },
+{ data: { source: 'COPS5', target: 'COPS2', directed: 'false', weight: 0.9876379999999999} },
+{ data: { source: 'ERCC8', target: 'COPS8', directed: 'false', weight: 0.12476500000000001} },
+{ data: { source: 'COPS4', target: 'COPS6', directed: 'false', weight: 1.0} },
+{ data: { source: 'COPS4', target: 'COPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'COPS4', target: 'COPS2', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'COPS4', target: 'COPS8', directed: 'false', weight: 0.9999889999999999} },
+{ data: { source: 'COPS4', target: 'GPS1', directed: 'false', weight: 0.9997030000000001} },
+{ data: { source: 'COPS4', target: 'COPS7A', directed: 'false', weight: 0.987701} },
+{ data: { source: 'COPS4', target: 'CUL4A', directed: 'false', weight: 0.15174100000000001} },
+{ data: { source: 'GPS1', target: 'COPS8', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'GPS1', target: 'COPS6', directed: 'false', weight: 0.999984} },
+{ data: { source: 'GPS1', target: 'COPS3', directed: 'false', weight: 0.999366} },
+{ data: { source: 'GPS1', target: 'COPS2', directed: 'false', weight: 0.9876799999999999} },
+{ data: { source: 'GPS1', target: 'COPS7A', directed: 'false', weight: 0.98754} },
+{ data: { source: 'GPS1', target: 'CUL4A', directed: 'false', weight: 0.165824} },
+{ data: { source: 'COPS2', target: 'COPS6', directed: 'false', weight: 1.0} },
+{ data: { source: 'COPS2', target: 'COPS7A', directed: 'false', weight: 0.999991} },
+{ data: { source: 'COPS2', target: 'COPS8', directed: 'false', weight: 0.999978} },
+{ data: { source: 'COPS2', target: 'COPS3', directed: 'false', weight: 0.9962409999999999} },
+{ data: { source: 'COPS2', target: 'CUL4A', directed: 'false', weight: 0.281992} },
+{ data: { source: 'COPS2', target: 'DDB1', directed: 'false', weight: 0.0429839} },
+{ data: { source: 'COPS6', target: 'COPS8', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'COPS6', target: 'COPS3', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'COPS6', target: 'COPS7A', directed: 'false', weight: 0.999783} },
+{ data: { source: 'COPS6', target: 'CUL4A', directed: 'false', weight: 0.838975} },
+{ data: { source: 'RBX1', target: 'CUL4A', directed: 'false', weight: 0.0701273} },
+{ data: { source: 'COPS8', target: 'COPS7A', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'COPS8', target: 'COPS3', directed: 'false', weight: 0.9926959999999999} },
+{ data: { source: 'COPS8', target: 'CUL4A', directed: 'false', weight: 0.654841} },
+{ data: { source: 'DDB1', target: 'CUL4A', directed: 'false', weight: 0.9999549999999999} },
+{ data: { source: 'CUL4A', target: 'COPS7A', directed: 'false', weight: 0.041755099999999996} },
+{ data: { source: 'COPS3', target: 'COPS7A', directed: 'false', weight: 0.999848} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CSA-POLIIa complex	<br> Unweighted Density = 0.49
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>RBX1
+    </section>
+    </body>
+    </html>
+    

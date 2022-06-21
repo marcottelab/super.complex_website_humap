@@ -1,0 +1,131 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> PIGL MEIS1 PBX1 hCG_2039588 MAB21L1 PBX3 MAB21L2 MEIS2</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex88.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PBX3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P40426" }},
+{data: { id: 'PIGL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y2B2" }},
+{data: { id: 'MEIS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00470" }},
+{data: { id: 'MAB21L1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13394" }},
+{data: { id: 'MAB21L2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y586" }},
+{data: { id: 'PBX1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P40424" }},
+{data: { id: 'hCG_2039588', score: 2, type: '', href: "https://www.uniprot.org/uniprot/A0A024RCR3" }},
+{data: { id: 'MEIS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14770" }}], 
+ edges: [{ data: { source: 'MAB21L1', target: 'MEIS1', directed: 'false', weight: 0.9999020000000001} },
+{ data: { source: 'MAB21L1', target: 'MEIS2', directed: 'false', weight: 0.9866090000000001} },
+{ data: { source: 'MAB21L1', target: 'hCG_2039588', directed: 'false', weight: 0.733133} },
+{ data: { source: 'MAB21L1', target: 'PBX3', directed: 'false', weight: 0.605038} },
+{ data: { source: 'MAB21L1', target: 'PBX1', directed: 'false', weight: 0.30839} },
+{ data: { source: 'MEIS1', target: 'MEIS2', directed: 'false', weight: 0.9899049999999999} },
+{ data: { source: 'MEIS1', target: 'MAB21L2', directed: 'false', weight: 0.9844440000000001} },
+{ data: { source: 'MEIS1', target: 'PBX3', directed: 'false', weight: 0.028982799999999996} },
+{ data: { source: 'MEIS1', target: 'hCG_2039588', directed: 'false', weight: 0.0289593} },
+{ data: { source: 'MEIS1', target: 'PBX1', directed: 'false', weight: 0.0246229} },
+{ data: { source: 'PBX1', target: 'MEIS2', directed: 'false', weight: 0.9999889999999999} },
+{ data: { source: 'PBX1', target: 'hCG_2039588', directed: 'false', weight: 0.0531239} },
+{ data: { source: 'PBX1', target: 'PBX3', directed: 'false', weight: 0.03735} },
+{ data: { source: 'MEIS2', target: 'hCG_2039588', directed: 'false', weight: 0.999907} },
+{ data: { source: 'MEIS2', target: 'PBX3', directed: 'false', weight: 0.9986510000000001} },
+{ data: { source: 'MEIS2', target: 'PIGL', directed: 'false', weight: 0.827792} },
+{ data: { source: 'MEIS2', target: 'MAB21L2', directed: 'false', weight: 0.759791} },
+{ data: { source: 'hCG_2039588', target: 'MAB21L2', directed: 'false', weight: 0.0263286} },
+{ data: { source: 'hCG_2039588', target: 'PBX3', directed: 'false', weight: 0.0253633} },
+{ data: { source: 'PBX3', target: 'MAB21L2', directed: 'false', weight: 0.028650099999999998} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    PIGL MEIS1 PBX1 hCG_2039588 MAB21L1 PBX3 MAB21L2 MEIS2<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.71
+    </section>
+    </body>
+    </html>
+    

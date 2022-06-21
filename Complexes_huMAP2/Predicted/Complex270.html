@@ -1,0 +1,115 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.05 C complex spliceosome</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex271.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GPATCH1', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9BRR8" }},
+{data: { id: 'KIAA1671', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q9BY89" }},
+{data: { id: 'hCG_2044510', score: 2, type: '', href: "https://www.uniprot.org/uniprot/A0A024R9F1" }},
+{data: { id: 'DHX35', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H5Z1" }},
+{data: { id: 'DCAF13', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NV06" }},
+{data: { id: 'WDR83', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BRX9" }}], 
+ edges: [{ data: { source: 'DHX35', target: 'WDR83', directed: 'false', weight: 0.9836360000000001} },
+{ data: { source: 'DHX35', target: 'GPATCH1', directed: 'false', weight: 0.0326881} },
+{ data: { source: 'hCG_2044510', target: 'WDR83', directed: 'false', weight: 0.9998969999999999} },
+{ data: { source: 'WDR83', target: 'GPATCH1', directed: 'false', weight: 0.999424} },
+{ data: { source: 'WDR83', target: 'DCAF13', directed: 'false', weight: 0.934592} },
+{ data: { source: 'WDR83', target: 'KIAA1671', directed: 'false', weight: 0.926694} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.05 C complex spliceosome<br> Complex Score (from Super.Complex) = 0.91300<br> Unweighted Density = 0.40
+    </section>
+    </body>
+    </html>
+    

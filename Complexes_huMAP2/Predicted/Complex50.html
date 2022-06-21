@@ -1,0 +1,170 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.05 SPG33-VAPA complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex51.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'VAPB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95292" }},
+{data: { id: 'DKFZp434P0917', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q9UF51" }},
+{data: { id: 'PITPNM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00562" }},
+{data: { id: 'OSBPL10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BXB5" }},
+{data: { id: 'ACBD5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5T8D3" }},
+{data: { id: 'MIGA2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7L4E1" }},
+{data: { id: 'OSBPL3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H4L5" }},
+{data: { id: 'OSBPL9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96SU4" }},
+{data: { id: 'JMY', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N9B5" }},
+{data: { id: 'DKFZp686K18126', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q5HYH0" }},
+{data: { id: 'OSBPL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H1P3" }},
+{data: { id: 'BTNL8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6UX41" }},
+{data: { id: 'OSBPL1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BXW6" }},
+{data: { id: 'RASSF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NS23" }},
+{data: { id: 'USP33', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TEY7" }},
+{data: { id: 'OSBPL11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BXB4" }},
+{data: { id: 'FAM83G', score: 5, type: '', href: "https://www.uniprot.org/uniprot/A6ND36" }},
+{data: { id: 'OSBP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q969R2" }},
+{data: { id: 'LSG1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H089" }},
+{data: { id: 'ACBD4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NC06" }},
+{data: { id: 'VAPA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P0L0" }},
+{data: { id: 'SERPINB9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P50453" }},
+{data: { id: 'NACAD', score: 4, type: '', href: "https://www.uniprot.org/uniprot/O15069" }},
+{data: { id: 'OSBPL6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BZF3" }}], 
+ edges: [{ data: { source: 'JMY', target: 'VAPB', directed: 'false', weight: 0.0312798} },
+{ data: { source: 'JMY', target: 'VAPA', directed: 'false', weight: 0.0267553} },
+{ data: { source: 'DKFZp686K18126', target: 'VAPB', directed: 'false', weight: 0.652993} },
+{ data: { source: 'DKFZp686K18126', target: 'VAPA', directed: 'false', weight: 0.0941342} },
+{ data: { source: 'ACBD4', target: 'VAPB', directed: 'false', weight: 0.6726340000000001} },
+{ data: { source: 'ACBD4', target: 'VAPA', directed: 'false', weight: 0.141034} },
+{ data: { source: 'NACAD', target: 'VAPB', directed: 'false', weight: 0.310975} },
+{ data: { source: 'NACAD', target: 'VAPA', directed: 'false', weight: 0.158246} },
+{ data: { source: 'PITPNM1', target: 'VAPB', directed: 'false', weight: 0.940011} },
+{ data: { source: 'PITPNM1', target: 'VAPA', directed: 'false', weight: 0.76031} },
+{ data: { source: 'OSBPL11', target: 'VAPB', directed: 'false', weight: 0.595539} },
+{ data: { source: 'OSBPL11', target: 'VAPA', directed: 'false', weight: 0.154138} },
+{ data: { source: 'OSBPL2', target: 'VAPB', directed: 'false', weight: 0.119001} },
+{ data: { source: 'OSBPL2', target: 'VAPA', directed: 'false', weight: 0.046779699999999994} },
+{ data: { source: 'USP33', target: 'VAPB', directed: 'false', weight: 0.060881700000000004} },
+{ data: { source: 'USP33', target: 'VAPA', directed: 'false', weight: 0.0343856} },
+{ data: { source: 'FAM83G', target: 'VAPB', directed: 'false', weight: 0.5489310000000001} },
+{ data: { source: 'FAM83G', target: 'VAPA', directed: 'false', weight: 0.0584914} },
+{ data: { source: 'OSBPL9', target: 'VAPB', directed: 'false', weight: 0.8673709999999999} },
+{ data: { source: 'OSBPL9', target: 'VAPA', directed: 'false', weight: 0.345533} },
+{ data: { source: 'OSBPL1A', target: 'VAPB', directed: 'false', weight: 0.162253} },
+{ data: { source: 'OSBPL1A', target: 'VAPA', directed: 'false', weight: 0.0778547} },
+{ data: { source: 'BTNL8', target: 'OSBP2', directed: 'false', weight: 0.9353790000000001} },
+{ data: { source: 'VAPA', target: 'VAPB', directed: 'false', weight: 0.988451} },
+{ data: { source: 'VAPA', target: 'OSBPL10', directed: 'false', weight: 0.8944479999999999} },
+{ data: { source: 'VAPA', target: 'SERPINB9', directed: 'false', weight: 0.717263} },
+{ data: { source: 'VAPA', target: 'OSBP2', directed: 'false', weight: 0.575128} },
+{ data: { source: 'VAPA', target: 'ACBD5', directed: 'false', weight: 0.473832} },
+{ data: { source: 'VAPA', target: 'RASSF1', directed: 'false', weight: 0.146098} },
+{ data: { source: 'VAPA', target: 'OSBPL3', directed: 'false', weight: 0.10621300000000002} },
+{ data: { source: 'VAPA', target: 'OSBPL6', directed: 'false', weight: 0.08502810000000001} },
+{ data: { source: 'VAPA', target: 'MIGA2', directed: 'false', weight: 0.0841913} },
+{ data: { source: 'VAPA', target: 'DKFZp434P0917', directed: 'false', weight: 0.0391434} },
+{ data: { source: 'VAPA', target: 'LSG1', directed: 'false', weight: 0.028084699999999997} },
+{ data: { source: 'OSBPL6', target: 'VAPB', directed: 'false', weight: 0.327045} },
+{ data: { source: 'DKFZp434P0917', target: 'VAPB', directed: 'false', weight: 0.8710469999999999} },
+{ data: { source: 'OSBPL10', target: 'VAPB', directed: 'false', weight: 0.9380569999999999} },
+{ data: { source: 'MIGA2', target: 'VAPB', directed: 'false', weight: 0.202759} },
+{ data: { source: 'OSBPL3', target: 'VAPB', directed: 'false', weight: 0.38966999999999996} },
+{ data: { source: 'RASSF1', target: 'VAPB', directed: 'false', weight: 0.712486} },
+{ data: { source: 'ACBD5', target: 'VAPB', directed: 'false', weight: 0.8312649999999999} },
+{ data: { source: 'OSBP2', target: 'VAPB', directed: 'false', weight: 0.8834270000000001} },
+{ data: { source: 'LSG1', target: 'VAPB', directed: 'false', weight: 0.199149} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.05 SPG33-VAPA complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.16
+    </section>
+    </body>
+    </html>
+    

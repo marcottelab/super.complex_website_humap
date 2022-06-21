@@ -1,0 +1,164 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 CCT complex (chaperonin containing TCP1 complex)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex30.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CCT8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P50990" }},
+{data: { id: 'CCT7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99832" }},
+{data: { id: 'TCP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P17987" }},
+{data: { id: 'CCT6B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92526" }},
+{data: { id: 'CCT4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P50991" }},
+{data: { id: 'CCT6A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P40227" }},
+{data: { id: 'CCT3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49368" }},
+{data: { id: 'HEL-S-69', score: 2, type: '', href: "https://www.uniprot.org/uniprot/V9HW37" }},
+{data: { id: 'PDAP1', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q13442" }},
+{data: { id: 'PDCL3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H2J4" }},
+{data: { id: 'HEL-S-100n', score: 3, type: '', href: "https://www.uniprot.org/uniprot/V9HW96" }},
+{data: { id: 'TXNDC9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14530" }}], 
+ edges: [{ data: { source: 'CCT3', target: 'TCP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'CCT4', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'HEL-S-100n', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'CCT6B', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'HEL-S-69', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'CCT6A', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT3', target: 'PDCL3', directed: 'false', weight: 0.999397} },
+{ data: { source: 'CCT3', target: 'TXNDC9', directed: 'false', weight: 0.9804209999999999} },
+{ data: { source: 'CCT3', target: 'PDAP1', directed: 'false', weight: 0.334874} },
+{ data: { source: 'HEL-S-69', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'CCT4', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'HEL-S-100n', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'CCT6B', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'TCP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'CCT6A', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-69', target: 'PDCL3', directed: 'false', weight: 0.370224} },
+{ data: { source: 'TCP1', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'CCT4', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'HEL-S-100n', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'CCT6B', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'CCT6A', directed: 'false', weight: 1.0} },
+{ data: { source: 'TCP1', target: 'PDAP1', directed: 'false', weight: 0.0221915} },
+{ data: { source: 'CCT4', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'HEL-S-100n', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'CCT6B', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'CCT6A', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT4', target: 'PDCL3', directed: 'false', weight: 0.986173} },
+{ data: { source: 'CCT4', target: 'TXNDC9', directed: 'false', weight: 0.741984} },
+{ data: { source: 'PDAP1', target: 'CCT8', directed: 'false', weight: 0.0778425} },
+{ data: { source: 'PDAP1', target: 'CCT6A', directed: 'false', weight: 0.0548922} },
+{ data: { source: 'PDAP1', target: 'CCT7', directed: 'false', weight: 0.0490726} },
+{ data: { source: 'CCT6A', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT6A', target: 'HEL-S-100n', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT6A', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT6A', target: 'CCT6B', directed: 'false', weight: 0.999999} },
+{ data: { source: 'CCT6A', target: 'PDCL3', directed: 'false', weight: 0.139975} },
+{ data: { source: 'HEL-S-100n', target: 'CCT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'CCT6B', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-100n', target: 'TXNDC9', directed: 'false', weight: 0.140586} },
+{ data: { source: 'HEL-S-100n', target: 'PDCL3', directed: 'false', weight: 0.0687096} },
+{ data: { source: 'CCT7', target: 'CCT6B', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT7', target: 'CCT8', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT7', target: 'PDCL3', directed: 'false', weight: 0.999647} },
+{ data: { source: 'CCT7', target: 'TXNDC9', directed: 'false', weight: 0.9210510000000001} },
+{ data: { source: 'CCT8', target: 'CCT6B', directed: 'false', weight: 1.0} },
+{ data: { source: 'CCT8', target: 'PDCL3', directed: 'false', weight: 0.9920700000000001} },
+{ data: { source: 'CCT8', target: 'TXNDC9', directed: 'false', weight: 0.242211} },
+{ data: { source: 'CCT6B', target: 'TXNDC9', directed: 'false', weight: 0.0907977} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 CCT complex (chaperonin containing TCP1 complex)<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.82
+    </section>
+    </body>
+    </html>
+    

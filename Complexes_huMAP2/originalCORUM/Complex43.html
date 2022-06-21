@@ -1,0 +1,131 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Nup 107-160 subcomplex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex44.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NUP98', score: 5, href: "https://www.uniprot.org/uniprot/P52948" }},
+{data: { id: 'SEC13', score: 5, href: "https://www.uniprot.org/uniprot/P55735" }},
+{data: { id: 'NUP107', score: 5, href: "https://www.uniprot.org/uniprot/P57740" }},
+{data: { id: 'NUP160', score: 5, href: "https://www.uniprot.org/uniprot/Q12769" }},
+{data: { id: 'NUP43', score: 5, href: "https://www.uniprot.org/uniprot/Q8NFH3" }},
+{data: { id: 'NUP37', score: 5, href: "https://www.uniprot.org/uniprot/Q8NFH4" }},
+{data: { id: 'NUP133', score: 5, href: "https://www.uniprot.org/uniprot/Q8WUM0" }},
+{data: { id: 'SEH1L', score: 5, href: "https://www.uniprot.org/uniprot/Q96EE3" }},
+{data: { id: 'NUP85', score: 5, href: "https://www.uniprot.org/uniprot/Q9BW27" }}], 
+ edges: [{ data: { source: 'SEH1L', target: 'NUP43', directed: 'false', weight: 0.9991770000000001} },
+{ data: { source: 'SEH1L', target: 'SEC13', directed: 'false', weight: 0.5165569999999999} },
+{ data: { source: 'SEH1L', target: 'NUP85', directed: 'false', weight: 0.100313} },
+{ data: { source: 'SEH1L', target: 'NUP160', directed: 'false', weight: 0.0993556} },
+{ data: { source: 'SEH1L', target: 'NUP107', directed: 'false', weight: 0.0826708} },
+{ data: { source: 'SEH1L', target: 'NUP98', directed: 'false', weight: 0.06728560000000001} },
+{ data: { source: 'SEH1L', target: 'NUP37', directed: 'false', weight: 0.0401443} },
+{ data: { source: 'SEH1L', target: 'NUP133', directed: 'false', weight: 0.0385297} },
+{ data: { source: 'NUP98', target: 'NUP43', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'NUP98', target: 'NUP85', directed: 'false', weight: 0.8460469999999999} },
+{ data: { source: 'NUP98', target: 'SEC13', directed: 'false', weight: 0.630057} },
+{ data: { source: 'NUP98', target: 'NUP133', directed: 'false', weight: 0.419969} },
+{ data: { source: 'NUP98', target: 'NUP107', directed: 'false', weight: 0.262927} },
+{ data: { source: 'NUP98', target: 'NUP160', directed: 'false', weight: 0.23914699999999997} },
+{ data: { source: 'NUP98', target: 'NUP37', directed: 'false', weight: 0.08583160000000001} },
+{ data: { source: 'NUP85', target: 'NUP107', directed: 'false', weight: 0.999999} },
+{ data: { source: 'NUP85', target: 'NUP160', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'NUP85', target: 'NUP43', directed: 'false', weight: 0.999878} },
+{ data: { source: 'NUP85', target: 'SEC13', directed: 'false', weight: 0.288409} },
+{ data: { source: 'NUP85', target: 'NUP133', directed: 'false', weight: 0.07839} },
+{ data: { source: 'NUP85', target: 'NUP37', directed: 'false', weight: 0.043672699999999995} },
+{ data: { source: 'NUP107', target: 'NUP133', directed: 'false', weight: 1.0} },
+{ data: { source: 'NUP107', target: 'NUP43', directed: 'false', weight: 0.999999} },
+{ data: { source: 'NUP107', target: 'NUP37', directed: 'false', weight: 0.999964} },
+{ data: { source: 'NUP107', target: 'SEC13', directed: 'false', weight: 0.9945069999999999} },
+{ data: { source: 'NUP107', target: 'NUP160', directed: 'false', weight: 0.971368} },
+{ data: { source: 'NUP37', target: 'NUP43', directed: 'false', weight: 0.995202} },
+{ data: { source: 'NUP37', target: 'SEC13', directed: 'false', weight: 0.8305799999999999} },
+{ data: { source: 'NUP37', target: 'NUP160', directed: 'false', weight: 0.0526763} },
+{ data: { source: 'NUP160', target: 'NUP133', directed: 'false', weight: 0.9996389999999999} },
+{ data: { source: 'NUP160', target: 'NUP43', directed: 'false', weight: 0.999384} },
+{ data: { source: 'NUP160', target: 'SEC13', directed: 'false', weight: 0.587013} },
+{ data: { source: 'SEC13', target: 'NUP133', directed: 'false', weight: 0.630588} },
+{ data: { source: 'SEC13', target: 'NUP43', directed: 'false', weight: 0.10302599999999999} },
+{ data: { source: 'NUP43', target: 'NUP133', directed: 'false', weight: 0.9975510000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Nup 107-160 subcomplex	<br> Unweighted Density = 0.97
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>NUP98
+    </section>
+    </body>
+    </html>
+    

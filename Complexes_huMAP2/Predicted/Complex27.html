@@ -1,0 +1,161 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 CTLH complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex28.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ARMC8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IUR7" }},
+{data: { id: 'RMND5A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H871" }},
+{data: { id: 'WDR26', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H7D7" }},
+{data: { id: 'RANBP10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6VN20" }},
+{data: { id: 'GID8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NWU2" }},
+{data: { id: 'GID4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IVV7" }},
+{data: { id: 'YPEL5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62699" }},
+{data: { id: 'MAEA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7L5Y9" }},
+{data: { id: 'RANBP9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96S59" }},
+{data: { id: 'MKLN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UL63" }},
+{data: { id: 'ZMYND19', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96E35" }}], 
+ edges: [{ data: { source: 'GID8', target: 'RANBP9', directed: 'false', weight: 1.0} },
+{ data: { source: 'GID8', target: 'RANBP10', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'GID8', target: 'RMND5A', directed: 'false', weight: 0.9999129999999999} },
+{ data: { source: 'GID8', target: 'YPEL5', directed: 'false', weight: 0.9990040000000001} },
+{ data: { source: 'GID8', target: 'MKLN1', directed: 'false', weight: 0.994757} },
+{ data: { source: 'GID8', target: 'MAEA', directed: 'false', weight: 0.728096} },
+{ data: { source: 'GID8', target: 'ARMC8', directed: 'false', weight: 0.373925} },
+{ data: { source: 'GID8', target: 'WDR26', directed: 'false', weight: 0.335569} },
+{ data: { source: 'GID8', target: 'GID4', directed: 'false', weight: 0.0948164} },
+{ data: { source: 'RANBP10', target: 'RMND5A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RANBP10', target: 'WDR26', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RANBP10', target: 'YPEL5', directed: 'false', weight: 0.999974} },
+{ data: { source: 'RANBP10', target: 'RANBP9', directed: 'false', weight: 0.9575629999999999} },
+{ data: { source: 'RANBP10', target: 'ARMC8', directed: 'false', weight: 0.941882} },
+{ data: { source: 'RANBP10', target: 'MAEA', directed: 'false', weight: 0.9366620000000001} },
+{ data: { source: 'RANBP10', target: 'GID4', directed: 'false', weight: 0.601013} },
+{ data: { source: 'RANBP10', target: 'MKLN1', directed: 'false', weight: 0.11565299999999999} },
+{ data: { source: 'ZMYND19', target: 'RMND5A', directed: 'false', weight: 0.9647469999999999} },
+{ data: { source: 'ZMYND19', target: 'MKLN1', directed: 'false', weight: 0.139073} },
+{ data: { source: 'ZMYND19', target: 'ARMC8', directed: 'false', weight: 0.037438400000000004} },
+{ data: { source: 'ZMYND19', target: 'RANBP9', directed: 'false', weight: 0.03294469999999999} },
+{ data: { source: 'ZMYND19', target: 'MAEA', directed: 'false', weight: 0.0265817} },
+{ data: { source: 'ZMYND19', target: 'GID4', directed: 'false', weight: 0.025441099999999998} },
+{ data: { source: 'ZMYND19', target: 'WDR26', directed: 'false', weight: 0.020127799999999998} },
+{ data: { source: 'RANBP9', target: 'MAEA', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RANBP9', target: 'RMND5A', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RANBP9', target: 'MKLN1', directed: 'false', weight: 0.999969} },
+{ data: { source: 'RANBP9', target: 'YPEL5', directed: 'false', weight: 0.999966} },
+{ data: { source: 'RANBP9', target: 'ARMC8', directed: 'false', weight: 0.9287629999999999} },
+{ data: { source: 'RANBP9', target: 'WDR26', directed: 'false', weight: 0.845234} },
+{ data: { source: 'RANBP9', target: 'GID4', directed: 'false', weight: 0.43200200000000005} },
+{ data: { source: 'RMND5A', target: 'YPEL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RMND5A', target: 'WDR26', directed: 'false', weight: 1.0} },
+{ data: { source: 'RMND5A', target: 'ARMC8', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RMND5A', target: 'MAEA', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RMND5A', target: 'MKLN1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RMND5A', target: 'GID4', directed: 'false', weight: 0.999934} },
+{ data: { source: 'WDR26', target: 'MAEA', directed: 'false', weight: 0.736846} },
+{ data: { source: 'WDR26', target: 'ARMC8', directed: 'false', weight: 0.531003} },
+{ data: { source: 'WDR26', target: 'YPEL5', directed: 'false', weight: 0.396524} },
+{ data: { source: 'WDR26', target: 'GID4', directed: 'false', weight: 0.127445} },
+{ data: { source: 'WDR26', target: 'MKLN1', directed: 'false', weight: 0.0952563} },
+{ data: { source: 'YPEL5', target: 'ARMC8', directed: 'false', weight: 0.9999239999999999} },
+{ data: { source: 'YPEL5', target: 'MAEA', directed: 'false', weight: 0.9997010000000001} },
+{ data: { source: 'YPEL5', target: 'MKLN1', directed: 'false', weight: 0.9081110000000001} },
+{ data: { source: 'YPEL5', target: 'GID4', directed: 'false', weight: 0.048229900000000006} },
+{ data: { source: 'ARMC8', target: 'MAEA', directed: 'false', weight: 0.93889} },
+{ data: { source: 'ARMC8', target: 'MKLN1', directed: 'false', weight: 0.736318} },
+{ data: { source: 'ARMC8', target: 'GID4', directed: 'false', weight: 0.553186} },
+{ data: { source: 'MAEA', target: 'MKLN1', directed: 'false', weight: 0.787076} },
+{ data: { source: 'MAEA', target: 'GID4', directed: 'false', weight: 0.326433} },
+{ data: { source: 'MKLN1', target: 'GID4', directed: 'false', weight: 0.44373199999999996} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 CTLH complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.95
+    </section>
+    </body>
+    </html>
+    

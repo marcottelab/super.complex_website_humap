@@ -1,0 +1,123 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 CTFC-TAF1 complex match 2</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex882.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ZNF445', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P59923" }},
+{data: { id: 'IKZF5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H5V7" }},
+{data: { id: 'CASQ2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14958" }},
+{data: { id: 'SET', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q01105" }},
+{data: { id: 'ZBTB21', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9ULJ3" }},
+{data: { id: 'ASB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y576" }},
+{data: { id: 'REPIN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9BWE0" }}], 
+ edges: [{ data: { source: 'ZBTB21', target: 'CASQ2', directed: 'false', weight: 0.9419780000000001} },
+{ data: { source: 'ZBTB21', target: 'SET', directed: 'false', weight: 0.816756} },
+{ data: { source: 'ZBTB21', target: 'IKZF5', directed: 'false', weight: 0.144297} },
+{ data: { source: 'ZBTB21', target: 'ASB1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'ZBTB21', target: 'ZNF445', directed: 'false', weight: 0.125749} },
+{ data: { source: 'ZBTB21', target: 'REPIN1', directed: 'false', weight: 0.0974347} },
+{ data: { source: 'CASQ2', target: 'ASB1', directed: 'false', weight: 0.9698479999999999} },
+{ data: { source: 'REPIN1', target: 'SET', directed: 'false', weight: 0.841199} },
+{ data: { source: 'REPIN1', target: 'IKZF5', directed: 'false', weight: 0.11228099999999999} },
+{ data: { source: 'REPIN1', target: 'ZNF445', directed: 'false', weight: 0.0974347} },
+{ data: { source: 'SET', target: 'ZNF445', directed: 'false', weight: 0.890706} },
+{ data: { source: 'SET', target: 'IKZF5', directed: 'false', weight: 0.838254} },
+{ data: { source: 'ZNF445', target: 'IKZF5', directed: 'false', weight: 0.144297} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 CTFC-TAF1 complex match 2<br> Complex Score (from Super.Complex) = 0.54603<br> Unweighted Density = 0.62
+    </section>
+    </body>
+    </html>
+    

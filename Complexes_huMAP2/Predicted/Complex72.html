@@ -1,0 +1,141 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.3 RANBP1-RAN-KPNB1 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex73.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RAN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62826" }},
+{data: { id: 'RCC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P18754" }},
+{data: { id: 'RANGAP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46060" }},
+{data: { id: 'KPNA3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00505" }},
+{data: { id: 'RANBP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P43487" }},
+{data: { id: 'HEL161', score: 1, type: '', href: "https://www.uniprot.org/uniprot/V9HWE4" }},
+{data: { id: 'KPNB1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14974" }},
+{data: { id: 'KPNA4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00629" }},
+{data: { id: 'SUMO1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P63165" }},
+{data: { id: 'RANBP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P49792" }}], 
+ edges: [{ data: { source: 'KPNA3', target: 'KPNA4', directed: 'false', weight: 0.999985} },
+{ data: { source: 'KPNA3', target: 'RCC1', directed: 'false', weight: 0.92825} },
+{ data: { source: 'KPNA3', target: 'KPNB1', directed: 'false', weight: 0.756537} },
+{ data: { source: 'KPNA3', target: 'RAN', directed: 'false', weight: 0.0453389} },
+{ data: { source: 'KPNA3', target: 'RANGAP1', directed: 'false', weight: 0.0264414} },
+{ data: { source: 'KPNA3', target: 'RANBP2', directed: 'false', weight: 0.0212288} },
+{ data: { source: 'RANBP1', target: 'RAN', directed: 'false', weight: 1.0} },
+{ data: { source: 'RANBP1', target: 'RCC1', directed: 'false', weight: 0.9996079999999999} },
+{ data: { source: 'RANBP1', target: 'KPNB1', directed: 'false', weight: 0.05095} },
+{ data: { source: 'HEL161', target: 'RCC1', directed: 'false', weight: 0.77152} },
+{ data: { source: 'HEL161', target: 'RAN', directed: 'false', weight: 0.16573800000000002} },
+{ data: { source: 'SUMO1', target: 'RCC1', directed: 'false', weight: 0.756346} },
+{ data: { source: 'SUMO1', target: 'RANBP2', directed: 'false', weight: 0.15196700000000002} },
+{ data: { source: 'SUMO1', target: 'KPNB1', directed: 'false', weight: 0.046806099999999996} },
+{ data: { source: 'SUMO1', target: 'RAN', directed: 'false', weight: 0.0323168} },
+{ data: { source: 'KPNB1', target: 'RANBP2', directed: 'false', weight: 0.994643} },
+{ data: { source: 'KPNB1', target: 'RAN', directed: 'false', weight: 0.98759} },
+{ data: { source: 'KPNB1', target: 'RANGAP1', directed: 'false', weight: 0.783493} },
+{ data: { source: 'KPNB1', target: 'RCC1', directed: 'false', weight: 0.612841} },
+{ data: { source: 'KPNB1', target: 'KPNA4', directed: 'false', weight: 0.08350160000000001} },
+{ data: { source: 'RCC1', target: 'RANGAP1', directed: 'false', weight: 0.9994360000000001} },
+{ data: { source: 'RCC1', target: 'RAN', directed: 'false', weight: 0.999167} },
+{ data: { source: 'RCC1', target: 'RANBP2', directed: 'false', weight: 0.996432} },
+{ data: { source: 'RCC1', target: 'KPNA4', directed: 'false', weight: 0.9771629999999999} },
+{ data: { source: 'RANBP2', target: 'RANGAP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'RANBP2', target: 'RAN', directed: 'false', weight: 0.616362} },
+{ data: { source: 'KPNA4', target: 'RAN', directed: 'false', weight: 0.197748} },
+{ data: { source: 'RANGAP1', target: 'RAN', directed: 'false', weight: 0.12906900000000002} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.3 RANBP1-RAN-KPNB1 complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.62
+    </section>
+    </body>
+    </html>
+    

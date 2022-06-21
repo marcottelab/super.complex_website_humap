@@ -1,0 +1,205 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 Large Drosha complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex39.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HSPA9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P38646" }},
+{data: { id: 'HNRPA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09651" }},
+{data: { id: 'SNRPD3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62318" }},
+{data: { id: 'TARDBP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13148" }},
+{data: { id: 'DKFZp686A13234', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q6MZS5" }},
+{data: { id: 'HNRNPH1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P31943" }},
+{data: { id: 'HNRNPK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61978" }},
+{data: { id: 'HNRNPH2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P55795" }},
+{data: { id: 'DDX1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92499" }},
+{data: { id: 'HEL-S-17', score: 3, type: '', href: "https://www.uniprot.org/uniprot/A0A024R4F1" }},
+{data: { id: 'HNRNPA2B1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P22626" }},
+{data: { id: 'HNRPA3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P51991" }},
+{data: { id: 'HNRPF', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P52597" }},
+{data: { id: 'KHDRBS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q07666" }},
+{data: { id: 'HNRPH3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P31942" }},
+{data: { id: 'SF3B1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75533" }},
+{data: { id: 'SYNCRIP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60506" }}], 
+ edges: [{ data: { source: 'HNRPA1', target: 'HNRNPA2B1', directed: 'false', weight: 0.999576} },
+{ data: { source: 'HNRPA1', target: 'DKFZp686A13234', directed: 'false', weight: 0.998434} },
+{ data: { source: 'HNRPA1', target: 'HNRNPK', directed: 'false', weight: 0.9984059999999999} },
+{ data: { source: 'HNRPA1', target: 'HNRPF', directed: 'false', weight: 0.997202} },
+{ data: { source: 'HNRPA1', target: 'HNRPH3', directed: 'false', weight: 0.99559} },
+{ data: { source: 'HNRPA1', target: 'HNRNPH1', directed: 'false', weight: 0.990815} },
+{ data: { source: 'HNRPA1', target: 'HNRNPH2', directed: 'false', weight: 0.9850120000000001} },
+{ data: { source: 'HNRPA1', target: 'KHDRBS1', directed: 'false', weight: 0.6964670000000001} },
+{ data: { source: 'HNRPA1', target: 'SYNCRIP', directed: 'false', weight: 0.548664} },
+{ data: { source: 'HNRPA1', target: 'HNRPA3', directed: 'false', weight: 0.217261} },
+{ data: { source: 'HNRPA1', target: 'HSPA9', directed: 'false', weight: 0.17369} },
+{ data: { source: 'HNRPA1', target: 'DDX1', directed: 'false', weight: 0.106254} },
+{ data: { source: 'HNRPA1', target: 'TARDBP', directed: 'false', weight: 0.07820629999999999} },
+{ data: { source: 'HNRPA1', target: 'SF3B1', directed: 'false', weight: 0.0637701} },
+{ data: { source: 'HNRPA1', target: 'HEL-S-17', directed: 'false', weight: 0.0266231} },
+{ data: { source: 'HNRPA1', target: 'SNRPD3', directed: 'false', weight: 0.024151} },
+{ data: { source: 'SNRPD3', target: 'DKFZp686A13234', directed: 'false', weight: 0.900761} },
+{ data: { source: 'SNRPD3', target: 'KHDRBS1', directed: 'false', weight: 0.616383} },
+{ data: { source: 'SNRPD3', target: 'SYNCRIP', directed: 'false', weight: 0.468021} },
+{ data: { source: 'SNRPD3', target: 'SF3B1', directed: 'false', weight: 0.443646} },
+{ data: { source: 'SNRPD3', target: 'HNRNPK', directed: 'false', weight: 0.261226} },
+{ data: { source: 'SNRPD3', target: 'HNRPF', directed: 'false', weight: 0.24977600000000003} },
+{ data: { source: 'SNRPD3', target: 'HNRNPH1', directed: 'false', weight: 0.023034} },
+{ data: { source: 'HNRPA3', target: 'HNRPH3', directed: 'false', weight: 0.9999389999999999} },
+{ data: { source: 'HNRPA3', target: 'HNRNPH2', directed: 'false', weight: 0.998115} },
+{ data: { source: 'HNRPA3', target: 'HNRNPH1', directed: 'false', weight: 0.998065} },
+{ data: { source: 'HNRPA3', target: 'DKFZp686A13234', directed: 'false', weight: 0.987605} },
+{ data: { source: 'HNRPA3', target: 'HNRNPK', directed: 'false', weight: 0.9874950000000001} },
+{ data: { source: 'HNRPA3', target: 'HNRPF', directed: 'false', weight: 0.974202} },
+{ data: { source: 'HNRPA3', target: 'HNRNPA2B1', directed: 'false', weight: 0.9656020000000001} },
+{ data: { source: 'HNRPA3', target: 'HEL-S-17', directed: 'false', weight: 0.7112109999999999} },
+{ data: { source: 'HNRPA3', target: 'KHDRBS1', directed: 'false', weight: 0.270884} },
+{ data: { source: 'HNRPA3', target: 'SYNCRIP', directed: 'false', weight: 0.163024} },
+{ data: { source: 'HNRPA3', target: 'HSPA9', directed: 'false', weight: 0.0263981} },
+{ data: { source: 'HSPA9', target: 'HNRNPH1', directed: 'false', weight: 0.754286} },
+{ data: { source: 'HSPA9', target: 'HNRNPA2B1', directed: 'false', weight: 0.381718} },
+{ data: { source: 'HSPA9', target: 'TARDBP', directed: 'false', weight: 0.280643} },
+{ data: { source: 'HSPA9', target: 'HNRNPK', directed: 'false', weight: 0.17885399999999999} },
+{ data: { source: 'HSPA9', target: 'HNRPF', directed: 'false', weight: 0.13184} },
+{ data: { source: 'HSPA9', target: 'DKFZp686A13234', directed: 'false', weight: 0.0723892} },
+{ data: { source: 'HSPA9', target: 'HNRPH3', directed: 'false', weight: 0.024430599999999997} },
+{ data: { source: 'DDX1', target: 'SF3B1', directed: 'false', weight: 0.589577} },
+{ data: { source: 'DDX1', target: 'SYNCRIP', directed: 'false', weight: 0.28794899999999995} },
+{ data: { source: 'DDX1', target: 'HNRNPA2B1', directed: 'false', weight: 0.277368} },
+{ data: { source: 'DDX1', target: 'DKFZp686A13234', directed: 'false', weight: 0.260777} },
+{ data: { source: 'DDX1', target: 'HNRNPK', directed: 'false', weight: 0.252282} },
+{ data: { source: 'DDX1', target: 'HNRPF', directed: 'false', weight: 0.074429} },
+{ data: { source: 'DDX1', target: 'HNRPH3', directed: 'false', weight: 0.0460096} },
+{ data: { source: 'DDX1', target: 'HNRNPH1', directed: 'false', weight: 0.0291545} },
+{ data: { source: 'DDX1', target: 'TARDBP', directed: 'false', weight: 0.026639999999999997} },
+{ data: { source: 'HNRNPA2B1', target: 'HNRNPH1', directed: 'false', weight: 0.9990020000000001} },
+{ data: { source: 'HNRNPA2B1', target: 'HNRPH3', directed: 'false', weight: 0.9989959999999999} },
+{ data: { source: 'HNRNPA2B1', target: 'HNRNPH2', directed: 'false', weight: 0.996921} },
+{ data: { source: 'HNRNPA2B1', target: 'HNRPF', directed: 'false', weight: 0.996296} },
+{ data: { source: 'HNRNPA2B1', target: 'HNRNPK', directed: 'false', weight: 0.9959610000000001} },
+{ data: { source: 'HNRNPA2B1', target: 'HEL-S-17', directed: 'false', weight: 0.970809} },
+{ data: { source: 'HNRNPA2B1', target: 'DKFZp686A13234', directed: 'false', weight: 0.0458322} },
+{ data: { source: 'HNRNPH2', target: 'TARDBP', directed: 'false', weight: 0.997085} },
+{ data: { source: 'HNRNPH2', target: 'HNRNPH1', directed: 'false', weight: 0.742942} },
+{ data: { source: 'HNRNPH2', target: 'HNRPF', directed: 'false', weight: 0.262211} },
+{ data: { source: 'HNRNPH2', target: 'DKFZp686A13234', directed: 'false', weight: 0.0457456} },
+{ data: { source: 'HNRPF', target: 'HNRNPH1', directed: 'false', weight: 0.9966200000000001} },
+{ data: { source: 'HNRPF', target: 'TARDBP', directed: 'false', weight: 0.9630219999999999} },
+{ data: { source: 'KHDRBS1', target: 'SYNCRIP', directed: 'false', weight: 0.985137} },
+{ data: { source: 'KHDRBS1', target: 'HNRNPK', directed: 'false', weight: 0.246286} },
+{ data: { source: 'KHDRBS1', target: 'DKFZp686A13234', directed: 'false', weight: 0.0814697} },
+{ data: { source: 'DKFZp686A13234', target: 'HNRNPH1', directed: 'false', weight: 0.987618} },
+{ data: { source: 'DKFZp686A13234', target: 'HNRNPK', directed: 'false', weight: 0.5277149999999999} },
+{ data: { source: 'DKFZp686A13234', target: 'SYNCRIP', directed: 'false', weight: 0.20894000000000001} },
+{ data: { source: 'DKFZp686A13234', target: 'SF3B1', directed: 'false', weight: 0.202327} },
+{ data: { source: 'DKFZp686A13234', target: 'TARDBP', directed: 'false', weight: 0.0628163} },
+{ data: { source: 'DKFZp686A13234', target: 'HNRPH3', directed: 'false', weight: 0.0247296} },
+{ data: { source: 'HNRNPK', target: 'SF3B1', directed: 'false', weight: 0.26400500000000005} },
+{ data: { source: 'HNRNPK', target: 'HNRNPH1', directed: 'false', weight: 0.162527} },
+{ data: { source: 'HNRNPK', target: 'HNRPH3', directed: 'false', weight: 0.15924000000000002} },
+{ data: { source: 'HNRNPK', target: 'SYNCRIP', directed: 'false', weight: 0.15293099999999998} },
+{ data: { source: 'HNRNPK', target: 'HEL-S-17', directed: 'false', weight: 0.0700258} },
+{ data: { source: 'HNRNPK', target: 'TARDBP', directed: 'false', weight: 0.030176400000000003} },
+{ data: { source: 'SF3B1', target: 'SYNCRIP', directed: 'false', weight: 0.301579} },
+{ data: { source: 'HNRPH3', target: 'TARDBP', directed: 'false', weight: 0.254312} },
+{ data: { source: 'HNRPH3', target: 'SYNCRIP', directed: 'false', weight: 0.0675211} },
+{ data: { source: 'SYNCRIP', target: 'HNRNPH1', directed: 'false', weight: 0.9883879999999999} },
+{ data: { source: 'HEL-S-17', target: 'HNRNPH1', directed: 'false', weight: 0.0802354} },
+{ data: { source: 'HEL-S-17', target: 'TARDBP', directed: 'false', weight: 0.023791299999999998} },
+{ data: { source: 'HNRNPH1', target: 'TARDBP', directed: 'false', weight: 0.763412} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 Large Drosha complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.62
+    </section>
+    </body>
+    </html>
+    

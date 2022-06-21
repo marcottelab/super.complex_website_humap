@@ -1,0 +1,97 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Decapping complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex315.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DDX6', score: 5, href: "https://www.uniprot.org/uniprot/P26196" }},
+{data: { id: 'EDC4', score: 5, href: "https://www.uniprot.org/uniprot/Q6P2E9" }},
+{data: { id: 'DCP2', score: 5, href: "https://www.uniprot.org/uniprot/Q8IU60" }},
+{data: { id: 'EDC3', score: 5, href: "https://www.uniprot.org/uniprot/Q96F86" }},
+{data: { id: 'DCP1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPI6" }}], 
+ edges: [{ data: { source: 'DCP1A', target: 'EDC3', directed: 'false', weight: 1.0} },
+{ data: { source: 'DCP1A', target: 'DDX6', directed: 'false', weight: 0.999999} },
+{ data: { source: 'DCP1A', target: 'DCP2', directed: 'false', weight: 0.9999680000000001} },
+{ data: { source: 'DCP1A', target: 'EDC4', directed: 'false', weight: 0.7992090000000001} },
+{ data: { source: 'DCP2', target: 'EDC4', directed: 'false', weight: 0.9876} },
+{ data: { source: 'DCP2', target: 'EDC3', directed: 'false', weight: 0.9688319999999999} },
+{ data: { source: 'DCP2', target: 'DDX6', directed: 'false', weight: 0.0246962} },
+{ data: { source: 'EDC3', target: 'DDX6', directed: 'false', weight: 0.9996430000000001} },
+{ data: { source: 'EDC3', target: 'EDC4', directed: 'false', weight: 0.5331319999999999} },
+{ data: { source: 'DDX6', target: 'EDC4', directed: 'false', weight: 0.987593} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Decapping complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

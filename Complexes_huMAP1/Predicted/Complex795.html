@@ -1,0 +1,146 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 Prefoldin complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex796.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'LRCH3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96II8" }},
+{data: { id: 'PDRG1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9NUG6" }},
+{data: { id: 'RPAP3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H6T3" }},
+{data: { id: 'URI1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94763" }},
+{data: { id: 'VBP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61758" }},
+{data: { id: 'PFDN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UHV9" }},
+{data: { id: 'WDR92', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q96MX6" }},
+{data: { id: 'PIH1D1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NWS0" }},
+{data: { id: 'UXT', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UBK9" }},
+{data: { id: 'PFDN6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15212" }},
+{data: { id: 'POLR3E', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NVU0" }}], 
+ edges: [{ data: { source: 'VBP1', target: 'PDRG1', directed: 'false', weight: 0.9369040000000001} },
+{ data: { source: 'VBP1', target: 'PFDN2', directed: 'false', weight: 0.9143889999999999} },
+{ data: { source: 'VBP1', target: 'PFDN6', directed: 'false', weight: 0.8405969999999999} },
+{ data: { source: 'POLR3E', target: 'URI1', directed: 'false', weight: 0.5} },
+{ data: { source: 'POLR3E', target: 'WDR92', directed: 'false', weight: 0.345713} },
+{ data: { source: 'POLR3E', target: 'RPAP3', directed: 'false', weight: 0.30286} },
+{ data: { source: 'POLR3E', target: 'PIH1D1', directed: 'false', weight: 0.286828} },
+{ data: { source: 'POLR3E', target: 'UXT', directed: 'false', weight: 0.150085} },
+{ data: { source: 'POLR3E', target: 'LRCH3', directed: 'false', weight: 0.128057} },
+{ data: { source: 'WDR92', target: 'PIH1D1', directed: 'false', weight: 0.999973} },
+{ data: { source: 'WDR92', target: 'RPAP3', directed: 'false', weight: 0.990978} },
+{ data: { source: 'WDR92', target: 'URI1', directed: 'false', weight: 0.9102879999999999} },
+{ data: { source: 'WDR92', target: 'PDRG1', directed: 'false', weight: 0.761934} },
+{ data: { source: 'WDR92', target: 'UXT', directed: 'false', weight: 0.228106} },
+{ data: { source: 'WDR92', target: 'LRCH3', directed: 'false', weight: 0.0598474} },
+{ data: { source: 'PDRG1', target: 'PIH1D1', directed: 'false', weight: 0.999928} },
+{ data: { source: 'PDRG1', target: 'PFDN2', directed: 'false', weight: 0.9972479999999999} },
+{ data: { source: 'PDRG1', target: 'URI1', directed: 'false', weight: 0.9871209999999999} },
+{ data: { source: 'PDRG1', target: 'RPAP3', directed: 'false', weight: 0.852706} },
+{ data: { source: 'PDRG1', target: 'UXT', directed: 'false', weight: 0.270931} },
+{ data: { source: 'PDRG1', target: 'LRCH3', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'PFDN6', target: 'PFDN2', directed: 'false', weight: 0.9904569999999999} },
+{ data: { source: 'URI1', target: 'PIH1D1', directed: 'false', weight: 0.999966} },
+{ data: { source: 'URI1', target: 'RPAP3', directed: 'false', weight: 0.9992969999999999} },
+{ data: { source: 'URI1', target: 'UXT', directed: 'false', weight: 0.523566} },
+{ data: { source: 'URI1', target: 'LRCH3', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'UXT', target: 'PIH1D1', directed: 'false', weight: 0.9459190000000001} },
+{ data: { source: 'UXT', target: 'RPAP3', directed: 'false', weight: 0.6363880000000001} },
+{ data: { source: 'UXT', target: 'LRCH3', directed: 'false', weight: 0.115255} },
+{ data: { source: 'LRCH3', target: 'PIH1D1', directed: 'false', weight: 0.9803270000000001} },
+{ data: { source: 'LRCH3', target: 'RPAP3', directed: 'false', weight: 0.128057} },
+{ data: { source: 'PIH1D1', target: 'RPAP3', directed: 'false', weight: 0.999424} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 Prefoldin complex<br> Complex Score (from Super.Complex) = 0.57383<br> Unweighted Density = 0.58
+    </section>
+    </body>
+    </html>
+    

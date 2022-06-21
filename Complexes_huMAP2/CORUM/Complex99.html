@@ -1,0 +1,97 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 Intraflagellar transport complex B peripheral subcomplex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex100.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'IFT172', score: 5, href: "https://www.uniprot.org/uniprot/Q9UG01" }},
+{data: { id: 'IFT80', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2H3" }},
+{data: { id: 'IFT57', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWB7" }},
+{data: { id: 'IFT20', score: 5, href: "https://www.uniprot.org/uniprot/Q8IY31" }},
+{data: { id: 'TRAF3IP1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDR0" }}], 
+ edges: [{ data: { source: 'IFT172', target: 'IFT57', directed: 'false', weight: 0.998351} },
+{ data: { source: 'IFT172', target: 'IFT80', directed: 'false', weight: 0.12648800000000002} },
+{ data: { source: 'IFT172', target: 'IFT20', directed: 'false', weight: 0.06438819999999999} },
+{ data: { source: 'IFT172', target: 'TRAF3IP1', directed: 'false', weight: 0.0292575} },
+{ data: { source: 'IFT80', target: 'IFT57', directed: 'false', weight: 0.999948} },
+{ data: { source: 'IFT80', target: 'IFT20', directed: 'false', weight: 0.0807502} },
+{ data: { source: 'IFT80', target: 'TRAF3IP1', directed: 'false', weight: 0.0377014} },
+{ data: { source: 'IFT20', target: 'IFT57', directed: 'false', weight: 0.9988299999999999} },
+{ data: { source: 'IFT20', target: 'TRAF3IP1', directed: 'false', weight: 0.101287} },
+{ data: { source: 'IFT57', target: 'TRAF3IP1', directed: 'false', weight: 0.9914850000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 Intraflagellar transport complex B peripheral subcomplex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

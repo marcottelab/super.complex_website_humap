@@ -1,0 +1,171 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 AK2-FADD-caspase-10 (AFAC10) complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex490.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TAGLN3', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9UI15" }},
+{data: { id: 'AKR1B15', score: 5, type: '', href: "https://www.uniprot.org/uniprot/C9JRZ8" }},
+{data: { id: 'AKR1A1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P14550" }},
+{data: { id: 'UBE2F', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q969M7" }},
+{data: { id: 'TIA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P31483" }},
+{data: { id: 'GSR', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P00390" }},
+{data: { id: 'ATOX1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00244" }},
+{data: { id: 'GSTP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09211" }},
+{data: { id: 'MDH2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P40926" }},
+{data: { id: 'TIAL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q01085" }},
+{data: { id: 'ATP6V1C1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P21283" }},
+{data: { id: 'AKR1D1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P51857" }},
+{data: { id: 'AK2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P54819" }}], 
+ edges: [{ data: { source: 'GSTP1', target: 'TIAL1', directed: 'false', weight: 0.89036} },
+{ data: { source: 'GSTP1', target: 'TIA1', directed: 'false', weight: 0.572371} },
+{ data: { source: 'GSTP1', target: 'UBE2F', directed: 'false', weight: 0.36845900000000004} },
+{ data: { source: 'GSTP1', target: 'ATOX1', directed: 'false', weight: 0.347502} },
+{ data: { source: 'GSTP1', target: 'MDH2', directed: 'false', weight: 0.192961} },
+{ data: { source: 'GSTP1', target: 'AK2', directed: 'false', weight: 0.0484821} },
+{ data: { source: 'GSTP1', target: 'ATP6V1C1', directed: 'false', weight: 0.0261783} },
+{ data: { source: 'ATP6V1C1', target: 'TAGLN3', directed: 'false', weight: 0.9886729999999999} },
+{ data: { source: 'ATP6V1C1', target: 'MDH2', directed: 'false', weight: 0.9748120000000001} },
+{ data: { source: 'ATP6V1C1', target: 'ATOX1', directed: 'false', weight: 0.641418} },
+{ data: { source: 'ATP6V1C1', target: 'UBE2F', directed: 'false', weight: 0.58199} },
+{ data: { source: 'ATP6V1C1', target: 'TIAL1', directed: 'false', weight: 0.479415} },
+{ data: { source: 'ATP6V1C1', target: 'AK2', directed: 'false', weight: 0.306795} },
+{ data: { source: 'ATP6V1C1', target: 'TIA1', directed: 'false', weight: 0.280493} },
+{ data: { source: 'ATP6V1C1', target: 'GSR', directed: 'false', weight: 0.1283} },
+{ data: { source: 'ATP6V1C1', target: 'AKR1A1', directed: 'false', weight: 0.050529000000000004} },
+{ data: { source: 'AKR1A1', target: 'ATOX1', directed: 'false', weight: 0.812706} },
+{ data: { source: 'AKR1A1', target: 'AK2', directed: 'false', weight: 0.789549} },
+{ data: { source: 'AKR1A1', target: 'MDH2', directed: 'false', weight: 0.712812} },
+{ data: { source: 'AKR1A1', target: 'TIA1', directed: 'false', weight: 0.70208} },
+{ data: { source: 'AKR1A1', target: 'TIAL1', directed: 'false', weight: 0.446011} },
+{ data: { source: 'AKR1A1', target: 'UBE2F', directed: 'false', weight: 0.401952} },
+{ data: { source: 'AKR1A1', target: 'GSR', directed: 'false', weight: 0.0219215} },
+{ data: { source: 'ATOX1', target: 'AKR1B15', directed: 'false', weight: 0.661524} },
+{ data: { source: 'ATOX1', target: 'AKR1D1', directed: 'false', weight: 0.648806} },
+{ data: { source: 'ATOX1', target: 'UBE2F', directed: 'false', weight: 0.6225350000000001} },
+{ data: { source: 'ATOX1', target: 'MDH2', directed: 'false', weight: 0.489332} },
+{ data: { source: 'ATOX1', target: 'TIAL1', directed: 'false', weight: 0.417182} },
+{ data: { source: 'ATOX1', target: 'GSR', directed: 'false', weight: 0.260164} },
+{ data: { source: 'ATOX1', target: 'AK2', directed: 'false', weight: 0.129496} },
+{ data: { source: 'ATOX1', target: 'TIA1', directed: 'false', weight: 0.0818812} },
+{ data: { source: 'MDH2', target: 'GSR', directed: 'false', weight: 0.980158} },
+{ data: { source: 'MDH2', target: 'TIAL1', directed: 'false', weight: 0.948685} },
+{ data: { source: 'MDH2', target: 'AKR1D1', directed: 'false', weight: 0.92001} },
+{ data: { source: 'MDH2', target: 'TIA1', directed: 'false', weight: 0.9199290000000001} },
+{ data: { source: 'MDH2', target: 'AK2', directed: 'false', weight: 0.848562} },
+{ data: { source: 'MDH2', target: 'UBE2F', directed: 'false', weight: 0.755406} },
+{ data: { source: 'MDH2', target: 'AKR1B15', directed: 'false', weight: 0.6509590000000001} },
+{ data: { source: 'TIA1', target: 'TIAL1', directed: 'false', weight: 0.775278} },
+{ data: { source: 'TIA1', target: 'AKR1D1', directed: 'false', weight: 0.398521} },
+{ data: { source: 'TIA1', target: 'AKR1B15', directed: 'false', weight: 0.379737} },
+{ data: { source: 'TIA1', target: 'GSR', directed: 'false', weight: 0.31474} },
+{ data: { source: 'TIA1', target: 'UBE2F', directed: 'false', weight: 0.18046099999999998} },
+{ data: { source: 'TIA1', target: 'AK2', directed: 'false', weight: 0.086815} },
+{ data: { source: 'TIAL1', target: 'UBE2F', directed: 'false', weight: 0.562333} },
+{ data: { source: 'TIAL1', target: 'AKR1D1', directed: 'false', weight: 0.41032700000000005} },
+{ data: { source: 'TIAL1', target: 'AKR1B15', directed: 'false', weight: 0.35636799999999996} },
+{ data: { source: 'TIAL1', target: 'GSR', directed: 'false', weight: 0.154872} },
+{ data: { source: 'TIAL1', target: 'AK2', directed: 'false', weight: 0.00872231} },
+{ data: { source: 'AK2', target: 'AKR1B15', directed: 'false', weight: 0.96031} },
+{ data: { source: 'AK2', target: 'AKR1D1', directed: 'false', weight: 0.6635850000000001} },
+{ data: { source: 'AK2', target: 'UBE2F', directed: 'false', weight: 0.22266} },
+{ data: { source: 'AK2', target: 'GSR', directed: 'false', weight: 0.0491783} },
+{ data: { source: 'UBE2F', target: 'GSR', directed: 'false', weight: 0.54474} },
+{ data: { source: 'UBE2F', target: 'AKR1B15', directed: 'false', weight: 0.049625800000000005} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 AK2-FADD-caspase-10 (AFAC10) complex<br> Complex Score (from Super.Complex) = 0.69596<br> Unweighted Density = 0.71
+    </section>
+    </body>
+    </html>
+    

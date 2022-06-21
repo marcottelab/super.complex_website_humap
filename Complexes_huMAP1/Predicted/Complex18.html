@@ -1,0 +1,288 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.5 Anaphase-promoting complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex19.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ANAPC15', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P60006" }},
+{data: { id: 'NEK2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P51955" }},
+{data: { id: 'CDC23', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UJX2" }},
+{data: { id: 'ANAPC16', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96DE5" }},
+{data: { id: 'ANAPC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H1A4" }},
+{data: { id: 'ANAPC5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UJX4" }},
+{data: { id: 'ANAPC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UJX6" }},
+{data: { id: 'FBXO5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UKT4" }},
+{data: { id: 'ANAPC4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UJX5" }},
+{data: { id: 'GNPTAB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q3T906" }},
+{data: { id: 'CDC16', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13042" }},
+{data: { id: 'FZR1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UM11" }},
+{data: { id: 'CDC20', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12834" }},
+{data: { id: 'CDC27', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30260" }},
+{data: { id: 'GNPTG', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UJJ9" }},
+{data: { id: 'CDC26', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NHZ8" }},
+{data: { id: 'ANAPC10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UM13" }},
+{data: { id: 'ANAPC7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UJX3" }},
+{data: { id: 'ANAPC13', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9BS18" }}], 
+ edges: [{ data: { source: 'NEK2', target: 'ANAPC2', directed: 'false', weight: 0.973103} },
+{ data: { source: 'NEK2', target: 'ANAPC15', directed: 'false', weight: 0.898101} },
+{ data: { source: 'NEK2', target: 'CDC16', directed: 'false', weight: 0.87136} },
+{ data: { source: 'NEK2', target: 'ANAPC10', directed: 'false', weight: 0.766149} },
+{ data: { source: 'NEK2', target: 'CDC23', directed: 'false', weight: 0.751808} },
+{ data: { source: 'NEK2', target: 'CDC26', directed: 'false', weight: 0.723186} },
+{ data: { source: 'NEK2', target: 'ANAPC4', directed: 'false', weight: 0.600925} },
+{ data: { source: 'NEK2', target: 'ANAPC16', directed: 'false', weight: 0.589825} },
+{ data: { source: 'NEK2', target: 'GNPTG', directed: 'false', weight: 0.5} },
+{ data: { source: 'NEK2', target: 'ANAPC5', directed: 'false', weight: 0.48273299999999997} },
+{ data: { source: 'NEK2', target: 'FBXO5', directed: 'false', weight: 0.459611} },
+{ data: { source: 'NEK2', target: 'ANAPC13', directed: 'false', weight: 0.459611} },
+{ data: { source: 'NEK2', target: 'GNPTAB', directed: 'false', weight: 0.398094} },
+{ data: { source: 'NEK2', target: 'FZR1', directed: 'false', weight: 0.345306} },
+{ data: { source: 'NEK2', target: 'CDC20', directed: 'false', weight: 0.23341199999999998} },
+{ data: { source: 'NEK2', target: 'ANAPC7', directed: 'false', weight: 0.160884} },
+{ data: { source: 'NEK2', target: 'ANAPC1', directed: 'false', weight: 0.09290019999999999} },
+{ data: { source: 'NEK2', target: 'CDC27', directed: 'false', weight: 0.0775497} },
+{ data: { source: 'ANAPC15', target: 'ANAPC13', directed: 'false', weight: 0.9985129999999999} },
+{ data: { source: 'ANAPC15', target: 'CDC16', directed: 'false', weight: 0.9983620000000001} },
+{ data: { source: 'ANAPC15', target: 'ANAPC16', directed: 'false', weight: 0.997025} },
+{ data: { source: 'ANAPC15', target: 'ANAPC2', directed: 'false', weight: 0.995014} },
+{ data: { source: 'ANAPC15', target: 'CDC23', directed: 'false', weight: 0.9916370000000001} },
+{ data: { source: 'ANAPC15', target: 'FZR1', directed: 'false', weight: 0.989333} },
+{ data: { source: 'ANAPC15', target: 'CDC26', directed: 'false', weight: 0.989168} },
+{ data: { source: 'ANAPC15', target: 'ANAPC5', directed: 'false', weight: 0.9819040000000001} },
+{ data: { source: 'ANAPC15', target: 'ANAPC7', directed: 'false', weight: 0.979943} },
+{ data: { source: 'ANAPC15', target: 'FBXO5', directed: 'false', weight: 0.977512} },
+{ data: { source: 'ANAPC15', target: 'CDC27', directed: 'false', weight: 0.9749959999999999} },
+{ data: { source: 'ANAPC15', target: 'ANAPC10', directed: 'false', weight: 0.970828} },
+{ data: { source: 'ANAPC15', target: 'ANAPC1', directed: 'false', weight: 0.9663299999999999} },
+{ data: { source: 'ANAPC15', target: 'ANAPC4', directed: 'false', weight: 0.945103} },
+{ data: { source: 'ANAPC15', target: 'GNPTG', directed: 'false', weight: 0.940002} },
+{ data: { source: 'ANAPC15', target: 'CDC20', directed: 'false', weight: 0.824809} },
+{ data: { source: 'ANAPC15', target: 'GNPTAB', directed: 'false', weight: 0.816426} },
+{ data: { source: 'GNPTAB', target: 'GNPTG', directed: 'false', weight: 0.938103} },
+{ data: { source: 'GNPTAB', target: 'ANAPC2', directed: 'false', weight: 0.847341} },
+{ data: { source: 'GNPTAB', target: 'CDC23', directed: 'false', weight: 0.5756979999999999} },
+{ data: { source: 'GNPTAB', target: 'CDC16', directed: 'false', weight: 0.568964} },
+{ data: { source: 'GNPTAB', target: 'ANAPC10', directed: 'false', weight: 0.5} },
+{ data: { source: 'GNPTAB', target: 'FBXO5', directed: 'false', weight: 0.44267399999999996} },
+{ data: { source: 'GNPTAB', target: 'ANAPC13', directed: 'false', weight: 0.44267399999999996} },
+{ data: { source: 'GNPTAB', target: 'CDC26', directed: 'false', weight: 0.430015} },
+{ data: { source: 'GNPTAB', target: 'FZR1', directed: 'false', weight: 0.398094} },
+{ data: { source: 'GNPTAB', target: 'ANAPC4', directed: 'false', weight: 0.398094} },
+{ data: { source: 'GNPTAB', target: 'ANAPC7', directed: 'false', weight: 0.359668} },
+{ data: { source: 'GNPTAB', target: 'ANAPC5', directed: 'false', weight: 0.332343} },
+{ data: { source: 'GNPTAB', target: 'ANAPC16', directed: 'false', weight: 0.332343} },
+{ data: { source: 'GNPTAB', target: 'ANAPC1', directed: 'false', weight: 0.32260900000000003} },
+{ data: { source: 'GNPTAB', target: 'CDC20', directed: 'false', weight: 0.264422} },
+{ data: { source: 'GNPTAB', target: 'CDC27', directed: 'false', weight: 0.23210300000000003} },
+{ data: { source: 'FZR1', target: 'ANAPC2', directed: 'false', weight: 0.997002} },
+{ data: { source: 'FZR1', target: 'CDC16', directed: 'false', weight: 0.9931110000000001} },
+{ data: { source: 'FZR1', target: 'CDC26', directed: 'false', weight: 0.988398} },
+{ data: { source: 'FZR1', target: 'CDC23', directed: 'false', weight: 0.975175} },
+{ data: { source: 'FZR1', target: 'ANAPC16', directed: 'false', weight: 0.9528120000000001} },
+{ data: { source: 'FZR1', target: 'CDC27', directed: 'false', weight: 0.5851029999999999} },
+{ data: { source: 'FZR1', target: 'ANAPC1', directed: 'false', weight: 0.582678} },
+{ data: { source: 'FZR1', target: 'ANAPC4', directed: 'false', weight: 0.547642} },
+{ data: { source: 'FZR1', target: 'ANAPC7', directed: 'false', weight: 0.5375880000000001} },
+{ data: { source: 'FZR1', target: 'ANAPC10', directed: 'false', weight: 0.535428} },
+{ data: { source: 'FZR1', target: 'GNPTG', directed: 'false', weight: 0.5} },
+{ data: { source: 'FZR1', target: 'FBXO5', directed: 'false', weight: 0.459611} },
+{ data: { source: 'FZR1', target: 'ANAPC13', directed: 'false', weight: 0.459611} },
+{ data: { source: 'FZR1', target: 'CDC20', directed: 'false', weight: 0.35570799999999997} },
+{ data: { source: 'FZR1', target: 'ANAPC5', directed: 'false', weight: 0.314881} },
+{ data: { source: 'FBXO5', target: 'ANAPC2', directed: 'false', weight: 0.9877520000000001} },
+{ data: { source: 'FBXO5', target: 'CDC23', directed: 'false', weight: 0.931407} },
+{ data: { source: 'FBXO5', target: 'CDC16', directed: 'false', weight: 0.7689729999999999} },
+{ data: { source: 'FBXO5', target: 'ANAPC10', directed: 'false', weight: 0.594016} },
+{ data: { source: 'FBXO5', target: 'GNPTG', directed: 'false', weight: 0.541415} },
+{ data: { source: 'FBXO5', target: 'ANAPC13', directed: 'false', weight: 0.519755} },
+{ data: { source: 'FBXO5', target: 'CDC26', directed: 'false', weight: 0.483016} },
+{ data: { source: 'FBXO5', target: 'ANAPC4', directed: 'false', weight: 0.459611} },
+{ data: { source: 'FBXO5', target: 'ANAPC7', directed: 'false', weight: 0.40967200000000004} },
+{ data: { source: 'FBXO5', target: 'ANAPC16', directed: 'false', weight: 0.404656} },
+{ data: { source: 'FBXO5', target: 'ANAPC5', directed: 'false', weight: 0.366471} },
+{ data: { source: 'FBXO5', target: 'ANAPC1', directed: 'false', weight: 0.304773} },
+{ data: { source: 'FBXO5', target: 'CDC20', directed: 'false', weight: 0.27932399999999996} },
+{ data: { source: 'FBXO5', target: 'CDC27', directed: 'false', weight: 0.237979} },
+{ data: { source: 'ANAPC5', target: 'ANAPC1', directed: 'false', weight: 0.999994} },
+{ data: { source: 'ANAPC5', target: 'CDC16', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'ANAPC5', target: 'ANAPC16', directed: 'false', weight: 0.999973} },
+{ data: { source: 'ANAPC5', target: 'CDC23', directed: 'false', weight: 0.9998440000000001} },
+{ data: { source: 'ANAPC5', target: 'ANAPC2', directed: 'false', weight: 0.999231} },
+{ data: { source: 'ANAPC5', target: 'ANAPC4', directed: 'false', weight: 0.99702} },
+{ data: { source: 'ANAPC5', target: 'CDC26', directed: 'false', weight: 0.993398} },
+{ data: { source: 'ANAPC5', target: 'CDC27', directed: 'false', weight: 0.972291} },
+{ data: { source: 'ANAPC5', target: 'ANAPC13', directed: 'false', weight: 0.971139} },
+{ data: { source: 'ANAPC5', target: 'ANAPC7', directed: 'false', weight: 0.9229649999999999} },
+{ data: { source: 'ANAPC5', target: 'ANAPC10', directed: 'false', weight: 0.666568} },
+{ data: { source: 'ANAPC5', target: 'GNPTG', directed: 'false', weight: 0.42503500000000005} },
+{ data: { source: 'ANAPC5', target: 'CDC20', directed: 'false', weight: 0.134666} },
+{ data: { source: 'CDC26', target: 'ANAPC16', directed: 'false', weight: 0.9999459999999999} },
+{ data: { source: 'CDC26', target: 'ANAPC1', directed: 'false', weight: 0.999868} },
+{ data: { source: 'CDC26', target: 'CDC27', directed: 'false', weight: 0.9997520000000001} },
+{ data: { source: 'CDC26', target: 'CDC16', directed: 'false', weight: 0.9995069999999999} },
+{ data: { source: 'CDC26', target: 'ANAPC7', directed: 'false', weight: 0.999395} },
+{ data: { source: 'CDC26', target: 'ANAPC4', directed: 'false', weight: 0.9962469999999999} },
+{ data: { source: 'CDC26', target: 'CDC23', directed: 'false', weight: 0.9957739999999999} },
+{ data: { source: 'CDC26', target: 'ANAPC13', directed: 'false', weight: 0.99497} },
+{ data: { source: 'CDC26', target: 'ANAPC2', directed: 'false', weight: 0.9940200000000001} },
+{ data: { source: 'CDC26', target: 'ANAPC10', directed: 'false', weight: 0.988014} },
+{ data: { source: 'CDC26', target: 'GNPTG', directed: 'false', weight: 0.8258700000000001} },
+{ data: { source: 'CDC26', target: 'CDC20', directed: 'false', weight: 0.813231} },
+{ data: { source: 'CDC23', target: 'ANAPC16', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC23', target: 'CDC27', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'CDC23', target: 'CDC16', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'CDC23', target: 'ANAPC4', directed: 'false', weight: 0.9999530000000001} },
+{ data: { source: 'CDC23', target: 'ANAPC7', directed: 'false', weight: 0.9998790000000001} },
+{ data: { source: 'CDC23', target: 'ANAPC1', directed: 'false', weight: 0.999668} },
+{ data: { source: 'CDC23', target: 'ANAPC2', directed: 'false', weight: 0.999333} },
+{ data: { source: 'CDC23', target: 'ANAPC10', directed: 'false', weight: 0.9986360000000001} },
+{ data: { source: 'CDC23', target: 'ANAPC13', directed: 'false', weight: 0.9808629999999999} },
+{ data: { source: 'CDC23', target: 'GNPTG', directed: 'false', weight: 0.784483} },
+{ data: { source: 'CDC23', target: 'CDC20', directed: 'false', weight: 0.597156} },
+{ data: { source: 'GNPTG', target: 'ANAPC2', directed: 'false', weight: 0.984017} },
+{ data: { source: 'GNPTG', target: 'CDC16', directed: 'false', weight: 0.933377} },
+{ data: { source: 'GNPTG', target: 'ANAPC10', directed: 'false', weight: 0.594072} },
+{ data: { source: 'GNPTG', target: 'ANAPC13', directed: 'false', weight: 0.541415} },
+{ data: { source: 'GNPTG', target: 'ANAPC4', directed: 'false', weight: 0.5} },
+{ data: { source: 'GNPTG', target: 'ANAPC7', directed: 'false', weight: 0.45839399999999997} },
+{ data: { source: 'GNPTG', target: 'ANAPC16', directed: 'false', weight: 0.42503500000000005} },
+{ data: { source: 'GNPTG', target: 'ANAPC1', directed: 'false', weight: 0.40961899999999996} },
+{ data: { source: 'GNPTG', target: 'CDC20', directed: 'false', weight: 0.348339} },
+{ data: { source: 'GNPTG', target: 'CDC27', directed: 'false', weight: 0.31009699999999996} },
+{ data: { source: 'CDC27', target: 'ANAPC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC27', target: 'ANAPC16', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC27', target: 'CDC16', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'CDC27', target: 'ANAPC4', directed: 'false', weight: 0.9997510000000001} },
+{ data: { source: 'CDC27', target: 'ANAPC2', directed: 'false', weight: 0.998858} },
+{ data: { source: 'CDC27', target: 'ANAPC7', directed: 'false', weight: 0.996358} },
+{ data: { source: 'CDC27', target: 'ANAPC10', directed: 'false', weight: 0.983292} },
+{ data: { source: 'CDC27', target: 'ANAPC13', directed: 'false', weight: 0.9544819999999999} },
+{ data: { source: 'CDC27', target: 'CDC20', directed: 'false', weight: 0.385721} },
+{ data: { source: 'CDC20', target: 'CDC16', directed: 'false', weight: 0.7954220000000001} },
+{ data: { source: 'CDC20', target: 'ANAPC2', directed: 'false', weight: 0.748296} },
+{ data: { source: 'CDC20', target: 'ANAPC13', directed: 'false', weight: 0.715738} },
+{ data: { source: 'CDC20', target: 'ANAPC16', directed: 'false', weight: 0.661421} },
+{ data: { source: 'CDC20', target: 'ANAPC1', directed: 'false', weight: 0.6508520000000001} },
+{ data: { source: 'CDC20', target: 'ANAPC10', directed: 'false', weight: 0.344467} },
+{ data: { source: 'CDC20', target: 'ANAPC7', directed: 'false', weight: 0.244573} },
+{ data: { source: 'CDC20', target: 'ANAPC4', directed: 'false', weight: 0.23341199999999998} },
+{ data: { source: 'ANAPC16', target: 'ANAPC1', directed: 'false', weight: 0.999994} },
+{ data: { source: 'ANAPC16', target: 'ANAPC7', directed: 'false', weight: 0.999984} },
+{ data: { source: 'ANAPC16', target: 'CDC16', directed: 'false', weight: 0.9998809999999999} },
+{ data: { source: 'ANAPC16', target: 'ANAPC4', directed: 'false', weight: 0.999761} },
+{ data: { source: 'ANAPC16', target: 'ANAPC2', directed: 'false', weight: 0.999583} },
+{ data: { source: 'ANAPC16', target: 'ANAPC13', directed: 'false', weight: 0.993783} },
+{ data: { source: 'ANAPC16', target: 'ANAPC10', directed: 'false', weight: 0.930883} },
+{ data: { source: 'ANAPC7', target: 'CDC16', directed: 'false', weight: 0.9990690000000001} },
+{ data: { source: 'ANAPC7', target: 'ANAPC1', directed: 'false', weight: 0.9987729999999999} },
+{ data: { source: 'ANAPC7', target: 'ANAPC2', directed: 'false', weight: 0.997834} },
+{ data: { source: 'ANAPC7', target: 'ANAPC4', directed: 'false', weight: 0.995727} },
+{ data: { source: 'ANAPC7', target: 'ANAPC13', directed: 'false', weight: 0.9907860000000001} },
+{ data: { source: 'ANAPC7', target: 'ANAPC10', directed: 'false', weight: 0.9837790000000001} },
+{ data: { source: 'ANAPC13', target: 'CDC16', directed: 'false', weight: 0.9995780000000001} },
+{ data: { source: 'ANAPC13', target: 'ANAPC2', directed: 'false', weight: 0.9923879999999999} },
+{ data: { source: 'ANAPC13', target: 'ANAPC1', directed: 'false', weight: 0.9790969999999999} },
+{ data: { source: 'ANAPC13', target: 'ANAPC4', directed: 'false', weight: 0.604316} },
+{ data: { source: 'ANAPC13', target: 'ANAPC10', directed: 'false', weight: 0.397627} },
+{ data: { source: 'ANAPC2', target: 'CDC16', directed: 'false', weight: 0.999942} },
+{ data: { source: 'ANAPC2', target: 'ANAPC4', directed: 'false', weight: 0.9999290000000001} },
+{ data: { source: 'ANAPC2', target: 'ANAPC10', directed: 'false', weight: 0.999826} },
+{ data: { source: 'ANAPC2', target: 'ANAPC1', directed: 'false', weight: 0.999275} },
+{ data: { source: 'ANAPC1', target: 'CDC16', directed: 'false', weight: 1.0} },
+{ data: { source: 'ANAPC1', target: 'ANAPC4', directed: 'false', weight: 0.9883540000000001} },
+{ data: { source: 'ANAPC1', target: 'ANAPC10', directed: 'false', weight: 0.586332} },
+{ data: { source: 'ANAPC4', target: 'CDC16', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'ANAPC4', target: 'ANAPC10', directed: 'false', weight: 0.993504} },
+{ data: { source: 'CDC16', target: 'ANAPC10', directed: 'false', weight: 0.999868} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.5 Anaphase-promoting complex<br> Complex Score (from Super.Complex) = 0.97559<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

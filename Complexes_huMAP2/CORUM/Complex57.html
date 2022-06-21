@@ -1,0 +1,109 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> LSm2-8 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex58.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'LSM4', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4Z0" }},
+{data: { id: 'LSM5', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4Y9" }},
+{data: { id: 'LSM3', score: 5, href: "https://www.uniprot.org/uniprot/P62310" }},
+{data: { id: 'LSM8', score: 5, href: "https://www.uniprot.org/uniprot/O95777" }},
+{data: { id: 'LSM6', score: 5, href: "https://www.uniprot.org/uniprot/P62312" }},
+{data: { id: 'LSM7', score: 5, href: "https://www.uniprot.org/uniprot/Q9UK45" }},
+{data: { id: 'LSM2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y333" }}], 
+ edges: [{ data: { source: 'LSM4', target: 'LSM8', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'LSM4', target: 'LSM2', directed: 'false', weight: 0.9999809999999999} },
+{ data: { source: 'LSM4', target: 'LSM6', directed: 'false', weight: 0.999975} },
+{ data: { source: 'LSM4', target: 'LSM3', directed: 'false', weight: 0.958513} },
+{ data: { source: 'LSM4', target: 'LSM5', directed: 'false', weight: 0.520421} },
+{ data: { source: 'LSM2', target: 'LSM6', directed: 'false', weight: 1.0} },
+{ data: { source: 'LSM2', target: 'LSM8', directed: 'false', weight: 1.0} },
+{ data: { source: 'LSM2', target: 'LSM3', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'LSM2', target: 'LSM7', directed: 'false', weight: 0.952297} },
+{ data: { source: 'LSM2', target: 'LSM5', directed: 'false', weight: 0.49153500000000006} },
+{ data: { source: 'LSM5', target: 'LSM8', directed: 'false', weight: 0.48431} },
+{ data: { source: 'LSM5', target: 'LSM6', directed: 'false', weight: 0.45104399999999994} },
+{ data: { source: 'LSM5', target: 'LSM7', directed: 'false', weight: 0.083678} },
+{ data: { source: 'LSM5', target: 'LSM3', directed: 'false', weight: 0.037582199999999996} },
+{ data: { source: 'LSM8', target: 'LSM6', directed: 'false', weight: 1.0} },
+{ data: { source: 'LSM8', target: 'LSM3', directed: 'false', weight: 1.0} },
+{ data: { source: 'LSM8', target: 'LSM7', directed: 'false', weight: 0.9445530000000001} },
+{ data: { source: 'LSM6', target: 'LSM3', directed: 'false', weight: 1.0} },
+{ data: { source: 'LSM6', target: 'LSM7', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'LSM7', target: 'LSM3', directed: 'false', weight: 0.999017} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    LSm2-8 complex	<br> Unweighted Density = 0.95
+    </section>
+    </body>
+    </html>
+    

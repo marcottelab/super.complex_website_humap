@@ -1,0 +1,222 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.3 Septin complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex553.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'XRN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H0D6" }},
+{data: { id: 'SEPTIN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UH03" }},
+{data: { id: 'CDC42EP4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H3Q1" }},
+{data: { id: 'RNF40', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75150" }},
+{data: { id: 'CDKN2AIP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NXV6" }},
+{data: { id: 'SEPTIN9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UHD8" }},
+{data: { id: 'PCMTD2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NV79" }},
+{data: { id: 'SEPTIN14', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6ZU15" }},
+{data: { id: 'SEPTIN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15019" }},
+{data: { id: 'SEPTIN12', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IYM1" }},
+{data: { id: 'ANLN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NQW6" }},
+{data: { id: 'SEPTIN8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92599" }},
+{data: { id: 'SEPTIN5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99719" }},
+{data: { id: 'SEPTIN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WYJ6" }},
+{data: { id: 'SEPTIN7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16181" }},
+{data: { id: 'SEPTIN10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P0V9" }},
+{data: { id: 'SEPTIN4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43236" }},
+{data: { id: 'SEPTIN6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14141" }},
+{data: { id: 'SEPTIN11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NVA2" }}], 
+ edges: [{ data: { source: 'SEPTIN11', target: 'SEPTIN6', directed: 'false', weight: 0.9999809999999999} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN9', directed: 'false', weight: 0.999885} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN5', directed: 'false', weight: 0.9997389999999999} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN8', directed: 'false', weight: 0.99941} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN10', directed: 'false', weight: 0.9993059999999999} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN2', directed: 'false', weight: 0.998223} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN4', directed: 'false', weight: 0.9812299999999999} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN7', directed: 'false', weight: 0.9699549999999999} },
+{ data: { source: 'SEPTIN11', target: 'CDC42EP4', directed: 'false', weight: 0.9081389999999999} },
+{ data: { source: 'SEPTIN11', target: 'RNF40', directed: 'false', weight: 0.846317} },
+{ data: { source: 'SEPTIN11', target: 'ANLN', directed: 'false', weight: 0.8457290000000001} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN3', directed: 'false', weight: 0.7786850000000001} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN1', directed: 'false', weight: 0.402524} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN12', directed: 'false', weight: 0.250232} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN14', directed: 'false', weight: 0.200625} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN10', directed: 'false', weight: 0.999561} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN6', directed: 'false', weight: 0.9981709999999999} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN2', directed: 'false', weight: 0.997885} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN9', directed: 'false', weight: 0.997807} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN5', directed: 'false', weight: 0.9953129999999999} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN7', directed: 'false', weight: 0.9239620000000001} },
+{ data: { source: 'SEPTIN8', target: 'CDC42EP4', directed: 'false', weight: 0.9178290000000001} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN4', directed: 'false', weight: 0.7282689999999999} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN3', directed: 'false', weight: 0.718066} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN1', directed: 'false', weight: 0.32766300000000004} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN12', directed: 'false', weight: 0.22765500000000002} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN14', directed: 'false', weight: 0.21064699999999997} },
+{ data: { source: 'SEPTIN8', target: 'ANLN', directed: 'false', weight: 0.0861316} },
+{ data: { source: 'SEPTIN5', target: 'SEPTIN10', directed: 'false', weight: 0.999857} },
+{ data: { source: 'SEPTIN5', target: 'SEPTIN6', directed: 'false', weight: 0.999442} },
+{ data: { source: 'SEPTIN5', target: 'SEPTIN7', directed: 'false', weight: 0.9961040000000001} },
+{ data: { source: 'SEPTIN5', target: 'SEPTIN2', directed: 'false', weight: 0.995064} },
+{ data: { source: 'SEPTIN5', target: 'SEPTIN4', directed: 'false', weight: 0.837815} },
+{ data: { source: 'SEPTIN5', target: 'SEPTIN9', directed: 'false', weight: 0.743308} },
+{ data: { source: 'SEPTIN5', target: 'SEPTIN1', directed: 'false', weight: 0.721825} },
+{ data: { source: 'SEPTIN5', target: 'SEPTIN3', directed: 'false', weight: 0.705835} },
+{ data: { source: 'SEPTIN5', target: 'CDC42EP4', directed: 'false', weight: 0.38085} },
+{ data: { source: 'SEPTIN5', target: 'SEPTIN14', directed: 'false', weight: 0.238157} },
+{ data: { source: 'SEPTIN5', target: 'SEPTIN12', directed: 'false', weight: 0.148669} },
+{ data: { source: 'SEPTIN12', target: 'SEPTIN2', directed: 'false', weight: 0.426575} },
+{ data: { source: 'SEPTIN12', target: 'SEPTIN10', directed: 'false', weight: 0.397483} },
+{ data: { source: 'SEPTIN12', target: 'SEPTIN6', directed: 'false', weight: 0.346996} },
+{ data: { source: 'SEPTIN12', target: 'SEPTIN7', directed: 'false', weight: 0.187444} },
+{ data: { source: 'SEPTIN12', target: 'SEPTIN3', directed: 'false', weight: 0.155749} },
+{ data: { source: 'SEPTIN12', target: 'SEPTIN9', directed: 'false', weight: 0.13042} },
+{ data: { source: 'SEPTIN12', target: 'SEPTIN4', directed: 'false', weight: 0.094113} },
+{ data: { source: 'CDKN2AIP', target: 'XRN2', directed: 'false', weight: 0.533816} },
+{ data: { source: 'CDKN2AIP', target: 'SEPTIN2', directed: 'false', weight: 0.08205470000000001} },
+{ data: { source: 'RNF40', target: 'SEPTIN6', directed: 'false', weight: 0.44568500000000005} },
+{ data: { source: 'RNF40', target: 'SEPTIN14', directed: 'false', weight: 0.115195} },
+{ data: { source: 'SEPTIN14', target: 'SEPTIN3', directed: 'false', weight: 0.9609110000000001} },
+{ data: { source: 'SEPTIN14', target: 'SEPTIN6', directed: 'false', weight: 0.567948} },
+{ data: { source: 'SEPTIN14', target: 'SEPTIN7', directed: 'false', weight: 0.238157} },
+{ data: { source: 'SEPTIN14', target: 'SEPTIN4', directed: 'false', weight: 0.238157} },
+{ data: { source: 'SEPTIN14', target: 'SEPTIN10', directed: 'false', weight: 0.238157} },
+{ data: { source: 'SEPTIN14', target: 'SEPTIN2', directed: 'false', weight: 0.222827} },
+{ data: { source: 'SEPTIN14', target: 'SEPTIN9', directed: 'false', weight: 0.222827} },
+{ data: { source: 'SEPTIN14', target: 'PCMTD2', directed: 'false', weight: 0.10556600000000001} },
+{ data: { source: 'ANLN', target: 'SEPTIN6', directed: 'false', weight: 0.743337} },
+{ data: { source: 'ANLN', target: 'SEPTIN7', directed: 'false', weight: 0.24015100000000003} },
+{ data: { source: 'ANLN', target: 'SEPTIN2', directed: 'false', weight: 0.143654} },
+{ data: { source: 'ANLN', target: 'SEPTIN9', directed: 'false', weight: 0.0893331} },
+{ data: { source: 'ANLN', target: 'SEPTIN10', directed: 'false', weight: 0.0716123} },
+{ data: { source: 'SEPTIN3', target: 'SEPTIN10', directed: 'false', weight: 0.8786879999999999} },
+{ data: { source: 'SEPTIN3', target: 'SEPTIN7', directed: 'false', weight: 0.8768459999999999} },
+{ data: { source: 'SEPTIN3', target: 'SEPTIN6', directed: 'false', weight: 0.860115} },
+{ data: { source: 'SEPTIN3', target: 'SEPTIN9', directed: 'false', weight: 0.704365} },
+{ data: { source: 'SEPTIN3', target: 'SEPTIN2', directed: 'false', weight: 0.6377229999999999} },
+{ data: { source: 'SEPTIN3', target: 'SEPTIN4', directed: 'false', weight: 0.581171} },
+{ data: { source: 'SEPTIN3', target: 'PCMTD2', directed: 'false', weight: 0.435543} },
+{ data: { source: 'SEPTIN3', target: 'SEPTIN1', directed: 'false', weight: 0.359371} },
+{ data: { source: 'SEPTIN3', target: 'CDC42EP4', directed: 'false', weight: 0.219879} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN4', directed: 'false', weight: 0.9694360000000001} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN9', directed: 'false', weight: 0.455888} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN6', directed: 'false', weight: 0.400644} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN7', directed: 'false', weight: 0.30177} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN10', directed: 'false', weight: 0.289096} },
+{ data: { source: 'SEPTIN1', target: 'SEPTIN2', directed: 'false', weight: 0.09873910000000001} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN9', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN10', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN6', directed: 'false', weight: 0.9999299999999999} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN7', directed: 'false', weight: 0.999567} },
+{ data: { source: 'SEPTIN2', target: 'XRN2', directed: 'false', weight: 0.871767} },
+{ data: { source: 'SEPTIN2', target: 'SEPTIN4', directed: 'false', weight: 0.778296} },
+{ data: { source: 'SEPTIN2', target: 'CDC42EP4', directed: 'false', weight: 0.663524} },
+{ data: { source: 'SEPTIN10', target: 'SEPTIN7', directed: 'false', weight: 1.0} },
+{ data: { source: 'SEPTIN10', target: 'SEPTIN6', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'SEPTIN10', target: 'SEPTIN9', directed: 'false', weight: 0.999782} },
+{ data: { source: 'SEPTIN10', target: 'CDC42EP4', directed: 'false', weight: 0.905601} },
+{ data: { source: 'SEPTIN10', target: 'SEPTIN4', directed: 'false', weight: 0.837815} },
+{ data: { source: 'SEPTIN9', target: 'SEPTIN6', directed: 'false', weight: 0.9999889999999999} },
+{ data: { source: 'SEPTIN9', target: 'SEPTIN7', directed: 'false', weight: 0.999757} },
+{ data: { source: 'SEPTIN9', target: 'CDC42EP4', directed: 'false', weight: 0.9662040000000001} },
+{ data: { source: 'SEPTIN9', target: 'SEPTIN4', directed: 'false', weight: 0.778296} },
+{ data: { source: 'SEPTIN4', target: 'SEPTIN7', directed: 'false', weight: 0.747627} },
+{ data: { source: 'SEPTIN4', target: 'SEPTIN6', directed: 'false', weight: 0.621321} },
+{ data: { source: 'SEPTIN4', target: 'CDC42EP4', directed: 'false', weight: 0.0978222} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN6', directed: 'false', weight: 0.997066} },
+{ data: { source: 'SEPTIN7', target: 'CDC42EP4', directed: 'false', weight: 0.5528689999999999} },
+{ data: { source: 'CDC42EP4', target: 'SEPTIN6', directed: 'false', weight: 0.853765} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.3 Septin complex<br> Complex Score (from Super.Complex) = 0.67315<br> Unweighted Density = 0.58
+    </section>
+    </body>
+    </html>
+    

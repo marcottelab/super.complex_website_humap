@@ -1,0 +1,314 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.05 Calcineurin-FKBP12 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex33.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CNN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15417" }},
+{data: { id: 'TALDO1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P37837" }},
+{data: { id: 'ECHS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30084" }},
+{data: { id: 'QDPR', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P09417" }},
+{data: { id: 'PPIF', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30405" }},
+{data: { id: 'CKMT1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P12532" }},
+{data: { id: 'GOT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P17174" }},
+{data: { id: 'TAGLN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P37802" }},
+{data: { id: 'DBI', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P07108" }},
+{data: { id: 'CMPK1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P30085" }},
+{data: { id: 'NME2', score: 5.0, type: '', href: "https://www.uniprot.org/uniprot/P22392" }},
+{data: { id: 'HAGH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16775" }},
+{data: { id: 'PDLIM5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96HC4" }},
+{data: { id: 'LDHAL6A', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q6ZMR3" }},
+{data: { id: 'HEL-S-165mP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/V9HWI0" }},
+{data: { id: 'hCG_22119', score: 2, type: '', href: "https://www.uniprot.org/uniprot/A0A024R693" }},
+{data: { id: 'HEL-S-49', score: 3, type: '', href: "https://www.uniprot.org/uniprot/V9HWK1" }},
+{data: { id: 'HEL107', score: 2, type: '', href: "https://www.uniprot.org/uniprot/V9HWD9" }},
+{data: { id: 'HEL-S-44', score: 5, type: '', href: "https://www.uniprot.org/uniprot/V9HWC9" }},
+{data: { id: 'FKBP1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62942" }},
+{data: { id: 'HEL-S-69p', score: 2, type: '', href: "https://www.uniprot.org/uniprot/V9HWF5" }},
+{data: { id: 'TKTL2', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9H0I9" }},
+{data: { id: 'HEL-S-32', score: 3, type: '', href: "https://www.uniprot.org/uniprot/V9HWF2" }},
+{data: { id: 'GLRX', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P35754" }},
+{data: { id: 'FABP5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q01469" }},
+{data: { id: 'PEPD', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P12955" }},
+{data: { id: 'CKMT2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P17540" }},
+{data: { id: 'HIBCH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6NVY1" }}], 
+ edges: [{ data: { source: 'CMPK1', target: 'CKMT2', directed: 'false', weight: 0.994017} },
+{ data: { source: 'CMPK1', target: 'CKMT1A', directed: 'false', weight: 0.9747309999999999} },
+{ data: { source: 'CMPK1', target: 'PPIF', directed: 'false', weight: 0.939418} },
+{ data: { source: 'CMPK1', target: 'HIBCH', directed: 'false', weight: 0.101912} },
+{ data: { source: 'PPIF', target: 'HEL-S-44', directed: 'false', weight: 0.999999} },
+{ data: { source: 'PPIF', target: 'GOT1', directed: 'false', weight: 0.999991} },
+{ data: { source: 'PPIF', target: 'HEL-S-32', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'PPIF', target: 'HEL107', directed: 'false', weight: 0.9999709999999999} },
+{ data: { source: 'PPIF', target: 'FKBP1A', directed: 'false', weight: 0.9999600000000001} },
+{ data: { source: 'PPIF', target: 'HEL-S-165mP', directed: 'false', weight: 0.9998530000000001} },
+{ data: { source: 'PPIF', target: 'HEL-S-49', directed: 'false', weight: 0.9998319999999999} },
+{ data: { source: 'PPIF', target: 'TALDO1', directed: 'false', weight: 0.999016} },
+{ data: { source: 'PPIF', target: 'HAGH', directed: 'false', weight: 0.9681059999999999} },
+{ data: { source: 'PPIF', target: 'FABP5', directed: 'false', weight: 0.9588} },
+{ data: { source: 'PPIF', target: 'DBI', directed: 'false', weight: 0.957528} },
+{ data: { source: 'PPIF', target: 'CKMT1A', directed: 'false', weight: 0.953569} },
+{ data: { source: 'PPIF', target: 'NME2', directed: 'false', weight: 0.9427049999999999} },
+{ data: { source: 'PPIF', target: 'TAGLN2', directed: 'false', weight: 0.9334379999999999} },
+{ data: { source: 'PPIF', target: 'CKMT2', directed: 'false', weight: 0.92665} },
+{ data: { source: 'PPIF', target: 'QDPR', directed: 'false', weight: 0.914608} },
+{ data: { source: 'PPIF', target: 'GLRX', directed: 'false', weight: 0.907692} },
+{ data: { source: 'PPIF', target: 'HIBCH', directed: 'false', weight: 0.830887} },
+{ data: { source: 'PPIF', target: 'LDHAL6A', directed: 'false', weight: 0.7830199999999999} },
+{ data: { source: 'PPIF', target: 'PDLIM5', directed: 'false', weight: 0.432309} },
+{ data: { source: 'PPIF', target: 'PEPD', directed: 'false', weight: 0.40126} },
+{ data: { source: 'PPIF', target: 'CNN3', directed: 'false', weight: 0.246352} },
+{ data: { source: 'PPIF', target: 'hCG_22119', directed: 'false', weight: 0.052621400000000006} },
+{ data: { source: 'PPIF', target: 'ECHS1', directed: 'false', weight: 0.0248953} },
+{ data: { source: 'NME2', target: 'TAGLN2', directed: 'false', weight: 0.9997969999999999} },
+{ data: { source: 'NME2', target: 'HEL-S-44', directed: 'false', weight: 0.995708} },
+{ data: { source: 'NME2', target: 'FKBP1A', directed: 'false', weight: 0.980142} },
+{ data: { source: 'NME2', target: 'HEL107', directed: 'false', weight: 0.44232299999999997} },
+{ data: { source: 'NME2', target: 'QDPR', directed: 'false', weight: 0.30441599999999996} },
+{ data: { source: 'NME2', target: 'TALDO1', directed: 'false', weight: 0.250105} },
+{ data: { source: 'NME2', target: 'HEL-S-32', directed: 'false', weight: 0.175371} },
+{ data: { source: 'NME2', target: 'HEL-S-69p', directed: 'false', weight: 0.128966} },
+{ data: { source: 'NME2', target: 'DBI', directed: 'false', weight: 0.10906500000000001} },
+{ data: { source: 'NME2', target: 'GLRX', directed: 'false', weight: 0.037250099999999994} },
+{ data: { source: 'NME2', target: 'CNN3', directed: 'false', weight: 0.035195} },
+{ data: { source: 'NME2', target: 'ECHS1', directed: 'false', weight: 0.0209898} },
+{ data: { source: 'TAGLN2', target: 'FKBP1A', directed: 'false', weight: 0.9836450000000001} },
+{ data: { source: 'TAGLN2', target: 'FABP5', directed: 'false', weight: 0.9684209999999999} },
+{ data: { source: 'TAGLN2', target: 'PDLIM5', directed: 'false', weight: 0.8366549999999999} },
+{ data: { source: 'TAGLN2', target: 'CKMT2', directed: 'false', weight: 0.382004} },
+{ data: { source: 'TAGLN2', target: 'TKTL2', directed: 'false', weight: 0.283577} },
+{ data: { source: 'TAGLN2', target: 'QDPR', directed: 'false', weight: 0.189584} },
+{ data: { source: 'TAGLN2', target: 'HIBCH', directed: 'false', weight: 0.059013} },
+{ data: { source: 'TAGLN2', target: 'CKMT1A', directed: 'false', weight: 0.052308900000000005} },
+{ data: { source: 'DBI', target: 'HEL-S-49', directed: 'false', weight: 0.931205} },
+{ data: { source: 'DBI', target: 'FABP5', directed: 'false', weight: 0.592647} },
+{ data: { source: 'DBI', target: 'QDPR', directed: 'false', weight: 0.526403} },
+{ data: { source: 'DBI', target: 'HEL107', directed: 'false', weight: 0.48411000000000004} },
+{ data: { source: 'DBI', target: 'hCG_22119', directed: 'false', weight: 0.260628} },
+{ data: { source: 'DBI', target: 'HEL-S-32', directed: 'false', weight: 0.0811693} },
+{ data: { source: 'CKMT1A', target: 'TALDO1', directed: 'false', weight: 0.999079} },
+{ data: { source: 'CKMT1A', target: 'GOT1', directed: 'false', weight: 0.994257} },
+{ data: { source: 'CKMT1A', target: 'HEL-S-49', directed: 'false', weight: 0.6331060000000001} },
+{ data: { source: 'CKMT1A', target: 'PEPD', directed: 'false', weight: 0.2853} },
+{ data: { source: 'CKMT1A', target: 'QDPR', directed: 'false', weight: 0.267241} },
+{ data: { source: 'CKMT1A', target: 'HIBCH', directed: 'false', weight: 0.199794} },
+{ data: { source: 'CKMT1A', target: 'CKMT2', directed: 'false', weight: 0.19258599999999998} },
+{ data: { source: 'CKMT1A', target: 'HEL107', directed: 'false', weight: 0.127975} },
+{ data: { source: 'CKMT1A', target: 'HAGH', directed: 'false', weight: 0.09952639999999999} },
+{ data: { source: 'CKMT1A', target: 'FABP5', directed: 'false', weight: 0.0966562} },
+{ data: { source: 'CKMT1A', target: 'HEL-S-44', directed: 'false', weight: 0.09368860000000001} },
+{ data: { source: 'CKMT1A', target: 'HEL-S-165mP', directed: 'false', weight: 0.0604491} },
+{ data: { source: 'CKMT1A', target: 'HEL-S-32', directed: 'false', weight: 0.0408042} },
+{ data: { source: 'CKMT1A', target: 'FKBP1A', directed: 'false', weight: 0.033897500000000004} },
+{ data: { source: 'CKMT1A', target: 'ECHS1', directed: 'false', weight: 0.0247753} },
+{ data: { source: 'ECHS1', target: 'TALDO1', directed: 'false', weight: 0.62825} },
+{ data: { source: 'ECHS1', target: 'HAGH', directed: 'false', weight: 0.0497408} },
+{ data: { source: 'ECHS1', target: 'HEL-S-49', directed: 'false', weight: 0.032078800000000005} },
+{ data: { source: 'ECHS1', target: 'HEL-S-32', directed: 'false', weight: 0.0208375} },
+{ data: { source: 'GOT1', target: 'HIBCH', directed: 'false', weight: 0.993749} },
+{ data: { source: 'GOT1', target: 'HEL107', directed: 'false', weight: 0.923592} },
+{ data: { source: 'GOT1', target: 'CKMT2', directed: 'false', weight: 0.894624} },
+{ data: { source: 'GOT1', target: 'TKTL2', directed: 'false', weight: 0.7761239999999999} },
+{ data: { source: 'GOT1', target: 'TALDO1', directed: 'false', weight: 0.44478} },
+{ data: { source: 'GOT1', target: 'HEL-S-44', directed: 'false', weight: 0.0839888} },
+{ data: { source: 'GOT1', target: 'HEL-S-165mP', directed: 'false', weight: 0.0269915} },
+{ data: { source: 'GOT1', target: 'HEL-S-69p', directed: 'false', weight: 0.0211952} },
+{ data: { source: 'HIBCH', target: 'HEL-S-165mP', directed: 'false', weight: 0.989698} },
+{ data: { source: 'HIBCH', target: 'LDHAL6A', directed: 'false', weight: 0.33354} },
+{ data: { source: 'HIBCH', target: 'TALDO1', directed: 'false', weight: 0.283016} },
+{ data: { source: 'HIBCH', target: 'GLRX', directed: 'false', weight: 0.165266} },
+{ data: { source: 'HIBCH', target: 'CKMT2', directed: 'false', weight: 0.132421} },
+{ data: { source: 'HIBCH', target: 'HAGH', directed: 'false', weight: 0.11714100000000001} },
+{ data: { source: 'HIBCH', target: 'HEL-S-44', directed: 'false', weight: 0.0786126} },
+{ data: { source: 'HIBCH', target: 'HEL-S-69p', directed: 'false', weight: 0.0639484} },
+{ data: { source: 'HIBCH', target: 'PDLIM5', directed: 'false', weight: 0.0581977} },
+{ data: { source: 'HIBCH', target: 'FKBP1A', directed: 'false', weight: 0.0492257} },
+{ data: { source: 'HIBCH', target: 'HEL-S-32', directed: 'false', weight: 0.038056599999999996} },
+{ data: { source: 'HIBCH', target: 'CNN3', directed: 'false', weight: 0.0361402} },
+{ data: { source: 'HIBCH', target: 'HEL-S-49', directed: 'false', weight: 0.0211038} },
+{ data: { source: 'HEL-S-165mP', target: 'HEL107', directed: 'false', weight: 0.260486} },
+{ data: { source: 'HEL-S-165mP', target: 'TALDO1', directed: 'false', weight: 0.100873} },
+{ data: { source: 'HEL-S-165mP', target: 'HEL-S-44', directed: 'false', weight: 0.09498680000000001} },
+{ data: { source: 'HEL-S-165mP', target: 'CKMT2', directed: 'false', weight: 0.0555577} },
+{ data: { source: 'HEL-S-165mP', target: 'hCG_22119', directed: 'false', weight: 0.028815300000000002} },
+{ data: { source: 'PEPD', target: 'TALDO1', directed: 'false', weight: 0.882878} },
+{ data: { source: 'PEPD', target: 'HEL107', directed: 'false', weight: 0.783157} },
+{ data: { source: 'PEPD', target: 'HEL-S-44', directed: 'false', weight: 0.48753599999999997} },
+{ data: { source: 'PEPD', target: 'CKMT2', directed: 'false', weight: 0.35329699999999997} },
+{ data: { source: 'PEPD', target: 'HEL-S-49', directed: 'false', weight: 0.3118} },
+{ data: { source: 'PEPD', target: 'HEL-S-32', directed: 'false', weight: 0.100535} },
+{ data: { source: 'PEPD', target: 'QDPR', directed: 'false', weight: 0.0555604} },
+{ data: { source: 'PEPD', target: 'HEL-S-69p', directed: 'false', weight: 0.047503} },
+{ data: { source: 'PEPD', target: 'hCG_22119', directed: 'false', weight: 0.041295} },
+{ data: { source: 'PEPD', target: 'FKBP1A', directed: 'false', weight: 0.030126499999999997} },
+{ data: { source: 'HEL-S-49', target: 'CKMT2', directed: 'false', weight: 0.9087149999999999} },
+{ data: { source: 'HEL-S-49', target: 'TALDO1', directed: 'false', weight: 0.80614} },
+{ data: { source: 'HEL-S-49', target: 'HEL107', directed: 'false', weight: 0.267298} },
+{ data: { source: 'HEL-S-49', target: 'CNN3', directed: 'false', weight: 0.13062} },
+{ data: { source: 'HEL-S-49', target: 'FABP5', directed: 'false', weight: 0.118028} },
+{ data: { source: 'HEL-S-49', target: 'QDPR', directed: 'false', weight: 0.101702} },
+{ data: { source: 'HEL-S-49', target: 'GLRX', directed: 'false', weight: 0.0754635} },
+{ data: { source: 'HEL-S-49', target: 'HEL-S-69p', directed: 'false', weight: 0.0501749} },
+{ data: { source: 'HEL-S-49', target: 'HAGH', directed: 'false', weight: 0.040009300000000005} },
+{ data: { source: 'HEL107', target: 'HEL-S-32', directed: 'false', weight: 0.998793} },
+{ data: { source: 'HEL107', target: 'HEL-S-44', directed: 'false', weight: 0.9938799999999999} },
+{ data: { source: 'HEL107', target: 'TALDO1', directed: 'false', weight: 0.8735649999999999} },
+{ data: { source: 'HEL107', target: 'CKMT2', directed: 'false', weight: 0.692231} },
+{ data: { source: 'HEL107', target: 'FABP5', directed: 'false', weight: 0.406968} },
+{ data: { source: 'HEL107', target: 'QDPR', directed: 'false', weight: 0.401864} },
+{ data: { source: 'HEL107', target: 'HAGH', directed: 'false', weight: 0.300844} },
+{ data: { source: 'HEL107', target: 'PDLIM5', directed: 'false', weight: 0.0614403} },
+{ data: { source: 'HEL107', target: 'hCG_22119', directed: 'false', weight: 0.05439580000000001} },
+{ data: { source: 'HEL107', target: 'GLRX', directed: 'false', weight: 0.053353} },
+{ data: { source: 'HEL107', target: 'CNN3', directed: 'false', weight: 0.0289631} },
+{ data: { source: 'hCG_22119', target: 'HEL-S-44', directed: 'false', weight: 0.394552} },
+{ data: { source: 'hCG_22119', target: 'QDPR', directed: 'false', weight: 0.23483800000000002} },
+{ data: { source: 'hCG_22119', target: 'CNN3', directed: 'false', weight: 0.135964} },
+{ data: { source: 'hCG_22119', target: 'FABP5', directed: 'false', weight: 0.130654} },
+{ data: { source: 'hCG_22119', target: 'HEL-S-32', directed: 'false', weight: 0.126095} },
+{ data: { source: 'hCG_22119', target: 'FKBP1A', directed: 'false', weight: 0.039194400000000004} },
+{ data: { source: 'HAGH', target: 'HEL-S-44', directed: 'false', weight: 0.191751} },
+{ data: { source: 'HAGH', target: 'HEL-S-32', directed: 'false', weight: 0.0419427} },
+{ data: { source: 'HAGH', target: 'GLRX', directed: 'false', weight: 0.0337781} },
+{ data: { source: 'HAGH', target: 'HEL-S-69p', directed: 'false', weight: 0.0291415} },
+{ data: { source: 'HAGH', target: 'TALDO1', directed: 'false', weight: 0.026568599999999998} },
+{ data: { source: 'HEL-S-69p', target: 'TKTL2', directed: 'false', weight: 0.9960540000000001} },
+{ data: { source: 'HEL-S-69p', target: 'HEL-S-44', directed: 'false', weight: 0.345077} },
+{ data: { source: 'HEL-S-69p', target: 'HEL-S-32', directed: 'false', weight: 0.335534} },
+{ data: { source: 'HEL-S-69p', target: 'QDPR', directed: 'false', weight: 0.16359500000000002} },
+{ data: { source: 'HEL-S-69p', target: 'PDLIM5', directed: 'false', weight: 0.143354} },
+{ data: { source: 'HEL-S-69p', target: 'CNN3', directed: 'false', weight: 0.111229} },
+{ data: { source: 'HEL-S-69p', target: 'CKMT2', directed: 'false', weight: 0.0996385} },
+{ data: { source: 'HEL-S-69p', target: 'FABP5', directed: 'false', weight: 0.07886180000000001} },
+{ data: { source: 'HEL-S-69p', target: 'FKBP1A', directed: 'false', weight: 0.0470858} },
+{ data: { source: 'HEL-S-69p', target: 'GLRX', directed: 'false', weight: 0.0327724} },
+{ data: { source: 'TALDO1', target: 'CKMT2', directed: 'false', weight: 0.994188} },
+{ data: { source: 'TALDO1', target: 'QDPR', directed: 'false', weight: 0.992266} },
+{ data: { source: 'TALDO1', target: 'TKTL2', directed: 'false', weight: 0.9907290000000001} },
+{ data: { source: 'TALDO1', target: 'HEL-S-32', directed: 'false', weight: 0.055762599999999996} },
+{ data: { source: 'HEL-S-44', target: 'TKTL2', directed: 'false', weight: 0.999983} },
+{ data: { source: 'HEL-S-44', target: 'FKBP1A', directed: 'false', weight: 0.998532} },
+{ data: { source: 'HEL-S-44', target: 'GLRX', directed: 'false', weight: 0.81748} },
+{ data: { source: 'HEL-S-44', target: 'CNN3', directed: 'false', weight: 0.735125} },
+{ data: { source: 'HEL-S-44', target: 'CKMT2', directed: 'false', weight: 0.546487} },
+{ data: { source: 'HEL-S-44', target: 'PDLIM5', directed: 'false', weight: 0.227675} },
+{ data: { source: 'HEL-S-44', target: 'QDPR', directed: 'false', weight: 0.151949} },
+{ data: { source: 'HEL-S-44', target: 'LDHAL6A', directed: 'false', weight: 0.0550948} },
+{ data: { source: 'HEL-S-44', target: 'FABP5', directed: 'false', weight: 0.035412599999999995} },
+{ data: { source: 'TKTL2', target: 'HEL-S-32', directed: 'false', weight: 0.7130770000000001} },
+{ data: { source: 'TKTL2', target: 'GLRX', directed: 'false', weight: 0.412915} },
+{ data: { source: 'PDLIM5', target: 'CNN3', directed: 'false', weight: 0.783053} },
+{ data: { source: 'PDLIM5', target: 'FKBP1A', directed: 'false', weight: 0.729642} },
+{ data: { source: 'PDLIM5', target: 'QDPR', directed: 'false', weight: 0.09336839999999999} },
+{ data: { source: 'PDLIM5', target: 'HEL-S-32', directed: 'false', weight: 0.0517764} },
+{ data: { source: 'QDPR', target: 'FABP5', directed: 'false', weight: 0.943185} },
+{ data: { source: 'QDPR', target: 'FKBP1A', directed: 'false', weight: 0.9342280000000001} },
+{ data: { source: 'QDPR', target: 'GLRX', directed: 'false', weight: 0.7684340000000001} },
+{ data: { source: 'QDPR', target: 'HEL-S-32', directed: 'false', weight: 0.24439899999999998} },
+{ data: { source: 'QDPR', target: 'CNN3', directed: 'false', weight: 0.025349599999999996} },
+{ data: { source: 'FABP5', target: 'HEL-S-32', directed: 'false', weight: 0.5} },
+{ data: { source: 'FABP5', target: 'FKBP1A', directed: 'false', weight: 0.38988} },
+{ data: { source: 'FABP5', target: 'GLRX', directed: 'false', weight: 0.0369751} },
+{ data: { source: 'GLRX', target: 'HEL-S-32', directed: 'false', weight: 0.794903} },
+{ data: { source: 'GLRX', target: 'CNN3', directed: 'false', weight: 0.436356} },
+{ data: { source: 'GLRX', target: 'FKBP1A', directed: 'false', weight: 0.06928279999999999} },
+{ data: { source: 'CNN3', target: 'HEL-S-32', directed: 'false', weight: 0.09067489999999999} },
+{ data: { source: 'FKBP1A', target: 'HEL-S-32', directed: 'false', weight: 0.900858} },
+{ data: { source: 'FKBP1A', target: 'CKMT2', directed: 'false', weight: 0.573495} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.05 Calcineurin-FKBP12 complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.48
+    </section>
+    </body>
+    </html>
+    

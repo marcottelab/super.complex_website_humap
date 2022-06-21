@@ -1,0 +1,189 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 KIAA0753-FOR20-OFD1 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex40.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp9', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp9.html" }},
+{data: { id: 'MIB1', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q86YT6" }},
+{data: { id: 'GAN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H2C0" }},
+{data: { id: 'CCDC14', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q49A88" }},
+{data: { id: 'SSX2IP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y2D8" }},
+{data: { id: 'KIAA0753', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q2KHM9" }},
+{data: { id: 'CCDC138', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q96M89" }},
+{data: { id: 'CCDC77', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9BR77" }},
+{data: { id: 'CSPP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q1MSJ5" }},
+{data: { id: 'TBC1D31', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q96DN5" }},
+{data: { id: 'CEP72', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P209" }},
+{data: { id: 'OFD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75665" }},
+{data: { id: 'CEP131', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UPN4" }},
+{data: { id: 'PIBF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WXW3" }},
+{data: { id: 'SARS-CoV2 nsp13', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp13.html" }},
+{data: { id: 'CEP43', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/O95684" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp9', target: 'MIB1', directed: 'false', weight: 0.89782233, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 nsp13', target: 'CEP43', directed: 'false', weight: 0.981570359, type: 'sars'} },
+{ data: { source: 'CEP43', target: 'OFD1', directed: 'false', weight: 0.290165} },
+{ data: { source: 'CEP43', target: 'CSPP1', directed: 'false', weight: 0.280457} },
+{ data: { source: 'CEP43', target: 'KIAA0753', directed: 'false', weight: 0.24914899999999998} },
+{ data: { source: 'CEP43', target: 'PIBF1', directed: 'false', weight: 0.173533} },
+{ data: { source: 'CEP43', target: 'CCDC77', directed: 'false', weight: 0.156667} },
+{ data: { source: 'CEP43', target: 'CEP72', directed: 'false', weight: 0.0938209} },
+{ data: { source: 'CEP43', target: 'SSX2IP', directed: 'false', weight: 0.0891725} },
+{ data: { source: 'CEP43', target: 'TBC1D31', directed: 'false', weight: 0.05538150000000001} },
+{ data: { source: 'CEP43', target: 'CCDC138', directed: 'false', weight: 0.0477925} },
+{ data: { source: 'CEP43', target: 'CCDC14', directed: 'false', weight: 0.0383425} },
+{ data: { source: 'CEP43', target: 'CEP131', directed: 'false', weight: 0.0319302} },
+{ data: { source: 'CEP43', target: 'MIB1', directed: 'false', weight: 0.0217982} },
+{ data: { source: 'KIAA0753', target: 'OFD1', directed: 'false', weight: 0.9875809999999999} },
+{ data: { source: 'KIAA0753', target: 'CEP72', directed: 'false', weight: 0.982784} },
+{ data: { source: 'KIAA0753', target: 'CEP131', directed: 'false', weight: 0.949225} },
+{ data: { source: 'KIAA0753', target: 'CCDC77', directed: 'false', weight: 0.6165619999999999} },
+{ data: { source: 'KIAA0753', target: 'CCDC14', directed: 'false', weight: 0.599322} },
+{ data: { source: 'KIAA0753', target: 'MIB1', directed: 'false', weight: 0.130822} },
+{ data: { source: 'KIAA0753', target: 'TBC1D31', directed: 'false', weight: 0.04667059999999999} },
+{ data: { source: 'KIAA0753', target: 'SSX2IP', directed: 'false', weight: 0.03841} },
+{ data: { source: 'KIAA0753', target: 'PIBF1', directed: 'false', weight: 0.0210803} },
+{ data: { source: 'CCDC138', target: 'CEP131', directed: 'false', weight: 0.982146} },
+{ data: { source: 'CCDC138', target: 'OFD1', directed: 'false', weight: 0.974857} },
+{ data: { source: 'CCDC138', target: 'CEP72', directed: 'false', weight: 0.202539} },
+{ data: { source: 'CCDC138', target: 'CSPP1', directed: 'false', weight: 0.0240895} },
+{ data: { source: 'GAN', target: 'CSPP1', directed: 'false', weight: 0.749761} },
+{ data: { source: 'PIBF1', target: 'CEP131', directed: 'false', weight: 0.9781780000000001} },
+{ data: { source: 'PIBF1', target: 'OFD1', directed: 'false', weight: 0.977877} },
+{ data: { source: 'PIBF1', target: 'CEP72', directed: 'false', weight: 0.911849} },
+{ data: { source: 'PIBF1', target: 'CCDC77', directed: 'false', weight: 0.203376} },
+{ data: { source: 'PIBF1', target: 'MIB1', directed: 'false', weight: 0.196305} },
+{ data: { source: 'PIBF1', target: 'CCDC14', directed: 'false', weight: 0.18484} },
+{ data: { source: 'PIBF1', target: 'SSX2IP', directed: 'false', weight: 0.10119199999999999} },
+{ data: { source: 'PIBF1', target: 'CSPP1', directed: 'false', weight: 0.0215194} },
+{ data: { source: 'OFD1', target: 'CEP131', directed: 'false', weight: 0.986712} },
+{ data: { source: 'OFD1', target: 'CSPP1', directed: 'false', weight: 0.9725520000000001} },
+{ data: { source: 'OFD1', target: 'SSX2IP', directed: 'false', weight: 0.814808} },
+{ data: { source: 'OFD1', target: 'CCDC77', directed: 'false', weight: 0.418254} },
+{ data: { source: 'OFD1', target: 'CEP72', directed: 'false', weight: 0.33964099999999997} },
+{ data: { source: 'OFD1', target: 'TBC1D31', directed: 'false', weight: 0.288655} },
+{ data: { source: 'OFD1', target: 'CCDC14', directed: 'false', weight: 0.0788068} },
+{ data: { source: 'OFD1', target: 'MIB1', directed: 'false', weight: 0.0578856} },
+{ data: { source: 'CEP131', target: 'CSPP1', directed: 'false', weight: 0.960684} },
+{ data: { source: 'CEP131', target: 'SSX2IP', directed: 'false', weight: 0.9510959999999999} },
+{ data: { source: 'CEP131', target: 'CEP72', directed: 'false', weight: 0.8179649999999999} },
+{ data: { source: 'CEP131', target: 'CCDC77', directed: 'false', weight: 0.491805} },
+{ data: { source: 'CEP131', target: 'MIB1', directed: 'false', weight: 0.40928600000000004} },
+{ data: { source: 'CEP131', target: 'TBC1D31', directed: 'false', weight: 0.194237} },
+{ data: { source: 'CCDC14', target: 'CSPP1', directed: 'false', weight: 0.42343100000000006} },
+{ data: { source: 'CCDC14', target: 'TBC1D31', directed: 'false', weight: 0.407265} },
+{ data: { source: 'CCDC14', target: 'CEP72', directed: 'false', weight: 0.330878} },
+{ data: { source: 'CCDC14', target: 'CCDC77', directed: 'false', weight: 0.303494} },
+{ data: { source: 'CCDC14', target: 'SSX2IP', directed: 'false', weight: 0.125304} },
+{ data: { source: 'CCDC14', target: 'MIB1', directed: 'false', weight: 0.028258699999999998} },
+{ data: { source: 'CCDC77', target: 'TBC1D31', directed: 'false', weight: 0.731243} },
+{ data: { source: 'CCDC77', target: 'CEP72', directed: 'false', weight: 0.614029} },
+{ data: { source: 'CCDC77', target: 'SSX2IP', directed: 'false', weight: 0.0960337} },
+{ data: { source: 'CSPP1', target: 'CEP72', directed: 'false', weight: 0.768422} },
+{ data: { source: 'CSPP1', target: 'MIB1', directed: 'false', weight: 0.0317418} },
+{ data: { source: 'MIB1', target: 'CEP72', directed: 'false', weight: 0.7071529999999999} },
+{ data: { source: 'MIB1', target: 'TBC1D31', directed: 'false', weight: 0.026598400000000005} },
+{ data: { source: 'TBC1D31', target: 'CEP72', directed: 'false', weight: 0.713044} },
+{ data: { source: 'CEP72', target: 'SSX2IP', directed: 'false', weight: 0.8556010000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 KIAA0753-FOR20-OFD1 complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.69
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>MIB1 CEP43
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,120 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 SMAD1-OAZ-HsN3 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex716.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RAC3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P60763" }},
+{data: { id: 'PSMB5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P28074" }},
+{data: { id: 'LMF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96S06" }},
+{data: { id: 'PSMB4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P28070" }},
+{data: { id: 'UBFD1', score: 3, type: '', href: "https://www.uniprot.org/uniprot/O14562" }},
+{data: { id: 'AKIRIN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q53H80" }}], 
+ edges: [{ data: { source: 'LMF1', target: 'PSMB5', directed: 'false', weight: 0.961966} },
+{ data: { source: 'LMF1', target: 'AKIRIN2', directed: 'false', weight: 0.144297} },
+{ data: { source: 'LMF1', target: 'RAC3', directed: 'false', weight: 0.125737} },
+{ data: { source: 'LMF1', target: 'UBFD1', directed: 'false', weight: 0.11228099999999999} },
+{ data: { source: 'PSMB4', target: 'AKIRIN2', directed: 'false', weight: 0.983677} },
+{ data: { source: 'PSMB4', target: 'PSMB5', directed: 'false', weight: 0.170795} },
+{ data: { source: 'RAC3', target: 'PSMB5', directed: 'false', weight: 0.440532} },
+{ data: { source: 'RAC3', target: 'AKIRIN2', directed: 'false', weight: 0.109293} },
+{ data: { source: 'UBFD1', target: 'PSMB5', directed: 'false', weight: 0.982029} },
+{ data: { source: 'UBFD1', target: 'AKIRIN2', directed: 'false', weight: 0.0974347} },
+{ data: { source: 'AKIRIN2', target: 'PSMB5', directed: 'false', weight: 0.9980559999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 SMAD1-OAZ-HsN3 complex<br> Complex Score (from Super.Complex) = 0.59906<br> Unweighted Density = 0.73
+    </section>
+    </body>
+    </html>
+    

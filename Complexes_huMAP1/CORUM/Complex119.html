@@ -1,0 +1,109 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> NRD complex (Nucleosome remodeling and deacetylation complex)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex120.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RBBP4', score: 5, href: "https://www.uniprot.org/uniprot/Q09028" }},
+{data: { id: 'MTA1', score: 5, href: "https://www.uniprot.org/uniprot/Q13330" }},
+{data: { id: 'CHD3', score: 5, href: "https://www.uniprot.org/uniprot/Q12873" }},
+{data: { id: 'HDAC2', score: 5, href: "https://www.uniprot.org/uniprot/Q92769" }},
+{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'CHD4', score: 5, href: "https://www.uniprot.org/uniprot/Q14839" }},
+{data: { id: 'KDM1A', score: 5, href: "https://www.uniprot.org/uniprot/O60341" }}], 
+ edges: [{ data: { source: 'RBBP4', target: 'HDAC2', directed: 'false', weight: 0.999713} },
+{ data: { source: 'RBBP4', target: 'CHD4', directed: 'false', weight: 0.998317} },
+{ data: { source: 'RBBP4', target: 'CHD3', directed: 'false', weight: 0.950577} },
+{ data: { source: 'MTA1', target: 'CHD4', directed: 'false', weight: 0.9978739999999999} },
+{ data: { source: 'MTA1', target: 'CHD3', directed: 'false', weight: 0.306371} },
+{ data: { source: 'CHD3', target: 'CHD4', directed: 'false', weight: 0.9472959999999999} },
+{ data: { source: 'CHD3', target: 'HDAC2', directed: 'false', weight: 0.8404860000000001} },
+{ data: { source: 'HDAC2', target: 'HDAC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'HDAC2', target: 'CHD4', directed: 'false', weight: 0.911742} },
+{ data: { source: 'HDAC1', target: 'KDM1A', directed: 'false', weight: 0.8338209999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    NRD complex (Nucleosome remodeling and deacetylation complex)	<br> Unweighted Density = 0.48
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HDAC2
+    </section>
+    </body>
+    </html>
+    

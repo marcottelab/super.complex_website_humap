@@ -1,0 +1,133 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> EAPP TSSC4 SLC7A6OS AAR2 ZNHIT2 ECD NCDN</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex76.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SLC7A6OS', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q96CW6" }},
+{data: { id: 'SARS-CoV2 M', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 M.html" }},
+{data: { id: 'AAR2', score: 3, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9Y312" }},
+{data: { id: 'NCDN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UBB6" }},
+{data: { id: 'EAPP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q56P03" }},
+{data: { id: 'ZNHIT2', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9UHR6" }},
+{data: { id: 'TSSC4', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q9Y5U2" }},
+{data: { id: 'ECD', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95905" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 M', target: 'AAR2', directed: 'false', weight: 0.801486724, type: 'sars'} },
+{ data: { source: 'AAR2', target: 'EAPP', directed: 'false', weight: 0.991351} },
+{ data: { source: 'AAR2', target: 'TSSC4', directed: 'false', weight: 0.9408549999999999} },
+{ data: { source: 'AAR2', target: 'ECD', directed: 'false', weight: 0.931425} },
+{ data: { source: 'AAR2', target: 'SLC7A6OS', directed: 'false', weight: 0.884288} },
+{ data: { source: 'AAR2', target: 'ZNHIT2', directed: 'false', weight: 0.671511} },
+{ data: { source: 'AAR2', target: 'NCDN', directed: 'false', weight: 0.48670399999999997} },
+{ data: { source: 'EAPP', target: 'TSSC4', directed: 'false', weight: 0.588785} },
+{ data: { source: 'EAPP', target: 'SLC7A6OS', directed: 'false', weight: 0.222827} },
+{ data: { source: 'EAPP', target: 'NCDN', directed: 'false', weight: 0.117374} },
+{ data: { source: 'EAPP', target: 'ZNHIT2', directed: 'false', weight: 0.11311500000000001} },
+{ data: { source: 'EAPP', target: 'ECD', directed: 'false', weight: 0.101316} },
+{ data: { source: 'ECD', target: 'TSSC4', directed: 'false', weight: 0.699637} },
+{ data: { source: 'ECD', target: 'ZNHIT2', directed: 'false', weight: 0.351971} },
+{ data: { source: 'ECD', target: 'NCDN', directed: 'false', weight: 0.28171199999999996} },
+{ data: { source: 'ECD', target: 'SLC7A6OS', directed: 'false', weight: 0.167849} },
+{ data: { source: 'SLC7A6OS', target: 'TSSC4', directed: 'false', weight: 0.583025} },
+{ data: { source: 'SLC7A6OS', target: 'NCDN', directed: 'false', weight: 0.192166} },
+{ data: { source: 'SLC7A6OS', target: 'ZNHIT2', directed: 'false', weight: 0.184885} },
+{ data: { source: 'ZNHIT2', target: 'TSSC4', directed: 'false', weight: 0.609873} },
+{ data: { source: 'ZNHIT2', target: 'NCDN', directed: 'false', weight: 0.220348} },
+{ data: { source: 'NCDN', target: 'TSSC4', directed: 'false', weight: 0.330176} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    EAPP TSSC4 SLC7A6OS AAR2 ZNHIT2 ECD NCDN<br> Complex Score (from Super.Complex) = 0.81061<br> Unweighted Density = 1.00
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>AAR2
+    </section>
+    </body>
+    </html>
+    

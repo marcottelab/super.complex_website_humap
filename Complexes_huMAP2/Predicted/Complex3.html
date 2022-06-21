@@ -1,0 +1,194 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 TNF-alpha/NF-kappa B signaling complex 6</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex4.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RPL5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46777" }},
+{data: { id: 'RPL37A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61513" }},
+{data: { id: 'RPL30', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62888" }},
+{data: { id: 'NOP58', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y2X3" }},
+{data: { id: 'RPL23', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62829" }},
+{data: { id: 'FBL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P22087" }},
+{data: { id: 'SARS-CoV2 N', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 N.html" }},
+{data: { id: 'RRP9', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/O43818" }},
+{data: { id: 'RPLP0', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P05388" }},
+{data: { id: 'RPL6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q02878" }},
+{data: { id: 'RPS13', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62277" }},
+{data: { id: 'RPL9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P32969" }},
+{data: { id: 'NOP56', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00567" }},
+{data: { id: 'hCG_1994130', score: 1, type: '', href: "https://www.uniprot.org/uniprot/B2R4W8" }},
+{data: { id: 'RPL7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P18124" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 N', target: 'RRP9', directed: 'false', weight: 0.861168798, type: 'sars'} },
+{ data: { source: 'NOP58', target: 'NOP56', directed: 'false', weight: 1.0} },
+{ data: { source: 'NOP58', target: 'FBL', directed: 'false', weight: 1.0} },
+{ data: { source: 'NOP58', target: 'RPLP0', directed: 'false', weight: 0.23624} },
+{ data: { source: 'NOP58', target: 'hCG_1994130', directed: 'false', weight: 0.0482293} },
+{ data: { source: 'NOP58', target: 'RPL9', directed: 'false', weight: 0.0218974} },
+{ data: { source: 'NOP58', target: 'RPL23', directed: 'false', weight: 0.0211533} },
+{ data: { source: 'hCG_1994130', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'hCG_1994130', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'hCG_1994130', target: 'RPL23', directed: 'false', weight: 0.999992} },
+{ data: { source: 'hCG_1994130', target: 'RPL5', directed: 'false', weight: 0.9999889999999999} },
+{ data: { source: 'hCG_1994130', target: 'RPL9', directed: 'false', weight: 0.999883} },
+{ data: { source: 'hCG_1994130', target: 'RPL6', directed: 'false', weight: 0.999769} },
+{ data: { source: 'hCG_1994130', target: 'RPL37A', directed: 'false', weight: 0.997841} },
+{ data: { source: 'hCG_1994130', target: 'RPL30', directed: 'false', weight: 0.996266} },
+{ data: { source: 'hCG_1994130', target: 'RPLP0', directed: 'false', weight: 0.9716040000000001} },
+{ data: { source: 'hCG_1994130', target: 'NOP56', directed: 'false', weight: 0.12359400000000001} },
+{ data: { source: 'hCG_1994130', target: 'FBL', directed: 'false', weight: 0.0811654} },
+{ data: { source: 'RPLP0', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPL37A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPL5', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'RPLP0', target: 'RPL9', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'RPLP0', target: 'FBL', directed: 'false', weight: 0.9999450000000001} },
+{ data: { source: 'RPLP0', target: 'RPL23', directed: 'false', weight: 0.9993850000000001} },
+{ data: { source: 'RPLP0', target: 'NOP56', directed: 'false', weight: 0.9988530000000001} },
+{ data: { source: 'RPLP0', target: 'RRP9', directed: 'false', weight: 0.0821472} },
+{ data: { source: 'RRP9', target: 'FBL', directed: 'false', weight: 0.964417} },
+{ data: { source: 'RRP9', target: 'RPL30', directed: 'false', weight: 0.0360321} },
+{ data: { source: 'RRP9', target: 'RPL37A', directed: 'false', weight: 0.0248113} },
+{ data: { source: 'RRP9', target: 'RPL7', directed: 'false', weight: 0.0235495} },
+{ data: { source: 'RRP9', target: 'RPL9', directed: 'false', weight: 0.021840400000000003} },
+{ data: { source: 'RPS13', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS13', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS13', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS13', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS13', target: 'RPL37A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS13', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS13', target: 'RPL9', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPS13', target: 'FBL', directed: 'false', weight: 0.408067} },
+{ data: { source: 'RPL9', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPL6', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL9', target: 'RPL7', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL9', target: 'RPL30', directed: 'false', weight: 0.999985} },
+{ data: { source: 'RPL9', target: 'RPL23', directed: 'false', weight: 0.9999129999999999} },
+{ data: { source: 'RPL9', target: 'RPL37A', directed: 'false', weight: 0.99985} },
+{ data: { source: 'RPL9', target: 'FBL', directed: 'false', weight: 0.392069} },
+{ data: { source: 'RPL9', target: 'NOP56', directed: 'false', weight: 0.119144} },
+{ data: { source: 'RPL6', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPL37A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'NOP56', directed: 'false', weight: 0.413721} },
+{ data: { source: 'RPL6', target: 'FBL', directed: 'false', weight: 0.0806188} },
+{ data: { source: 'RPL37A', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL37A', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL37A', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL37A', target: 'RPL23', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'NOP56', target: 'FBL', directed: 'false', weight: 1.0} },
+{ data: { source: 'NOP56', target: 'RPL30', directed: 'false', weight: 0.996782} },
+{ data: { source: 'NOP56', target: 'RPL7', directed: 'false', weight: 0.40578600000000004} },
+{ data: { source: 'NOP56', target: 'RPL23', directed: 'false', weight: 0.0918916} },
+{ data: { source: 'NOP56', target: 'RPL5', directed: 'false', weight: 0.0891686} },
+{ data: { source: 'RPL30', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'FBL', directed: 'false', weight: 0.466146} },
+{ data: { source: 'RPL7', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL23', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL7', target: 'FBL', directed: 'false', weight: 0.022198} },
+{ data: { source: 'RPL23', target: 'RPL5', directed: 'false', weight: 0.99977} },
+{ data: { source: 'RPL23', target: 'FBL', directed: 'false', weight: 0.110496} },
+{ data: { source: 'RPL5', target: 'FBL', directed: 'false', weight: 0.19495099999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 TNF-alpha/NF-kappa B signaling complex 6<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.82
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>RRP9
+    </section>
+    </body>
+    </html>
+    

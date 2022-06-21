@@ -1,0 +1,287 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.05 ITGA5-ITGB1-CAL4A3 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex55.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TAZ', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16635" }},
+{data: { id: 'TXNDC16', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P2K2" }},
+{data: { id: 'SARS-CoV2 orf8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 orf8.html" }},
+{data: { id: 'UGGT2', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9NYU1" }},
+{data: { id: 'MAN2B1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00754" }},
+{data: { id: 'SARS-CoV2 orf8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 orf8.html" }},
+{data: { id: 'PCSK6', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/P29122" }},
+{data: { id: 'GUSB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P08236" }},
+{data: { id: 'COL18A1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P39060" }},
+{data: { id: 'ARSA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43681" }},
+{data: { id: 'SIAE', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HAT2" }},
+{data: { id: 'FUT11', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q495W5" }},
+{data: { id: 'SARS-CoV2 orf8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 orf8.html" }},
+{data: { id: 'CHPF2', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9P2E5" }},
+{data: { id: 'MEGF8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z7M0" }},
+{data: { id: 'CERCAM', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5T4B2" }},
+{data: { id: 'SGSH', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P51688" }},
+{data: { id: 'GALNS', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P34059" }},
+{data: { id: 'MAN2A1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16706" }},
+{data: { id: 'ARSK', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q6UWY0" }},
+{data: { id: 'SARS-CoV2 orf8', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 orf8.html" }},
+{data: { id: 'FOXRED2', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q8IWF2" }},
+{data: { id: 'NAGLU', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P54802" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 orf8', target: 'UGGT2', directed: 'false', weight: 0.844600144, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 orf8', target: 'PCSK6', directed: 'false', weight: 0.721790867, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 orf8', target: 'CHPF2', directed: 'false', weight: 0.703620586, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 orf8', target: 'FOXRED2', directed: 'false', weight: 0.977300463, type: 'sars'} },
+{ data: { source: 'SGSH', target: 'GUSB', directed: 'false', weight: 0.9744940000000001} },
+{ data: { source: 'SGSH', target: 'SIAE', directed: 'false', weight: 0.8898159999999999} },
+{ data: { source: 'SGSH', target: 'NAGLU', directed: 'false', weight: 0.8897149999999999} },
+{ data: { source: 'SGSH', target: 'MEGF8', directed: 'false', weight: 0.819375} },
+{ data: { source: 'SGSH', target: 'FOXRED2', directed: 'false', weight: 0.696205} },
+{ data: { source: 'SGSH', target: 'MAN2B1', directed: 'false', weight: 0.681041} },
+{ data: { source: 'SGSH', target: 'FUT11', directed: 'false', weight: 0.668928} },
+{ data: { source: 'SGSH', target: 'UGGT2', directed: 'false', weight: 0.61317} },
+{ data: { source: 'SGSH', target: 'CERCAM', directed: 'false', weight: 0.588342} },
+{ data: { source: 'SGSH', target: 'TAZ', directed: 'false', weight: 0.575199} },
+{ data: { source: 'SGSH', target: 'PCSK6', directed: 'false', weight: 0.544746} },
+{ data: { source: 'SGSH', target: 'COL18A1', directed: 'false', weight: 0.528419} },
+{ data: { source: 'SGSH', target: 'CHPF2', directed: 'false', weight: 0.48480200000000007} },
+{ data: { source: 'SGSH', target: 'TXNDC16', directed: 'false', weight: 0.48393} },
+{ data: { source: 'SGSH', target: 'GALNS', directed: 'false', weight: 0.269524} },
+{ data: { source: 'SGSH', target: 'MAN2A1', directed: 'false', weight: 0.22733499999999998} },
+{ data: { source: 'SGSH', target: 'ARSA', directed: 'false', weight: 0.16591199999999998} },
+{ data: { source: 'MEGF8', target: 'FUT11', directed: 'false', weight: 0.664324} },
+{ data: { source: 'MEGF8', target: 'GUSB', directed: 'false', weight: 0.643514} },
+{ data: { source: 'MEGF8', target: 'CERCAM', directed: 'false', weight: 0.643514} },
+{ data: { source: 'MEGF8', target: 'FOXRED2', directed: 'false', weight: 0.60734} },
+{ data: { source: 'MEGF8', target: 'ARSK', directed: 'false', weight: 0.489958} },
+{ data: { source: 'MEGF8', target: 'SIAE', directed: 'false', weight: 0.485256} },
+{ data: { source: 'MEGF8', target: 'TXNDC16', directed: 'false', weight: 0.47748500000000005} },
+{ data: { source: 'MEGF8', target: 'UGGT2', directed: 'false', weight: 0.40323600000000004} },
+{ data: { source: 'MEGF8', target: 'PCSK6', directed: 'false', weight: 0.38145300000000004} },
+{ data: { source: 'MEGF8', target: 'GALNS', directed: 'false', weight: 0.38145300000000004} },
+{ data: { source: 'MEGF8', target: 'NAGLU', directed: 'false', weight: 0.348642} },
+{ data: { source: 'MEGF8', target: 'MAN2B1', directed: 'false', weight: 0.290274} },
+{ data: { source: 'MEGF8', target: 'MAN2A1', directed: 'false', weight: 0.20438299999999998} },
+{ data: { source: 'MEGF8', target: 'CHPF2', directed: 'false', weight: 0.195071} },
+{ data: { source: 'MEGF8', target: 'COL18A1', directed: 'false', weight: 0.177733} },
+{ data: { source: 'MEGF8', target: 'ARSA', directed: 'false', weight: 0.13944} },
+{ data: { source: 'GALNS', target: 'ARSA', directed: 'false', weight: 0.6984670000000001} },
+{ data: { source: 'GALNS', target: 'TXNDC16', directed: 'false', weight: 0.638939} },
+{ data: { source: 'GALNS', target: 'FUT11', directed: 'false', weight: 0.49135100000000004} },
+{ data: { source: 'GALNS', target: 'UGGT2', directed: 'false', weight: 0.44013800000000003} },
+{ data: { source: 'GALNS', target: 'CERCAM', directed: 'false', weight: 0.432575} },
+{ data: { source: 'GALNS', target: 'ARSK', directed: 'false', weight: 0.394927} },
+{ data: { source: 'GALNS', target: 'SIAE', directed: 'false', weight: 0.382211} },
+{ data: { source: 'GALNS', target: 'NAGLU', directed: 'false', weight: 0.345225} },
+{ data: { source: 'GALNS', target: 'MAN2A1', directed: 'false', weight: 0.329342} },
+{ data: { source: 'GALNS', target: 'FOXRED2', directed: 'false', weight: 0.322601} },
+{ data: { source: 'GALNS', target: 'GUSB', directed: 'false', weight: 0.303361} },
+{ data: { source: 'GALNS', target: 'TAZ', directed: 'false', weight: 0.257519} },
+{ data: { source: 'GALNS', target: 'MAN2B1', directed: 'false', weight: 0.242641} },
+{ data: { source: 'GALNS', target: 'CHPF2', directed: 'false', weight: 0.242407} },
+{ data: { source: 'GALNS', target: 'COL18A1', directed: 'false', weight: 0.18723299999999998} },
+{ data: { source: 'GALNS', target: 'PCSK6', directed: 'false', weight: 0.13079100000000002} },
+{ data: { source: 'MAN2B1', target: 'NAGLU', directed: 'false', weight: 0.799473} },
+{ data: { source: 'MAN2B1', target: 'FUT11', directed: 'false', weight: 0.7704880000000001} },
+{ data: { source: 'MAN2B1', target: 'CERCAM', directed: 'false', weight: 0.575986} },
+{ data: { source: 'MAN2B1', target: 'FOXRED2', directed: 'false', weight: 0.385361} },
+{ data: { source: 'MAN2B1', target: 'UGGT2', directed: 'false', weight: 0.37238000000000004} },
+{ data: { source: 'MAN2B1', target: 'SIAE', directed: 'false', weight: 0.34045} },
+{ data: { source: 'MAN2B1', target: 'TXNDC16', directed: 'false', weight: 0.33983800000000003} },
+{ data: { source: 'MAN2B1', target: 'MAN2A1', directed: 'false', weight: 0.307265} },
+{ data: { source: 'MAN2B1', target: 'GUSB', directed: 'false', weight: 0.28581599999999996} },
+{ data: { source: 'MAN2B1', target: 'CHPF2', directed: 'false', weight: 0.249486} },
+{ data: { source: 'MAN2B1', target: 'PCSK6', directed: 'false', weight: 0.242641} },
+{ data: { source: 'MAN2B1', target: 'ARSA', directed: 'false', weight: 0.208313} },
+{ data: { source: 'MAN2B1', target: 'TAZ', directed: 'false', weight: 0.154407} },
+{ data: { source: 'MAN2B1', target: 'COL18A1', directed: 'false', weight: 0.13944} },
+{ data: { source: 'NAGLU', target: 'GUSB', directed: 'false', weight: 0.7851739999999999} },
+{ data: { source: 'NAGLU', target: 'FOXRED2', directed: 'false', weight: 0.763591} },
+{ data: { source: 'NAGLU', target: 'FUT11', directed: 'false', weight: 0.68155} },
+{ data: { source: 'NAGLU', target: 'CERCAM', directed: 'false', weight: 0.645019} },
+{ data: { source: 'NAGLU', target: 'UGGT2', directed: 'false', weight: 0.608413} },
+{ data: { source: 'NAGLU', target: 'MAN2A1', directed: 'false', weight: 0.541032} },
+{ data: { source: 'NAGLU', target: 'COL18A1', directed: 'false', weight: 0.47748500000000005} },
+{ data: { source: 'NAGLU', target: 'TXNDC16', directed: 'false', weight: 0.376131} },
+{ data: { source: 'NAGLU', target: 'SIAE', directed: 'false', weight: 0.353698} },
+{ data: { source: 'NAGLU', target: 'PCSK6', directed: 'false', weight: 0.345225} },
+{ data: { source: 'NAGLU', target: 'CHPF2', directed: 'false', weight: 0.34297300000000003} },
+{ data: { source: 'NAGLU', target: 'ARSA', directed: 'false', weight: 0.33983800000000003} },
+{ data: { source: 'NAGLU', target: 'TAZ', directed: 'false', weight: 0.25040100000000004} },
+{ data: { source: 'FOXRED2', target: 'FUT11', directed: 'false', weight: 0.6835060000000001} },
+{ data: { source: 'FOXRED2', target: 'UGGT2', directed: 'false', weight: 0.6442439999999999} },
+{ data: { source: 'FOXRED2', target: 'GUSB', directed: 'false', weight: 0.620627} },
+{ data: { source: 'FOXRED2', target: 'COL18A1', directed: 'false', weight: 0.60734} },
+{ data: { source: 'FOXRED2', target: 'CERCAM', directed: 'false', weight: 0.424026} },
+{ data: { source: 'FOXRED2', target: 'SIAE', directed: 'false', weight: 0.417041} },
+{ data: { source: 'FOXRED2', target: 'TAZ', directed: 'false', weight: 0.331393} },
+{ data: { source: 'FOXRED2', target: 'PCSK6', directed: 'false', weight: 0.322601} },
+{ data: { source: 'FOXRED2', target: 'CHPF2', directed: 'false', weight: 0.296674} },
+{ data: { source: 'FOXRED2', target: 'MAN2A1', directed: 'false', weight: 0.28913} },
+{ data: { source: 'FOXRED2', target: 'ARSA', directed: 'false', weight: 0.24654600000000002} },
+{ data: { source: 'FOXRED2', target: 'TXNDC16', directed: 'false', weight: 0.237551} },
+{ data: { source: 'CERCAM', target: 'TXNDC16', directed: 'false', weight: 0.7851739999999999} },
+{ data: { source: 'CERCAM', target: 'FUT11', directed: 'false', weight: 0.7563380000000001} },
+{ data: { source: 'CERCAM', target: 'ARSA', directed: 'false', weight: 0.738905} },
+{ data: { source: 'CERCAM', target: 'UGGT2', directed: 'false', weight: 0.519015} },
+{ data: { source: 'CERCAM', target: 'COL18A1', directed: 'false', weight: 0.5} },
+{ data: { source: 'CERCAM', target: 'CHPF2', directed: 'false', weight: 0.472801} },
+{ data: { source: 'CERCAM', target: 'ARSK', directed: 'false', weight: 0.463631} },
+{ data: { source: 'CERCAM', target: 'GUSB', directed: 'false', weight: 0.45983999999999997} },
+{ data: { source: 'CERCAM', target: 'PCSK6', directed: 'false', weight: 0.432575} },
+{ data: { source: 'CERCAM', target: 'MAN2A1', directed: 'false', weight: 0.355254} },
+{ data: { source: 'CERCAM', target: 'SIAE', directed: 'false', weight: 0.320284} },
+{ data: { source: 'CERCAM', target: 'TAZ', directed: 'false', weight: 0.244957} },
+{ data: { source: 'ARSK', target: 'MAN2A1', directed: 'false', weight: 0.81576} },
+{ data: { source: 'ARSK', target: 'SIAE', directed: 'false', weight: 0.7475390000000001} },
+{ data: { source: 'ARSK', target: 'TXNDC16', directed: 'false', weight: 0.711407} },
+{ data: { source: 'ARSK', target: 'ARSA', directed: 'false', weight: 0.34045} },
+{ data: { source: 'MAN2A1', target: 'FUT11', directed: 'false', weight: 0.781242} },
+{ data: { source: 'MAN2A1', target: 'CHPF2', directed: 'false', weight: 0.524925} },
+{ data: { source: 'MAN2A1', target: 'ARSA', directed: 'false', weight: 0.444558} },
+{ data: { source: 'MAN2A1', target: 'TXNDC16', directed: 'false', weight: 0.39475} },
+{ data: { source: 'MAN2A1', target: 'UGGT2', directed: 'false', weight: 0.383635} },
+{ data: { source: 'MAN2A1', target: 'GUSB', directed: 'false', weight: 0.250272} },
+{ data: { source: 'MAN2A1', target: 'SIAE', directed: 'false', weight: 0.23248400000000002} },
+{ data: { source: 'MAN2A1', target: 'COL18A1', directed: 'false', weight: 0.20438299999999998} },
+{ data: { source: 'MAN2A1', target: 'PCSK6', directed: 'false', weight: 0.158435} },
+{ data: { source: 'FUT11', target: 'TXNDC16', directed: 'false', weight: 0.837802} },
+{ data: { source: 'FUT11', target: 'TAZ', directed: 'false', weight: 0.7683180000000001} },
+{ data: { source: 'FUT11', target: 'CHPF2', directed: 'false', weight: 0.744744} },
+{ data: { source: 'FUT11', target: 'UGGT2', directed: 'false', weight: 0.670354} },
+{ data: { source: 'FUT11', target: 'GUSB', directed: 'false', weight: 0.58153} },
+{ data: { source: 'FUT11', target: 'PCSK6', directed: 'false', weight: 0.49135100000000004} },
+{ data: { source: 'FUT11', target: 'COL18A1', directed: 'false', weight: 0.481724} },
+{ data: { source: 'FUT11', target: 'SIAE', directed: 'false', weight: 0.447254} },
+{ data: { source: 'FUT11', target: 'ARSA', directed: 'false', weight: 0.413725} },
+{ data: { source: 'UGGT2', target: 'GUSB', directed: 'false', weight: 0.693253} },
+{ data: { source: 'UGGT2', target: 'ARSA', directed: 'false', weight: 0.543042} },
+{ data: { source: 'UGGT2', target: 'CHPF2', directed: 'false', weight: 0.485413} },
+{ data: { source: 'UGGT2', target: 'SIAE', directed: 'false', weight: 0.428781} },
+{ data: { source: 'UGGT2', target: 'COL18A1', directed: 'false', weight: 0.40323600000000004} },
+{ data: { source: 'UGGT2', target: 'TXNDC16', directed: 'false', weight: 0.300135} },
+{ data: { source: 'UGGT2', target: 'PCSK6', directed: 'false', weight: 0.298292} },
+{ data: { source: 'UGGT2', target: 'TAZ', directed: 'false', weight: 0.21622800000000003} },
+{ data: { source: 'TAZ', target: 'PCSK6', directed: 'false', weight: 0.6309670000000001} },
+{ data: { source: 'TAZ', target: 'COL18A1', directed: 'false', weight: 0.589464} },
+{ data: { source: 'TAZ', target: 'GUSB', directed: 'false', weight: 0.375949} },
+{ data: { source: 'TAZ', target: 'TXNDC16', directed: 'false', weight: 0.372339} },
+{ data: { source: 'TAZ', target: 'CHPF2', directed: 'false', weight: 0.18832000000000002} },
+{ data: { source: 'TAZ', target: 'ARSA', directed: 'false', weight: 0.07886489999999999} },
+{ data: { source: 'PCSK6', target: 'GUSB', directed: 'false', weight: 0.742734} },
+{ data: { source: 'PCSK6', target: 'SIAE', directed: 'false', weight: 0.394927} },
+{ data: { source: 'PCSK6', target: 'TXNDC16', directed: 'false', weight: 0.345225} },
+{ data: { source: 'PCSK6', target: 'COL18A1', directed: 'false', weight: 0.18723299999999998} },
+{ data: { source: 'PCSK6', target: 'CHPF2', directed: 'false', weight: 0.1697} },
+{ data: { source: 'PCSK6', target: 'ARSA', directed: 'false', weight: 0.117552} },
+{ data: { source: 'TXNDC16', target: 'SIAE', directed: 'false', weight: 0.849734} },
+{ data: { source: 'TXNDC16', target: 'COL18A1', directed: 'false', weight: 0.620502} },
+{ data: { source: 'TXNDC16', target: 'ARSA', directed: 'false', weight: 0.484163} },
+{ data: { source: 'TXNDC16', target: 'GUSB', directed: 'false', weight: 0.354723} },
+{ data: { source: 'TXNDC16', target: 'CHPF2', directed: 'false', weight: 0.34297300000000003} },
+{ data: { source: 'ARSA', target: 'SIAE', directed: 'false', weight: 0.34045} },
+{ data: { source: 'ARSA', target: 'CHPF2', directed: 'false', weight: 0.249486} },
+{ data: { source: 'ARSA', target: 'COL18A1', directed: 'false', weight: 0.199309} },
+{ data: { source: 'ARSA', target: 'GUSB', directed: 'false', weight: 0.195394} },
+{ data: { source: 'COL18A1', target: 'SIAE', directed: 'false', weight: 0.506174} },
+{ data: { source: 'COL18A1', target: 'GUSB', directed: 'false', weight: 0.5} },
+{ data: { source: 'COL18A1', target: 'CHPF2', directed: 'false', weight: 0.195071} },
+{ data: { source: 'GUSB', target: 'SIAE', directed: 'false', weight: 0.607378} },
+{ data: { source: 'GUSB', target: 'CHPF2', directed: 'false', weight: 0.472801} },
+{ data: { source: 'CHPF2', target: 'SIAE', directed: 'false', weight: 0.196852} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.05 ITGA5-ITGB1-CAL4A3 complex<br> Complex Score (from Super.Complex) = 0.83272<br> Unweighted Density = 0.92
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        4 interacting protein(s): <br>UGGT2 PCSK6 CHPF2 FOXRED2
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,263 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.1 PPP1CA-PPP1R13L complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex96.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PPP1R13L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WUF5" }},
+{data: { id: 'PPP1R18', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6NYC8" }},
+{data: { id: 'ZFYVE9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95405" }},
+{data: { id: 'KIF18A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NI77" }},
+{data: { id: 'C20orf27', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q9GZN8" }},
+{data: { id: 'PPP1R2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P41236" }},
+{data: { id: 'PLCL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UPR0" }},
+{data: { id: 'ZFYVE16', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z3T8" }},
+{data: { id: 'CSRNP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H175" }},
+{data: { id: 'PPP1CA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62136" }},
+{data: { id: 'PPP1CC', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P36873" }},
+{data: { id: 'PPP1R11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60927" }},
+{data: { id: 'TANC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HCD6" }},
+{data: { id: 'PPP1R7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15435" }},
+{data: { id: 'PPP1R8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12972" }},
+{data: { id: 'SHOC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UQ13" }},
+{data: { id: 'PPP1CB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62140" }},
+{data: { id: 'CNST', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6PJW8" }},
+{data: { id: 'TPRN', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q4KMQ1" }}], 
+ edges: [{ data: { source: 'PPP1CC', target: 'PPP1CA', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'PPP1CC', target: 'PPP1CB', directed: 'false', weight: 0.999969} },
+{ data: { source: 'PPP1CC', target: 'PPP1R18', directed: 'false', weight: 0.995193} },
+{ data: { source: 'PPP1CC', target: 'PPP1R2', directed: 'false', weight: 0.982023} },
+{ data: { source: 'PPP1CC', target: 'TPRN', directed: 'false', weight: 0.964068} },
+{ data: { source: 'PPP1CC', target: 'PPP1R8', directed: 'false', weight: 0.955893} },
+{ data: { source: 'PPP1CC', target: 'CSRNP2', directed: 'false', weight: 0.939019} },
+{ data: { source: 'PPP1CC', target: 'PPP1R7', directed: 'false', weight: 0.9359290000000001} },
+{ data: { source: 'PPP1CC', target: 'PPP1R11', directed: 'false', weight: 0.916112} },
+{ data: { source: 'PPP1CC', target: 'CNST', directed: 'false', weight: 0.8472790000000001} },
+{ data: { source: 'PPP1CC', target: 'TANC2', directed: 'false', weight: 0.8393579999999999} },
+{ data: { source: 'PPP1CC', target: 'C20orf27', directed: 'false', weight: 0.811267} },
+{ data: { source: 'PPP1CC', target: 'KIF18A', directed: 'false', weight: 0.7894329999999999} },
+{ data: { source: 'PPP1CC', target: 'ZFYVE9', directed: 'false', weight: 0.746707} },
+{ data: { source: 'PPP1CC', target: 'SHOC2', directed: 'false', weight: 0.746254} },
+{ data: { source: 'PPP1CC', target: 'ZFYVE16', directed: 'false', weight: 0.623854} },
+{ data: { source: 'PPP1CC', target: 'PLCL2', directed: 'false', weight: 0.24686999999999998} },
+{ data: { source: 'PPP1CC', target: 'PPP1R13L', directed: 'false', weight: 0.106451} },
+{ data: { source: 'PPP1CB', target: 'PPP1CA', directed: 'false', weight: 1.0} },
+{ data: { source: 'PPP1CB', target: 'PPP1R2', directed: 'false', weight: 0.994613} },
+{ data: { source: 'PPP1CB', target: 'PPP1R18', directed: 'false', weight: 0.9594459999999999} },
+{ data: { source: 'PPP1CB', target: 'PPP1R7', directed: 'false', weight: 0.9551219999999999} },
+{ data: { source: 'PPP1CB', target: 'PPP1R11', directed: 'false', weight: 0.6271439999999999} },
+{ data: { source: 'PPP1CB', target: 'PPP1R8', directed: 'false', weight: 0.599496} },
+{ data: { source: 'PPP1CB', target: 'PPP1R13L', directed: 'false', weight: 0.573853} },
+{ data: { source: 'PPP1CB', target: 'KIF18A', directed: 'false', weight: 0.30089299999999997} },
+{ data: { source: 'PPP1CB', target: 'SHOC2', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'PPP1CB', target: 'CSRNP2', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'PPP1CB', target: 'TANC2', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'PPP1CB', target: 'CNST', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'PPP1CB', target: 'ZFYVE9', directed: 'false', weight: 0.216185} },
+{ data: { source: 'PPP1CB', target: 'PLCL2', directed: 'false', weight: 0.216185} },
+{ data: { source: 'PPP1CB', target: 'C20orf27', directed: 'false', weight: 0.175861} },
+{ data: { source: 'PPP1CB', target: 'ZFYVE16', directed: 'false', weight: 0.173008} },
+{ data: { source: 'PPP1R7', target: 'PPP1R11', directed: 'false', weight: 0.999375} },
+{ data: { source: 'PPP1R7', target: 'PPP1R2', directed: 'false', weight: 0.996935} },
+{ data: { source: 'PPP1R7', target: 'PPP1CA', directed: 'false', weight: 0.81029} },
+{ data: { source: 'PPP1R7', target: 'PPP1R8', directed: 'false', weight: 0.311842} },
+{ data: { source: 'PPP1R7', target: 'KIF18A', directed: 'false', weight: 0.298896} },
+{ data: { source: 'PPP1R7', target: 'ZFYVE16', directed: 'false', weight: 0.21064699999999997} },
+{ data: { source: 'PPP1R7', target: 'CSRNP2', directed: 'false', weight: 0.21064699999999997} },
+{ data: { source: 'PPP1R7', target: 'TANC2', directed: 'false', weight: 0.21064699999999997} },
+{ data: { source: 'PPP1R7', target: 'CNST', directed: 'false', weight: 0.21064699999999997} },
+{ data: { source: 'PPP1R7', target: 'PPP1R13L', directed: 'false', weight: 0.191615} },
+{ data: { source: 'PPP1R7', target: 'SHOC2', directed: 'false', weight: 0.177093} },
+{ data: { source: 'PPP1R7', target: 'ZFYVE9', directed: 'false', weight: 0.17435} },
+{ data: { source: 'PPP1R7', target: 'PLCL2', directed: 'false', weight: 0.17435} },
+{ data: { source: 'PPP1R7', target: 'C20orf27', directed: 'false', weight: 0.140468} },
+{ data: { source: 'PPP1R8', target: 'PPP1CA', directed: 'false', weight: 0.9747389999999999} },
+{ data: { source: 'PPP1R8', target: 'PPP1R2', directed: 'false', weight: 0.666617} },
+{ data: { source: 'PPP1R8', target: 'PPP1R11', directed: 'false', weight: 0.40921399999999997} },
+{ data: { source: 'PPP1R8', target: 'KIF18A', directed: 'false', weight: 0.39365500000000003} },
+{ data: { source: 'PPP1R8', target: 'ZFYVE16', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PPP1R8', target: 'CSRNP2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PPP1R8', target: 'SHOC2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PPP1R8', target: 'TANC2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PPP1R8', target: 'CNST', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PPP1R8', target: 'PPP1R13L', directed: 'false', weight: 0.265819} },
+{ data: { source: 'PPP1R8', target: 'ZFYVE9', directed: 'false', weight: 0.24226599999999998} },
+{ data: { source: 'PPP1R8', target: 'PLCL2', directed: 'false', weight: 0.24226599999999998} },
+{ data: { source: 'PPP1R8', target: 'C20orf27', directed: 'false', weight: 0.156889} },
+{ data: { source: 'ZFYVE16', target: 'PPP1CA', directed: 'false', weight: 0.937134} },
+{ data: { source: 'ZFYVE16', target: 'KIF18A', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'ZFYVE16', target: 'CSRNP2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'ZFYVE16', target: 'SHOC2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'ZFYVE16', target: 'PPP1R2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'ZFYVE16', target: 'TANC2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'ZFYVE16', target: 'CNST', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'ZFYVE16', target: 'ZFYVE9', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ZFYVE16', target: 'PPP1R11', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ZFYVE16', target: 'PLCL2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ZFYVE16', target: 'C20orf27', directed: 'false', weight: 0.238157} },
+{ data: { source: 'ZFYVE16', target: 'PPP1R13L', directed: 'false', weight: 0.238157} },
+{ data: { source: 'PPP1R13L', target: 'PPP1CA', directed: 'false', weight: 0.927108} },
+{ data: { source: 'PPP1R13L', target: 'PPP1R2', directed: 'false', weight: 0.280425} },
+{ data: { source: 'PPP1R13L', target: 'PPP1R11', directed: 'false', weight: 0.265819} },
+{ data: { source: 'PPP1R13L', target: 'KIF18A', directed: 'false', weight: 0.254467} },
+{ data: { source: 'PPP1R13L', target: 'CNST', directed: 'false', weight: 0.238157} },
+{ data: { source: 'PPP1R13L', target: 'CSRNP2', directed: 'false', weight: 0.238157} },
+{ data: { source: 'PPP1R13L', target: 'SHOC2', directed: 'false', weight: 0.238157} },
+{ data: { source: 'PPP1R13L', target: 'TANC2', directed: 'false', weight: 0.238157} },
+{ data: { source: 'PPP1R13L', target: 'ZFYVE9', directed: 'false', weight: 0.198303} },
+{ data: { source: 'PPP1R13L', target: 'PLCL2', directed: 'false', weight: 0.198303} },
+{ data: { source: 'PPP1R13L', target: 'C20orf27', directed: 'false', weight: 0.16064} },
+{ data: { source: 'C20orf27', target: 'PPP1CA', directed: 'false', weight: 0.993816} },
+{ data: { source: 'C20orf27', target: 'KIF18A', directed: 'false', weight: 0.238157} },
+{ data: { source: 'C20orf27', target: 'SHOC2', directed: 'false', weight: 0.238157} },
+{ data: { source: 'C20orf27', target: 'PPP1R2', directed: 'false', weight: 0.238157} },
+{ data: { source: 'C20orf27', target: 'CSRNP2', directed: 'false', weight: 0.238157} },
+{ data: { source: 'C20orf27', target: 'TANC2', directed: 'false', weight: 0.238157} },
+{ data: { source: 'C20orf27', target: 'CNST', directed: 'false', weight: 0.238157} },
+{ data: { source: 'C20orf27', target: 'ZFYVE9', directed: 'false', weight: 0.198303} },
+{ data: { source: 'C20orf27', target: 'PPP1R11', directed: 'false', weight: 0.198303} },
+{ data: { source: 'C20orf27', target: 'PLCL2', directed: 'false', weight: 0.198303} },
+{ data: { source: 'C20orf27', target: 'PPP1R18', directed: 'false', weight: 0.198303} },
+{ data: { source: 'C20orf27', target: 'TPRN', directed: 'false', weight: 0.175861} },
+{ data: { source: 'PPP1CA', target: 'PPP1R18', directed: 'false', weight: 0.9998299999999999} },
+{ data: { source: 'PPP1CA', target: 'TPRN', directed: 'false', weight: 0.998067} },
+{ data: { source: 'PPP1CA', target: 'PPP1R11', directed: 'false', weight: 0.9714969999999999} },
+{ data: { source: 'PPP1CA', target: 'PLCL2', directed: 'false', weight: 0.959225} },
+{ data: { source: 'PPP1CA', target: 'SHOC2', directed: 'false', weight: 0.936335} },
+{ data: { source: 'PPP1CA', target: 'KIF18A', directed: 'false', weight: 0.9087459999999999} },
+{ data: { source: 'PPP1CA', target: 'CNST', directed: 'false', weight: 0.8944639999999999} },
+{ data: { source: 'PPP1CA', target: 'PPP1R2', directed: 'false', weight: 0.8847860000000001} },
+{ data: { source: 'PPP1CA', target: 'TANC2', directed: 'false', weight: 0.809754} },
+{ data: { source: 'PPP1CA', target: 'CSRNP2', directed: 'false', weight: 0.7051470000000001} },
+{ data: { source: 'PPP1CA', target: 'ZFYVE9', directed: 'false', weight: 0.663853} },
+{ data: { source: 'ZFYVE9', target: 'CSRNP2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ZFYVE9', target: 'SHOC2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ZFYVE9', target: 'TANC2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ZFYVE9', target: 'KIF18A', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ZFYVE9', target: 'PPP1R2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ZFYVE9', target: 'CNST', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ZFYVE9', target: 'PPP1R11', directed: 'false', weight: 0.24226599999999998} },
+{ data: { source: 'ZFYVE9', target: 'PLCL2', directed: 'false', weight: 0.24226599999999998} },
+{ data: { source: 'PPP1R11', target: 'PPP1R2', directed: 'false', weight: 0.679867} },
+{ data: { source: 'PPP1R11', target: 'KIF18A', directed: 'false', weight: 0.39365500000000003} },
+{ data: { source: 'PPP1R11', target: 'SHOC2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PPP1R11', target: 'CSRNP2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PPP1R11', target: 'TANC2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PPP1R11', target: 'CNST', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PPP1R11', target: 'PLCL2', directed: 'false', weight: 0.24226599999999998} },
+{ data: { source: 'PPP1R18', target: 'TPRN', directed: 'false', weight: 0.7810229999999999} },
+{ data: { source: 'PPP1R18', target: 'CNST', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'CSRNP2', target: 'KIF18A', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'CSRNP2', target: 'SHOC2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'CSRNP2', target: 'PPP1R2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'CSRNP2', target: 'TANC2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'CSRNP2', target: 'CNST', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'CSRNP2', target: 'PLCL2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'TANC2', target: 'KIF18A', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'TANC2', target: 'SHOC2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'TANC2', target: 'PPP1R2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'TANC2', target: 'CNST', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'TANC2', target: 'PLCL2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PLCL2', target: 'KIF18A', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PLCL2', target: 'SHOC2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PLCL2', target: 'PPP1R2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'PLCL2', target: 'CNST', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'CNST', target: 'KIF18A', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'CNST', target: 'SHOC2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'CNST', target: 'PPP1R2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'CNST', target: 'TPRN', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'SHOC2', target: 'KIF18A', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'SHOC2', target: 'PPP1R2', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'PPP1R2', target: 'KIF18A', directed: 'false', weight: 0.411645} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.1 PPP1CA-PPP1R13L complex<br> Complex Score (from Super.Complex) = 0.79562<br> Unweighted Density = 0.85
+    </section>
+    </body>
+    </html>
+    

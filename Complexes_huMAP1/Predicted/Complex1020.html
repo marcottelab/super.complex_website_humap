@@ -1,0 +1,145 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.2 Phosphatidylinositol 3-kinase (PIK3CA, PIK3R1)</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1021.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PIK3CB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P42338" }},
+{data: { id: 'DIP2A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14689" }},
+{data: { id: 'PIK3R3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92569" }},
+{data: { id: 'PIK3R1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P27986" }},
+{data: { id: 'FTSJ1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UET6" }},
+{data: { id: 'WDR6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NNW5" }},
+{data: { id: 'PIK3R2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00459" }},
+{data: { id: 'PLEKHH3', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q7Z736" }},
+{data: { id: 'PKN3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P5Z2" }},
+{data: { id: 'PIK3CA', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P42336" }}], 
+ edges: [{ data: { source: 'WDR6', target: 'FTSJ1', directed: 'false', weight: 0.999341} },
+{ data: { source: 'WDR6', target: 'PIK3R2', directed: 'false', weight: 0.517034} },
+{ data: { source: 'WDR6', target: 'PIK3R1', directed: 'false', weight: 0.48393} },
+{ data: { source: 'WDR6', target: 'PLEKHH3', directed: 'false', weight: 0.268194} },
+{ data: { source: 'WDR6', target: 'PKN3', directed: 'false', weight: 0.21062899999999998} },
+{ data: { source: 'WDR6', target: 'PIK3R3', directed: 'false', weight: 0.20468499999999998} },
+{ data: { source: 'WDR6', target: 'DIP2A', directed: 'false', weight: 0.158435} },
+{ data: { source: 'WDR6', target: 'PIK3CB', directed: 'false', weight: 0.091262} },
+{ data: { source: 'WDR6', target: 'PIK3CA', directed: 'false', weight: 0.0881212} },
+{ data: { source: 'PLEKHH3', target: 'PIK3R2', directed: 'false', weight: 0.40891700000000003} },
+{ data: { source: 'PLEKHH3', target: 'PIK3R1', directed: 'false', weight: 0.383738} },
+{ data: { source: 'PLEKHH3', target: 'DIP2A', directed: 'false', weight: 0.343107} },
+{ data: { source: 'PLEKHH3', target: 'PKN3', directed: 'false', weight: 0.2873} },
+{ data: { source: 'PLEKHH3', target: 'PIK3CB', directed: 'false', weight: 0.23532899999999998} },
+{ data: { source: 'PLEKHH3', target: 'PIK3R3', directed: 'false', weight: 0.13952799999999999} },
+{ data: { source: 'PLEKHH3', target: 'PIK3CA', directed: 'false', weight: 0.0924841} },
+{ data: { source: 'PIK3R3', target: 'PIK3R2', directed: 'false', weight: 0.9806229999999999} },
+{ data: { source: 'PIK3R3', target: 'PIK3CA', directed: 'false', weight: 0.687991} },
+{ data: { source: 'PIK3R3', target: 'PIK3R1', directed: 'false', weight: 0.581568} },
+{ data: { source: 'PIK3R3', target: 'PIK3CB', directed: 'false', weight: 0.21305700000000002} },
+{ data: { source: 'PIK3R3', target: 'PKN3', directed: 'false', weight: 0.206527} },
+{ data: { source: 'PIK3R3', target: 'DIP2A', directed: 'false', weight: 0.10447999999999999} },
+{ data: { source: 'PIK3CA', target: 'PIK3R1', directed: 'false', weight: 0.896581} },
+{ data: { source: 'PIK3CA', target: 'PIK3R2', directed: 'false', weight: 0.836462} },
+{ data: { source: 'PIK3CA', target: 'PIK3CB', directed: 'false', weight: 0.327809} },
+{ data: { source: 'PIK3CA', target: 'PKN3', directed: 'false', weight: 0.112499} },
+{ data: { source: 'PIK3CA', target: 'DIP2A', directed: 'false', weight: 0.0863487} },
+{ data: { source: 'PKN3', target: 'DIP2A', directed: 'false', weight: 0.391893} },
+{ data: { source: 'PKN3', target: 'PIK3CB', directed: 'false', weight: 0.356858} },
+{ data: { source: 'PKN3', target: 'PIK3R2', directed: 'false', weight: 0.35416} },
+{ data: { source: 'PKN3', target: 'PIK3R1', directed: 'false', weight: 0.342777} },
+{ data: { source: 'PIK3CB', target: 'PIK3R1', directed: 'false', weight: 0.9977440000000001} },
+{ data: { source: 'PIK3CB', target: 'PIK3R2', directed: 'false', weight: 0.5892609999999999} },
+{ data: { source: 'PIK3CB', target: 'DIP2A', directed: 'false', weight: 0.115015} },
+{ data: { source: 'PIK3R2', target: 'PIK3R1', directed: 'false', weight: 0.983784} },
+{ data: { source: 'PIK3R2', target: 'DIP2A', directed: 'false', weight: 0.149314} },
+{ data: { source: 'DIP2A', target: 'PIK3R1', directed: 'false', weight: 0.138653} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.2 Phosphatidylinositol 3-kinase (PIK3CA, PIK3R1)<br> Complex Score (from Super.Complex) = 0.51044<br> Unweighted Density = 0.82
+    </section>
+    </body>
+    </html>
+    

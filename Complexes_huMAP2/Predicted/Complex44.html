@@ -1,0 +1,147 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.6 SMN complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex45.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'STRAP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3F4" }},
+{data: { id: 'SMN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16637" }},
+{data: { id: 'FAM51A1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NWZ8" }},
+{data: { id: 'GEMIN4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P57678" }},
+{data: { id: 'GEMIN7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H840" }},
+{data: { id: 'GEMIN6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WXD5" }},
+{data: { id: 'GEMIN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14893" }},
+{data: { id: 'DDX20', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UHI6" }},
+{data: { id: 'GEMIN5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TEQ6" }},
+{data: { id: 'DKFZp434N041', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q9UFS1" }}], 
+ edges: [{ data: { source: 'SMN1', target: 'GEMIN6', directed: 'false', weight: 0.8339139999999999} },
+{ data: { source: 'SMN1', target: 'DKFZp434N041', directed: 'false', weight: 0.809326} },
+{ data: { source: 'SMN1', target: 'DDX20', directed: 'false', weight: 0.797176} },
+{ data: { source: 'SMN1', target: 'STRAP', directed: 'false', weight: 0.187103} },
+{ data: { source: 'SMN1', target: 'GEMIN7', directed: 'false', weight: 0.0588837} },
+{ data: { source: 'SMN1', target: 'GEMIN2', directed: 'false', weight: 0.0459144} },
+{ data: { source: 'GEMIN7', target: 'STRAP', directed: 'false', weight: 0.999965} },
+{ data: { source: 'GEMIN7', target: 'DDX20', directed: 'false', weight: 0.9902790000000001} },
+{ data: { source: 'GEMIN7', target: 'FAM51A1', directed: 'false', weight: 0.9683950000000001} },
+{ data: { source: 'GEMIN7', target: 'DKFZp434N041', directed: 'false', weight: 0.45448299999999997} },
+{ data: { source: 'GEMIN7', target: 'GEMIN2', directed: 'false', weight: 0.121419} },
+{ data: { source: 'GEMIN7', target: 'GEMIN6', directed: 'false', weight: 0.0289558} },
+{ data: { source: 'GEMIN7', target: 'GEMIN4', directed: 'false', weight: 0.026432} },
+{ data: { source: 'DDX20', target: 'GEMIN5', directed: 'false', weight: 0.99764} },
+{ data: { source: 'DDX20', target: 'GEMIN4', directed: 'false', weight: 0.9968520000000001} },
+{ data: { source: 'DDX20', target: 'DKFZp434N041', directed: 'false', weight: 0.9774729999999999} },
+{ data: { source: 'DDX20', target: 'FAM51A1', directed: 'false', weight: 0.6830970000000001} },
+{ data: { source: 'DDX20', target: 'GEMIN6', directed: 'false', weight: 0.5975739999999999} },
+{ data: { source: 'DDX20', target: 'GEMIN2', directed: 'false', weight: 0.535733} },
+{ data: { source: 'DDX20', target: 'STRAP', directed: 'false', weight: 0.356738} },
+{ data: { source: 'GEMIN2', target: 'DKFZp434N041', directed: 'false', weight: 0.816112} },
+{ data: { source: 'GEMIN2', target: 'FAM51A1', directed: 'false', weight: 0.354756} },
+{ data: { source: 'GEMIN2', target: 'GEMIN6', directed: 'false', weight: 0.226032} },
+{ data: { source: 'GEMIN2', target: 'GEMIN4', directed: 'false', weight: 0.10887999999999999} },
+{ data: { source: 'GEMIN2', target: 'GEMIN5', directed: 'false', weight: 0.0898501} },
+{ data: { source: 'GEMIN2', target: 'STRAP', directed: 'false', weight: 0.0399857} },
+{ data: { source: 'FAM51A1', target: 'GEMIN6', directed: 'false', weight: 0.8833030000000001} },
+{ data: { source: 'FAM51A1', target: 'DKFZp434N041', directed: 'false', weight: 0.73061} },
+{ data: { source: 'FAM51A1', target: 'STRAP', directed: 'false', weight: 0.347641} },
+{ data: { source: 'FAM51A1', target: 'GEMIN4', directed: 'false', weight: 0.11413} },
+{ data: { source: 'FAM51A1', target: 'GEMIN5', directed: 'false', weight: 0.08691439999999999} },
+{ data: { source: 'DKFZp434N041', target: 'GEMIN4', directed: 'false', weight: 0.88826} },
+{ data: { source: 'DKFZp434N041', target: 'GEMIN6', directed: 'false', weight: 0.333425} },
+{ data: { source: 'DKFZp434N041', target: 'GEMIN5', directed: 'false', weight: 0.129117} },
+{ data: { source: 'GEMIN4', target: 'STRAP', directed: 'false', weight: 0.215363} },
+{ data: { source: 'GEMIN4', target: 'GEMIN6', directed: 'false', weight: 0.126635} },
+{ data: { source: 'GEMIN6', target: 'STRAP', directed: 'false', weight: 0.968722} },
+{ data: { source: 'GEMIN6', target: 'GEMIN5', directed: 'false', weight: 0.057612699999999996} },
+{ data: { source: 'STRAP', target: 'GEMIN5', directed: 'false', weight: 0.683852} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.6 SMN complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.87
+    </section>
+    </body>
+    </html>
+    

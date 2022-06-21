@@ -1,0 +1,96 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> SWELL1-containing complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2224.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'LRRC8E', score: 5, href: "https://www.uniprot.org/uniprot/Q6NSJ5" }},
+{data: { id: 'LRRC8B', score: 5, href: "https://www.uniprot.org/uniprot/Q6P9F7" }},
+{data: { id: 'LRRC8D', score: 5, href: "https://www.uniprot.org/uniprot/Q7L1W4" }},
+{data: { id: 'LRRC8A', score: 5, href: "https://www.uniprot.org/uniprot/Q8IWT6" }},
+{data: { id: 'LRRC8C', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDW0" }}], 
+ edges: [{ data: { source: 'LRRC8D', target: 'LRRC8B', directed: 'false', weight: 0.665201} },
+{ data: { source: 'LRRC8B', target: 'LRRC8C', directed: 'false', weight: 0.561839} },
+{ data: { source: 'LRRC8B', target: 'LRRC8A', directed: 'false', weight: 0.43632200000000004} },
+{ data: { source: 'LRRC8B', target: 'LRRC8E', directed: 'false', weight: 0.0464901} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    SWELL1-containing complex	<br> Unweighted Density = 0.40
+    </section>
+    </body>
+    </html>
+    

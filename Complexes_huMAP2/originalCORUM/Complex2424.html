@@ -1,0 +1,112 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> HRD1 complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2425.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ERLIN2', score: 5, href: "https://www.uniprot.org/uniprot/O94905" }},
+{data: { id: 'HEL-S-89n', score: 5, href: "https://www.uniprot.org/uniprot/V9HWB4" }},
+{data: { id: 'HEL-S-125m', score: 3, href: "https://www.uniprot.org/uniprot/V9HWP2" }},
+{data: { id: 'hEMMPRIN', score: 2, href: "https://www.uniprot.org/uniprot/Q54A51" }},
+{data: { id: 'OS9', score: 5, href: "https://www.uniprot.org/uniprot/Q13438" }},
+{data: { id: 'SYVN1', score: 5, href: "https://www.uniprot.org/uniprot/Q86TM6" }},
+{data: { id: 'FAF2', score: 5, href: "https://www.uniprot.org/uniprot/Q96CS3" }},
+{data: { id: 'HEL117', score: 1, href: "https://www.uniprot.org/uniprot/V9HWD3" }},
+{data: { id: 'DERL2', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZP9" }},
+{data: { id: 'FAM8A1', score: 4, href: "https://www.uniprot.org/uniprot/Q9UBU6" }},
+{data: { id: 'SEL1L', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBV2" }},
+{data: { id: '51465', score: 0 }},
+{data: { id: 'AUP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y679" }}], 
+ edges: [{ data: { source: 'SEL1L', target: 'HEL117', directed: 'false', weight: 0.9998950000000001} },
+{ data: { source: 'SEL1L', target: 'OS9', directed: 'false', weight: 0.9997950000000001} },
+{ data: { source: 'HEL-S-125m', target: 'HEL-S-89n', directed: 'false', weight: 1.0} },
+{ data: { source: 'HEL-S-125m', target: 'OS9', directed: 'false', weight: 0.549012} },
+{ data: { source: 'FAM8A1', target: 'SYVN1', directed: 'false', weight: 0.0949197} },
+{ data: { source: 'DERL2', target: 'FAF2', directed: 'false', weight: 0.12998800000000002} },
+{ data: { source: 'AUP1', target: 'FAF2', directed: 'false', weight: 0.0236962} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    HRD1 complex	<br> Unweighted Density = 0.09
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>OS9 FAM8A1
+    </section>
+    </body>
+    </html>
+    

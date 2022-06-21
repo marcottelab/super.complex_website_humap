@@ -1,0 +1,107 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> CENP-A nucleosomal complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2816.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CENPB', score: 5, href: "https://www.uniprot.org/uniprot/P07199" }},
+{data: { id: '3018', score: 0 }},
+{data: { id: 'CENPA', score: 5, href: "https://www.uniprot.org/uniprot/P49450" }},
+{data: { id: 'CENPC', score: 5, href: "https://www.uniprot.org/uniprot/Q03188" }},
+{data: { id: 'SSRP1', score: 5, href: "https://www.uniprot.org/uniprot/Q08945" }},
+{data: { id: 'C1orf155', score: 4, href: "https://www.uniprot.org/uniprot/Q8N0S6" }},
+{data: { id: 'HJURP', score: 5, href: "https://www.uniprot.org/uniprot/Q8NCD3" }},
+{data: { id: 'FSHPRH1', score: 5, href: "https://www.uniprot.org/uniprot/Q92674" }},
+{data: { id: 'CENPT', score: 5, href: "https://www.uniprot.org/uniprot/Q96BT3" }},
+{data: { id: 'CENPN', score: 5, href: "https://www.uniprot.org/uniprot/Q96H22" }},
+{data: { id: '221613', score: 0 }},
+{data: { id: 'RSF1', score: 5, href: "https://www.uniprot.org/uniprot/Q96T23" }},
+{data: { id: 'CENPH', score: 5, href: "https://www.uniprot.org/uniprot/Q9H3R5" }},
+{data: { id: 'SUPT16H', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5B9" }}], 
+ edges: [{ data: { source: 'CENPA', target: 'HJURP', directed: 'false', weight: 0.8849670000000001} },
+{ data: { source: 'CENPT', target: 'CENPH', directed: 'false', weight: 0.06560360000000001} },
+{ data: { source: 'CENPN', target: 'CENPH', directed: 'false', weight: 0.047577999999999995} },
+{ data: { source: 'SUPT16H', target: 'SSRP1', directed: 'false', weight: 1.0} },
+{ data: { source: 'FSHPRH1', target: 'CENPH', directed: 'false', weight: 0.0715354} },
+{ data: { source: 'CENPH', target: 'C1orf155', directed: 'false', weight: 0.026295999999999996} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    CENP-A nucleosomal complex	<br> Unweighted Density = 0.07
+    </section>
+    </body>
+    </html>
+    

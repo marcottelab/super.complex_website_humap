@@ -1,0 +1,128 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.4 ELMO1-DOCK1-CRKII complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex848.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DOCK1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14185" }},
+{data: { id: 'ELMO2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96JJ3" }},
+{data: { id: 'DOCK5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H7D0" }},
+{data: { id: 'ELMO1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92556" }},
+{data: { id: 'CRK', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46108" }},
+{data: { id: 'CKB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P12277" }},
+{data: { id: 'DOCK4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N1I0" }},
+{data: { id: 'ZNF398', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TD17" }}], 
+ edges: [{ data: { source: 'CRK', target: 'DOCK1', directed: 'false', weight: 0.801182} },
+{ data: { source: 'CRK', target: 'CKB', directed: 'false', weight: 0.5647949999999999} },
+{ data: { source: 'DOCK5', target: 'ELMO1', directed: 'false', weight: 0.95678} },
+{ data: { source: 'DOCK5', target: 'DOCK1', directed: 'false', weight: 0.25016700000000003} },
+{ data: { source: 'DOCK5', target: 'ELMO2', directed: 'false', weight: 0.23267100000000002} },
+{ data: { source: 'DOCK5', target: 'DOCK4', directed: 'false', weight: 0.171414} },
+{ data: { source: 'DOCK5', target: 'ZNF398', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ZNF398', target: 'ELMO1', directed: 'false', weight: 0.972409} },
+{ data: { source: 'ZNF398', target: 'DOCK4', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ZNF398', target: 'ELMO2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ZNF398', target: 'DOCK1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ELMO2', target: 'ELMO1', directed: 'false', weight: 0.9851120000000001} },
+{ data: { source: 'ELMO2', target: 'DOCK1', directed: 'false', weight: 0.282148} },
+{ data: { source: 'ELMO2', target: 'DOCK4', directed: 'false', weight: 0.171414} },
+{ data: { source: 'DOCK4', target: 'ELMO1', directed: 'false', weight: 0.966073} },
+{ data: { source: 'DOCK4', target: 'DOCK1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ELMO1', target: 'DOCK1', directed: 'false', weight: 0.944997} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+             'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.3, 1)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.4 ELMO1-DOCK1-CRKII complex<br> Complex Score (from Super.Complex) = 0.55910<br> Unweighted Density = 0.61
+    </section>
+    </body>
+    </html>
+    

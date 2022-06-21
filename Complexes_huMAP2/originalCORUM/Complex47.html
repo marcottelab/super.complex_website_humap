@@ -1,0 +1,117 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Anaphase-promoting complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex48.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CDC27', score: 5, href: "https://www.uniprot.org/uniprot/P30260" }},
+{data: { id: 'CDC16', score: 5, href: "https://www.uniprot.org/uniprot/Q13042" }},
+{data: { id: 'ANAPC1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H1A4" }},
+{data: { id: 'CDC23', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJX2" }},
+{data: { id: 'DKFZp762H177', score: 1, href: "https://www.uniprot.org/uniprot/Q69YV3" }},
+{data: { id: 'ANAPC5', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJX4" }},
+{data: { id: 'ANAPC4', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJX5" }},
+{data: { id: 'ANAPC2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJX6" }}], 
+ edges: [{ data: { source: 'CDC23', target: 'CDC16', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC23', target: 'CDC27', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC23', target: 'ANAPC4', directed: 'false', weight: 0.9995809999999999} },
+{ data: { source: 'CDC23', target: 'DKFZp762H177', directed: 'false', weight: 0.9995799999999999} },
+{ data: { source: 'CDC23', target: 'ANAPC1', directed: 'false', weight: 0.763652} },
+{ data: { source: 'CDC23', target: 'ANAPC5', directed: 'false', weight: 0.733313} },
+{ data: { source: 'CDC23', target: 'ANAPC2', directed: 'false', weight: 0.481488} },
+{ data: { source: 'CDC16', target: 'ANAPC4', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC16', target: 'ANAPC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC16', target: 'CDC27', directed: 'false', weight: 1.0} },
+{ data: { source: 'CDC16', target: 'ANAPC5', directed: 'false', weight: 0.999983} },
+{ data: { source: 'CDC16', target: 'ANAPC2', directed: 'false', weight: 0.999873} },
+{ data: { source: 'CDC16', target: 'DKFZp762H177', directed: 'false', weight: 0.998707} },
+{ data: { source: 'ANAPC1', target: 'CDC27', directed: 'false', weight: 1.0} },
+{ data: { source: 'ANAPC1', target: 'ANAPC5', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'ANAPC1', target: 'ANAPC4', directed: 'false', weight: 0.999877} },
+{ data: { source: 'ANAPC1', target: 'DKFZp762H177', directed: 'false', weight: 0.987558} },
+{ data: { source: 'ANAPC1', target: 'ANAPC2', directed: 'false', weight: 0.648705} },
+{ data: { source: 'ANAPC5', target: 'ANAPC4', directed: 'false', weight: 0.9985850000000001} },
+{ data: { source: 'ANAPC5', target: 'ANAPC2', directed: 'false', weight: 0.354758} },
+{ data: { source: 'ANAPC5', target: 'CDC27', directed: 'false', weight: 0.111148} },
+{ data: { source: 'DKFZp762H177', target: 'CDC27', directed: 'false', weight: 0.9974200000000001} },
+{ data: { source: 'DKFZp762H177', target: 'ANAPC4', directed: 'false', weight: 0.9886280000000001} },
+{ data: { source: 'DKFZp762H177', target: 'ANAPC2', directed: 'false', weight: 0.413117} },
+{ data: { source: 'ANAPC2', target: 'ANAPC4', directed: 'false', weight: 0.9978790000000001} },
+{ data: { source: 'ANAPC2', target: 'CDC27', directed: 'false', weight: 0.41700699999999996} },
+{ data: { source: 'CDC27', target: 'ANAPC4', directed: 'false', weight: 0.9997959999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Anaphase-promoting complex	<br> Unweighted Density = 0.96
+    </section>
+    </body>
+    </html>
+    

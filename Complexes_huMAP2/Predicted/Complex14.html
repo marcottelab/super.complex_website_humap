@@ -1,0 +1,188 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.7 CCR4-NOT complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex15.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CNOT6', score: 5, type: '', href: "https://www.ncbi.nlm.nih.gov/gene/57472" }},
+{data: { id: 'CNOT2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NZN8" }},
+{data: { id: 'CNOT9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92600" }},
+{data: { id: 'CNOT3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75175" }},
+{data: { id: 'CNOT8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UFF9" }},
+{data: { id: 'TNKS1BP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9C0C2" }},
+{data: { id: 'CNOT6L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96LI5" }},
+{data: { id: 'CNOT1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/A5YKK6" }},
+{data: { id: 'CNOT11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UKZ1" }},
+{data: { id: 'NANOS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P60321" }},
+{data: { id: 'CNOT10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H9A5" }},
+{data: { id: 'RIBC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N443" }},
+{data: { id: 'CNOT7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UIV1" }}], 
+ edges: [{ data: { source: 'CNOT1', target: 'CNOT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'CNOT1', target: 'CNOT9', directed: 'false', weight: 1.0} },
+{ data: { source: 'CNOT1', target: 'CNOT11', directed: 'false', weight: 0.999999} },
+{ data: { source: 'CNOT1', target: 'CNOT3', directed: 'false', weight: 0.999843} },
+{ data: { source: 'CNOT1', target: 'CNOT10', directed: 'false', weight: 0.9983139999999999} },
+{ data: { source: 'CNOT1', target: 'CNOT8', directed: 'false', weight: 0.994965} },
+{ data: { source: 'CNOT1', target: 'CNOT2', directed: 'false', weight: 0.9758379999999999} },
+{ data: { source: 'CNOT1', target: 'CNOT6L', directed: 'false', weight: 0.9728829999999999} },
+{ data: { source: 'CNOT1', target: 'TNKS1BP1', directed: 'false', weight: 0.83585} },
+{ data: { source: 'CNOT1', target: 'CNOT6', directed: 'false', weight: 0.269473} },
+{ data: { source: 'CNOT1', target: 'RIBC1', directed: 'false', weight: 0.0460483} },
+{ data: { source: 'CNOT1', target: 'NANOS2', directed: 'false', weight: 0.0445601} },
+{ data: { source: 'RIBC1', target: 'CNOT2', directed: 'false', weight: 0.417942} },
+{ data: { source: 'RIBC1', target: 'CNOT6', directed: 'false', weight: 0.17216099999999998} },
+{ data: { source: 'RIBC1', target: 'CNOT6L', directed: 'false', weight: 0.16158599999999998} },
+{ data: { source: 'RIBC1', target: 'CNOT3', directed: 'false', weight: 0.0980005} },
+{ data: { source: 'RIBC1', target: 'TNKS1BP1', directed: 'false', weight: 0.0970256} },
+{ data: { source: 'RIBC1', target: 'CNOT11', directed: 'false', weight: 0.0930585} },
+{ data: { source: 'RIBC1', target: 'CNOT8', directed: 'false', weight: 0.0841255} },
+{ data: { source: 'RIBC1', target: 'CNOT10', directed: 'false', weight: 0.0834705} },
+{ data: { source: 'RIBC1', target: 'CNOT9', directed: 'false', weight: 0.0706072} },
+{ data: { source: 'RIBC1', target: 'CNOT7', directed: 'false', weight: 0.0553462} },
+{ data: { source: 'CNOT3', target: 'CNOT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'CNOT3', target: 'CNOT2', directed: 'false', weight: 1.0} },
+{ data: { source: 'CNOT3', target: 'CNOT9', directed: 'false', weight: 1.0} },
+{ data: { source: 'CNOT3', target: 'CNOT11', directed: 'false', weight: 0.9597959999999999} },
+{ data: { source: 'CNOT3', target: 'CNOT6L', directed: 'false', weight: 0.950466} },
+{ data: { source: 'CNOT3', target: 'TNKS1BP1', directed: 'false', weight: 0.594584} },
+{ data: { source: 'CNOT3', target: 'NANOS2', directed: 'false', weight: 0.11477899999999999} },
+{ data: { source: 'CNOT3', target: 'CNOT6', directed: 'false', weight: 0.07054730000000001} },
+{ data: { source: 'CNOT3', target: 'CNOT10', directed: 'false', weight: 0.06952439999999999} },
+{ data: { source: 'CNOT3', target: 'CNOT8', directed: 'false', weight: 0.061340099999999995} },
+{ data: { source: 'CNOT10', target: 'CNOT2', directed: 'false', weight: 0.9995350000000001} },
+{ data: { source: 'CNOT10', target: 'CNOT7', directed: 'false', weight: 0.999425} },
+{ data: { source: 'CNOT10', target: 'CNOT11', directed: 'false', weight: 0.996624} },
+{ data: { source: 'CNOT10', target: 'CNOT9', directed: 'false', weight: 0.356525} },
+{ data: { source: 'CNOT10', target: 'CNOT6L', directed: 'false', weight: 0.331698} },
+{ data: { source: 'CNOT10', target: 'CNOT6', directed: 'false', weight: 0.0688721} },
+{ data: { source: 'CNOT10', target: 'NANOS2', directed: 'false', weight: 0.0665365} },
+{ data: { source: 'CNOT10', target: 'CNOT8', directed: 'false', weight: 0.0639246} },
+{ data: { source: 'CNOT10', target: 'TNKS1BP1', directed: 'false', weight: 0.0413312} },
+{ data: { source: 'TNKS1BP1', target: 'CNOT2', directed: 'false', weight: 0.997192} },
+{ data: { source: 'TNKS1BP1', target: 'CNOT7', directed: 'false', weight: 0.9966700000000001} },
+{ data: { source: 'TNKS1BP1', target: 'CNOT9', directed: 'false', weight: 0.968874} },
+{ data: { source: 'TNKS1BP1', target: 'CNOT11', directed: 'false', weight: 0.9203110000000001} },
+{ data: { source: 'TNKS1BP1', target: 'CNOT6L', directed: 'false', weight: 0.62807} },
+{ data: { source: 'TNKS1BP1', target: 'CNOT8', directed: 'false', weight: 0.264241} },
+{ data: { source: 'TNKS1BP1', target: 'NANOS2', directed: 'false', weight: 0.140435} },
+{ data: { source: 'TNKS1BP1', target: 'CNOT6', directed: 'false', weight: 0.053513599999999995} },
+{ data: { source: 'CNOT6L', target: 'CNOT7', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'CNOT6L', target: 'CNOT2', directed: 'false', weight: 0.999502} },
+{ data: { source: 'CNOT6L', target: 'CNOT11', directed: 'false', weight: 0.996609} },
+{ data: { source: 'CNOT6L', target: 'CNOT8', directed: 'false', weight: 0.573974} },
+{ data: { source: 'CNOT6L', target: 'CNOT9', directed: 'false', weight: 0.44914} },
+{ data: { source: 'CNOT6L', target: 'CNOT6', directed: 'false', weight: 0.330502} },
+{ data: { source: 'CNOT6L', target: 'NANOS2', directed: 'false', weight: 0.16118} },
+{ data: { source: 'CNOT2', target: 'CNOT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'CNOT2', target: 'CNOT11', directed: 'false', weight: 1.0} },
+{ data: { source: 'CNOT2', target: 'CNOT9', directed: 'false', weight: 0.999659} },
+{ data: { source: 'CNOT2', target: 'CNOT8', directed: 'false', weight: 0.9991540000000001} },
+{ data: { source: 'CNOT2', target: 'CNOT6', directed: 'false', weight: 0.9876010000000001} },
+{ data: { source: 'CNOT2', target: 'NANOS2', directed: 'false', weight: 0.126161} },
+{ data: { source: 'CNOT9', target: 'CNOT7', directed: 'false', weight: 1.0} },
+{ data: { source: 'CNOT9', target: 'CNOT11', directed: 'false', weight: 0.995692} },
+{ data: { source: 'CNOT9', target: 'CNOT8', directed: 'false', weight: 0.282069} },
+{ data: { source: 'CNOT9', target: 'CNOT6', directed: 'false', weight: 0.243536} },
+{ data: { source: 'CNOT9', target: 'NANOS2', directed: 'false', weight: 0.044814} },
+{ data: { source: 'NANOS2', target: 'CNOT6', directed: 'false', weight: 0.31500300000000003} },
+{ data: { source: 'NANOS2', target: 'CNOT8', directed: 'false', weight: 0.06705889999999999} },
+{ data: { source: 'NANOS2', target: 'CNOT7', directed: 'false', weight: 0.0494918} },
+{ data: { source: 'NANOS2', target: 'CNOT11', directed: 'false', weight: 0.0442891} },
+{ data: { source: 'CNOT6', target: 'CNOT7', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'CNOT6', target: 'CNOT11', directed: 'false', weight: 0.9719270000000001} },
+{ data: { source: 'CNOT6', target: 'CNOT8', directed: 'false', weight: 0.05725740000000001} },
+{ data: { source: 'CNOT8', target: 'CNOT11', directed: 'false', weight: 0.8839100000000001} },
+{ data: { source: 'CNOT8', target: 'CNOT7', directed: 'false', weight: 0.051119} },
+{ data: { source: 'CNOT7', target: 'CNOT11', directed: 'false', weight: 0.999748} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
+            'background-color': function( ele ){ 
+                                if ( ele.data('score') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score') == 5 ){return 'rgb(52, 136, 74)'} 
+								                                  if ( ele.data('type') == 'sars' ){return 'rgb(255, 0, 0)'}   
+
+  return 'rgb(180, 131, 40)';
+  },
+            'label': 'data(id)'        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.7 CCR4-NOT complex<br> Complex Score (from Super.Complex) = 1.00000<br> Unweighted Density = 0.99
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,110 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.9 HAUS augmin-like complex</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex54.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HAUS7', score: 5, href: "https://www.uniprot.org/uniprot/Q99871" }},
+{data: { id: 'HAUS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVX0" }},
+{data: { id: 'HAUS5', score: 5, href: "https://www.uniprot.org/uniprot/O94927" }},
+{data: { id: 'HAUS3', score: 5, href: "https://www.uniprot.org/uniprot/Q68CZ6" }},
+{data: { id: 'HAUS6', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z4H7" }},
+{data: { id: 'HAUS8', score: 5, href: "https://www.uniprot.org/uniprot/Q9BT25" }},
+{data: { id: 'HAUS1', score: 5, href: "https://www.uniprot.org/uniprot/Q96CS2" }}], 
+ edges: [{ data: { source: 'HAUS2', target: 'HAUS7', directed: 'false', weight: 0.999549} },
+{ data: { source: 'HAUS2', target: 'HAUS8', directed: 'false', weight: 0.998286} },
+{ data: { source: 'HAUS2', target: 'HAUS3', directed: 'false', weight: 0.997497} },
+{ data: { source: 'HAUS2', target: 'HAUS5', directed: 'false', weight: 0.995072} },
+{ data: { source: 'HAUS2', target: 'HAUS6', directed: 'false', weight: 0.9892120000000001} },
+{ data: { source: 'HAUS2', target: 'HAUS1', directed: 'false', weight: 0.9891120000000001} },
+{ data: { source: 'HAUS3', target: 'HAUS7', directed: 'false', weight: 0.998293} },
+{ data: { source: 'HAUS3', target: 'HAUS1', directed: 'false', weight: 0.996325} },
+{ data: { source: 'HAUS3', target: 'HAUS8', directed: 'false', weight: 0.643822} },
+{ data: { source: 'HAUS3', target: 'HAUS5', directed: 'false', weight: 0.4341} },
+{ data: { source: 'HAUS3', target: 'HAUS6', directed: 'false', weight: 0.35725100000000004} },
+{ data: { source: 'HAUS5', target: 'HAUS7', directed: 'false', weight: 0.9698} },
+{ data: { source: 'HAUS5', target: 'HAUS1', directed: 'false', weight: 0.686075} },
+{ data: { source: 'HAUS5', target: 'HAUS8', directed: 'false', weight: 0.270473} },
+{ data: { source: 'HAUS5', target: 'HAUS6', directed: 'false', weight: 0.22820300000000002} },
+{ data: { source: 'HAUS7', target: 'HAUS8', directed: 'false', weight: 0.9975809999999999} },
+{ data: { source: 'HAUS7', target: 'HAUS6', directed: 'false', weight: 0.988876} },
+{ data: { source: 'HAUS7', target: 'HAUS1', directed: 'false', weight: 0.943846} },
+{ data: { source: 'HAUS6', target: 'HAUS8', directed: 'false', weight: 0.966623} },
+{ data: { source: 'HAUS6', target: 'HAUS1', directed: 'false', weight: 0.790028} },
+{ data: { source: 'HAUS8', target: 'HAUS1', directed: 'false', weight: 0.5} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.9 HAUS augmin-like complex	<br> Unweighted Density = 1.00
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,134 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> 0.8 Intraflagellar transport complex B</title>
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex73.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'IFT22', score: 4, href: "https://www.uniprot.org/uniprot/Q9H7X7" }},
+{data: { id: 'TRAF3IP1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDR0" }},
+{data: { id: 'TTC30B', score: 4, href: "https://www.uniprot.org/uniprot/Q8N4P2" }},
+{data: { id: 'IFT20', score: 5, href: "https://www.uniprot.org/uniprot/Q8IY31" }},
+{data: { id: 'IFT27', score: 5, href: "https://www.uniprot.org/uniprot/Q9BW83" }},
+{data: { id: 'IFT52', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y366" }},
+{data: { id: 'IFT81', score: 5, href: "https://www.uniprot.org/uniprot/Q8WYA0" }},
+{data: { id: 'IFT172', score: 5, href: "https://www.uniprot.org/uniprot/Q9UG01" }},
+{data: { id: 'IFT74', score: 5, href: "https://www.uniprot.org/uniprot/Q96LB3" }},
+{data: { id: 'IFT46', score: 5, href: "https://www.uniprot.org/uniprot/Q9NQC8" }},
+{data: { id: 'IFT80', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2H3" }},
+{data: { id: 'IFT88', score: 5, href: "https://www.uniprot.org/uniprot/Q13099" }},
+{data: { id: 'IFT57', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWB7" }}], 
+ edges: [{ data: { source: 'IFT22', target: 'IFT57', directed: 'false', weight: 0.601388} },
+{ data: { source: 'IFT22', target: 'IFT81', directed: 'false', weight: 0.414998} },
+{ data: { source: 'IFT22', target: 'IFT46', directed: 'false', weight: 0.414998} },
+{ data: { source: 'IFT22', target: 'IFT88', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'IFT22', target: 'TRAF3IP1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'IFT22', target: 'TTC30B', directed: 'false', weight: 0.123797} },
+{ data: { source: 'IFT22', target: 'IFT74', directed: 'false', weight: 0.0507858} },
+{ data: { source: 'IFT22', target: 'IFT80', directed: 'false', weight: 0.0267712} },
+{ data: { source: 'TRAF3IP1', target: 'IFT57', directed: 'false', weight: 0.9803719999999999} },
+{ data: { source: 'TRAF3IP1', target: 'IFT88', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TRAF3IP1', target: 'IFT80', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TRAF3IP1', target: 'TTC30B', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TRAF3IP1', target: 'IFT20', directed: 'false', weight: 0.140692} },
+{ data: { source: 'TRAF3IP1', target: 'IFT172', directed: 'false', weight: 0.128057} },
+{ data: { source: 'TTC30B', target: 'IFT57', directed: 'false', weight: 0.879188} },
+{ data: { source: 'TTC30B', target: 'IFT52', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'TTC30B', target: 'IFT20', directed: 'false', weight: 0.123797} },
+{ data: { source: 'TTC30B', target: 'IFT172', directed: 'false', weight: 0.112499} },
+{ data: { source: 'TTC30B', target: 'IFT80', directed: 'false', weight: 0.044745099999999996} },
+{ data: { source: 'TTC30B', target: 'IFT88', directed: 'false', weight: 0.0177621} },
+{ data: { source: 'IFT20', target: 'IFT57', directed: 'false', weight: 0.9198940000000001} },
+{ data: { source: 'IFT20', target: 'IFT80', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'IFT20', target: 'IFT172', directed: 'false', weight: 0.198303} },
+{ data: { source: 'IFT20', target: 'IFT88', directed: 'false', weight: 0.123797} },
+{ data: { source: 'IFT27', target: 'IFT52', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'IFT81', target: 'IFT46', directed: 'false', weight: 0.595807} },
+{ data: { source: 'IFT81', target: 'IFT74', directed: 'false', weight: 0.41767} },
+{ data: { source: 'IFT172', target: 'IFT57', directed: 'false', weight: 0.949752} },
+{ data: { source: 'IFT172', target: 'IFT80', directed: 'false', weight: 0.238157} },
+{ data: { source: 'IFT172', target: 'IFT88', directed: 'false', weight: 0.112499} },
+{ data: { source: 'IFT74', target: 'IFT46', directed: 'false', weight: 0.684525} },
+{ data: { source: 'IFT80', target: 'IFT57', directed: 'false', weight: 0.9844709999999999} },
+{ data: { source: 'IFT80', target: 'IFT88', directed: 'false', weight: 0.471497} },
+{ data: { source: 'IFT88', target: 'IFT57', directed: 'false', weight: 0.9256190000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+		'font-size': 10,
+		'width':'10',
+		'height': '10',	
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 1)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    'name': 'fcose',
+		'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'nodeSeparation': 1000
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    0.8 Intraflagellar transport complex B	<br> Unweighted Density = 0.44
+    </section>
+    </body>
+    </html>
+    
