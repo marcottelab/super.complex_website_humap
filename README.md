@@ -81,23 +81,23 @@ Similarly, sorted in ascending order of annotation score here:
 [All Complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/CORUM_Complex2proteins.html
 )
 
-[All Complexes, sorted by number of SARS-CoV-2 interacting hu.MAP 1.0 proteins](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/CORUM_Complex2proteins_covid.html)
+[All Complexes, sorted by number of SARS-CoV-2 interacting hu.MAP 2.0 proteins](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/CORUM_Complex2proteins_covid.html)
 
-[hu.MAP 1.0 proteins and their corresponding protein complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/CORUM_Protein2complex.html)
+[hu.MAP 2.0 proteins and their corresponding protein complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/CORUM_Protein2complex.html)
 
 We also make available a list of protein complexes that contain proteins interacting with SARS-CoV-2 proteins here:
-[SARS-CoV-2 interacting hu.MAP 1.0 proteins and their corresponding protein complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/CORUM_Protein2complex_covid.html)
+[SARS-CoV-2 interacting hu.MAP 2.0 proteins and their corresponding protein complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/CORUM_Protein2complex_covid.html)
 
 ### CORUM (all)
 
 [All Complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/originalCORUM_Complex2proteins.html
 )
 
-[All Complexes, sorted by number of SARS-CoV-2 interacting hu.MAP 1.0 proteins](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/originalCORUM_Complex2proteins_covid.html)
+[All Complexes, sorted by number of SARS-CoV-2 interacting hu.MAP 2.0 proteins](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/originalCORUM_Complex2proteins_covid.html)
 
-[hu.MAP 1.0 proteins and their corresponding protein complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/originalCORUM_Protein2complex.html)
+[hu.MAP 2.0 proteins and their corresponding protein complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/originalCORUM_Protein2complex.html)
 
 We also make available a list of protein complexes that contain proteins interacting with SARS-CoV-2 proteins here:
-[SARS-CoV-2 interacting hu.MAP 1.0 proteins and their corresponding protein complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/originalCORUM_Protein2complex_covid.html)
+[SARS-CoV-2 interacting hu.MAP 2.0 proteins and their corresponding protein complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP2/originalCORUM_Protein2complex_covid.html)
 
 
