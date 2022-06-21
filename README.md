@@ -1,2 +1,2 @@
-# super.complex_website_humap
+# Visualizations of Protein complexes on hu.MAP 1.0 and hu.MAP 2.0 by Super.Complex
 Interactive visualizations for protein complexes learned from hu.MAP 1.0 and hu.MAP 2.0 by Super.Complex, along with CORUM complexes
