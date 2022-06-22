@@ -106,8 +106,8 @@ We also make available a list of protein complexes that contain proteins interac
 
 ## References
 
-[1] [Super.Complex: A supervised machine learning pipeline for molecular complex detection in protein-interaction networks](https://doi.org/10.1371/journal.pone.0262056)
+[1] M. V. Palukuri and E. M. Marcotte, “Super.Complex: A supervised machine learning
+pipeline for molecular complex detection in protein-interaction networks,” PLOS ONE, vol.
+16, no. 12, p. e0262056, Dec. 2021, doi: [10.1371/journal.pone.0262056](https://doi.org/10.1371/journal.pone.0262056).
 
-[2] [Molecular complex detection in protein interaction networks through reinforcement learning](https://doi.org/10.1101/2022.06.20.496772) (Supplement - Table S3, Row 5)
-
-
+[2] M. V. Palukuri, R. S. Patil, and E. M. Marcotte, “Molecular complex detection in protein interaction networks through reinforcement learning.” bioRxiv, p. 2022.06.20.496772. doi: [10.1101/2022.06.20.496772](https://www.biorxiv.org/content/10.1101/2022.06.20.496772v1). (Supplement - Table S3, Row 5)
