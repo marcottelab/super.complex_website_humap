@@ -1,16 +1,19 @@
 # super.complex_website_humap
 Interactive visualizations for protein complexes learned from hu.MAP 1.0 and hu.MAP 2.0 by Super.Complex, along with CORUM complexes are available here.
+Super. Complex (short for Supervised Complex) is a computational pipeline to predict protein complexes from protein interaction networks making use of a supervised machine learning strategy. 
+Instructions: To view the interactive results, after clicking on the below links, please again click on the different hyperlinks provided on each page. To interact with the visualizations, you can drag or click on the nodes of the graphs of the protein complexes or SARS-COV-2 map. 
 
 ## Interactive visualizations of results on hu.MAP 1.0:
+The results below are also available and described in more detail here: https://sites.google.com/view/supercomplex/super-complex-v3-0
 
-### Super.Complex
+### Super.Complex predictions:
 
 The results presented below are from [1]:
 
-[All Learned Complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP1/Complex2proteins.html
-)
+[All Learned human protein complexes](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP1/Complex2proteins.html
+), including predicted complexes linked to COVID-19. The complexes here are sorted in descending order of the probability of being a complex (score of the Super.Complex machine learning model).
 
-[All Learned Complexes, sortable by protein annotation scores](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP1/Complex2proteins_annotated.html)
+[All Learned Complexes, sortable by protein annotation scores](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP1/Complex2proteins_annotated.html) By default, the results are ranked by uncharacterized complex score ( Last column - Candidate score for annotated uncharacterized proteins, computed as the normalized product of the number of proteins with high annotation scores and number of proteins with low annotation scores). The second last column (characterization/annotation score of complex) is the weighted sum of the annotation scores of the proteins.
 
 [All Learned Complexes, sorted by number of SARS-CoV-2 interacting hu.MAP 1.0 proteins](https://marcottelab.github.io/super.complex_website_humap/Complexes_huMAP1/Complex2proteins_covid.html)
 
